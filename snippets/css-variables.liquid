@@ -1,0 +1,125 @@
+{% style %}
+  {%- liquid
+      assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
+      assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
+      assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
+  %}
+
+  /* Typography (heading) */
+  {{ settings.type_header_font | font_face: font_display: 'swap' }}
+
+  /* Color Setting */
+  {{ settings.type_body_font | font_face: font_display: 'swap' }}
+  {{ body_font_bold | font_face: font_display: 'swap' }}
+  {{ body_font_italic | font_face: font_display: 'swap' }}
+  {{ body_font_bold_italic | font_face: font_display: 'swap' }}
+
+  {%- for scheme in settings.color_schemes -%}
+      {% assign scheme_classes = scheme_classes | append: ', .color-' | append: scheme.id %}
+      {% if forloop.index == 1 -%}
+        :root,
+      {%- endif %}
+      .color-{{ scheme.id }} {
+      --color-background: {{ scheme.settings.background.red }},{{ scheme.settings.background.green }},{{ scheme.settings.background.blue }};
+      {% if scheme.settings.background_gradient != empty %}
+      --gradient-background: {{ scheme.settings.background_gradient }};
+      {% else %}
+      --gradient-background: {{ scheme.settings.background }};
+      {% endif %}
+
+      {% liquid
+        assign background_color = scheme.settings.background
+        assign background_color_brightness = background_color | color_brightness
+        if background_color_brightness <= 26
+          assign background_color_contrast = background_color | color_lighten: 50
+        elsif background_color_brightness <= 65
+          assign background_color_contrast = background_color | color_lighten: 5
+        else
+          assign background_color_contrast = background_color | color_darken: 25
+        endif
+      %}
+
+      --color-text: {{ scheme.settings.text.red }},{{ scheme.settings.text.green }},{{ scheme.settings.text.blue }};
+      --color-background-contrast: {{ background_color_contrast.red }},{{ background_color_contrast.green }},{{ background_color_contrast.blue }};
+      --color-shadow: {{ scheme.settings.shadow.red }},{{ scheme.settings.shadow.green }},{{ scheme.settings.shadow.blue }};
+      --color-button: {{ scheme.settings.button.red }},{{ scheme.settings.button.green }},{{ scheme.settings.button.blue }};
+      --color-button-text: {{ scheme.settings.button_label.red }},{{ scheme.settings.button_label.green }},{{ scheme.settings.button_label.blue }};
+      --color-secondary-button: {{ scheme.settings.background.red }},{{ scheme.settings.background.green }},{{ scheme.settings.background.blue }};
+      --color-secondary-button-text: {{ scheme.settings.secondary_button_label.red }},{{ scheme.settings.secondary_button_label.green }},{{ scheme.settings.secondary_button_label.blue }};
+      --color-link: {{ scheme.settings.secondary_button_label.red }},{{ scheme.settings.secondary_button_label.green }},{{ scheme.settings.secondary_button_label.blue }};
+      --color-badge-text: {{ scheme.settings.text.red }},{{ scheme.settings.text.green }},{{ scheme.settings.text.blue }};
+      --color-badge-background: {{ scheme.settings.background.red }},{{ scheme.settings.background.green }},{{ scheme.settings.background.blue }};
+      --color-badge-border: {{ scheme.settings.text.red }},{{ scheme.settings.text.green }},{{ scheme.settings.text.blue }};
+  }
+    {%- endfor -%}
+
+    /* Body Color Properties */
+    {{ scheme_classes | prepend: 'body' }} {
+      color: rgba(var(--color-text));
+      background-color: rgb(var(--color-background));
+    }
+
+    :root {
+
+    /* Font properties */
+    --font-body-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
+    --font-body-style: {{ settings.type_body_font.style }};
+    --font-body-weight: {{ settings.type_body_font.weight }};
+    --font-body-weight-bold: {{ settings.type_body_font.weight | plus: 300 | at_most: 1000 }};
+
+    --font-heading-family: {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }};
+    --font-heading-style: {{ settings.type_header_font.style }};
+    --font-heading-weight: {{ settings.type_header_font.weight }};
+    --heading-text-transform: {{ settings.heading_text_transform }};
+
+    --page-width: {{ settings.page_width | divided_by: 10 }}rem;
+    --page-width-margin: {% if settings.page_width == '1600' %}2{% else %}0{% endif %}rem;
+
+    --font-body-size: {{ settings.body_font }}px;
+    --font-body-letter-spacing: {{ settings.body_letter_spacing }}px;
+    --font-body-lineheight: {{ settings.body_line_height }}px;
+
+    /* Font sizes */
+    --font-h0: {% if settings.heading_font_size == 'small' %}2.5rem{% elsif settings.heading_font_size == 'medium' %}2.75rem{% else %}3rem{% endif %};
+    --font-h1: {% if settings.heading_font_size == 'small' %}1.75rem{% elsif settings.heading_font_size == 'medium' %}2rem{% else %}2.5rem{% endif %};
+    --font-h2: {% if settings.heading_font_size == 'small' %}1.5rem{% elsif settings.heading_font_size == 'medium' %}1.75rem{% else %}2rem{% endif %};
+    --font-h3: {% if settings.heading_font_size == 'small' %}1.375rem{% elsif settings.heading_font_size == 'medium' %}1.375rem{% else %}1.5rem{% endif %};
+    --font-h4: {% if settings.heading_font_size == 'small' %}1.125rem{% elsif settings.heading_font_size == 'medium' %}1.125rem{% else %}1.375rem{% endif %};
+    --font-h5: {% if settings.heading_font_size == 'small' %}1.125rem{% elsif settings.heading_font_size == 'medium' %}1.125rem{% else %}1.125rem{% endif %};
+    --font-h6: {% if settings.heading_font_size == 'small' %}1rem{% elsif settings.heading_font_size == 'medium' %}1rem{% else %}1rem{% endif %};
+    --font-xs: {{ settings.text_font_size_mobile | minus: 3 | at_least: 10 | divided_by: 16.0 }}rem;
+    --font-sm: {{ settings.text_font_size_mobile | minus: 2 | at_least: 11 | divided_by: 16.0 }}rem;
+    --font-base: {{ settings.text_font_size_mobile | divided_by: 16.0 }}rem;
+    --font-lg: {{ settings.text_font_size_mobile | plus: 4 | divided_by: 16.0 }}rem;
+
+    /* Page width */
+    --page-width: {{ settings.page_width | divided_by: 10 }}rem;
+    --page-width-margin: {% if settings.page_width == '1920' %}2{% else %}0{% endif %}rem;
+
+      /* Vertical Spacing or Horizontal spacing */
+    --grid-desktop-vertical-spacing: {{ settings.spacing_grid_vertical }}px;
+    --grid-desktop-horizontal-spacing: {{ settings.spacing_grid_horizontal }}px;
+    --grid-mobile-vertical-spacing: {{ settings.spacing_grid_vertical | divided_by: 2 }}px;
+    --grid-mobile-horizontal-spacing: {{ settings.spacing_grid_horizontal | divided_by: 2 }}px;
+
+
+    }
+
+
+    @media screen and (min-width: 1024px) {
+      :root {
+        --font-h0: {% if settings.heading_font_size == 'small' %}3.25rem{% elsif settings.heading_font_size == 'medium' %}3.5rem{% else %}4rem{% endif %};
+        --font-h1: {% if settings.heading_font_size == 'small' %}2.25rem{% elsif settings.heading_font_size == 'medium' %}2.5rem{% else %}3rem{% endif %};
+        --font-h2: {% if settings.heading_font_size == 'small' %}1.75rem{% elsif settings.heading_font_size == 'medium' %}2rem{% else %}2.5rem{% endif %};
+        --font-h3: {% if settings.heading_font_size == 'small' %}1.625rem{% elsif settings.heading_font_size == 'medium' %}1.625rem{% else %}2rem{% endif %};
+        --font-h4: {% if settings.heading_font_size == 'small' %}1.25rem{% elsif settings.heading_font_size == 'medium' %}1.375rem{% else %}1.625rem{% endif %};
+        --font-h5: {% if settings.heading_font_size == 'small' %}1.25rem{% elsif settings.heading_font_size == 'medium' %}1.125rem{% else %}1.25rem{% endif %};
+        --font-h6: {% if settings.heading_font_size == 'small' %}1.125rem{% elsif settings.heading_font_size == 'medium' %}1rem{% else %}1.125rem{% endif %};
+
+        --font-xs: {{ settings.text_font_size_desktop | minus: 4 | at_least: 11 | divided_by: 16.0 }}rem;
+        --font-sm: {{ settings.text_font_size_desktop | minus: 2 | at_least: 12 | divided_by: 16.0 }}rem;
+        --font-base: {{ settings.text_font_size_desktop | divided_by: 16.0 }}rem;
+        --font-lg: {{ settings.text_font_size_desktop | plus: 4 | divided_by: 16.0 }}rem;
+        }
+      }
+{% endstyle %}

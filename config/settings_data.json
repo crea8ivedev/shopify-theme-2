@@ -1,0 +1,53 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "current": {
+    "logo": "shopify://shop_images/Logo.png",
+    "logo_width": 140,
+    "type_header_font": "americana_n4",
+    "heading_font_size": "small",
+    "heading_text_transform": "normal",
+    "type_body_font": "karla_n4",
+    "body_font": 16,
+    "body_line_height": 26,
+    "body_letter_spacing": 1,
+    "checkout_header_image": "shopify://shop_images/shellfish-pasta-pizza-and-italian-food.jpg",
+    "content_for_index": [],
+    "color_schemes": {
+      "scheme-1": {
+        "settings": {
+          "text": "#b54343",
+          "background": "#ffffff",
+          "primary_button": "#b47b84",
+          "primary_button_border": "#121212",
+          "secondary_button": "",
+          "secondary_button_border": "#ffffff",
+          "icons": "#ffffff",
+          "links": "#121212"
+        }
+      },
+      "scheme-9a4ed46b-85e4-406e-bd00-b3b0c4b545b2": {
+        "settings": {
+          "text": "#ffffff",
+          "background": "#b47b84",
+          "primary_button": "#ffffff",
+          "primary_button_border": "#121212",
+          "secondary_button": "",
+          "secondary_button_border": "#ffffff",
+          "icons": "#ffffff",
+          "links": "#121212"
+        }
+      }
+    }
+  },
+  "presets": {
+    "Default": {}
+  }
+}
