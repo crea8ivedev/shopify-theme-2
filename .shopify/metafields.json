@@ -29,66 +29,6 @@
         "name": "single_line_text_field",
         "category": "TEXT"
       }
-    },
-    {
-      "key": "color-pattern",
-      "namespace": "shopify",
-      "name": "Color",
-      "description": "Defines the primary color or pattern, such as blue or striped",
-      "type": {
-        "name": "list.metaobject_reference",
-        "category": "REFERENCE"
-      }
-    },
-    {
-      "key": "size",
-      "namespace": "shopify",
-      "name": "Size",
-      "description": "Used to specify the size of a product, such as 0-3 months or Extra large (XL)",
-      "type": {
-        "name": "list.metaobject_reference",
-        "category": "REFERENCE"
-      }
-    },
-    {
-      "key": "product_information",
-      "namespace": "custom",
-      "name": "Product Information",
-      "description": "",
-      "type": {
-        "name": "list.metaobject_reference",
-        "category": "REFERENCE"
-      }
-    },
-    {
-      "key": "shipping_details",
-      "namespace": "custom",
-      "name": "Shipping Details",
-      "description": "",
-      "type": {
-        "name": "list.metaobject_reference",
-        "category": "REFERENCE"
-      }
-    },
-    {
-      "key": "accordions",
-      "namespace": "custom",
-      "name": "Accordions",
-      "description": "",
-      "type": {
-        "name": "list.metaobject_reference",
-        "category": "REFERENCE"
-      }
-    },
-    {
-      "key": "warranty_text",
-      "namespace": "custom",
-      "name": "Warranty text",
-      "description": "",
-      "type": {
-        "name": "rich_text_field",
-        "category": "TEXT"
-      }
     }
   ],
   "variant": [],

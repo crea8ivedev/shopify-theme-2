@@ -1,0 +1,194 @@
+{{ 'sale-banner.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+  .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.top_padding | times: 0.50 | round: 0 }}px;
+      padding-bottom: {{ section.settings.bottom_padding | times: 0.50 | round: 0 }}px;
+    }
+
+    @media screen and (min-width: 1024px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.top_padding }}px;
+        padding-bottom: {{ section.settings.bottom_padding }}px;
+      }
+    }
+{% endstyle %}
+
+<e-sale-banner class="sale-banner">
+  <section class="sale-banner-section color-{{ section.settings.color_scheme }} section-{{ section.id }}-padding">
+    <div class="sale-banner-wrapper">
+      <div class="sale-banner-item">
+        {% if section.settings.first_image != blank %}
+        <div class="sale-banner-image-wrapper">
+          <img
+            src="{{ section.settings.first_image | image_url }}"
+            alt="{{ section.settings.first_image.alt }}"
+            width="450"
+            height="450"
+            class="sale-banner-image"
+          >
+        </div>
+      {% else %}
+        {{ 'image' | placeholder_svg_tag }}
+      {% endif %}
+      </div>
+
+      <div class="sale-banner-item sale-banner-content">
+        {% if section.settings.middle_image != blank %}
+        <div class="sale-banner-image-wrapper">
+          <img
+            src="{{ section.settings.middle_image | image_url }}"
+            alt="{{ section.settings.middle_image.alt }}"
+            width="450"
+            height="450"
+            class="sale-banner-image"
+          >
+        </div>
+      {% endif %}
+        <div class="sale-banner-description">
+         {% if section.settings.sale_banner_heading != blank  %} <h2 class="sale-banner-title">{{ section.settings.sale_banner_heading }}</h2> {% endif %}
+          {%  if section.settings.banner_text != blank  %}<p class="sale-banner-text">{{ section.settings.banner_text }}</p> {% endif %}
+         {% if section.settings.link_text != blank %}
+          <a
+            href="{{ section.settings.link }}"
+            class="sale-banner-button"
+            {% if section.settings.external_link == true %}
+              target="_blank"
+            {% endif %}
+          >
+            <div class="sale-banner-button-content">
+              {{ section.settings.link_text }}
+              {% if section.settings.show_arrow == true %}
+                <span class="sale-banner-arrow">
+                  {% render 'icon-up-arrow' %}
+                </span>
+              {% endif %}
+            </div>
+          </a>
+        {% endif %}
+        </div>
+      </div>
+
+      <div class="sale-banner-item">
+        {% if section.settings.last_image != blank %}
+        <div class="sale-banner-image-wrapper">
+          <img
+            src="{{ section.settings.last_image | image_url }}"
+            alt="{{ section.settings.last_image.alt }}"
+            width="450"
+            height="450"
+            class="sale-banner-image"
+          >
+        </div>
+      {% endif %}
+      </div>
+    </div>
+  </section>
+</e-sale-banner>
+
+{% schema %}
+{
+  "name": "Sale Banner",
+  "class": "sale-banner",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "label": "Color Scheme",
+      "id": "color_scheme"
+    },
+    {
+      "type": "text",
+      "label": "Heading",
+      "id": "sale_banner_heading",
+      "default": "Sale",
+      "placeholder": "Heading"
+    },
+    {
+      "type": "text",
+      "label": "Text",
+      "id": "banner_text",
+      "default": "Organic ingredients natural cosmetic",
+      "placeholder": "Banner Text"
+    },
+    {
+      "type": "checkbox",
+      "label": "Show Border",
+      "id": "show_border",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "label": "First Image",
+      "id": "first_image"
+    },
+    {
+      "type": "image_picker",
+      "label": "Middle Image",
+      "id": "middle_image"
+    },
+    {
+      "type": "image_picker",
+      "label": "Last Image",
+      "id": "last_image"
+    },
+    {
+      "type": "range",
+      "label": "Overlay Opacity",
+      "id": "overlay_opacity",
+      "default": 0.5,
+      "min": 0,
+      "max": 1,
+      "step": 0.1
+    },
+    {
+      "type": "text",
+      "label": "Link Text",
+      "id": "link_text",
+      "default": "View All Offers"
+    },
+    {
+      "type": "url",
+      "label": "Link ",
+      "id": "link"
+    },
+    {
+      "type": "checkbox",
+      "label": "External Link",
+      "id": "external_link",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "label": "Show Arrow",
+      "id": "show_arrow",
+      "default": true
+    },
+    {
+      "type": "range",
+      "label": "Top Padding",
+      "id": "top_padding",
+      "default": 100,
+      "min": 20,
+      "max": 110,
+      "step": 10,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "label": "Bottom Padding",
+      "id": "bottom_padding",
+      "default": 100,
+      "min": 20,
+      "max": 110,
+      "step": 10,
+      "unit": "px"
+    }
+  ],
+
+  "presets": [
+    {
+      "name": "Sale Banner"
+    }
+  ]
+}
+{% endschema %}

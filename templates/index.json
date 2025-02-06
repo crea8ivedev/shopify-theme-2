@@ -15,7 +15,29 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "sale_banner_RmVnUG": {
+      "type": "sale-banner",
+      "settings": {
+        "color_scheme": "",
+        "sale_banner_heading": "Sale",
+        "banner_text": "Organic ingredients natural cosmetic",
+        "show_border": true,
+        "first_image": "shopify://shop_images/Rectangle_143.jpg",
+        "middle_image": "shopify://shop_images/54101bd7c7573ad671ab4ce74ec35114.jpg",
+        "last_image": "shopify://shop_images/Rectangle_145.jpg",
+        "overlay_opacity": 0.7,
+        "link_text": "View All Offers",
+        "link": "#",
+        "external_link": false,
+        "show_arrow": true,
+        "top_padding": 80,
+        "bottom_padding": 100
+      }
     }
   },
-  "order": ["main"]
+  "order": [
+    "main",
+    "sale_banner_RmVnUG"
+  ]
 }
