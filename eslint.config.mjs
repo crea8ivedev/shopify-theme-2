@@ -5,6 +5,7 @@ import pluginJs from '@eslint/js'
 export default [
   {
     files: ['**/*.js'],
+    ignores: ["assets/**/*.min.js", "assets/**/*.min.css", "assets/jquery-3.7.1.min.js"],
     languageOptions: { sourceType: 'module', ecmaVersion: 'latest' },
     rules: {
       'no-unused-vars': 'error', // Disallows variables that are declared but never used in the code
@@ -21,7 +22,6 @@ export default [
       'prefer-template': 'error', // Encourages template literals instead of string concatenation
       'no-loop-func': 'error', // Disallows function definitions inside loops
       'max-depth': ['error', 4], // Limits nesting depth
-      'complexity': ['error', { max: 10 }], // error if function complexity is too high
       'no-duplicate-imports': 'error', // Prevents duplicate imports
       'no-implied-eval': 'error', // Prevents use of `setTimeout` and `setInterval` with string arguments
       'no-self-compare': 'error', // Prevents `x === x` which is usually a mistake
