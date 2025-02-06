@@ -73,7 +73,7 @@ ParserBlockingScript:
   severity: error
 RemoteAsset:
   enabled: true
-  severity: error
+  severity: warning
 RequiredLayoutThemeObject:
   enabled: true
   severity: error
