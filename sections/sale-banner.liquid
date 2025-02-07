@@ -18,11 +18,11 @@
   <section class="sale-banner-section color-{{ section.settings.color_scheme }} section-{{ section.id }}-padding">
     <div class="sale-banner-wrapper">
       <div class="sale-banner-item">
-        {% if section.settings.first_image != blank %}
+        {% if section.settings.sale_first_image != blank %}
         <div class="sale-banner-image-wrapper">
           <img
-            src="{{ section.settings.first_image | image_url }}"
-            alt="{{ section.settings.first_image.alt }}"
+            src="{{ section.settings.sale_first_image | image_url }}"
+            alt="{{ section.settings.sale_first_image.alt }}"
             width="450"
             height="450"
             class="sale-banner-image"
@@ -34,11 +34,11 @@
       </div>
 
       <div class="sale-banner-item sale-banner-content">
-        {% if section.settings.middle_image != blank %}
+        {% if section.settings.sale_middle_image != blank %}
         <div class="sale-banner-image-wrapper">
           <img
-            src="{{ section.settings.middle_image | image_url }}"
-            alt="{{ section.settings.middle_image.alt }}"
+            src="{{ section.settings.sale_middle_image | image_url }}"
+            alt="{{ section.settings.sale_middle_image.alt }}"
             width="450"
             height="450"
             class="sale-banner-image"
@@ -70,11 +70,11 @@
       </div>
 
       <div class="sale-banner-item">
-        {% if section.settings.last_image != blank %}
+        {% if section.settings.sale_last_image != blank %}
         <div class="sale-banner-image-wrapper">
           <img
-            src="{{ section.settings.last_image | image_url }}"
-            alt="{{ section.settings.last_image.alt }}"
+            src="{{ section.settings.sale_last_image | image_url }}"
+            alt="{{ section.settings.sale_last_image.alt }}"
             width="450"
             height="450"
             class="sale-banner-image"
@@ -119,17 +119,17 @@
     {
       "type": "image_picker",
       "label": "First Image",
-      "id": "first_image"
+      "id": "sale_first_image"
     },
     {
       "type": "image_picker",
       "label": "Middle Image",
-      "id": "middle_image"
+      "id": "sale_middle_image"
     },
     {
       "type": "image_picker",
       "label": "Last Image",
-      "id": "last_image"
+      "id": "sale_last_image"
     },
     {
       "type": "range",
