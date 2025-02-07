@@ -13,8 +13,51 @@
   "sections": {
     "header": {
       "type": "header",
-      "settings": {}
+      "disabled": true,
+      "settings": {
+        "color_scheme": ""
+      }
+    },
+    "announcement_bar_rY98XK": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement_text_slider_yVJMFn": {
+          "type": "announcement_text_slider",
+          "settings": {
+            "announcement_text": "Welcome to our store",
+            "link_text": "",
+            "link_url": "",
+            "target_blank": false
+          }
+        },
+        "announcement_text_slider_xjGRJT": {
+          "type": "announcement_text_slider",
+          "settings": {
+            "announcement_text": "",
+            "link_text": "Welcome to our store",
+            "link_url": "shopify://products/the-3p-fulfilled-snowboard",
+            "target_blank": true
+          }
+        }
+      },
+      "block_order": [
+        "announcement_text_slider_yVJMFn",
+        "announcement_text_slider_xjGRJT"
+      ],
+      "settings": {
+        "color_scheme": "scheme-9a4ed46b-85e4-406e-bd00-b3b0c4b545b2",
+        "show_close_button": true,
+        "show_navigation_buttons": true,
+        "auto_slide": true,
+        "slides_speed": 3,
+        "text_align": "center",
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
     }
   },
-  "order": ["header"]
+  "order": [
+    "header",
+    "announcement_bar_rY98XK"
+  ]
 }

@@ -238,6 +238,54 @@
         "label": "Color scheme",
         "has_cards_info": "To change the card color scheme, update your theme settings."
       }
-    }
+    },
+    "announcement-bar": {
+      "name": "Announcement Bar",
+      "settings": {
+        "show_close_button": {
+          "label": "Show Close Button"
+        },
+        "show_navigation_buttons": {
+          "label": "Show Navigation Buttons"
+        },
+        "auto_slide": {
+          "label": "Auto Rotate Messages"
+        },
+        "slides_speed": {
+          "label": "Change Slides Speed"
+        }
+      },
+      "blocks": {
+        "announcement_text_slider": {
+          "name": "Announcement",
+          "settings": {
+            "announcement_text": {
+              "label": "Text"
+            },
+            "link_text": {
+              "label": "Link Text"
+            },
+            "link_url": {
+              "label": "Link URL"
+            },
+            "target_blank": {
+              "label": "External Link"
+            },
+            "text_left": {
+              "label": "Left"
+            },
+            "text_center": {
+              "label": "Center"
+            },
+            "text_right": {
+              "label": "Right"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Announcement Bar"
+      }
+    },
   }
 }

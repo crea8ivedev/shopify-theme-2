@@ -1,0 +1,73 @@
+.announcement-bar_content,.announcement-content p {
+    margin: 0px;
+  }
+  .announcement-info.text_center .announcement-bar,
+  .announcement-info.text_left .announcement-bar,
+  .announcement-info.text_right .announcement-bar,
+  .announcement-bar-main .announcebar {
+    flex-grow: 1;
+  }
+  .announcement-bar .announcement-content p a{
+    color: rgba(var(--color-text));
+    position: relative;
+  }
+  .announcement-bar .announcement-content p a:hover {
+    text-decoration: none;
+    transform: all 500ms;
+  }
+  .announcement-bar-main {
+    position: relative;
+  }
+  .announcement-bar-main .slider-arrows .swiper-button-disabled {
+    opacity: 0.5;
+  }
+  .announcement-bar-main .slider-arrows .next-btn,
+  .announcement-bar-main .slider-arrows .prev-btn,
+  .announcement-info .close-icon {
+    cursor: pointer;
+  }
+  .announcement-bar-main .announcement-info {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  .announcement-bar .swiper-slide {
+    height: auto;
+  }
+  .announcement-bar .swiper-slide .announcement-content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .announcement-bar-main .slider-arrows .next-btn:hover,
+  .announcement-bar-main .slider-arrows .prev-btn:hover,
+  .announcement-bar-main .announcement-info .close-icon:hover {
+    opacity: 0.5;
+  }
+  .announcement-bar-main .slider-arrows .next-btn svg:focus,
+  .announcement-bar-main .slider-arrows .prev-btn svg:focus,
+  .announcement-bar-main .announcement-info .close-icon svg:focus,
+  .announcement-bar-main .slider-arrows .next-btn svg:focus-visible,
+  .announcement-bar-main .slider-arrows .prev-btn svg:focus-visible,
+  .announcement-bar-main .announcement-info .close-icon svg:focus-visible {
+    outline: 1px dashed #000 !important;
+    outline-offset: 2px !important;
+    box-shadow: none !important;
+  }
+  .announcement-bar .announcement-slider .announcement-slide p {
+    margin: 0;
+    width: 100%;
+  }
+  @media (max-width:989px) {
+    .announcement-info .slider-arrows {
+      display: none;
+    }
+    .announcement-bar-main .announcement-info {
+      gap: 12px;
+    }
+  }
+  @media (max-width:749px) {
+    .announcement-bar p {
+      text-align: center !important;
+    }
+  }
