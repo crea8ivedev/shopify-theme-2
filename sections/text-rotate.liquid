@@ -11,6 +11,7 @@
     display: inline-block;
     animation: marquee {{ section.settings.scrolling_speed }}s linear infinite;
     width: 100%;
+    white-space: nowrap;
   }
     
   
@@ -25,6 +26,7 @@
 <rotate-bar class="text-rotate {% if section.settings.show_border == true %} show-border {% endif %} section-{{ section.id }}-padding">
   <div class="marquee color-{{section.settings.color_scheme}}" style="background-color: {{ section.settings.color-text }};">
     <div class="marquee_text">
+        <div class="marquee-wrap">
       <ul class="marquee-content-primary">
         {% for block in section.blocks %}
           {% if block.settings.text-marqee %}
@@ -32,6 +34,7 @@
           {% endif %}
         {% endfor %}
       </ul>
+      </div>
     </div>
   </div>
 </rotate-bar>
@@ -103,9 +106,26 @@
       ]
     }
   ],
-  "presets": [
+ "presets": [
     {
-      "name": "t:sections.rotate-bar.name"
+      "name": "t:sections.rotate-bar.name",
+      "blocks": [
+        {
+          "type": "text_block"
+        },
+        {
+          "type": "text_block"
+        },
+        {
+          "type": "text_block"
+        },
+        {
+          "type": "text_block"
+        },
+        {
+          "type": "text_block"
+        }
+      ]
     }
   ]
 }
