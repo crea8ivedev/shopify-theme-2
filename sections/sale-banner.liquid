@@ -19,68 +19,82 @@
     <div class="sale-banner-wrapper">
       <div class="sale-banner-item">
         {% if section.settings.sale_first_image != blank %}
-        <div class="sale-banner-image-wrapper">
-          <img
-            src="{{ section.settings.sale_first_image | image_url }}"
-            alt="{{ section.settings.sale_first_image.alt }}"
-            width="450"
-            height="450"
-            class="sale-banner-image"
-          >
-        </div>
-      {% else %}
-        {{ 'image' | placeholder_svg_tag }}
-      {% endif %}
+          <div class="sale-banner-image-wrapper">
+            <img
+              src="{{ section.settings.sale_first_image | image_url }}"
+              alt="{{ section.settings.sale_first_image.alt }}"
+              width="450"
+              height="450"
+              class="sale-banner-image"
+            >
+          </div>
+        {% else %}
+          <div>
+            {{ 'image' | placeholder_svg_tag }}
+          </div>
+        {% endif %}
       </div>
 
       <div class="sale-banner-item sale-banner-content">
         {% if section.settings.sale_middle_image != blank %}
-        <div class="sale-banner-image-wrapper">
-          <img
-            src="{{ section.settings.sale_middle_image | image_url }}"
-            alt="{{ section.settings.sale_middle_image.alt }}"
-            width="450"
-            height="450"
-            class="sale-banner-image"
-          >
-        </div>
-      {% endif %}
-        <div class="sale-banner-description">
-         {% if section.settings.sale_banner_heading != blank  %} <h2 class="sale-banner-title">{{ section.settings.sale_banner_heading }}</h2> {% endif %}
-          {%  if section.settings.banner_text != blank  %}<p class="sale-banner-text">{{ section.settings.banner_text }}</p> {% endif %}
-         {% if section.settings.link_text != blank %}
-          <a
-            href="{{ section.settings.link }}"
-            class="sale-banner-button"
-            {% if section.settings.external_link == true %}
-              target="_blank"
-            {% endif %}
-          >
-            <div class="sale-banner-button-content">
-              {{ section.settings.link_text }}
-              {% if section.settings.show_arrow == true %}
-                <span class="sale-banner-arrow">
-                  {% render 'icon-up-arrow' %}
-                </span>
-              {% endif %}
-            </div>
-          </a>
+          <div class="sale-banner-image-wrapper">
+            <img
+              src="{{ section.settings.sale_middle_image | image_url }}"
+              alt="{{ section.settings.sale_middle_image.alt }}"
+              width="450"
+              height="450"
+              class="sale-banner-image"
+            >
+          </div>
+        {% else %}
+          <div>
+            {{ 'image' | placeholder_svg_tag }}
+          </div>
         {% endif %}
+        <div class="sale-banner-description">
+          {% if section.settings.sale_banner_heading != blank %}
+            <h2 class="sale-banner-title">{{ section.settings.sale_banner_heading }}</h2>
+          {% endif %}
+          {% if section.settings.banner_text != blank %}
+            <p class="sale-banner-text">{{ section.settings.banner_text }}</p>
+          {% endif %}
+          {% if section.settings.link_text != blank %}
+            <a
+              href="{{ section.settings.link }}"
+              class="sale-banner-button"
+              {% if section.settings.external_link == true %}
+                target="_blank"
+              {% endif %}
+            >
+              <div class="sale-banner-button-content">
+                {{ section.settings.link_text }}
+                {% if section.settings.show_arrow == true %}
+                  <span class="sale-banner-arrow">
+                    {% render 'icon-up-arrow' %}
+                  </span>
+                {% endif %}
+              </div>
+            </a>
+          {% endif %}
         </div>
       </div>
 
       <div class="sale-banner-item">
         {% if section.settings.sale_last_image != blank %}
-        <div class="sale-banner-image-wrapper">
-          <img
-            src="{{ section.settings.sale_last_image | image_url }}"
-            alt="{{ section.settings.sale_last_image.alt }}"
-            width="450"
-            height="450"
-            class="sale-banner-image"
-          >
-        </div>
-      {% endif %}
+          <div class="sale-banner-image-wrapper">
+            <img
+              src="{{ section.settings.sale_last_image | image_url }}"
+              alt="{{ section.settings.sale_last_image.alt }}"
+              width="450"
+              height="450"
+              class="sale-banner-image"
+            >
+          </div>
+        {% else %}
+          <div>
+            {{ 'image' | placeholder_svg_tag }}
+          </div>
+        {% endif %}
       </div>
     </div>
   </section>
@@ -88,52 +102,52 @@
 
 {% schema %}
 {
-  "name": "Sale Banner",
+  "name": "t:sections.sale-banner.name",
   "class": "sale-banner",
   "settings": [
     {
       "type": "color_scheme",
-      "label": "Color Scheme",
+      "label": "t:sections.sale-banner.settings.color_scheme.label",
       "id": "color_scheme"
     },
     {
       "type": "text",
-      "label": "Heading",
+      "label": "t:sections.sale-banner.settings.sale_banner_heading.label",
       "id": "sale_banner_heading",
       "default": "Sale",
       "placeholder": "Heading"
     },
     {
       "type": "text",
-      "label": "Text",
+      "label": "t:sections.sale-banner.settings.banner_text.label",
       "id": "banner_text",
       "default": "Organic ingredients natural cosmetic",
       "placeholder": "Banner Text"
     },
     {
       "type": "checkbox",
-      "label": "Show Border",
+      "label": "t:sections.sale-banner.settings.show_border.label",
       "id": "show_border",
       "default": true
     },
     {
       "type": "image_picker",
-      "label": "First Image",
+      "label": "t:sections.sale-banner.settings.sale_first_image.label",
       "id": "sale_first_image"
     },
     {
       "type": "image_picker",
-      "label": "Middle Image",
+      "label": "t:sections.sale-banner.settings.sale_middle_image.label",
       "id": "sale_middle_image"
     },
     {
       "type": "image_picker",
-      "label": "Last Image",
+      "label": "t:sections.sale-banner.settings.sale_last_image.label",
       "id": "sale_last_image"
     },
     {
       "type": "range",
-      "label": "Overlay Opacity",
+      "label": "t:sections.sale-banner.settings.overlay_opacity.label",
       "id": "overlay_opacity",
       "default": 0.5,
       "min": 0,
@@ -141,31 +155,39 @@
       "step": 0.1
     },
     {
+      "type": "header",
+      "content": "t:sections.sale-banner.settings.button.header"
+    },
+    {
       "type": "text",
-      "label": "Link Text",
+      "label": "t:sections.sale-banner.settings.button.link_text.label",
       "id": "link_text",
       "default": "View All Offers"
     },
     {
       "type": "url",
-      "label": "Link ",
+      "label": "t:sections.sale-banner.settings.button.link.label",
       "id": "link"
     },
     {
       "type": "checkbox",
-      "label": "External Link",
+      "label": "t:sections.sale-banner.settings.button.show_arrow.label",
       "id": "external_link",
       "default": false
     },
     {
       "type": "checkbox",
-      "label": "Show Arrow",
+      "label": "t:sections.sale-banner.settings.section_padding.header",
       "id": "show_arrow",
       "default": true
     },
     {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
       "type": "range",
-      "label": "Top Padding",
+      "label": "t:sections.sale-banner.settings.section_padding.top_padding.label",
       "id": "top_padding",
       "default": 100,
       "min": 20,
@@ -175,7 +197,7 @@
     },
     {
       "type": "range",
-      "label": "Bottom Padding",
+      "label": "t:sections.sale-banner.settings.section_padding.bottom_padding.label",
       "id": "bottom_padding",
       "default": 100,
       "min": 20,

@@ -238,6 +238,59 @@
         "label": "Color scheme",
         "has_cards_info": "To change the card color scheme, update your theme settings."
       }
-    }
+    },
+      "sale-banner": {
+        "name": "Sale Banner",
+        "settings": {
+          "color_scheme": {
+            "label": "Color Scheme"
+          },
+          "sale_banner_heading": {
+            "label": "Heading"
+          },
+          "banner_text": {
+            "label": "Text"
+          },
+          "show_border": {
+            "label": "Show Border"
+          },
+          "sale_first_image": {
+            "label": "First Image"
+          },
+          "sale_middle_image": {
+            "label": "Middle Image"
+          },
+          "sale_last_image": {
+            "label": "Last Image"
+          },
+          "overlay_opacity": {
+            "label": "Overlay Opacity"
+          },
+          "button": {
+            "header": "Button",
+            "link_text": {
+              "label": "Link Text"
+            },
+            "link": {
+              "label": "Link"
+            },
+            "external_link": {
+              "label": "External Link"
+            },
+            "show_arrow": {
+              "label": "Show Arrow"
+            }
+          },
+          "section_padding": {
+            "header": "Section Padding",
+            "top_padding": {
+              "label": "Top Padding"
+            },
+            "bottom_padding": {
+              "label": "Bottom Padding"
+            }
+          }
+        }
+      }
+    }    
   }
-}
