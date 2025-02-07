@@ -18,17 +18,25 @@
     "body_font": 16,
     "body_line_height": 26,
     "body_letter_spacing": 1,
+    "page_width": 1320,
+    "buttons_border_thickness": 1,
+    "buttons_radius": 100,
+    "heading_scale": 100,
     "checkout_header_image": "shopify://shop_images/shellfish-pasta-pizza-and-italian-food.jpg",
     "content_for_index": [],
     "color_schemes": {
       "scheme-1": {
         "settings": {
-          "text": "#b54343",
+          "text": "#252525",
           "background": "#ffffff",
-          "primary_button": "#b47b84",
-          "primary_button_border": "#121212",
+          "primary_button": "#944e63",
+          "primary_button_hover": "",
+          "primary_button_text": "#ffffff",
+          "primary_button_border": "#944e63",
           "secondary_button": "",
-          "secondary_button_border": "#ffffff",
+          "secondary_button_hover": "#944e63",
+          "secondary_button_text": "#944e63",
+          "secondary_button_border": "#944e63",
           "icons": "#ffffff",
           "links": "#121212"
         }
@@ -38,8 +46,12 @@
           "text": "#ffffff",
           "background": "#b47b84",
           "primary_button": "#ffffff",
-          "primary_button_border": "#121212",
+          "primary_button_hover": "",
+          "primary_button_text": "#944e63",
+          "primary_button_border": "#ffffff",
           "secondary_button": "",
+          "secondary_button_hover": "#ffffff",
+          "secondary_button_text": "#ffffff",
           "secondary_button_border": "#ffffff",
           "icons": "#ffffff",
           "links": "#121212"

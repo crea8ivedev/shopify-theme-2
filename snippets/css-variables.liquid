@@ -76,7 +76,7 @@
     --font-heading-weight: {{ settings.type_header_font.weight }};
     --heading-text-transform: {{ settings.heading_text_transform }};
 
-    --page-width: {{ settings.page_width | divided_by: 10 }}rem;
+    --page-width: {{ settings.page_width | divided_by: 16.0  }}rem;
     --page-width-margin: {% if settings.page_width == '1600' %}2{% else %}0{% endif %}rem;
 
     --font-body-size: {{ settings.body_font }}px;
@@ -86,7 +86,7 @@
     /* Font sizes */
     --font-h0: {% if settings.heading_font_size == 'small' %}2.5rem{% elsif settings.heading_font_size == 'medium' %}2.75rem{% else %}3rem{% endif %};
     --font-h1: {% if settings.heading_font_size == 'small' %}1.75rem{% elsif settings.heading_font_size == 'medium' %}2rem{% else %}2.5rem{% endif %};
-    --font-h2: {% if settings.heading_font_size == 'small' %}1.5rem{% elsif settings.heading_font_size == 'medium' %}1.75rem{% else %}2rem{% endif %};
+    --font-h2: {% if settings.heading_font_size == 'small' %}1.5rem{% elsif settings.heading_font_size == 'medium' %}1.75rem{% else %}2.25rem{% endif %};
     --font-h3: {% if settings.heading_font_size == 'small' %}1.375rem{% elsif settings.heading_font_size == 'medium' %}1.375rem{% else %}1.5rem{% endif %};
     --font-h4: {% if settings.heading_font_size == 'small' %}1.125rem{% elsif settings.heading_font_size == 'medium' %}1.125rem{% else %}1.375rem{% endif %};
     --font-h5: {% if settings.heading_font_size == 'small' %}1.125rem{% elsif settings.heading_font_size == 'medium' %}1.125rem{% else %}1.125rem{% endif %};
@@ -95,10 +95,6 @@
     --font-sm: {{ settings.text_font_size_mobile | minus: 2 | at_least: 11 | divided_by: 16.0 }}rem;
     --font-base: {{ settings.text_font_size_mobile | divided_by: 16.0 }}rem;
     --font-lg: {{ settings.text_font_size_mobile | plus: 4 | divided_by: 16.0 }}rem;
-
-    /* Page width */
-    --page-width: {{ settings.page_width | divided_by: 10 }}rem;
-    --page-width-margin: {% if settings.page_width == '1920' %}2{% else %}0{% endif %}rem;
 
     --badge-corner-radius: {{ settings.badge_corner_radius | divided_by: 10.0 }}rem;
 

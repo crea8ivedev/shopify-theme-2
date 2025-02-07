@@ -238,6 +238,168 @@
         "label": "Color scheme",
         "has_cards_info": "To change the card color scheme, update your theme settings."
       }
+    },
+    "media_with_text": {
+      "name": "Media With Text",
+      "settings": {
+        "image": {
+          "label": "Select Image"
+        },
+        "image_height": {
+          "label": "Image Height",
+          "options": {
+            "adapt": "Adapt to Image",
+            "small": "Small",
+            "medium": "Medium",
+            "large": "Large"
+          }
+        },
+        "image_width": {
+          "label": "Image Width",
+          "options": {
+            "small": "Small",
+            "medium": "Medium",
+            "large": "Large"
+          }
+        },
+        "video": {
+          "label": "Select Video"
+        },
+        "cover_image": {
+          "label": "Select Cover Image"
+        },
+        "video_height": {
+          "label": "Video Height",
+          "options": {
+            "adapt": "Adapt to Video",
+            "small": "Small",
+            "medium": "Medium",
+            "large": "Large"
+          }
+        },
+        "video_width": {
+          "label": "Video Width",
+          "options": {
+            "small": "Small",
+            "medium": "Medium",
+            "large": "Large"
+          }
+        },
+        "video_url": {
+          "label": "URL",
+          "placeholder": "Use a YouTube or Vimeo URL"
+        },
+        "section_color_scheme": {
+          "label": "Color Scheme"
+        },
+        "layout": {
+          "label": "Desktop Media Placement",
+          "options": {
+            "media_left": "Media Left",
+            "media_right": "Media Right"
+          }
+        },
+        "desktop_content_position": {
+          "label": "Desktop Content Position",
+          "options": {
+            "top": "Top",
+            "middle": "Middle",
+            "bottom": "Bottom"
+          }
+        },
+        "desktop_content_alignment": {
+          "label": "Desktop Content Alignment",
+          "options": {
+            "left": "Left",
+            "center": "Center",
+            "right": "Right"
+          }
+        },
+        "mobile_image_placement": {
+          "label": "Mobile Media Placement",
+          "options": {
+            "media_top": "Media Top",
+            "media_bottom": "Media Bottom"
+          }
+        },
+        "mobile_content_alignment": {
+          "label": "Mobile Content Alignment",
+          "options": {
+            "left": "Left",
+            "center": "Center",
+            "right": "Right"
+          }
+        },
+        "padding_top": {
+          "label": "Padding Top"
+        },
+        "padding_bottom": {
+          "label": "Padding Bottom"
+        }
+      },
+      "blocks": {
+        "heading": {
+          "name": "Heading",
+          "settings": {
+            "heading": {
+              "label": "Heading"
+            },
+            "heading_size": {
+              "label": "Heading Size",
+              "options": {
+                "small": "Small",
+                "medium": "Medium",
+                "large": "Large"
+              }
+            }
+          }
+        },
+        "text": {
+          "name": "Text",
+          "settings": {
+            "content": {
+              "label": "Content"
+            }
+          }
+        },
+        "caption": {
+          "name": "Caption",
+          "settings": {
+            "caption": {
+              "label": "Caption"
+            },
+            "caption_color": {
+              "label": "Caption Color"
+            },
+            "caption_heading_size": {
+              "label": "Text Size",
+              "options": {
+                "small": "Small",
+                "medium": "Medium",
+                "large": "Large"
+              }
+            }
+          }
+        },
+        "button": {
+          "name": "Button",
+          "settings": {
+            "button_label": {
+              "label": "Button Label",
+              "info": "Leave the label blank to hide the button."
+            },
+            "button_link": {
+              "label": "Button Link"
+            },
+            "button_style_secondary": {
+              "label": "Use Outline Button Style"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Media With Text"
+      }
     }
   }
 }
