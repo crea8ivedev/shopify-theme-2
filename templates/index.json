@@ -15,7 +15,59 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "text_rotate_aTrKf8": {
+      "type": "text-rotate",
+      "blocks": {
+        "text_block_gXK3Xa": {
+          "type": "text_block",
+          "settings": {
+            "text-marqee": "Welcome!"
+          }
+        },
+        "text_block_hcMxGc": {
+          "type": "text_block",
+          "settings": {
+            "text-marqee": "Hurry up 10% off for all items"
+          }
+        },
+        "text_block_TdkhDn": {
+          "type": "text_block",
+          "settings": {
+            "text-marqee": "First time free delivery in usa"
+          }
+        },
+        "text_block_68RPVd": {
+          "type": "text_block",
+          "settings": {
+            "text-marqee": "20% off everything for women"
+          }
+        },
+        "text_block_LxLTiD": {
+          "type": "text_block",
+          "settings": {
+            "text-marqee": "Summer sale 40% off everything"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_gXK3Xa",
+        "text_block_hcMxGc",
+        "text_block_TdkhDn",
+        "text_block_68RPVd",
+        "text_block_LxLTiD"
+      ],
+      "settings": {
+        "color_scheme": "scheme-f8ab58ef-474a-4153-acc3-2dfb57594448",
+        "scrolling_speed": 10,
+        "show_border": true,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
     }
   },
-  "order": ["main"]
+  "order": [
+    "main",
+    "text_rotate_aTrKf8"
+  ]
 }

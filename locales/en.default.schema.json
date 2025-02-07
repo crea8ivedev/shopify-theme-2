@@ -238,6 +238,35 @@
         "label": "Color scheme",
         "has_cards_info": "To change the card color scheme, update your theme settings."
       }
+    },
+    "rotate-bar": {
+      "name": "Text Rotate",
+      "settings": {
+        "scrolling_speed": {
+          "label": "Scrolling Speed"
+        },
+        "section_padding": {
+          "header": "Section Padding",
+          "padding_top": {
+            "label": "Top Padding"
+          },
+          "padding_bottom": {
+            "label": "Bottom Padding"
+          }
+        }
+      },
+      "blocks": {
+        "text_block": {
+          "settings": {
+            "rotate_text": {
+              "label": "Rotating Text"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Text Rotate"
+      }
     }
   }
 }

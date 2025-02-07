@@ -1,0 +1,70 @@
+:root {
+  --marquee-padding: 0px;
+  --marquee-padding-negative: calc(var(--marquee-padding) * -1);
+}
+
+.text-rotate {
+  display: block;
+}
+.text-rotate.show-border{
+    border-top: 1px solid #B47B84;
+    border-bottom: 1px solid #B47B84;
+}
+.marquee {
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.marquee .marquee_text ul {
+  display: inline-flex;
+  font-size: 16px;
+  list-style: none;
+  margin: 0;
+}
+
+.marquee .marquee_text ul>li {
+  padding-inline: 40px;
+  width: 100%;
+  position: relative;
+  font-weight: bold;
+  font-size: 1.25rem;
+  line-height: 1.8rem;
+}
+
+.marquee .marquee_text ul>li::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-image: url('https://cdn.shopify.com/s/files/1/0877/8481/6962/files/Ellipse_52_2.webp?v=1738922837');
+  width: 14px;
+  height: 14px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.marquee-content-secondary {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-left: var(--marquee-padding);
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(var(--marquee-padding-negative), 0, 0);
+  }
+}
+
+@media (max-width: 1024px) {
+  .marquee .marquee_text ul>li {
+    font-size: 1rem;
+    line-height: 26px;
+  }
+}

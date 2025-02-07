@@ -26,8 +26,12 @@
           "text": "#b54343",
           "background": "#ffffff",
           "primary_button": "#b47b84",
+          "primary_button_hover": "",
+          "primary_button_text": "#ffffff",
           "primary_button_border": "#121212",
           "secondary_button": "",
+          "secondary_button_hover": "",
+          "secondary_button_text": "#ffffff",
           "secondary_button_border": "#ffffff",
           "icons": "#ffffff",
           "links": "#121212"
@@ -38,10 +42,30 @@
           "text": "#ffffff",
           "background": "#b47b84",
           "primary_button": "#ffffff",
+          "primary_button_hover": "",
+          "primary_button_text": "#ffffff",
           "primary_button_border": "#121212",
           "secondary_button": "",
+          "secondary_button_hover": "",
+          "secondary_button_text": "#ffffff",
           "secondary_button_border": "#ffffff",
           "icons": "#ffffff",
+          "links": "#121212"
+        }
+      },
+      "scheme-f8ab58ef-474a-4153-acc3-2dfb57594448": {
+        "settings": {
+          "text": "#b47b84",
+          "background": "#ffffff",
+          "primary_button": "#b47b84",
+          "primary_button_hover": "#121212",
+          "primary_button_text": "#ffffff",
+          "primary_button_border": "#121212",
+          "secondary_button": "",
+          "secondary_button_hover": "",
+          "secondary_button_text": "#ffffff",
+          "secondary_button_border": "#ffffff",
+          "icons": "#121212",
           "links": "#121212"
         }
       }
