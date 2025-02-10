@@ -251,8 +251,8 @@
         "color_scheme": {
           "label": "Color Scheme"
         },
-        "enable_slider": {
-          "label": "Enable Slider"
+        "enable_navigation": {
+          "label": "Enable Navigation Arrows"
         },
         "slides_speed": {
           "label": "Scrolling Speed"
