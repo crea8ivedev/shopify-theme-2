@@ -1,0 +1,97 @@
+#shopify-section-account-popup {
+    height: 0;
+}
+
+.c-modal {
+    height: calc(100vh - 104px);
+    position: fixed;
+    bottom: 0;
+    overflow-y: auto;
+}
+
+@media (min-width: 1024px) {
+    .c-modal {
+        height: calc(100vh - 124px);
+    }
+}
+
+.c-modal.customer-account .customer form {
+    margin-top: 0 !important;
+}
+
+.c-modal.customer-account .modal-login ul li a {
+    padding: 10px 20px;
+}
+
+@media (min-width: 1024px) {
+    .c-modal.customer-account .modal-login ul li a {
+        font-size: 16px !important;
+        line-height: 22px !important;
+    }
+}
+
+.c-modal.customer-account .modal-login ul li a.current {
+    background-color: white;
+    border-radius: 10px;
+}
+
+.c-modal.customer-account .customer form .field input,
+.customer.register input,
+.customer.login input {
+    background-color: transparent !important;
+    border: 2px solid black !important;
+    border-radius: 10px !important;
+    padding: 10px 20px !important;
+    box-shadow: none !important;
+}
+
+.c-modal.customer-account .customer form .field::before,
+.c-modal.customer-account .customer form .field::after,
+.customer.register .field::before,
+.customer.register .field::after,
+.customer.login .field::before,
+.customer.login .field::after {
+    content: none;
+}
+
+.c-modal.customer-account .customer form .field {
+    margin-top: 10px;
+}
+
+.c-modal.customer-account .customer form .field:first-of-type {
+    margin-top: 0 !important;
+}
+
+.c-modal .form__message,
+.customer .form__message {
+    box-shadow: none;
+    outline: none;
+    outline-offset: 0;
+}
+
+.c-modal .form__message svg,
+.customer .form__message svg {
+    display: none;
+}
+
+.c-modal input::placeholder {
+    opacity: 1 !important;
+    color: rgba(15, 15, 17, 0.4);
+}
+
+.forgot-block-area.d-none,
+.login-cta.d-none,
+.reset-password.d-none {
+    display: none;
+}
+
+.account-tab.tab-pane,
+.forgot-block-area.d-none,
+.login-cta.d-none,
+.reset-password.d-none {
+    display: none;
+}
+
+.account-tab.tab-pane.current {
+    display: block;
+}

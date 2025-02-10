@@ -13,8 +13,20 @@
   "sections": {
     "header": {
       "type": "header",
-      "settings": {}
+      "settings": {
+        "color_scheme": "",
+        "logo_position": "middle-left",
+        "menu": "main-menu",
+        "menu_type_desktop": "dropdown",
+        "sticky_header_type": "on-scroll-up",
+        "show_line_separator": true,
+        "show_account": true,
+        "show_search": true,
+        "show_cart": true
+      }
     }
   },
-  "order": ["header"]
+  "order": [
+    "header"
+  ]
 }
