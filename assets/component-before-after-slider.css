@@ -1,0 +1,249 @@
+.before-after-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+}
+
+.before-after-main .mySwiper {
+    width: 100%;
+    height: 100%;
+    padding: 0 45px;
+}
+
+.before-after-main .before-after-section {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.before-after-main .before-after-section .left-content h2 {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: var( --font-h2);
+    line-height: 42px;
+    color: rgba(var(--color-text));
+}
+
+.before-after-main .before-after-section .left-content div {
+    color: rgba(var(--color-text));
+}
+
+.before-after-main .before-after-section .left-content .before-after-shop-btn svg {
+    padding: 10px;
+    fill: rgba(var(--color-link));
+}
+.before-after-main .before-after-section .left-content .before-after-shop-btn:hover svg path {
+    fill: rgba(var(--color-button)) !important;
+  }  
+.before-after-main .before-after-section .left-content .before-after-shop-btn.center {
+    margin: auto;
+}
+.before-after-main .right-content .slider-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.before-after-main .right-content .slider-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.before-after-main .right-content .slider-image.after {
+    z-index: 1;
+}
+
+.before-after-main .before-after-section.position-reverse {
+    margin-right: 0 !important;
+}
+.before-after-main .right-content .before-after-slider-handle .before-after-drag-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    background: rgba(var(--color-badge-background));
+    text-align: center;
+    padding: 15px;
+    width: 20px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.before-after-main .right-content .before-after-slider-handle .before-after-drag-text span {
+    text-transform: uppercase;
+}
+
+.before-after-main .swiper-button-next,
+.before-after-main .swiper-button-prev {
+    color: rgba(var(--color-text));
+    display: block;
+}
+
+.before-after-main .right-content .slider-image .slider-image-text {
+    position: absolute;
+    background: rgba(var(--color-badge-background));
+    color: rgba(var(--color-badge-text));
+    padding: 5px 10px;
+    border-radius: 5px;
+    z-index: 4;
+    border: 1px solid rgba(var(--color-badge-border));
+}
+
+.before-after-main .right-content .slider-image .before-text {
+    left: 10px;
+}
+
+.before-after-main .right-content .slider-image .after-text {
+    right: 10px;
+}
+
+.before-after-main .right-content .slider-image .text-bottom,
+.before-after-main .right-content .slider-image .text-bottom {
+    bottom: 10px;
+}
+
+.before-after-main .right-content .slider-image .text-top,
+.before-after-main .right-content .slider-image .text-top {
+    top: 10px;
+}
+
+.before-after-main .swiper-pagination .swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    border: 2px solid rgba(var(--color-text));
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: transparent;
+}
+.before-after-main .before-after-section .left-content h5 {
+    color: #B47B84;
+    margin: 10px 0;
+}
+.before-after-main .slider-image svg {
+    background: #eee;
+    height: 100%;
+    width: 100%;
+}
+.before-after-main .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: transparent;
+    border-color: rgba(var(--color-button));
+}
+.before-after-main .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active::before {
+    content: '';
+    width: 7px;
+    height: 7px;
+    background: rgba(var(--color-button));
+    border-radius: 50%;
+    position: absolute;
+}
+
+.left-content h2 span {
+    color: rgba(var(--color-button));
+}
+
+.before-after-main .before-after-section .left-content {
+    width: 50%;
+    text-align: left;
+}
+
+.before-after-main .right-content {
+    position: relative;
+    width: 50%;
+    height: 700px;
+    max-width: 700px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.before-after-main .swiper-pagination .swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+    left: 140px;
+    top: 80%;
+    width: auto;
+}
+@media (min-width:1024px) {
+.before-after-main .before-after-section {
+    gap: 40px;
+}
+}
+@media (max-width:1600px) {
+    .before-after-main .swiper-pagination .swiper-horizontal>.swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
+        left: 42px;
+    }
+    .before-after-main .right-content {
+        height:750px;
+    }
+  }
+  
+  @media (max-width:1440px) {
+    .before-after-main .right-content {
+        height:650px;
+    }
+  }
+
+  @media (max-width:1024px) {
+    .before-after-main .before-after-section.position-reverse {
+        flex-direction: row-reverse;
+    }
+    .before-after-main .swiper-pagination {
+        position: unset!important;
+        left: unset!important;
+        padding: 20px;
+    }
+    .before-after-main .before-after-section {
+        gap: 25px;
+    }
+    .before-after-main .right-content img {
+        width:100vw;
+        height:100%;
+        object-fit:cover;
+      }
+      .before-after-main .right-content {
+        max-width: 100%;
+        width: 100%;
+      }
+      .before-after-main .before-after-section .left-content {
+        width: 100%;
+     }
+      .before-after-main .before-after-section {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+     }
+  }
+  @media (max-width:768px) {
+    .before-after-main .mySwiper {
+        padding:0 10px;
+    }
+  
+    .before-after-main .right-content {
+        position: relative;
+        width: 100%;
+        height: 500px;
+        border-radius: 10px;
+    }
+  }
+
+  @media (max-width: 425px) {
+    .before-after-main .right-content img {
+        height:100%;
+      }
+  }

@@ -15,7 +15,183 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "before_after_slider_CrcJjn": {
+      "type": "before-after-slider",
+      "blocks": {
+        "before_after_block_rY4qBY": {
+          "type": "before_after_block",
+          "settings": {
+            "heading": "Add Heading here",
+            "sub_heading": "Add Subheading here",
+            "content": "Add Content here",
+            "button_text": "Shop Now",
+            "button_link": "",
+            "button_style_secondary": false,
+            "before_image": "shopify://shop_images/Rectangle_145.jpg",
+            "after_image": "shopify://shop_images/Rectangle_143.jpg"
+          }
+        },
+        "before_after_block_cDHkLB": {
+          "type": "before_after_block",
+          "settings": {
+            "heading": "Add Heading here",
+            "sub_heading": "Add Subheading here",
+            "content": "Add Content here",
+            "button_text": "Shop Now",
+            "button_link": "",
+            "button_style_secondary": false,
+            "before_image": "shopify://shop_images/before.png",
+            "after_image": "shopify://shop_images/before.png"
+          }
+        },
+        "before_after_block_8D9WKK": {
+          "type": "before_after_block",
+          "settings": {
+            "heading": "Add Heading here",
+            "sub_heading": "Add Subheading here",
+            "content": "Add Content here",
+            "button_text": "Shop Now",
+            "button_link": "",
+            "button_style_secondary": false,
+            "before_image": "shopify://shop_images/54101bd7c7573ad671ab4ce74ec35114.jpg",
+            "after_image": "shopify://shop_images/Rectangle_122.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "before_after_block_rY4qBY",
+        "before_after_block_cDHkLB",
+        "before_after_block_8D9WKK"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "drag_initial_position": 50,
+        "before_text": "Before",
+        "after_text": "After",
+        "text_position": "top",
+        "layout": "image_first"
+      }
+    },
+    "before_after_slider_Ft89Np": {
+      "type": "before-after-slider",
+      "blocks": {
+        "before_after_block_AqpfnC": {
+          "type": "before_after_block",
+          "settings": {
+            "heading": "Add Heading here",
+            "sub_heading": "Add Subheading here",
+            "content": "Add Content here",
+            "button_text": "Shop Now",
+            "button_link": "",
+            "button_style_secondary": false,
+            "before_image": "shopify://shop_images/Rectangle_143.jpg",
+            "after_image": "shopify://shop_images/Rectangle_145.jpg"
+          }
+        },
+        "before_after_block_kVq8eV": {
+          "type": "before_after_block",
+          "settings": {
+            "heading": "Add Heading here",
+            "sub_heading": "Add Subheading here",
+            "content": "Add Content here",
+            "button_text": "Shop Now",
+            "button_link": "",
+            "button_style_secondary": false,
+            "before_image": "shopify://shop_images/image-with-text.png",
+            "after_image": "shopify://shop_images/Image_5.png"
+          }
+        },
+        "before_after_block_AEWt9M": {
+          "type": "before_after_block",
+          "settings": {
+            "heading": "Add Heading here",
+            "sub_heading": "Add Subheading here",
+            "content": "Add Content here",
+            "button_text": "Shop Now",
+            "button_link": "",
+            "button_style_secondary": false,
+            "before_image": "shopify://shop_images/Rectangle_122.jpg",
+            "after_image": "shopify://shop_images/54101bd7c7573ad671ab4ce74ec35114.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "before_after_block_AqpfnC",
+        "before_after_block_kVq8eV",
+        "before_after_block_AEWt9M"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "drag_initial_position": 50,
+        "before_text": "Before",
+        "after_text": "After",
+        "text_position": "top",
+        "layout": "image_first"
+      }
+    },
+    "before_after_slider_DNVdRb": {
+      "type": "before-after-slider",
+      "blocks": {
+        "before_after_block_dEkBxt": {
+          "type": "before_after_block",
+          "settings": {
+            "heading": "Add Heading here",
+            "sub_heading": "Add Subheading here",
+            "content": "Add Content here",
+            "button_text": "Shop Now",
+            "button_link": "",
+            "button_style_secondary": false,
+            "before_image": "shopify://shop_images/before.png",
+            "after_image": "shopify://shop_images/before.png"
+          }
+        },
+        "before_after_block_epkDLR": {
+          "type": "before_after_block",
+          "settings": {
+            "heading": "Add Heading here",
+            "sub_heading": "Add Subheading here",
+            "content": "Add Content here",
+            "button_text": "Shop Now",
+            "button_link": "",
+            "button_style_secondary": false,
+            "before_image": "shopify://shop_images/image-with-text.png",
+            "after_image": "shopify://shop_images/Image_5.png"
+          }
+        },
+        "before_after_block_6xJjRx": {
+          "type": "before_after_block",
+          "settings": {
+            "heading": "Add Heading here",
+            "sub_heading": "Add Subheading here",
+            "content": "Add Content here",
+            "button_text": "Shop Now",
+            "button_link": "",
+            "button_style_secondary": false,
+            "before_image": "shopify://shop_images/Rectangle_122_5.jpg",
+            "after_image": "shopify://shop_images/image-with-text.png"
+          }
+        }
+      },
+      "block_order": [
+        "before_after_block_dEkBxt",
+        "before_after_block_epkDLR",
+        "before_after_block_6xJjRx"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "drag_initial_position": 50,
+        "before_text": "",
+        "after_text": "",
+        "text_position": "bottom",
+        "layout": "image_first"
+      }
     }
   },
-  "order": ["main"]
+  "order": [
+    "main",
+    "before_after_slider_CrcJjn",
+    "before_after_slider_Ft89Np",
+    "before_after_slider_DNVdRb"
+  ]
 }

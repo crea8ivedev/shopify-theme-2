@@ -238,6 +238,88 @@
         "label": "Color scheme",
         "has_cards_info": "To change the card color scheme, update your theme settings."
       }
+    },
+    "before-after-slider": {
+      "name": "Before After Slider",
+      "settings": {
+        "drag_initial_position": {
+          "label": "Drag initial position"
+        }
+      },
+      "blocks": {
+        "before_after_block": {
+          "name": "Before after block",
+          "settings": {
+            "heading": {
+              "label": "Heading"
+            },
+            "default_heading": {
+              "label": "Add Heading here"
+            },
+            "sub_heading": {
+              "label": "Subheading"
+            },
+            "default_sub_heading": {
+              "label": "Add Subheading here"
+            },
+            "content": {
+              "label": "Content"
+            },
+            "default_content": {
+              "label": "Add Content here"
+            },
+            "button_text": {
+              "label": "Button Text"
+            },
+            "button_link": {
+              "label": "Button Link"
+            },
+            "button_style_secondary": {
+              "label": "Button Style Secondary",
+            },
+            "before_image": {
+              "label": "Before Image"
+            },
+            "after_image": {
+              "label": "After Image"
+            },
+            "before_text": {
+              "label": "Before Text"
+            },
+            "after_text": {
+              "label": "After Text"
+            },
+            "text_position": {
+              "label": "Before/after text position"
+            },
+            "image_info": {
+              "label": "2000 x 1200px .jpg recommended"
+            },
+            "position_left": {
+              "label": "Left"
+            },
+            "position_center": {
+              "label": "Center"
+            },
+            "position_top": {
+              "label": "Top"
+            },
+            "position_bottom": {
+              "label": "Bottom"
+            },
+            "layout": {
+              "label": "Desktop Image Placement",
+              "options": {
+                "image_first": "Image First",
+                "image_last": "Image Last"
+              }
+            },
+          }
+        }
+      },
+      "presets": {
+        "name": "Before and After Slider"
+      }
     }
   }
 }

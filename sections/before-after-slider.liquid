@@ -1,0 +1,241 @@
+{{ 'component-before-after-slider.css' | asset_url | stylesheet_tag }}
+
+<section class="before-after-main section-before-after color-{{ section.settings.color_scheme }} background gradient page-width">
+  <div class="before-after-slider swiper">
+    <div class="swiper-wrapper">
+      {% for block in section.blocks %}
+        <div class="before-after-section swiper-slide {% if section.settings.layout == 'image_first' %} position-reverse {% endif %}">
+          <div class="left-content">
+            {% if block.settings.heading != blank %}
+              <p class="before-after-caption">{{ block.settings.heading }}</p>
+            {% endif %}
+            {% if block.settings.sub_heading != blank %}
+              <h2 class="before-after-heading">{{ block.settings.sub_heading }}</h2>
+            {% endif %}
+            {% if block.settings.content != blank %}
+              <p>{{ block.settings.content }}</p>
+            {% endif %}
+            {% if block.settings.button_text != blank %}
+              <div class="btn-before-after">
+                <a
+                  {% if block.settings.button_link == blank %}
+                    role="link" aria-disabled="true"
+                  {% else %}
+                    href="{{ block.settings.button_link }}"
+                  {% endif %}
+                  class="button {% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
+                  {{ block.shopify_attributes }}
+                >
+                  {{ block.settings.button_text | escape }}
+                  <span class="button--up-arrow button--arrow-margin">
+                    {% render 'icon-up-arrow' %}
+                  </span>
+                </a>
+              </div>
+            {% endif %}
+          </div>
+          <div class="right-content">
+            <div class="slider-image before">
+              {% if block.settings.before_image != blank %}
+                <img
+                  src="{{ block.settings.before_image | image_url }}"
+                  alt="Before Image"
+                  loading="lazy"
+                  width="2000"
+                  height="1200"
+                >
+              {% else %}
+                {{ 'image' | placeholder_svg_tag }}
+              {% endif %}
+              {% if section.settings.before_text != blank %}
+                <span class="slider-image-text before-text {% if section.settings.text_position == "top" %} text-top {% else %} text-bottom {% endif %}">
+                  {{- section.settings.before_text -}}
+                </span>
+              {% endif %}
+            </div>
+            <div class="slider-image after">
+              {% if block.settings.after_image != blank %}
+                <img
+                  src="{{ block.settings.after_image | image_url }}"
+                  alt="After Image"
+                  loading="lazy"
+                  width="2000"
+                  height="1200"
+                >
+              {% else %}
+                {{ 'image' | placeholder_svg_tag }}
+              {% endif %}
+              {% if section.settings.after_text != blank %}
+                <span class="slider-image-text after-text {% if section.settings.text_position == "top" %} text-top {% else %} text-bottom {% endif %}">
+                  {{- section.settings.after_text -}}
+                </span>
+              {% endif %}
+            </div>
+            <div class="before-after-slider-handle" style="left: {{ section.settings.drag_initial_position }}%;">
+              <div class="before-after-drag-text"><span>Drag</span></div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+
+<style>
+  .slider-image.before {
+    z-index: 2;
+    clip-path: polygon(0 0, {{ section.settings.drag_initial_position }}% 0, {{ section.settings.drag_initial_position }}% 100%, 0% 100%);
+  }
+  .before-after-slider-handle {
+    position: absolute;
+    top: 0;
+    left: {{ section.settings.drag_initial_position }}%;
+    width: 5px;
+    height: 100%;
+    background-color: white;
+    cursor: ew-resize;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Before After Slider",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "range",
+      "id": "drag_initial_position",
+      "label": "t:sections.before-after-slider.settings.drag_initial_position.label",
+      "default": 50,
+      "min": 0,
+      "max": 100,
+      "step": 1
+    },
+    {
+      "type": "text",
+      "id": "before_text",
+      "label": "t:sections.before-after-slider.blocks.before_after_block.settings.before_text.label",
+      "default": "Before"
+    },
+    {
+      "type": "text",
+      "id": "after_text",
+      "label": "t:sections.before-after-slider.blocks.before_after_block.settings.after_text.label",
+      "default": "After"
+    },
+    {
+      "type": "select",
+      "label": "t:sections.before-after-slider.blocks.before_after_block.settings.text_position.label",
+      "id": "text_position",
+      "options": [
+        {
+          "label": "t:sections.before-after-slider.blocks.before_after_block.settings.position_top.label",
+          "value": "top"
+        },
+        {
+          "label": "t:sections.before-after-slider.blocks.before_after_block.settings.position_bottom.label",
+          "value": "bottom"
+        }
+      ],
+      "default": "top"
+    },
+    {
+      "type": "select",
+      "label": "t:sections.before-after-slider.blocks.before_after_block.settings.layout.label",
+      "id": "layout",
+      "default": "image_last",
+      "options": [
+        {
+          "label": "t:sections.before-after-slider.blocks.before_after_block.settings.layout.options.image_first",
+          "value": "image_first"
+        },
+        {
+          "label": "t:sections.before-after-slider.blocks.before_after_block.settings.layout.options.image_last",
+          "value": "image_last"
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "before_after_block",
+      "name": "Before After block",
+      "settings": [
+        {
+          "type": "html",
+          "id": "heading",
+          "label": "t:sections.before-after-slider.blocks.before_after_block.settings.heading.label",
+          "default": "t:sections.before-after-slider.blocks.before_after_block.settings.default_heading.label"
+        },
+        {
+          "type": "html",
+          "id": "sub_heading",
+          "label": "t:sections.before-after-slider.blocks.before_after_block.settings.sub_heading.label",
+          "default": "t:sections.before-after-slider.blocks.before_after_block.settings.default_sub_heading.label"
+        },
+        {
+          "type": "html",
+          "id": "content",
+          "label": "t:sections.before-after-slider.blocks.before_after_block.settings.content.label",
+          "default": "t:sections.before-after-slider.blocks.before_after_block.settings.default_content.label"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "t:sections.before-after-slider.blocks.before_after_block.settings.button_text.label",
+          "default": "Shop Now"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "t:sections.before-after-slider.blocks.before_after_block.settings.button_link.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_style_secondary",
+          "label": "t:sections.before-after-slider.blocks.before_after_block.settings.button_style_secondary.label",
+          "default": false
+        },
+        {
+          "type": "image_picker",
+          "id": "before_image",
+          "label": "t:sections.before-after-slider.blocks.before_after_block.settings.before_image.label",
+          "info": "t:sections.before-after-slider.blocks.before_after_block.settings.image_info.label"
+        },
+        {
+          "type": "image_picker",
+          "id": "after_image",
+          "label": "t:sections.before-after-slider.blocks.before_after_block.settings.after_image.label",
+          "info": "t:sections.before-after-slider.blocks.before_after_block.settings.image_info.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Before After Slider",
+      "blocks": [
+        {
+          "type": "before_after_block"
+        },
+        {
+          "type": "before_after_block"
+        },
+        {
+          "type": "before_after_block"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
