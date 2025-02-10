@@ -238,6 +238,48 @@
         "label": "Color scheme",
         "has_cards_info": "To change the card color scheme, update your theme settings."
       }
-    }
+    },
+    "brand-logo": {
+      "name": "Brand Logo",
+      "settings": {
+        "heading": {
+          "label": "Heading"
+        },
+        "sub_heading": {
+          "label": "Sub Heading"
+        },
+        "color_scheme": {
+          "label": "Color Scheme"
+        },
+        "enable_slider": {
+          "label": "Enable Slider"
+        },
+        "slides_speed": {
+          "label": "Scrolling Speed"
+        },
+        "padding_top": {
+          "label": "Padding Top"
+        },
+        "padding_bottom": {
+          "label": "Padding Bottom"
+        }
+      },
+      "blocks": {
+        "logo": {
+          "name": "Logo",
+          "settings": {
+            "brand_logo": {
+              "label": "Select Logo"
+            },
+            "add_link": {
+              "label": "Add Link"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Brand Logo"
+      }
+    },
   }
 }
