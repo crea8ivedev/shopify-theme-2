@@ -238,6 +238,13 @@
         "label": "Color scheme",
         "has_cards_info": "To change the card color scheme, update your theme settings."
       }
+    },
+    "custom_code_section": {
+      "custom_code_label": "Custom Code",
+      "color_scheme_label": "Color Scheme",
+      "section_padding_header": "Section Padding",
+      "padding_top_label": "Top Padding",
+      "padding_bottom_label": "Bottom Padding"
     }
   }
 }
