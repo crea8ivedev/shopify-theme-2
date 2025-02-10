@@ -244,7 +244,11 @@
       "color_scheme_label": "Color Scheme",
       "section_padding_header": "Section Padding",
       "padding_top_label": "Top Padding",
-      "padding_bottom_label": "Bottom Padding"
+      "padding_bottom_label": "Bottom Padding",
+      "text_alignment_label": "Text Alignment",
+      "center" : "Center",
+      "left": "Left",
+      "right": "Right"
     }
   }
 }

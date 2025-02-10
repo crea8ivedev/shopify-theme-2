@@ -1,3 +1,5 @@
+{{ 'custom-liquid.css' | asset_url | stylesheet_tag }}
+
 {%- style -%}
     .section-padding {
       padding-top: calc({{ section.settings.padding_top }}px * 0.75);
@@ -13,7 +15,7 @@
   {%- endstyle -%}
 
 <section class="color-{{ section.settings.color_scheme }}" role="region">
-    <div class="section-padding">
+    <div class="section-padding text-{{ section.settings.text_alignment }}">
       {{ section.settings.custom_code }}
     </div>
 </section>
@@ -34,6 +36,26 @@
         "label": "t:sections.custom_code_section.color_scheme_label",
         "default": "scheme-1"
       },
+      {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "t:sections.custom_code_section.text_alignment_label",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.custom_code_section.left"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.custom_code_section.center"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.custom_code_section.right"
+        }
+      ],
+      "default": "center"
+    },
       {
         "type": "header",
         "content": "t:sections.custom_code_section.section_padding_header"
