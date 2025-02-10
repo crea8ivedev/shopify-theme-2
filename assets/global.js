@@ -42,7 +42,6 @@
 //     }
 //     customElements.define("e-iconwithtext", EIconWithText);
 // }
-
 document.addEventListener("DOMContentLoaded", function () {
   const playButton = document.getElementById("video-play-button");
   const videoCover = document.getElementById("video-with-text-cover");
@@ -51,15 +50,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (playButton && videoCover) {
     playButton.addEventListener("click", function () {
-      videoCover.style.display = "none";
+      videoCover.classList.add("hidden"); // Hide the cover
 
       if (iframePlayer) {
-        iframePlayer.style.display = "block";
+        iframePlayer.classList.remove("hidden"); // Show iframe
+        iframePlayer.classList.add("visible");
+
         if (!iframePlayer.src.includes("&autoplay=1")) {
           iframePlayer.src += "&autoplay=1";
         }
         if (playIcon) {
-          playIcon.style.display = "none";
+          playIcon.classList.add("hidden");
         }
       }
     });
@@ -69,22 +70,25 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("click", (e) => {
   if (e.target instanceof HTMLVideoElement) {
     const videoPlayer = e.target;
-    const videoContainer = videoPlayer.closest('.video-with-text-container');
+    const videoContainer = videoPlayer.closest(".video-with-text-container");
 
     const videoPlayIcon = videoContainer.querySelector("#video-play-icon");
-    const videoTagCover = videoContainer.querySelector("#video-tag-with-text-cover");
+    const videoTagCover = videoContainer.querySelector(
+      "#video-tag-with-text-cover",
+    );
 
     if (videoPlayer.paused) {
       videoPlayer.play();
       if (videoPlayIcon) {
-        videoPlayIcon.style.display = "none";
+        videoPlayIcon.classList.add("hidden");
+        videoPlayIcon.classList.remove("visible");
       }
-
-      videoTagCover.style.display = "none";
+      videoTagCover.classList.add("hidden");
     } else {
       videoPlayer.pause();
       if (videoPlayIcon) {
-        videoPlayIcon.style.display = "block";
+        videoPlayIcon.classList.remove("hidden");
+        videoPlayIcon.classList.add("visible");
       }
     }
   }

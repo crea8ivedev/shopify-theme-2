@@ -393,6 +393,9 @@
             },
             "button_style_secondary": {
               "label": "Use Outline Button Style"
+            },
+            "external_link": {
+              "label": "External link"
             }
           }
         }

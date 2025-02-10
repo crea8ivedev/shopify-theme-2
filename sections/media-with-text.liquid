@@ -55,10 +55,11 @@
             (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px,
             (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)
             {%- endcapture -%}
+            {%- assign image_alt_text = section.settings.image.alt | default: 'Placeholder' -%}
             {{
               section.settings.image
               | image_url: width: 1500
-              | image_tag: sizes: sizes, widths: widths, fetchpriority: fetch_priority, alt: section.settings.image.alt
+              | image_tag: sizes: sizes, widths: widths, fetchpriority: fetch_priority, alt: image_alt_text
             }}
           {%- elsif section.settings.video != blank
             and section.settings.image == blank
@@ -67,23 +68,23 @@
             <div class="video-with-text-container">
               <div class="video-with-text-cover" id="video-tag-with-text-cover">
                 {% if poster != null %}
+                  {%- assign poster_alt_text = section.settings.image.alt | default: 'Placeholder' -%}
                   {{
                     poster
                     | image_url: width: 3840
-                    | image_tag:
-                      sizes: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840',
-                      alt: section.settings.cover_image.alt
+                    | image_tag: sizes: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840', alt: poster_alt_text
                   }}
                 {% endif %}
               </div>
-              <button id="video-tag-play-button" class="video-play-button" aria-label="video-button">
-                <div id="video-play-icon" style="display: block;">
+              <button id="video-tag-play-button" class="video-play-button" aria-label="Play video" tabindex="0">
+                <div id="video-play-icon" class="visible">
                   {% render 'video-icon-play' %}
                 </div>
-                <div id="video-pause-icon" style="display: none;">
+                <div id="video-pause-icon" class="hidden">
                   {% render 'video-icon-pause' %}
                 </div>
               </button>
+              {%- assign video_alt_text = section.settings.video.alt | default: 'Placeholder' -%}
               {{
                 section.settings.video
                 | video_tag:
@@ -92,7 +93,7 @@
                   controls: false,
                   muted: false,
                   id: 'video-tag-player',
-                  alt: section.settings.video.alt
+                  alt: video_alt_text
               }}
             </div>
           {%- elsif section.settings.video_url != blank
@@ -102,12 +103,13 @@
             <div class="video-with-text-container">
               <div class="video-with-text-cover" id="video-with-text-cover">
                 {% if poster != null %}
+                  {%- assign poster_alt_text = section.settings.image.alt | default: 'Placeholder' -%}
                   {{
                     poster
                     | image_url: width: 3840
-                    | image_tag: sizes: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840', alt: section.settings.image.alt
+                    | image_tag: sizes: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840', alt: poster_alt_text
                   }}
-                  <button id="video-play-button" class="video-play-button" aria-label="video-button">
+                  <button id="video-play-button" class="video-play-button" aria-label="Play video" tabindex="0">
                     {% render 'video-icon-play' %}
                   </button>
                 {% endif %}
@@ -118,21 +120,19 @@
                 <iframe
                   id="video-player"
                   src="https://www.youtube.com/embed/{{ video_id }}?enablejsapi=1"
-                  class="js-youtube"
+                  class="js-youtube hidden"
                   allow="autoplay; encrypted-media"
                   allowfullscreen
                   title="{{ section.settings.description | escape }}"
-                  style="{% if poster != null %} display: none; {% endif %}"
                 ></iframe>
               {% elsif section.settings.video_url contains 'vimeo.com' %}
                 <iframe
                   id="video-player"
                   src="https://player.vimeo.com/video/{{ video_id }}"
-                  class="js-vimeo"
+                  class="js-vimeo hidden"
                   allow="autoplay; encrypted-media"
                   allowfullscreen
                   title="{{ section.settings.description | escape }}"
-                  style="display: none;"
                 ></iframe>
               {% endif %}
             </div>
@@ -147,13 +147,13 @@
             {% case block.type %}
               {% when 'heading' %}
                 <h2
-                  class="media-with-text-heading--{{ block.settings.heading_size }} mt-1 media-with-text-heading--color"
+                  class="media-with-text-heading--{{ block.settings.heading_size }}  media-with-text-heading--color"
                   {{ block.shopify_attributes }}
                 >
                   {{ block.settings.heading }}
                 </h2>
               {% when 'text' %}
-                <div class="media-with-text-text mt-1" {{ block.shopify_attributes }}>
+                <div class="media-with-text-text " {{ block.shopify_attributes }}>
                   {{ block.settings.content }}
                 </div>
               {% when 'caption' %}
@@ -172,6 +172,9 @@
                         role="link" aria-disabled="true"
                       {% else %}
                         href="{{ block.settings.button_link }}"
+                      {% endif %}
+                      {% if block.settings.external_link %}
+                        target="_blank"
                       {% endif %}
                       class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
                       {{ block.shopify_attributes }}
@@ -269,7 +272,8 @@
     {
       "type": "image_picker",
       "id": "cover_image",
-      "label": "t:sections.media_with_text.settings.cover_image.label"
+      "label": "t:sections.media_with_text.settings.cover_image.label",
+      "info": "1200x1200 PX recommended"
     },
     {
       "type": "select",
@@ -563,6 +567,12 @@
           "type": "checkbox",
           "id": "button_style_secondary",
           "label": "t:sections.media_with_text.blocks.button.settings.button_style_secondary.label",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "external_link",
+          "label": "t:sections.media_with_text.blocks.button.settings.external_link.label",
           "default": false
         }
       ]

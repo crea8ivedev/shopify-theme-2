@@ -90,9 +90,6 @@
   .header_icon {
     color: rgb(var(--color-text));
   }
-  .hidden {
-    display: none !important;
-  }
 
   .visually-hidden {
     position: absolute !important;
@@ -156,6 +153,18 @@
     --ease-out-slow: cubic-bezier(0, 0, 0.3, 1);
     --animation-slide-in: slideIn var(--duration-extra-long) var(--ease-out-slow) forwards;
     --animation-fade-in: fadeIn var(--duration-extra-long) var(--ease-out-slow);
+  }
+  :root {
+    --hidden-display: none;
+    --visible-display: block;
+  }
+
+  .hidden {
+    display: var(--hidden-display);
+  }
+
+  .visible {
+    display: var(--visible-display);
   }
 
   .page-width {
@@ -438,7 +447,14 @@
   h3:empty,
   h4:empty,
   h5:empty,
-  h6:empty {
+  h6:empty,
+  .h1:empty,
+  .h2:empty,
+  .h3:empty,
+  .h4:empty,
+  .h5:empty,
+  .h6:empty,
+  .h0:empty {
     display: none;
   }
 

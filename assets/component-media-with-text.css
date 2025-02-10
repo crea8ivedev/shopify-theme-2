@@ -183,8 +183,8 @@
     align-self: center;
     text-align: center;
   }
-  .media-with-text__content {
-    padding-top: 1rem;
+  .media-with-text-main.grid--gapless.grid {
+    gap: 1rem;
   }
   .media-with-text-main.media-with-text-reverse-mobile {
     flex-direction: column-reverse;
