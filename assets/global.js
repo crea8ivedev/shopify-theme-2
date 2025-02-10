@@ -66,33 +66,26 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const videoPlayButton = document.getElementById("video-tag-play-button");
-  const videoTagCover = document.getElementById("video-tag-with-text-cover");
-  const videoPlayer = document.getElementById("video-tag-player");
-  const videoPlayIcon = document.getElementById("video-play-icon");
+document.addEventListener("click", (e) => {
+  if (e.target instanceof HTMLVideoElement) {
+    const videoPlayer = e.target;
+    const videoContainer = videoPlayer.closest('.video-with-text-container');
 
-  if (videoPlayButton && videoTagCover) {
-    videoPlayButton.addEventListener("click", function () {
-      videoTagCover.style.display = "none";
-    });
-  }
-  if (videoPlayer) {
-    videoPlayer.addEventListener("click", function () {
-      if (videoPlayer.paused) {
-        videoPlayer.play();
-        //   if (pauseIcon) pauseIcon.style.display = "block";
-        if (videoPlayIcon) {
-          videoPlayIcon.style.display = "none";
-        }
+    const videoPlayIcon = videoContainer.querySelector("#video-play-icon");
+    const videoTagCover = videoContainer.querySelector("#video-tag-with-text-cover");
 
-        videoTagCover.style.display = "none";
-      } else {
-        videoPlayer.pause();
-        if (videoPlayIcon) {
-          videoPlayIcon.style.display = "block";
-        }
+    if (videoPlayer.paused) {
+      videoPlayer.play();
+      if (videoPlayIcon) {
+        videoPlayIcon.style.display = "none";
       }
-    });
+
+      videoTagCover.style.display = "none";
+    } else {
+      videoPlayer.pause();
+      if (videoPlayIcon) {
+        videoPlayIcon.style.display = "block";
+      }
+    }
   }
 });
