@@ -110,7 +110,9 @@
                     | image_tag: sizes: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840', alt: poster_alt_text
                   }}
                   <button id="video-play-button" class="video-play-button" aria-label="Play video" tabindex="0">
+                    <div id="video-play-icon" class="visible">
                     {% render 'video-icon-play' %}
+                  </div>
                   </button>
                 {% endif %}
               </div>
