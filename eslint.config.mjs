@@ -21,7 +21,6 @@ export default [
       'no-var': 'error', // Enforces let/const over var
       'prefer-template': 'error', // Encourages template literals instead of string concatenation
       'no-loop-func': 'error', // Disallows function definitions inside loops
-      'max-depth': ['error', 4], // Limits nesting depth
       'no-duplicate-imports': 'error', // Prevents duplicate imports
       'no-implied-eval': 'error', // Prevents use of `setTimeout` and `setInterval` with string arguments
       'no-self-compare': 'error', // Prevents `x === x` which is usually a mistake

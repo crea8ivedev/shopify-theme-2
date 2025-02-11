@@ -98,3 +98,6 @@ ValidBlockTarget:
 JSONMissingBlock:
   enabled: true
   severity: error
+ValidSchemaName:
+  enabled: true
+  severity: error

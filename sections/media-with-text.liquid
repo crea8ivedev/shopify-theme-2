@@ -1,4 +1,5 @@
 {{ 'component-media-with-text.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'media-with-text.js' | asset_url }}" defer="defer"></script>
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.50 | round: 0 }}px;
@@ -111,8 +112,8 @@
                   }}
                   <button id="video-play-button" class="video-play-button" aria-label="Play video" tabindex="0">
                     <div id="video-play-icon" class="visible">
-                    {% render 'video-icon-play' %}
-                  </div>
+                      {% render 'video-icon-play' %}
+                    </div>
                   </button>
                 {% endif %}
               </div>
