@@ -15,7 +15,61 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "collapsible_content_BUjqeY": {
+      "type": "collapsible-content",
+      "blocks": {
+        "content_JaXnqL": {
+          "type": "content",
+          "settings": {
+            "image": "shopify://shop_images/Vector.jpg",
+            "question": "What is Shopify?",
+            "answer": "<p>Shopify is an e-commerce platform that allows users to set up an online store and sell products.</p>"
+          }
+        },
+        "content_3TYXp7": {
+          "type": "content",
+          "settings": {
+            "image": "shopify://shop_images/Vector_1.jpg",
+            "question": "What is Lorem Ipsum?",
+            "answer": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>"
+          }
+        },
+        "content_7pQBMC": {
+          "type": "content",
+          "settings": {
+            "image": "shopify://shop_images/Vector_4.jpg",
+            "question": "Question",
+            "answer": "<p>Answer</p>"
+          }
+        },
+        "content_wgnJ8W": {
+          "type": "content",
+          "settings": {
+            "image": "shopify://shop_images/Vector_2.jpg",
+            "question": "What is Shopify?",
+            "answer": "<p>Shopify is an e-commerce platform that allows users to set up an online store and sell products.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "content_JaXnqL",
+        "content_3TYXp7",
+        "content_7pQBMC",
+        "content_wgnJ8W"
+      ],
+      "settings": {
+        "heading": "Collapsible Content",
+        "color_scheme": "scheme-1",
+        "background_image": "shopify://shop_images/Rectangle_122_1.png",
+        "open_first_accordion": true,
+        "padding_top": 100,
+        "padding_bottom": 60
+      }
     }
   },
-  "order": ["main"]
+  "order": [
+    "main",
+    "collapsible_content_BUjqeY"
+  ]
 }

@@ -1,0 +1,152 @@
+{{ 'collapsible-content.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+    .section-padding {
+      padding-top: calc({{ section.settings.padding_top }}px * 0.75);
+      padding-bottom: calc({{ section.settings.padding_bottom }}px  * 0.75);
+    }
+  
+    @media screen and (min-width: 750px) {
+      .section-padding {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
+
+    .collapsible-container{
+     background-image: url({{ section.settings.background_image | image_url }});
+     background-size: cover;
+     background-position: center;
+  }
+
+{%- endstyle -%}
+
+<div class="collapsible-container color-{{ section.settings.color_scheme}} section-padding">
+
+          {%- if section.settings.heading != blank -%}
+              <div class="faq_heading">
+                  <h1>{{ section.settings.heading }}</h1>
+              </div>
+          {%- endif -%}
+
+          <div class="faq_main_container">
+          {%- for block in section.blocks -%}
+              {% if block.settings.question != blank %}
+              <div class="faq_container">
+               
+                  <div class="faq_question {% if forloop.first and section.settings.open_first_accordion %}open active{% endif %}">
+                    <div class="image-que-container">
+                    {% if block.settings.image %}
+                        <div class="faq_image">
+                            <img src="{{ block.settings.image | image_url }}" height="30px" width="30px" alt="{{ block.settings.question }}" />
+                        </div>
+                        {% endif %}
+                      <div class="faq_question-text">
+                          <h5>{{ block.settings.question }}</h5>
+                      </div>
+                      </div>
+                      <div class="icon">
+                          <div class="icon-shape">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                  <path class="vertical-line" d="M20.4853 12.0009H3.51472" stroke="#0F0F11" stroke-width="2.33"></path>
+                                  <path d="M12 3.51562V20.4862" stroke="#0F0F11" stroke-width="2.33"></path>
+                              </svg>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="answercont" {% if forloop.first and section.settings.open_first_accordion %}style="max-height: 500px;"{% endif %}>
+                      <div class="answer">
+                          {{ block.settings.answer }}
+                      </div>
+                  </div>
+              </div>
+              {%- endif -%}
+          {%- endfor -%}
+        </div> 
+</div>
+
+<script src="{{ 'collapsible-content.js' | asset_url }}" defer="defer"></script> 
+
+{% schema %}
+{
+  "name": "Collapsible Content",
+  "settings": [
+    {
+      "type": "text",
+      "label": "Heading",
+      "id": "heading",
+      "default": "Collapsible Content"
+    },
+    {
+      "type": "color_scheme",
+      "label": "Color Scheme",
+      "id": "color_scheme"
+    },
+    {
+      "type": "image_picker",
+      "label": "Background Image",
+      "id": "background_image"
+    },
+    {
+      "type": "checkbox",
+      "label": "Open First Accordion",
+      "id": "open_first_accordion",
+      "default": true
+    },
+    {
+        "type": "header",
+        "content": "Block Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 52
+    }
+  ],
+  "blocks": [
+    {
+      "type": "content",
+      "name": "Content",
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "Image",
+          "id": "image"
+        },
+        {
+          "type": "text",
+          "label": "Question",
+          "id": "question",
+          "default": "What is Shopify?"
+        },
+        {
+          "type": "richtext",
+          "label": "Answer",
+          "id": "answer",
+          "default": "<p>Shopify is an e-commerce platform that allows users to set up an online store and sell products.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collapsible Content"
+    }
+  ]
+}
+{% endschema %}
