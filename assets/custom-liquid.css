@@ -7,3 +7,8 @@
 .text-right{
     text-align: right;
 }
+@media(max-width:575px){
+.mobile_alignment{
+    text-align: left !important;
+}
+}
