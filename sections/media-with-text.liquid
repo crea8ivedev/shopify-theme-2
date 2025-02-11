@@ -84,7 +84,6 @@
                   {% render 'video-icon-pause' %}
                 </div>
               </button>
-              {%- assign video_alt_text = section.settings.video.alt | default: 'Placeholder' -%}
               {{
                 section.settings.video
                 | video_tag:
@@ -93,8 +92,8 @@
                   controls: false,
                   muted: false,
                   id: 'video-tag-player',
-                  alt: video_alt_text,
-                  poster: false
+                  poster: false,
+                  attributes: 'aria-label="Product demonstration video"'
               }}
             </div>
           {%- elsif section.settings.video_url != blank
