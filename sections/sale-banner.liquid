@@ -6,6 +6,10 @@
       padding-bottom: {{ section.settings.bottom_padding | times: 0.50 | round: 0 }}px;
     }
 
+    .sale-banner-description {
+      background-color: rgba(180, 123, 132, {{ section.settings.overlay_opacity }});
+    }
+
     @media screen and (min-width: 1024px) {
       .section-{{ section.id }}-padding {
         padding-top: {{ section.settings.top_padding }}px;
@@ -52,30 +56,38 @@
           </div>
         {% endif %}
         <div class="sale-banner-description">
-          {% if section.settings.sale_banner_heading != blank %}
-            <h2 class="sale-banner-title">{{ section.settings.sale_banner_heading }}</h2>
-          {% endif %}
-          {% if section.settings.banner_text != blank %}
-            <p class="sale-banner-text">{{ section.settings.banner_text }}</p>
-          {% endif %}
-          {% if section.settings.link_text != blank %}
-            <a
-              href="{{ section.settings.link }}"
-              class="sale-banner-button"
-              {% if section.settings.external_link == true %}
-                target="_blank"
-              {% endif %}
-            >
-              <div class="sale-banner-button-content">
-                {{ section.settings.link_text }}
-                {% if section.settings.show_arrow == true %}
-                  <span class="sale-banner-arrow">
-                    {% render 'icon-up-arrow' %}
-                  </span>
-                {% endif %}
+          <div class="sale-banner-description-inside">
+            {% if section.settings.sale_banner_heading != blank %}
+              <div class="sale-banner-description-title">
+                <h2 class="sale-banner-title">{{ section.settings.sale_banner_heading }}</h2>
               </div>
-            </a>
-          {% endif %}
+            {% endif %}
+            {% if section.settings.banner_text != blank %}
+              <div class="sale-banner-description-detail">
+                <p class="sale-banner-text">{{ section.settings.banner_text }}</p>
+              </div>
+            {% endif %}
+            {% if section.settings.link_text != blank %}
+              <div class="sale-banner-description-buttons">
+                <a
+                  href="{{ section.settings.link }}"
+                  class="sale-banner-button button button--secondary"
+                  {% if section.settings.external_link == true %}
+                    target="_blank"
+                  {% endif %}
+                >
+                  {% comment %} <div class="sale-banner-button-content"> {% endcomment %}
+                    {{ section.settings.link_text }}
+                    {% if section.settings.show_arrow == true %}
+                      <span class="sale-banner-arrow button--up-arrow button--arrow-margin">
+                        {% render 'icon-up-arrow' %}
+                      </span>
+                    {% endif %}
+                  {% comment %} </div> {% endcomment %}
+                </a>
+              </div>
+            {% endif %}
+          </div>
         </div>
       </div>
 

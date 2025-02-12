@@ -1,3 +1,264 @@
 .sale-banner-wrapper{
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 80px;
+}
+
+.sale-banner-item {
+    flex: 0 0 33.33%;
+}
+
+.sale-banner-image {
+    width: 100%;
+    aspect-ratio: 1/1;
+    height: auto;
+    object-fit: cover;
+    display: flex;
+}
+
+.sale-banner-wrapper .sale-banner-item:nth-child(3n - 2) .sale-banner-image {
+    border-radius: 25px 0 0 25px;
+    -webkit-border-radius: 25px 0 0 25px;
+    -moz-border-radius: 25px 0 0 25px;
+    -ms-border-radius: 25px 0 0 25px;
+    -o-border-radius: 25px 0 0 25px;
+}
+
+.sale-banner-wrapper .sale-banner-item:nth-child(3n) .sale-banner-image {
+    border-radius: 0 25px 25px 0;
+    -webkit-border-radius: 0 25px 25px 0;
+    -moz-border-radius: 0 25px 25px 0;
+    -ms-border-radius: 0 25px 25px 0;
+    -o-border-radius: 0 25px 25px 0;
+}
+
+.sale-banner-content {
+    position: relative;
+}
+
+.sale-banner-description {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 9;
+    padding: 20px;
+    text-align: center;
+}
+
+.sale-banner-description-inside {
+    max-width: 315px;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
+}
+
+.sale-banner-description-detail {
+    margin-top: 80px;
+    padding: 10px 0;
+    border-top: 1px solid #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+}
+
+.sale-banner-description-detail * {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 166%;
+    color: #FFFFFF;
+    letter-spacing: 0;
+}
+
+.sale-banner-description-detail *:last-child {
+    margin: 0;
+}
+
+.sale-banner-description-buttons {
+    margin-top: 30px;
+}
+
+.sale-banner-description-buttons .button--secondary {
+    letter-spacing: 0;
+    font-weight: 700;
+    background-color: #FFFBFB;
+    border-color: #FFFBFB;
+    color: #944E63;
+    fill: #944E63;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+}
+
+.sale-banner-description-buttons .button--secondary:hover {
+    background-color: #944E63;
+    border-color: #944E63;
+    color: #FFFBFB;
+    fill: #FFFBFB;
+}
+
+.sale-banner-description-buttons .button--secondary:before,
+.sale-banner-description-buttons .button--secondary:after {
+    content: none;
+}
+
+.sale-banner-description-buttons .button--secondary .button--up-arrow svg {
+    fill: inherit;
+}
+
+.sale-banner-description-title {
+    text-align: left;
+    padding-left: 27px;
+}
+
+.sale-banner-description-title * {
+    font-family: 'renaissance';
+    font-weight: 400;
+    font-size: 146px;
+    line-height: 40%;
+    color: rgba(255, 255, 255, 0.20);
+}
+
+/* @media (min-width: 1200px) {
+    .sale-banner-description-inside {
+        position: relative;
+        top: 15%;
+    }
+} */
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .sale-banner-wrapper {
+        margin: 0 40px;
+    }
+    .sale-banner-description-title {
+        padding-left: 43px;
+        max-width: 315px;
+        margin: 0 auto;
+    }
+    .sale-banner-description-title * {
+        font-size: 126px;
+    }
+    .sale-banner-description-detail {
+        margin-top: 60px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .sale-banner-wrapper {
+        margin: 0 20px;
+    }
+    .sale-banner-description-title {
+        max-width: 277px;
+        margin: 0 auto;
+    }
+    .sale-banner-description-title * {
+        font-size: 126px;
+    }
+    .sale-banner-description-detail {
+        margin-top: 50px;
+    }
+    .sale-banner-description-detail * {
+        font-size: 16px;
+    }
+    .sale-banner-description {
+        padding: 60px 20px 20px 20px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .sale-banner-wrapper {
+        margin: 0 20px;
+    }
+    .sale-banner-description-inside {
+        top: 55%;
+    }
+    .sale-banner-description-title {
+        padding-left: 15px;
+        max-width: 203px;
+        margin: 0 auto;
+    }
+    .sale-banner-description-title * {
+        font-size: 100px;
+    }
+    .sale-banner-description-detail {
+        margin-top: 30px;
+    }
+    .sale-banner-description-detail * {
+        font-size: 16px;
+        line-height: 120%;
+    }
+    .sale-banner-description-buttons {
+        margin-top: 20px;
+    }
+    .sale-banner-image {
+        min-height: 280px;
+    }
+}
+
+@media (max-width: 767px) {
+    .sale-banner-item {
+        flex: 0 0 100%;
+    }
+    .sale-banner-wrapper .sale-banner-item:nth-child(3n-2) .sale-banner-image {
+        border-radius: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        -o-border-radius: 0;
+    }
+    .sale-banner-wrapper .sale-banner-item:nth-child(3n) .sale-banner-image {
+        border-radius: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        -o-border-radius: 0;
+    }
+    .sale-banner-wrapper .sale-banner-item:first-child .sale-banner-image {
+        border-radius: 25px 25px 0 0;
+        -webkit-border-radius: 25px 25px 0 0;
+        -moz-border-radius: 25px 25px 0 0;
+        -ms-border-radius: 25px 25px 0 0;
+        -o-border-radius: 25px 25px 0 0;
+    }
+    .sale-banner-wrapper .sale-banner-item:last-child .sale-banner-image {
+        border-radius: 0 0 25px 25px;
+        -webkit-border-radius: 0 0 25px 25px;
+        -moz-border-radius: 0 0 25px 25px;
+        -ms-border-radius: 0 0 25px 25px;
+        -o-border-radius: 0 0 25px 25px;
+    }
+}
+
+@media (max-width: 575px) {
+    .sale-banner-wrapper {
+        margin: 0 20px;
+    }
+    .sale-banner-description-inside {
+        top: 54%;
+    }
+    .sale-banner-description-title {
+        padding-left: 23px;
+        max-width: 223px;
+        margin: 0 auto;
+    }
+    .sale-banner-description-title * {
+        font-size: 100px;
+    }
+    .sale-banner-description-detail {
+        margin-top: 30px;
+    }
+    .sale-banner-description-detail * {
+        font-size: 16px;
+        line-height: 120%;
+    }
+    .sale-banner-description-buttons {
+        margin-top: 20px;
+    }
 }
