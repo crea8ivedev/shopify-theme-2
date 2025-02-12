@@ -1,20 +1,25 @@
 .media-with-text-reverse {
   flex-direction: row-reverse;
 }
+
 .media-with-text-media {
   min-height: 100%;
 }
+
 .media-with-text__content p,
 .media-with-text__content h2 {
   margin-block: 0rem;
 }
+
 .media-with-text__content-position--bottom {
   justify-content: flex-end;
   align-self: flex-end;
 }
+
 .media-with-text__content-gap {
   row-gap: 0.938rem;
 }
+
 .media-with-text__media {
   min-height: 100%;
   overflow: visible;
@@ -31,9 +36,11 @@
 .media-with-text__media__height--large {
   height: 43.5rem;
 }
+
 .media-with-text--button {
   margin-top: 1.5rem;
 }
+
 .media-with-text-content-position {
   align-items: flex-start;
   display: flex;
@@ -45,6 +52,7 @@
   position: relative;
   z-index: 1;
 }
+
 .media-with-text-main .media-with-text-media img {
   display: block;
   max-width: 100%;
@@ -55,12 +63,14 @@
   width: 100%;
   object-fit: cover;
 }
+
 .media-with-text-main video {
   width: 100%;
   height: 100%;
   object-fit: cover;
   cursor: pointer;
 }
+
 .media-with-text-main .video-play-button {
   position: absolute;
   top: 50%;
@@ -70,6 +80,7 @@
   background: transparent;
   border: none;
 }
+
 .video-with-text-container iframe {
   width: 100%;
   height: 100%;
@@ -96,20 +107,25 @@
     max-height: 100%;
     min-height: 100%;
   }
+
   .media-with-text__content {
     padding: 2rem 0rem 2rem 2rem;
   }
+
   .media-with-text-reverse .media-with-text__content {
     padding: 2rem 2rem 2rem 0rem;
   }
 }
+
 @media screen and (min-width: 990px) {
   .media-with-text__content {
     padding: 4rem 0rem 4rem 4rem;
   }
+
   .media-with-text-reverse .media-with-text__content {
     padding: 4rem 4rem 4rem 0rem;
   }
+
   .video-with-text-container svg {
     width: 5rem;
     height: 5rem;
@@ -121,13 +137,16 @@
     width: 100%;
     height: 100%;
   }
+
   .media-with-text__content {
     padding: 5.406rem 0rem 5.406rem 5.625rem;
   }
+
   .media-with-text-reverse .media-with-text__content {
     padding: 5.406rem 5.625rem 5.406rem 0rem;
   }
 }
+
 .rounded-corner {
   border-radius: 41px;
 }
@@ -169,6 +188,7 @@
     width: 3rem;
     height: 3rem;
   }
+
   .media-with-text__mobile__content-alignment--right > * {
     align-self: flex-end;
     text-align: right;
@@ -183,12 +203,15 @@
     align-self: center;
     text-align: center;
   }
+
   .media-with-text-main.grid--gapless.grid {
     gap: 1rem;
   }
+
   .media-with-text-main.media-with-text-reverse-mobile {
     flex-direction: column-reverse;
   }
+
   .media-with-text-heading--small {
     font-size: 1rem;
   }
