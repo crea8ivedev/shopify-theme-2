@@ -15,7 +15,294 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "collection_list_Qw8Y6q": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_GFfmAM": {
+          "type": "collection",
+          "settings": {
+            "collection": "automated-collection",
+            "image": "shopify://shop_images/Rectangle_122_b5668bc3-ee2b-4e3b-9231-a2757c51d015.png",
+            "heading": "Herbal lotion",
+            "subheading": "",
+            "content_alignment": "left",
+            "button_label": "Button Label",
+            "button_link": "",
+            "external_link": true,
+            "content_position": "bottom-left"
+          }
+        },
+        "collection_d7dK6y": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/Rectangle_122_1_e1248203-8ce0-47b8-a982-6c20ecfd1d86.png",
+            "heading": "Hair care",
+            "subheading": "",
+            "content_alignment": "center",
+            "button_label": "Button Label",
+            "button_link": "shopify://collections",
+            "external_link": false,
+            "content_position": "bottom-left"
+          }
+        },
+        "collection_iCiB4V": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/Rectangle_122_2_608b10d1-0494-4996-9eb9-76024c84ca97.png",
+            "heading": "Skin care",
+            "subheading": "",
+            "content_alignment": "left",
+            "button_label": "Button Label",
+            "button_link": "shopify://collections/automated-collection",
+            "external_link": false,
+            "content_position": "bottom-left"
+          }
+        },
+        "collection_ETUMFk": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/Rectangle_122_3.png",
+            "heading": "Face cream",
+            "subheading": "",
+            "content_alignment": "left",
+            "button_label": "Button Label",
+            "button_link": "shopify://products/the-complete-snowboard",
+            "external_link": false,
+            "content_position": "bottom-left"
+          }
+        },
+        "collection_CNhDxe": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "heading": "",
+            "subheading": "",
+            "content_alignment": "left",
+            "button_label": "Button Label",
+            "button_link": "",
+            "external_link": false,
+            "content_position": "bottom-left"
+          }
+        }
+      },
+      "block_order": [
+        "collection_GFfmAM",
+        "collection_d7dK6y",
+        "collection_iCiB4V",
+        "collection_ETUMFk",
+        "collection_CNhDxe"
+      ],
+      "settings": {
+        "color_scheme": "scheme-bc44ea45-9838-4b31-8d57-56921c9d546c",
+        "heading": "Beauty collections",
+        "heading_color": "#121212",
+        "content": "<p>Shop our summer trendy collection.</p>",
+        "content_color": "#944e63",
+        "content_position": "center",
+        "collection_layout": "grid",
+        "collections_per_row_mobile": 1,
+        "enable_slider_mobile": false,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "collection_list_Qw8Y6a": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_GFfmAM": {
+          "type": "collection",
+          "settings": {
+            "collection": "automated-collection",
+            "image": "shopify://shop_images/Rectangle_122_b5668bc3-ee2b-4e3b-9231-a2757c51d015.png",
+            "heading": "Herbal lotion",
+            "subheading": "",
+            "content_alignment": "left",
+            "button_label": "Button Label",
+            "button_link": "",
+            "external_link": true,
+            "content_position": "bottom-left"
+          }
+        },
+        "collection_d7dK6y": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/Rectangle_122_1_e1248203-8ce0-47b8-a982-6c20ecfd1d86.png",
+            "heading": "Hair care",
+            "subheading": "",
+            "content_alignment": "center",
+            "button_label": "Button Label",
+            "button_link": "shopify://collections",
+            "external_link": false,
+            "content_position": "bottom-left"
+          }
+        },
+        "collection_iCiB4V": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/Rectangle_122_2_608b10d1-0494-4996-9eb9-76024c84ca97.png",
+            "heading": "Skin care",
+            "subheading": "",
+            "content_alignment": "left",
+            "button_label": "Button Label",
+            "button_link": "shopify://collections/automated-collection",
+            "external_link": false,
+            "content_position": "bottom-left"
+          }
+        },
+        "collection_ETUMFk": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/Rectangle_122_3.png",
+            "heading": "Face cream",
+            "subheading": "",
+            "content_alignment": "left",
+            "button_label": "Button Label",
+            "button_link": "shopify://products/the-complete-snowboard",
+            "external_link": false,
+            "content_position": "bottom-left"
+          }
+        },
+        "collection_CNhDxe": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "heading": "",
+            "subheading": "",
+            "content_alignment": "left",
+            "button_label": "Button Label",
+            "button_link": "",
+            "external_link": false,
+            "content_position": "bottom-left"
+          }
+        }
+      },
+      "block_order": [
+        "collection_GFfmAM",
+        "collection_d7dK6y",
+        "collection_iCiB4V",
+        "collection_ETUMFk",
+        "collection_CNhDxe"
+      ],
+      "settings": {
+        "color_scheme": "scheme-bc44ea45-9838-4b31-8d57-56921c9d546c",
+        "heading": "Beauty collections",
+        "heading_color": "#121212",
+        "content": "<p>Shop our summer trendy collection.</p>",
+        "content_color": "#944e63",
+        "content_position": "center",
+        "collection_layout": "grid",
+        "collections_per_row_mobile": 1,
+        "enable_slider_mobile": false,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "collection_list_Qw8Y6b": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_GFfmAM": {
+          "type": "collection",
+          "settings": {
+            "collection": "automated-collection",
+            "image": "shopify://shop_images/Rectangle_122_b5668bc3-ee2b-4e3b-9231-a2757c51d015.png",
+            "heading": "Herbal lotion",
+            "subheading": "",
+            "content_alignment": "left",
+            "button_label": "Button Label",
+            "button_link": "",
+            "external_link": true,
+            "content_position": "bottom-left"
+          }
+        },
+        "collection_d7dK6y": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/Rectangle_122_1_e1248203-8ce0-47b8-a982-6c20ecfd1d86.png",
+            "heading": "Hair care",
+            "subheading": "",
+            "content_alignment": "center",
+            "button_label": "Button Label",
+            "button_link": "shopify://collections",
+            "external_link": false,
+            "content_position": "bottom-left"
+          }
+        },
+        "collection_iCiB4V": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/Rectangle_122_2_608b10d1-0494-4996-9eb9-76024c84ca97.png",
+            "heading": "Skin care",
+            "subheading": "",
+            "content_alignment": "left",
+            "button_label": "Button Label",
+            "button_link": "shopify://collections/automated-collection",
+            "external_link": false,
+            "content_position": "bottom-left"
+          }
+        },
+        "collection_ETUMFk": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/Rectangle_122_3.png",
+            "heading": "Face cream",
+            "subheading": "",
+            "content_alignment": "left",
+            "button_label": "Button Label",
+            "button_link": "shopify://products/the-complete-snowboard",
+            "external_link": false,
+            "content_position": "bottom-left"
+          }
+        },
+        "collection_CNhDxe": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "heading": "",
+            "subheading": "",
+            "content_alignment": "left",
+            "button_label": "Button Label",
+            "button_link": "",
+            "external_link": false,
+            "content_position": "bottom-left"
+          }
+        }
+      },
+      "block_order": [
+        "collection_GFfmAM",
+        "collection_d7dK6y",
+        "collection_iCiB4V",
+        "collection_ETUMFk",
+        "collection_CNhDxe"
+      ],
+      "settings": {
+        "color_scheme": "scheme-bc44ea45-9838-4b31-8d57-56921c9d546c",
+        "heading": "Beauty collections",
+        "heading_color": "#121212",
+        "content": "<p>Shop our summer trendy collection.</p>",
+        "content_color": "#944e63",
+        "content_position": "center",
+        "collection_layout": "grid",
+        "collections_per_row_mobile": 1,
+        "enable_slider_mobile": false,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
     }
   },
-  "order": ["main"]
+  "order": [
+    "main",
+    "collection_list_Qw8Y6q",
+    "collection_list_Qw8Y6a",
+    "collection_list_Qw8Y6b"
+  ]
 }

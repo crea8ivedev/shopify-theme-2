@@ -238,6 +238,106 @@
         "label": "Color scheme",
         "has_cards_info": "To change the card color scheme, update your theme settings."
       }
+    },
+    "collection_list": {
+      "name": "Collection List",
+      "settings": {
+        "color_scheme": {
+          "label": "Color Scheme"
+        },
+        "heading": {
+          "label": "Heading"
+        },
+        "heading_color": {
+          "label": "Heading Color"
+        },
+        "content": {
+          "label": "Content"
+        },
+        "content_color": {
+          "label": "Content Color"
+        },
+        "content_position": {
+          "label": "Content Position",
+          "options": {
+            "left": "Left",
+            "center": "Center"
+          }
+        },
+        "collection_layout": {
+          "label": "Collection Layout",
+          "options": {
+            "grid": "Grid",
+            "slider": "Slider"
+          }
+        },
+        "collections_per_row_mobile": {
+          "label": "Collections Per Row (Mobile)"
+        },
+        "enable_slider_mobile": {
+          "label": "Enable Slider On Mobile"
+        },
+        "padding_top": {
+          "label": "Top Padding"
+        },
+        "padding_bottom": {
+          "label": "Bottom Padding"
+        }
+      },
+      "blocks": {
+        "collection": {
+          "name": {
+            "label": "Collection"
+          },
+          "settings": {
+            "image": {
+              "label": "Custom Image"
+            },
+            "collection": {
+              "label": "Collection"
+            },
+            "heading": {
+              "label": "Heading"
+            },
+            "subheading": {
+              "label": "Subheading"
+            },
+            "button_label": {
+              "label": "Button Text"
+            },
+            "button_link": {
+              "label": "Button Link"
+            },
+            "external_link": {
+              "label": "Open in new tab"
+            },
+            "content_position": {
+              "label": "Content Position",
+              "options": {
+                "bottom_center": "Below Image Center",
+                "bottom_left": "Below Image Left",
+                "bottom_right": "Below Image Right",
+                "top_center": "Above Image Center",
+                "top_left": "Above Image Left",
+                "top_right": "Above Image Right",
+                "middle_center": "Middle Image Center"
+              }
+            },
+            "content_alignment": {
+              "label": "Content Alignment",
+              "options": {
+                "left": "Left",
+                "center": "Center"
+              }
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": {
+          "label": "Collection List"
+        }
+      }
     }
   }
 }
