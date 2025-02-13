@@ -1,6 +1,6 @@
 {{ 'collection-list.css' | asset_url | stylesheet_tag }}
 
-{% style %}
+{%- style -%}
   .section-{{ section.id }} {
     padding-top: {{ section.settings.padding_top }}px;
     padding-bottom: {{ section.settings.padding_bottom }}px;
@@ -64,40 +64,47 @@
   .section-{{ section.id }} .collection-wrapper .collection-item.content-center .collection-content {
     text-align: center;
   }
-{% endstyle %}
+{%- endstyle -%}
 
-{% assign is_slider = false %}
-{% assign is_slider_mobile = false %}
-{% if section.settings.collection_layout == 'slider'
+{%- assign is_slider = false -%}
+{%- assign is_slider_mobile = false -%}
+{%- if section.settings.collection_layout == 'slider'
   or section.settings.enable_slider_mobile == true
   and section.blocks.size > 1
-%}
-  {% assign is_slider = true %}
+-%}
+  {%- assign is_slider = true -%}
 {% endif %}
-{% if section.settings.enable_slider_mobile == true
+{%- if section.settings.enable_slider_mobile == true
   and section.settings.collection_layout == 'grid'
   and section.blocks.size > 1
-%}
-  {% assign is_slider_mobile = true %}
+-%}
+  {%- assign is_slider_mobile = true -%}
 {% endif %}
 
-<div class="section--collection-list {% if is_slider_mobile == true %} section--slider section--slider-mobile {% endif %} section-{{ section.id }} color-{{ section.settings.color_scheme }} section--{{ section.settings.collection_layout }}">
+<div class="section--collection-list {%- if is_slider_mobile == true -%} section--slider section--slider-mobile {%- endif -%} section-{{ section.id }} color-{{ section.settings.color_scheme }} section--{{ section.settings.collection_layout }}">
   <div class="page-width">
-    {% if section.settings.heading != blank or section.settings.content != blank %}
+    {%- if section.settings.heading != blank or section.settings.content != blank -%}
       <div class="collection-list-header">
-        {% if section.settings.heading != blank %}
+        {%- if section.settings.heading != blank -%}
           <h2 class="collection-list-heading">{{ section.settings.heading }}</h2>
-        {% endif %}
-        {% if section.settings.content != blank %}
+        {%- endif -%}
+        {%- if section.settings.content != blank -%}
           <div class="collection-list-subheading">{{ section.settings.content }}</div>
-        {% endif %}
+        {%- endif -%}
       </div>
-    {% endif %}
-    <div class="collection-list-container {% if is_slider == true %} swiper swiper-container {% endif %}">
-      <div class="collection-wrapper collection-{{ section.settings.collection_layout }} {% if is_slider == true %} swiper-wrapper {% endif %}">
-        {% assign row_counter = 0 %}
-        {% for block in section.blocks %}
-          {% liquid
+    {%- endif -%}
+    <div
+      class="collection-list-container {%- if is_slider == true -%} swiper swiper-container {%- endif -%}"
+      aria-label="carousel"
+      role="region"
+    >
+      {%- if is_slider == true -%}
+        <p class="sr-only">This is a collection list carousel. Use Next and Previous buttons to navigate.</p>
+      {%- endif -%}
+      <div class="collection-wrapper collection-{{ section.settings.collection_layout }} {%- if is_slider == true -%} swiper-wrapper {%- endif -%}">
+        {%- assign row_counter = 0 -%}
+        {%- for block in section.blocks -%}
+          {%- liquid
             if block.settings.image == blank and block.settings.collection.image == blank
               continue
             endif
@@ -173,13 +180,13 @@
               when 'center'
                 assign alignment_class = 'content-center'
             endcase
-          %}
+          -%}
           <div
             id="{{ block.id }}"
             class="collection-item {{ span_class }} {{ position_class }} {{ alignment_class }} {% if is_slider == true %} swiper-slide {% endif %}"
           >
             <div class="collection-image">
-              {% if image_url != blank %}
+              {%- if image_url != blank -%}
                 <img
                   src="{{ image_url | image_url: width: 1100 }}"
                   alt="{{ image_alt | default: "Collection List" }}"
@@ -187,25 +194,25 @@
                   height="500px"
                   loading="lazy"
                 >
-              {% endif %}
+              {%- endif -%}
             </div>
             <div class="collection-content">
-              {% if heading != blank %}
+              {%- if heading != blank -%}
                 <h3 class="collection-heading">{{ heading }}</h3>
-              {% endif %}
-              {% if subheading != blank %}
+              {%- endif -%}
+              {%- if subheading != blank -%}
                 <p class="collection-subheading">{{ subheading }}</p>
-              {% endif %}
-              {% if button_link != blank or block.settings.button_label != blank %}
+              {%- endif -%}
+              {%- if button_link != blank or block.settings.button_label != blank -%}
                 <a
-                  {% if button_link == blank %}
+                  {%- if button_link == blank -%}
                     role="link" aria-disabled="true"
-                  {% else %}
+                  {%- else -%}
                     href="{{ button_link }}"
-                  {% endif %}
-                  {% if block.settings.external_link %}
+                  {%- endif -%}
+                  {%- if block.settings.external_link -%}
                     target="_blank"
-                  {% endif %}
+                  {%- endif -%}
                   class="button collection-list--button button--primary"
                 >
                   {{ block.settings.button_label | escape }}
@@ -213,16 +220,16 @@
                     {% render 'icon-up-arrow' %}
                   </span>
                 </a>
-              {% endif %}
+              {%- endif -%}
             </div>
           </div>
-        {% endfor %}
+        {%- endfor -%}
       </div>
-      {% if is_slider == true %}
+      {%- if is_slider == true -%}
         <div class="swiper-pagination"></div>
         <span class="swiper-button-prev"></span>
         <span class="swiper-button-next"></span>
-      {% endif %}
+      {%- endif -%}
     </div>
   </div>
 </div>
