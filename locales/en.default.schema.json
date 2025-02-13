@@ -238,6 +238,27 @@
         "label": "Color scheme",
         "has_cards_info": "To change the card color scheme, update your theme settings."
       }
-    }
+    },
+    "collapsible_content": {
+        "name": "Collapsible Content",
+        "settings": {
+          "heading": "Heading",
+          "color_scheme": "Color Scheme",
+          "background_image": "Background Image",
+          "open_first_accordion": "Open First Accordion",
+          "padding_top": "Padding Top",
+          "padding_bottom": "Padding Bottom"
+        },
+        "blocks": {
+          "content": {
+            "name": "Content",
+            "settings": {
+              "image": "Image",
+              "question": "Question",
+              "answer": "Answer"
+            }
+          }
+        }
+      }
   }
 }
