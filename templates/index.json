@@ -45,7 +45,6 @@
         },
         "text_block_LxLTiD": {
           "type": "text_block",
-          "disabled": true,
           "settings": {
             "text-marqee": "Summer sale 40% off everything"
           }
@@ -63,7 +62,7 @@
         "scrolling_speed": 30,
         "show_border": false,
         "padding_top": 20,
-        "padding_bottom": 0
+        "padding_bottom": 20
       }
     }
   },
