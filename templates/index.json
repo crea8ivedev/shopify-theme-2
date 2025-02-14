@@ -12,7 +12,7 @@
     "main": {
       "type": "main-page",
       "settings": {
-        "padding_top": 28,
+        "padding_top": 0,
         "padding_bottom": 28
       }
     },
@@ -59,9 +59,9 @@
       ],
       "settings": {
         "color_scheme": "scheme-f8ab58ef-474a-4153-acc3-2dfb57594448",
-        "scrolling_speed": 10,
+        "scrolling_speed": 25,
         "show_border": true,
-        "padding_top": 40,
+        "padding_top": 44,
         "padding_bottom": 40
       }
     }
