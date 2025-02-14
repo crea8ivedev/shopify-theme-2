@@ -32,6 +32,7 @@
         },
         "announcement_text_slider_xJB6Xq": {
           "type": "announcement_text_slider",
+          "disabled": true,
           "settings": {
             "announcement_text": "Welcome to our store1",
             "link_text": "",
@@ -46,11 +47,11 @@
       ],
       "settings": {
         "color_scheme": "scheme-9a4ed46b-85e4-406e-bd00-b3b0c4b545b2",
-        "show_close_button": false,
+        "show_close_button": true,
         "show_navigation_buttons": true,
-        "auto_slide": false,
+        "auto_slide": true,
         "slides_speed": 6,
-        "text_align": "left",
+        "text_align": "center",
         "padding_top": 12,
         "padding_bottom": 12
       }
