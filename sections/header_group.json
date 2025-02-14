@@ -21,38 +21,19 @@
     "announcement_bar_rY98XK": {
       "type": "announcement-bar",
       "blocks": {
-        "announcement_text_slider_yVJMFn": {
-          "type": "announcement_text_slider",
-          "settings": {
-            "announcement_text": "Welcome to our store",
-            "link_text": "",
-            "link_url": "",
-            "target_blank": false
-          }
-        },
         "announcement_text_slider_YgyfYa": {
           "type": "announcement_text_slider",
+          "disabled": true,
           "settings": {
             "announcement_text": "test",
             "link_text": "click here",
             "link_url": "https://www.calpaktravel.com/",
             "target_blank": true
           }
-        },
-        "announcement_text_slider_xjGRJT": {
-          "type": "announcement_text_slider",
-          "settings": {
-            "announcement_text": "",
-            "link_text": "Welcome to our store",
-            "link_url": "shopify://products/the-3p-fulfilled-snowboard",
-            "target_blank": true
-          }
         }
       },
       "block_order": [
-        "announcement_text_slider_yVJMFn",
-        "announcement_text_slider_YgyfYa",
-        "announcement_text_slider_xjGRJT"
+        "announcement_text_slider_YgyfYa"
       ],
       "settings": {
         "color_scheme": "scheme-9a4ed46b-85e4-406e-bd00-b3b0c4b545b2",
