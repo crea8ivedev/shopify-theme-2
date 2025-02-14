@@ -44,6 +44,7 @@
         "announcement_text_slider_yVJMFn",
         "announcement_text_slider_xjGRJT"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "scheme-9a4ed46b-85e4-406e-bd00-b3b0c4b545b2",
         "show_close_button": true,
