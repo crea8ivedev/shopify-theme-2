@@ -74,12 +74,23 @@
     },
     "text_rotate_3xefyg": {
       "type": "text-rotate",
+      "blocks": {
+        "text_block_9h7yDn": {
+          "type": "text_block",
+          "settings": {
+            "text-marqee": "Welcome To The Store"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_9h7yDn"
+      ],
       "settings": {
         "color_scheme": "",
-        "scrolling_speed": 10,
+        "scrolling_speed": 20,
         "show_border": true,
-        "padding_top": 12,
-        "padding_bottom": 12
+        "padding_top": 88,
+        "padding_bottom": 100
       }
     }
   },
