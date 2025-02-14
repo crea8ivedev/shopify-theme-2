@@ -46,11 +46,11 @@
       ],
       "settings": {
         "color_scheme": "scheme-9a4ed46b-85e4-406e-bd00-b3b0c4b545b2",
-        "show_close_button": true,
-        "show_navigation_buttons": true,
+        "show_close_button": false,
+        "show_navigation_buttons": false,
         "auto_slide": false,
         "slides_speed": 6,
-        "text_align": "center",
+        "text_align": "left",
         "padding_top": 12,
         "padding_bottom": 12
       }
