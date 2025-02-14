@@ -32,7 +32,6 @@
         },
         "announcement_text_slider_xJB6Xq": {
           "type": "announcement_text_slider",
-          "disabled": true,
           "settings": {
             "announcement_text": "Text and icons are fully visible\nAny links function properly\nLink styling indicates that the text is clickable\nIf the text input is plain text, then add 60-100 characters of text, or the maximum character limit",
             "link_text": "",
