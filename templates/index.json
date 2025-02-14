@@ -65,17 +65,10 @@
         "padding_top": 20,
         "padding_bottom": 0
       }
-    },
-    "header_aDVA4z": {
-      "type": "header",
-      "settings": {
-        "color_scheme": ""
-      }
     }
   },
   "order": [
     "main",
-    "text_rotate_aTrKf8",
-    "header_aDVA4z"
+    "text_rotate_aTrKf8"
   ]
 }
