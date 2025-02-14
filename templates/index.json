@@ -22,31 +22,31 @@
         "logo_c43R69": {
           "type": "logo",
           "settings": {
-            "brand_logo": "shopify://shop_images/png-clipart-brand-logo-product-design-font-cosmetic-beauty-text-cosmetics_1.png"
+            "logo-image": "shopify://shop_images/p_g_1.png"
           }
         },
         "logo_AUyUTa": {
           "type": "logo",
           "settings": {
-            "brand_logo": "shopify://shop_images/wella_1.png"
+            "logo-image": "shopify://shop_images/mac_1.png"
           }
         },
         "logo_BRPQXr": {
           "type": "logo",
           "settings": {
-            "brand_logo": "shopify://shop_images/LOreal-Symbol-1024x403_1.png"
+            "logo-image": "shopify://shop_images/LOreal-Symbol-1024x403_1.png"
           }
         },
         "logo_BrN4eY": {
           "type": "logo",
           "settings": {
-            "brand_logo": "shopify://shop_images/mac_1.png"
+            "logo-image": "shopify://shop_images/png-clipart-brand-logo-product-design-font-cosmetic-beauty-text-cosmetics_1.png"
           }
         },
         "logo_DMTCjj": {
           "type": "logo",
           "settings": {
-            "brand_logo": "shopify://shop_images/p_g_1.png"
+            "logo-image": "shopify://shop_images/wella_1.png"
           }
         }
       },
@@ -58,13 +58,10 @@
         "logo_DMTCjj"
       ],
       "settings": {
-        "heading": "Brand Logo",
-        "sub_heading": "Brand Logo",
+        "heading": "",
+        "sub_heading": "",
         "color_scheme": "",
-        "enable_slider": false,
-        "slides_speed": 30,
-        "padding_top": 24,
-        "padding_bottom": 24
+        "enable_navigation": false
       }
     }
   },
