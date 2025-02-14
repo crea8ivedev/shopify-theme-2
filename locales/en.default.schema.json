@@ -252,7 +252,7 @@
           "label": "Auto Rotate Messages"
         },
         "slides_speed": {
-          "label": "Change Slides Speed"
+          "label": "Change Slide Every"
         }
       },
       "blocks": {
