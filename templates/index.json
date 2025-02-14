@@ -33,14 +33,12 @@
         },
         "text_block_TdkhDn": {
           "type": "text_block",
-          "disabled": true,
           "settings": {
             "text-marqee": "First time free delivery in usa"
           }
         },
         "text_block_68RPVd": {
           "type": "text_block",
-          "disabled": true,
           "settings": {
             "text-marqee": "20% off everything for women"
           }
@@ -61,9 +59,9 @@
         "text_block_LxLTiD"
       ],
       "settings": {
-        "color_scheme": "scheme-9a4ed46b-85e4-406e-bd00-b3b0c4b545b2",
+        "color_scheme": "scheme-f8ab58ef-474a-4153-acc3-2dfb57594448",
         "scrolling_speed": 25,
-        "show_border": true,
+        "show_border": false,
         "padding_top": 44,
         "padding_bottom": 40
       }
