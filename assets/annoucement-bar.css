@@ -62,11 +62,24 @@
   }
  
   @media (max-width:989px) {
-    .announcement-info .slider-arrows {
+    /* .announcement-info .slider-arrows {
       display: none;
-    }
+    } */
     .announcement-bar-main .announcement-info {
       gap: 12px;
+    }
+    .close-icon {
+      position: absolute;
+      right: 5px;
+      top: -5px;
+      z-index: 9;
+    }
+    .close-icon svg {
+      width: 10px;
+    }
+    .slider-arrows .next-btn svg,
+    .slider-arrows .prev-btn svg {
+      width: 15px;
     }
   }
   @media (max-width:749px) {
