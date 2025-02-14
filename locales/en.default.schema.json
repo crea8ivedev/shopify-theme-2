@@ -233,6 +233,10 @@
         "padding_top": "Top Padding",
         "padding_bottom": "Bottom Padding"
       },
+      "arrows":{
+        "mobile_layout":"Mobile Layout",
+        "hide_navigation_buttons": "Hide Navigation Buttons"
+      },
       "spacing": "Spacing",
       "colors": {
         "label": "Color Scheme",

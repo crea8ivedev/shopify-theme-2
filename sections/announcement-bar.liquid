@@ -44,7 +44,7 @@
         class="announcement-info {% if section.settings.text_align == 'center' %}center{% elsif section.settings.text_align == 'left' %}left{% elsif section.settings.text_align == 'right' %}right{% endif %}"
       >
         {% if announcement_count > 1 and section.settings.show_navigation_buttons == true %}
-          <div class="slider-arrows">
+          <div class="slider-arrows {% if section.settings.hide_navigation_buttons == true %} hide-arrow {% endif %}">
             <div class="prev-btn">
               {% render 'icon-left-arrow' %}
             </div>
@@ -82,7 +82,7 @@
         </div>
 
         {% if announcement_count > 1 and section.settings.show_navigation_buttons == true %}
-          <div class="slider-arrows">
+          <div class="slider-arrows {% if section.settings.hide_navigation_buttons == true %} hide-arrow {% endif %}">
             <div class="next-btn">
               {% render 'icon-right-arrow' %}
             </div>
@@ -160,6 +160,16 @@
           "value": "right"
         }
       ]
+    },
+    {
+      "type": "header",
+      "content": "Mobile Layout"
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_navigation_buttons",
+      "label": "t:sections.all.arrows.hide_navigation_buttons",
+      "default": true
     },
     {
         "type": "header",
