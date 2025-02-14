@@ -50,7 +50,7 @@
         "show_close_button": true,
         "show_navigation_buttons": true,
         "auto_slide": true,
-        "slides_speed": 6,
+        "slides_speed": 4,
         "text_align": "center",
         "padding_top": 12,
         "padding_bottom": 12
