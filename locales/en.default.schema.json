@@ -229,13 +229,13 @@
   "sections": {
     "all": {
       "padding": {
-        "section_padding_heading": "Section padding",
-        "padding_top": "Top padding",
+        "section_padding_heading": "Section Padding",
+        "padding_top": "Top Padding",
         "padding_bottom": "Bottom Padding"
       },
       "spacing": "Spacing",
       "colors": {
-        "label": "Color scheme",
+        "label": "Color Scheme",
         "has_cards_info": "To change the card color scheme, update your theme settings."
       }
     },
