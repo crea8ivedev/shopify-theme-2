@@ -78,7 +78,7 @@
         "collection_CNhDxe": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "automated-collection",
             "heading": "",
             "subheading": "",
             "content_alignment": "left",
