@@ -103,8 +103,8 @@
         "content": "<p>Shop our summer trendy collection.</p>",
         "content_color": "#944e63",
         "content_position": "center",
-        "collection_layout": "slider",
-        "collections_per_row_mobile": 1,
+        "collection_layout": "grid",
+        "collections_per_row_mobile": 2,
         "enable_slider_mobile": false,
         "padding_top": 20,
         "padding_bottom": 20
