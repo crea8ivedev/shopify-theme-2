@@ -105,7 +105,7 @@
         "content_position": "left",
         "collection_layout": "slider",
         "collections_per_row_mobile": 3,
-        "enable_slider_mobile": false,
+        "enable_slider_mobile": true,
         "padding_top": 20,
         "padding_bottom": 20
       }
