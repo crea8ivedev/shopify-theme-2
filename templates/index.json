@@ -47,6 +47,19 @@
             "content_position": "bottom-left"
           }
         },
+        "collection_xCUppQ": {
+          "type": "collection",
+          "settings": {
+            "collection": "automated-collection",
+            "heading": "",
+            "subheading": "",
+            "content_alignment": "left",
+            "button_label": "Button Label",
+            "button_link": "",
+            "external_link": false,
+            "content_position": "bottom-left"
+          }
+        },
         "collection_iCiB4V": {
           "type": "collection",
           "settings": {
@@ -92,6 +105,7 @@
       "block_order": [
         "collection_GFfmAM",
         "collection_d7dK6y",
+        "collection_xCUppQ",
         "collection_iCiB4V",
         "collection_ETUMFk",
         "collection_CNhDxe"
