@@ -63,7 +63,7 @@
               </div>
             {% endif %}
             {% if section.settings.banner_text != blank %}
-              <div class="sale-banner-description-detail">
+              <div class="sale-banner-description-detail {% if section.settings.show_border == true %} show-border {% endif %}">
                 <p class="sale-banner-text">{{ section.settings.banner_text }}</p>
               </div>
             {% endif %}
@@ -186,13 +186,13 @@
     },
     {
       "type": "checkbox",
-      "label": "t:sections.sale-banner.settings.button.show_arrow.label",
+      "label": "t:sections.sale-banner.settings.button.external_link.label",
       "id": "external_link",
       "default": false
     },
     {
       "type": "checkbox",
-      "label": "t:sections.sale-banner.settings.section_padding.header",
+      "label": "t:sections.sale-banner.settings.button.show_arrow.label",
       "id": "show_arrow",
       "default": true
     },

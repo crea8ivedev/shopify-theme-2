@@ -63,6 +63,9 @@
 .sale-banner-description-detail {
     margin-top: 80px;
     padding: 10px 0;
+
+}
+.sale-banner-description-detail.show-border{
     border-top: 1px solid #FFFFFF;
     border-bottom: 1px solid #FFFFFF;
 }
