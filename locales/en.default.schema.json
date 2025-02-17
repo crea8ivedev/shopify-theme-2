@@ -245,17 +245,17 @@
           "heading": "Heading",
           "color_scheme": "Color Scheme",
           "background_image": "Background Image",
-          "open_first_accordion": "Open First Accordion",
+          "open_first_accordion": "First Accordion Open",
           "padding_top": "Padding Top",
           "padding_bottom": "Padding Bottom"
         },
         "blocks": {
           "content": {
-            "name": "Content",
+            "name": "Accordian",
             "settings": {
               "image": "Image",
-              "question": "Question",
-              "answer": "Answer"
+              "question": "FAQ Question",
+              "answer": "FAQ Answer"
             }
           }
         }

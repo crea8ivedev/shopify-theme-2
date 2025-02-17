@@ -1,0 +1,86 @@
+{{ 'collapsible-content.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'collapsible-content.js' | asset_url }}" defer="defer"></script>
+
+{%- style -%}
+  .section-padding {
+    padding-top: calc({{ section.settings.padding_top }}px * 0.75);
+    padding-bottom: calc({{ section.settings.padding_bottom }}px  * 0.75);
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  #section-{{ section.id }}{
+    background-image: url({{ section.settings.background_image | image_url }});
+    background-size: cover;
+    background-position: center;
+  }
+{%- endstyle -%}
+
+{% if section.settings.heading or section.blocks > 0 %}
+<section class="collapsible-container color-{{ section.settings.color_scheme}} section-{{ section.id }}-padding" id="section-{{ section.id }}">
+  {%- if section.settings.heading != blank -%}
+    <div class="faq_heading">
+      <h1>{{ section.settings.heading }}</h1>
+    </div>
+  {%- endif -%}
+
+  <div class="faq_main_container">
+    {%- for block in section.blocks -%}
+      {% if block.settings.question != blank %}
+        <div class="faq_container">
+          <div
+  class="faq_question {% if forloop.first and section.settings.open_first_accordion %}open active{% endif %}"
+  role="button"
+  tabindex="0"
+  aria-expanded="false"
+  aria-controls="answer-{{ forloop.index }}"
+  id="question-{{ forloop.index }}"
+>
+
+            <div class="image-que-container">
+              {% if block.settings.image %}
+                <div class="faq_image">
+                  <img
+                    src="{{ block.settings.image | image_url }}"
+                    height="30px"
+                    width="30px"
+                    alt="{{ block.settings.question | escape }}"
+                  >
+                </div>
+              {% endif %}
+              <div class="faq_question-text">
+                <h5>{{ block.settings.question }}</h5>
+              </div>
+            </div>
+            <div class="icon">
+              <div class="icon-shape">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path class="vertical-line" d="M20.4853 12.0009H3.51472" stroke="#0F0F11" stroke-width="2.33"></path>
+                  <path d="M12 3.51562V20.4862" stroke="#0F0F11" stroke-width="2.33"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="answercont"
+            id="answer-{{ forloop.index }}"
+            role="region"
+            aria-labelledby="question-{{ forloop.index }}"
+            aria-hidden="true"
+          >
+            <div class="answer">
+              {{ block.settings.answer }}
+            </div>
+          </div>
+        </div>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+</section>
+{% endif %}

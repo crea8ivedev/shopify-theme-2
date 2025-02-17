@@ -17,7 +17,7 @@
       }
     },
     "collapsible_content_BUjqeY": {
-      "type": "collapsible-content",
+      "type": "component-collapsible-content",
       "blocks": {
         "content_JaXnqL": {
           "type": "content",
