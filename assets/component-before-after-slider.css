@@ -177,6 +177,9 @@
     top: 80%;
     width: auto;
 }
+.before-after-slider .position-reverse{
+    flex-direction: row-reverse;
+}
 @media (min-width:1024px) {
 .before-after-main .before-after-section {
     gap: 40px;

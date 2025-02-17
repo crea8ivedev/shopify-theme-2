@@ -1,6 +1,20 @@
 {{ 'component-before-after-slider.css' | asset_url | stylesheet_tag }}
 
-<section class="before-after-main section-before-after color-{{ section.settings.color_scheme }} background gradient page-width">
+{% style %}
+  .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | times: 0.50 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.50 | round: 0 }}px;
+    }
+
+    @media screen and (min-width: 1024px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
+{% endstyle %}
+
+<section class="before-after-main section-before-after color-{{ section.settings.color_scheme }} background gradient page-width section-{{ section.id }}-padding">
   <div class="before-after-slider swiper">
     <div class="swiper-wrapper">
       {% for block in section.blocks %}
@@ -164,6 +178,26 @@
           "value": "image_last"
         }
       ]
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 12
     }
   ],
   "blocks": [
@@ -217,6 +251,10 @@
           "id": "after_image",
           "label": "t:sections.before-after-slider.blocks.before_after_block.settings.after_image.label",
           "info": "t:sections.before-after-slider.blocks.before_after_block.settings.image_info.label"
+        },
+        {
+          "type": "header",
+          "content": "Section Padding"
         }
       ]
     }

@@ -314,6 +314,12 @@
                 "image_last": "Image Last"
               }
             },
+            "padding_top":{
+              "label": "Padding Top",
+            },
+            "padding_bottom":{
+              "label": "Padding Bottom",
+            }
           }
         }
       },
