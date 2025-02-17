@@ -1,16 +1,12 @@
-  .brand-logos {
-    background-color: antiquewhite;
-  }
 .brand-logos .logo-container {
   overflow-x: hidden;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
 }
 
 .brand-logos .logo-container h2,
 .brand-logos .logo-container h3,
 .brand-logos .logo-container p {
   text-align: center;
+  padding: 1rem 0;
 }
 
 .brand-logos h2 {
@@ -111,7 +107,7 @@
 }
 
 .brand-logos .logo-swiper-container  {
-  margin: 40px 0;
+  margin: 15px 0;
 }
 
 @media screen and (min-width: 600px) {

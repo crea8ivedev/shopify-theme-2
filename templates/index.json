@@ -58,10 +58,16 @@
         "logo_DMTCjj"
       ],
       "settings": {
-        "heading": "",
-        "sub_heading": "",
-        "color_scheme": "",
-        "enable_navigation": false
+        "heading": "Brand Logo",
+        "content": "Brand Logo",
+        "color_scheme": "scheme-b09110ff-0b96-405d-9400-099be4b32bd6",
+        "navigation_arrow": false,
+        "enable_scrolling": true,
+        "scroll_speed": 6,
+        "direction": "left",
+        "pause_on_hover": true,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
