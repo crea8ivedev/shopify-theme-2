@@ -70,7 +70,8 @@
         "before_text": "Before",
         "after_text": "After",
         "text_position": "top",
-        "layout": "image_first"
+        "padding_top": 12,
+        "padding_bottom": 12
       }
     },
     "before_after_slider_Ft89Np": {
@@ -127,7 +128,8 @@
         "before_text": "Before",
         "after_text": "After",
         "text_position": "top",
-        "layout": "image_first"
+        "padding_top": 12,
+        "padding_bottom": 12
       }
     },
     "before_after_slider_DNVdRb": {
@@ -179,12 +181,13 @@
         "before_after_block_6xJjRx"
       ],
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-1",
         "drag_initial_position": 50,
-        "before_text": "",
-        "after_text": "",
-        "text_position": "bottom",
-        "layout": "image_first"
+        "before_text": "Before",
+        "after_text": "After",
+        "text_position": "top",
+        "padding_top": 12,
+        "padding_bottom": 12
       }
     }
   },

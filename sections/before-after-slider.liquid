@@ -12,13 +12,30 @@
         padding-bottom: {{ section.settings.padding_bottom }}px;
       }
     }
+    .slider-image.before {
+    z-index: 2;
+    clip-path: polygon(0 0, {{ section.settings.drag_initial_position }}% 0, {{ section.settings.drag_initial_position }}% 100%, 0% 100%);
+  }
+  .before-after-slider-handle {
+    position: absolute;
+    top: 0;
+    left: {{ section.settings.drag_initial_position }}%;
+    width: 5px;
+    height: 100%;
+    background-color: white;
+    cursor: ew-resize;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 {% endstyle %}
 
 <section class="before-after-main section-before-after color-{{ section.settings.color_scheme }} background gradient page-width section-{{ section.id }}-padding">
   <div class="before-after-slider swiper">
     <div class="swiper-wrapper">
       {% for block in section.blocks %}
-        <div class="before-after-section swiper-slide {% if section.settings.layout == 'image_first' %} position-reverse {% endif %}">
+        <div class="before-after-section swiper-slide">
           <div class="left-content">
             {% if block.settings.heading != blank %}
               <p class="before-after-caption">{{ block.settings.heading }}</p>
@@ -53,7 +70,7 @@
               {% if block.settings.before_image != blank %}
                 <img
                   src="{{ block.settings.before_image | image_url }}"
-                  alt="Before Image"
+                  alt="{{ block.settings.before_image.alt }}"
                   loading="lazy"
                   width="2000"
                   height="1200"
@@ -71,7 +88,7 @@
               {% if block.settings.after_image != blank %}
                 <img
                   src="{{ block.settings.after_image | image_url }}"
-                  alt="After Image"
+                  alt="{{ block.settings.after_image.alt }}"
                   loading="lazy"
                   width="2000"
                   height="1200"
@@ -96,29 +113,9 @@
   </div>
 </section>
 
-<style>
-  .slider-image.before {
-    z-index: 2;
-    clip-path: polygon(0 0, {{ section.settings.drag_initial_position }}% 0, {{ section.settings.drag_initial_position }}% 100%, 0% 100%);
-  }
-  .before-after-slider-handle {
-    position: absolute;
-    top: 0;
-    left: {{ section.settings.drag_initial_position }}%;
-    width: 5px;
-    height: 100%;
-    background-color: white;
-    cursor: ew-resize;
-    z-index: 3;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-</style>
-
 {% schema %}
 {
-  "name": "Before After Slider",
+  "name": "t:sections.before-after-slider.name",
   "settings": [
     {
       "type": "color_scheme",
@@ -164,22 +161,6 @@
       "default": "top"
     },
     {
-      "type": "select",
-      "label": "t:sections.before-after-slider.blocks.before_after_block.settings.layout.label",
-      "id": "layout",
-      "default": "image_last",
-      "options": [
-        {
-          "label": "t:sections.before-after-slider.blocks.before_after_block.settings.layout.options.image_first",
-          "value": "image_first"
-        },
-        {
-          "label": "t:sections.before-after-slider.blocks.before_after_block.settings.layout.options.image_last",
-          "value": "image_last"
-        }
-      ]
-    },
-    {
       "type": "range",
       "id": "padding_top",
       "min": 0,
@@ -203,7 +184,7 @@
   "blocks": [
     {
       "type": "before_after_block",
-      "name": "Before After block",
+      "name": "t:sections.before-after-slider.blocks.before_after_block.name",
       "settings": [
         {
           "type": "html",
@@ -251,17 +232,13 @@
           "id": "after_image",
           "label": "t:sections.before-after-slider.blocks.before_after_block.settings.after_image.label",
           "info": "t:sections.before-after-slider.blocks.before_after_block.settings.image_info.label"
-        },
-        {
-          "type": "header",
-          "content": "Section Padding"
         }
       ]
     }
   ],
   "presets": [
     {
-      "name": "Before After Slider",
+      "name": "t:sections.before-after-slider.presets.name",
       "blocks": [
         {
           "type": "before_after_block"

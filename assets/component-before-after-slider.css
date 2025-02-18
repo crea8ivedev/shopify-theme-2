@@ -22,7 +22,7 @@
 .before-after-main .before-after-section .left-content h2 {
     margin-bottom: 20px;
     margin-top: 20px;
-    font-size: var( --font-h2);
+    font-size: var(--font-h2);
     line-height: 42px;
     color: rgba(var(--color-text));
 }
@@ -35,12 +35,15 @@
     padding: 10px;
     fill: rgba(var(--color-link));
 }
+
 .before-after-main .before-after-section .left-content .before-after-shop-btn:hover svg path {
     fill: rgba(var(--color-button)) !important;
-  }  
+}
+
 .before-after-main .before-after-section .left-content .before-after-shop-btn.center {
     margin: auto;
 }
+
 .before-after-main .right-content .slider-image {
     position: absolute;
     top: 0;
@@ -64,6 +67,7 @@
 .before-after-main .before-after-section.position-reverse {
     margin-right: 0 !important;
 }
+
 .before-after-main .right-content .before-after-slider-handle .before-after-drag-text {
     display: flex;
     justify-content: center;
@@ -129,19 +133,23 @@
     position: relative;
     background: transparent;
 }
+
 .before-after-main .before-after-section .left-content h5 {
     color: #B47B84;
     margin: 10px 0;
 }
+
 .before-after-main .slider-image svg {
     background: #eee;
     height: 100%;
     width: 100%;
 }
+
 .before-after-main .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
     background-color: transparent;
     border-color: rgba(var(--color-button));
 }
+
 .before-after-main .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active::before {
     content: '';
     width: 7px;
@@ -177,76 +185,84 @@
     top: 80%;
     width: auto;
 }
-.before-after-slider .position-reverse{
-    flex-direction: row-reverse;
-}
+
 @media (min-width:1024px) {
-.before-after-main .before-after-section {
-    gap: 40px;
+    .before-after-main .before-after-section {
+        gap: 40px;
+    }
 }
-}
+
 @media (max-width:1600px) {
+
     .before-after-main .swiper-pagination .swiper-horizontal>.swiper-pagination-bullets,
     .swiper-pagination-bullets.swiper-pagination-horizontal,
     .swiper-pagination-custom,
     .swiper-pagination-fraction {
         left: 42px;
     }
-    .before-after-main .right-content {
-        height:750px;
-    }
-  }
-  
-  @media (max-width:1440px) {
-    .before-after-main .right-content {
-        height:650px;
-    }
-  }
 
-  @media (max-width:1024px) {
+    .before-after-main .right-content {
+        height: 750px;
+    }
+}
+
+@media (max-width:1440px) {
+    .before-after-main .right-content {
+        height: 650px;
+    }
+}
+
+@media (max-width:1024px) {
     .before-after-main .before-after-section.position-reverse {
         flex-direction: row-reverse;
     }
+
     .before-after-main .swiper-pagination {
-        position: unset!important;
-        left: unset!important;
+        position: unset !important;
+        left: unset !important;
         padding: 20px;
     }
+
     .before-after-main .before-after-section {
         gap: 25px;
     }
+
     .before-after-main .right-content img {
-        width:100vw;
-        height:100%;
-        object-fit:cover;
-      }
-      .before-after-main .right-content {
+        width: 100vw;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .before-after-main .right-content {
         max-width: 100%;
         width: 100%;
-      }
-      .before-after-main .before-after-section .left-content {
+    }
+
+    .before-after-main .before-after-section .left-content {
         width: 100%;
-     }
-      .before-after-main .before-after-section {
+    }
+
+    .before-after-main .before-after-section {
         flex-wrap: wrap;
         flex-direction: column-reverse;
-     }
-  }
-  @media (max-width:768px) {
-    .before-after-main .mySwiper {
-        padding:0 10px;
     }
-  
+}
+
+@media (max-width:768px) {
+    .before-after-main .mySwiper {
+        padding: 0 10px;
+    }
+
     .before-after-main .right-content {
         position: relative;
         width: 100%;
         height: 500px;
         border-radius: 10px;
     }
-  }
+}
 
-  @media (max-width: 425px) {
+@media (max-width: 425px) {
     .before-after-main .right-content img {
-        height:100%;
-      }
-  }
+        height: 100%;
+    }
+}

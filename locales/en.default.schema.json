@@ -240,7 +240,7 @@
       }
     },
     "before-after-slider": {
-      "name": "Before After Slider",
+      "name": "Before after slider",
       "settings": {
         "drag_initial_position": {
           "label": "Drag initial position"
@@ -248,46 +248,46 @@
       },
       "blocks": {
         "before_after_block": {
-          "name": "Before after block",
+          "name": "Before after slide",
           "settings": {
             "heading": {
               "label": "Heading"
             },
             "default_heading": {
-              "label": "Add Heading here"
+              "label": "Add heading here"
             },
             "sub_heading": {
               "label": "Subheading"
             },
             "default_sub_heading": {
-              "label": "Add Subheading here"
+              "label": "Add subheading here"
             },
             "content": {
               "label": "Content"
             },
             "default_content": {
-              "label": "Add Content here"
+              "label": "Add content here"
             },
             "button_text": {
-              "label": "Button Text"
+              "label": "Button text"
             },
             "button_link": {
-              "label": "Button Link"
+              "label": "Button link"
             },
             "button_style_secondary": {
-              "label": "Button Style Secondary",
+              "label": "Button style secondary",
             },
             "before_image": {
-              "label": "Before Image"
+              "label": "Before image"
             },
             "after_image": {
-              "label": "After Image"
+              "label": "After image"
             },
             "before_text": {
-              "label": "Before Text"
+              "label": "Before text"
             },
             "after_text": {
-              "label": "After Text"
+              "label": "After text"
             },
             "text_position": {
               "label": "Before/after text position"
@@ -307,24 +307,17 @@
             "position_bottom": {
               "label": "Bottom"
             },
-            "layout": {
-              "label": "Desktop Image Placement",
-              "options": {
-                "image_first": "Image First",
-                "image_last": "Image Last"
-              }
-            },
             "padding_top":{
-              "label": "Padding Top",
+              "label": "Padding top",
             },
             "padding_bottom":{
-              "label": "Padding Bottom",
+              "label": "Padding bottom",
             }
           }
         }
       },
       "presets": {
-        "name": "Before and After Slider"
+        "name": "Before after slider"
       }
     }
   }
