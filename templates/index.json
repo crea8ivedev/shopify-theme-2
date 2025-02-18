@@ -22,7 +22,6 @@
         "accordion_MdEQTp": {
           "type": "Accordion",
           "settings": {
-            "image": "shopify://shop_images/mail-svgrepo-com.svg",
             "question": "What are the essential skincare products for a daily routine?",
             "answer": "<p>A basic skincare routine includes a <strong>cleanser</strong>, <strong>moisturizer</strong>, and <strong>sunscreen</strong> (SPF 30+). Additional products can include <strong>serums</strong>, <strong>toners</strong>, and <strong>exfoliants</strong> based on skin type.</p>"
           }
@@ -59,7 +58,7 @@
         "accordion_kqzqKq"
       ],
       "settings": {
-        "heading": "Frequently Asked Questions",
+        "heading": "",
         "color_scheme": "",
         "open_first_accordion": true,
         "padding_top": 40,
