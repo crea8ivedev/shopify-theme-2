@@ -1,0 +1,38 @@
+.social-icon-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type:none;
+    justify-content: flex-end;   
+}
+
+.social-icon-list .social-icon-item .social-icon-link svg {
+    height: 36px;
+    width: 36px;
+}
+
+@media only screen and (max-width: 749px) {
+    .social-icon-list {
+        justify-content: center;
+    }
+}
+
+.social-icon-item .icon {
+    height: 2.2rem;
+    width: 2.2rem;
+}
+
+.social-icon-link {
+    align-items: center;
+    display: flex;
+    padding: 1.1rem;
+    color: rgb(var(--color-foreground));
+}
+
+.utility-bar .social-icon-link {
+    padding: 0 0.8rem;
+    height: 3.8rem;
+}
+
+.social-icon-link:hover .icon {
+    transform: scale(1.07);
+}

@@ -998,5 +998,74 @@
         "default": "scheme-1"
       }
     ]
-  }
+  },
+  {
+    "name": "t:settings_schema.social-media.name",
+    "settings": [
+      {
+        "type": "header",
+        "content": "t:settings_schema.social-media.settings.header.content"
+      },
+      {
+        "type": "text",
+        "id": "instagram_account",
+        "label": "t:settings_schema.social-media.settings.instagram_account.label",
+        "placeholder": "t:settings_schema.social-media.settings.instagram_account.info"
+      },
+      {
+        "type": "text",
+        "id": "youtube_account",
+        "label": "t:settings_schema.social-media.settings.youtube_account.label",
+        "placeholder": "t:settings_schema.social-media.settings.youtube_account.info"
+      },
+      {
+        "type": "text",
+        "id": "linkedin_account",
+        "label": "t:settings_schema.social-media.settings.linkedin_account.label",
+        "placeholder": "t:settings_schema.social-media.settings.linkedin_account.info"
+      },
+      {
+        "type": "text",
+        "id": "x_account",
+        "label": "t:settings_schema.social-media.settings.x_account.label",
+        "placeholder": "t:settings_schema.social-media.settings.x_account.info"
+      },
+      {
+        "type": "text",
+        "id": "facebook_account",
+        "label": "t:settings_schema.social-media.settings.facebook_account.label",
+        "placeholder": "t:settings_schema.social-media.settings.facebook_account.info"
+      },
+      {
+        "type": "text",
+        "id": "tikTok_account",
+        "label": "t:settings_schema.social-media.settings.tikTok_account.label",
+        "placeholder": "t:settings_schema.social-media.settings.tikTok_account.info"
+      },
+      {
+        "type": "text",
+        "id": "snapchat_account",
+        "label": "t:settings_schema.social-media.settings.snapchat_account.label",
+        "placeholder": "t:settings_schema.social-media.settings.snapchat_account.info"
+      },
+      {
+        "type": "text",
+        "id": "pinterest_account",
+        "label": "t:settings_schema.social-media.settings.pinterest_account.label",
+        "placeholder": "t:settings_schema.social-media.settings.pinterest_account.info"
+      },
+      {
+        "type": "text",
+        "id": "tumblr_account",
+        "label": "t:settings_schema.social-media.settings.tumblr_account.label",
+        "placeholder": "t:settings_schema.social-media.settings.tumblr_account.info"
+      },
+      {
+        "type": "text",
+        "id": "vimeo_account",
+        "label": "t:settings_schema.social-media.settings.vimeo_account.label",
+        "placeholder": "t:settings_schema.social-media.settings.vimeo_account.info"
+      }
+    ]
+  }  
 ]

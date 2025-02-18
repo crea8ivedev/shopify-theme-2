@@ -224,6 +224,54 @@
           "label": "Style"
         }
       }
+    },
+    "social-media": {
+      "name": "Social media",
+      "settings": {
+        "header": {
+          "content": "Social accounts"
+        },
+        "instagram_account": {
+          "label": "Instagram",
+          "info": "https://instagram.com/shopify"
+        },
+        "youtube_account": {
+          "label": "YouTube",
+          "info": "https://youtube.com/shopify"
+        },
+        "linkedin_account": {
+          "label": "LinkedIn",
+          "info": "https://linkedin.com/shopify"
+        },
+        "x_account": {
+          "label": "X",
+          "info": "https://x.com/shopify"
+        },
+        "facebook_account": {
+          "label": "Facebook",
+          "info": "https://facebook.com/shopify"
+        },
+        "tikTok_account": {
+          "label": "TikTok",
+          "info": "https://tiktok.com/shopify"
+        },
+        "snapchat_account": {
+          "label": "Snapchat",
+          "info": "https://snapchat.com/shopify"
+        },
+        "pinterest_account": {
+          "label": "Pinterest",
+          "info": "https://pinterest.com/shopify"
+        },
+        "tumblr_account": {
+          "label": "Tumblr",
+          "info": "https://tumblr.com/shopify"
+        },
+        "vimeo_account": {
+          "label": "Vimeo",
+          "info": "https://vimeo.com/shopify"
+        }
+      }
     }
   },
   "sections": {

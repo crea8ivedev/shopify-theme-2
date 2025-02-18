@@ -7,4 +7,26 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-{}
+{
+    "general": {
+        "social": {
+            "alt_text": {
+                "share_on_facebook": "Share on Facebook",
+                "share_on_twitter": "Share on X",
+                "share_on_pinterest": "Pin on Pinterest"
+            },
+            "links": {
+                "instagram": "Instagram",
+                "youtube": "YouTube",
+                "linkedin": "LinkedIn",
+                "x": "X (Twitter)",
+                "facebook": "Facebook",
+                "tiktok": "TikTok",
+                "snapchat": "Snapchat",
+                "pinterest": "Pinterest",
+                "tumblr": "Tumblr",
+                "vimeo": "Vimeo"
+            }
+        },
+    }
+}
