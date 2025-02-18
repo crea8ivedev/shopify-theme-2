@@ -1,0 +1,193 @@
+
+<style>
+    #richtext-{{ section.id }}{
+        text-align: {{ section.settings.text_alignment }};
+        padding-top: {{ section.settings.top_padding }}px; 
+        padding-bottom: {{ section.settings.bottom_padding }}px;
+        background-image: url({{ section.settings.desktop_bg_image | image_url }});
+        background-color: {{ section.settings.overlay_color }};
+        opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
+    }
+    .divider{
+        border-bottom: 1px solid black;;
+    }
+    hr{
+        margin: 0%;
+    }
+   
+</style>
+
+<section class="rich-text-section {% if section.settings.desktop_bg_image %} desktop-bg-image {% endif %} {% if section.settings.mobile_bg_image %} desktop-bg-image {% endif %}" id="richtext-{{ section.id }}">
+
+  {% for block in section.blocks %}
+    {% case block.type %}
+      {% when 'heading' %}
+        <div class="richtext-heading" id="{{ section.id }}-heading-padding" 
+        style="padding-top: {{ block.settings.heading_top_padding }}px; padding-bottom: {{ block.settings.heading_bottom_padding }}px;">
+        <h2>
+            {{ block.settings.heading }}
+        </h2>
+    </div>    
+      {% when 'subheading' %}
+        <div class="rich-text-subheading" style="padding-top: {{ block.settings.subheading_top_padding }}px; padding-bottom: {{ block.settings.subheading_bottom_padding }}px;">
+            <h3>{{ block.settings.subheading }}</h3>
+        </div>
+      {% when 'divider' %}
+        <div class="rich-text-divider">
+            {% if block.settings.show_line %}
+                <div class="divider" style="padding-top: {{ block.settings.divider_top_padding }}px; padding-bottom: {{ block.settings.divider_bottom_padding }}px;">
+                    <hr width="100%" color="black">
+                </div>
+            {% endif  %}
+        </div>
+       {% when 'button' %}
+        <div class="richtext-button" style="padding-top: {{ block.settings.button_top_padding }}px; padding-bottom: {{ block.settings.button_bottom_padding }}px;">
+            <a href="{{ block.settings.link_url }}">
+                <button>{{ block.settings.link_text }}</button>
+            </a>
+        </div>
+       {% when 'image' %}
+        <div class="image" style="padding-top: {{ block.settings.image_top_padding }}px; padding-bottom: {{ block.settings.image_bottom_padding }}px;">
+            <img src="{{ block.settings.image | image_url }}" alt="Image" height="200" width="200   ">
+        </div>
+    {% endcase %}
+  {% endfor %}
+</section>
+
+{%  schema  %} 
+{
+  "name": "Rich Text",
+  "settings": [
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "image_picker",
+      "id": "desktop_bg_image",
+      "label": "Desktop Background Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_bg_image",
+      "label": "Mobile Background Image"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "Overlay opacity",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 50
+    },
+    {
+      "type": "color",
+      "id": "overlay_color",
+      "label": "Overlay color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "top_padding",
+      "label": "Top padding",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "bottom_padding",
+      "label": "Bottom padding",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 20
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "Heading",
+      "settings": [
+        { "type": "text", "id": "heading", "label": "Heading" },
+        { "type": "select", "id": "heading_size", "label": "Heading size", "options": [
+          { "value": "h1", "label": "H1" },
+          { "value": "h2", "label": "H2" },
+          { "value": "h3", "label": "H3" },
+          { "value": "h4", "label": "H4" },
+          { "value": "h5", "label": "H5" },
+          { "value": "h6", "label": "H6" }
+        ], "default": "h2" },
+        { "type": "range", "id": "heading_top_padding", "label": "Top padding", "min": 0, "max": 100, "step": 1, "default": 10 },
+        { "type": "range", "id": "heading_bottom_padding", "label": "Bottom padding", "min": 0, "max": 100, "step": 1, "default": 10 }
+      ]
+    },
+    {
+      "type": "subheading",
+      "name": "Subheading",
+      "settings": [
+        { "type": "text", "id": "subheading", "label": "Subheading" },
+        { "type": "range", "id": "subheading_top_padding", "label": "Subheading Top padding", "min": 0, "max": 100, "step": 1, "default": 10 },
+        { "type": "range", "id": "subheading_bottom_padding", "label": "Subheading Bottom padding", "min": 0, "max": 100, "step": 1, "default": 10 }
+      ]
+    },
+    {
+      "type": "divider",
+      "name": "Divider",
+      "settings": [
+        { "type": "range", "id": "divider_top_padding", "label": "Divider Top padding", "min": 0, "max": 100, "step": 1, "default": 10 },
+        { "type": "range", "id": "divider_bottom_padding", "label": "Divider Bottom padding", "min": 0, "max": 100, "step": 1, "default": 10 },
+        { "type": "checkbox", "id": "show_line", "label": "Show line", "default": true }
+      ]
+    },
+    {
+      "type": "button",
+      "name": "Button",
+      "settings": [
+        { "type": "text", "id": "link_text", "label": "Link Text" },
+        { "type": "url", "id": "link_url", "label": "Link URL" },
+        { "type": "checkbox", "id": "external_link", "label": "External Link", "default": false },
+        { "type": "select", "id": "style", "label": "Style", "options": [
+          { "value": "outline", "label": "Outline" },
+          { "value": "solid", "label": "Solid" },
+          { "value": "text", "label": "Text" }
+        ], "default": "solid" },
+        { "type": "checkbox", "id": "show_arrow", "label": "Show arrow", "default": false },
+        { "type": "range", "id": "button_top_padding", "label": "Button Top padding", "min": 0, "max": 100, "step": 1, "default": 10 },
+        { "type": "range", "id": "button_bottom_padding", "label": "Button Bottom padding", "min": 0, "max": 100, "step": 1, "default": 10 }
+      ]
+    },
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Image" },
+        { "type": "range", "id": "width", "label": "Width", "min": 10, "max": 100, "step": 1, "default": 50 },
+        { "type": "range", "id": "image_top_padding", "label": "Image Top padding", "min": 0, "max": 100, "step": 1, "default": 10 },
+        { "type": "range", "id": "image_bottom_padding", "label": "Image Bottom padding", "min": 0, "max": 100, "step": 1, "default": 10 }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Rich Text",
+      "blocks": [
+        { "type": "heading" },
+        { "type": "subheading" },
+        { "type": "divider" },
+        { "type": "button" },
+        { "type": "image" }
+      ]
+    }
+  ]
+}
+{% endschema %} 

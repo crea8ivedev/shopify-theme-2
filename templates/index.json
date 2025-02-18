@@ -15,7 +15,77 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "rich_text_yDtzqd": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_pHrBC4": {
+          "type": "heading",
+          "settings": {
+            "heading": "Skincare Concerns",
+            "heading_size": "h6",
+            "heading_top_padding": 23,
+            "heading_bottom_padding": 40
+          }
+        },
+        "subheading_QfBRhm": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "What causes acne, and how can I treat it?A: Acne can be caused by excess oil, bacteria, hormones, or clogged pores. Treatment options include salicylic acid, benzoyl peroxide, and retinoids.",
+            "subheading_top_padding": 10,
+            "subheading_bottom_padding": 10
+          }
+        },
+        "divider_TFUkUh": {
+          "type": "divider",
+          "settings": {
+            "divider_top_padding": 10,
+            "divider_bottom_padding": 10,
+            "show_line": true
+          }
+        },
+        "image_tnPYDm": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/sales-2-4x.jpg",
+            "width": 50,
+            "image_top_padding": 10,
+            "image_bottom_padding": 10
+          }
+        },
+        "button_RDkjVh": {
+          "type": "button",
+          "settings": {
+            "link_text": "Button",
+            "link_url": "",
+            "external_link": true,
+            "style": "outline",
+            "show_arrow": false,
+            "button_top_padding": 10,
+            "button_bottom_padding": 10
+          }
+        }
+      },
+      "block_order": [
+        "heading_pHrBC4",
+        "subheading_QfBRhm",
+        "divider_TFUkUh",
+        "image_tnPYDm",
+        "button_RDkjVh"
+      ],
+      "settings": {
+        "text_alignment": "center",
+        "desktop_bg_image": "shopify://shop_images/theme_cover_image.jpg",
+        "mobile_bg_image": "shopify://shop_images/Rectangle_122_1_e1248203-8ce0-47b8-a982-6c20ecfd1d86.png",
+        "overlay_opacity": 50,
+        "overlay_color": "#000000",
+        "top_padding": 79,
+        "bottom_padding": 55
+      }
     }
   },
-  "order": ["main"]
+  "order": [
+    "main",
+    "rich_text_yDtzqd"
+  ]
 }
