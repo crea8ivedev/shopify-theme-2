@@ -15,6 +15,7 @@
       "type": "footer",
       "settings": {
         "color_scheme": "",
+        "background_image": "shopify://shop_images/Footer.png",
         "social_media_icons": true,
         "show_payment_icons": true,
         "copyright_text": "",
