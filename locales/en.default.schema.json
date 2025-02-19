@@ -293,7 +293,7 @@
               "label": "Heading"
             },
             "heading_size": {
-              "label": "Heading size",
+                "label": "Heading size",
                 "options__1": {
                   "label": "Small"
                 },
