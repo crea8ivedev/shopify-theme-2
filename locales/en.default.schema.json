@@ -295,19 +295,22 @@
             "heading_size": {
                 "label": "Heading size",
                 "options__1": {
-                  "label": "Small"
+                  "label": "H1"
                 },
                 "options__2": {
-                  "label": "Medium"
+                  "label": "H2"
                 },
                 "options__3": {
-                  "label": "Large"
+                  "label": "H3"
                 },
                 "options__4": {
-                  "label": "Extra large"
+                  "label": "H4"
                 },
                 "options__5": {
-                  "label": "Extra extra large"
+                  "label": "H5"
+                },
+                "options__6": {
+                  "label": "H6"
                 }
               }
             },
@@ -316,7 +319,7 @@
             }
           }
         },
-        "cusomhtml": {
+        "customhtml": {
           "name": "Custom Html",
           "settings": {
             "heading": {
@@ -324,14 +327,24 @@
             },
             "heading_size": {
               "label": "Heading size",
-              "options": {
-                "h1": "H1",
-                "h2": "H2",
-                "h3": "H3",
-                "h4": "H4",
-                "h5": "H5",
-                "h6": "H6"
-              }
+              "options__1": {
+                  "label": "H1"
+                },
+                "options__2": {
+                  "label": "H2"
+                },
+                "options__3": {
+                  "label": "H3"
+                },
+                "options__4": {
+                  "label": "H4"
+                },
+                "options__5": {
+                  "label": "H5"
+                },
+                "options__6": {
+                  "label": "H6"
+                }
             },
             "content": {
               "label": "Content"
