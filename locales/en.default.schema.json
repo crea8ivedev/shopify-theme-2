@@ -308,28 +308,6 @@
             }
           }
         },
-        "custom_html": {
-          "name": "Custom Html",
-          "settings": {
-            "heading": {
-              "label": "Heading"
-            },
-            "heading_size": {
-              "label": "Heading size",
-              "options": {
-                "h1": "H1",
-                "h2": "H2",
-                "h3": "H3",
-                "h4": "H4",
-                "h5": "H5",
-                "h6": "H6"
-              }
-            },
-            "content": {
-              "label": "Content"
-            }
-          }
-        }
       },
       "presets": {
         "name": "Footer"
