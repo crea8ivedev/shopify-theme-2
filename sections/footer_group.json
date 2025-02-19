@@ -21,10 +21,19 @@
             "heading_size": "h1",
             "content": ""
           }
+        },
+        "customhtml_xQDLE8": {
+          "type": "customhtml",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1",
+            "content": ""
+          }
         }
       },
       "block_order": [
-        "newsletter_QmFE8G"
+        "newsletter_QmFE8G",
+        "customhtml_xQDLE8"
       ],
       "settings": {
         "color_scheme": "",
