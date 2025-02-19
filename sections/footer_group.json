@@ -10,6 +10,13 @@
 {
   "name": "Footer",
   "type": "footer",
-  "sections": {},
-  "order": []
+  "sections": {
+    "footer_ExXayD": {
+      "type": "footer",
+      "settings": {}
+    }
+  },
+  "order": [
+    "footer_ExXayD"
+  ]
 }
