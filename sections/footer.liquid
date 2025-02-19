@@ -11,11 +11,11 @@
       padding-bottom: {{ section.settings.bottom_padding }}px;
     }
   }
-{% if section.settings.background_image != blank %}
-  .background-image-footer{
-    background-image: url({{ section.settings.background_image | image_url: width: 1440, height: 425 }});
-  }
-{% endif %}
+  {% if section.settings.background_image != blank %}
+    .background-image-footer{
+      background-image: url({{ section.settings.background_image | image_url: width: 1440, height: 425 }});
+    }
+  {% endif %}
 {%- endstyle -%}
 
 <footer class="footer color-{{ section.settings.color_scheme }} section-{{ section.id }}-padding {% if section.settings.background_image != blank %}background-image-footer{% endif %}">
