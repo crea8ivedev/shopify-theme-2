@@ -25,59 +25,58 @@
 </footer>
 
 {% schema %}
-
 {
-  "name": "Footer",
+  "name": "t:sections.footer.name",
   "class": "footer-main",
   "settings": [
     {
       "type": "color_scheme",
-      "label": "Color Scheme",
+      "label": "t:sections.all.colors.label",
       "id": "color_scheme"
     },
     {
       "type": "image_picker",
-      "label": "Background Image",
+      "label": "t:sections.footer.settings.background_image.label",
       "id": "background_image"
     },
     {
       "type": "header",
-      "content": "Social media icons"
+      "content": "t:sections.footer.settings.social_media_icons.header"
     },
     {
       "type": "checkbox",
-      "label": "Enable Social Media Icons",
+      "label": "t:sections.footer.settings.social_media_icons.label",
       "id": "social_media_icons",
       "default": true,
-      "info": "To display your social media accounts, link them in your theme settings."
+      "info": "t:sections.footer.settings.social_media_icons.info"
     },
     {
       "type": "header",
-      "content": "Payment Methods"
+      "content": "t:sections.footer.settings.payment_methods.header"
     },
     {
       "type": "checkbox",
-      "label": "Enable Payment Icons",
+      "label": "t:sections.footer.settings.payment_icons.label",
       "id": "show_payment_icons",
       "default": true
     },
     {
       "type": "image_picker",
-      "label": "Payment icons image",
+      "label": "t:sections.footer.settings.payment_icons_image.label",
       "id": "payment_icons_image"
     },
     {
       "type": "text",
-      "label": "Copyright text ",
+      "label": "t:sections.footer.settings.copyright_text.label",
       "id": "copyright_text"
     },
     {
       "type": "header",
-      "content": "Section padding"
+      "content": "t:sections.all.padding.section_padding_heading"
     },
     {
       "type": "range",
-      "label": "Top padding",
+      "label": "t:sections.all.padding.padding_top",
       "id": "top_padding",
       "default": 10,
       "min": 10,
@@ -85,7 +84,7 @@
     },
     {
       "type": "range",
-      "label": "Bottom Padding",
+      "label": "t:sections.all.padding.padding_bottom",
       "id": "bottom_padding",
       "default": 10,
       "min": 10,
@@ -95,128 +94,128 @@
   "blocks": [
     {
       "type": "menu",
-      "name": "Menu",
+      "name": "t:sections.footer.blocks.menu.name",
       "settings": [
         {
           "type": "text",
-          "label": "Heading",
+          "label": "t:sections.footer.blocks.menu.settings.heading.label",
           "id": "heading"
         },
         {
           "type": "link_list",
-          "label": "Menu",
+          "label": "t:sections.footer.blocks.menu.settings.menu.label",
           "id": "menu"
         }
       ]
     },
     {
       "type": "text",
-      "name": "Text",
+      "name": "t:sections.footer.blocks.text.name",
       "settings": [
         {
           "type": "text",
-          "label": "Heading",
+          "label": "t:sections.footer.blocks.text.settings.heading.label",
           "id": "heading"
         },
         {
           "type": "richtext",
-          "label": "Content",
+          "label": "t:sections.footer.blocks.text.settings.content.label",
           "id": "content"
         }
       ]
     },
     {
       "type": "newsletter",
-      "name": "Newsletter",
+      "name": "t:sections.footer.blocks.newsletter.name",
       "settings": [
         {
           "type": "text",
-          "label": "Heading",
+          "label": "t:sections.footer.blocks.newsletter.settings.heading.label",
           "id": "heading"
         },
         {
           "type": "select",
-          "label": "Heading size",
+          "label": "t:sections.footer.blocks.newsletter.settings.heading_size.label",
           "default": "h1",
           "id": "heading_size",
           "options": [
             {
-              "label": "H1",
+              "label": "t:sections.footer.blocks.newsletter.settings.heading_size.options.h1.label",
               "value": "h1"
             },
             {
-              "label": "H2",
+              "label": "t:sections.footer.blocks.newsletter.settings.heading_size.options.h2.label",
               "value": "h2"
             },
             {
-              "label": "H3",
+              "label": "t:sections.footer.blocks.newsletter.settings.heading_size.options.h3.label",
               "value": "h3"
             },
             {
-              "label": "H4",
+              "label": "t:sections.footer.blocks.newsletter.settings.heading_size.options.h4.label",
               "value": "h4"
             },
             {
-              "label": "H5",
+              "label": "t:sections.footer.blocks.newsletter.settings.heading_size.options.h5.label",
               "value": "h5"
             },
             {
-              "label": "H6",
+              "label": "t:sections.footer.blocks.newsletter.settings.heading_size.options.h6.label",
               "value": "h6"
             }
           ]
         },
         {
           "type": "richtext",
-          "label": "Content",
+          "label": "t:sections.footer.blocks.newsletter.settings.content.label",
           "id": "content"
         }
       ]
     },
     {
       "type": "custom_html",
-      "name": "Custom Html",
+      "name": "t:sections.footer.blocks.custom_html.name",
       "settings": [
         {
           "type": "text",
-          "label": "Heading",
+          "label": "t:sections.footer.blocks.custom_html.settings.heading.label",
           "id": "heading"
         },
         {
           "type": "select",
-          "label": "Heading size",
+          "label": "t:sections.footer.blocks.custom_html.settings.heading_size.label",
           "id": "heading_size",
           "default": "h1",
           "options": [
             {
-              "label": "H1",
+              "label": "t:sections.footer.blocks.custom_html.settings.heading_size.options.h1.label",
               "value": "h1"
             },
             {
-              "label": "H2",
+              "label": "t:sections.footer.blocks.custom_html.settings.heading_size.options.h2.label",
               "value": "h2"
             },
             {
-              "label": "H3",
+              "label": "t:sections.footer.blocks.custom_html.settings.heading_size.options.h3.label",
               "value": "h3"
             },
             {
-              "label": "H4",
+              "label": "t:sections.footer.blocks.custom_html.settings.heading_size.options.h4.label",
               "value": "h4"
             },
             {
-              "label": "H5",
+              "label": "t:sections.footer.blocks.custom_html.settings.heading_size.options.h5.label",
               "value": "h5"
             },
             {
-              "label": "H6",
+              "label": "t:sections.footer.blocks.custom_html.settings.heading_size.options.h6.label",
               "value": "h6"
             }
           ]
         },
         {
           "type": "richtext",
-          "label": "Content",
+          "label": "t:sections.footer.blocks.custom_html.settings.content.label",
           "id": "content"
         }
       ]
@@ -224,14 +223,8 @@
   ],
   "presets": [
     {
-      "name": "Footer"
+      "name": "t:sections.footer.presets.name"
     }
   ]
 }
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}

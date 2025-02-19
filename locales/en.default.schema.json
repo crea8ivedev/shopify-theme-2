@@ -238,6 +238,102 @@
         "label": "Color scheme",
         "has_cards_info": "To change the card color scheme, update your theme settings."
       }
+    },
+    "footer": {
+      "name": "Footer",
+      "settings": {
+        "background_image": {
+          "label": "Background Image"
+        },
+        "social_media_icons": {
+          "header": "Social media icons",
+          "label": "Enable Social Media Icons",
+          "info": "To display your social media accounts, link them in your theme settings."
+        },
+        "payment_methods": {
+          "header": "Payment Methods"
+        },
+        "payment_icons": {
+          "label": "Enable Payment Icons"
+        },
+        "payment_icons_image": {
+          "label": "Payment icons image"
+        },
+        "copyright_text": {
+          "label": "Copyright text"
+        }
+      },
+      "blocks": {
+        "menu": {
+          "name": "Menu",
+          "settings": {
+            "heading": {
+              "label": "Heading"
+            },
+            "menu": {
+              "label": "Menu"
+            }
+          }
+        },
+        "text": {
+          "name": "Text",
+          "settings": {
+            "heading": {
+              "label": "Heading"
+            },
+            "content": {
+              "label": "Content"
+            }
+          }
+        },
+        "newsletter": {
+          "name": "Newsletter",
+          "settings": {
+            "heading": {
+              "label": "Heading"
+            },
+            "heading_size": {
+              "label": "Heading size",
+              "options": {
+                "h1": "H1",
+                "h2": "H2",
+                "h3": "H3",
+                "h4": "H4",
+                "h5": "H5",
+                "h6": "H6"
+              }
+            },
+            "content": {
+              "label": "Content"
+            }
+          }
+        },
+        "custom_html": {
+          "name": "Custom Html",
+          "settings": {
+            "heading": {
+              "label": "Heading"
+            },
+            "heading_size": {
+              "label": "Heading size",
+              "options": {
+                "h1": "H1",
+                "h2": "H2",
+                "h3": "H3",
+                "h4": "H4",
+                "h5": "H5",
+                "h6": "H6"
+              }
+            },
+            "content": {
+              "label": "Content"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Footer"
+      }
     }
   }
 }
