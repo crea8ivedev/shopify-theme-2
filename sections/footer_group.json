@@ -13,7 +13,27 @@
   "sections": {
     "footer_ExXayD": {
       "type": "footer",
-      "settings": {}
+      "blocks": {
+        "newsletter_QmFE8G": {
+          "type": "newsletter",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1",
+            "content": ""
+          }
+        }
+      },
+      "block_order": [
+        "newsletter_QmFE8G"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "social_media_icons": true,
+        "show_payment_icons": true,
+        "copyright_text": "",
+        "top_padding": 10,
+        "bottom_padding": 10
+      }
     }
   },
   "order": [
