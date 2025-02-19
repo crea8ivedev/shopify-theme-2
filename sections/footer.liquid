@@ -1,9 +1,227 @@
-<h2>Footer</h2>
+{%- style -%}
+  .footer {
+    margin-top: {{ section.settings.margin_top | times: 0.75 | round: 0 }}px;
+  }
+
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .footer {
+      margin-top: {{ section.settings.margin_top }}px;
+    }
+
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<footer class="footer color-{{ section.settings.color_scheme }}">
+
+</footer>
 
 {% schema %}
+
 {
   "name": "Footer",
-  "settings": [],
+  "class": "footer-main",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "label": "Color Scheme",
+      "id": "color_scheme"
+    },
+    {
+      "type": "image_picker",
+      "label": "Background Image",
+      "id": "background_image"
+    },
+    {
+      "type": "header",
+      "content": "Social media icons"
+    },
+    {
+      "type": "checkbox",
+      "label": "Enable Social Media Icons",
+      "id": "social_media_icons",
+      "default": true,
+      "info": "To display your social media accounts, link them in your theme settings."
+    },
+    {
+      "type": "header",
+      "content": "Payment Methods"
+    },
+    {
+      "type": "checkbox",
+      "label": "Enable Payment Icons",
+      "id": "show_payment_icons",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "label": "Payment icons image",
+      "id": "payment_icons_image"
+    },
+    {
+      "type": "text",
+      "label": "Copyright text ",
+      "id": "copyright_text"
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "label": "Top padding",
+      "id": "top_padding",
+      "default": 10,
+      "min": 10,
+      "max": 100
+    },
+    {
+      "type": "range",
+      "label": "Bottom Padding",
+      "id": "bottom_padding",
+      "default": 10,
+      "min": 10,
+      "max": 100
+    }
+  ],
+  "blocks": [
+    {
+      "type": "menu",
+      "name": "Menu",
+      "settings": [
+        {
+          "type": "text",
+          "label": "Heading",
+          "id": "heading"
+        },
+        {
+          "type": "link_list",
+          "label": "Menu",
+          "id": "menu"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "Text",
+      "settings": [
+        {
+          "type": "text",
+          "label": "Heading",
+          "id": "heading"
+        },
+        {
+          "type": "richtext",
+          "label": "Content",
+          "id": "content"
+        }
+      ]
+    },
+    {
+      "type": "newsletter",
+      "name": "Newsletter",
+      "settings": [
+        {
+          "type": "text",
+          "label": "Heading",
+          "id": "heading"
+        },
+        {
+          "type": "select",
+          "label": "Heading size",
+          "default": "h1",
+          "id": "heading_size",
+          "options": [
+            {
+              "label": "H1",
+              "value": "h1"
+            },
+            {
+              "label": "H2",
+              "value": "h2"
+            },
+            {
+              "label": "H3",
+              "value": "h3"
+            },
+            {
+              "label": "H4",
+              "value": "h4"
+            },
+            {
+              "label": "H5",
+              "value": "h5"
+            },
+            {
+              "label": "H6",
+              "value": "h6"
+            }
+          ]
+        },
+        {
+          "type": "richtext",
+          "label": "Content",
+          "id": "content"
+        }
+      ]
+    },
+    {
+      "type": "custom_html",
+      "name": "Custom Html",
+      "settings": [
+        {
+          "type": "text",
+          "label": "Heading",
+          "id": "heading"
+        },
+        {
+          "type": "select",
+          "label": "Heading size",
+          "id": "heading_size",
+          "default": "h1",
+          "options": [
+            {
+              "label": "H1",
+              "value": "h1"
+            },
+            {
+              "label": "H2",
+              "value": "h2"
+            },
+            {
+              "label": "H3",
+              "value": "h3"
+            },
+            {
+              "label": "H4",
+              "value": "h4"
+            },
+            {
+              "label": "H5",
+              "value": "h5"
+            },
+            {
+              "label": "H6",
+              "value": "h6"
+            }
+          ]
+        },
+        {
+          "type": "richtext",
+          "label": "Content",
+          "id": "content"
+        }
+      ]
+    }
+  ],
   "presets": [
     {
       "name": "Footer"
@@ -11,3 +229,9 @@
   ]
 }
 {% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
