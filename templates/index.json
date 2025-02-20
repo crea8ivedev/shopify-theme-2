@@ -21,7 +21,7 @@
       "settings": {
         "custom_code": "<div>\n  <h3>Exclusive Offer!</h3>\n  <p>Get 20% off your next order using code <strong>SALE20</strong> at checkout. Don't miss out!</p>\n  <button>Browse Products</button>\n</div>",
         "color_scheme": "scheme-9a4ed46b-85e4-406e-bd00-b3b0c4b545b2",
-        "text_alignment": "center",
+        "text_alignment": "left",
         "padding_top": 48,
         "padding_bottom": 42
       }
