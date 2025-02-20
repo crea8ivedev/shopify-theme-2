@@ -23,21 +23,31 @@
       }
 {% endstyle %}
 
-<rotate-bar class="text-rotate {% if section.settings.show_border == true %} show-border {% endif %} section-{{ section.id }}-padding">
-  <div class="marquee color-{{section.settings.color_scheme}}" style="background-color: {{ section.settings.color-text }};">
-    <div class="marquee_text">
+{% assign has_blocks = false %}
+{% for block in section.blocks %}
+  {% if block.settings.text-marqee %}
+    {% assign has_blocks = true %}
+  {% endif %}
+{% endfor %}
+
+{% if has_blocks %}
+  <rotate-bar class="text-rotate {% if section.settings.show_border == true %} show-border {% endif %} section-{{ section.id }}-padding">
+    <div class="marquee color-{{ section.settings.color_scheme }}" style="background-color: {{ section.settings.color-text }};">
+      <div class="marquee_text">
         <div class="marquee-wrap">
-      <ul class="marquee-content-primary">
-        {% for block in section.blocks %}
-          {% if block.settings.text-marqee %}
-          <li>{{ block.settings.text-marqee }}</li>
-          {% endif %}
-        {% endfor %}
-      </ul>
+          <ul class="marquee-content-primary">
+            {% for block in section.blocks %}
+              {% if block.settings.text-marqee %}
+                <li>{{ block.settings.text-marqee }}</li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
-</rotate-bar>
+  </rotate-bar>
+{% endif %}
+
 
 {% schema %}
 {

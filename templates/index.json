@@ -28,7 +28,7 @@
         "text_block_hcMxGc": {
           "type": "text_block",
           "settings": {
-            "text-marqee": "Hurry up 10% off for all items <a>click here!</a>"
+            "text-marqee": "Hurry up 10% off for all items <a href=\"#\">Click here</a>"
           }
         },
         "text_block_TdkhDn": {
