@@ -4,6 +4,7 @@
 }
 .background-image-footer{
   background-repeat: no-repeat;
+  background-size: cover;
 }
 .footer__bottom{
   padding: 30px 30px;
