@@ -14,6 +14,7 @@
   {% if section.settings.background_image != blank %}
     .background-image-footer{
       background-image: url({{ section.settings.background_image | image_url: width: 1440, height: 425 }});
+      background-repeat: no-repeat;
     }
   {% endif %}
 {%- endstyle -%}
