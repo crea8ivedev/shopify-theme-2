@@ -286,6 +286,14 @@
             }
           }
         },
+        "image": {
+          "name": "Image",
+          "settings": {
+            "image": {
+              "label": "Image"
+            }
+          }
+        },
         "newsletter": {
           "name": "Newsletter",
           "settings": {
