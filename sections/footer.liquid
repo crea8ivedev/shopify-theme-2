@@ -45,7 +45,7 @@
             {%- for policy in shop.policies -%}
               {%- if policy != blank -%}
                   <small class="copyright__content"
-                    ><a href="{{ policy.url }}">{{ policy.title | escape }}</a></small
+                    ><a href="{{ policy.url }}"> {{ policy.title | escape }}</a></small
                   >
               {%- endif -%}
             {%- endfor -%}
