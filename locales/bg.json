@@ -7,4 +7,232 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-{}
+/*
+ * ------------------------------------------------------------
+ * ВАЖНО: Съдържанието на този файл се генерира автоматично.
+ *
+ * Този файл може да бъде актуализиран от редактора на езика в Shopify admin
+ * или свързани системи. Моля, бъдете внимателни, тъй като всички промени,
+ * направени в този файл, може да бъдат презаписани.
+ * ------------------------------------------------------------
+ */
+{
+  "settings_schema": {
+    "global": {
+      "settings": {
+        "header__border": {
+          "content": "Граница"
+        },
+        "header__shadow": {
+          "content": "Сянка"
+        },
+        "blur": {
+          "label": "Размазване"
+        },
+        "corner_radius": {
+          "label": "Закръглени ъгли"
+        },
+        "horizontal_offset": {
+          "label": "Хоризонтално отместване"
+        },
+        "vertical_offset": {
+          "label": "Вертикално отместване"
+        },
+        "thickness": {
+          "label": "Дебелина"
+        },
+        "opacity": {
+          "label": "Прозрачност"
+        },
+        "image_padding": {
+          "label": "Отстояние на изображението"
+        },
+        "text_alignment": {
+          "options__1": {
+            "label": "Ляво"
+          },
+          "options__2": {
+            "label": "Център"
+          },
+          "options__3": {
+            "label": "Дясно"
+          },
+          "label": "Подравняване на текста"
+        }
+      }
+    },
+    "colors": {
+      "name": "Цветове",
+      "settings": {
+        "background": {
+          "label": "Фон"
+        },
+        "text": {
+          "label": "Текст"
+        },
+        "button_background": {
+          "label": "Фон на плътен бутон"
+        },
+        "button_label": {
+          "label": "Етикет на плътен бутон"
+        },
+        "secondary_button_label": {
+          "label": "Очертание на бутон"
+        },
+        "shadow": {
+          "label": "Сянка"
+        }
+      }
+    },
+    "logo": {
+      "name": "Лого",
+      "settings": {
+        "logo": {
+          "label": "Лого"
+        },
+        "logo_width": {
+          "label": "Ширина на логото за десктоп",
+          "info": "Ширината на логото се оптимизира автоматично за мобилни устройства."
+        },
+        "favicon": {
+          "label": "Favicon изображение",
+          "info": "Ще бъде намалено до 32 x 32px"
+        }
+      }
+    },
+    "typography": {
+      "name": "Типография",
+      "settings": {
+        "type_header_font": {
+          "label": "Шрифт",
+          "info": "Изборът на различен шрифт може да повлияе на скоростта на вашия магазин. [Научете повече за системните шрифтове.](https:\/\/help.shopify.com\/manual\/online-store\/os\/store-speed\/improving-speed#fonts)"
+        },
+        "heading_scale": {
+          "label": "Мащаб на шрифта"
+        },
+        "header__1": {
+          "content": "Заглавия"
+        },
+        "header__2": {
+          "content": "Тяло"
+        },
+        "type_body_font": {
+          "label": "Шрифт",
+          "info": "Изборът на различен шрифт може да повлияе на скоростта на вашия магазин. [Научете повече за системните шрифтове.](https:\/\/help.shopify.com\/manual\/online-store\/os\/store-speed\/improving-speed#fonts)"
+        },
+        "body_font": {
+          "label": "Основен размер на шрифта",
+          "default": "16"
+        },
+        "body_line_height": {
+          "label": "Основна височина на реда",
+          "default": "26"
+        },
+        "body_letter_spacing": {
+          "label": "Основно разстояние между буквите",
+          "default": "1"
+        }
+      }
+    },
+    "layout": {
+      "name": "Оформление",
+      "settings": {
+        "page_width": {
+          "label": "Ширина на страницата"
+        },
+        "spacing_sections": {
+          "label": "Разстояние между секциите в шаблона"
+        },
+        "header__grid": {
+          "content": "Мрежа"
+        },
+        "paragraph__grid": {
+          "content": "Влияе върху области с множество колони или редове."
+        },
+        "spacing_grid_horizontal": {
+          "label": "Хоризонтално разстояние"
+        },
+        "spacing_grid_vertical": {
+          "label": "Вертикално разстояние"
+        }
+      }
+    },
+    "buttons": {
+      "name": "Бутони"
+    },
+    "inputs": {
+      "name": "Полета за въвеждане"
+    },
+    "media": {
+      "name": "Медия"
+    },
+    "badges": {
+      "name": "Значки",
+      "settings": {
+        "position": {
+          "options__1": {
+            "label": "Долу вляво"
+          },
+          "options__2": {
+            "label": "Долу вдясно"
+          },
+          "options__3": {
+            "label": "Горе вляво"
+          },
+          "options__4": {
+            "label": "Горе вдясно"
+          },
+          "label": "Позиция върху картите"
+        },
+        "sale_badge_color_scheme": {
+          "label": "Цветова схема на разпродажбите"
+        },
+        "sold_out_badge_color_scheme": {
+          "label": "Цветова схема за изчерпани продукти"
+        }
+      }
+    },
+    "cards": {
+      "name": "Продуктови карти",
+      "settings": {
+        "style": {
+          "options__1": {
+            "label": "Стандартен"
+          },
+          "options__2": {
+            "label": "Карта"
+          },
+          "label": "Стил"
+        }
+      }
+    },
+    "collection_cards": {
+      "name": "Колекционни карти",
+      "settings": {
+        "style": {
+          "options__1": {
+            "label": "Стандартен"
+          },
+          "options__2": {
+            "label": "Карта"
+          },
+          "label": "Стил"
+        }
+      }
+    },
+    "blog_cards": {
+      "name": "Блог карти",
+      "settings": {
+        "style": {
+          "options__1": {
+            "label": "Стандартен"
+          },
+          "options__2": {
+            "label": "Карта"
+          },
+          "label": "Стил"
+        }
+      }
+    }
+  }
+}
