@@ -20,8 +20,8 @@
 {%- endstyle -%}
 
 <footer class="footer color-{{ section.settings.color_scheme }} section-{{ section.id }}-padding {% if section.settings.background_image != blank %}background-image-footer{% endif %}">
-{%- for block in section.blocks -%}
   <div class="footer__top">
+    {%- for block in section.blocks -%}
     {%- case block.type -%}
       {%- when 'menu' -%}
       {%- when 'text' -%}
@@ -33,6 +33,7 @@
       {%- when 'customhtml' -%}
       {%- when 'image' -%}
     {%- endcase -%}
+    {%- endfor -%}
   </div>
   <div class="footer__bottom">
     <div class="footer__content-bottom-wrapper">
@@ -55,7 +56,6 @@
       </div>
     </div>
   </div>
-{%- endfor -%}
 </footer>
 
 {% schema %}
