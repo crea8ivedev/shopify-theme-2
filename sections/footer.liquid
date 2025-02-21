@@ -41,12 +41,12 @@
         <small class="copyright__content"
           >&copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: routes.root_url -}}
         </small>
-        <small class="copyright__content">{{ powered_by_link }}</small>
+        <small class="copyright__content">Aura Beauty is proudly powered by</small>
             {%- for policy in shop.policies -%}
               {%- if policy != blank -%}
-                  <small class="copyright__content"
-                    ><a href="{{ policy.url }}"> | {{ policy.title | escape }}</a></small
-                  >
+                  <small class="copyright__content">
+                    <a href="https://encircletechnologies.com/"> | Encircle Technologies</a>
+                  </small>
               {%- endif -%}
             {%- endfor -%}
       </div>
