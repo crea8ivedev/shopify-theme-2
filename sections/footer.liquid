@@ -20,22 +20,23 @@
 {%- endstyle -%}
 
 <footer class="footer color-{{ section.settings.color_scheme }} section-{{ section.id }}-padding {% if section.settings.background_image != blank %}background-image-footer{% endif %}">
-  <div class="footer__top">
-    {%- for block in section.blocks -%}
-    {%- case block.type -%}
-      {%- when 'menu' -%}
-      {%- when 'text' -%}
-          <div class="footer__details-content">
-            <h2 class="footer-details__heading">{{ block.settings.heading }}</h2>
-            {{ block.settings.content }}
-          </div>
-      {%- when 'newsletter' -%}
-      {%- when 'customhtml' -%}
-      {%- when 'image' -%}
-    {%- endcase -%}
-    {%- endfor -%}
-  </div>
-  <div class="footer__bottom">
+  <div class="page-witdh">
+    <div class="footer__top">
+      {%- for block in section.blocks -%}
+      {%- case block.type -%}
+        {%- when 'menu' -%}
+        {%- when 'text' -%}
+            <div class="footer__details-content">
+              <h2 class="footer-details__heading">{{ block.settings.heading }}</h2>
+              {{ block.settings.content }}
+            </div>
+        {%- when 'newsletter' -%}
+        {%- when 'customhtml' -%}
+        {%- when 'image' -%}
+      {%- endcase -%}
+      {%- endfor -%}
+    </div>
+    <div class="footer__bottom">
     <div class="footer__content-bottom-wrapper">
       <div class="footer__copyright caption">
         <small class="copyright__content"
@@ -47,6 +48,7 @@
           </small>
       </div>
     </div>
+  </div>
   </div>
 </footer>
 
