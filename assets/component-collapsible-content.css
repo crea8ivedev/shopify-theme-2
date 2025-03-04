@@ -23,13 +23,13 @@
   outline-offset: 2px;
 }
 
-.collapsible-container .faq_container .answercont {
+.collapsible-container .faq_container .faq_answer-container {
   max-height: 0;
   overflow: hidden;
   transition: max-height 300ms ease-in-out;
 }
 
-.collapsible-container .faq_container .answercont .answer {
+.collapsible-container .faq_container .faq_answer-container .faq_answer {
   padding: 20px;
 }
 
@@ -48,6 +48,8 @@
 
 .image-que-container {
   display: flex;
+  align-items: center;
+  max-width: 80%;
 }
 
 .faq_image {
@@ -70,5 +72,11 @@
   .collapsible-container {
       padding-inline: 15px;
       padding-block: 30px;
+  }
+}
+
+@media (max-width: 425px) {
+  .collapsible-container .faq_container .faq_answer-container .faq_answer {
+    padding: 10px 20px;
   }
 }

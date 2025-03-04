@@ -1,5 +1,7 @@
-{{ 'collapsible-content.css' | asset_url | stylesheet_tag }}
-<script src="{{ 'collapsible-content.js' | asset_url }}" defer="defer"></script>
+{{ 'component-collapsible-content.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'component-collapsible-content.js' | asset_url }}" defer="defer"></script>
+
+{% if section.settings.heading != blank or section.blocks >= 1 %}
 
 {%- style -%}
   .section-padding {
@@ -15,13 +17,11 @@
   }
 
   #section-{{ section.id }}{
-    background-image: url({{ section.settings.background_image | image_url }});
     background-size: cover;
     background-position: center;
   }
 {%- endstyle -%}
 
-{% if section.settings.heading or section.blocks > 0 %}
 <section class="collapsible-container color-{{ section.settings.color_scheme}} section-{{ section.id }}-padding" id="section-{{ section.id }}">
   {%- if section.settings.heading != blank -%}
     <div class="faq_heading">
@@ -34,13 +34,13 @@
       {% if block.settings.question != blank %}
         <div class="faq_container">
           <div
-  class="faq_question {% if forloop.first and section.settings.open_first_accordion %}open active{% endif %}"
-  role="button"
-  tabindex="0"
-  aria-expanded="false"
-  aria-controls="answer-{{ forloop.index }}"
-  id="question-{{ forloop.index }}"
->
+            class="faq_question {% if forloop.first and section.settings.open_first_accordion %}open active{% endif %}"
+            role="button"
+            tabindex="0"
+            aria-expanded="false"
+            aria-controls="answer-{{ forloop.index }}"
+            id="question-{{ forloop.index }}"
+          >
 
             <div class="image-que-container">
               {% if block.settings.image %}
@@ -58,7 +58,7 @@
               </div>
             </div>
             <div class="icon">
-              <div class="icon-shape">
+              <div class="icon-shape{% if forloop.first %} active{% endif %}">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                   <path class="vertical-line" d="M20.4853 12.0009H3.51472" stroke="#0F0F11" stroke-width="2.33"></path>
                   <path d="M12 3.51562V20.4862" stroke="#0F0F11" stroke-width="2.33"></path>
@@ -68,13 +68,13 @@
           </div>
 
           <div
-            class="answercont"
+            class="faq_answer-container"
             id="answer-{{ forloop.index }}"
             role="region"
             aria-labelledby="question-{{ forloop.index }}"
             aria-hidden="true"
           >
-            <div class="answer">
+            <div class="faq_answer">
               {{ block.settings.answer }}
             </div>
           </div>
@@ -99,11 +99,6 @@
       "type": "color_scheme",
       "label": "t:sections.collapsible_content.settings.color_scheme",
       "id": "color_scheme"
-    },
-    {
-      "type": "image_picker",
-      "label": "t:sections.collapsible_content.settings.background_image",
-      "id": "background_image"
     },
     {
       "type": "checkbox",
@@ -145,7 +140,7 @@
           "type": "image_picker",
           "label": "t:sections.collapsible_content.blocks.content.settings.image",
           "id": "image",
-          "info": "Recommended size : 30*30"
+          "info": "For ideal display, use a 30×30 px size."
         },
         {
           "type": "text",
