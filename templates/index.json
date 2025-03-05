@@ -23,7 +23,7 @@
         "accordion_MdEQTp": {
           "type": "Accordion",
           "settings": {
-            "image": "shopify://shop_images/mail-svgrepo-com.svg",
+            "image": "shopify://shop_images/question_2.png",
             "question": "What are the essential skincare products for a daily routine?",
             "answer": "<p>A basic skincare routine includes a <strong>cleanser</strong>, <strong>moisturizer</strong>, and <strong>sunscreen</strong> (SPF 30+). Additional products can include <strong>serums</strong>, <strong>toners</strong>, and <strong>exfoliants</strong> based on skin type.</p>"
           }
@@ -31,7 +31,7 @@
         "accordion_cFKiQz": {
           "type": "Accordion",
           "settings": {
-            "image": "shopify://shop_images/user-svgrepo-com.svg",
+            "image": "shopify://shop_images/question_2.png",
             "question": "What is the difference between a serum and a moisturizer?",
             "answer": "<p>A <strong>serum</strong> is lightweight and packed with active ingredients to target specific skin concerns (e.g., vitamin C for brightening). A <strong>moisturizer</strong> helps hydrate and lock in moisture, acting as a protective</p>"
           }
@@ -39,7 +39,7 @@
         "accordion_HFmGmh": {
           "type": "Accordion",
           "settings": {
-            "image": "shopify://shop_images/network-svgrepo-com.svg",
+            "image": "shopify://shop_images/question_2.png",
             "question": "How often should I exfoliate my skin?",
             "answer": "<p>It depends on the type of exfoliant:</p><ul><li><strong>Physical exfoliants</strong> (scrubs): 2-3 times per week</li><li><strong>Chemical exfoliants</strong> (AHAs/BHAs): 1-3 times per week depending on skin sensitivity</li></ul>"
           }
@@ -47,7 +47,7 @@
         "accordion_kqzqKq": {
           "type": "Accordion",
           "settings": {
-            "image": "shopify://shop_images/accelerate-svgrepo-com.svg",
+            "image": "shopify://shop_images/question_2.png",
             "question": "What’s the difference between BB cream and foundation?",
             "answer": "<p><strong>BB cream</strong> is lighter, offering sheer coverage with skincare benefits, while <strong>foundation</strong> provides fuller coverage and comes in different finishes (matte, dewy, etc.).</p>"
           }

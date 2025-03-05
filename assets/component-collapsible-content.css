@@ -80,3 +80,7 @@
     padding: 10px 20px;
   }
 }
+
+.faq_question.active {
+  border-bottom: none !important;
+}
