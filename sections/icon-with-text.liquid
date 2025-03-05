@@ -1,0 +1,327 @@
+{{ 'component-icon-with-text.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'component-icon-with-text.js' | asset_url }}" defer="defer"></script>
+
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.50 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.50 | round: 0 }}px;
+  }
+  .icon-with-text-wrapper .grid-boxes .grid__item .grid-image.circle,.icon-with-text-wrapper .grid-boxes .grid__item .grid-image.square {
+    background: {{ section.settings.icon_background_color }};
+  }
+  .icon-with-text-wrapper .grid-boxes .grid__item .grid-image .svg-image svg path {
+    fill: {{ section.settings.icon_color }};
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+{%- liquid
+      assign show_mobile_slider = false
+      if section.settings.show_mobile_slider
+        assign show_mobile_slider = true
+      endif
+-%} 
+<e-iconwithtext data-show-mobile-slider="{% if section.settings.show_mobile_slider == true %}true{% else %}false{% endif %}" >
+  <div class="icon-with-text-wrapper color-{{ section.settings.color_scheme }}">
+    <div class="page-width">
+    <div class="icon-with-text-inner swiper icon-with-text-slider section-{{ section.id }}-padding" role="region" aria-label="Icon with text slider" tabindex="0" data-show-mobile-slider="{% if show_mobile_slider %}true{% else %}false{% endif %}">
+      {% if section.settings.heading != blank %}
+        <div class="title-wrapper {{ section.settings.heading_alignment }}">
+          <h2 class="title no-top-margin no-bottom-margin {{ section.settings.heading_size }}">
+            {{ section.settings.heading }}
+          </h2>
+        </div>
+      {% endif %}
+      {% if section.settings.sec_content != blank %}
+      <div class="content-wrapper {{ section.settings.heading_alignment }}">
+        <p class="title no-top-margin no-bottom-margin">
+          {{ section.settings.sec_content }}
+        </p>
+      </div>
+    {% endif %}
+      <div class="grid-boxes grid--{{ section.settings.desktop_columns }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down" data-show-mobile-slider="{% if show_mobile_slider %}true{% else %}false{% endif %}">
+        {% for block in section.blocks %}
+          <div class="grid-box grid__item" role="group" aria-labelledby="grid-title-{{ block.id }}" aria-describedby="grid-desc-{{ block.id }}">
+            <div class="grid {{ section.settings.column_alignment }} {{ section.settings.icon_alignment }}">
+              <div class="grid-image {{ section.settings.image_width }} {{ section.settings.icon_bg }}">
+                  {% if block.settings.grid_image != blank %}
+                    <img src="{{ block.settings.grid_image | image_url }}" alt="{{ block.settings.grid_title }}" width="60" height="60">
+                  {% else %}
+                    {% if block.settings.svg_icon != blank %}
+                      <div class="svg-image"> 
+                        {{ block.settings.svg_icon }}
+                      </div>
+
+                    {% endif %}
+                  {% endif %}
+              </div>
+              
+              <div class="grid-box-inner">
+                {% if block.settings.grid_title != blank %}
+                <div class="grid-title" id="grid-title-{{ block.id }}">
+                  <h5>{{ block.settings.grid_title }}</h5>
+                </div>
+                {% endif %}
+                {% if block.settings.grid_description != blank %}
+                <div class="grid-text" id="grid-desc-{{ block.id }}">
+                  <p>{{ block.settings.grid_description }}</p>
+                </div>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+        </div>
+        {% if section.settings.show_pagination %}
+        <div class="swiper-pagination"></div>
+        {% endif %}
+    </div>
+    </div>
+  </div>
+</e-iconwithtext>
+{% schema %}
+{
+  "name": "t:sections.icon_with_text.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.icon_with_text.settings.color_scheme.label",
+      "default": "background-1"
+    },
+    {
+      "type": "inline_richtext",
+      "label": "t:sections.icon_with_text.settings.heading.label",
+      "id": "heading",
+      "default": "Icon With Text"
+    },
+    {
+      "type": "inline_richtext",
+      "label": "t:sections.icon_with_text.settings.sec_content.label",
+      "id": "sec_content",
+      "default": "Icon With Text"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.icon_with_text.settings.heading_size.options__1.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.icon_with_text.settings.heading_size.options__2.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.icon_with_text.settings.heading_size.options__3.label"
+        }
+      ],
+      "default": "h1",
+      "label": "t:sections.icon_with_text.settings.heading_size.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.icon_with_text.settings.heading_alignment.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.icon_with_text.settings.heading_alignment.options__2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.icon_with_text.settings.heading_alignment.options__3.label"
+        }
+      ],
+      "default": "left",
+      "label": "t:sections.icon_with_text.settings.heading_alignment.label"
+    },
+    {
+      "type": "range",
+      "id": "desktop_columns",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "default": 4,
+      "label": "t:sections.icon_with_text.settings.desktop_columns.label"
+    },
+    {
+      "type": "select",
+      "id": "column_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.icon_with_text.settings.column_alignment.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.icon_with_text.settings.column_alignment.options__2.label"
+        }
+      ],
+      "default": "left",
+      "label": "t:sections.icon_with_text.settings.column_alignment.label"
+    },
+    {
+      "type": "select",
+      "id": "icon_alignment",
+      "options": [
+        {
+          "value": "icon_left",
+          "label": "t:sections.icon_with_text.settings.icon_alignment.options__1.label"
+        },
+        {
+          "value": "icon_top",
+          "label": "t:sections.icon_with_text.settings.icon_alignment.options__2.label"
+        }
+      ],
+      "default": "icon_left",
+      "label": "t:sections.icon_with_text.settings.icon_alignment.label"
+    },
+    {
+      "type": "select",
+      "id": "columns_mobile",
+      "options": [
+        {
+          "value": "1",
+          "label": "t:sections.icon_with_text.settings.columns_mobile.options__1.label"
+        },
+        {
+          "value": "2",
+          "label": "t:sections.icon_with_text.settings.columns_mobile.options__2.label"
+        }
+      ],
+      "default": "1",
+      "label": "t:sections.icon_with_text.settings.columns_mobile.label"
+    },
+    {
+      "type": "select",
+      "id": "icon_bg",
+      "options": [
+        {
+          "value": "none",
+          "label": "t:sections.icon_with_text.settings.icon_bg.options__1.label"
+        },
+        {
+          "value": "square",
+          "label": "t:sections.icon_with_text.settings.icon_bg.options__2.label"
+        },
+        {
+          "value": "circle",
+          "label": "t:sections.icon_with_text.settings.icon_bg.options__3.label"
+        }
+      ],
+      "default": "none",
+      "label": "Icon Background Type"
+    },
+    {
+      "type": "color",
+      "label": "t:sections.icon_with_text.settings.icon_background_color.label",
+      "id": "icon_background_color",
+      "default": "#ACACAC"
+    },
+    {
+      "type": "color",
+      "label": "t:sections.icon_with_text.settings.icon_color.label",
+      "id": "icon_color",
+      "default": "#B47B84"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.icon_with_text.settings.padding_top.label",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.icon_with_text.settings.padding_bottom.label",
+      "default": 36
+    },
+    {
+      "type": "checkbox",
+      "id": "show_mobile_slider",
+      "default": false,
+      "label": "t:sections.icon_with_text.settings.show_mobile_slider.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_pagination",
+      "default": false,
+      "label": "t:sections.icon_with_text.settings.show_pagination.label"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "column",
+      "name": "t:sections.icon_with_text.name",
+      "settings": [
+        {
+          "type": "text",
+          "label": "t:sections.icon_with_text.blocks.column.settings.grid_title.label",
+          "id": "grid_title",
+          "default": "Free shipping"
+        },
+        {
+          "type": "inline_richtext",
+          "label": "t:sections.icon_with_text.blocks.column.settings.grid_description.label",
+          "id": "grid_description",
+          "default": "Standard shipping"
+        },
+        {
+          "type": "image_picker",
+          "label": "t:sections.icon_with_text.blocks.column.settings.grid_image.label",
+          "id": "grid_image",
+          "info": "60px x 60px recommended"
+        },
+        {
+          "type": "html",
+          "label": "t:sections.icon_with_text.blocks.column.settings.svg_icon.label",
+          "id": "svg_icon",
+          "info": "Add SVG Code here for SVG Icon 60px x 60px recommended"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.icon_with_text.name",
+    "blocks": [
+      {
+        "type": "column"
+      },
+      {
+        "type": "column"
+      },
+      {
+        "type": "column"
+      },
+      {
+        "type": "column"
+      }
+      ]
+    },
+  ] 
+}
+{% endschema %}

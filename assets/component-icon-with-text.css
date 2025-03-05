@@ -1,0 +1,145 @@
+.icon-with-text-wrapper .no-top-margin {
+    margin-top: 0;
+  }
+  .icon-with-text-wrapper .no-bottom-margin {
+    margin-bottom: 0;
+  }
+  .icon-with-text-wrapper .grid-box .grid {
+    align-items: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+  }
+  .icon-with-text-wrapper .grid-box .grid .grid-image {
+    display: flex;
+  }
+  .icon-with-text-wrapper .grid-box .grid.left {
+    justify-content: flex-start;
+  }
+  .icon-with-text-wrapper .grid-box .grid.icon_top {
+    flex-direction: column;
+    align-items: baseline;
+  }
+  .icon-with-text-wrapper .grid-box .grid.center {
+    justify-content: center;
+    align-items: center;
+  } 
+  .icon-with-text-wrapper .grid-box .grid .grid-text p,.icon-with-text-wrapper .grid-box .grid .grid-title h5 {
+    margin: 0;
+  }
+  .icon-with-text-wrapper .grid-boxes.swiper-wrapper {
+    flex-wrap: nowrap !important;
+  }
+  .icon-with-text-wrapper .title-wrapper,.icon-with-text-wrapper .content-wrapper {
+    margin-bottom: 20px;
+  }
+  .icon-with-text-wrapper .grid-boxes .grid__item .grid-title {
+    margin-bottom: 5px;
+  }
+  .icon-with-text-wrapper .grid-boxes .grid__item .grid-title h5{
+    color: #252525;
+  }
+  .icon-with-text-wrapper .grid-boxes .grid__item .grid-text p{
+    color: #944E63CC;
+  }
+  /* Default grid layout for desktop */
+  .icon-with-text-wrapper .grid-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 30px;
+  }
+  .icon-with-text-wrapper .grid-boxes .grid__item {
+    padding-inline: 10px;
+  }
+  .icon-with-text-wrapper .grid-boxes .grid__item.swiper-slide {
+    max-width: 100%;
+    padding-inline: 0;
+  }
+  .icon-with-text-wrapper .grid-box .grid .grid-image {
+    flex-shrink: 0;
+  }
+  .icon-with-text-wrapper .grid-box .grid .grid-image img {
+    object-fit: contain;
+  }
+  .icon-with-text-wrapper .grid-box .grid .grid-image.circle,.icon-with-text-wrapper .grid-box .grid .grid-image.square {
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .icon-with-text-wrapper .grid-box .grid .grid-image.circle {
+    border-radius: 100%;
+  }
+  .icon-with-text-wrapper .grid-box .grid .grid-image img,.icon-with-text-wrapper .grid-box .grid .svg-image svg,.icon-with-text-wrapper .grid-box .grid .grid-image svg {
+    width: 60px;
+    height: 60px;
+    display: flex;
+  }
+  .icon-with-text-wrapper .grid-box .grid .grid-text p a {
+    color: var(--color-body-text);
+    transition: all 500ms;
+  }
+  .icon-with-text-wrapper .grid-box .grid .grid-text p a:hover {
+    text-decoration: none;
+  }
+  .icon-with-text-wrapper .swiper-pagination .swiper-pagination-bullet {
+    background: #000;
+  }
+  .icon-with-text-wrapper .swiper-pagination {
+    bottom: 0px;
+  }
+  
+  @media (max-width:1365px) {
+    .icon-with-text-wrapper .grid-box .grid {
+      gap: 10px;
+    }
+    .icon-with-text-wrapper .grid-box .grid .grid-image.circle,.icon-with-text-wrapper .grid-box .grid .grid-image.square {
+      width: 4rem;
+      height: 4rem;
+    }
+    .icon-with-text-wrapper .grid-box .grid .grid-image img,.icon-with-text-wrapper .grid-box .grid .svg-image svg,.icon-with-text-wrapper .grid-box .grid .grid-image svg {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  
+  /* Swiper slider for mobile */
+  @media (max-width:989px) {
+    .icon-with-text-wrapper .swiper .swiper-slide .grid,.icon-with-text-wrapper .grid-boxes.grid--1-col-tablet-down .grid {
+      justify-content: center;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    .icon-with-text-wrapper .grid-boxes.grid--1-col-tablet-down .grid .grid-box-inner {
+      flex-grow: 1;
+    }
+    .icon-with-text-wrapper .grid-box .grid {
+      gap: 10px;
+    }
+  }
+  
+  @media screen and (max-width: 749px) {
+    /* Hide grid layout on mobile if slider is enabled */
+    .swiper-wrapper {
+      display: flex;
+    }
+    .desktop-3-grid-col, .desktop-2-grid-col, .desktop-4-grid-col {
+      display: none;
+    }
+    .swiper-slide {
+      flex: 1 0 auto;
+    }
+    .icon-with-text-wrapper .grid-box .grid .grid-image img,.icon-with-text-wrapper .grid-box .grid .svg-image svg {
+      width: 40px;
+      height: 40px;
+    }
+    .grid-boxes.grid--2-col-tablet-down .grid {
+      flex-direction: column;
+      text-align: center;
+    }
+    .icon-with-text-wrapper .grid-box .grid .grid-text p {
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+  

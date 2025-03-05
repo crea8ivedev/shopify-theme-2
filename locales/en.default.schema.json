@@ -235,9 +235,127 @@
       },
       "spacing": "Spacing",
       "colors": {
-        "label": "Color scheme",
+        "label": "Color Scheme",
         "has_cards_info": "To change the card color scheme, update your theme settings."
+      }
+    },
+    "icon_with_text": {
+      "name": "Icon With Text",
+      "settings": {
+        "heading": {
+          "label": "Heading"
+        },
+        "sec_content": {
+          "label": "Subheading"
+        },
+        "heading_size": {
+          "label": "Heading Size",
+          "options__1": {
+            "label": "Small"
+          },
+          "options__2": {
+            "label": "Medium"
+          },
+          "options__3": {
+            "label": "Large"
+          }
+        },
+        "desktop_columns": {
+          "label": "Number Of Columns On Desktop"
+        },
+        "column_alignment": {
+          "label": "Content Alignment",
+          "options__1": {
+            "label": "Left"
+          },
+          "options__2": {
+            "label": "Center"
+          }
+        },
+        "columns_mobile": {
+          "label": "Mobile Columns",
+          "options__1": {
+            "label": "One"
+          },
+          "options__2": {
+            "label": "Two"
+          }
+        },
+        "icon_alignment": {
+          "label": "Desktop Icon Alignment",
+          "options__1": {
+            "label": "Icon Left"
+          },
+          "options__2": {
+            "label": "Icon Top"
+          }
+        },
+        "heading_alignment": {
+          "label": "Heading Alignment",
+          "options__1": {
+            "label": "Left"
+          },
+          "options__2": {
+            "label": "Center"
+          },
+          "options__3": {
+            "label": "Right"
+          }
+        },
+        "show_mobile_slider": {
+          "label": "Enable Swipe On Mobile"
+        },
+        "show_pagination": {
+          "label": "Enable Pagination"
+        },
+        "padding_top": {
+          "label": "Top Padding"
+        },
+        "padding_bottom": {
+          "label": "Bottom Padding"
+        },
+        "color_scheme": {
+          "label": "Color Scheme"
+        },
+        "icon_color": {
+          "label": "SVG Icon Color"
+        },
+        "icon_background_color": {
+          "label": "Icon Background Color"
+        },
+        "icon_bg": {
+          "label": "Icon Background Type",
+          "options__1": {
+            "label": "None"
+          },
+          "options__2": {
+            "label": "Square"
+          },
+          "options__3": {
+            "label": "Circle"
+          }
+        }
+      },
+      "blocks": {
+        "column": {
+          "name": "Icon with text",
+          "settings": {
+            "grid_title": {
+              "label": "Title"
+            },
+            "grid_description": {
+              "label": "Description"
+            },
+            "grid_image": {
+              "label": "Image"
+            },
+            "svg_icon": {
+              "label": "SVG Icon"
+            }
+          }
+        }
       }
     }
   }
-}
+  }
+
