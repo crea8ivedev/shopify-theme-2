@@ -30,7 +30,8 @@
 }
 
 .collapsible-container .faq_container .faq_answer-container .faq_answer {
-  padding: 20px;
+  padding: 0 40px;
+  max-width: 85%;
 }
 
 .faq_question.active .icon-shape.active svg path.vertical-line {
@@ -54,6 +55,8 @@
 
 .faq_image {
   margin-right: 10px;
+  display: inline-flex;
+  align-items: center;
 }
 
 @media (min-width: 1024px) {
@@ -75,12 +78,18 @@
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 768px) {
   .collapsible-container .faq_container .faq_answer-container .faq_answer {
-    padding: 10px 20px;
+    padding: 0px 0px 0px 40px;
+    max-width: 85%;
   }
 }
 
 .faq_question.active {
   border-bottom: none !important;
+}
+
+.icon-shape {
+  align-items: center;
+  display: flex;
 }

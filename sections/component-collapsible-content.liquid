@@ -1,8 +1,6 @@
 {{ 'component-collapsible-content.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'component-collapsible-content.js' | asset_url }}" defer="defer"></script>
 
-{% if section.settings.heading != blank or section.blocks >= 1 %}
-
 {%- style -%}
   .section-padding {
     padding-top: calc({{ section.settings.padding_top }}px * 0.75);
@@ -22,6 +20,7 @@
   }
 {%- endstyle -%}
 
+{% if section.settings.heading != blank and section.blocks.size > 0 %}
 <section class="collapsible-container color-{{ section.settings.color_scheme}} section-{{ section.id }}-padding" id="section-{{ section.id }}">
   {%- if section.settings.heading != blank -%}
     <div class="faq_heading">
@@ -31,7 +30,7 @@
 
   <div class="faq_main_container">
     {%- for block in section.blocks -%}
-      {% if block.settings.question != blank %}
+      {% if block.settings.question != blank and block.settings.answer != blank %}
         <div class="faq_container">
           <div
             class="faq_question {% if forloop.first and section.settings.open_first_accordion %}open active{% endif %}"
@@ -140,7 +139,7 @@
           "type": "image_picker",
           "label": "t:sections.collapsible_content.blocks.content.settings.image",
           "id": "image",
-          "info": "For ideal display, use a 30×30 px size."
+          "info": "Info: 30 x 30 px .png recommended"
         },
         {
           "type": "text",
