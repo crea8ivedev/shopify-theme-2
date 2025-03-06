@@ -11,6 +11,7 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
@@ -23,9 +24,18 @@
           "type": "heading",
           "settings": {
             "heading": "Skincare Concerns",
-            "heading_size": "h6",
+            "heading_size": "h1",
             "heading_top_padding": 23,
             "heading_bottom_padding": 40
+          }
+        },
+        "image_tnPYDm": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/sales-2-4x.jpg",
+            "width": 200,
+            "image_top_padding": 10,
+            "image_bottom_padding": 10
           }
         },
         "subheading_QfBRhm": {
@@ -34,23 +44,6 @@
             "subheading": "What causes acne, and how can I treat it?A: Acne can be caused by excess oil, bacteria, hormones, or clogged pores. Treatment options include salicylic acid, benzoyl peroxide, and retinoids.",
             "subheading_top_padding": 10,
             "subheading_bottom_padding": 10
-          }
-        },
-        "divider_TFUkUh": {
-          "type": "divider",
-          "settings": {
-            "divider_top_padding": 10,
-            "divider_bottom_padding": 10,
-            "show_line": true
-          }
-        },
-        "image_tnPYDm": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/sales-2-4x.jpg",
-            "width": 50,
-            "image_top_padding": 10,
-            "image_bottom_padding": 10
           }
         },
         "button_RDkjVh": {
@@ -64,14 +57,22 @@
             "button_top_padding": 10,
             "button_bottom_padding": 10
           }
+        },
+        "divider_TFUkUh": {
+          "type": "divider",
+          "settings": {
+            "divider_top_padding": 10,
+            "divider_bottom_padding": 10,
+            "show_line": true
+          }
         }
       },
       "block_order": [
         "heading_pHrBC4",
-        "subheading_QfBRhm",
-        "divider_TFUkUh",
         "image_tnPYDm",
-        "button_RDkjVh"
+        "subheading_QfBRhm",
+        "button_RDkjVh",
+        "divider_TFUkUh"
       ],
       "settings": {
         "text_alignment": "center",

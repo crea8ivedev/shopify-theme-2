@@ -594,7 +594,8 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid rgba(var(--color-button-border), var(--alpha-button-background));
+    border: 2px solid rgb(var(--color-button-text));
+    border-radius: 10px;
     padding: 0.75rem 1.563rem;
     cursor: pointer;
     font: inherit;
@@ -604,7 +605,7 @@
     transition: all var(--duration-short) ease;
     -webkit-appearance: none;
     appearance: none;
-    background-color: rgba(var(--color-button), var(--alpha-button-background));
+    background-color: rgba(var(--color-text));
   }
   .button .button--up-arrow svg,
   .shopify-challenge__button .button--up-arrow svg,
@@ -615,7 +616,7 @@
   .shopify-challenge__button:hover,
   .customer button:hover {
     background-color: rgba(var(--color-button-hover), var(--alpha-button-background));
-    color: rgba(var(--color-button), var(--alpha-button-background));
+    color: rgba(var(--color-text));
   }
   .button:hover .button--up-arrow svg,
   .shopify-challenge__button:hover .button--up-arrow svg,
@@ -657,22 +658,23 @@
     left: var(--buttons-border-width);
     z-index: 1;
     border-radius: var(--buttons-radius);
-    box-shadow:
+    /* box-shadow:
       0 0 0 calc(var(--buttons-border-width) + var(--border-offset))
         rgba(var(--color-button-text), var(--border-opacity)),
       0 0 0 var(--buttons-border-width) rgba(var(--color-button), var(--alpha-button-background));
-    transition: box-shadow var(--duration-short) ease;
+    transition: box-shadow var(--duration-short) ease; */
   }
 
   .button:not([disabled]):hover::after,
   .shopify-challenge__button:hover::after,
   .customer button:hover::after,
   .shopify-payment-button__button--unbranded:hover::after {
-    --border-offset: 1.3px;
+    /* --border-offset: 1.3px; */
     box-shadow:
       0 0 0 calc(var(--buttons-border-width) + var(--border-offset))
         rgba(var(--color-button-text), var(--border-opacity)),
-      0 0 0 calc(var(--buttons-border-width) + 1px) rgba(var(--color-button), var(--alpha-button-background));
+      0 0 0 calc(var(--buttons-border-width) + 1px) rgba(var(--color-text));
+    border-radius: 10px;
   }
 
   .button--secondary:after {
