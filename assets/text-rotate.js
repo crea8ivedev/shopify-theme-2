@@ -1,44 +1,40 @@
-// class Marquee {
-//   constructor() {
-//     this.marqueeContentPrimary = document.querySelector(".marquee-content-primary");
-//     this.init();
-//   }
 
-//   init() {
-//     document.addEventListener("DOMContentLoaded", () => this.setMarqueePadding());
-//   }
-
-//   setMarqueePadding() {
-//     const marqueeWidth = this.marqueeContentPrimary.scrollWidth;
-//     document.documentElement.style.setProperty('--marquee-padding', `${marqueeWidth}px`);
-//   }
-// }
-
-// // Instantiate the Marquee class to apply the functionality
-// new Marquee();
 class Marquee {
-    constructor() {
-      this.marqueeText = document.querySelector(".marquee .marquee_text ul");
-      this.init();
-    }
-  
-    init() {
-      document.addEventListener("DOMContentLoaded", () => this.createMarqueeEffect());
-    }
-  
-    createMarqueeEffect() {
-      if (!this.marqueeText) return;
-  
-      const contentClone = this.marqueeText.cloneNode(true);
-      contentClone.classList.add("marquee-clone");
-      this.marqueeText.parentElement.appendChild(contentClone);
-  
-      const contentWidth = this.marqueeText.scrollWidth;
-      document.documentElement.style.setProperty("--marquee-padding", `${contentWidth}px`);
-      document.documentElement.style.setProperty("--marquee-padding-negative", `-${contentWidth}px`);
-    }
+  constructor() {
+    this.marqueeText = document.querySelector(".marquee .marquee_text ul");
+    this.cloneCount = 5; // Number of times to clone the element
+    this.init();
   }
-  
-  // Instantiate the Marquee class
-  new Marquee();
-  
+
+  init() {
+    document.addEventListener("DOMContentLoaded", () => this.createMarqueeEffect());
+  }
+
+  createMarqueeEffect() {
+    if (!this.marqueeText) return;
+
+    const parentElement = this.marqueeText.parentElement;
+
+    for (let i = 0; i < this.cloneCount; i++) {
+      this.cloneMarqueeContent(parentElement);
+    }
+
+    this.updateMarqueeStyles();
+  }
+
+  cloneMarqueeContent(parentElement) {
+    const contentClone = this.marqueeText.cloneNode(true);
+    contentClone.classList.add("marquee-clone");
+    parentElement.appendChild(contentClone);
+  }
+
+  updateMarqueeStyles() {
+    const contentWidth = this.marqueeText.scrollWidth;
+    document.documentElement.style.setProperty("--marquee-padding", `${contentWidth}px`);
+    document.documentElement.style.setProperty("--marquee-padding-negative", `-${contentWidth}px`);
+  }
+}
+
+
+new Marquee();
+
