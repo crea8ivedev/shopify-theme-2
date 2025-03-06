@@ -30,11 +30,32 @@
           "settings": {
             "text-marqee": "Hurry up 10% off for all items <a href=\"#\">Click here</a>"
           }
+        },
+        "text_block_nLUWP9": {
+          "type": "text_block",
+          "settings": {
+            "text-marqee": "First time free delivery in USA"
+          }
+        },
+        "text_block_mwRHfe": {
+          "type": "text_block",
+          "settings": {
+            "text-marqee": "20% off everything for women"
+          }
+        },
+        "text_block_n9rqWm": {
+          "type": "text_block",
+          "settings": {
+            "text-marqee": "Summer sale 40% off everything"
+          }
         }
       },
       "block_order": [
         "text_block_gXK3Xa",
-        "text_block_hcMxGc"
+        "text_block_hcMxGc",
+        "text_block_nLUWP9",
+        "text_block_mwRHfe",
+        "text_block_n9rqWm"
       ],
       "settings": {
         "color_scheme": "scheme-f8ab58ef-474a-4153-acc3-2dfb57594448",
