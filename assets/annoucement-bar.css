@@ -60,9 +60,7 @@
     width: 100%;
     line-height: 14px;
   }
-.announcement-bar.swiper{
-  opacity:0;
-}
+
 
  
   @media (max-width:989px) {
