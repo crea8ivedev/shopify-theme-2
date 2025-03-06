@@ -35,10 +35,12 @@ if (!customElements.get("e-announcement-bar")) {
                     nextEl: '.next-btn',
                     prevEl: '.prev-btn',
                 },
+                initialSlide: 0, 
             });
 
             this.slider.init();
         }
+       
         initCloseIcon() {
             const closeIcon = this.querySelector('.close-icon');
             if (!closeIcon) {

@@ -8,7 +8,7 @@
     flex-grow: 1;
   }
   .announcement-bar .announcement-content p a{
-    color: rgba(var(--color-text));
+    color: rgba(var(--color-link));
     position: relative;
   }
   .announcement-bar .announcement-content p a:hover {
