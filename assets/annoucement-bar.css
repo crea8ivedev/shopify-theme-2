@@ -63,9 +63,7 @@
 .announcement-bar.swiper{
   opacity:0;
 }
-.announcement-bar.swiper.swiper-initialized{
-  opacity: 1;
-}
+
  
   @media (max-width:989px) {
     .announcement-info .slider-arrows.hide-arrow {
