@@ -238,6 +238,56 @@
         "label": "Color scheme",
         "has_cards_info": "To change the card color scheme, update your theme settings."
       }
+    },
+    "rich_text": {
+        "name": "Rich Text",
+        "settings": {
+          "text_alignment": "Text alignment",
+          "desktop_bg_image": "Desktop Background Image",
+          "mobile_bg_image": "Mobile Background Image",
+          "overlay_opacity": "Overlay opacity",
+          "overlay_color": "Overlay color",
+          "top_padding": "Top padding",
+          "bottom_padding": "Bottom padding"
+        },
+        "blocks": {
+          "heading": {
+            "name": "Heading",
+            "heading": "Heading",
+            "heading_size": "Heading size",
+            "heading_top_padding": "Top padding",
+            "heading_bottom_padding": "Bottom padding"
+          },
+          "subheading": {
+            "name": "Subheading",
+            "subheading": "Subheading",
+            "subheading_top_padding": "Subheading Top padding",
+            "subheading_bottom_padding": "Subheading Bottom padding"
+          },
+          "divider": {
+            "name": "Divider",
+            "divider_top_padding": "Divider Top padding",
+            "divider_bottom_padding": "Divider Bottom padding",
+            "show_line": "Show line"
+          },
+          "button": {
+            "name": "Button",
+            "link_text": "Link Text",
+            "link_url": "Link URL",
+            "external_link": "External Link",
+            "style": "Style",
+            "show_arrow": "Show arrow",
+            "button_top_padding": "Button Top padding",
+            "button_bottom_padding": "Button Bottom padding"
+          },
+          "image": {
+            "name": "Image",
+            "image": "Image",
+            "width": "Width",
+            "image_top_padding": "Image Top padding",
+            "image_bottom_padding": "Image Bottom padding"
+          }
+        }
     }
   }
 }

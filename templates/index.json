@@ -25,8 +25,8 @@
           "settings": {
             "heading": "Skincare Concerns",
             "heading_size": "h1",
-            "heading_top_padding": 23,
-            "heading_bottom_padding": 40
+            "heading_top_padding": 20,
+            "heading_bottom_padding": 20
           }
         },
         "image_tnPYDm": {
@@ -41,7 +41,7 @@
         "subheading_QfBRhm": {
           "type": "subheading",
           "settings": {
-            "subheading": "What causes acne, and how can I treat it?A: Acne can be caused by excess oil, bacteria, hormones, or clogged pores. Treatment options include salicylic acid, benzoyl peroxide, and retinoids.",
+            "subheading": "What causes acne, and how can I treat it? A: Acne can be caused by excess oil, bacteria, hormones, or clogged pores. Treatment options include salicylic acid, benzoyl peroxide, and retinoids.",
             "subheading_top_padding": 10,
             "subheading_bottom_padding": 10
           }
@@ -79,7 +79,7 @@
         "desktop_bg_image": "shopify://shop_images/theme_cover_image.jpg",
         "mobile_bg_image": "shopify://shop_images/Rectangle_122_1_e1248203-8ce0-47b8-a982-6c20ecfd1d86.png",
         "overlay_opacity": 50,
-        "overlay_color": "#000000",
+        "overlay_color": "#ffffff",
         "top_padding": 79,
         "bottom_padding": 55
       }

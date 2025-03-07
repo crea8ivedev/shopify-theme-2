@@ -16,74 +16,84 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url({{ section.settings.desktop_bg_image | image_url }});
+    background: linear-gradient(
+        rgba({{ section.settings.overlay_color.red }}, {{ section.settings.overlay_color.green }}, {{ section.settings.overlay_color.blue }}, 0.5), 
+        rgba({{ section.settings.overlay_color.red }}, {{ section.settings.overlay_color.green }}, {{ section.settings.overlay_color.blue }}, 0.5)
+        ), url({{ section.settings.desktop_bg_image | image_url }});
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
-    background-color: {{ section.settings.overlay_color }};
     z-index: -1;
 }
 
 /* Mobile background */
 @media screen and (max-width: 750px) {
     #richtext-{{ section.id }}::before {
-        background-image: url({{ section.settings.mobile_bg_image | image_url }});
+        background: linear-gradient(
+        rgba({{ section.settings.overlay_color.red }}, {{ section.settings.overlay_color.green }}, {{ section.settings.overlay_color.blue }}, 0.5), 
+        rgba({{ section.settings.overlay_color.red }}, {{ section.settings.overlay_color.green }}, {{ section.settings.overlay_color.blue }}, 0.5)
+        ), url({{ section.settings.mobile_bg_image | image_url }});
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
 }
-    .divider{
-        border-bottom: 1px solid black;;
-    }
-    hr{
-        margin: 0%;
-    }
-   
+
 </style>
 
 <section class="rich-text-section{% if section.settings.desktop_bg_image %} desktop-bg-image{% endif %}{% if section.settings.mobile_bg_image %} mobile-bg-image{% endif %}" id="richtext-{{ section.id }}">
   {% for block in section.blocks %}
     {% case block.type %}
       {% when 'heading' %}
-        <div class="richtext-heading" id="{{ section.id }}-heading-padding" 
-        style="padding-top: {{ block.settings.heading_top_padding }}px; padding-bottom: {{ block.settings.heading_bottom_padding }}px;">
-        <{{ block.settings.heading_size }}>
-          {{ block.settings.heading }}
-        </{{ block.settings.heading_size }}>
-    </div>    
+        {% if block.settings.heading != blank %}
+          <div class="richtext-heading" id="{{ section.id }}-heading-padding" 
+          style="padding-top: {{ block.settings.heading_top_padding }}px; padding-bottom: {{ block.settings.heading_bottom_padding }}px;">
+          <{{ block.settings.heading_size }}>
+            {{ block.settings.heading }}
+          </{{ block.settings.heading_size }}>
+          </div>    
+        {% endif %}
       {% when 'subheading' %}
+        {% if block.settings.subheading != blank %}
         <div class="rich-text-subheading" style="padding-top: {{ block.settings.subheading_top_padding }}px; padding-bottom: {{ block.settings.subheading_bottom_padding }}px;">
-            <h3>{{ block.settings.subheading }}</h3>
+            <h4>{{ block.settings.subheading }}</h4>
         </div>
+        {% endif %}
       {% when 'divider' %}
         <div class="rich-text-divider">
-            {% if block.settings.show_line %}
+            {% if block.settings.show_line != blank %}
                 <div class="divider" style="padding-top: {{ block.settings.divider_top_padding }}px; padding-bottom: {{ block.settings.divider_bottom_padding }}px;">
                     <hr width="100%" color="black">
                 </div>
             {% endif  %}
         </div>
        {% when 'button' %}
+        {% if block.settings.link_text != blank %}
         <div class="richtext-button" style="padding-top: {{ block.settings.button_top_padding }}px; padding-bottom: {{ block.settings.button_bottom_padding }}px;">
             <a href="{{ block.settings.link_url }}">
-                <button class="button">{{ block.settings.link_text }} </button>
+                <button class="button">{{ block.settings.link_text }}{% if block.settings.show_arrow != blank %}<span class="button-up-arrow button-arrow-margin">{% render 'icon-up-arrow' %}</span>{% endif %}</button>
             </a>
         </div>
+        {% endif %}
        {% when 'image' %}
-        <div class="image" style="padding-top: {{ block.settings.image_top_padding }}px; padding-bottom: {{ block.settings.image_bottom_padding }}px;">
+        {% if block.settings.image != blank %}
+        <div class="rich-text-img image" style="padding-top: {{ block.settings.image_top_padding }}px; padding-bottom: {{ block.settings.image_bottom_padding }}px;">
             <img src="{{ block.settings.image | image_url }}" alt="Image" height="200" width="{{ block.settings.width }}">
         </div>
+        {% endif %}
     {% endcase %}
   {% endfor %}
 </section>
 
 {%  schema  %} 
 {
-  "name": "Rich Text",
+  "name": "t:sections.rich_text.name",
   "settings": [
     {
       "type": "select",
       "id": "text_alignment",
-      "label": "Text alignment",
+      "label": "t:sections.rich_text.settings.text_alignment",
       "options": [
         { "value": "left", "label": "Left" },
         { "value": "center", "label": "Center" },
@@ -94,17 +104,17 @@
     {
       "type": "image_picker",
       "id": "desktop_bg_image",
-      "label": "Desktop Background Image"
+      "label": "t:sections.rich_text.settings.desktop_bg_image"
     },
     {
       "type": "image_picker",
       "id": "mobile_bg_image",
-      "label": "Mobile Background Image"
+      "label": "t:sections.rich_text.settings.mobile_bg_image"
     },
     {
       "type": "range",
       "id": "overlay_opacity",
-      "label": "Overlay opacity",
+      "label": "t:sections.rich_text.settings.overlay_opacity",
       "min": 0,
       "max": 100,
       "step": 1,
@@ -113,13 +123,13 @@
     {
       "type": "color",
       "id": "overlay_color",
-      "label": "Overlay color",
+      "label": "t:sections.rich_text.settings.overlay_color",
       "default": "#000000"
     },
     {
       "type": "range",
       "id": "top_padding",
-      "label": "Top padding",
+      "label": "t:sections.rich_text.settings.top_padding",
       "min": 0,
       "max": 100,
       "step": 1,
@@ -128,7 +138,7 @@
     {
       "type": "range",
       "id": "bottom_padding",
-      "label": "Bottom padding",
+      "label": "t:sections.rich_text.settings.bottom_padding",
       "min": 0,
       "max": 100,
       "step": 1,
@@ -138,10 +148,10 @@
   "blocks": [
     {
       "type": "heading",
-      "name": "Heading",
+      "name": "t:sections.rich_text.blocks.heading.name",
       "settings": [
-        { "type": "text", "id": "heading", "label": "Heading" },
-        { "type": "select", "id": "heading_size", "label": "Heading size", "options": [
+        { "type": "text", "id": "heading", "label": "t:sections.rich_text.blocks.heading.heading" },
+        { "type": "select", "id": "heading_size", "label": "t:sections.rich_text.blocks.heading.heading_size", "options": [
           { "value": "h1", "label": "H1" },
           { "value": "h2", "label": "H2" },
           { "value": "h3", "label": "H3" },
@@ -149,59 +159,59 @@
           { "value": "h5", "label": "H5" },
           { "value": "h6", "label": "H6" }
         ], "default": "h2" },
-        { "type": "range", "id": "heading_top_padding", "label": "Top padding", "min": 0, "max": 100, "step": 1, "default": 10 },
-        { "type": "range", "id": "heading_bottom_padding", "label": "Bottom padding", "min": 0, "max": 100, "step": 1, "default": 10 }
+        { "type": "range", "id": "heading_top_padding", "label": "t:sections.rich_text.blocks.heading.heading_top_padding", "min": 0, "max": 100, "step": 1, "default": 10 },
+        { "type": "range", "id": "heading_bottom_padding", "label": "t:sections.rich_text.blocks.heading.heading_bottom_padding", "min": 0, "max": 100, "step": 1, "default": 10 }
       ]
     },
     {
       "type": "subheading",
-      "name": "Subheading",
+      "name": "t:sections.rich_text.blocks.subheading.name",
       "settings": [
-        { "type": "text", "id": "subheading", "label": "Subheading" },
-        { "type": "range", "id": "subheading_top_padding", "label": "Subheading Top padding", "min": 0, "max": 100, "step": 1, "default": 10 },
-        { "type": "range", "id": "subheading_bottom_padding", "label": "Subheading Bottom padding", "min": 0, "max": 100, "step": 1, "default": 10 }
+        { "type": "text", "id": "subheading", "label": "t:sections.rich_text.blocks.subheading.subheading" },
+        { "type": "range", "id": "subheading_top_padding", "label": "t:sections.rich_text.blocks.subheading.subheading_top_padding", "min": 0, "max": 100, "step": 1, "default": 10 },
+        { "type": "range", "id": "subheading_bottom_padding", "label": "t:sections.rich_text.blocks.subheading.subheading_bottom_padding", "min": 0, "max": 100, "step": 1, "default": 10 }
       ]
     },
     {
       "type": "divider",
-      "name": "Divider",
+      "name": "t:sections.rich_text.blocks.divider.name",
       "settings": [
-        { "type": "range", "id": "divider_top_padding", "label": "Divider Top padding", "min": 0, "max": 100, "step": 1, "default": 10 },
-        { "type": "range", "id": "divider_bottom_padding", "label": "Divider Bottom padding", "min": 0, "max": 100, "step": 1, "default": 10 },
-        { "type": "checkbox", "id": "show_line", "label": "Show line", "default": true }
+        { "type": "range", "id": "divider_top_padding", "label": "t:sections.rich_text.blocks.divider.divider_top_padding", "min": 0, "max": 100, "step": 1, "default": 10 },
+        { "type": "range", "id": "divider_bottom_padding", "label": "t:sections.rich_text.blocks.divider.divider_bottom_padding", "min": 0, "max": 100, "step": 1, "default": 10 },
+        { "type": "checkbox", "id": "show_line", "label": "t:sections.rich_text.blocks.divider.show_line", "default": true }
       ]
     },
     {
       "type": "button",
-      "name": "Button",
+      "name": "t:sections.rich_text.blocks.button.name",
       "settings": [
-        { "type": "text", "id": "link_text", "label": "Link Text" },
-        { "type": "url", "id": "link_url", "label": "Link URL" },
-        { "type": "checkbox", "id": "external_link", "label": "External Link", "default": false },
-        { "type": "select", "id": "style", "label": "Style", "options": [
+        { "type": "text", "id": "link_text", "label": "t:sections.rich_text.blocks.button.link_text" },
+        { "type": "url", "id": "link_url", "label": "t:sections.rich_text.blocks.button.link_url" },
+        { "type": "checkbox", "id": "external_link", "label": "t:sections.rich_text.blocks.button.external_link", "default": false },
+        { "type": "select", "id": "style", "label": "t:sections.rich_text.blocks.button.style", "options": [
           { "value": "outline", "label": "Outline" },
           { "value": "solid", "label": "Solid" },
           { "value": "text", "label": "Text" }
         ], "default": "solid" },
-        { "type": "checkbox", "id": "show_arrow", "label": "Show arrow", "default": false },
-        { "type": "range", "id": "button_top_padding", "label": "Button Top padding", "min": 0, "max": 100, "step": 1, "default": 10 },
-        { "type": "range", "id": "button_bottom_padding", "label": "Button Bottom padding", "min": 0, "max": 100, "step": 1, "default": 10 }
+        { "type": "checkbox", "id": "show_arrow", "label": "t:sections.rich_text.blocks.button.show_arrow", "default": false },
+        { "type": "range", "id": "button_top_padding", "label": "t:sections.rich_text.blocks.button.button_top_padding", "min": 0, "max": 100, "step": 1, "default": 10 },
+        { "type": "range", "id": "button_bottom_padding", "label": "t:sections.rich_text.blocks.button.button_bottom_padding", "min": 0, "max": 100, "step": 1, "default": 10 }
       ]
     },
     {
       "type": "image",
-      "name": "Image",
+      "name": "t:sections.rich_text.blocks.image.name",
       "settings": [
-        { "type": "image_picker", "id": "image", "label": "Image", "info": "Info: 30 x 30 px .png recommended" },
-        { "type": "range", "id": "width", "label": "Width", "min": 10, "max": 200, "step": 2, "default": 50 },
-        { "type": "range", "id": "image_top_padding", "label": "Image Top padding", "min": 0, "max": 100, "step": 1, "default": 10 },
-        { "type": "range", "id": "image_bottom_padding", "label": "Image Bottom padding", "min": 0, "max": 100, "step": 1, "default": 10 }
+        { "type": "image_picker", "id": "image", "label": "t:sections.rich_text.blocks.image.image", "info": "Info: 30 x 30 px .png recommended" },
+        { "type": "range", "id": "width", "label": "t:sections.rich_text.blocks.image.width", "min": 10, "max": 200, "step": 2, "default": 50 },
+        { "type": "range", "id": "image_top_padding", "label": "t:sections.rich_text.blocks.image.image_top_padding", "min": 0, "max": 100, "step": 1, "default": 10 },
+        { "type": "range", "id": "image_bottom_padding", "label": "t:sections.rich_text.blocks.image.image_bottom_padding", "min": 0, "max": 100, "step": 1, "default": 10 }
       ]
     }
   ],
   "presets": [
     {
-      "name": "Rich Text",
+      "name": "t:presets.rich_text.name",
       "blocks": [
         { "type": "heading" },
         { "type": "subheading" },

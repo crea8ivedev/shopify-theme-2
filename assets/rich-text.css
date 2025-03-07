@@ -1,0 +1,17 @@
+.rich-text-subheading, .rich-text-img.image, .richtext-heading, .richtext-button  {
+    padding-right: 50px;
+    padding-left: 50px;
+}
+.divider {
+    border-bottom: 1px solid black;;
+}
+hr {
+    margin: 0%;
+}
+.button-up-arrow svg {
+    fill: white;
+    margin: 0 0 0 5px;
+}
+.button:hover .button-up-arrow svg {
+    fill: rgba(var(--color-text));
+}
