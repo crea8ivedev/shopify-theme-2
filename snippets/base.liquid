@@ -583,7 +583,6 @@
     --shadow-blur-radius: var(--buttons-shadow-blur-radius);
     --shadow-opacity: var(--buttons-shadow-opacity);
     --shadow-visible: var(--buttons-shadow-visible);
-    --border-offset: var(--buttons-border-offset);
     --border-opacity: calc(1 - var(--buttons-border-opacity));
     border-radius: var(--buttons-radius-outset);
     position: relative;
@@ -594,18 +593,18 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid rgb(var(--color-button-text));
+    border: 2px solid rgba(var(--color-text));
     border-radius: 10px;
     padding: 0.75rem 1.563rem;
     cursor: pointer;
     font: inherit;
     font-size: 1rem;
     text-decoration: none;
-    color: rgb(var(--color-button-text));
+    color: rgba(var(--color-text));
     transition: all var(--duration-short) ease;
     -webkit-appearance: none;
     appearance: none;
-    background-color: rgba(var(--color-text));
+    background-color: transparent;
   }
   .button .button--up-arrow svg,
   .shopify-challenge__button .button--up-arrow svg,
@@ -617,7 +616,6 @@
   .customer button:hover {
     background-color: rgba(var(--color-button-hover), var(--alpha-button-background));
     color: rgba(var(--color-text));
-    border: none;
   }
   .button:hover .button--up-arrow svg,
   .shopify-challenge__button:hover .button--up-arrow svg,
@@ -659,18 +657,12 @@
     left: var(--buttons-border-width);
     z-index: 1;
     border-radius: var(--buttons-radius);
-    /* box-shadow:
-      0 0 0 calc(var(--buttons-border-width) + var(--border-offset))
-        rgba(var(--color-button-text), var(--border-opacity)),
-      0 0 0 var(--buttons-border-width) rgba(var(--color-button), var(--alpha-button-background));
-    transition: box-shadow var(--duration-short) ease; */
   }
 
   .button:not([disabled]):hover::after,
   .shopify-challenge__button:hover::after,
   .customer button:hover::after,
   .shopify-payment-button__button--unbranded:hover::after {
-    /* --border-offset: 1.3px; */
     box-shadow:
       0 0 0 calc(var(--buttons-border-width) + var(--border-offset))
         rgba(var(--color-button-text), var(--border-opacity)),
@@ -712,7 +704,6 @@
     font-size: 1rem;
     letter-spacing: 0.1rem;
     line-height: 1.188rem;
-    border: none;
   }
 
   .button--tertiary {
