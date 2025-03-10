@@ -69,7 +69,7 @@
         </div>
         {% endif  %}
        {% when 'button' %}
-        {% if block.settings.style == 'outline' or block.settings.style == 'text' %}
+        {% if block.settings.style == 'outline' %}
           <style>
             .richtext-button .button:hover {
               background-color: rgba(var(--color-text)) !important;
@@ -82,6 +82,20 @@
               fill: white !important;
             }
           </style>
+          {% endif %}
+          {% if block.settings.style == 'text' %}
+            <style>
+              .richtext-button .button {
+                border: none;
+              }
+              .richtext-button .button:hover {
+                text-decoration: underline;
+                color: #944E63;
+              }
+              .button-up-arrow svg {
+                fill: rgba(var(--color-text));
+              }
+            </style>
           {% endif %}
           {% if block.settings.style == 'solid' %}
             <style>
@@ -98,7 +112,7 @@
         {% if block.settings.link_text != blank %}
         <div class="richtext-button" style="padding-top: {{ block.settings.button_top_padding }}px; padding-bottom: {{ block.settings.button_bottom_padding }}px;">
             <a href="{{ block.settings.link_url }}">
-                <button class="button" {% if block.settings.style == 'outline' %}style="text-decoration: underline;"{% endif %} {% if block.settings.style == 'solid' %}style="font-weight: bold;"{% endif %}>{{ block.settings.link_text }}{% if block.settings.show_arrow != blank %}<span class="button-up-arrow button-arrow-margin">{% render 'icon-up-arrow' %}</span>{% endif %}</button>
+                <button class="button" {% if block.settings.style == 'solid' %}style="font-weight: bold;"{% endif %}>{{ block.settings.link_text }}{% if block.settings.show_arrow != blank %}<span class="button-up-arrow button-arrow-margin">{% render 'icon-up-arrow' %}</span>{% endif %}</button>
             </a>
         </div>
         {% endif %}
