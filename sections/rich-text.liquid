@@ -75,6 +75,12 @@
               background-color: rgba(var(--color-text)) !important;
               color: rgb(var(--color-button-text)) !important;
             }
+            .button-up-arrow svg {
+              fill: rgba(var(--color-text));
+            }
+            .button:hover .button-up-arrow svg {
+              fill: white !important;
+            }
           </style>
           {% endif %}
           {% if block.settings.style == 'solid' %}
