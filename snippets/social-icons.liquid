@@ -1,5 +1,5 @@
 {{ 'component-social-icons.css' | asset_url | stylesheet_tag }}
-<ul class="social-icon-list{% if class %} {{ class }}{% endif %}" role="list">
+<ul class="social-icon-list" role="list">
   {%- if settings.instagram_account != blank -%}
     <li class="social-icon-item">
       <a href="{{ settings.instagram_account }}" class="link social-icon-link icon-instagram">
