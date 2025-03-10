@@ -52,7 +52,7 @@
             "link_text": "Button",
             "link_url": "",
             "external_link": true,
-            "style": "outline",
+            "style": "solid",
             "show_arrow": false,
             "button_top_padding": 10,
             "button_bottom_padding": 10
@@ -77,7 +77,7 @@
       "settings": {
         "text_alignment": "center",
         "desktop_bg_image": "shopify://shop_images/theme_cover_image.jpg",
-        "mobile_bg_image": "shopify://shop_images/Rectangle_122_1_e1248203-8ce0-47b8-a982-6c20ecfd1d86.png",
+        "mobile_bg_image": "shopify://shop_images/Rectangle_122_5.jpg",
         "overlay_opacity": 50,
         "overlay_color": "#ffffff",
         "top_padding": 79,

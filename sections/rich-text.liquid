@@ -61,18 +61,18 @@
         </div>
         {% endif %}
       {% when 'divider' %}
+        {% if block.settings.show_line != blank %}
         <div class="rich-text-divider">
-            {% if block.settings.show_line != blank %}
                 <div class="divider" style="padding-top: {{ block.settings.divider_top_padding }}px; padding-bottom: {{ block.settings.divider_bottom_padding }}px;">
                     <hr width="100%" color="black">
                 </div>
-            {% endif  %}
         </div>
+        {% endif  %}
        {% when 'button' %}
         {% if block.settings.link_text != blank %}
         <div class="richtext-button" style="padding-top: {{ block.settings.button_top_padding }}px; padding-bottom: {{ block.settings.button_bottom_padding }}px;">
             <a href="{{ block.settings.link_url }}">
-                <button class="button">{{ block.settings.link_text }}{% if block.settings.show_arrow != blank %}<span class="button-up-arrow button-arrow-margin">{% render 'icon-up-arrow' %}</span>{% endif %}</button>
+                <button class="button" {% if block.settings.style == 'outline' %}style="text-decoration: underline;"{% endif %} {% if block.settings.style == 'solid' %}style="font-weight: bold;"{% endif %}>{{ block.settings.link_text }}{% if block.settings.show_arrow != blank %}<span class="button-up-arrow button-arrow-margin">{% render 'icon-up-arrow' %}</span>{% endif %}</button>
             </a>
         </div>
         {% endif %}
@@ -178,7 +178,7 @@
       "settings": [
         { "type": "range", "id": "divider_top_padding", "label": "t:sections.rich_text.blocks.divider.divider_top_padding", "min": 0, "max": 100, "step": 1, "default": 10 },
         { "type": "range", "id": "divider_bottom_padding", "label": "t:sections.rich_text.blocks.divider.divider_bottom_padding", "min": 0, "max": 100, "step": 1, "default": 10 },
-        { "type": "checkbox", "id": "show_line", "label": "t:sections.rich_text.blocks.divider.show_line", "default": true }
+        { "type": "checkbox", "id": "show_line", "label": "t:sections.rich_text.blocks.divider.show_line", "default": false }
       ]
     },
     {
@@ -211,7 +211,7 @@
   ],
   "presets": [
     {
-      "name": "t:presets.rich_text.name",
+      "name": "t:sections.rich_text.name",
       "blocks": [
         { "type": "heading" },
         { "type": "subheading" },
