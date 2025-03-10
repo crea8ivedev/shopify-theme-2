@@ -48,6 +48,9 @@
 .collection-heading {
   font-size: var(--font-h1);
 }
+.collection-subheading{
+  margin: 0;
+}
 
 .collection-list--button {
   margin-top: 1.25rem;

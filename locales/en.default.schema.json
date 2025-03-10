@@ -271,17 +271,14 @@
             "slider": "Slider"
           }
         },
+        "mobile_layout": {
+          "content": "Mobile layout"
+        },
         "collections_per_row_mobile": {
           "label": "Collections Per Row (Mobile)"
         },
         "enable_slider_mobile": {
           "label": "Enable Slider On Mobile"
-        },
-        "padding_top": {
-          "label": "Top Padding"
-        },
-        "padding_bottom": {
-          "label": "Bottom Padding"
         }
       },
       "blocks": {
@@ -291,7 +288,7 @@
           },
           "settings": {
             "image": {
-              "label": "Custom Image"
+              "label": "Collection Image"
             },
             "collection": {
               "label": "Collection"
@@ -309,7 +306,7 @@
               "label": "Button Link"
             },
             "external_link": {
-              "label": "Open in new tab"
+              "label": "External Link"
             },
             "content_position": {
               "label": "Content Position",

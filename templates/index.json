@@ -132,10 +132,9 @@
           "type": "collection",
           "settings": {
             "collection": "automated-collection",
-            "image": "shopify://shop_images/Rectangle_122_b5668bc3-ee2b-4e3b-9231-a2757c51d015.png",
             "heading": "Herbal lotion",
-            "subheading": "",
-            "content_alignment": "left",
+            "subheading": "Herbal",
+            "content_alignment": "center",
             "button_label": "Button Label",
             "button_link": "",
             "external_link": true,
@@ -214,7 +213,7 @@
         "content_position": "center",
         "collection_layout": "slider",
         "collections_per_row_mobile": 1,
-        "enable_slider_mobile": false,
+        "enable_slider_mobile": true,
         "padding_top": 20,
         "padding_bottom": 20
       }
