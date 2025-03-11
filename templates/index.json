@@ -115,12 +115,14 @@
         "color_scheme": "scheme-bc44ea45-9838-4b31-8d57-56921c9d546c",
         "heading": "Beauty collections",
         "heading_color": "#121212",
-        "content": "<p>Shop our summer trendy collection.</p>",
-        "content_color": "#944e63",
+        "caption": "",
+        "caption_color": "",
+        "show_view_all": false,
         "content_position": "center",
         "collection_layout": "slider",
         "collections_per_row_mobile": 3,
         "enable_slider_mobile": true,
+        "enable_slider_arrow_mobile": false,
         "padding_top": 20,
         "padding_bottom": 20
       }
@@ -135,7 +137,7 @@
             "heading": "Herbal lotion",
             "subheading": "Herbal",
             "content_alignment": "center",
-            "button_label": "Button Label",
+            "button_label": "Shop Now",
             "button_link": "",
             "external_link": true,
             "content_position": "bottom-left"
@@ -149,7 +151,7 @@
             "heading": "Hair care",
             "subheading": "",
             "content_alignment": "center",
-            "button_label": "Button Label",
+            "button_label": "Shop Now",
             "button_link": "shopify://collections",
             "external_link": false,
             "content_position": "bottom-left"
@@ -163,7 +165,7 @@
             "heading": "Skin care",
             "subheading": "",
             "content_alignment": "left",
-            "button_label": "Button Label",
+            "button_label": "Shop Now",
             "button_link": "shopify://collections/automated-collection",
             "external_link": false,
             "content_position": "bottom-left"
@@ -177,7 +179,7 @@
             "heading": "Face cream",
             "subheading": "",
             "content_alignment": "left",
-            "button_label": "Button Label",
+            "button_label": "Shop Now",
             "button_link": "shopify://products/the-complete-snowboard",
             "external_link": false,
             "content_position": "bottom-left"
@@ -186,11 +188,11 @@
         "collection_CNhDxe": {
           "type": "collection",
           "settings": {
-            "collection": "",
-            "heading": "",
+            "collection": "automated-collection",
+            "heading": "Sunscream",
             "subheading": "",
             "content_alignment": "center",
-            "button_label": "Button Label",
+            "button_label": "Shop Now",
             "button_link": "",
             "external_link": false,
             "content_position": "bottom-left"
@@ -208,12 +210,14 @@
         "color_scheme": "scheme-bc44ea45-9838-4b31-8d57-56921c9d546c",
         "heading": "Beauty collections",
         "heading_color": "#121212",
-        "content": "<p>Shop our summer trendy collection.</p>",
-        "content_color": "#944e63",
+        "caption": "<p>Shop our summer trendy collection.</p>",
+        "caption_color": "#b54343",
+        "show_view_all": true,
         "content_position": "center",
         "collection_layout": "slider",
         "collections_per_row_mobile": 1,
-        "enable_slider_mobile": true,
+        "enable_slider_mobile": false,
+        "enable_slider_arrow_mobile": false,
         "padding_top": 20,
         "padding_bottom": 20
       }
@@ -302,12 +306,14 @@
         "color_scheme": "scheme-bc44ea45-9838-4b31-8d57-56921c9d546c",
         "heading": "Beauty collections",
         "heading_color": "#121212",
-        "content": "<p>Shop our summer trendy collection.</p>",
-        "content_color": "#944e63",
+        "caption": "",
+        "caption_color": "",
+        "show_view_all": false,
         "content_position": "center",
         "collection_layout": "grid",
         "collections_per_row_mobile": 1,
         "enable_slider_mobile": true,
+        "enable_slider_arrow_mobile": false,
         "padding_top": 20,
         "padding_bottom": 20
       }

@@ -48,8 +48,15 @@
 .collection-heading {
   font-size: var(--font-h1);
 }
-.collection-subheading{
+
+.collection-subheading {
   margin: 0;
+}
+
+.collection-list-view-all {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
 }
 
 .collection-list--button {
@@ -69,12 +76,15 @@
   .collection-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .collection-image img {
     height: 400px;
   }
+
   .collection-list--button {
     margin-top: 1rem;
   }
+
   .collection-list-header {
     margin: 40px 0;
   }

@@ -13,7 +13,7 @@
     color: {{ section.settings.heading_color }};
   }
   .section-{{ section.id }} .collection-list-subheading {
-    color: {{ section.settings.content_color }};
+    color: {{ section.settings.caption_color }};
   }
   @media (max-width: 767px) {
     .section-{{ section.id }} .collection-grid {
@@ -84,13 +84,13 @@
 
 <div class="section--collection-list {% if is_slider_mobile == true %} section--slider section--slider-mobile {% endif %} section-{{ section.id }} color-{{ section.settings.color_scheme }} section--{{ section.settings.collection_layout }}">
   <div class="page-width">
-    {% if section.settings.heading != blank or section.settings.content != blank %}
+    {% if section.settings.heading != blank or section.settings.caption != blank %}
       <div class="collection-list-header">
         {% if section.settings.heading != blank %}
           <h2 class="collection-list-heading">{{ section.settings.heading }}</h2>
         {% endif %}
-        {% if section.settings.content != blank %}
-          <div class="collection-list-subheading">{{ section.settings.content }}</div>
+        {% if section.settings.caption != blank %}
+          <div class="collection-list-subheading">{{ section.settings.caption }}</div>
         {% endif %}
       </div>
     {% endif %}
@@ -232,6 +232,17 @@
         <span class="swiper-button-next"></span>
       {% endif %}
     </div>
+    {% if section.settings.show_view_all %}
+      <div class="collection-list-view-all">
+        <a
+          href="{{ routes.collections_url }}"
+          class="button button--primary"
+          aria-label="ViewAll"
+        >
+          View All
+        </a>
+      </div>
+    {% endif %}
   </div>
 </div>
 
@@ -257,13 +268,19 @@
     },
     {
       "type": "richtext",
-      "id": "content",
-      "label": "t:sections.collection_list.settings.content.label"
+      "id": "caption",
+      "label": "t:sections.collection_list.settings.caption.label"
     },
     {
       "type": "color",
-      "id": "content_color",
-      "label": "t:sections.collection_list.settings.content_color.label"
+      "id": "caption_color",
+      "label": "t:sections.collection_list.settings.caption_color.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_view_all",
+      "default": false,
+      "label": "t:sections.collection_list.settings.show_view_all.label"
     },
     {
       "type": "select",
@@ -302,6 +319,12 @@
       "type": "checkbox",
       "id": "enable_slider_mobile",
       "label": "t:sections.collection_list.settings.enable_slider_mobile.label",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_slider_arrow_mobile",
+      "label": "t:sections.collection_list.settings.enable_slider_arrow_mobile.label",
       "default": false
     },
     {
@@ -372,7 +395,7 @@
           "type": "text",
           "label": "t:sections.collection_list.blocks.collection.settings.button_label.label",
           "id": "button_label",
-          "default": "Button Label"
+          "default": "Shop Now"
         },
         {
           "type": "url",

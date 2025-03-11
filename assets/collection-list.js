@@ -4,9 +4,11 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const collectionSections = document.querySelectorAll(
-    ".section--collection-list.section--slider",
+    ".section--collection-list.section--slider"
   );
-  if (!collectionSections.length) {return;}
+  if (!collectionSections.length) {
+    return;
+  }
 
   collectionSections.forEach((section) => {
     const collectionWrapper = section.querySelector(".collection-wrapper");
@@ -14,15 +16,22 @@ document.addEventListener("DOMContentLoaded", () => {
     const swiperButtonPrev = section.querySelector(".swiper-button-prev");
     const swiperButtonNext = section.querySelector(".swiper-button-next");
 
-    const toggleNavigation = (show) => {
-      [swiperPagination, swiperButtonPrev, swiperButtonNext].forEach((el) => {
-        if (el) {el.style.display = show ? "block" : "none";}
+    const toggleNavigation = (showPagination, showNavigation) => {
+      if (swiperPagination) {
+        swiperPagination.style.display = showPagination ? "block" : "none";
+      }
+      [swiperButtonPrev, swiperButtonNext].forEach((el) => {
+        if (el) {
+          el.style.display = showNavigation ? "block" : "none";
+        }
       });
     };
 
     const initializeSlider = () => {
       const sliderContainer = section.querySelector(".swiper-container");
-      if (!sliderContainer) {return;}
+      if (!sliderContainer) {
+        return;
+      }
 
       const slides = section.querySelectorAll(".swiper-slide");
       const totalSlides = slides?.length;
@@ -30,13 +39,15 @@ document.addEventListener("DOMContentLoaded", () => {
         window.innerWidth >= 1580
           ? 4
           : window.innerWidth >= 1024
-            ? 3
-            : window.innerWidth >= 768
-              ? 2
-              : 1;
+          ? 3
+          : window.innerWidth >= 768
+          ? 2
+          : 1;
 
       const hideNav = totalSlides <= maxSlidesPerView;
-      toggleNavigation(!hideNav);
+      const isMobile = window.innerWidth <= 767;
+
+      toggleNavigation(isMobile && !hideNav, !hideNav);
 
       new Swiper(sliderContainer, {
         slidesPerView: 1,
@@ -45,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
         navigation: hideNav
           ? false
           : { nextEl: swiperButtonNext, prevEl: swiperButtonPrev },
-        pagination: hideNav ? false : { el: swiperPagination, clickable: true },
+        pagination: isMobile ? { el: swiperPagination, clickable: true } : false,
         breakpoints: {
           768: { slidesPerView: 2 },
           1024: { slidesPerView: 3 },
@@ -68,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     if (section.classList.contains("section--slider-mobile")) {
-      toggleNavigation(false);
+      toggleNavigation(false, false);
     } else {
       initializeSlider();
     }

@@ -251,11 +251,14 @@
         "heading_color": {
           "label": "Heading Color"
         },
-        "content": {
-          "label": "Content"
+        "caption": {
+          "label": "Caption"
         },
-        "content_color": {
-          "label": "Content Color"
+        "caption_color": {
+          "label": "Caption Color"
+        },
+        "show_view_all": {
+          "label": "Enable \"View all\" button if list includes more collections than shown"
         },
         "content_position": {
           "label": "Content Position",
@@ -279,6 +282,9 @@
         },
         "enable_slider_mobile": {
           "label": "Enable Slider On Mobile"
+        },
+        "enable_slider_arrow_mobile": {
+          "label": "Enable Slider Arrow On Mobile"
         }
       },
       "blocks": {
