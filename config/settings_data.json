@@ -11,6 +11,7 @@
   "current": {
     "logo": "shopify://shop_images/Logo.png",
     "logo_width": 140,
+    "mobile_logo_width": 80,
     "type_header_font": "americana_n4",
     "heading_font_size": "small",
     "heading_text_transform": "normal",

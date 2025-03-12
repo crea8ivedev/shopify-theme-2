@@ -1,5 +1,15 @@
 <link rel="stylesheet" href="{{ 'component-list-menu.css' | asset_url }}" media="print" onload="this.media='all'">
-
+<style>
+  @media screen and (max-width: 425px) {
+    .header_heading-logo-wrapper img {
+      width: {{ settings.mobile_logo_width }}px;
+      height: auto;
+    }
+  }
+</style>
+{%- if section.settings.menu_type_desktop == 'megamenu' -%}
+  <link rel="stylesheet" href="{{ 'component-mega-menu.css' | asset_url }}" media="print" onload="this.media='all'">
+{%- endif -%}
 {{ 'header.css' | asset_url | stylesheet_tag }}
 <{% if section.settings.sticky_header_type != 'none' %}sticky-header data-sticky-type="{{ section.settings.sticky_header_type }}"{% else %}div{% endif %} class="header-wrapper color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}">
   <header class="header header--{{ section.settings.logo_position }} page-width ctm_{{ section.settings.menu_type_desktop }}">
@@ -38,15 +48,9 @@
       if section.settings.menu != blank
         if section.settings.menu_type_desktop == 'dropdown'
           render 'header-dropdown-menu'
-        elsif section.settings.menu_type_desktop == 'mega'
-          render 'header-mega-menu'  
-        elsif section.settings.menu_type_desktop == 'megamenu'
-          render 'header-megamenu-with-images'
-        elsif section.settings.menu_type_desktop == 'drawer'
-          render 'header-menu-drawer'
-        
-        endif
-    
+        elsif section.settings.menu_type_desktop != 'drawer'
+          render 'header-mega-menu'       
+        endif   
       endif
     %}
 
@@ -110,60 +114,6 @@
   "class": "section-header",
   "settings": [
     {
-      "type": "color_scheme",
-      "id": "color_scheme",
-      "label": "t:sections.all.colors.label",
-      "default": "scheme-2"
-    },
-    {
-      "type": "select",
-      "id": "logo_position",
-      "options": [
-        {
-          "value": "middle-left",
-          "label": "Middle Left"
-        },
-        {
-          "value": "middle-center",
-          "label": "Middle Center"
-        }
-      ],
-      "default": "middle-left",
-      "label": "Desktop logo position",
-      "info": "Edit your logo in theme settings."
-    },
-    {
-      "type": "link_list",
-      "id": "menu",
-      "default": "main-menu",
-      "label": "Menu"
-    },
-    {
-      "type": "select",
-      "id": "menu_type_desktop",
-      "options": [
-        {
-          "value": "dropdown",
-          "label": "Dropdown"
-        },
-        {
-          "value": "mega",
-          "label": "Simple mega menu"
-        },
-        {
-          "value": "megamenu",
-          "label": "Mega menu with images"
-        },
-        {
-          "value": "drawer",
-          "label": "Menu Drawer"
-        }
-      ],
-      "default": "dropdown",
-      "label": "Desktop menu type",
-      "info": "Menu type is automatically optimized for mobile."
-    },
-    {
       "type": "select",
       "id": "sticky_header_type",
       "options": [
@@ -185,7 +135,85 @@
         }
       ],
       "default": "on-scroll-up",
-      "label": "On scroll up"
+      "label": "Sticky Header"
+    },
+    {
+      "type": "select",
+      "id": "logo_position",
+      "options": [
+        {
+          "value": "middle-left",
+          "label": "Middle Left"
+        },
+        {
+          "value": "middle-center",
+          "label": "Middle Center"
+        }
+      ],
+      "default": "middle-left",
+      "label": "Desktop logo position",
+      "info": "Edit your logo in theme settings."
+    },
+    {
+      "type": "select",
+      "id": "menu_type_desktop",
+      "options": [
+        {
+          "value": "dropdown",
+          "label": "Dropdown"
+        },
+        {
+          "value": "megamenu",
+          "label": "Mega menu"
+        },
+        {
+          "value": "drawer",
+          "label": "Drawer"
+        }
+      ],
+      "default": "dropdown",
+      "label": "Desktop menu type",
+      "info": "Menu type is automatically optimized for mobile."
+    },
+    {
+      "type": "header",
+      "content": "Navigation"
+    },
+    {
+      "type": "link_list",
+      "id": "menu",
+      "default": "main-menu",
+      "label": "Menu"
+    },
+    {
+      "type": "select",
+      "id": "mobile_logo_position",
+      "options": [
+        {
+          "value": "click",
+          "label": "Click"
+        },
+        {
+          "value": "hover",
+          "label": "Hover"
+        }
+      ],
+      "default": "click",
+      "label": "Open dropdown items on..."
+    },
+    {
+      "type": "header",
+      "content": "Color"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-2"
+    },
+    {
+      "type": "header",
+      "content": "Utilities"
     },
     {
       "type": "checkbox",

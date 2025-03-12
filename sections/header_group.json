@@ -14,11 +14,12 @@
     "header": {
       "type": "header",
       "settings": {
-        "color_scheme": "",
+        "sticky_header_type": "always",
         "logo_position": "middle-left",
-        "menu": "main-menu",
         "menu_type_desktop": "dropdown",
-        "sticky_header_type": "on-scroll-up",
+        "menu": "header-menu",
+        "mobile_logo_position": "click",
+        "color_scheme": "",
         "show_line_separator": true,
         "show_account": true,
         "show_search": true,
