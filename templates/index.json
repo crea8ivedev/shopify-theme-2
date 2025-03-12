@@ -21,17 +21,33 @@
       "blocks": {
         "logo_c43R69": {
           "type": "logo",
+          "disabled": true,
+          "settings": {
+            "logo-image": "shopify://shop_images/p_g_1.png"
+          }
+        },
+        "logo_NVLUhR": {
+          "type": "logo",
+          "disabled": true,
           "settings": {
             "logo-image": "shopify://shop_images/p_g_1.png"
           }
         },
         "logo_AUyUTa": {
           "type": "logo",
+          "disabled": true,
           "settings": {
             "logo-image": "shopify://shop_images/mac_1.png"
           }
         },
         "logo_BRPQXr": {
+          "type": "logo",
+          "disabled": true,
+          "settings": {
+            "logo-image": "shopify://shop_images/LOreal-Symbol-1024x403_1.png"
+          }
+        },
+        "logo_R77N3b": {
           "type": "logo",
           "settings": {
             "logo-image": "shopify://shop_images/LOreal-Symbol-1024x403_1.png"
@@ -43,7 +59,19 @@
             "logo-image": "shopify://shop_images/png-clipart-brand-logo-product-design-font-cosmetic-beauty-text-cosmetics_1.png"
           }
         },
+        "logo_GM8PHC": {
+          "type": "logo",
+          "settings": {
+            "logo-image": "shopify://shop_images/png-clipart-brand-logo-product-design-font-cosmetic-beauty-text-cosmetics_1.png"
+          }
+        },
         "logo_DMTCjj": {
+          "type": "logo",
+          "settings": {
+            "logo-image": "shopify://shop_images/wella_1.png"
+          }
+        },
+        "logo_XdYDzB": {
           "type": "logo",
           "settings": {
             "logo-image": "shopify://shop_images/wella_1.png"
@@ -52,22 +80,24 @@
       },
       "block_order": [
         "logo_c43R69",
+        "logo_NVLUhR",
         "logo_AUyUTa",
         "logo_BRPQXr",
+        "logo_R77N3b",
         "logo_BrN4eY",
-        "logo_DMTCjj"
+        "logo_GM8PHC",
+        "logo_DMTCjj",
+        "logo_XdYDzB"
       ],
       "settings": {
-        "heading": "Brand Logo",
-        "content": "Brand Logo",
         "color_scheme": "scheme-b09110ff-0b96-405d-9400-099be4b32bd6",
-        "navigation_arrow": false,
+        "heading": "<h2>Brand Logo</h2>",
+        "content": "<p>I have finished developing and designing of this section with all the functionalities, except for the pause on hover and mobile design. Next, I will focus on adding schema locales, implementing pause on hover, and optimizing the mobile design.<br/></p>",
         "enable_scrolling": true,
-        "scroll_speed": 6,
+        "scroll_speed": 5,
         "direction": "left",
-        "pause_on_hover": true,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 58,
+        "padding_bottom": 58
       }
     }
   },

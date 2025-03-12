@@ -12,14 +12,13 @@
   data-enable-scrolling="{{ section.settings.enable_scrolling }}"
   data-scroll-speed="{{ section.settings.scroll_speed }}"
   data-direction="{{ section.settings.direction }}"
-  data-pause-on-hover="{{ section.settings.pause_on_hover }}"
 >
   <div class="logo-container">
     {% if section.settings.heading != blank %}
-      <h2>{{ section.settings.heading }}</h2>
+    {{ section.settings.heading }}
     {% endif %}
     {% if section.settings.content != blank %}
-      <p class="logo-desc">{{ section.settings.content }}</p>
+      <div class="logo-desc">{{ section.settings.content }}</div>
     {% endif %}
     <div class="logo-swiper-container">
       <div class="swiper-wrapper">
@@ -31,11 +30,6 @@
           {% endif %}
         {% endfor %}
       </div>
-
-      {% if section.settings.navigation_arrow == true %}
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-      {% endif %}
     </div>
   </div>
 </div>
@@ -46,26 +40,20 @@
   "settings": [
     {
       "type": "color_scheme",
-      "label": "Color scheme",
+      "label": "t:sections.brand-logo.settings.color_scheme.label",
       "id": "color_scheme"
     },
     {
-      "type": "text",
+      "type": "richtext",
       "id": "heading",
-      "label": "Heading"
+      "label": "t:sections.brand-logo.settings.heading.label"
     },
     {
-      "type": "text",
+      "type": "richtext",
       "id": "content",
-      "label": "Content"
+      "label": "t:sections.brand-logo.settings.content.label"
     },
 
-    {
-      "type": "checkbox",
-      "label": "Display Navigation Arrows",
-      "id": "navigation_arrow",
-      "default": false
-    },
     {
       "type": "header",
       "content": "Scrolling Settings"
@@ -73,13 +61,13 @@
     {
       "type": "checkbox",
       "id": "enable_scrolling",
-      "label": "Enable Scrolling",
+      "label": "t:sections.brand-logo.settings.enable_scrolling.label",
       "default": true
     },
     {
       "type": "range",
       "id": "scroll_speed",
-      "label": "Speed",
+      "label": "t:sections.brand-logo.settings.scroll_speed.label",
       "min": 1,
       "max": 10,
       "step": 1,
@@ -88,7 +76,7 @@
     {
       "type": "select",
       "id": "direction",
-      "label": "Scroll Direction",
+      "label": "t:sections.brand-logo.settings.direction.label",
       "options": [
         { "value": "left", 
           "label": "Left to Right" 
@@ -100,12 +88,6 @@
       "default": "left"
     },
     {
-      "type": "checkbox",
-      "id": "pause_on_hover",
-      "label": "Pause on Hover",
-      "default": true
-    },
-    {
       "type": "header",
       "content": "Section padding"
     },
@@ -114,9 +96,9 @@
       "id": "padding_top",
       "min": 0,
       "max": 100,
-      "step": 4,
+      "step": 2,
       "unit": "px",
-      "label": "Padding Top",
+      "label": "t:sections.brand-logo.settings.padding_top.label",
       "default": 36
     },
     {
@@ -124,9 +106,9 @@
       "id": "padding_bottom",
       "min": 0,
       "max": 100,
-      "step": 4,
+      "step": 2,
       "unit": "px",
-      "label": "Padding Bottom",
+      "label": "t:sections.brand-logo.settings.padding_bottom.label",
       "default": 36
     }
   ],
@@ -138,14 +120,14 @@
         {
           "type": "image_picker",
           "id": "logo-image",
-          "label": "Logo Image"
+          "label":"t:sections.brand-logo.blocks.logo.settings.brand_logo.label"
         }
       ]
     }
   ],
   "presets": [
     {
-      "name": "Brand Logo Slider"
+      "name": "t:sections.brand-logo.presets.name"
     }
   ]
 }

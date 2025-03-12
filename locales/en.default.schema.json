@@ -240,22 +240,31 @@
       }
     },
     "brand-logo": {
-      "name": "Brand Logo",
+      "name": "Brand Logo Slider",
       "settings": {
+        "color_scheme": {
+          "label": "Color Scheme"
+        },
         "heading": {
           "label": "Heading"
         },
-        "sub_heading": {
-          "label": "Sub Heading"
-        },
-        "color_scheme": {
-          "label": "Color Scheme"
+        "content": {
+          "label": "Content"
         },
         "enable_navigation": {
           "label": "Enable Navigation Arrows"
         },
-        "slides_speed": {
-          "label": "Scrolling Speed"
+        "enable_scrolling": {
+          "label": "Enable Scrolling"
+        },
+        "scroll_speed": {
+          "label": "Scroll Speed"
+        },
+        "direction": {
+          "label": "Scroll Direction",
+        },
+        "pause_on_hover": {
+          "label": "Pause on Hover"
         },
         "padding_top": {
           "label": "Padding Top"
@@ -269,17 +278,14 @@
           "name": "Logo",
           "settings": {
             "brand_logo": {
-              "label": "Select Logo"
-            },
-            "add_link": {
-              "label": "Add Link"
+              "label": "Brand Logo"
             }
           }
         }
       },
       "presets": {
-        "name": "Brand Logo"
+        "name": "Brand Logo Slider"
       }
-    },
+    }
   }
 }
