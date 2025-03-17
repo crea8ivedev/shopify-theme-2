@@ -1,39 +1,39 @@
 <article class="article-card">
     {%- if article.image -%}
-      <a href="{{ article.url }}" class="article-card__image">
+      <a href="{{ article.url }}" class="article-card-image">
         <img src="{{ article.image | image_url }}" alt="{{ article.image.alt | escape }}" height="auto" width="auto">
       </a>
     {%- endif -%}
   
-    <div class="article-card__content">
-      <h2 class="article-card__title">
+    <div class="article-card-content">
+      <h2 class="article-card-title">
         <a href="{{ article.url }}">{{ article.title }}</a>
       </h2>
   
-      <div class="article-card__meta">
+      <div class="article-card-meta">
         {%- if article.author -%}
-          <span class="article-card__author">
+          <span class="article-card-author">
             {{ article.author }}
           </span>
         {%- endif -%}
-        <span class="article-card__date">
+        <span class="article-card-date">
           {{ article.published_at | date: "%B %d, %Y" }}
         </span>
       </div>
   
       {%- if article.excerpt_or_content -%}
-        <p class="article-card__excerpt">
+        <p class="article-card-excerpt">
           {{ article.excerpt_or_content | strip_html | truncatewords: 30 }}
         </p>
       {%- endif -%}
   
       {%- if article.tags.size > 0 -%}
-        <div class="article-card__tags">
+        <div class="article-card-tags">
           {%- for tag in article.tags limit: 1 -%}
-            <span class="article-card__tag-badge">{{ tag }}</span>
+            <span class="article-card-tag-badge">{{ tag }}</span>
           {%- endfor -%}
         </div>
       {%- endif -%}
-      <a href="{{ article.url }}" class="article-card__read-more">Read More →</a>
+      <a href="{{ article.url }}" class="article-card-read-more">Read More →</a>
     </div>
   </article>
