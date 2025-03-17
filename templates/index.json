@@ -44,7 +44,7 @@
           "type": "button",
           "settings": {
             "button_label": "Button Label",
-            "button_link": "",
+            "button_link": "#",
             "button_style_secondary": false,
             "external_link": true
           }
@@ -60,7 +60,6 @@
         "section_color_scheme": "",
         "image_height": "adapt",
         "image_width": "medium",
-        "cover_image": "shopify://shop_images/54101bd7c7573ad671ab4ce74ec35114.jpg",
         "video_height": "small",
         "video_width": "medium",
         "video": "shopify://files/videos/RW1-Video-A.mp4",
@@ -102,7 +101,7 @@
           "type": "button",
           "settings": {
             "button_label": "Button Label",
-            "button_link": "",
+            "button_link": "#",
             "button_style_secondary": false,
             "external_link": false
           }
@@ -160,7 +159,7 @@
           "type": "button",
           "settings": {
             "button_label": "Button Label",
-            "button_link": "",
+            "button_link": "#",
             "button_style_secondary": false,
             "external_link": false
           }
@@ -217,7 +216,7 @@
           "type": "button",
           "settings": {
             "button_label": "Button Label",
-            "button_link": "",
+            "button_link": "#",
             "button_style_secondary": false,
             "external_link": false
           }
@@ -274,7 +273,7 @@
           "type": "button",
           "settings": {
             "button_label": "Button Label",
-            "button_link": "",
+            "button_link": "#",
             "button_style_secondary": false,
             "external_link": false
           }
