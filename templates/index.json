@@ -253,7 +253,7 @@
           "type": "caption",
           "settings": {
             "caption": "Add a tagline",
-            "caption_color": "#B47B84",
+            "caption_color": "#b47b84",
             "caption_heading_size": "small"
           }
         },
@@ -290,10 +290,10 @@
         "section_color_scheme": "",
         "image_height": "adapt",
         "image_width": "medium",
-        "cover_image": "shopify://shop_images/image-with-text.png",
         "video_height": "small",
         "video_width": "medium",
-        "video_url": "https://youtu.be/hnp1pt8biD4?si=ePcsBvDuqmARnhjC",
+        "video": "shopify://files/videos/3971844-hd_1920_1080_25fps.mp4",
+        "video_url": "",
         "layout": "media_left",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
