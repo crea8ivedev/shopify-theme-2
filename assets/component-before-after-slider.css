@@ -1,30 +1,71 @@
-.before-after-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 50px auto;
+.before-after-main .before-after-slider-start {
+    padding: 38px 0 88px 0;
 }
 
-.before-after-main .mySwiper {
+.before-after-main .before-after-slider {
     width: 100%;
     height: 100%;
-    padding: 0 45px;
 }
 
-.before-after-main .before-after-section {
-    text-align: center;
+.before-after-main .before-after-slider .before-after-slide .before-after-slide-inside {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
-    margin: 0 auto;
+    justify-content: space-between;
+    column-gap: 90px;
 }
 
-.before-after-main .before-after-section .left-content h2 {
-    margin-bottom: 20px;
-    margin-top: 20px;
+.before-after-main .right-content {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    flex: 0 0 494px;
+    height: 522px;
+}
+
+.before-after-main .before-after-section .left-content {
+    flex: 0 0 calc(100% - 584px);
+}
+
+.before-after-caption-above {
+    margin-bottom: 15px;
+}
+
+.before-after-caption-above * {
+    margin-top: 0;
+    letter-spacing: 0;
+}
+
+.before-after-caption-above *:last-child {
+    margin-bottom: 0;
+}
+
+.before-after-heading-above {
+    max-width: 470px;
+    margin-bottom: 15px;
+}
+
+.before-after-heading-above * {
+    font-weight: 500;
+    font-size: 34px;
+    color: #252525;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.btn-before-after {
+    margin-top: 40px;
+}
+
+/* .before-after-main .before-after-section .left-content h2 {
     font-size: var(--font-h2);
-    line-height: 42px;
     color: rgba(var(--color-text));
+} */
+
+.before-after-main .swiper-pagination {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
 }
 
 .before-after-main .before-after-section .left-content div {
@@ -122,10 +163,10 @@
 }
 
 .before-after-main .swiper-pagination .swiper-pagination-bullet {
-    width: 15px;
-    height: 15px;
-    margin: 0 5px;
-    border: 2px solid rgba(var(--color-text));
+    width: 14px;
+    height: 14px;
+    margin: 0;
+    border: 1px solid rgba(var(--color-text));
     border-radius: 50%;
     display: inline-flex;
     align-items: center;
@@ -152,8 +193,8 @@
 
 .before-after-main .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active::before {
     content: '';
-    width: 7px;
-    height: 7px;
+    width: 8px;
+    height: 8px;
     background: rgba(var(--color-button));
     border-radius: 50%;
     position: absolute;
@@ -163,101 +204,100 @@
     color: rgba(var(--color-button));
 }
 
-.before-after-main .before-after-section .left-content {
-    width: 50%;
-    text-align: left;
-}
-
-.before-after-main .right-content {
-    position: relative;
-    width: 50%;
-    height: 700px;
-    max-width: 700px;
-    overflow: hidden;
-    border-radius: 15px;
-}
-
 .before-after-main .swiper-pagination .swiper-horizontal>.swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal,
 .swiper-pagination-custom,
 .swiper-pagination-fraction {
-    left: 140px;
-    top: 80%;
-    width: auto;
+    bottom: 86px;
 }
 
-@media (min-width:1024px) {
-    .before-after-main .before-after-section {
-        gap: 40px;
+@media (min-width: 1400px) {
+    .before-after-main.page-width {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+    .before-after-main .before-after-slider-start {
+        margin-left: 113px;
+        margin-right: 113px;
+    }
+    .before-after-caption-above * {
+        line-height: 22px;
+    }
+    .before-after-heading-above * {
+        line-height: 45px;
     }
 }
 
-@media (max-width:1600px) {
-
+@media (min-width: 990px) and (max-width: 1199px) {
+    .before-after-main .before-after-section .left-content {
+        flex: 0 0 calc(100% - 490px);
+    }
+    .before-after-main .right-content {
+        flex: 0 0 400px;
+        height: 422px;
+    }
     .before-after-main .swiper-pagination .swiper-horizontal>.swiper-pagination-bullets,
     .swiper-pagination-bullets.swiper-pagination-horizontal,
     .swiper-pagination-custom,
     .swiper-pagination-fraction {
-        left: 42px;
-    }
-
-    .before-after-main .right-content {
-        height: 750px;
+        bottom: 50px;
     }
 }
 
-@media (max-width:1440px) {
-    .before-after-main .right-content {
-        height: 650px;
-    }
-}
-
-@media (max-width:1024px) {
-    .before-after-main .before-after-section.position-reverse {
-        flex-direction: row-reverse;
-    }
-
-    .before-after-main .swiper-pagination {
-        position: unset !important;
-        left: unset !important;
-        padding: 20px;
-    }
-
-    .before-after-main .before-after-section {
-        gap: 25px;
-    }
-
-    .before-after-main .right-content img {
-        width: 100vw;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .before-after-main .right-content {
-        max-width: 100%;
-        width: 100%;
-    }
-
+@media (min-width: 990px) {
     .before-after-main .before-after-section .left-content {
-        width: 100%;
+        margin-top: -56px;
     }
+}
 
-    .before-after-main .before-after-section {
-        flex-wrap: wrap;
+@media (max-width: 989px) {
+    .before-after-main .before-after-slider .before-after-slide .before-after-slide-inside {
+        align-items: flex-start;
+    }
+    .before-after-main .before-after-slider .before-after-slide .before-after-slide-inside {
         flex-direction: column-reverse;
     }
+    .before-after-main .before-after-section .left-content {
+        flex: unset;
+        max-width: 494px;
+        margin: 0 auto;
+        margin-top: 40px;
+        text-align: center;
+    }
+    .before-after-main .right-content {
+        flex: unset;
+        width: 100%;
+        height: 522px;
+        max-width: 494px;
+        margin: 0 auto;
+    }
+    .btn-before-after {
+        margin-top: 25px;
+    }
+    .before-after-main .swiper-pagination .swiper-horizontal>.swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
+        bottom: 0;
+        position: relative;
+        margin-top: 30px;
+        justify-content: center;
+    }
+    .before-after-heading-above * {
+        font-size: 32px;
+    }
+    .before-after-main .before-after-slider-start {
+        padding: 38px 0;
+    }
 }
 
-@media (max-width:768px) {
-    .before-after-main .mySwiper {
-        padding: 0 10px;
-    }
-
+@media (max-width: 639px) {
     .before-after-main .right-content {
-        position: relative;
-        width: 100%;
-        height: 500px;
-        border-radius: 10px;
+        height: 282px;
+        max-width: 272px;
+    }
+    .before-after-heading-above * {
+        font-size: 24px;
     }
 }
 

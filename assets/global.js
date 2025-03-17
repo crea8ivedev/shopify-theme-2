@@ -1,14 +1,13 @@
 // before after slider
 var swiper = new Swiper(".before-after-slider", {
     slidesPerView: 1,
-    spaceBetween: 50,
+    spaceBetween: 0,
     loop: false,
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
     },
     allowTouchMove: false,
-    centeredSlides: true,
 });
 
 

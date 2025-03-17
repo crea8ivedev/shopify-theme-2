@@ -64,6 +64,7 @@
         "before_after_block_cDHkLB",
         "before_after_block_8D9WKK"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "scheme-1",
         "drag_initial_position": 50,
@@ -122,6 +123,7 @@
         "before_after_block_kVq8eV",
         "before_after_block_AEWt9M"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "",
         "drag_initial_position": 50,
@@ -138,11 +140,11 @@
         "before_after_block_dEkBxt": {
           "type": "before_after_block",
           "settings": {
-            "heading": "Add Heading here",
-            "sub_heading": "Add Subheading here",
-            "content": "Add Content here",
+            "heading": "Experience the magic before &amp; after with Aura Beauty",
+            "sub_heading": "Transform Your Look\n<span>Before</span> and <span>After</span> with Aura Beauty",
+            "content": "",
             "button_text": "Shop Now",
-            "button_link": "",
+            "button_link": "/",
             "button_style_secondary": false,
             "before_image": "shopify://shop_images/before.png",
             "after_image": "shopify://shop_images/before.png"
@@ -181,7 +183,7 @@
         "before_after_block_6xJjRx"
       ],
       "settings": {
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-ebe6c95d-c912-48fe-a6f5-e931bb811980",
         "drag_initial_position": 50,
         "before_text": "Before",
         "after_text": "After",
