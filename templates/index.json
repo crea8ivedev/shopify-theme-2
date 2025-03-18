@@ -22,8 +22,8 @@
         "before_after_block_rY4qBY": {
           "type": "before_after_block",
           "settings": {
-            "heading": "Add Heading here",
-            "sub_heading": "Add Subheading here",
+            "heading": "<p>Add Heading here</p>",
+            "sub_heading": "<p>Add Subheading here</p>",
             "content": "Add Content here",
             "button_text": "Shop Now",
             "button_link": "",
@@ -35,8 +35,8 @@
         "before_after_block_cDHkLB": {
           "type": "before_after_block",
           "settings": {
-            "heading": "Add Heading here",
-            "sub_heading": "Add Subheading here",
+            "heading": "<p>Add Heading here</p>",
+            "sub_heading": "<p>Add Subheading here</p>",
             "content": "Add Content here",
             "button_text": "Shop Now",
             "button_link": "",
@@ -48,8 +48,8 @@
         "before_after_block_8D9WKK": {
           "type": "before_after_block",
           "settings": {
-            "heading": "Add Heading here",
-            "sub_heading": "Add Subheading here",
+            "heading": "<p>Add Heading here</p>",
+            "sub_heading": "<p>Add Subheading here</p>",
             "content": "Add Content here",
             "button_text": "Shop Now",
             "button_link": "",
@@ -81,8 +81,8 @@
         "before_after_block_AqpfnC": {
           "type": "before_after_block",
           "settings": {
-            "heading": "Add Heading here",
-            "sub_heading": "Add Subheading here",
+            "heading": "<p>Add Heading here</p>",
+            "sub_heading": "<p>Add Subheading here</p>",
             "content": "Add Content here",
             "button_text": "Shop Now",
             "button_link": "",
@@ -94,8 +94,8 @@
         "before_after_block_kVq8eV": {
           "type": "before_after_block",
           "settings": {
-            "heading": "Add Heading here",
-            "sub_heading": "Add Subheading here",
+            "heading": "<p>Add Heading here</p>",
+            "sub_heading": "<p>Add Subheading here</p>",
             "content": "Add Content here",
             "button_text": "Shop Now",
             "button_link": "",
@@ -107,8 +107,8 @@
         "before_after_block_AEWt9M": {
           "type": "before_after_block",
           "settings": {
-            "heading": "Add Heading here",
-            "sub_heading": "Add Subheading here",
+            "heading": "<p>Add Heading here</p>",
+            "sub_heading": "<p>Add Subheading here</p>",
             "content": "Add Content here",
             "button_text": "Shop Now",
             "button_link": "",
@@ -140,8 +140,8 @@
         "before_after_block_dEkBxt": {
           "type": "before_after_block",
           "settings": {
-            "heading": "Experience the magic before &amp; after with Aura Beauty",
-            "sub_heading": "Transform Your Look\n<span>Before</span> and <span>After</span> with Aura Beauty",
+            "heading": "<p>Experience the magic before & after with Aura Beauty</p>",
+            "sub_heading": "<p>Transform Your Look <strong>Before</strong> and <strong>After</strong> with Aura Beauty</p>",
             "content": "",
             "button_text": "Shop Now",
             "button_link": "/",
@@ -153,8 +153,8 @@
         "before_after_block_epkDLR": {
           "type": "before_after_block",
           "settings": {
-            "heading": "Add Heading here",
-            "sub_heading": "Add Subheading here",
+            "heading": "<p>Add Heading here</p>",
+            "sub_heading": "<p>Add Subheading here</p>",
             "content": "Add Content here",
             "button_text": "Shop Now",
             "button_link": "",
@@ -166,8 +166,8 @@
         "before_after_block_6xJjRx": {
           "type": "before_after_block",
           "settings": {
-            "heading": "Add Heading here",
-            "sub_heading": "Add Subheading here",
+            "heading": "<p>Add Heading here</p>",
+            "sub_heading": "<p>Add Subheading here</p>",
             "content": "Add Content here",
             "button_text": "Shop Now",
             "button_link": "",

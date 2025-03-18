@@ -243,7 +243,7 @@
       "name": "Before after slider",
       "settings": {
         "drag_initial_position": {
-          "label": "Drag initial position"
+          "label": "Drag Initial Position"
         }
       },
       "blocks": {
@@ -254,46 +254,46 @@
               "label": "Heading"
             },
             "default_heading": {
-              "label": "Add heading here"
+              "label": "Add Heading Here"
             },
             "sub_heading": {
               "label": "Subheading"
             },
             "default_sub_heading": {
-              "label": "Add subheading here"
+              "label": "Add Subheading Here"
             },
             "content": {
               "label": "Content"
             },
             "default_content": {
-              "label": "Add content here"
+              "label": "Add Content Here"
             },
             "button_text": {
-              "label": "Button text"
+              "label": "Button Text"
             },
             "button_link": {
-              "label": "Button link"
+              "label": "Button Link"
             },
             "button_style_secondary": {
-              "label": "Button style secondary",
+              "label": "Button Style Secondary",
             },
             "before_image": {
-              "label": "Before image"
+              "label": "Before Image"
             },
             "after_image": {
-              "label": "After image"
+              "label": "After Image"
             },
             "before_text": {
-              "label": "Before text"
+              "label": "Before Text"
             },
             "after_text": {
-              "label": "After text"
+              "label": "After Text"
             },
             "text_position": {
-              "label": "Before/after text position"
+              "label": "Before/After Text Position"
             },
             "image_info": {
-              "label": "2000 x 1200px .jpg recommended"
+              "label": "494 x 522px .jpg recommended"
             },
             "position_left": {
               "label": "Left"
@@ -308,10 +308,10 @@
               "label": "Bottom"
             },
             "padding_top":{
-              "label": "Padding top",
+              "label": "Padding Top",
             },
             "padding_bottom":{
-              "label": "Padding bottom",
+              "label": "Padding Bottom",
             }
           }
         }
