@@ -15,7 +15,40 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "video_U6GYem": {
+      "type": "video",
+      "settings": {
+        "color_scheme": "scheme-9a4ed46b-85e4-406e-bd00-b3b0c4b545b2",
+        "heading": "<p>updated</p>",
+        "heading_size": "h2",
+        "enable_video_looping": false,
+        "cover_image": "shopify://shop_images/Rectangle_122_1_e1248203-8ce0-47b8-a982-6c20ecfd1d86.png",
+        "video": "shopify://files/videos/3971844-hd_1920_1080_25fps.mp4",
+        "video_url": "",
+        "top_padding": 36,
+        "bottom_padding": 36
+      }
+    },
+    "video1_AG4BTz": {
+      "type": "video1",
+      "settings": {
+        "heading": "Video 1",
+        "heading_size": "h1",
+        "enable_video_looping": true,
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "cover_image": "shopify://shop_images/Rectangle_122_1_e1248203-8ce0-47b8-a982-6c20ecfd1d86.png",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "scheme-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
-  "order": ["main"]
+  "order": [
+    "main",
+    "video_U6GYem",
+    "video1_AG4BTz"
+  ]
 }
