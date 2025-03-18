@@ -15,7 +15,65 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "multicolumn_AnWznk": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_YYaq93": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Rectangle_122_3.png",
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_Qp6eb4": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/54101bd7c7573ad671ab4ce74ec35114.jpg",
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_tqp7M8": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/sales-2-edited.jpg",
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_YYaq93",
+        "column_Qp6eb4",
+        "column_tqp7M8"
+      ],
+      "settings": {
+        "title": "Multicolumn",
+        "heading_size": "h1",
+        "image_ratio": "circle",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-807380f3-2cee-4d4f-ba4f-93d43a1b3d61",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
-  "order": ["main"]
+  "order": [
+    "main",
+    "multicolumn_AnWznk"
+  ]
 }
