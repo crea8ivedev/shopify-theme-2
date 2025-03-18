@@ -1,0 +1,35 @@
+
+
+<div class="collection-card">
+  <a href="{{ collection.url }}" class="collection-card__link">
+    <div class="collection-card__image-wrapper">
+      {%- if collection.featured_image -%}
+        <img
+          src="{{ collection.featured_image | image_url: width: 500 }}"
+          srcset="
+            {{ collection.featured_image | image_url: width: 250 }} 250w,
+            {{ collection.featured_image | image_url: width: 500 }} 500w,
+            {{ collection.featured_image | image_url: width: 750 }} 750w
+          "
+          sizes="(max-width: 768px) 100vw, 500px"
+          alt="{{ collection.featured_image.alt | escape }}"
+          loading="lazy"
+          class="collection-card__image"
+          width="auto"
+          height="auto"
+        >
+      {%- else -%}
+        {{ 'image' | placeholder_svg_tag }}
+      {%- endif -%}
+    </div>
+
+    <div class="collection-card__content">
+      <h3 class="collection-card__title">
+        {{ collection.title | default: 'Your Collection Name' | escape }}   
+        <span class="icon-wrap">
+        {% render 'icon-arrow' %}
+        </span>
+      </h3>
+    </div>
+  </a>
+</div>
