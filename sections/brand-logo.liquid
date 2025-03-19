@@ -13,9 +13,9 @@
   data-scroll-speed="{{ section.settings.scroll_speed }}"
   data-direction="{{ section.settings.direction }}"
 >
-  <div class="logo-container">
+  <div class="logo-container page-width">
     {% if section.settings.heading != blank %}
-    {{ section.settings.heading }}
+      {{ section.settings.heading }}
     {% endif %}
     {% if section.settings.content != blank %}
       <div class="logo-desc">{{ section.settings.content }}</div>
@@ -78,12 +78,8 @@
       "id": "direction",
       "label": "t:sections.brand-logo.settings.direction.label",
       "options": [
-        { "value": "left", 
-          "label": "Left to Right" 
-        },
-        { "value": "right", 
-          "label": "Right to Left" 
-        }
+        { "value": "left", "label": "Left to Right" },
+        { "value": "right", "label": "Right to Left" }
       ],
       "default": "left"
     },
@@ -120,7 +116,7 @@
         {
           "type": "image_picker",
           "id": "logo-image",
-          "label":"t:sections.brand-logo.blocks.logo.settings.brand_logo.label"
+          "label": "t:sections.brand-logo.blocks.logo.settings.brand_logo.label"
         }
       ]
     }
