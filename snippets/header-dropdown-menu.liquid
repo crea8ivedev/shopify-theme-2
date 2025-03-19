@@ -1,4 +1,4 @@
-<nav class='header_menu'>
+<nav class='header_menu{% if section.settings.mobile_logo_position == 'click' %} dropdown-click{% endif %}{% if section.settings.mobile_logo_position == 'hover' %} dropdown-hover{% endif %}'>
     <ul class="menu_list header_menu_list" role="menu_list">
     {%- for link in section.settings.menu.links -%}
         <li>
@@ -21,7 +21,7 @@
                           {%- for childlink in link.links -%}
                             <li>
                               {%- if childlink.links == blank -%}
-                                <a id="header_menu-{{ link.handle }}-{{ childlink.handle }}" href="{{ childlink.url }}" class="header__menu-item list-menu__item focus_inset {% if childlink.current %} list-menu_item--active{% endif %}" {% if childlink.current %} aria-current="page" {% endif %}>
+                                <a aria-label="Header menu item" id="header_menu-{{ link.handle }}-{{ childlink.handle }}" href="{{ childlink.url }}" class="header__menu-item list-menu__item focus_inset {% if childlink.current %} list-menu_item--active{% endif %}" {% if childlink.current %} aria-current="page" {% endif %}>
                                   {{ childlink.title | escape }}
                                 </a>
                               {%- else -%}
@@ -34,7 +34,7 @@
 
                                     {%- for grandchildlink in childlink.links -%}
                                       <li>
-                                        <a id="header_menu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}" href="{{ grandchildlink.url }}"
+                                        <a aria-label="Header submenu item" id="header_menu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}" href="{{ grandchildlink.url }}"
                                           class="header__menu-item list-menu__item focus_inset {% if grandchildlink.current %} list-menu_item--active{% endif %}"
                                           {% if grandchildlink.current %} aria-current="page" {% endif %} >
                                           {{ grandchildlink.title | escape }}
@@ -53,7 +53,7 @@
                 </header-dropdown-menu>
 
             {%- else -%}
-                <a id="header_menu-{{ link.handle }}" href="{{ link.url }}" class="header_menu_item list_menu_item focus_inset" {% if link.current %} aria-current="page" {% endif %}>
+                <a aria-label="Header menu" id="header_menu-{{ link.handle }}" href="{{ link.url }}" class="header_menu_item list_menu_item focus_inset" {% if link.current %} aria-current="page" {% endif %}>
                     <span {%- if link.current %} class="header-active-menu-item" {% endif %}>
                     {{- link.title | escape -}}
                     </span>

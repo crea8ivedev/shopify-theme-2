@@ -16,7 +16,7 @@
                 >
                   {{- link.title | escape -}}
                 </span>
-                {{- 'icon-caret.svg' | inline_asset_content -}}
+                {% render 'icon-caret' %}
               </summary>
               <div
                 id="MegaMenu-Content-{{ forloop.index }}"
@@ -36,6 +36,7 @@
                         {% if childlink.current %}
                           aria-current="page"
                         {% endif %}
+                        aria-label="Megamenu item"
                       >
                         {{ childlink.title | escape }}
                       </a>
@@ -50,6 +51,7 @@
                                 {% if grandchildlink.current %}
                                   aria-current="page"
                                 {% endif %}
+                                aria-label="Megamenu item"
                               >
                                 {{ grandchildlink.title | escape }}
                               </a>
@@ -71,6 +73,7 @@
             {% if link.current %}
               aria-current="page"
             {% endif %}
+            aria-label="Header menu"
           >
             <span
               {%- if link.current %}

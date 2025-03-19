@@ -66,6 +66,7 @@
           href="javascript:void(0);"
           id="recover-cancel"
           class="reset-cancel text-center font-body font-semibold !text-16 leading-24 !text-brown !no-underline transition-all duration-300 hover:text-brown_100 !mx-auto !block"
+          aria-label="Customer login"
         >
           {{ 'customer.login_page.cancel' | t }}
         </a>
@@ -176,6 +177,7 @@
         href="javascript:void(0);"
         id="login-none"
         class="drawer_reset_btn text-center font-body font-semibold !text-16 leading-26 !text-pink !no-underline transition-all duration-300 hover:!text-blue !mx-auto !block"
+        aria-label="Forgot Password"
       >
       FORGOT YOUR PASSWORD?
       </a>
@@ -269,6 +271,7 @@
           href="javacript:void(0);"
           id="regi-recover-cancel"
           class="forgot_reset-cancel text-center font-body font-semibold !text-16 leading-24 !text-brown !no-underline transition-all duration-300 hover:text-brown_100 !mx-auto !block"
+          aria-label="Customer login cancel"
         >
           {{ 'customer.login_page.cancel' | t }}
         </a>
@@ -336,6 +339,7 @@
               {%- else -%}
                 <a
                   href="#RegisterForm-{{ field }}"
+                  aria-label="Register Form"
                 >
                   {{ form.errors.translated_fields[field] | capitalize }}
                   {{ form.errors.messages[field] }}
@@ -445,6 +449,7 @@
           href="javascript:void(0);"
           id="regi_forgot_pass"
           class="forgot-pass-btn regi_forgot_pass font-body font-semibold !text-16 leading-26 !text-pink !no-underline transition-all duration-300 hover:!text-blue !mx-auto"
+          aria-label="Sign in"
         >
         ALREADY HAVE AN ACCOUNT? SIGN IN HERE
         </a>
@@ -458,6 +463,7 @@
         <a
           class="trigger_login font-body font-semibold !text-16 leading-26 !text-brown !no-underline transition-all duration-300 hover:!text-brown_100 hover:!no-underline !mx-auto"
           href="#"
+          aria-label="Login"
         >
           Login
         </a>

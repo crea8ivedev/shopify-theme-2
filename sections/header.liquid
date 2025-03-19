@@ -47,7 +47,11 @@
     {%- liquid
       if section.settings.menu != blank
         if section.settings.menu_type_desktop == 'dropdown'
-          render 'header-dropdown-menu'
+          if section.settings.mobile_logo_position == 'click' 
+            render 'header-dropdown-menu', class: 'click'
+          else 
+            render 'header-dropdown-menu', class: 'hover'
+          endif
         elsif section.settings.menu_type_desktop != 'drawer'
           render 'header-mega-menu'       
         endif   
@@ -86,7 +90,7 @@
 
     <div class="left-side-icons">
       {% if section.settings.show_account %}
-        <a href="#" class="header_icon focus_inset login_popup">
+        <a href="#" aria-label="account icon" class="header_icon focus_inset login_popup">
           <div class="account">
             {%- render 'icon-account' -%}
           </div>
@@ -98,7 +102,7 @@
         </div>
       {% endif %}
       {% if section.settings.show_cart %}
-        <a href="#" class="header_icon focus_inset">
+        <a aria-label="cart icon" href="#" class="header_icon focus_inset">
           <div class="cart">
             {%- render 'icon-cart' -%}
           </div>
@@ -110,7 +114,7 @@
 
 {% schema %}
 {
-  "name": "Header",
+  "name": "t:sections.header.name",
   "class": "section-header",
   "settings": [
     {
@@ -119,23 +123,23 @@
       "options": [
         {
           "value": "none",
-          "label": "None"
+          "label": "t:sections.header.settings.sticky_header_type.options.none"
         },
         {
           "value": "on-scroll-up",
-          "label": "On Scroll Up"
+          "label": "t:sections.header.settings.sticky_header_type.options.on_scroll_up"
         },
         {
           "value": "always",
-          "label": "Always"
+          "label": "t:sections.header.settings.sticky_header_type.options.always"
         },
         {
           "value": "reduce-logo-size",
-          "label": "Always Reduce Logo Size"
+          "label": "t:sections.header.settings.sticky_header_type.options.reduce_logo_size"
         }
       ],
       "default": "on-scroll-up",
-      "label": "Sticky Header"
+      "label": "t:sections.header.settings.sticky_header_type.label"
     },
     {
       "type": "select",
@@ -143,16 +147,16 @@
       "options": [
         {
           "value": "middle-left",
-          "label": "Middle Left"
+          "label": "t:sections.header.settings.logo_position.options.middle_left"
         },
         {
           "value": "middle-center",
-          "label": "Middle Center"
+          "label": "t:sections.header.settings.logo_position.options.middle_center"
         }
       ],
       "default": "middle-left",
-      "label": "Desktop logo position",
-      "info": "Edit your logo in theme settings."
+      "label": "t:sections.header.settings.logo_position.label",
+      "info": "t:sections.header.settings.logo_position.info"
     },
     {
       "type": "select",
@@ -160,30 +164,30 @@
       "options": [
         {
           "value": "dropdown",
-          "label": "Dropdown"
+          "label": "t:sections.header.settings.menu_type_desktop.options.dropdown"
         },
         {
           "value": "megamenu",
-          "label": "Mega menu"
+          "label": "t:sections.header.settings.menu_type_desktop.options.megamenu"
         },
         {
           "value": "drawer",
-          "label": "Drawer"
+          "label": "t:sections.header.settings.menu_type_desktop.options.drawer"
         }
       ],
       "default": "dropdown",
-      "label": "Desktop menu type",
-      "info": "Menu type is automatically optimized for mobile."
+      "label": "t:sections.header.settings.menu_type_desktop.label",
+      "info": "t:sections.header.settings.menu_type_desktop.info"
     },
     {
       "type": "header",
-      "content": "Navigation"
+      "content": "t:sections.header.settings.navigation"
     },
     {
       "type": "link_list",
       "id": "menu",
       "default": "main-menu",
-      "label": "Menu"
+      "label": "t:sections.header.settings.menu.label"
     },
     {
       "type": "select",
@@ -191,19 +195,19 @@
       "options": [
         {
           "value": "click",
-          "label": "Click"
+          "label": "t:sections.header.settings.mobile_logo_position.options.click"
         },
         {
           "value": "hover",
-          "label": "Hover"
+          "label": "t:sections.header.settings.mobile_logo_position.options.hover"
         }
       ],
       "default": "click",
-      "label": "Open dropdown items on..."
+      "label": "t:sections.header.settings.mobile_logo_position.label"
     },
     {
       "type": "header",
-      "content": "Color"
+      "content": "t:sections.header.settings.color"
     },
     {
       "type": "color_scheme",
@@ -213,69 +217,69 @@
     },
     {
       "type": "header",
-      "content": "Utilities"
+      "content": "t:sections.header.settings.utilities"
     },
     {
       "type": "checkbox",
       "id": "show_line_separator",
       "default": true,
-      "label": "Show separator line"
+      "label": "t:sections.header.settings.show_line_separator"
     },
     {
       "type": "checkbox",
       "id": "show_account",
       "default": true,
-      "label": "Show Account"
+      "label": "t:sections.header.settings.show_account"
     },
     {
       "type": "checkbox",
       "id": "show_search",
       "default": true,
-      "label": "Show Search"
+      "label": "t:sections.header.settings.show_search"
     },
     {
       "type": "checkbox",
       "id": "show_cart",
       "default": true,
-      "label": "Show Cart"
+      "label": "t:sections.header.settings.show_cart"
     }
   ],
   "blocks": [
     {
       "type": "logo_image",
-      "name": "Mega logo",
+      "name": "t:sections.header.blocks.logo_image.name",
       "settings": [
         {
           "type": "checkbox",
           "id": "menu_enable",
-          "label": "Enable this section",
+          "label": "t:sections.header.blocks.logo_image.settings.menu_enable",
           "default": true
         },
         {
           "type": "image_picker",
           "id": "image",
-          "label": "Image"
+          "label": "t:sections.header.blocks.logo_image.settings.image"
         },
         {
           "type": "text",
           "id": "mega_link",
-          "label": "Select menu",
+          "label": "t:sections.header.blocks.logo_image.settings.mega_link",
           "default": "1"
         },
         {
           "type": "url",
           "id": "link",
-          "label": "Main Link"
+          "label": "t:sections.header.blocks.logo_image.settings.link"
         },
         {
           "type": "text",
           "id": "title",
-          "label": "Title"
+          "label": "t:sections.header.blocks.logo_image.settings.title"
         },
         {
           "type": "text",
           "id": "subtitle",
-          "label": "Sub title"
+          "label": "t:sections.header.blocks.logo_image.settings.subtitle"
         }
       ]
     }

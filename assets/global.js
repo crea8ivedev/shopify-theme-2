@@ -1,3 +1,37 @@
+// start Header dropdown+click functionality
+const clickdetailsElements = document.querySelectorAll('.dropdown-click details');
+
+clickdetailsElements.forEach((details) => {
+  details.addEventListener('click', function () {
+    if (!details.hasAttribute('open')) {
+      clickdetailsElements.forEach((otherDetails) => {
+        if (otherDetails !== details) {
+          otherDetails.removeAttribute('open');
+        }
+      });
+    }
+  });
+});
+// end Header dropdown+click functionality
+
+// Header dropdown+hover functionality
+const detailsElements = document.querySelectorAll('.dropdown-hover details');
+
+detailsElements.forEach((details) => {
+  details.addEventListener('mouseenter', function () {
+    detailsElements.forEach((otherDetails) => {
+      if (otherDetails !== details) {
+        otherDetails.removeAttribute('open');
+      }
+    });
+    details.setAttribute('open', '');
+  });
+  details.addEventListener('mouseleave', function () {
+    details.removeAttribute('open');
+  });
+});
+// end Header dropdown+hover functionality
+
 // Header account-popup 
 $(".login_popup").click(function () {
     if ($(this).hasClass("active")) {

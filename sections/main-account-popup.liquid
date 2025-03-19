@@ -71,6 +71,7 @@
                     aria-controls="pills-home1"
                     data-title="My Account"
                     aria-selected="true"
+                    aria-label="Account login"
                     >SIGN IN</a
                   >
                 </li>
@@ -85,6 +86,7 @@
                     aria-controls="pills-profile2"
                     data-title="Create an Account"
                     aria-selected="false"
+                    aria-label="Create account"
                     >CREATE ACCOUNT</a
                   >
                 </li>
@@ -99,10 +101,11 @@
                 <strong>{{ customer.name }}</strong>
               </span>
               <div class="flex flex-wrap justify-center smscreen:flex-col items-center gap-20">
-                <a href="/account" class="btn-white flex-1 text-center smscreen:w-full btn_primary">My Account</a>
+                <a aria-label="My account" href="/account" class="btn-white flex-1 text-center smscreen:w-full btn_primary">My Account</a>
                 <a
                   href="{{ routes.account_logout_url }}"
                   class="btn-white flex-1 text-center smscreen:w-full btn_black"
+                  aria-label="Account logout"
                   >Logout</a
                 >
               </div>

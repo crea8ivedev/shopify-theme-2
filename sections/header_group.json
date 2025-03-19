@@ -19,7 +19,7 @@
         "menu_type_desktop": "dropdown",
         "menu": "header-menu",
         "mobile_logo_position": "click",
-        "color_scheme": "",
+        "color_scheme": "scheme-1",
         "show_line_separator": true,
         "show_account": true,
         "show_search": true,

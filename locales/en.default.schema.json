@@ -238,6 +238,67 @@
         "label": "Color scheme",
         "has_cards_info": "To change the card color scheme, update your theme settings."
       }
+    },
+    "header": {
+      "name": "Header",
+      "settings": {
+        "sticky_header_type": {
+          "label": "Sticky Header",
+          "options": {
+            "none": "None",
+            "on_scroll_up": "On Scroll Up",
+            "always": "Always",
+            "reduce_logo_size": "Always Reduce Logo Size"
+          }
+        },
+        "logo_position": {
+          "label": "Desktop logo position",
+          "info": "Edit your logo in theme settings.",
+          "options": {
+            "middle_left": "Middle Left",
+            "middle_center": "Middle Center"
+          }
+        },
+        "menu_type_desktop": {
+          "label": "Desktop menu type",
+          "info": "Menu type is automatically optimized for mobile.",
+          "options": {
+            "dropdown": "Dropdown",
+            "megamenu": "Mega menu",
+            "drawer": "Drawer"
+          }
+        },
+        "navigation": "Navigation",
+        "menu": {
+          "label": "Menu"
+        },
+        "mobile_logo_position": {
+          "label": "Open dropdown items on...",
+          "options": {
+            "click": "Click",
+            "hover": "Hover"
+          }
+        },
+        "color": "Color",
+        "utilities": "Utilities",
+        "show_line_separator": "Show separator line",
+        "show_account": "Show Account",
+        "show_search": "Show Search",
+        "show_cart": "Show Cart"
+      },
+      "blocks": {
+        "logo_image": {
+          "name": "Mega logo",
+          "settings": {
+            "menu_enable": "Enable this section",
+            "image": "Image",
+            "mega_link": "Select menu",
+            "link": "Main Link",
+            "title": "Title",
+            "subtitle": "Sub title"
+          }
+        }
+      }
     }
   }
 }
