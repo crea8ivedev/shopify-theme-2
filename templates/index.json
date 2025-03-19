@@ -22,88 +22,84 @@
         "testimonial_CLXfhj": {
           "type": "testimonial",
           "settings": {
-            "caption": "fdgdfg",
             "image": "shopify://shop_images/before.png",
-            "description": "<p>gdfgdsfhd</p>",
-            "citation": "dsfgdfsg",
-            "ratings": 5
+            "review_name": "Lorem Ipsum Name",
+            "review_designation": "Lorem Ipsum Designation",
+            "ratings": 5,
+            "caption": "Lorem Ipsum Caption",
+            "description": "<p><strong>Lorem Ipsum</strong>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>"
           }
         },
-        "testimonial_g7cHXT": {
+        "testimonial_96WF7B": {
           "type": "testimonial",
           "settings": {
-            "caption": "fdgdfg",
             "image": "shopify://shop_images/before.png",
-            "description": "<p>gdfgdsfhd</p>",
-            "citation": "dsfgdfsg",
-            "ratings": 5
+            "review_name": "Lorem Ipsum Name",
+            "review_designation": "Lorem Ipsum Designation",
+            "ratings": 5,
+            "caption": "Lorem Ipsum Caption",
+            "description": "<p><strong>Lorem Ipsum</strong>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>"
           }
         },
-        "testimonial_hfj4bd": {
+        "testimonial_kh4bQn": {
           "type": "testimonial",
           "settings": {
-            "caption": "fdgdfg",
             "image": "shopify://shop_images/before.png",
-            "description": "<p>gdfgdsfhd</p>",
-            "citation": "dsfgdfsg",
-            "ratings": 5
+            "review_name": "Lorem Ipsum Name",
+            "review_designation": "Lorem Ipsum Designation",
+            "ratings": 5,
+            "caption": "Lorem Ipsum Caption",
+            "description": "<p><strong>Lorem Ipsum</strong>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>"
           }
         },
-        "testimonial_Jah8H6": {
+        "testimonial_TFGyFN": {
           "type": "testimonial",
           "settings": {
-            "caption": "fdgdfg",
             "image": "shopify://shop_images/before.png",
-            "description": "<p>gdfgdsfhd</p>",
-            "citation": "dsfgdfsg",
-            "ratings": 5
+            "review_name": "Lorem Ipsum Name",
+            "review_designation": "Lorem Ipsum Designation",
+            "ratings": 5,
+            "caption": "Lorem Ipsum Caption",
+            "description": "<p><strong>Lorem Ipsum</strong>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>"
           }
         },
-        "testimonial_iWTbYD": {
+        "testimonial_Abbj7f": {
           "type": "testimonial",
           "settings": {
-            "caption": "fdgdfg",
             "image": "shopify://shop_images/before.png",
-            "description": "<p>gdfgdsfhd</p>",
-            "citation": "dsfgdfsg",
-            "ratings": 5
+            "review_name": "Lorem Ipsum Name",
+            "review_designation": "Lorem Ipsum Designation",
+            "ratings": 5,
+            "caption": "Lorem Ipsum Caption",
+            "description": "<p><strong>Lorem Ipsum</strong>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>"
           }
         },
-        "testimonial_AeVK6R": {
+        "testimonial_QBEwfz": {
           "type": "testimonial",
           "settings": {
-            "caption": "fdgdfg",
             "image": "shopify://shop_images/before.png",
-            "description": "<p>gdfgdsfhd</p>",
-            "citation": "dsfgdfsg",
-            "ratings": 5
-          }
-        },
-        "testimonial_y4fBCp": {
-          "type": "testimonial",
-          "settings": {
-            "caption": "fdgdfg",
-            "image": "shopify://shop_images/before.png",
-            "description": "<p>gdfgdsfhd</p>",
-            "citation": "dsfgdfsg",
-            "ratings": 5
+            "review_name": "Lorem Ipsum Name",
+            "review_designation": "Lorem Ipsum Designation",
+            "ratings": 5,
+            "caption": "Lorem Ipsum Caption",
+            "description": "<p><strong>Lorem Ipsum</strong>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>"
           }
         }
       },
       "block_order": [
         "testimonial_CLXfhj",
-        "testimonial_g7cHXT",
-        "testimonial_hfj4bd",
-        "testimonial_Jah8H6",
-        "testimonial_iWTbYD",
-        "testimonial_AeVK6R",
-        "testimonial_y4fBCp"
+        "testimonial_96WF7B",
+        "testimonial_kh4bQn",
+        "testimonial_TFGyFN",
+        "testimonial_Abbj7f",
+        "testimonial_QBEwfz"
       ],
       "settings": {
-        "heading": "",
-        "subheading": "",
+        "color_scheme": "scheme-1",
+        "heading": "Lorem Ipsum Heading",
+        "subheading": "Lorem Ipsum Subheading",
         "desktop_layout": "slider",
-        "columns_desktop": 3,
+        "columns_desktop": 4,
         "stack_mobile": true,
         "padding_top": 20,
         "padding_bottom": 20
