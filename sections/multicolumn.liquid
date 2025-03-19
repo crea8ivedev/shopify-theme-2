@@ -1,6 +1,5 @@
 {% comment %} {{ 'section-multicolumn.css' | asset_url | stylesheet_tag }} {% endcomment %}
 
-
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
@@ -17,14 +16,12 @@
 
 {%- liquid
   assign columns_mobile_int = section.settings.columns_mobile | plus: 0
- 
-  if section.settings.swipe_on_mobile and section.blocks.size > columns_mobile_int
 
+  if section.settings.swipe_on_mobile and section.blocks.size > columns_mobile_int
   endif
 -%}
 
-
- <div class="multicolumn color-{{ section.settings.color_scheme }} {% unless section.settings.background_style == 'none' %} background-{{ section.settings.background_style }}{% endunless %}">
+<div class="multicolumn color-{{ section.settings.color_scheme }} {% unless section.settings.background_style == 'none' %} background-{{ section.settings.background_style }}{% endunless %}">
   <div
     class="page-width section-{{ section.id }}-padding "
     {% if settings.animations_reveal_on_scroll %}
@@ -38,7 +35,7 @@
         </h2>
       </div>
     {%- endunless -%}
-    
+
     <ul
       class="multicolumn-list contains-content-container grid grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop"
       role="list"
@@ -62,7 +59,6 @@
                 <div class="multicolumn-card content-container">
                   {%- if block.settings.image != blank -%}
                     {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
-                      {% assign spaced_image = true %}
                     {% endif %}
                     <div class="multicolumn-card__image-wrapper ">
                       <div
@@ -99,7 +95,9 @@
                         {% endif %}
                       >
                         {{- block.settings.link_label | escape -}}
-                        <span class="svg-wrapper"><span class="icon-wrap">&nbsp;{{ 'icon-arrow.svg' | inline_asset_content }}</span></span>
+                        <span class="svg-wrapper"
+                          ><span class="icon-wrap">&nbsp;{{ 'icon-arrow.svg' | inline_asset_content }}</span></span
+                        >
                       </a>
                     {%- endif -%}
                   </div>
@@ -133,71 +131,6 @@
   </div>
 </div>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    var swiperContainer = document.querySelector(".swiper-container");
-    var swiperInstance = null;
-    var isSwiperInitialized = false; // Track if Swiper is initialized
-
-    function initSwiper() {
-        if (!swiperContainer) {
-            return;
-        }
-
-        var screenWidth = document.documentElement.clientWidth; // Correct width
-
-        console.log("Actual screen width:", screenWidth);
-
-        if (screenWidth <= 768 && !isSwiperInitialized) {
-            console.log("Initializing Swiper for mobile view...");
-
-            document.querySelectorAll(".swiper-container .grid__item").forEach(item => {
-                item.classList.add("swiper-slide");
-                item.classList.remove("grid__item");
-            });
-
-            swiperInstance = new Swiper(".swiper-container", {
-                slidesPerView: 1,
-                spaceBetween: 10,
-                navigation: {
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev",
-                },
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
-                }
-            });
-
-            console.log("Swiper initialized.");
-            isSwiperInitialized = true;
-        } else if (screenWidth > 768 && isSwiperInitialized) {
-            console.log("Destroying Swiper for desktop view...");
-
-            if (swiperInstance) {
-                swiperInstance.destroy(true, true);
-                swiperInstance = null;
-            }
-
-            document.querySelectorAll(".swiper-container .swiper-slide").forEach(item => {
-                item.classList.remove("swiper-slide");
-                item.classList.add("grid__item");
-            });
-
-            isSwiperInitialized = false;
-            console.log("Swiper destroyed and grid restored.");
-        }
-    }
-
-    // Run on load
-    initSwiper();
-
-    // Run on resize immediately
-    window.addEventListener("resize", initSwiper);
-});
-
-
-</script>
 
 {% schema %}
 {
@@ -208,6 +141,12 @@
     "groups": ["header", "footer"]
   },
   "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
     {
       "type": "inline_richtext",
       "id": "title",
@@ -220,21 +159,21 @@
       "options": [
         {
           "value": "h2",
-          "label": "Small"
+          "label": "t:sections.multicolumn.settings.heading_size.options.h2"
         },
         {
           "value": "h1",
-          "label": "Medium"
+          "label": "t:sections.multicolumn.settings.heading_size.options.h1"
         },
         {
           "value": "h0",
-          "label": "Large"
-        },
+          "label": "t:sections.multicolumn.settings.heading_size.options.h0"
+        }
       ],
       "default": "h1",
-      "label": "Heading Size"
+      "label": "t:sections.multicolumn.settings.heading_size.label"
     },
- 
+
     {
       "type": "select",
       "id": "image_ratio",
@@ -311,12 +250,7 @@
       "id": "button_link",
       "label": "t:sections.multicolumn.settings.button_link.label"
     },
-    {
-      "type": "color_scheme",
-      "id": "color_scheme",
-      "label": "t:sections.all.colors.label",
-      "default": "scheme-1"
-    },
+    
     {
       "type": "header",
       "content": "t:sections.multicolumn.settings.header_mobile.content"

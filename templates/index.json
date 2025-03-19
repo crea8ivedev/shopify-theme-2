@@ -56,15 +56,15 @@
         "column_tqp7M8"
       ],
       "settings": {
+        "color_scheme": "scheme-807380f3-2cee-4d4f-ba4f-93d43a1b3d61",
         "title": "Multicolumn",
-        "heading_size": "h1",
+        "heading_size": "h0",
         "image_ratio": "circle",
         "columns_desktop": 3,
         "column_alignment": "left",
         "background_style": "none",
         "button_label": "",
         "button_link": "",
-        "color_scheme": "scheme-807380f3-2cee-4d4f-ba4f-93d43a1b3d61",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
         "padding_top": 36,
