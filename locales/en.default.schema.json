@@ -173,7 +173,7 @@
           }
         },
         "columns_desktop": {
-          "label": "Number of columns on desktop"
+          "label": "Number Of Columns On Desktop"
         },
         "stack_mobile": {
           "label": "Stack on Mobile"
