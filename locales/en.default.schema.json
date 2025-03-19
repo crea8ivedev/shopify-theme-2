@@ -190,7 +190,8 @@
           "name": "Testimonial",
           "settings": {
             "image": {
-              "label": "Image"
+              "label": "Image",
+              "info": "Image Recommend Size 80x80"
             },
             "review_name": {
               "label": "Review Name"
