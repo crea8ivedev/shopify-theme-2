@@ -1,0 +1,221 @@
+<style>
+    .testimonial-section {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+    .testimonial-slider {
+      overflow: hidden;
+      position: relative;
+    }
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat({{ section.settings.columns_desktop }}, 1fr);
+      gap: 20px;
+    }
+    @media (max-width: 768px) {
+      .testimonial-grid {
+        grid-template-columns: {% if section.settings.stack_mobile %}1fr{% else %}repeat(2, 1fr){% endif %};
+      }
+    }
+    .swiper-slide {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .testimonial-item img {
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+    </style>
+    
+    <section class="testimonial-section">
+      {% if section.settings.heading != blank %}
+        <h2>{{ section.settings.heading }}</h2>
+      {% endif %}
+      {% if section.settings.subheading != blank %}
+        <p>{{ section.settings.subheading }}</p>
+      {% endif %}
+      
+      {% if section.settings.desktop_layout == 'slider' %}
+      <div class="swiper testimonial-slider">
+        <div class="swiper-wrapper">
+          {% for block in section.blocks %}
+            <div class="swiper-slide testimonial-item">
+              {% if block.settings.image %}
+                <img src="{{ block.settings.image | image_url: width: 100 }}" width="100px" height="100px" alt="Testimonial Image">
+              {% endif %}
+              <p class="testimonial-caption">{{ block.settings.caption }}</p>
+              <div class="testimonial-description">{{ block.settings.description }}</div>
+              <p class="testimonial-citation">- {{ block.settings.citation }}</p>
+              <div class="testimonial-rating">
+                {% for i in (1..block.settings.ratings) %}
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="black" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L15 9H22L16.5 13.5L18 21L12 17L6 21L7.5 13.5L2 9H9L12 2Z"/>
+                  </svg>
+                {% endfor %}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+      {% else %}
+      <div class="testimonial-grid">
+        {% for block in section.blocks %}
+          <div class="testimonial-item">
+            {% if block.settings.image %}
+              <img src="{{ block.settings.image | image_url: width: 100 }}" width="100px" height="100px" alt="Testimonial Image">
+            {% endif %}
+            <p class="testimonial-caption">{{ block.settings.caption }}</p>
+            <div class="testimonial-description">{{ block.settings.description }}</div>
+            <p class="testimonial-citation">- {{ block.settings.citation }}</p>
+            <div class="testimonial-rating">
+              {% for i in (1..block.settings.ratings) %}
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="black" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2L15 9H22L16.5 13.5L18 21L12 17L6 21L7.5 13.5L2 9H9L12 2Z"/>
+                </svg>
+              {% endfor %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </section>
+    
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var swiper = new Swiper(".testimonial-slider", {
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 20,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: {{ section.settings.columns_desktop }},
+            spaceBetween: 20
+          }
+        }
+      });
+    });
+    </script>
+    
+
+
+{% schema %}
+{
+  "name": "Testimonial Slider",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading"
+    },
+    {
+      "type": "select",
+      "id": "desktop_layout",
+      "label": "Desktop Layout",
+      "options": [
+        { "value": "grid", "label": "Grid" },
+        { "value": "slider", "label": "Slider" }
+      ],
+      "default": "slider"
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "label": "Number of columns on desktop",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "type": "checkbox",
+      "id": "stack_mobile",
+      "label": "Stack on Mobile",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top Padding",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom Padding",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 20
+    }
+  ],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Testimonial",
+      "settings": [
+        {
+          "type": "text",
+          "id": "caption",
+          "label": "Caption"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "text",
+          "id": "citation",
+          "label": "Citation"
+        },
+        {
+          "type": "range",
+          "id": "ratings",
+          "label": "Ratings",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "default": 5
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Testimonial Slider",
+      "category": "Testimonials",
+      "blocks": [
+        {
+          "type": "testimonial"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
