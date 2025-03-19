@@ -46,7 +46,6 @@
 }
 
 .before-after-heading-above * {
-    font-weight: 500;
     font-size: 34px;
     color: #252525;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -202,6 +201,7 @@
 
 .left-content h2 strong {
     color: rgba(var(--color-button));
+    font-weight: 400;
 }
 
 .before-after-main .swiper-pagination .swiper-horizontal>.swiper-pagination-bullets,

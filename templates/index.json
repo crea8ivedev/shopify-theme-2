@@ -141,7 +141,7 @@
           "type": "before_after_block",
           "settings": {
             "heading": "<p>Experience the magic before & after with Aura Beauty</p>",
-            "sub_heading": "<p>Transform Your Look <strong>Before</strong> and <strong>After</strong> with Aura Beauty</p>",
+            "sub_heading": "<h2>Transform Your Look <strong>Before</strong> and <strong>After</strong> with Aura Beauty</h2>",
             "content": "",
             "button_text": "Shop Now",
             "button_link": "/",
