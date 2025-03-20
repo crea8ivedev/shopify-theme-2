@@ -149,7 +149,7 @@
           "type": "before_after_block",
           "settings": {
             "caption": "<p>Experience the magic before & after with Aura Beauty</p>",
-            "heading": "",
+            "heading": "<h2>Transform Your Look <strong>Before</strong> and <strong>After</strong> with Aura Beauty</h2>",
             "content": "",
             "button_text": "Shop Now",
             "button_link": "/",
@@ -164,7 +164,7 @@
           "settings": {
             "caption": "<p>Add Caption Here</p>",
             "heading": "<h2>Add Heading here</h2>",
-            "content": "",
+            "content": "Add Content here",
             "button_text": "Shop Now",
             "button_link": "",
             "button_external_link_option": true,
