@@ -123,12 +123,25 @@
             "before_image": "shopify://shop_images/Rectangle_122.jpg",
             "after_image": "shopify://shop_images/54101bd7c7573ad671ab4ce74ec35114.jpg"
           }
+        },
+        "before_after_block_bmFW3E": {
+          "type": "before_after_block",
+          "settings": {
+            "caption": "<p>Add Caption Here</p>",
+            "heading": "<p>Add Heading Here</p>",
+            "content": "Add Content Here",
+            "button_text": "Shop Now",
+            "button_link": "",
+            "button_external_link_option": true,
+            "button_style_secondary": false
+          }
         }
       },
       "block_order": [
         "before_after_block_AqpfnC",
         "before_after_block_kVq8eV",
-        "before_after_block_AEWt9M"
+        "before_after_block_AEWt9M",
+        "before_after_block_bmFW3E"
       ],
       "disabled": true,
       "settings": {

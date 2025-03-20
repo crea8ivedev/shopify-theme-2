@@ -229,18 +229,18 @@
   "sections": {
     "all": {
       "padding": {
-        "section_padding_heading": "Section padding",
-        "padding_top": "Top padding",
+        "section_padding_heading": "Section Padding",
+        "padding_top": "Top Padding",
         "padding_bottom": "Bottom Padding"
       },
       "spacing": "Spacing",
       "colors": {
-        "label": "Color scheme",
+        "label": "Color Scheme",
         "has_cards_info": "To change the card color scheme, update your theme settings."
       }
     },
     "before-after-slider": {
-      "name": "Before after slider",
+      "name": "Before After Slider",
       "settings": {
         "drag_initial_position": {
           "label": "Drag Initial Position"
@@ -248,7 +248,7 @@
       },
       "blocks": {
         "before_after_block": {
-          "name": "Before after slide",
+          "name": "Before After Slide",
           "settings": {
             "caption": {
               "label": "Caption"

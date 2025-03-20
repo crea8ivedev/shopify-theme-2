@@ -63,8 +63,8 @@
           "primary_button_text": "#ffffff",
           "primary_button_border": "#944e63",
           "secondary_button": "",
-          "secondary_button_hover": "",
-          "secondary_button_text": "#ffffff",
+          "secondary_button_hover": "#944e63",
+          "secondary_button_text": "#944e63",
           "secondary_button_border": "#ffffff",
           "icons": "#ffffff",
           "links": "#121212"
