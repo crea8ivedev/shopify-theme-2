@@ -230,13 +230,21 @@
     "all": {
       "padding": {
         "section_padding_heading": "Section padding",
-        "padding_top": "Top padding",
+        "padding_top": "Top Padding",
         "padding_bottom": "Bottom Padding"
       },
       "spacing": "Spacing",
       "colors": {
         "label": "Color scheme",
         "has_cards_info": "To change the card color scheme, update your theme settings."
+      }
+    },
+    "main_page": {
+      "name": "Main Page",
+      "settings": {
+        "color_scheme": "Color Scheme",
+        "title_background": "Background Image",
+        "page_title_black": "Title",
       }
     }
   }

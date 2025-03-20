@@ -14,9 +14,9 @@
   }
 {%- endstyle -%}
 
-  <div class="page-widths page-width--narrows section-{{ section.id }}-padding color-{{ section.settings.color_scheme }}">
-    <div class="ctm-title-banner-text">
-      <div class="ctm-title-background">
+  <section class="page-widths page-width--narrows section-{{ section.id }}-padding color-{{ section.settings.color_scheme }}">
+    <div class="title-banner-wrapper">
+      <div class="title-banner-background">
         {% if section.settings.title_background != blank %}
           <img
             src="{{ section.settings.title_background | image_url }}"
@@ -26,9 +26,9 @@
             height="235"
           >
         {% endif %}
-        <div class="ctm_banner_content ">
-          <div class="ctm-banner-content-wrap">
-            <h1 class="main-page-title page-title">
+        <div class="banner-content ">
+          <div class="banner-content-inner">
+            <h1 class="main-title page-title">
               {% if section.settings.page_title_black != blank %}
                 <span>{{ section.settings.page_title_black }}</span>
               {% else %}
@@ -39,83 +39,33 @@
         </div>
       </div>
     </div>
-  </div>
-<style>
+  </section>
 
-      .ctm-title-background img{
-      display: flex;
-      position: relative;
-      width: 100%;
-      object-fit: cover;
-    }
-    .ctm-banner-content-wrap{
-      padding-inline: 20px;
-      padding-block: 40px;
-    }
-  @media (min-width: 768px) {
-    .ctm_banner_content {
-      position: absolute;
-      top: 50%;
-      left: 0;
-      right: 0;
-      transform: translateY(-50%);
-    }
-    .ctm-title-background{
-      position: relative;
-    }
-
-  }
-  @media (min-width: 1024px) {
-    .ctm-banner-content-wrap{
-      padding-inline: 30px;
-      padding-block: 60px;
-    }
-  
-  }
-
-  @media (max-width: 767px) {
-    .ctm-banner-content-wrap{
-      padding-inline: 10px;
-      padding-block: 30px;
-      background-color: #FFE7E7;
-
-    }
-
-  }
-  .main-page-title {
-    text-transform: capitalize;
-
-    margin-bottom: 0;
-  }
-  
- 
-
-</style>
 {% schema %}
 {
-  "name": "Main Page",
+  "name": "t:sections.main_page.name",
   "class": "main-page-section",
   "settings": [
     {
       "type": "color_scheme",
       "id": "color_scheme",
-      "label": "Color Scheme",
+      "label": "t:sections.main_page.settings.color_scheme",
       "default": "scheme-1"
     },
     {
       "type": "image_picker",
-      "label": "Page title background login",
+      "label": "t:sections.main_page.settings.title_background",
       "id": "title_background",
       "info": "1920 x 400px recommended"
     },
     {
       "type": "text",
-      "label": "Title black login",
+      "label": "t:sections.main_page.settings.page_title_black",
       "id": "page_title_black"
     },
     {
       "type": "header",
-      "content": "Section Padding"
+      "content": "t:sections.all.padding.section_padding_heading"
     },
     {
       "type": "range",
@@ -140,7 +90,7 @@
   ],
   "presets": [
     {
-      "name": " MainPage"
+      "name": "t:sections.main_page.name"
     }
   ]
 }
