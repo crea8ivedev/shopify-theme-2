@@ -250,17 +250,17 @@
         "before_after_block": {
           "name": "Before after slide",
           "settings": {
+            "caption": {
+              "label": "Caption"
+            },
+            "default_caption": {
+              "label": "Add Caption Here"
+            },
             "heading": {
               "label": "Heading"
             },
             "default_heading": {
               "label": "Add Heading Here"
-            },
-            "sub_heading": {
-              "label": "Subheading"
-            },
-            "default_sub_heading": {
-              "label": "Add Subheading Here"
             },
             "content": {
               "label": "Content"
@@ -273,6 +273,9 @@
             },
             "button_link": {
               "label": "Button Link"
+            },
+            "button_external_link_option": {
+              "label": "External Link"
             },
             "button_style_secondary": {
               "label": "Button Style Secondary",
@@ -291,6 +294,9 @@
             },
             "text_position": {
               "label": "Before/After Text Position"
+            },
+            "before_after_option": {
+              "label": "Show Before After On Image"
             },
             "image_info": {
               "label": "494 x 522px .jpg recommended"

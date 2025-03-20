@@ -22,11 +22,12 @@
         "before_after_block_rY4qBY": {
           "type": "before_after_block",
           "settings": {
+            "caption": "<p>Add Caption Here</p>",
             "heading": "<p>Add Heading here</p>",
-            "sub_heading": "<p>Add Subheading here</p>",
             "content": "Add Content here",
             "button_text": "Shop Now",
             "button_link": "",
+            "button_external_link_option": true,
             "button_style_secondary": false,
             "before_image": "shopify://shop_images/Rectangle_145.jpg",
             "after_image": "shopify://shop_images/Rectangle_143.jpg"
@@ -35,11 +36,12 @@
         "before_after_block_cDHkLB": {
           "type": "before_after_block",
           "settings": {
+            "caption": "<p>Add Caption Here</p>",
             "heading": "<p>Add Heading here</p>",
-            "sub_heading": "<p>Add Subheading here</p>",
             "content": "Add Content here",
             "button_text": "Shop Now",
             "button_link": "",
+            "button_external_link_option": true,
             "button_style_secondary": false,
             "before_image": "shopify://shop_images/before.png",
             "after_image": "shopify://shop_images/before.png"
@@ -48,11 +50,12 @@
         "before_after_block_8D9WKK": {
           "type": "before_after_block",
           "settings": {
+            "caption": "<p>Add Caption Here</p>",
             "heading": "<p>Add Heading here</p>",
-            "sub_heading": "<p>Add Subheading here</p>",
             "content": "Add Content here",
             "button_text": "Shop Now",
             "button_link": "",
+            "button_external_link_option": true,
             "button_style_secondary": false,
             "before_image": "shopify://shop_images/54101bd7c7573ad671ab4ce74ec35114.jpg",
             "after_image": "shopify://shop_images/Rectangle_122.jpg"
@@ -68,6 +71,7 @@
       "settings": {
         "color_scheme": "scheme-1",
         "drag_initial_position": 50,
+        "before_after_option": true,
         "before_text": "Before",
         "after_text": "After",
         "text_position": "top",
@@ -81,11 +85,12 @@
         "before_after_block_AqpfnC": {
           "type": "before_after_block",
           "settings": {
+            "caption": "<p>Add Caption Here</p>",
             "heading": "<p>Add Heading here</p>",
-            "sub_heading": "<p>Add Subheading here</p>",
             "content": "Add Content here",
             "button_text": "Shop Now",
             "button_link": "",
+            "button_external_link_option": true,
             "button_style_secondary": false,
             "before_image": "shopify://shop_images/Rectangle_143.jpg",
             "after_image": "shopify://shop_images/Rectangle_145.jpg"
@@ -94,11 +99,12 @@
         "before_after_block_kVq8eV": {
           "type": "before_after_block",
           "settings": {
+            "caption": "<p>Add Caption Here</p>",
             "heading": "<p>Add Heading here</p>",
-            "sub_heading": "<p>Add Subheading here</p>",
             "content": "Add Content here",
             "button_text": "Shop Now",
             "button_link": "",
+            "button_external_link_option": true,
             "button_style_secondary": false,
             "before_image": "shopify://shop_images/image-with-text.png",
             "after_image": "shopify://shop_images/Image_5.png"
@@ -107,11 +113,12 @@
         "before_after_block_AEWt9M": {
           "type": "before_after_block",
           "settings": {
+            "caption": "<p>Add Caption Here</p>",
             "heading": "<p>Add Heading here</p>",
-            "sub_heading": "<p>Add Subheading here</p>",
             "content": "Add Content here",
             "button_text": "Shop Now",
             "button_link": "",
+            "button_external_link_option": true,
             "button_style_secondary": false,
             "before_image": "shopify://shop_images/Rectangle_122.jpg",
             "after_image": "shopify://shop_images/54101bd7c7573ad671ab4ce74ec35114.jpg"
@@ -127,6 +134,7 @@
       "settings": {
         "color_scheme": "",
         "drag_initial_position": 50,
+        "before_after_option": true,
         "before_text": "Before",
         "after_text": "After",
         "text_position": "top",
@@ -140,11 +148,12 @@
         "before_after_block_dEkBxt": {
           "type": "before_after_block",
           "settings": {
-            "heading": "<p>Experience the magic before & after with Aura Beauty</p>",
-            "sub_heading": "<h2>Transform Your Look <strong>Before</strong> and <strong>After</strong> with Aura Beauty</h2>",
+            "caption": "<p>Experience the magic before & after with Aura Beauty</p>",
+            "heading": "<h2>Transform Your Look <strong>Before</strong> and <strong>After</strong> with Aura Beauty</h2>",
             "content": "",
             "button_text": "Shop Now",
             "button_link": "/",
+            "button_external_link_option": true,
             "button_style_secondary": false,
             "before_image": "shopify://shop_images/before.png",
             "after_image": "shopify://shop_images/before.png"
@@ -153,11 +162,12 @@
         "before_after_block_epkDLR": {
           "type": "before_after_block",
           "settings": {
-            "heading": "<p>Add Heading here</p>",
-            "sub_heading": "<p>Add Subheading here</p>",
+            "caption": "<p>Add Caption Here</p>",
+            "heading": "<h2>Add Heading here</h2>",
             "content": "Add Content here",
             "button_text": "Shop Now",
             "button_link": "",
+            "button_external_link_option": true,
             "button_style_secondary": false,
             "before_image": "shopify://shop_images/image-with-text.png",
             "after_image": "shopify://shop_images/Image_5.png"
@@ -166,11 +176,12 @@
         "before_after_block_6xJjRx": {
           "type": "before_after_block",
           "settings": {
-            "heading": "<p>Add Heading here</p>",
-            "sub_heading": "<p>Add Subheading here</p>",
+            "caption": "<p>Add Caption Here</p>",
+            "heading": "<h2>Add Heading here</h2>",
             "content": "Add Content here",
             "button_text": "Shop Now",
             "button_link": "",
+            "button_external_link_option": true,
             "button_style_secondary": false,
             "before_image": "shopify://shop_images/Rectangle_122_5.jpg",
             "after_image": "shopify://shop_images/image-with-text.png"
@@ -185,6 +196,7 @@
       "settings": {
         "color_scheme": "scheme-ebe6c95d-c912-48fe-a6f5-e931bb811980",
         "drag_initial_position": 50,
+        "before_after_option": true,
         "before_text": "Before",
         "after_text": "After",
         "text_position": "top",
