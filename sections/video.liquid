@@ -19,7 +19,7 @@
 {%- liquid
   assign video_id = section.settings.video.id | default: section.settings.video_url.id
   assign video_alt = section.settings.video.alt | default: section.settings.description
-  assign alt = 'sections.video.load_video' | t: description: video_alt | escape
+  assign alt = section.settings.video.description | t: description: video_alt | escape
   assign poster = section.settings.video.preview_image | default: section.settings.cover_image
 
   if section.settings.video != null
@@ -71,8 +71,6 @@ data-media-id="{{ video_id }}"
       | image_url: width: 3840
       | image_tag: sizes: sizes, widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840', alt: alt
     }}
-  {%- else -%}
-    {{ 'hero-apparel-3' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
   {%- endif -%}
   <span class="deferred-media__poster-button motion-reduce">
     <span class="svg-wrapper">
@@ -128,7 +126,7 @@ data-media-id="{{ video_id }}"
 
 {% schema %}
 {
-  "name": "Video 1",
+  "name": "t:sections.all.video.section_name",
   "tag": "section",
   "class": "section",
   "disabled_on": {
@@ -147,27 +145,19 @@ data-media-id="{{ video_id }}"
       "options": [
         {
           "value": "h2",
-          "label": "small"
+          "label": "t:sections.all.video.heading_size.options__1.label"
         },
         {
           "value": "h1",
-          "label": "Medium"
+          "label": "t:sections.all.video.heading_size.options__2.label"
         },
         {
           "value": "h0",
-          "label": "Large"
-        },
-        {
-          "value": "hxl",
-          "label": "Extra Large"
-        },
-        {
-          "value": "hxxl",
-          "label": "Extra Extra Large"
+          "label": "t:sections.all.video.heading_size.options__3.label"
         }
       ],
       "default": "h1",
-      "label": "Heading Size"
+      "label": "t:sections.all.video.heading_size.label"
     },
     {
       "type": "checkbox",
@@ -177,7 +167,7 @@ data-media-id="{{ video_id }}"
     },
     {
       "type": "header",
-      "content": "Video"
+      "content": "Shopify-hosted video"
     },
     {
       "type": "video",
@@ -185,10 +175,14 @@ data-media-id="{{ video_id }}"
       "label": "Video"
     },
     {
+      "type": "header",
+      "content": "Embed video from URL"
+    },
+    {
       "type": "video_url",
       "id": "video_url",
-      "accept": ["youtube", "vimeo"],
       "label": "Video URL",
+      "accept": ["youtube", "vimeo"],
       "info": "Video URL"
     },
     {
@@ -199,12 +193,11 @@ data-media-id="{{ video_id }}"
     {
       "type": "text",
       "id": "description",
-      "label": "Description",
-      "info": "Description"
+      "label": "Video alt text"
     },
     {
       "type": "header",
-      "content": "Full Width"
+      "content": "Style"
     },
     {
       "type": "checkbox",
@@ -220,7 +213,7 @@ data-media-id="{{ video_id }}"
     },
     {
       "type": "header",
-      "content": "Padding"
+      "content": "Section padding"
     },
     {
       "type": "range",
@@ -245,7 +238,7 @@ data-media-id="{{ video_id }}"
   ],
   "presets": [
     {
-      "name": "Video 1"
+      "name": "t:sections.all.video.preset_name"
     }
   ]
 }

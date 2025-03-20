@@ -226,8 +226,38 @@
       }
     }
   },
-  "sections": {
+"sections": {
     "all": {
+      "video": {
+        "section_name": "Video",
+        "heading": "Video",
+        "heading_info": "Set the heading for the video section.",
+        "heading_size": {
+          "label": "Heading size",
+          "options__1": {
+            "label": "Small"
+          },
+          "options__2": {
+            "label": "Medium"
+          },
+          "options__3": {
+            "label": "Large"
+          }
+        },
+        "enable_video_looping": "Enable Video Looping",
+        "shopify_hosted_video": "Shopify-hosted video",
+        "video": "Video",
+        "embed_video_from_url": "Embed video from URL",
+        "video_url": "Video URL",
+        "video_url_info": "Enter a video URL (YouTube or Vimeo).",
+        "cover_image": "Cover Image",
+        "video_alt_text": "Video alt text",
+        "style": "Style",
+        "full_width": "Full Width",
+        "color_scheme": "Color Scheme",
+        "section_padding": "Section Padding",
+        "preset_name": "Video"
+      },
       "padding": {
         "section_padding_heading": "Section padding",
         "padding_top": "Top padding",
