@@ -1,5 +1,5 @@
 .before-after-main .before-after-slider-start {
-    padding: 38px 0 88px 0;
+    padding: 2.375rem 0 5.5rem 0;
 }
 
 .before-after-main .before-after-slider {
@@ -12,23 +12,27 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    column-gap: 90px;
+    column-gap: 5.625rem;
 }
 
 .before-after-main .right-content {
     position: relative;
     overflow: hidden;
-    border-radius: 15px;
-    flex: 0 0 494px;
-    height: 522px;
+    flex: 0 0 30.875rem;
+    height: 32.625rem;
+    border-radius: 0.938rem;
+    -webkit-border-radius: 0.938rem;
+    -moz-border-radius: 0.938rem;
+    -ms-border-radius: 0.938rem;
+    -o-border-radius: 0.938rem;
 }
 
 .before-after-main .before-after-section .left-content {
-    flex: 0 0 calc(100% - 584px);
+    flex: 0 0 calc(100% - 36.5rem);
 }
 
 .before-after-caption-above {
-    margin-bottom: 15px;
+    margin-bottom: 0.938rem;
 }
 
 .before-after-caption-above * {
@@ -41,12 +45,12 @@
 }
 
 .before-after-heading-above {
-    max-width: 470px;
-    margin-bottom: 15px;
+    max-width: 29.375rem;
+    margin-bottom: 0.938rem;
 }
 
 .before-after-heading-above * {
-    font-size: 34px;
+    font-size: 2.125rem;
     color: #252525;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     margin-top: 0;
@@ -57,14 +61,14 @@
 }
 
 .btn-before-after {
-    margin-top: 40px;
+    margin-top: 2.5rem;
 }
 
 .before-after-main .swiper-pagination {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 10px;
+    gap: 0.625rem;
 }
 
 .before-after-main .before-after-section .left-content div {
@@ -72,7 +76,7 @@
 }
 
 .before-after-main .before-after-section .left-content .before-after-shop-btn svg {
-    padding: 10px;
+    padding: 0.625rem;
     fill: rgba(var(--color-link));
 }
 
@@ -116,8 +120,8 @@
     background: #FFFFFF;
     color: #000000;
     text-align: center;
-    padding: 15px;
-    width: 20px;
+    padding: 0.938rem;
+    width: 1.25rem;
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -138,37 +142,37 @@
     position: absolute;
     background: rgba(var(--color-button), var(--alpha-button-background));
     color: rgb(var(--color-button-text));
-    padding: 5px 10px;
+    padding: 0.313rem 0.625rem;
     z-index: 4;
     border: 1px solid rgba(var(--color-button-border));
-    border-radius: 100px;
-    -webkit-border-radius: 100px;
-    -moz-border-radius: 100px;
-    -ms-border-radius: 100px;
-    -o-border-radius: 100px;
+    border-radius: 6.25rem;
+    -webkit-border-radius: 6.25rem;
+    -moz-border-radius: 6.25rem;
+    -ms-border-radius: 6.25rem;
+    -o-border-radius: 6.25rem;
 }
 
 .before-after-main .right-content .slider-image .before-text {
-    left: 10px;
+    left: 0.625rem;
 }
 
 .before-after-main .right-content .slider-image .after-text {
-    right: 10px;
+    right: 0.625rem;
 }
 
 .before-after-main .right-content .slider-image .text-bottom,
 .before-after-main .right-content .slider-image .text-bottom {
-    bottom: 10px;
+    bottom: 0.625rem;
 }
 
 .before-after-main .right-content .slider-image .text-top,
 .before-after-main .right-content .slider-image .text-top {
-    top: 10px;
+    top: 0.625rem;
 }
 
 .before-after-main .swiper-pagination .swiper-pagination-bullet {
-    width: 14px;
-    height: 14px;
+    width: 0.875rem;
+    height: 0.875rem;
     margin: 0;
     border: 1px solid rgba(var(--color-text));
     border-radius: 50%;
@@ -181,7 +185,7 @@
 
 .before-after-main .before-after-section .left-content h5 {
     color: #B47B84;
-    margin: 10px 0;
+    margin: 0.625rem 0;
 }
 
 .before-after-main .slider-image svg {
@@ -197,8 +201,8 @@
 
 .before-after-main .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active::before {
     content: '';
-    width: 8px;
-    height: 8px;
+    width: 0.5rem;
+    height: 0.5rem;
     background: rgba(var(--color-button));
     border-radius: 50%;
     position: absolute;
@@ -213,51 +217,51 @@
 .swiper-pagination-bullets.swiper-pagination-horizontal,
 .swiper-pagination-custom,
 .swiper-pagination-fraction {
-    bottom: 86px;
+    bottom: 5.375rem;
 }
 
 @media (min-width: 1600px) {
     .before-after-heading-above {
-        max-width: 650px;
+        max-width: 40.625rem;
     }
 }
 
 @media (min-width: 1400px) {
     .before-after-main.page-width {
-        padding-left: 80px;
-        padding-right: 80px;
+        padding-left: 5rem;
+        padding-right: 5rem;
     }
     .before-after-main .before-after-slider-start {
-        margin-left: 113px;
-        margin-right: 113px;
+        margin-left: 7.063rem;
+        margin-right: 7.063rem;
     }
     .before-after-caption-above * {
-        line-height: 22px;
+        line-height: 1.375rem;
     }
     .before-after-heading-above * {
-        line-height: 45px;
+        line-height: 2.813rem;
     }
 }
 
 @media (min-width: 990px) and (max-width: 1199px) {
     .before-after-main .before-after-section .left-content {
-        flex: 0 0 calc(100% - 490px);
+        flex: 0 0 calc(100% - 30.625rem);
     }
     .before-after-main .right-content {
-        flex: 0 0 400px;
-        height: 422px;
+        flex: 0 0 25rem;
+        height: 26.375rem;
     }
     .before-after-main .swiper-pagination .swiper-horizontal>.swiper-pagination-bullets,
     .swiper-pagination-bullets.swiper-pagination-horizontal,
     .swiper-pagination-custom,
     .swiper-pagination-fraction {
-        bottom: 50px;
+        bottom: 3.125rem;
     }
 }
 
 @media (min-width: 990px) {
     .before-after-main .before-after-section .left-content {
-        margin-top: -56px;
+        margin-top: -3.5rem;
     }
 }
 
@@ -270,20 +274,20 @@
     }
     .before-after-main .before-after-section .left-content {
         flex: unset;
-        max-width: 494px;
+        max-width: 30.875rem;
         margin: 0 auto;
-        margin-top: 40px;
+        margin-top: 2.5rem;
         text-align: center;
     }
     .before-after-main .right-content {
         flex: unset;
         width: 100%;
-        height: 522px;
-        max-width: 494px;
+        height: 32.625rem;
+        max-width: 30.875rem;
         margin: 0 auto;
     }
     .btn-before-after {
-        margin-top: 25px;
+        margin-top: 1.563rem;
     }
     .before-after-main .swiper-pagination .swiper-horizontal>.swiper-pagination-bullets,
     .swiper-pagination-bullets.swiper-pagination-horizontal,
@@ -291,24 +295,24 @@
     .swiper-pagination-fraction {
         bottom: 0;
         position: relative;
-        margin-top: 30px;
+        margin-top: 1.875rem;
         justify-content: center;
     }
     .before-after-heading-above * {
-        font-size: 32px;
+        font-size: 2rem;
     }
     .before-after-main .before-after-slider-start {
-        padding: 38px 0;
+        padding: 2.375rem 0;
     }
 }
 
 @media (max-width: 639px) {
     .before-after-main .right-content {
-        height: 282px;
-        max-width: 272px;
+        height: 17.625rem;
+        max-width: 17rem;
     }
     .before-after-heading-above * {
-        font-size: 24px;
+        font-size: 1.5rem;
     }
 }
 
