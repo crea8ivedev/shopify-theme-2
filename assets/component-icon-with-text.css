@@ -22,7 +22,7 @@
   .icon-with-text-wrapper .grid-box .grid.center {
     justify-content: center;
     align-items: center;
-  } 
+  }
   .icon-with-text-wrapper .grid-box .grid .grid-text p,.icon-with-text-wrapper .grid-box .grid .grid-title h5 {
     margin: 0;
   }
@@ -46,6 +46,7 @@
     display: flex;
     flex-wrap: wrap;
     row-gap: 30px;
+    column-gap: 40px;
   }
   .icon-with-text-wrapper .grid-boxes .grid__item {
     padding-inline: 10px;
