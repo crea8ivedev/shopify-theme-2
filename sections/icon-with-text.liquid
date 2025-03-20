@@ -26,7 +26,7 @@
       endif
 -%} 
 <e-iconwithtext data-show-mobile-slider="{% if section.settings.show_mobile_slider == true %}true{% else %}false{% endif %}" >
-  <div class="icon-with-text-wrapper color-{{ section.settings.color_scheme }}">
+  <div class="icon-with-text-wrapper color-{{ section.settings.color_scheme }} icon-with-text-main">
     <div class="page-width">
     <div class="icon-with-text-inner swiper icon-with-text-slider section-{{ section.id }}-padding" role="region" aria-label="Icon with text slider" tabindex="0" data-show-mobile-slider="{% if show_mobile_slider %}true{% else %}false{% endif %}">
       {% if section.settings.heading != blank %}

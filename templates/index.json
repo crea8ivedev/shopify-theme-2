@@ -31,8 +31,8 @@
         "column_VAhitH": {
           "type": "column",
           "settings": {
-            "grid_title": "Free shipping",
-            "grid_description": "Standard shipping",
+            "grid_title": "Special discounts",
+            "grid_description": "Guaranteed saving",
             "grid_image": "shopify://shop_images/Vector_1.svg",
             "svg_icon": ""
           }
@@ -40,8 +40,8 @@
         "column_EG6gNw": {
           "type": "column",
           "settings": {
-            "grid_title": "Free shipping",
-            "grid_description": "Standard shipping",
+            "grid_title": "Buyers protection",
+            "grid_description": "Secure payment",
             "grid_image": "shopify://shop_images/Vector_2.svg",
             "svg_icon": ""
           }
@@ -49,8 +49,8 @@
         "column_3WPVYU": {
           "type": "column",
           "settings": {
-            "grid_title": "Free shipping",
-            "grid_description": "Standard shipping",
+            "grid_title": "Customer service",
+            "grid_description": "Give us feedback",
             "grid_image": "shopify://shop_images/Vector_3.svg",
             "svg_icon": ""
           }
