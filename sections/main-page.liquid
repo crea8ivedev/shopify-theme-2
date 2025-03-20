@@ -1,18 +1,118 @@
-<div class="page-width page-width--narrow section-{{ section.id }}-padding">
-  <h1 class="main-page-title page-title h0{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
-    {{ page.title | escape }}
-  </h1>
-  <div class="rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-    {{ page.content }}
-  </div>
-</div>
+{{ 'section-main-page.css' | asset_url | stylesheet_tag }}
 
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.50 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.50 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+  <div class="page-widths page-width--narrows section-{{ section.id }}-padding color-{{ section.settings.color_scheme }}">
+    <div class="ctm-title-banner-text">
+      <div class="ctm-title-background">
+        {% if section.settings.title_background != blank %}
+          <img
+            src="{{ section.settings.title_background | image_url }}"
+            alt="img_logo"
+            loading="lazy"
+            width="auto"
+            height="235"
+          >
+        {% endif %}
+        <div class="ctm_banner_content ">
+          <div class="ctm-banner-content-wrap">
+            <h1 class="main-page-title page-title">
+              {% if section.settings.page_title_black != blank %}
+                <span>{{ section.settings.page_title_black }}</span>
+              {% else %}
+                {{ page.title | escape }}
+              {% endif %}
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<style>
+
+      .ctm-title-background img{
+      display: flex;
+      position: relative;
+      width: 100%;
+      object-fit: cover;
+    }
+    .ctm-banner-content-wrap{
+      padding-inline: 20px;
+      padding-block: 40px;
+    }
+  @media (min-width: 768px) {
+    .ctm_banner_content {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      transform: translateY(-50%);
+    }
+    .ctm-title-background{
+      position: relative;
+    }
+
+  }
+  @media (min-width: 1024px) {
+    .ctm-banner-content-wrap{
+      padding-inline: 30px;
+      padding-block: 60px;
+    }
+  
+  }
+
+  @media (max-width: 767px) {
+    .ctm-banner-content-wrap{
+      padding-inline: 10px;
+      padding-block: 30px;
+      background-color: #FFE7E7;
+
+    }
+
+  }
+  .main-page-title {
+    text-transform: capitalize;
+
+    margin-bottom: 0;
+  }
+  
+ 
+
+</style>
 {% schema %}
 {
   "name": "Main Page",
-  "tag": "section",
-  "class": "section",
+  "class": "main-page-section",
   "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color Scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "image_picker",
+      "label": "Page title background login",
+      "id": "title_background",
+      "info": "1920 x 400px recommended"
+    },
+    {
+      "type": "text",
+      "label": "Title black login",
+      "id": "page_title_black"
+    },
     {
       "type": "header",
       "content": "Section Padding"
@@ -24,7 +124,7 @@
       "max": 100,
       "step": 4,
       "unit": "px",
-      "label": "Top Padding",
+      "label": "t:sections.all.padding.padding_top",
       "default": 36
     },
     {
@@ -34,9 +134,16 @@
       "max": 100,
       "step": 4,
       "unit": "px",
-      "label": "Bottom Padding",
+      "label": "t:sections.all.padding.padding_bottom",
       "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": " MainPage"
     }
   ]
 }
 {% endschema %}
+
+

@@ -12,10 +12,15 @@
     "main": {
       "type": "main-page",
       "settings": {
-        "padding_top": 28,
-        "padding_bottom": 28
+        "color_scheme": "scheme-1",
+        "title_background": "shopify://shop_images/various-cosmetic-products-makeup-red-260nw-1140342251.jpg",
+        "page_title_black": "about us",
+        "padding_top": 0,
+        "padding_bottom": 4
       }
     }
   },
-  "order": ["main"]
+  "order": [
+    "main"
+  ]
 }
