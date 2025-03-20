@@ -154,7 +154,7 @@
             "button_text": "Shop Now",
             "button_link": "/",
             "button_external_link_option": true,
-            "button_style_secondary": false,
+            "button_style_secondary": true,
             "before_image": "shopify://shop_images/before.png",
             "after_image": "shopify://shop_images/before.png"
           }
