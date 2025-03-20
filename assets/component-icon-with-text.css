@@ -29,9 +29,22 @@
   font-size: 18px;
   line-height: 21px;
   letter-spacing: 0;
+  opacity: 0.8;
   margin-top: 0;
 }
 
 .icon-with-text-main .grid-boxes .grid__item .icon_left .grid-text *:last-child {
   margin-bottom: 0;
+}
+
+.icon-with-text-main .grid-boxes .grid__item .icon_left .grid-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-with-text-main .grid-boxes .grid__item .icon_left .grid-image img {
+  width: 100%;
+  max-width: 63px;
+  object-fit: contain;
 }

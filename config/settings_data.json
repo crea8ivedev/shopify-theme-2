@@ -52,6 +52,22 @@
           "icons": "#ffffff",
           "links": "#121212"
         }
+      },
+      "scheme-ee9bfb00-7c2b-43f1-8576-9e95237047fb": {
+        "settings": {
+          "text": "#944e63",
+          "background": "#ffffff",
+          "primary_button": "#b47b84",
+          "primary_button_hover": "",
+          "primary_button_text": "#ffffff",
+          "primary_button_border": "#121212",
+          "secondary_button": "",
+          "secondary_button_hover": "#b47b84",
+          "secondary_button_text": "#b47b84",
+          "secondary_button_border": "#ffffff",
+          "icons": "#ffffff",
+          "links": "#121212"
+        }
       }
     }
   },
