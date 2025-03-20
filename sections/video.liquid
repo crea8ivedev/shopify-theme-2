@@ -18,8 +18,8 @@
 
 {%- liquid
   assign video_id = section.settings.video.id | default: section.settings.video_url.id
-  assign video_alt = section.settings.video.alt | default: section.settings.description
-  assign alt = section.settings.video.description | t: description: video_alt | escape
+  assign video_alt = section.settings.video.alt | default: section.settings.description | default: 'Video thumbnail'
+  assign alt = section.settings.video.description | default: video_alt | default: 'Video thumbnail' | escape
   assign poster = section.settings.video.preview_image | default: section.settings.cover_image
 
   if section.settings.video != null
@@ -54,9 +54,6 @@
     </div><deferred-media
 class="video-section__media deferred-media gradient global-media-settings{% if section.settings.full_width %} global-media-settings--full-width{% endif %}{% if fix_ratio %} media-fit-cover{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
 data-media-id="{{ video_id }}"
-{% if poster != null %}
-  style="--ratio-percent: {{ 1 | divided_by: poster.aspect_ratio | times: 100 }}%;"
-{% endif %}
 >
 <button
   id="Deferred-Poster-Modal-{{ video_id }}"
@@ -69,7 +66,7 @@ data-media-id="{{ video_id }}"
     {{
       poster
       | image_url: width: 3840
-      | image_tag: sizes: sizes, widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840', alt: alt
+      | image_tag: sizes: sizes, widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840', alt: video_alt
     }}
   {%- endif -%}
   <span class="deferred-media__poster-button motion-reduce">
