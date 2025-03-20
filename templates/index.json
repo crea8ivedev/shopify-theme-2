@@ -148,8 +148,8 @@
         "before_after_block_dEkBxt": {
           "type": "before_after_block",
           "settings": {
-            "caption": "",
-            "heading": "<h2>Transform Your Look <strong>Before</strong> and <strong>After</strong> with Aura Beaty</h2>",
+            "caption": "<p>Experience the magic before & after with Aura Beauty</p>",
+            "heading": "",
             "content": "",
             "button_text": "Shop Now",
             "button_link": "/",
