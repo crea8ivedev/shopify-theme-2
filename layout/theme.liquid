@@ -33,9 +33,9 @@
 
     {% comment %} Swiper Slider Css{% endcomment %}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    {{ 'base.css' | asset_url | stylesheet_tag }}
     {% comment %} Swiper Slider Script{% endcomment %}
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer="defer"></script>
-
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
   </head>
 
