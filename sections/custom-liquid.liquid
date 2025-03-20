@@ -1,28 +1,25 @@
-{{ 'custom-liquid.css' | asset_url | stylesheet_tag }}
+{{ 'component-custom-liquid.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
-    .section-padding {
-      padding-top: calc({{ section.settings.padding_top }}px * 0.75);
-      padding-bottom: calc({{ section.settings.padding_bottom }}px  * 0.75);
-      padding-left : calc(10px * 0.75);
-      padding-right : calc(10px * 0.75);
-    }
-  
-    @media screen and (min-width: 750px) {
-      .section-padding {
-        padding-top: {{ section.settings.padding_top }}px;
-        padding-bottom: {{ section.settings.padding_bottom }}px;
-        padding-left : 10px;
-        padding-right : 10px;
-      }
-    }
-  {%- endstyle -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
 
-<section class="color-{{ section.settings.color_scheme }}" role="region">
-    <div class="section-padding text-{{ section.settings.text_alignment }} mobile_alignment">
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+{% if section.settings.custom_code != blank %}
+<section class="custom-liquid color-{{ section.settings.color_scheme }} section-{{ section.id }}-padding" role="region">
+    <div class="{{ section.settings.text_alignment }} mobile_alignment">
       {{ section.settings.custom_code }}
     </div>
 </section>
+{% endif %}
   
   {% schema %}
   {

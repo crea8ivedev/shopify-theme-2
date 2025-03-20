@@ -8,18 +8,19 @@
  * ------------------------------------------------------------
  */
 {
-  "name": "Header",
-  "type": "header",
   "sections": {
-    "header": {
-      "type": "header",
-      "disabled": true,
+    "main": {
+      "type": "main-page",
       "settings": {
-        "color_scheme": ""
+        "color_scheme": "",
+        "title_background": "shopify://shop_images/various-cosmetic-products-makeup-red-260nw-1140342251.jpg",
+        "page_title_black": "",
+        "padding_top": 28,
+        "padding_bottom": 28
       }
     }
   },
   "order": [
-    "header"
+    "main"
   ]
 }
