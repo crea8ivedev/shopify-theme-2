@@ -69,11 +69,12 @@ data-media-id="{{ video_id }}"
       | image_tag: sizes: sizes, widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840', alt: video_alt
     }}
   {%- endif -%}
-  <span class="deferred-media__poster-button motion-reduce">
+  <span class="deferred-media__poster-button motion-reduce" tabindex="0" role="button" aria-label="Play Video">
     <span class="svg-wrapper">
       {{- 'icon-play.svg' | inline_asset_content -}}
     </span>
   </span>
+
 </button>
 
 <template>
