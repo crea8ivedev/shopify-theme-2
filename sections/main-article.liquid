@@ -1,0 +1,155 @@
+{{ 'section-blog-post.css' | asset_url | stylesheet_tag }}
+
+<article class="article">
+  <div class="article-template__back element-margin-top center">
+    <a href="{{ blog.url }}" class="article-template__link link ">
+      <span class="icon-wrap">
+        <span class="svg-wrapper">
+         {% render 'arrow-left' %}
+        </span>
+      </span>
+      {{ 'blogs.article.back_to_blog' | t: title: blog.title | escape }}
+    </a>
+  </div>
+  {%- for block in section.blocks -%}
+    {%- case block.type -%}
+      {%- when '@app' -%}
+        <div class="page-width page-width--narrow">
+          {% render block %}
+        </div>
+
+      {%- when 'feature' -%}
+        {% if article.image %}
+          <div
+            class="article-template__hero-container"
+          >
+            <img
+              src="{{ article.image | image_url }}"
+              alt="{{ article.image.alt | escape }}"
+              height="auto"
+              width="auto"
+            >
+          </div>
+        {% endif %}
+
+      {%- when 'title' -%}
+        <header
+          class="page-width page-width--narrow"
+          {{ block.shopify_attributes }}
+        >
+          <h1
+            class="article-template__title"
+          >
+            {{ article.title | escape }}
+          </h1>
+          {%- if block.settings.blog_show_date -%}
+            <span class="circle-divider caption-with-letter-spacing">
+              {{- article.published_at | time_tag: format: 'date' -}}
+            </span>
+          {%- endif -%}
+          {%- if block.settings.blog_show_author -%}
+            <span class="caption-with-letter-spacing">
+              <span>{{ article.author }}</span>
+            </span>
+          {%- endif -%}
+        </header>
+      {%- when 'content' -%}
+        <div
+          class="article-template__content page-width page-width--narrow "
+        >
+          {{ article.content }}
+        </div>
+      {%- when 'share' -%}
+        <div
+          class="article-template__social-sharing page-width page-width--narrow{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+          {{ block.shopify_attributes }}
+        >
+          {% assign share_url = request.origin | append: article.url %}
+          {% render 'share-button', block: block, share_link: share_url %}
+        </div>
+    {% endcase %}
+  {% endfor %}
+  {% if blog.next_article or blog.previous_article %}
+    <div class="blog-pagination-wrap">
+        <div class="blog-pagination">
+            {% if blog.next_article %}
+                <a href="/blogs/{{ blog.next_article.handle }}" class="blog-pagination-button previous button">
+                    Previous
+                </a>
+            {% endif %} 
+            {% if blog.previous_article %}
+                <a href="/blogs/{{ blog.previous_article.handle }}" class="blog-pagination-button next button">
+                    Next
+                </a>
+            {% endif %}
+        </div>
+    </div>
+{% endif %}
+
+</article>
+
+{% schema %}
+{
+  "name": "t:sections.main-article.name",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "t:sections.main-article.blocks.featured_image.name",
+      "limit": 1
+    },
+    {
+      "type": "title",
+      "name": "t:sections.main-article.blocks.title.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "blog_show_date",
+          "default": true,
+          "label": "t:sections.main-article.blocks.title.settings.blog_show_date.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "blog_show_author",
+          "default": false,
+          "label": "t:sections.main-article.blocks.title.settings.blog_show_author.label"
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "name": "t:sections.main-article.blocks.content.name",
+      "limit": 1,
+      "settings": []
+    },
+    {
+      "type": "share",
+      "name": "t:sections.main-article.blocks.share.name",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "text",
+          "id": "share_label",
+          "label": "t:sections.main-article.blocks.share.settings.text.label",
+          "default": "t:sections.main-article.blocks.share.settings.text.default"
+        },
+        {
+          "type": "paragraph",
+          "content": "t:sections.main-article.blocks.share.settings.featured_image_info.content"
+        },
+        {
+          "type": "paragraph",
+          "content": "t:sections.main-article.blocks.share.settings.title_info.content"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.main-article.name",
+      "blocks": [{ "type": "feature" }, { "type": "title" }, { "type": "content" }, { "type": "share" }]
+    }
+  ]
+}
+{% endschema %}
