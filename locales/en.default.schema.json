@@ -233,7 +233,7 @@
         "heading": "Video",
         "heading_info": "Set the heading for the video section.",
         "heading_size": {
-          "label": "Heading size",
+          "label": "Heading Size",
           "options__1": {
             "label": "Small"
           },
@@ -245,13 +245,13 @@
           }
         },
         "enable_video_looping": "Enable Video Looping",
-        "shopify_hosted_video": "Shopify-hosted video",
+        "shopify_hosted_video": "Shopify-hosted Video",
         "video": "Video",
-        "embed_video_from_url": "Embed video from URL",
+        "embed_video_from_url": "Embed Video From URL",
         "video_url": "Video URL",
-        "video_url_info": "Enter a video URL (YouTube or Vimeo).",
+        "video_url_info": "Enter a Video URL (YouTube or Vimeo).",
         "cover_image": "Cover Image",
-        "video_alt_text": "Video alt text",
+        "video_alt_text": "Video Alt Text",
         "style": "Style",
         "full_width": "Full Width",
         "color_scheme": "Color Scheme",
@@ -259,13 +259,13 @@
         "preset_name": "Video"
       },
       "padding": {
-        "section_padding_heading": "Section padding",
-        "padding_top": "Top padding",
+        "section_padding_heading": "Section Padding",
+        "padding_top": "Top Padding",
         "padding_bottom": "Bottom Padding"
       },
       "spacing": "Spacing",
       "colors": {
-        "label": "Color scheme",
+        "label": "Color Scheme",
         "has_cards_info": "To change the card color scheme, update your theme settings."
       }
     }
