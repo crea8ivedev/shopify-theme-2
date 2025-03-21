@@ -6,14 +6,30 @@
       height: auto;
     }
   }
+  header-drawer {
+    justify-self: start;
+    margin-left: -1.2rem;
+  }
+
 </style>
 {%- if section.settings.menu_type_desktop == 'megamenu' -%}
   <link rel="stylesheet" href="{{ 'component-mega-menu.css' | asset_url }}" media="print" onload="this.media='all'">
 {%- endif -%}
 {{ 'header.css' | asset_url | stylesheet_tag }}
+{%- if section.settings.menu_type_desktop != 'drawer' -%}
+  <style>
+    @media screen and (min-width: 990px) {
+      header-drawer {
+        display: none;
+      }
+    }
+  </style>
+{%- endif -%}
 <{% if section.settings.sticky_header_type != 'none' %}sticky-header data-sticky-type="{{ section.settings.sticky_header_type }}"{% else %}div{% endif %} class="header-wrapper color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}">
   <header class="header header--{{ section.settings.logo_position }} page-width ctm_{{ section.settings.menu_type_desktop }}">
-    
+      {%- liquid  
+          render 'header-drawer'
+      %}
     {%- if section.settings.logo_position != 'middle-center' -%}
       {%- if request.page_type == 'index' -%}
         <h1 class="header__heading">
@@ -45,7 +61,6 @@
     {%- endif -%}
 
     {%- liquid
-      if section.settings.menu != blank
         if section.settings.menu_type_desktop == 'dropdown'
           if section.settings.mobile_logo_position == 'click' 
             render 'header-dropdown-menu', class: 'click'
@@ -55,7 +70,6 @@
         elsif section.settings.menu_type_desktop != 'drawer'
           render 'header-mega-menu'       
         endif   
-      endif
     %}
 
     {%- if section.settings.logo_position == 'middle-center' -%}
@@ -89,17 +103,17 @@
     {%- endif -%}
 
     <div class="left-side-icons">
+      {% if section.settings.show_search %}
+        <div class="search">
+          {% render 'icon-search' %}
+        </div>
+      {% endif %}
       {% if section.settings.show_account %}
         <a href="#" aria-label="account icon" class="header_icon focus_inset login_popup">
           <div class="account">
             {%- render 'icon-account' -%}
           </div>
         </a>
-      {% endif %}
-      {% if section.settings.show_search %}
-        <div class="search">
-          {% render 'icon-search' %}
-        </div>
       {% endif %}
       {% if section.settings.show_cart %}
         <a aria-label="cart icon" href="#" class="header_icon focus_inset">

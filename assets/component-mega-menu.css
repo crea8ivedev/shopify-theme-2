@@ -9,8 +9,8 @@
     border-right: 0;
     left: 0;
     overflow-y: auto;
-    padding-bottom: 3rem;
-    padding-top: 3rem;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
     position: absolute;
     right: 0;
     top: 100%;
@@ -21,7 +21,8 @@
   }
   
   .header-wrapper--border-bottom .mega-menu__content {
-    border-top: 0;
+    border-top: 1px solid lightgray;
+    margin-top: 0.5rem;
   }
   
   .js .mega-menu__content {
@@ -31,7 +32,7 @@
   
   .mega-menu[open] .mega-menu__content {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(-35rem);
   }
   
   .mega-menu__list {

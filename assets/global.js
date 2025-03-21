@@ -32,6 +32,40 @@ detailsElements.forEach((details) => {
 });
 // end Header dropdown+hover functionality
 
+// start Header megamenu+click functionality
+const clickmegamenuElements = document.querySelectorAll('.megamenu-click details');
+
+clickmegamenuElements.forEach((details) => {
+  details.addEventListener('click', function () {
+    if (!details.hasAttribute('open')) {
+      clickmegamenuElements.forEach((otherDetails) => {
+        if (otherDetails !== details) {
+          otherDetails.removeAttribute('open');
+        }
+      });
+    }
+  });
+});
+// end Header megamenu+click functionality
+
+// Header megamenu+hover functionality
+const hovermegamenuElements = document.querySelectorAll('.megamenu-hover details');
+
+hovermegamenuElements.forEach((details) => {
+  details.addEventListener('mouseenter', function () {
+    hovermegamenuElements.forEach((otherDetails) => {
+      if (otherDetails !== details) {
+        otherDetails.removeAttribute('open');
+      }
+    });
+    details.setAttribute('open', '');
+  });
+  details.addEventListener('mouseleave', function () {
+    details.removeAttribute('open');
+  });
+});
+// end Header megamenu+hover functionality
+
 // Header account-popup 
 $(".login_popup").click(function () {
     if ($(this).hasClass("active")) {

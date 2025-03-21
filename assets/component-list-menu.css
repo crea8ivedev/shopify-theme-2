@@ -54,7 +54,7 @@ header.header.page-width {
   justify-content: space-between;
 }
 
-.header__menu-item.list-menu__item {
+summary.header__menu-item.list-menu__item {
   text-decoration: none;
   text-transform: uppercase;
   display: flex;
@@ -78,4 +78,49 @@ header.header.page-width {
 
 details[open]>.header__menu-item .icon-caret {
   transform: rotate(180deg);
+}
+
+.header {
+  background-color: #FFE7E7;
+  padding-bottom: 0.7rem;
+}
+
+ul.header_submenu {
+  background-color: #fdfdfd;
+}
+
+details[open]>.header__menu-item span {
+  color: #643843;
+}
+
+details.mega-menu {
+  color: #643843;
+}
+
+ul.header_submenu .header__menu-item {
+  color: #643843;
+  text-decoration: none;
+}
+
+a.header__menu-item:hover {
+  text-decoration: underline;
+}
+
+.icon.icon-hamburger, .icon.icon-close {
+  width: 4%;
+}
+
+details:not([open]) > .header__icon--menu .icon-close,
+details[open] > .header__icon--menu .icon-hamburger {
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0.8);
+}
+.js details[open]:not(.menu-opening) > .header__icon--menu .icon-hamburger {
+  visibility: hidden;
+  opacity: 1;
+  transform: scale(1.07);
+}
+.js details[open]:not(.menu-opening) > .header__icon--menu .icon-close {
+  visibility: visible;
 }

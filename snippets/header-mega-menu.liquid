@@ -1,4 +1,4 @@
-<nav class="header__inline-menu">
+<nav class="header__inline-menu{% if section.settings.mobile_logo_position == 'click' %} megamenu-click{% endif %}{% if section.settings.mobile_logo_position == 'hover' %} megamenu-hover{% endif %}">
   <ul class="list-menu list-menu--inline" role="list">
     {%- for link in section.settings.menu.links -%}
       <li>
