@@ -245,6 +245,9 @@
         "color_scheme": {
           "label": "Color Scheme"
         },
+        "color_background": {
+          "label": "Background Color"
+        },
         "heading": {
           "label": "Heading"
         },
