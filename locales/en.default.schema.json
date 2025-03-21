@@ -238,6 +238,39 @@
         "label": "Color scheme",
         "has_cards_info": "To change the card color scheme, update your theme settings."
       }
-    }
+    },
+    "featured-blog": {
+      "name": "Blog posts",
+      "settings": {
+        "heading": {
+          "default": "Blog posts",
+          "label": "Heading"
+        },
+        "blog": {
+          "label": "Blog"
+        },
+        "post_limit": {
+          "label": "Number of blog posts to show"
+        },
+        "columns_desktop": {
+          "label": "Number of columns on desktop"
+        },
+        "show_view_all": {
+          "label": "Enable button if blog includes more blog posts than shown"
+        },
+        "show_image": {
+          "label": "Show featured image",
+        },
+        "show_date": {
+          "label": "Show date"
+        },
+        "show_author": {
+          "label": "Show author"
+        }
+      },
+      "presets": {
+        "name": "Blog posts"
+      }
+    },
   }
 }
