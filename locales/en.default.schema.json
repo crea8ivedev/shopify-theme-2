@@ -229,13 +229,13 @@
   "sections": {
     "all": {
       "padding": {
-        "section_padding_heading": "Section padding",
-        "padding_top": "Top padding",
+        "section_padding_heading": "Section Padding",
+        "padding_top": "Top Padding",
         "padding_bottom": "Bottom Padding"
       },
       "spacing": "Spacing",
       "colors": {
-        "label": "Color scheme",
+        "label": "Color Scheme",
         "has_cards_info": "To change the card color scheme, update your theme settings."
       }
     },
@@ -256,7 +256,7 @@
           "label": "Number of columns on desktop"
         },
         "show_view_all": {
-          "label": "Enable button if blog includes more blog posts than shown"
+          "label": "Enable \"View all\" button if blog includes more blog posts than shown"
         },
         "show_image": {
           "label": "Show featured image",
@@ -273,19 +273,19 @@
       }
     },
     "main-article": {
-      "name": "Blog post",
+      "name": "Blog Post",
       "blocks": {
         "featured_image": {
-          "name": "Featured image",
+          "name": "Featured Image",
         },
         "title": {
           "name": "Title",
           "settings": {
             "blog_show_date": {
-              "label": "Show date"
+              "label": "Show Date"
             },
             "blog_show_author": {
-              "label": "Show author"
+              "label": "Show Author"
             }
           }
         },
@@ -306,6 +306,49 @@
               "content": "A store title and description are included with the preview image. [Learn more](https://help.shopify.com/manual/promoting-marketing/seo/adding-keywords#set-a-title-and-description-for-your-online-store)."
             }
           }
+        }
+      }
+    },
+    "main-blog": {
+      "name": "Blog Posts",
+      "settings": {
+        "header": {
+          "content": "Blog Post Card"
+        },
+        "show_image": {
+          "label": "Show Featured Image"
+        },
+        "show_date": {
+          "label": "Show Date"
+        },
+        "show_author": {
+          "label": "Show Author"
+        },
+        "layout": {
+          "label": "Desktop Layout",
+          "options__1": {
+            "label": "Grid"
+          },
+          "options__2": {
+            "label": "Collage"
+          },
+          "info": "Posts are stacked on mobile."
+        },
+        "image_height": {
+          "label": "Featured Image Height",
+          "options__1": {
+            "label": "Adapt to image"
+          },
+          "options__2": {
+            "label": "Small"
+          },
+          "options__3": {
+            "label": "Medium"
+          },
+          "options__4": {
+            "label": "Large"
+          },
+          "info": "For best results, use an image with a 3:2 aspect ratio. [Learn more](https://help.shopify.com/manual/shopify-admin/productivity-tools/image-editor#understanding-image-aspect-ratio)"
         }
       }
     },
