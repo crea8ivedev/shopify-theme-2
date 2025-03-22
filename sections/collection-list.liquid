@@ -81,7 +81,7 @@
 -%}
   {%- assign is_slider_mobile = true -%}
 {% endif %}
-
+{% if section.blocks.size > 0 %}
 <div class="section--collection-list {% if is_slider_mobile == true %} section--slider section--slider-mobile {% endif %} section-{{ section.id }} color-{{ section.settings.color_scheme }} section--{{ section.settings.collection_layout }}">
   <div class="page-width">
     {% if section.settings.heading != blank or section.settings.caption != blank %}
@@ -106,10 +106,6 @@
         {% assign row_counter = 0 %}
         {% for block in section.blocks %}
           {% liquid
-            if block.settings.image == blank and block.settings.collection.image == blank
-              continue
-            endif
-
             assign image_index = forloop.index0 | modulo: 2
             if image_index == 0
               assign row_counter = row_counter | plus: 1
@@ -128,14 +124,6 @@
               else
                 assign span_class = 'span-3'
               endif
-            endif
-
-            if block.settings.image != blank
-              assign image_url = block.settings.image
-              assign image_alt = block.settings.image.alt
-            else
-              assign image_url = block.settings.collection.image
-              assign image_alt = block.settings.collection.title
             endif
 
             if block.settings.heading != blank
@@ -186,17 +174,33 @@
             id="{{ block.id }}"
             class="collection-item {{ span_class }} {{ position_class }} {{ alignment_class }} {% if is_slider == true %} swiper-slide {% endif %}"
           >
+            {% if block.settings.image != blank %}
+              {% assign image_url = block.settings.image %}
+              {% assign image_alt = block.settings.image.alt %}
+            {% elsif block.settings.collection.image != blank %}
+              {% assign image_url = block.settings.collection.image %}
+              {% assign image_alt = block.settings.collection.title %}
+            {% else %}
+              {% assign placeholder_image_index = forloop.index0 | modulo: 4 | plus: 1 %}
+              {% assign placeholder_image = 'collection-apparel-' | append: placeholder_image_index %}
+              {% assign image_url = null %}
+              {% assign image_alt = 'Placeholder Image' %}
+            {% endif %}
+
             <div class="collection-image">
-              {% if image_url != blank %}
+              {% if image_url != null %}
                 <img
                   src="{{ image_url | image_url: width: 1100 }}"
-                  alt="{{ image_alt | default: "Collection List" }}"
+                  alt="{{ image_alt | default: 'Collection List' }}"
                   width="500px"
                   height="500px"
                   loading="lazy"
                 >
+              {% else %}
+                {{ placeholder_image | placeholder_svg_tag: 'placeholder-svg' }}
               {% endif %}
             </div>
+
             <div class="collection-content">
               {% if heading != blank %}
                 <h3 class="collection-heading">{{ heading }}</h3>
@@ -245,10 +249,14 @@
     {% endif %}
   </div>
 </div>
-
+{% endif %}
 {% schema %}
 {
   "name": "t:sections.collection_list.name",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "tag": "section",
   "settings": [
     {
       "type": "color_scheme",
@@ -259,7 +267,8 @@
     {
       "type": "text",
       "id": "heading",
-      "label": "t:sections.collection_list.settings.heading.label"
+      "label": "t:sections.collection_list.settings.heading.label",
+      "default": "t:sections.collection_list.settings.heading.default"
     },
     {
       "type": "color",
@@ -269,7 +278,8 @@
     {
       "type": "richtext",
       "id": "caption",
-      "label": "t:sections.collection_list.settings.caption.label"
+      "label": "t:sections.collection_list.settings.caption.label",
+      "default": "t:sections.collection_list.settings.caption.default"
     },
     {
       "type": "color",
@@ -449,7 +459,21 @@
   ],
   "presets": [
     {
-      "name": "t:sections.collection_list.presets.name.label"
+      "name": "t:sections.collection_list.presets.name.label",
+      "blocks": [
+        {
+          "type": "collection"
+        },
+        {
+          "type": "collection"
+        },
+        {
+          "type": "collection"
+        },
+        {
+          "type": "collection"
+        }
+      ]
     }
   ]
 }

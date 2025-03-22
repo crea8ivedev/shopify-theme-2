@@ -184,27 +184,13 @@
             "external_link": false,
             "content_position": "bottom-left"
           }
-        },
-        "collection_CNhDxe": {
-          "type": "collection",
-          "settings": {
-            "collection": "automated-collection",
-            "heading": "Sunscream",
-            "subheading": "",
-            "content_alignment": "center",
-            "button_label": "Shop Now",
-            "button_link": "",
-            "external_link": false,
-            "content_position": "bottom-left"
-          }
         }
       },
       "block_order": [
         "collection_GFfmAM",
         "collection_d7dK6y",
         "collection_iCiB4V",
-        "collection_ETUMFk",
-        "collection_CNhDxe"
+        "collection_ETUMFk"
       ],
       "settings": {
         "color_scheme": "scheme-bc44ea45-9838-4b31-8d57-56921c9d546c",
@@ -215,8 +201,8 @@
         "show_view_all": true,
         "content_position": "center",
         "collection_layout": "slider",
-        "collections_per_row_mobile": 1,
-        "enable_slider_mobile": false,
+        "collections_per_row_mobile": 2,
+        "enable_slider_mobile": true,
         "enable_slider_arrow_mobile": false,
         "padding_top": 20,
         "padding_bottom": 20
@@ -302,6 +288,7 @@
         "collection_ETUMFk",
         "collection_CNhDxe"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "scheme-bc44ea45-9838-4b31-8d57-56921c9d546c",
         "heading": "Beauty collections",
@@ -317,12 +304,91 @@
         "padding_top": 20,
         "padding_bottom": 20
       }
+    },
+    "collection_list_CzUgMQ": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_7U4HVi": {
+          "type": "collection",
+          "settings": {
+            "collection": "automated-collection",
+            "heading": "",
+            "subheading": "",
+            "content_alignment": "left",
+            "button_label": "Shop Now",
+            "button_link": "",
+            "external_link": false,
+            "content_position": "bottom-left"
+          }
+        },
+        "collection_DXGiVE": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "heading": "",
+            "subheading": "",
+            "content_alignment": "left",
+            "button_label": "Shop Now",
+            "button_link": "",
+            "external_link": false,
+            "content_position": "bottom-left"
+          }
+        },
+        "collection_KHh3wi": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "heading": "",
+            "subheading": "",
+            "content_alignment": "left",
+            "button_label": "Shop Now",
+            "button_link": "",
+            "external_link": false,
+            "content_position": "bottom-left"
+          }
+        },
+        "collection_Tw4ccA": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "heading": "",
+            "subheading": "",
+            "content_alignment": "left",
+            "button_label": "Shop Now",
+            "button_link": "",
+            "external_link": false,
+            "content_position": "bottom-left"
+          }
+        }
+      },
+      "block_order": [
+        "collection_7U4HVi",
+        "collection_DXGiVE",
+        "collection_KHh3wi",
+        "collection_Tw4ccA"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "heading": "Beauty collections",
+        "heading_color": "",
+        "caption": "<p>Shop our summer trendy collection.</p>",
+        "caption_color": "",
+        "show_view_all": false,
+        "content_position": "left",
+        "collection_layout": "slider",
+        "collections_per_row_mobile": 2,
+        "enable_slider_mobile": true,
+        "enable_slider_arrow_mobile": false,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
     }
   },
   "order": [
     "main",
     "collection_list_Qw8Y6q",
     "collection_list_Qw8Y6a",
-    "collection_list_Qw8Y6b"
+    "collection_list_Qw8Y6b",
+    "collection_list_CzUgMQ"
   ]
 }

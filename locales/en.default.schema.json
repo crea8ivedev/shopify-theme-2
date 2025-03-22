@@ -243,16 +243,19 @@
       "name": "Collection List",
       "settings": {
         "color_scheme": {
-          "label": "Color Scheme"
+          "label": "Color Scheme",
+          "default": "Collection"
         },
         "heading": {
-          "label": "Heading"
+          "label": "Heading",
+          "default": "Beauty collections"
         },
         "heading_color": {
           "label": "Heading Color"
         },
         "caption": {
-          "label": "Caption"
+          "label": "Caption",
+          "default": "Shop our summer trendy collection."
         },
         "caption_color": {
           "label": "Caption Color"
