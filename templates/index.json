@@ -9,13 +9,82 @@
  */
 {
   "sections": {
+    "header_dGnaxm": {
+      "type": "header",
+      "settings": {
+        "color_scheme": ""
+      }
+    },
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "text_with_image_WdAPmP": {
+      "type": "text-with-image",
+      "blocks": {
+        "product_74gF3c": {
+          "type": "product",
+          "settings": {
+            "image_position": 1,
+            "product": "the-3p-fulfilled-snowboard",
+            "aspect_ratio": 1,
+            "mobile_aspect_ratio": 1,
+            "width": 80,
+            "mobile_width": 60
+          }
+        },
+        "image_npr39w": {
+          "type": "image",
+          "settings": {
+            "image_position": 5,
+            "image": "shopify://shop_images/question-solid.svg",
+            "aspect_ratio": 1,
+            "mobile_aspect_ratio": 1,
+            "width": 80,
+            "mobile_width": 60,
+            "link": ""
+          }
+        },
+        "collection_V4gMTf": {
+          "type": "collection",
+          "settings": {
+            "image_position": 7,
+            "collection": "automated-collection",
+            "aspect_ratio": 1,
+            "mobile_aspect_ratio": 1,
+            "width": 80,
+            "mobile_width": 60
+          }
+        }
+      },
+      "block_order": [
+        "product_74gF3c",
+        "image_npr39w",
+        "collection_V4gMTf"
+      ],
+      "settings": {
+        "subheading": "Text with Image",
+        "subheading_size": 3,
+        "heading": "Highlight products, a collection or images alongside a brand message",
+        "heading_size": 10,
+        "mobile_heading_size": 5,
+        "text_align_desktop": "text-left",
+        "text_align_mobile": "text-left--mobile",
+        "width": "wrapper--narrow",
+        "bg_color": "",
+        "color": "",
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
     }
   },
-  "order": ["main"]
+  "order": [
+    "header_dGnaxm",
+    "main",
+    "text_with_image_WdAPmP"
+  ]
 }

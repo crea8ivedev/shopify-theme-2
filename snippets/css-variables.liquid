@@ -179,6 +179,22 @@
         --buttons-shadow-blur-radius: {{ settings.buttons_shadow_blur }}px;
         --buttons-border-offset: {% if settings.buttons_radius > 0 or settings.buttons_shadow_opacity > 0 %}0.3{% else %}0{% endif %}px;
 
+      /* Text with image section */
+        --font-15: 55px;
+        --font-14: 52px;
+        --font-13: 50px;
+        --font-12: 47px;
+        --font-11: 43px;
+        --font-10: 40px;
+        --font-9: 37px;
+        --font-8: 32px;
+        --font-7: 27px;
+        --font-6: 23px;
+        --font-5: 19px;
+        --font-4: 16px;
+        --font-3: 14px;
+        --font-2: 12px;
+        --font-1: 10px;
     }
 
 
@@ -198,4 +214,24 @@
         --font-lg: {{ settings.text_font_size_desktop | plus: 4 | divided_by: 16.0 }}rem;
         }
       }
+
+    @media only screen and (min-width: 750px) and (max-width: 989px) {
+        :root {
+            --font-15: 60px;
+            --font-14: 55px;
+            --font-13: 50px;
+            --font-12: 52px;
+            --font-11: 48px;
+            --font-10: 45px;
+            --font-9: 41px;
+            --font-8: 35px;
+            --font-7: 29px;
+            --font-6: 25px;
+            --font-5: 21px;
+            --font-4: 18px;
+            --font-3: 15px;
+            --font-2: 13px;
+            --font-1: 11px;
+        }
+    }
 {% endstyle %}
