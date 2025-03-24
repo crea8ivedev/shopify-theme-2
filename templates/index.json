@@ -20,7 +20,7 @@
       "type": "video",
       "settings": {
         "heading": "updated",
-        "heading_size": "hxl",
+        "heading_size": "h1",
         "enable_video_looping": false,
         "video": "shopify://files/videos/3971844-hd_1920_1080_25fps.mp4",
         "video_url": "",
@@ -46,11 +46,25 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "video_QHBiXf": {
+      "type": "video",
+      "settings": {
+        "heading": "Video",
+        "heading_size": "h1",
+        "enable_video_looping": false,
+        "description": "",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
     "video_U6GYem",
-    "video1_AG4BTz"
+    "video1_AG4BTz",
+    "video_QHBiXf"
   ]
 }

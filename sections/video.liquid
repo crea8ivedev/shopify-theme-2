@@ -39,7 +39,7 @@
   {%- endif %}
 {%- endcapture -%}
 
-<div class="color-{{ section.settings.color_scheme }} gradient">
+<div class="color-{{ section.settings.color_scheme }}">
   <div class="video-section isolate{% unless section.settings.full_width %} page-width{% endunless %} section-{{ section.id }}-padding">
     <div
       {% if section.settings.full_width %}
@@ -68,6 +68,8 @@ data-media-id="{{ video_id }}"
       | image_url: width: 3840
       | image_tag: sizes: sizes, widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840', alt: video_alt
     }}
+  {%- else -%}
+    {{ 'hero-apparel-3' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
   {%- endif -%}
   <span class="deferred-media__poster-button motion-reduce" tabindex="0" role="button" aria-label="Play Video">
     <span class="svg-wrapper">
@@ -120,125 +122,125 @@ data-media-id="{{ video_id }}"
   </div>
 </div>
 
-
-
 {% schema %}
-{
-  "name": "t:sections.all.video.section_name",
-  "tag": "section",
-  "class": "section",
-  "disabled_on": {
-    "groups": ["header", "footer"]
-  },
-  "settings": [
-    {
-      "type": "inline_richtext",
-      "id": "heading",
-      "default": "Video",
-      "label": "Heading"
+  {
+    "name": "t:sections.all.video.section_name",
+    "tag": "section",
+    "class": "section",
+    "disabled_on": {
+      "groups": ["header", "footer"]
     },
-    {
-      "type": "select",
-      "id": "heading_size",
-      "options": [
-        {
-          "value": "h2",
-          "label": "t:sections.all.video.heading_size.options__1.label"
-        },
-        {
-          "value": "h1",
-          "label": "t:sections.all.video.heading_size.options__2.label"
-        },
-        {
-          "value": "h0",
-          "label": "t:sections.all.video.heading_size.options__3.label"
-        }
-      ],
-      "default": "h1",
-      "label": "t:sections.all.video.heading_size.label"
-    },
-    {
-      "type": "checkbox",
-      "id": "enable_video_looping",
-      "label": "Enable Video Looping",
-      "default": false
-    },
-    {
-      "type": "header",
-      "content": "Shopify-hosted video"
-    },
-    {
-      "type": "video",
-      "id": "video",
-      "label": "Video"
-    },
-    {
-      "type": "header",
-      "content": "Embed video from URL"
-    },
-    {
-      "type": "video_url",
-      "id": "video_url",
-      "label": "Video URL",
-      "accept": ["youtube", "vimeo"],
-      "info": "Video URL"
-    },
-    {
-      "type": "image_picker",
-      "id": "cover_image",
-      "label": "Cover Image"
-    },
-    {
-      "type": "text",
-      "id": "description",
-      "label": "Video alt text"
-    },
-    {
-      "type": "header",
-      "content": "Style"
-    },
-    {
-      "type": "checkbox",
-      "id": "full_width",
-      "label": "Full Width",
-      "default": false
-    },
-    {
-      "type": "color_scheme",
-      "id": "color_scheme",
-      "label": "Color Scheme",
-      "default": "scheme-1"
-    },
-    {
-      "type": "header",
-      "content": "Section padding"
-    },
-    {
-      "type": "range",
-      "id": "padding_top",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "label": "Padding Top",
-      "default": 36
-    },
-    {
-      "type": "range",
-      "id": "padding_bottom",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "label": "Padding Bottom",
-      "default": 36
-    }
-  ],
-  "presets": [
-    {
-      "name": "t:sections.all.video.preset_name"
-    }
-  ]
-}
-{% endschema %}
+    "settings": [
+      {
+        "type": "inline_richtext",
+        "id": "heading",
+        "default": "Video",
+        "label": "t:sections.all.video.heading.label"
+      },
+      {
+        "type": "select",
+        "id": "heading_size",
+        "options": [
+          {
+            "value": "h2",
+            "label": "t:sections.all.video.heading_size.options__1.label"
+          },
+          {
+            "value": "h1",
+            "label": "t:sections.all.video.heading_size.options__2.label"
+          },
+          {
+            "value": "h0",
+            "label": "t:sections.all.video.heading_size.options__3.label"
+          }
+        ],
+        "default": "h1",
+        "label": "t:sections.all.video.heading_size.label"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_video_looping",
+        "label": "t:sections.all.video.enable_video_looping.label",
+        "default": false
+      },
+      {
+        "type": "header",
+        "content": "t:sections.all.video.shopify_hosted_video.header"
+      },
+      {
+        "type": "video",
+        "id": "video",
+        "label": "t:sections.all.video.video.label"
+      },
+      {
+        "type": "header",
+        "content": "t:sections.all.video.embed_video_from_url.header"
+      },
+      {
+        "type": "video_url",
+        "id": "video_url",
+        "label": "t:sections.all.video.video_url.label",
+        "default": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "accept": ["youtube", "vimeo"],
+        "info": "t:sections.all.video.video_url.info"
+      },
+      {
+        "type": "image_picker",
+        "id": "cover_image",
+        "label": "t:sections.all.video.cover_image.label",
+        "info": "t:sections.all.video.cover_image.info"
+      },
+      {
+        "type": "text",
+        "id": "description",
+        "label": "t:sections.all.video.description.label"
+      },
+      {
+        "type": "header",
+        "content": "t:sections.all.video.style.header"
+      },
+      {
+        "type": "checkbox",
+        "id": "full_width",
+        "label": "t:sections.all.video.full_width.label",
+        "default": false
+      },
+      {
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "t:sections.all.video.color_scheme.label",
+        "default": "scheme-1"
+      },
+      {
+        "type": "header",
+        "content": "t:sections.all.video.section_padding.header"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.video.padding_top.label",
+        "default": 36
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.video.padding_bottom.label",
+        "default": 36
+      }
+    ],
+    "presets": [
+      {
+        "name": "t:sections.all.video.preset_name"
+      }
+    ]
+  }
+  {% endschema %}
 

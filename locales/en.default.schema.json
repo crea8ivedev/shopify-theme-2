@@ -129,7 +129,7 @@
       "name": "Layout",
       "settings": {
         "page_width": {
-          "label": "Page width"
+          "label": "Page Width"
         },
         "spacing_sections": {
           "label": "Space between template sections"
@@ -230,8 +230,9 @@
     "all": {
       "video": {
         "section_name": "Video",
-        "heading": "Video",
-        "heading_info": "Set the heading for the video section.",
+        "heading": {
+          "label": "Heading"
+        },
         "heading_size": {
           "label": "Heading Size",
           "options__1": {
@@ -244,29 +245,48 @@
             "label": "Large"
           }
         },
-        "enable_video_looping": "Enable Video Looping",
-        "shopify_hosted_video": "Shopify-hosted Video",
-        "video": "Video",
-        "embed_video_from_url": "Embed Video From URL",
-        "video_url": "Video URL",
-        "video_url_info": "Enter a Video URL (YouTube or Vimeo).",
-        "cover_image": "Cover Image",
-        "video_alt_text": "Video Alt Text",
-        "style": "Style",
-        "full_width": "Full Width",
-        "color_scheme": "Color Scheme",
-        "section_padding": "Section Padding",
+        "enable_video_looping": {
+          "label": "Enable Video Looping"
+        },
+        "shopify_hosted_video": {
+          "header": "Shopify-hosted Video"
+        },
+        "video": {
+          "label": "Video"
+        },
+        "embed_video_from_url": {
+          "header": "Embed Video from URL"
+        },
+        "video_url": {
+          "label": "Video URL",
+          "info": "Enter a YouTube or Vimeo URL"
+        },
+        "cover_image": {
+          "label": "Cover Image",
+          "info": "1200 X 1200 px recommended"
+        },
+        "description": {
+          "label": "Video Alt Text"
+        },
+        "style": {
+          "header": "Style"
+        },
+        "full_width": {
+          "label": "Full Width"
+        },
+        "color_scheme": {
+          "label": "Color Scheme"
+        },
+        "section_padding": {
+          "header": "Section Padding"
+        },
+        "padding_top": {
+          "label": "Padding Top"
+        },
+        "padding_bottom": {
+          "label": "Padding Bottom"
+        },
         "preset_name": "Video"
-      },
-      "padding": {
-        "section_padding_heading": "Section Padding",
-        "padding_top": "Top Padding",
-        "padding_bottom": "Bottom Padding"
-      },
-      "spacing": "Spacing",
-      "colors": {
-        "label": "Color Scheme",
-        "has_cards_info": "To change the card color scheme, update your theme settings."
       }
     }
   }
