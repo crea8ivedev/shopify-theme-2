@@ -95,7 +95,7 @@
         "content": "<p>Nibh tellus molestie nunc non blandit massa. Nec feugiat nisl pretium fusce id. Faucibus scelerisque eleifend donec pretium vulputate...</p>",
         "enable_scrolling": true,
         "scroll_speed": 5,
-        "direction": "left",
+        "direction": "right",
         "padding_top": 58,
         "padding_bottom": 58
       }
