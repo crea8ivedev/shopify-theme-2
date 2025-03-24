@@ -1,80 +1,48 @@
-    
-    <style>
-      .testimonial-section {
+{{ 'component-testimonials.css' | asset_url | stylesheet_tag }}
+{%- style -%}
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+        padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+      }
+      @media screen and (min-width: 750px) {
+      .section-{{ section.id }}-padding {
         padding-top: {{ section.settings.padding_top }}px;
         padding-bottom: {{ section.settings.padding_bottom }}px;
       }
-      .testimonial-slider {
-        overflow: hidden;
-        position: relative;
-      }
-      .testimonial-grid {
-        display: grid;
-        grid-template-columns: repeat({{ section.settings.columns_desktop }}, 1fr);
-        gap: 20px;
-      }
-      @media (max-width: 768px) {
-        .testimonial-grid {
-          grid-template-columns: {% if section.settings.stack_mobile %}1fr{% else %}repeat(2, 1fr){% endif %};
-        }
-      }
-      .swiper-slide {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-      .testimonial-item img {
-        border-radius: 50%;
-        margin-bottom: 10px;
-      }
-    </style>
-    
-    <section class="testimonial-section" style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px; brand-logos color-{{ section.settings.color_scheme }} gradient">
-      {% if section.settings.heading != blank %}
-        <h2 class="testimonial-heading">{{ section.settings.heading }}</h2>
-      {% endif %}
-      {% if section.settings.subheading != blank %}
-        <p class="testimonial-subheading">{{ section.settings.subheading }}</p>
-      {% endif %}
-    
-      {% if section.settings.desktop_layout == 'slider' %}
-      <div class="swiper testimonial-slider">
-        <div class="swiper-wrapper">
-          {% for block in section.blocks %}
-            <div class="swiper-slide testimonial-card">
-              <div class="testimonial-header">
-                {% if block.settings.image %}
-                  <img src="{{ block.settings.image | image_url: width: 80 }}" class="testimonial-image" alt="{{ block.settings.review_name }}" width="80px" height="80px">
-                {% endif %}
-                <div class="testimonial-info">
-                  <h3 class="testimonial-name">{{ block.settings.review_name }}</h3>
-                  <p class="testimonial-designation">{{ block.settings.review_designation }}</p>
-                  <div class="testimonial-rating">
-                    {% for i in (1..block.settings.ratings) %}
-                      <span class="star">&#9733;</span>
-                    {% endfor %}
-                  </div>
-                </div>
-                <span class="quote-icon">❝</span>
-              </div>
-              <h2 class="testimonial-title">{{ block.settings.caption }}</h2>
-              <p class="testimonial-text">{{ block.settings.description }}</p>
-            </div>
-          {% endfor %}
-        </div>
-      </div>
-      {% else %}
-      <div class="testimonial-grid" style="display: grid; grid-template-columns: repeat({{ section.settings.columns_desktop }}, 1fr); gap: 20px;">
+  }
+{%- endstyle -%}
+
+<div class="testimonial-section section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} gradient page-width">
+  <div class="testimonials-title-wrapper">
+    {% if section.settings.heading != blank %}
+      <h2 class="testimonial-heading">{{ section.settings.heading }}</h2>
+    {% endif %}
+    {% if section.settings.subheading != blank %}
+      <p class="testimonial-subheading">{{ section.settings.subheading }}</p>
+    {% endif %}
+  </div>
+  {% if section.settings.desktop_layout == 'slider' %}
+    <div class="swiper testimonial-slider">
+      <div class="swiper-wrapper">
         {% for block in section.blocks %}
-          <div class="testimonial-card">
+          <div class="swiper-slide testimonial-card" {{ block.shopify_attributes }}>
             <div class="testimonial-header">
               {% if block.settings.image %}
-                <img src="{{ block.settings.image | image_url: width: 80 }}" class="testimonial-image" alt="{{ block.settings.review_name }}" width="80px" height="80px">
+                <img
+                  src="{{ block.settings.image | image_url: width: 80 }}"
+                  class="testimonial-image"
+                  alt="{{ block.settings.review_name }}"
+                  width="80px"
+                  height="80px"
+                >
               {% endif %}
               <div class="testimonial-info">
-                <h3 class="testimonial-name">{{ block.settings.review_name }}</h3>
-                <p class="testimonial-designation">{{ block.settings.review_designation }}</p>
+                {% if block.settings.review_name %}
+                  <h3 class="testimonial-name">{{ block.settings.review_name }}</h3>
+                {% endif %}
+                {% if block.settings.review_name %}
+                  <p class="testimonial-designation">{{ block.settings.review_designation }}</p>
+                {% endif %}
                 <div class="testimonial-rating">
                   {% for i in (1..block.settings.ratings) %}
                     <span class="star">&#9733;</span>
@@ -83,37 +51,81 @@
               </div>
               <span class="quote-icon">❝</span>
             </div>
-            <h2 class="testimonial-title">{{ block.settings.caption }}</h2>
-            <p class="testimonial-text">{{ block.settings.description }}</p>
+            {% if block.settings.caption %}
+              <h2 class="testimonial-title">{{ block.settings.caption }}</h2>
+            {% endif %}
+            {% if block.settings.description %}
+              <p class="testimonial-text">{{ block.settings.description }}</p>
+            {% endif %}
           </div>
         {% endfor %}
       </div>
-      {% endif %}
-    </section>
+    </div>
+  {% else %}
+    <div
+      class="testimonial-grid"
+      style="display: grid; grid-template-columns: repeat({{ section.settings.columns_desktop }}, 1fr); gap: 20px;"
+    >
+      {% for block in section.blocks %}
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            {% if block.settings.image %}
+              <img
+                src="{{ block.settings.image | image_url: width: 80 }}"
+                class="testimonial-image"
+                alt="{{ block.settings.review_name }}"
+                width="80px"
+                height="80px"
+              >
+            {% endif %}
+            <div class="testimonial-info">
+              {% if block.settings.review_name %}
+                <h3 class="testimonial-name">{{ block.settings.review_name }}</h3>
+              {% endif %}
+              {% if block.settings.review_name %}
+                <p class="testimonial-designation">{{ block.settings.review_designation }}</p>
+              {% endif %}
+              <div class="testimonial-rating">
+                {% for i in (1..block.settings.ratings) %}
+                  <span class="star">&#9733;</span>
+                {% endfor %}
+              </div>
+            </div>
+            <span class="quote-icon">❝</span>
+          </div>
+          {% if block.settings.caption %}
+            <h2 class="testimonial-title">{{ block.settings.caption }}</h2>
+          {% endif %}
+          {% if block.settings.description %}
+            <p class="testimonial-text">{{ block.settings.description }}</p>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>
 
-    
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-        var swiper = new Swiper(".testimonial-slider", {
-          loop: true,
-          slidesPerView: 1,
-          spaceBetween: 20,
-          breakpoints: {
-            768: {
-              slidesPerView: {{ section.settings.columns_desktop }},
-              spaceBetween: 20
-            }
-          }
-        });
-      });
-      
-      
-    </script>
-    
-    
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var swiper = new Swiper(".testimonial-slider", {
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 20,
+      breakpoints: {
+        768: {
+          slidesPerView: {{ section.settings.columns_desktop }},
+          spaceBetween: 20
+        }
+      }
+    });
+  });
+</script>
+
 {% schema %}
 {
   "name": "Testimonial Slider",
+  "tag": "section",
+  "class": "section",
   "settings": [
     {
       "type": "color_scheme",
@@ -145,7 +157,7 @@
       "id": "columns_desktop",
       "label": "t:sections.testimonial_slider.settings.columns_desktop.label",
       "min": 1,
-      "max": 4,
+      "max": 3,
       "step": 1,
       "default": 3
     },
@@ -183,7 +195,7 @@
           "type": "image_picker",
           "id": "image",
           "label": "t:sections.testimonial_slider.blocks.testimonial.settings.image.label",
-          "info": "t:sections.testimonial_slider.blocks.testimonial.settings.image.info",
+          "info": "t:sections.testimonial_slider.blocks.testimonial.settings.image.info"
         },
         {
           "type": "text",
@@ -229,5 +241,4 @@
     }
   ]
 }
-
 {% endschema %}

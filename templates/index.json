@@ -99,15 +99,12 @@
         "heading": "Lorem Ipsum Heading",
         "subheading": "Lorem Ipsum Subheading",
         "desktop_layout": "slider",
-        "columns_desktop": 4,
+        "columns_desktop": 3,
         "stack_mobile": true,
         "padding_top": 20,
         "padding_bottom": 20
       }
     }
   },
-  "order": [
-    "main",
-    "testimonial_QXQajX"
-  ]
+  "order": ["main", "testimonial_QXQajX"]
 }
