@@ -1,61 +1,55 @@
-document.addEventListener('DOMContentLoaded', function () {
+
+  document.addEventListener('DOMContentLoaded', function () {
     var swiperContainer = document.querySelector('.swiper-container');
     var swiperInstance = null;
-    var isSwiperInitialized = false; // Track if Swiper is initialized
+    var isSwiperInitialized = false; 
 
     function initSwiper() {
-      if (!swiperContainer) {
-        return;
-      }
+        var screenWidth = document.documentElement.clientWidth;
+        console.log('Screen Width:', screenWidth);
 
-      var screenWidth = document.documentElement.clientWidth; // Correct width
-
-      console.log('Actual screen width:', screenWidth);
-
-      if (screenWidth <= 768 && !isSwiperInitialized) {
-        console.log('Initializing Swiper for mobile view...');
-
-        document.querySelectorAll('.swiper-container .grid__item').forEach((item) => {
-          item.classList.add('swiper-slide');
-          item.classList.remove('grid__item');
+        document.querySelectorAll('[data-show-mobile-slider="true"]').forEach((item) => {
+            if (screenWidth <= 768) {
+                item.classList.remove('grid__item');
+                item.classList.add('swiper-slide');
+            } else {
+                item.classList.add('grid__item');
+                item.classList.remove('swiper-slide');
+            }
         });
 
-        swiperInstance = new Swiper('.swiper-container', {
-          slidesPerView: 1,
-          spaceBetween: 10,
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          },
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-        });
+        if (screenWidth <= 768 && !isSwiperInitialized) {
+            console.log('Initializing Swiper for mobile view...');
 
-        console.log('Swiper initialized.');
-        isSwiperInitialized = true;
-      } else if (screenWidth > 768 && isSwiperInitialized) {
-        console.log('Destroying Swiper for desktop view...');
+            swiperInstance = new Swiper('.swiper-container', {
+                slidesPerView: 1,
+                spaceBetween: 10,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+            });
 
-        if (swiperInstance) {
-          swiperInstance.destroy(true, true);
-          swiperInstance = null;
+            console.log('Swiper initialized.');
+            isSwiperInitialized = true;
+        } else if (screenWidth > 768 && isSwiperInitialized) {
+            console.log('Destroying Swiper for desktop view...');
+
+            if (swiperInstance) {
+                swiperInstance.destroy(true, true);
+                swiperInstance = null;
+            }
+
+            isSwiperInitialized = false;
+            console.log('Swiper destroyed and grid restored.');
         }
-
-        document.querySelectorAll('.swiper-container .swiper-slide').forEach((item) => {
-          item.classList.remove('swiper-slide');
-          item.classList.add('grid__item');
-        });
-
-        isSwiperInitialized = false;
-        console.log('Swiper destroyed and grid restored.');
-      }
     }
-
-    // Run on load
     initSwiper();
-
-    // Run on resize immediately
+    
     window.addEventListener('resize', initSwiper);
-  });
+});
+

@@ -48,19 +48,23 @@
           endif
         endfor
       -%}
-      <div class="multicolumn-card-main {% if section.settings.swipe_on_mobile %}swiper-container{% endif %}">
+      <div 
+        class="multicolumn-card-main {% if section.settings.swipe_on_mobile %}swiper-container{% endif %}" 
+        data-show-mobile-slider="{% if section.settings.swipe_on_mobile %}true{% else %}false{% endif %}"
+      >
         <div class="multicolumn-card-wrap {% if section.settings.swipe_on_mobile %}swiper-wrapper{% endif %}">
           {%- for block in section.blocks -%}
-            <div class="multicolumn-card-list grid__item" id="multicolumn-card">
+            <div 
+              class="multicolumn-card-list {% if section.settings.swipe_on_mobile %}swiper-slide{% else %}grid__item{% endif %}" 
+              data-show-mobile-slider="{% if section.settings.swipe_on_mobile %}true{% else %}false{% endif %}"
+            >
               <li
                 class="multicolumn-list__item {% if section.settings.column_alignment == 'center' %} center{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
                 {{ block.shopify_attributes }}
               >
                 <div class="multicolumn-card content-container">
                   {%- if block.settings.image != blank -%}
-                    {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
-                    {% endif %}
-                    <div class="multicolumn-card__image-wrapper ">
+                    <div class="multicolumn-card__image-wrapper">
                       <div
                         class="media media--transparent media--{{ section.settings.image_ratio }}"
                         {% if section.settings.image_ratio == 'adapt' %}
