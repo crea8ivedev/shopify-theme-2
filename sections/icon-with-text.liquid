@@ -10,6 +10,9 @@
   .icon-with-text-wrapper .grid-boxes .grid__item .grid-image .svg-image svg path {
     fill: {{ section.settings.icon_color }};
   }
+  .icon-with-text-wrapper .grid-boxes .grid__item .grid-image.circle,.icon-with-text-wrapper .grid-boxes .grid__item .grid-image.square {
+    background: {{ section.settings.icon_background_color }};
+  }
 
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
@@ -226,6 +229,12 @@
     },
     {
       "type": "color",
+      "label": "t:sections.icon_with_text.settings.icon_background_color.label",
+      "id": "icon_background_color",
+      "default": "#ACACAC"
+    },
+    {
+      "type": "color",
       "label": "t:sections.icon_with_text.settings.icon_color.label",
       "id": "icon_color",
       "default": "#B47B84"
@@ -284,7 +293,7 @@
           "type": "image_picker",
           "label": "t:sections.icon_with_text.blocks.column.settings.grid_image.label",
           "id": "grid_image",
-          "info": "60px x 60px recommended"
+          "info": "63px x 63px recommended"
         },
         {
           "type": "html",

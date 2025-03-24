@@ -54,36 +54,16 @@
             "grid_image": "shopify://shop_images/Vector_3.svg",
             "svg_icon": ""
           }
-        },
-        "column_HViXWg": {
-          "type": "column",
-          "settings": {
-            "grid_title": "Free shipping",
-            "grid_description": "Standard shipping",
-            "grid_image": "shopify://shop_images/Vector_3.svg",
-            "svg_icon": ""
-          }
-        },
-        "column_qKBJUW": {
-          "type": "column",
-          "settings": {
-            "grid_title": "Free shipping",
-            "grid_description": "Standard shipping",
-            "grid_image": "shopify://shop_images/Vector_3.svg",
-            "svg_icon": ""
-          }
         }
       },
       "block_order": [
         "column_6QiQit",
         "column_VAhitH",
         "column_EG6gNw",
-        "column_3WPVYU",
-        "column_HViXWg",
-        "column_qKBJUW"
+        "column_3WPVYU"
       ],
       "settings": {
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-ee9bfb00-7c2b-43f1-8576-9e95237047fb",
         "heading": "Icon With Text",
         "sec_content": "Icon With Text",
         "heading_size": "h1",
@@ -92,8 +72,8 @@
         "column_alignment": "left",
         "icon_alignment": "icon_left",
         "columns_mobile": "1",
-        "icon_bg": "circle",
-        "icon_background_color": "#e9cdd1",
+        "icon_bg": "none",
+        "icon_background_color": "#252525",
         "icon_color": "#b47b84",
         "padding_top": 60,
         "padding_bottom": 60,

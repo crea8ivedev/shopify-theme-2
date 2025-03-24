@@ -1,9 +1,9 @@
 .icon-with-text-main .icon-with-text-inner .title-wrapper.right {
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 .icon-with-text-main .icon-with-text-inner .content-wrapper.right  {
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 .icon-with-text-main .icon-with-text-inner .content-wrapper.right * {
@@ -14,27 +14,13 @@
   margin-bottom: 0;
 }
 
-.icon-with-text-main .grid-boxes {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  row-gap: 30px;
-  column-gap: 40px;
-}
-
-.icon-with-text-main .grid-boxes .grid__item {
-  flex: 0 0 calc(25% - 30px);
-  width: calc(25% - 30px);
-  max-width: 100%;
-}
-
 .icon-with-text-main .grid-boxes .grid__item .icon_left {
   align-items: center;
-  column-gap: 20px;
+  column-gap: 1.25rem;
 }
 
 .icon-with-text-main .grid-boxes .grid__item .icon_left .grid-title {
-  margin-bottom: 7px;
+  margin-bottom: 0.438rem;
 }
 
 .icon-with-text-main .grid-boxes .grid__item .icon_left .grid-title * {
@@ -42,8 +28,8 @@
 }
 
 .icon-with-text-main .grid-boxes .grid__item .icon_left .grid-text * {
-  font-size: 18px;
-  line-height: 21px;
+  font-size: 1.125rem;
+  line-height: 1.313rem;
   letter-spacing: 0;
   opacity: 0.8;
   margin-top: 0;
@@ -61,25 +47,113 @@
 
 .icon-with-text-main .grid-boxes .grid__item .icon_left .grid-image img {
   width: 100%;
-  max-width: 63px;
+  max-width: 3.938rem;
   object-fit: contain;
+}
+
+.icon-with-text-main .grid-boxes .grid__item .icon_left .grid-image.circle,
+.icon-with-text-main .grid-boxes .grid__item .icon_left .grid-image.square {
+  padding: 8px;
+}
+
+.icon-with-text-main .grid-boxes .grid__item .icon_left .grid-image.circle {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.icon-with-text-main .grid-boxes .grid__item .icon_left .grid-image.circle img,
+.icon-with-text-main .grid-boxes .grid__item .icon_left .grid-image.square img {
+  width: 2.1rem;
+  height: 2.1rem;
+}
+
+@media (min-width: 1400px) {
+  .icon-with-text-main .grid-boxes .grid__item {
+    flex: 0 0 calc(25% - 1.875rem);
+    width: calc(25% - 1.875rem);
+  }
+  .icon-with-text-main .grid-boxes {
+    column-gap: 2.5rem;
+  }
+}
+
+@media (max-width: 1023px) {
+  .icon-with-text-main .grid-boxes .grid__item .icon_left .grid-text * {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
 }
 
 @media (min-width: 990px) and (max-width: 1399px) {
   .icon-with-text-main .grid-boxes {
-    column-gap: 45px;
+    column-gap: 2.813rem;
   }
   .icon-with-text-main .grid-boxes .grid__item {
-    flex: 0 0 calc(33.33% - 30px);
-    width: calc(33.33% - 30px);
+    flex: 0 0 calc(33.33% - 1.875rem);
+    width: calc(33.33% - 1.875rem);
   }
 }
 
 @media (min-width: 990px) and (max-width: 1199px) {
   .icon-with-text-main .grid-boxes .grid__item .icon_left .grid-image img {
-    max-width: 45px;
+    max-width: 2.813rem;
   }
   .icon-with-text-main .grid-boxes .grid__item .icon_left .grid-title {
-    margin-bottom: 4px;
+    margin-bottom: 0.25rem;
   }
+}
+
+@media (max-width: 989px) {
+  .icon-with-text-main .grid-boxes .grid__item .icon_left .grid-image img {
+    max-width: 2.813rem;
+  }
+  .icon-with-text-main .grid-boxes .grid__item .icon_left .grid-title {
+    margin-bottom: 0.25rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 989px) {
+  .icon-with-text-main .grid-boxes {
+    column-gap: 2.5rem;
+  }
+  .icon-with-text-main .grid-boxes .grid__item {
+    flex: 0 0 calc(50% - 1.25rem);
+  }
+}
+
+@media (min-width: 769px) {
+  .icon-with-text-main .grid-boxes {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 1.875rem;
+  }
+  .icon-with-text-main .grid-boxes .grid__item {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .icon-with-text-main .grid-boxes .grid__item .icon_left {
+    justify-content: center;
+  }
+}
+
+.icon-with-text-main .swiper-pagination {
+  position: relative;
+  bottom: unset;
+  margin-top: 1.25rem;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+  border: 1px solid rgba(var(--color-text));
+}
+.swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  border-color: rgba(var(--color-text));
+}
+.swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active:before {
+  background: rgba(var(--color-text));
 }
