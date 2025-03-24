@@ -4,172 +4,55 @@
 {% endcomment %}
 
 <div class="card-wrapper">
-    <div class="card">
+  <div class="card">
       <div class="card__inner">
-        <div class="card__media">
-          <a href="{{ product.url }}">
-            <img class="motion-reduce" src="{{ product.featured_image | image_url: width: 400 }}" alt="{{ product.title | escape }}" height="auto" width="auto">
-          </a>
-          {% if product.compare_at_price > product.price %}
-            <div class="badge badge--sale">Sale</div>
-          {% endif %}
-        </div>
-  
-        <div class="card__content">
-          <h3 class="card__heading">
-            <a href="{{ product.url }}">{{ product.title }}</a>
-          </h3>
-  
-          {% if product.vendor %}
-            <p class="caption-with-letter-spacing">{{ product.vendor }}</p>
-          {% endif %}
-  
- 
-
-          <div class="product-card__price">
-            {% if product.compare_at_price > product.price %}
-              <span class="product-card__price--sale">{{ product.price | money }}</span>
-              <span class="product-card__compare">{{ product.compare_at_price | money }}</span>
-            {% else %}
-              <span>{{ product.price | money }}</span>
-            {% endif %}
+          <div class="card__media">
+              <a href="{{ product.url }}">
+                  <img class="motion-reduce primary-image" src="{{ product.featured_image | image_url: width: 400 }}" alt="{{ product.title | escape }} by {{ product.vendor | escape }}" height="auto" width="auto">
+                  
+                  {% if product.images.size > 1 %}
+                      <img class="motion-reduce secondary-image" src="{{ product.images[1] | image_url: width: 400 }}" alt="{{ product.title | escape }} second image" height="auto" width="auto">
+                  {% endif %}
+              </a>
+              {% if product.compare_at_price > product.price %}
+                  <div class="badge badge--sale">Sale</div>
+              {% endif %}
           </div>
-        </div>
+
+          <div class="card__content">
+              <h3 class="card__heading">
+                  <a href="{{ product.url }}">{{ product.title }}</a>
+              </h3>
+
+              {% if show_vendor and product.vendor %}
+                  <p class="caption-with-letter-spacing">{{ product.vendor }}</p>
+              {% endif %}
+
+              <div class="product-card__price">
+                  {% if product.compare_at_price > product.price %}
+                      <span class="product-card__price--sale">{{ product.price | money }}</span>
+                      <span class="product-card__compare">{{ product.compare_at_price | money }}</span>
+                  {% else %}
+                      <span>{{ product.price | money }}</span>
+                  {% endif %}
+              </div>
+
+              {% if show_collection_description == true and product.description != blank %}
+                  <p class="product-card__description">{{ product.description | strip_html | truncate: 100 }}</p>
+              {% endif %}
+
+           {% if enable_quick_add %}
+              <div class="quick-view-button" data-product-handle="{{ product.handle }}">
+                <a href="{{ product.handkle }}" class="button">
+                Quick View
+                </a>
+              </div>
+              {% endif %}
+          </div>
       </div>
-    </div>
   </div>
- 
+</div>
 
 
 
 
-
-
-{% comment %} 
-<style>
-    .product-card__badge {
-        background: black;
-        color: white;
-        padding: 5px 10px;
-        font-size: 12px;
-        font-weight: bold;
-        border-radius: 5px;
-        position: absolute;
-        top: 10px;
-        left: 10px;
-    }
-    .product-card {
-        position: relative;
-    }
-    .product-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
-        padding: 20px;
-      }
-      
-      .product-card {
-        background: #fff;
-        border-radius: 10px;
-        padding: 15px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease;
-        text-align: center;
-      }
-      
-      .product-card:hover {
-        transform: scale(1.05);
-      }
-      
-      .product-card__image img {
-        width: 100%;
-        height: auto;
-        border-radius: 8px;
-      }
-      
-      .product-card__title a {
-        text-decoration: none;
-        color: #333;
-        font-weight: bold;
-        display: block;
-        margin-top: 10px;
-      }
-      
-      .product-card__title a:hover {
-        color: #0073e6;
-      }
-      
-      .product-card__vendor {
-        color: #777;
-        font-size: 14px;
-      }
-      
-      .product-card__price {
-        font-size: 16px;
-        font-weight: bold;
-        color: #000;
-        margin: 10px 0;
-      }
-      
-      .product-card__price--sale {
-        color: red;
-      }
-      
-      .product-card__compare {
-        text-decoration: line-through;
-        color: #888;
-        margin-left: 5px;
-      }
-      
-      .product-card__add-to-cart {
-        background: #0073e6;
-        color: white;
-        border: none;
-        padding: 8px 12px;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background 0.3s ease;
-      }
-      
-      .product-card__add-to-cart:hover {
-        background: #005bb5;
-      }
-      
-      .product-card__sold-out {
-        color: red;
-        font-weight: bold;
-      }
-      
-      .product-card__sale-badge {
-        background: red;
-        color: white;
-        padding: 5px 10px;
-        font-size: 12px;
-        border-radius: 5px;
-      }
-      
-      .product-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr); /* Ensures exactly 3 columns */
-        gap: 20px;
-        padding: 20px;
-    }
-    
-    /* Responsive Grid */
-    @media (max-width: 1024px) {
-        .product-grid {
-            grid-template-columns: repeat(3, 1fr); /* 2 columns for tablets */
-        }
-    }
-    
-    @media (max-width: 768px) {
-        .product-grid {
-            grid-template-columns: repeat(2, 1fr); /* 1 column for mobile */
-        }
-    }
-    @media (max-width: 425px) {
-        .product-grid {
-            grid-template-columns: repeat(1, 1fr); /* 1 column for mobile */
-        }
-    }
-    </style> {% endcomment %}

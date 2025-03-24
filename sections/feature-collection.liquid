@@ -1,0 +1,331 @@
+{% style %}
+  .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | times: 0.50 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.50 | round: 0 }}px;
+    }
+
+    @media screen and (min-width: 1024px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
+    .feature-collection {
+    
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+{% endstyle %}
+
+
+
+<div class="feature-collection" style="padding-top: {{ section.settings.top_padding }}px; padding-bottom: {{ section.settings.bottom_padding }}px; background-image: url('{{ section.settings.background_image | image_url }}');">
+  {% if section.settings.heading != blank %}
+    <h2>{{ section.settings.heading }}</h2>
+  {% endif %}
+  
+  {% if section.settings.content != blank %}
+    <div class="feature-collection-content">{{ section.settings.content }}</div>
+  {% endif %}
+
+  {% if section.settings.collection %}
+    {% assign collection_products = section.settings.collection.products %}
+  {% endif %}
+  
+  {% if section.settings.products %}
+    {% assign selected_products = section.settings.products %}
+  {% endif %}
+
+  {% assign show_slider = section.settings.show_mobile_slider %}
+  {% assign product_layout = section.settings.product_layout %}
+
+  <div class="product-list-container" 
+       data-show-mobile-slider="{{ show_slider }}" 
+       data-product-layout="{{ product_layout }}">
+
+    <div class="product-list {% if product_layout == 'slider' or show_slider == 'true'%}swiper-container{% else %}grid grid--{{ section.settings.products_per_row_desktop }}-col{% endif %}">
+
+      <div class="{% if product_layout == 'slider' or show_slider == 'true'%}swiper-wrapper{% else %}grid_item{% endif %}">
+
+        {% if collection_products %}
+          {% for product in collection_products limit: section.settings.max_products %}
+            <div class="{% if product_layout == 'slider' or show_slider == 'true' %}swiper-slide{% else %}grid-cell{% endif %}" data-show-second-image="{{ section.settings.show_second_image }}">
+              {% render 'card-product', 
+                 product: product, 
+                 show_second_image: section.settings.show_second_image, 
+                 enable_quick_add: section.settings.enable_quick_add, 
+                 show_vendor: section.settings.show_vendor 
+              %}
+            </div>
+          {% endfor %}
+        {% endif %}
+      
+        {% if selected_products %}
+          {% for product in selected_products limit: section.settings.max_products %}
+            <div class="{% if product_layout == 'slider' or show_slider == 'true'%}swiper-slide{% else %}grid-cell{% endif %}">
+              {% render 'card-product', 
+                 product: product, 
+                 show_second_image: section.settings.show_second_image, 
+                 enable_quick_add: section.settings.enable_quick_add, 
+                 show_vendor: section.settings.show_vendor 
+              %}
+            </div>
+          {% endfor %}
+        {% endif %}
+      </div>
+
+      <!-- Swiper Navigation Buttons (only if slider is enabled) -->
+      {% if product_layout == 'slider' or show_slider == 'true' %}
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      {% endif %}
+    </div>
+
+    {% if section.settings.link_text != blank and section.settings.link_url != blank %}
+      <a href="{{ section.settings.link_url }}" class="button">{{ section.settings.link_text }}</a>
+    {% endif %}
+  </div>
+</div>
+
+<style>
+  /* Default Grid Layout */
+ 
+  .grid_item {
+    display: grid;
+    grid-template-columns: repeat({{ section.settings.products_per_row_desktop }}, 1fr);
+    gap: 20px;
+  }
+@media screen and (max-width: 768px){
+  .grid_item {
+    display: grid;
+    grid-template-columns: repeat({{ section.settings.products_per_row_mobile }}, 1fr);
+    gap: 20px;
+  }
+}
+.swiper-slide{
+max-width: 700px;
+}
+.card__media {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+/* Default primary image */
+.primary-image {
+  display: block;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Secondary image (only appears if available) */
+.secondary-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* If there's a second image, hide the first and show the second on hover */
+.card__media:hover .secondary-image {
+  opacity: 1;
+}
+
+.card__media:hover .primary-image {
+  opacity: 0;
+}
+
+/* If there's no second image, only apply rotation effect */
+.card__media:not(:has(.secondary-image)):hover .primary-image {
+  transform: rotate(5deg);
+  opacity: 1; /* Ensure it stays visible */
+}
+
+
+</style>
+<script>
+ document.addEventListener("DOMContentLoaded", function () {
+    const productListContainer = document.querySelector(".product-list-container");
+    const productList = productListContainer.querySelector(".product-list");
+    const productWrapper = productList.querySelector("div");
+
+    if (!productListContainer || !productList || !productWrapper) return;
+
+    const productLayout = productListContainer.getAttribute("data-product-layout");
+
+    if (productLayout === "slider") {
+        // Apply Swiper classes
+        productList.classList.add("swiper-container");
+        productWrapper.classList.add("swiper-wrapper");
+
+        document.querySelectorAll(".product-list .grid-cell").forEach(item => {
+            item.classList.add("swiper-slide");
+        });
+
+        // Initialize Swiper
+        new Swiper(".swiper-container", {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                768: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 }
+            }
+        });
+    } else {
+        // Apply Grid classes
+        productList.classList.add(`grid`, `grid--${productListContainer.getAttribute("data-show-mobile-slider")}-col`);
+        productWrapper.classList.add("grid_item");
+
+        document.querySelectorAll(".product-list .swiper-slide").forEach(item => {
+            item.classList.remove("swiper-slide");
+        });
+    }
+}); 
+
+
+
+</script>
+{% schema %}
+{
+  "name": "Feature Collection",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color Scheme"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background Image"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Content"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_collection_description",
+      "label": "Show Collection Description From The Admin"
+    },
+    {
+      "type": "text",
+      "id": "link_text",
+      "label": "Link Text"
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "Link URL"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    },
+    {
+      "type": "product_list",
+      "id": "products",
+      "label": "Products"
+    },
+    {
+      "type": "range",
+      "id": "products_per_row_desktop",
+      "label": "Products Per Row (desktop)",
+      "min": 2,
+      "max": 5,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "max_products",
+      "label": "Maximum Products To Show",
+      "min": 4,
+      "max": 20,
+      "step": 1,
+      "default": 8
+    },
+    {
+      "type": "select",
+      "id": "product_layout",
+      "label": "Product Layout",
+      "options": [
+        { "value": "grid", "label": "Grid" },
+        { "value": "slider", "label": "Slider" }
+      ],
+      "default": "grid"
+    },
+    {
+      "type": "header",
+      "content": "Mobile Layout"
+    },
+    {
+      "type": "range",
+      "id": "products_per_row_mobile",
+      "label": "Products Per Row (mobile)",
+      "min": 1,
+      "max": 3,
+      "step": 1,
+      "default": 2
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_slider_mobile",
+      "label": "Enable Slider On Mobile"
+    },
+    {
+      "type": "header",
+      "content": "Product Card"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_second_image",
+      "label": "Show Second Image On Hover"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_quick_add",
+      "label": "Enable Quick Add Button"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_vendor",
+      "label": "Show Vendor"
+    },
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "range",
+      "id": "top_padding",
+      "label": "Top Padding",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "bottom_padding",
+      "label": "Bottom Padding",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 20
+    }
+  ]
+}
+{% endschema %}

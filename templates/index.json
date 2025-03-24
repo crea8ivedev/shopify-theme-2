@@ -15,7 +15,34 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "feature_collection_jzznHY": {
+      "type": "feature-collection",
+      "settings": {
+        "color_scheme": "",
+        "background_image": "shopify://shop_images/Feature_Products.jpg",
+        "heading": "Feature Products",
+        "content": "<p>Shop our summer trendy collection.</p>",
+        "show_collection_description": true,
+        "link_text": "view",
+        "link_url": "/collections/all",
+        "collection": "automated-collection",
+        "products": [],
+        "products_per_row_desktop": 4,
+        "max_products": 19,
+        "product_layout": "slider",
+        "products_per_row_mobile": 2,
+        "enable_slider_mobile": true,
+        "show_second_image": true,
+        "enable_quick_add": true,
+        "show_vendor": true,
+        "top_padding": 20,
+        "bottom_padding": 100
+      }
     }
   },
-  "order": ["main"]
+  "order": [
+    "main",
+    "feature_collection_jzznHY"
+  ]
 }
