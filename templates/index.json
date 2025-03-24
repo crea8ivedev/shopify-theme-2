@@ -90,12 +90,12 @@
       ],
       "settings": {
         "color_scheme": "scheme-1",
-        "background_color": "#fffbfb",
+        "background_color": "#ffffff",
         "heading": "<h2>Brand Logo</h2>",
         "content": "<p>Nibh tellus molestie nunc non blandit massa. Nec feugiat nisl pretium fusce id. Faucibus scelerisque eleifend donec pretium vulputate...</p>",
         "enable_scrolling": true,
         "scroll_speed": 5,
-        "direction": "right",
+        "direction": "left",
         "padding_top": 58,
         "padding_bottom": 58
       }
