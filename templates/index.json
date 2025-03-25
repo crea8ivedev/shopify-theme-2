@@ -18,76 +18,6 @@
     },
     "brand_logo_Wpqrz7": {
       "type": "brand-logo",
-      "blocks": {
-        "logo_c43R69": {
-          "type": "logo",
-          "disabled": true,
-          "settings": {
-            "logo-image": "shopify://shop_images/p_g_1.png"
-          }
-        },
-        "logo_NVLUhR": {
-          "type": "logo",
-          "disabled": true,
-          "settings": {
-            "logo-image": "shopify://shop_images/p_g_1.png"
-          }
-        },
-        "logo_BRPQXr": {
-          "type": "logo",
-          "disabled": true,
-          "settings": {
-            "logo-image": "shopify://shop_images/LOreal-Symbol-1024x403_1.png"
-          }
-        },
-        "logo_DMTCjj": {
-          "type": "logo",
-          "settings": {
-            "logo-image": "shopify://shop_images/wella_1.png"
-          }
-        },
-        "logo_R77N3b": {
-          "type": "logo",
-          "settings": {
-            "logo-image": "shopify://shop_images/LOreal-Symbol-1024x403_1.png"
-          }
-        },
-        "logo_BrN4eY": {
-          "type": "logo",
-          "settings": {
-            "logo-image": "shopify://shop_images/png-clipart-brand-logo-product-design-font-cosmetic-beauty-text-cosmetics_1.png"
-          }
-        },
-        "logo_AUyUTa": {
-          "type": "logo",
-          "settings": {
-            "logo-image": "shopify://shop_images/mac_1.png"
-          }
-        },
-        "logo_GM8PHC": {
-          "type": "logo",
-          "settings": {
-            "logo-image": "shopify://shop_images/png-clipart-brand-logo-product-design-font-cosmetic-beauty-text-cosmetics_1.png"
-          }
-        },
-        "logo_XdYDzB": {
-          "type": "logo",
-          "settings": {
-            "logo-image": "shopify://shop_images/wella_1.png"
-          }
-        }
-      },
-      "block_order": [
-        "logo_c43R69",
-        "logo_NVLUhR",
-        "logo_BRPQXr",
-        "logo_DMTCjj",
-        "logo_R77N3b",
-        "logo_BrN4eY",
-        "logo_AUyUTa",
-        "logo_GM8PHC",
-        "logo_XdYDzB"
-      ],
       "settings": {
         "color_scheme": "scheme-1",
         "background_color": "#ffffff",
@@ -101,8 +31,5 @@
       }
     }
   },
-  "order": [
-    "main",
-    "brand_logo_Wpqrz7"
-  ]
+  "order": ["main", "brand_logo_Wpqrz7"]
 }
