@@ -34,7 +34,7 @@
         "products_per_row_mobile": 1,
         "enable_slider_mobile": true,
         "show_second_image": true,
-        "enable_quick_add": true,
+        "enable_quick_view": false,
         "show_vendor": true,
         "top_padding": 20,
         "bottom_padding": 100
