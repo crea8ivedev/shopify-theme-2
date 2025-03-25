@@ -1,0 +1,5 @@
+.subtitle * {
+    font-size: 1.125rem;
+    letter-spacing: 0.06rem;
+    color: rgba(var(--color-foreground), 0.7);
+  }

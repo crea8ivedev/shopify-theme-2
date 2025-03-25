@@ -235,9 +235,165 @@
       },
       "spacing": "Spacing",
       "colors": {
-        "label": "Color scheme",
+        "label": "Color Scheme",
         "has_cards_info": "To change the card color scheme, update your theme settings."
       }
-    }
+    },
+    "image-banner": {
+      "name": "Image banner",
+      "settings": {
+        "image": {
+          "label": "First Image"
+        },
+        "image_2": {
+          "label": "Second Image"
+        },
+        "image_overlay_opacity": {
+          "label": "Image Overlay Opacity"
+        },
+        "image_height": {
+          "label": "Banner Height",
+          "options__1": {
+            "label": "Adapt to first image"
+          },
+          "options__2": {
+            "label": "Small"
+          },
+          "options__3": {
+            "label": "Medium"
+          },
+          "options__4": {
+            "label": "Large"
+          },
+          "info": "For best results, use an image with a 3:2 aspect ratio. [Learn more](https://help.shopify.com/manual/shopify-admin/productivity-tools/image-editor#understanding-image-aspect-ratio)"
+        },
+        "desktop_content_position": {
+          "label": "Desktop Content Position",
+          "options__1": {
+            "label": "Top Left"
+          },
+          "options__2": {
+            "label": "Top Center"
+          },
+          "options__3": {
+            "label": "Top Right"
+          },
+          "options__4": {
+            "label": "Middle Left"
+          },
+          "options__5": {
+            "label": "Middle Center"
+          },
+          "options__6": {
+            "label": "Middle Right"
+          },
+          "options__7": {
+            "label": "Bottom Left"
+          },
+          "options__8": {
+            "label": "Bottom Center"
+          },
+          "options__9": {
+            "label": "Bottom Right"
+          },
+        },
+        "show_text_box": {
+          "label": "Show Container On Desktop"
+        },
+        "desktop_content_alignment": {
+          "label": "Desktop Content Alignment",
+          "options__1": {
+            "label": "Left"
+          },
+          "options__2": {
+            "label": "Center"
+          },
+          "options__3": {
+            "label": "Right"
+          },
+        },
+        "mobile": {
+          "content": "Mobile Layout"
+        },
+        "mobile_content_alignment": {
+          "label": "Mobile Montent Alignment",
+          "options__1": {
+            "label": "Left"
+          },
+          "options__2": {
+            "label": "Center"
+          },
+          "options__3": {
+            "label": "Right"
+          },
+        },
+        "stack_images_on_mobile": {
+          "label": "Stack Images On Mobile"
+        },
+        "show_text_below": {
+          "label": "Show Container On Mobile"
+        }
+      },
+      "blocks": {
+        "heading": {
+          "name": "Heading",
+          "settings": {
+            "heading": {
+              "label": "Heading",
+              "default": "Image Banner"
+            }
+          }
+        },
+        "text": {
+          "name": "Text",
+          "settings": {
+            "text": {
+              "label": "Description",
+              "default": "Give customers details about the banner image(s) or content on the template."
+            },
+            "text_style": {
+              "label": "Text Style",
+              "options__1": {
+                "label": "Body"
+              },
+              "options__2": {
+                "label": "Subtitle"
+              },
+              "options__3": {
+                "label": "Uppercase"
+              },
+            }
+          }
+        },
+        "buttons": {
+          "name": "Buttons",
+          "settings": {
+            "button_label_1": {
+              "label": "First Button Label",
+              "default": "Button Label"
+            },
+            "button_link_1": {
+              "label": "First Button Link"
+            },
+            "button_style_secondary_1": {
+              "label": "Use Outline Button Style"
+            },
+            "button_label_2": {
+              "label": "Second Button Label",
+              "default": "Button Label"
+            },
+            "button_link_2": {
+              "label": "Second Button Link"
+            },
+            "button_style_secondary_2": {
+              "label": "Use Outline Button Style"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Image Banner"
+      }
+    },
   }
 }
