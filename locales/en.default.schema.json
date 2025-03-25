@@ -238,6 +238,18 @@
         "label": "Color scheme",
         "has_cards_info": "To change the card color scheme, update your theme settings."
       }
-    }
+    },
+    "contact-form": {
+      "name": "Contact Form",
+      "presets": {
+        "name": "Contact form"
+      },
+      "settings": {
+        "title": {
+          "default": "Contact form",
+          "label": "Heading"
+        }
+      }
+    },
   }
 }

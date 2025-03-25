@@ -8,18 +8,28 @@
  * ------------------------------------------------------------
  */
 {
-  "name": "Header",
-  "type": "header",
   "sections": {
-    "header": {
-      "type": "header",
+    "main": {
+      "type": "main-page",
       "disabled": true,
       "settings": {
-        "color_scheme": ""
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "contact_form_QFfFke": {
+      "type": "contact-form",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "heading": "",
+        "heading_size": "h0",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
   "order": [
-    "header"
+    "main",
+    "contact_form_QFfFke"
   ]
 }
