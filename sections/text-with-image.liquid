@@ -29,18 +29,23 @@
   #TextProducts--{{ section.id }} {
     --PT: {{ section.settings.padding_top }}px;
     --PB: {{ section.settings.padding_bottom }}px;
+    padding-left: 40px;
+    padding-right: 40px;
 
     {%- unless bg_color == 'rgba(0,0,0,0)' or bg_color == blank -%}
-      --bg: {{ bg_color }};
+      background-color: {{ bg_color }};
     {%- endunless -%}
 
     {%- unless text_color == 'rgba(0,0,0,0)' or text_color == blank -%}
-      --text: {{ text_color }};
+      color: {{ text_color }};
     {%- endunless -%}
   }
   .section-padding {
     padding-top: var(--PT);
     padding-bottom: var(--PB);
+  }
+  .text-right {
+    text-align: right;
   }
   .text-center {
     text-align: center;
@@ -50,10 +55,6 @@
   }
   .h2.text-img-subheading {
     margin: .5em 0;
-  }
-  .wrapper--narrow {
-    padding-left: 50px;
-    padding-right: 50px;
   }
   .inline-image {
     display: inline-block;
@@ -127,6 +128,129 @@
   }
   .subheading-size-15 {
     font-size: var(--font-15);
+  }
+
+  @media screen and (min-width: 750px) {
+    .heading-desktop-size-1 {
+      font-size: var(--font-1);
+    }
+
+    .heading-desktop-size-2 {
+      font-size: var(--font-2);
+    }
+
+    .heading-desktop-size-3 {
+      font-size: var(--font-3);
+    }
+
+    .heading-desktop-size-4 {
+      font-size: var(--font-4);
+    }
+
+    .heading-desktop-size-5 {
+      font-size: var(--font-5);
+    }
+
+    .heading-desktop-size-6 {
+      font-size: var(--font-6);
+    }
+
+    .heading-desktop-size-7 {
+      font-size: var(--font-7);
+    }
+
+    .heading-desktop-size-8 {
+      font-size: var(--font-8);
+    }
+
+    .heading-desktop-size-9 {
+      font-size: var(--font-9);
+    }
+
+    .heading-desktop-size-10 {
+      font-size: var(--font-10);
+    }
+
+    .heading-desktop-size-11 {
+      font-size: var(--font-11);
+    }
+
+    .heading-desktop-size-12 {
+      font-size: var(--font-12);
+    }
+
+    .heading-desktop-size-13 {
+      font-size: var(--font-13);
+    }
+
+    .heading-desktop-size-14 {
+      font-size: var(--font-14);
+    }
+
+    .heading-desktop-size-15 {
+      font-size: var(--font-15);
+    }
+  }
+  @media screen and (max-width: 749px) {
+    .heading-mobile-size-1 {
+      font-size: var(--font-1);
+    }
+
+    .heading-mobile-size-2 {
+      font-size: var(--font-2);
+    }
+
+    .heading-mobile-size-3 {
+      font-size: var(--font-3);
+    }
+
+    .heading-mobile-size-4 {
+      font-size: var(--font-4);
+    }
+
+    .heading-mobile-size-5 {
+      font-size: var(--font-5);
+    }
+
+    .heading-mobile-size-6 {
+      font-size: var(--font-6);
+    }
+
+    .heading-mobile-size-7 {
+      font-size: var(--font-7);
+    }
+
+    .heading-mobile-size-8 {
+      font-size: var(--font-8);
+    }
+
+    .heading-mobile-size-9 {
+      font-size: var(--font-9);
+    }
+
+    .heading-mobile-size-10 {
+      font-size: var(--font-10);
+    }
+
+    .heading-mobile-size-11 {
+      font-size: var(--font-11);
+    }
+
+    .heading-mobile-size-12 {
+      font-size: var(--font-12);
+    }
+
+    .heading-mobile-size-13 {
+      font-size: var(--font-13);
+    }
+
+    .heading-mobile-size-14 {
+      font-size: var(--font-14);
+    }
+
+    .heading-mobile-size-15 {
+      font-size: var(--font-15);
+    }
   }
 {%- endstyle -%}
 
@@ -244,7 +368,7 @@
   class="index-text-products section-padding"
   data-section-id="{{ section.id }}"
 >
-  <div class="{{ section.settings.width }} {{ section.settings.text_align_desktop }} {{ section.settings.text_align_mobile }}">
+  <div class="{{ section.settings.text_align }}">
     {%- if subheading != blank -%}
       <div
         class="subheading {{ subheading_font_size_class }}"
@@ -324,7 +448,7 @@
     {
       "type": "range",
       "id": "subheading_size",
-      "label": "Text size",
+      "label": "Text Size",
       "min": 1,
       "max": 15,
       "step": 1,
@@ -339,7 +463,7 @@
     {
       "type": "range",
       "id": "heading_size",
-      "label": "Desktop heading size",
+      "label": "Desktop Heading Size",
       "min": 1,
       "max": 15,
       "step": 1,
@@ -348,7 +472,7 @@
     {
       "type": "range",
       "id": "mobile_heading_size",
-      "label": "Mobile heading size",
+      "label": "Mobile Heading Size",
       "min": 1,
       "max": 15,
       "step": 1,
@@ -356,56 +480,28 @@
     },
     {
       "type": "select",
-      "id": "text_align_desktop",
-      "label": "Desktop text alignment",
+      "id": "text_align",
+      "label": "Text Alignment",
       "default": "text-left",
       "options": [
         { "value": "text-left", "label": "Left" },
-        { "value": "text-center", "label": "Centered" }
+        { "value": "text-center", "label": "Center" },
+        { "value": "text-right", "label": "Right" }
       ]
-    },
-    {
-      "type": "select",
-      "id": "text_align_mobile",
-      "label": "Mobile text alignment",
-      "default": "text-left--mobile",
-      "options": [
-        { "value": "text-left--mobile", "label": "Left" },
-        { "value": "text-center--mobile", "label": "Centered" }
-      ]
-    },
-    {
-      "type": "header",
-      "content": "Style"
-    },
-    {
-      "type": "select",
-      "id": "width",
-      "label": "Width",
-      "default": "wrapper",
-      "options": [
-        { "value": "wrapper--full-padded", "label": "Full width padded" },
-        { "value": "wrapper", "label": "Normal" },
-        { "value": "wrapper--narrow", "label": "Narrow" }
-      ]
-    },
-    {
-      "type": "header",
-      "content": "Colors"
     },
     {
       "type": "color",
       "id": "bg_color",
-      "label": "Background"
+      "label": "Background Color"
     },
     {
       "type": "color",
       "id": "color",
-      "label": "Text"
+      "label": "Text Color"
     },
     {
       "type": "header",
-      "content": "Section padding"
+      "content": "Block padding"
     },
     {
       "type": "range",
@@ -414,7 +510,7 @@
       "max": 100,
       "step": 1,
       "unit": "px",
-      "label": "Padding top",
+      "label": "Top Padding",
       "default": 32
     },
     {
@@ -424,7 +520,7 @@
       "max": 100,
       "step": 1,
       "unit": "px",
-      "label": "Padding bottom",
+      "label": "Bottom Padding",
       "default": 32
     }
   ],

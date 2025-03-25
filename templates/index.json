@@ -9,12 +9,6 @@
  */
 {
   "sections": {
-    "header_dGnaxm": {
-      "type": "header",
-      "settings": {
-        "color_scheme": ""
-      }
-    },
     "main": {
       "type": "main-page",
       "disabled": true,
@@ -70,11 +64,9 @@
         "subheading": "Text with Image",
         "subheading_size": 3,
         "heading": "Highlight products, a collection or images alongside a brand message",
-        "heading_size": 10,
+        "heading_size": 7,
         "mobile_heading_size": 5,
-        "text_align_desktop": "text-left",
-        "text_align_mobile": "text-left--mobile",
-        "width": "wrapper--narrow",
+        "text_align": "text-left",
         "bg_color": "",
         "color": "",
         "padding_top": 32,
@@ -83,7 +75,6 @@
     }
   },
   "order": [
-    "header_dGnaxm",
     "main",
     "text_with_image_WdAPmP"
   ]
