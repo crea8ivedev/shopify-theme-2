@@ -229,8 +229,8 @@
   "sections": {
     "all": {
       "padding": {
-        "section_padding_heading": "Section padding",
-        "padding_top": "Top padding",
+        "section_padding_heading": "Section Padding",
+        "padding_top": "Top Padding",
         "padding_bottom": "Bottom Padding"
       },
       "spacing": "Spacing",
@@ -239,6 +239,69 @@
         "has_cards_info": "To change the card color scheme, update your theme settings."
       }
     },
-    
+    "feature_collection":{
+      "name": "Feature Collection",
+      "settings":{
+        "color_scheme": {
+          "label": "Color Scheme"
+        },
+        "background_image":{
+          "label": "Background Image"
+        },
+        "heading":{
+          "label": "Heading"
+        },
+        "content":{
+          "label":"Content"
+        },
+        "show_collection_description":{
+          "label": "Show Collection Description From The Admin"
+        },
+        "link_text":{
+          "label":"Link Text"
+        },
+        "link_url":{
+          "label": "Link URL"
+        },
+        "collection":{
+          "label": "Collection"
+        },
+        "products":{
+          "label": "Products"
+        },
+        "products_per_row_desktop":{
+          "label": "Products Per Row (desktop)"
+        },
+        "max_products":{
+          "label": "Maximum Products To Show"
+        },
+        "product_layout":{
+          "label": "Product Layout",
+         "options__1": {
+            "label": "Grid"
+          },
+          "options__2": {
+            "label": "Slider"
+          },
+        },
+       "products_per_row_mobile":{
+        "label": "Products Per Row (Mobile)"
+       },
+       "enable_slider_mobile":{
+        "label": "Enable Slider On Mobile"
+       },
+       "show_second_image":{
+        "label": "Show Second Image On Hover"
+       },
+       "enable_quick_view":{
+        "label": "Enable Quick View Button"
+       },
+       "show_vendor":{
+        "label": "Show Vendor"
+       }
+
+      }
+
+    }
   }
 }

@@ -1,0 +1,45 @@
+
+.swiper-slide{
+max-width: 700px;
+}
+.card__media {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+/* Default primary image */
+.primary-image {
+  display: block;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Secondary image (only appears if available) */
+.secondary-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* If there's a second image, hide the first and show the second on hover */
+.card__media:hover .secondary-image {
+  opacity: 1;
+}
+
+.card__media:hover .primary-image {
+  opacity: 0;
+}
+
+/* If there's no second image, only apply rotation effect */
+.card__media:not(:has(.secondary-image)):hover .primary-image {
+  transform: rotate(5deg);
+  opacity: 1; /* Ensure it stays visible */
+}
+
+.feature-collection {
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+}
