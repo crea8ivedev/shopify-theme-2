@@ -11,70 +11,71 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
     },
-    "contact_details_n9LhYf": {
+    "contact_details_bM3PUy": {
       "type": "contact-details",
       "blocks": {
-        "contact_details_Tcr9zM": {
+        "contact_details_J4GJW3": {
           "type": "contact_details",
           "settings": {
             "contact_text": "Email",
-            "contact_details": "<p><a href=\"mailto:abc@gmail.com\" target=\"_blank\" title=\"mailto:abc@gmail.com\">abc@gmail.com</a></p>",
+            "contact_details": "<a href=\"mailto:info@Cinderellahair.com\">info@Cinderellahair.com</a>",
             "contact_icon": "shopify://shop_images/email-1-svgrepo-com.svg"
           }
         },
-        "contact_details_hymrbr": {
+        "contact_details_eeVK69": {
           "type": "contact_details",
           "settings": {
             "contact_text": "Toll Free",
-            "contact_details": "<p><a href=\"tel:(800) 332-9246 \" target=\"_blank\" title=\"tel:(800) 332-9246 \">800- 332-9246 </a></p>",
+            "contact_details": "<a href=\"tel:(800)%20332-9246\">(800) 332-9246 PST</a>",
             "contact_icon": "shopify://shop_images/phone-alt-svgrepo-com.svg"
           }
         },
-        "contact_details_9zjk3h": {
+        "contact_details_AQidJm": {
           "type": "contact_details",
           "settings": {
             "contact_text": "Telephone",
-            "contact_details": "<p><a href=\"tel:562-903-106\" target=\"_blank\" title=\"tel:562-903-106\">562-903-106</a></p>",
+            "contact_details": "<a href=\"tel:(562)%20903-1063\">(562) 903-1063</a>",
             "contact_icon": "shopify://shop_images/phone-alt-svgrepo-com.svg"
           }
         },
-        "contact_details_6Q3yGt": {
+        "contact_details_d7RNpf": {
           "type": "contact_details",
           "settings": {
             "contact_text": "Text",
-            "contact_details": "<p><a href=\"tel:562-825-8116\" target=\"_blank\" title=\"tel:562-825-8116\">562-825-8116</a></p>",
+            "contact_details": "<a href=\"tel:(562)%20825-8116\">(562) 825-8116</a>",
             "contact_icon": "shopify://shop_images/mobile-alt-2-svgrepo-com.svg"
           }
         },
-        "contact_details_QDzRhR": {
+        "contact_details_DngREU": {
           "type": "contact_details",
           "settings": {
             "contact_text": "Corporate Office",
-            "contact_details": "<p>12304 McCann Drive Santa Fe Springs, CA 90670</p>",
+            "contact_details": "<p>12304 McCann Drive<br>\nSanta Fe Springs, CA 90670</p>",
             "contact_icon": "shopify://shop_images/location-pin-alt-1-svgrepo-com.svg"
           }
         }
       },
       "block_order": [
-        "contact_details_Tcr9zM",
-        "contact_details_hymrbr",
-        "contact_details_9zjk3h",
-        "contact_details_6Q3yGt",
-        "contact_details_QDzRhR"
+        "contact_details_J4GJW3",
+        "contact_details_eeVK69",
+        "contact_details_AQidJm",
+        "contact_details_d7RNpf",
+        "contact_details_DngREU"
       ],
       "settings": {
-        "color_scheme": "scheme-9a4ed46b-85e4-406e-bd00-b3b0c4b545b2",
-        "map_url": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3692.0789634508105!2d70.77635637529175!3d22.27499847970491!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959cbd300e79d7b%3A0xbe405a6b22b9c05f!2sEncircle%20Technologies%20Private%20Limited!5e0!3m2!1sen!2sin!4v1742907428807!5m2!1sen!2sin\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
+        "section_title": "Contact Details",
+        "section_sub_title": "Reach Us"
       }
     }
   },
   "order": [
     "main",
-    "contact_details_n9LhYf"
+    "contact_details_bM3PUy"
   ]
 }

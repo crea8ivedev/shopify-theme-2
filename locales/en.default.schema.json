@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-{
+ {
   "settings_schema": {
     "global": {
       "settings": {
@@ -229,8 +229,8 @@
   "sections": {
     "all": {
       "padding": {
-        "section_padding_heading": "Section padding",
-        "padding_top": "Top padding",
+        "section_padding_heading": "Section Padding",
+        "padding_top": "Top Padding",
         "padding_bottom": "Bottom Padding"
       },
       "spacing": "Spacing",
@@ -238,6 +238,46 @@
         "label": "Color scheme",
         "has_cards_info": "To change the card color scheme, update your theme settings."
       }
+    },
+    "contact_info": {
+      "name": "Contact Information",
+      "settings": {
+        "color_scheme": {
+          "label": "Color Scheme"
+        },
+        "title": {
+          "label": "Title"
+        },
+        "sub_title": {
+          "label": "Subtitle"
+        },
+        "map_url": {
+          "label": "Map URL"
+        },
+        "padding_top": {
+          "label": "Padding Top"
+        },
+        "padding_bottom": {
+          "label": "Padding Bottom"
+        }
+      },
+      "blocks": {
+        "contact_details": {
+          "name": "Contact Details",
+          "settings": {
+            "contact_text": {
+              "label": "Contact Text",
+              "default": "Toll Free"
+            },
+            "contact_details": {
+              "label": "Details"
+            },
+            "contact_icon": {
+              "label": "Icon"
+            }
+          }
+        }
+      },
     }
   }
 }

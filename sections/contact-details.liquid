@@ -1,0 +1,163 @@
+{{ 'component-contact-details.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.50 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.50 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="contact-info-inner contact-info-container color-{{ section.settings.color_scheme }} section-{{ section.id }}-padding">
+  <div class="contact-info-wrapper">
+    <div class="contact-info-content">
+      {% if section.settings.title != blank and section.settings.sub_title != blank %}
+        <div class="contact-info-title-wrap">
+          <h2 class="contact-info-title">{{ section.settings.title }}</h2>
+          <h3 class="contact-info-subtitle">{{ section.settings.sub_title }}</h3>
+        </div>
+      {% endif %}
+      <div class="contact-info-details-wrap">
+        <div class="contact-info-map-wrap">
+          <div class="contact-info-map">
+            <div class="map-area">
+              {{ section.settings.map_url }}
+            </div>
+          </div>
+        </div>
+        <div class="contact-info_detail">
+          {% for block in section.blocks %}
+            <div class="contact-info_item ">
+              {% if block.settings.contact_text != blank %}
+                <div class="contact-text">
+                  <p>{{ block.settings.contact_text }}</p>
+                </div>
+              {% endif %}
+              <div class="contact-info_details">
+                {% if block.settings.contact_icon != blank %}
+                  <div class="contact-info_icon ">
+                    {% if block.settings.contact_icon != blank %}
+                      <img
+                        src="{{ block.settings.contact_icon |  image_url: width:20  }}"
+                        alt="icon"
+                        width="20"
+                        height="20"
+                      >
+                    {% else %}
+                      {{ 'image' | placeholder_svg_tag: 'placeholder-class' }}.
+                    {% endif %}
+                  </div>
+                {% endif %}
+                {% if block.settings.contact_details != blank %}
+                  <div class="contact-info_content">
+                    {{ block.settings.contact_details | default: '1234567895' }}
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.contact_info.name",
+  "tag": "section",
+  "class": "contact-info-wrapper",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "label": "t:sections.contact_info.settings.color_scheme.label",
+      "id": "color_scheme"
+    },
+    {
+      "type": "richtext",
+      "label": "t:sections.contact_info.settings.title.label",
+      "id": "title"
+    },
+    {
+      "type": "richtext",
+      "label": "t:sections.contact_info.settings.sub_title.label",
+      "id": "sub_title"
+    },
+    {
+      "type": "html",
+      "label": "t:sections.contact_info.settings.map_url.label",
+      "id": "map_url" 
+    },
+    {
+        "type": "header",
+        "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "contact_details",
+      "name": "t:sections.contact_info.blocks.contact_details.name",
+      "settings": [
+        {
+          "type": "text",
+          "label": "t:sections.contact_info.blocks.contact_details.settings.contact_text.label",
+          "id": "contact_text",
+          "default": "t:sections.contact_info.blocks.contact_details.settings.contact_text.default"
+        },
+        {
+          "type": "richtext",
+          "label": "t:sections.contact_info.blocks.contact_details.settings.contact_details.label",
+          "id": "contact_details"
+        },
+        {
+          "type": "image_picker",
+          "label": "t:sections.contact_info.blocks.contact_details.settings.contact_icon.label",
+          "id": "contact_icon"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.contact_info.name",
+      "blocks": [
+        {
+          "type": "contact_details"
+        },
+        {
+          "type": "contact_details"
+        },
+        {
+          "type": "contact_details"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

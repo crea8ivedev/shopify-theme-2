@@ -1,0 +1,24 @@
+
+  p {
+    margin: 0;
+  }
+  .map-area iframe {
+    width: 100%;
+  }
+  .map-area {
+    padding: 0 30px;
+  }
+  .contact-info_detail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact-info_details {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  .contact-info_content {
+    color: black;
+  }
