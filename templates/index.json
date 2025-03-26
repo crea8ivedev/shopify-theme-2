@@ -16,20 +16,50 @@
         "padding_bottom": 28
       }
     },
-    "brand_logo_Wpqrz7": {
+    "brand_logo_HrbinF": {
       "type": "brand-logo",
+      "blocks": {
+        "logo_eaiUBm": {
+          "type": "logo",
+          "settings": {}
+        },
+        "logo_fbqPwU": {
+          "type": "logo",
+          "settings": {}
+        },
+        "logo_cwTFXa": {
+          "type": "logo",
+          "settings": {}
+        },
+        "logo_E8dQWN": {
+          "type": "logo",
+          "settings": {}
+        },
+        "logo_ejp74n": {
+          "type": "logo",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "logo_eaiUBm",
+        "logo_fbqPwU",
+        "logo_cwTFXa",
+        "logo_E8dQWN",
+        "logo_ejp74n"
+      ],
       "settings": {
-        "color_scheme": "scheme-1",
-        "background_color": "#ffffff",
-        "heading": "<h2>Brand Logo</h2>",
-        "content": "<p>Nibh tellus molestie nunc non blandit massa. Nec feugiat nisl pretium fusce id. Faucibus scelerisque eleifend donec pretium vulputate...</p>",
+        "color_scheme": "",
+        "background_color": "",
+        "heading": "Add Heading Here",
+        "content": "<p>Add Content Here</p>",
         "enable_scrolling": true,
+        "full_width": true,
         "scroll_speed": 5,
-        "direction": "right",
-        "padding_top": 58,
-        "padding_bottom": 58
+        "direction": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
-  "order": ["main", "brand_logo_Wpqrz7"]
+  "order": ["main", "brand_logo_HrbinF"]
 }

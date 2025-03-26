@@ -251,8 +251,14 @@
         "heading": {
           "label": "Heading"
         },
+        "default_heading": {
+          "label": "Add Heading Here"
+        },
         "content": {
           "label": "Content"
+        },
+        "default_content": {
+          "label": "Add Content Here"
         },
         "enable_navigation": {
           "label": "Enable Navigation Arrows"
@@ -260,11 +266,14 @@
         "enable_scrolling": {
           "label": "Enable Scrolling"
         },
+        "full_width": {
+          "label": "Full Width"
+        },
         "scroll_speed": {
           "label": "Scroll Speed"
         },
         "direction": {
-          "label": "Scroll Direction",
+          "label": "Scroll Direction"
         },
         "pause_on_hover": {
           "label": "Pause on Hover"

@@ -18,14 +18,14 @@
 >
   <div class="brand-logo-container page-width">
     {% if section.settings.heading != blank %}
-      {{ section.settings.heading }}
+      <h2 class="brand-logo-title">{{ section.settings.heading }}</h2>
     {% endif %}
     {% if section.settings.content != blank %}
       <div class="logo_description">{{ section.settings.content }}</div>
     {% endif %}
   </div>
   <div class="brand__logo-swiper-container">
-    <div class="slider-swiper-container brand-logo-swiper">
+    <div class="slider-swiper-container brand-logo-swiper {% if section.settings.full_width %}slider-full-width{% endif %} ">
       <div class="swiper-wrapper">
         {% for block in section.blocks %}
           {% if block.settings['logo-image'] != blank %}
@@ -33,7 +33,8 @@
               <img src="{{ block.settings.logo-image | image_url }}" alt="brand-logo" width="100%" height="100%">
             </div>
           {% else %}
-            <img src="{{ 'image' | placeholder_svg_tag }}" alt="placeholder-logo" width="100%" height="100%">
+            {{ 'image' | placeholder_svg_tag }}
+            <!-- Fallback Placeholder -->
           {% endif %}
         {% endfor %}
       </div>
@@ -56,14 +57,16 @@
       "id": "background_color"
     },
     {
-      "type": "richtext",
+      "type": "inline_richtext",
       "id": "heading",
-      "label": "t:sections.brand-logo.settings.heading.label"
+      "label": "t:sections.brand-logo.settings.heading.label",
+      "default": "t:sections.brand-logo.settings.default_heading.label"
     },
     {
       "type": "richtext",
       "id": "content",
-      "label": "t:sections.brand-logo.settings.content.label"
+      "label": "t:sections.brand-logo.settings.content.label",
+      "default": "t:sections.brand-logo.settings.default_content.label"
     },
 
     {
@@ -74,6 +77,12 @@
       "type": "checkbox",
       "id": "enable_scrolling",
       "label": "t:sections.brand-logo.settings.enable_scrolling.label",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "t:sections.brand-logo.settings.full_width.label",
       "default": true
     },
     {
@@ -135,7 +144,8 @@
   ],
   "presets": [
     {
-      "name": "t:sections.brand-logo.presets.name"
+      "name": "t:sections.brand-logo.presets.name",
+      "blocks": [{ "type": "logo" }, { "type": "logo" }, { "type": "logo" }, { "type": "logo" }, { "type": "logo" }]
     }
   ]
 }
