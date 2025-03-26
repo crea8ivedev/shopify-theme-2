@@ -41,7 +41,7 @@
                   <p class="product-card__description">{{ product.description | strip_html | truncate: 100 }}</p>
               {% endif %}
 
-           {% if enable_quick_add %}
+           {% if enable_quick_view %}
               <div class="quick-view-button" data-product-handle="{{ product.handle }}">
                 <a href="{{ product.handkle }}" class="button">
                 Quick View
