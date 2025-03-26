@@ -33,36 +33,37 @@
         </div>
         <div class="contact-info_detail">
           {% for block in section.blocks %}
-            <div class="contact-info_item ">
+            <div class="contact-info_item">
               {% if block.settings.contact_text != blank %}
                 <div class="contact-text">
                   <p>{{ block.settings.contact_text }}</p>
                 </div>
               {% endif %}
               <div class="contact-info_details">
-                {% if block.settings.contact_icon != blank %}
-                  <div class="contact-info_icon ">
-                    {% if block.settings.contact_icon != blank %}
-                      <img
-                        src="{{ block.settings.contact_icon |  image_url: width:20  }}"
-                        alt="icon"
-                        width="20"
-                        height="20"
-                      >
-                    {% else %}
-                      {{ 'image' | placeholder_svg_tag: 'placeholder-class' }}.
-                    {% endif %}
-                  </div>
-                {% endif %}
-                {% if block.settings.contact_details != blank %}
-                  <div class="contact-info_content">
-                    {{ block.settings.contact_details | default: '1234567895' }}
-                  </div>
-                {% endif %}
+                <div class="contact-info_icon">
+                  {% if block.settings.contact_icon != blank %}
+                    <img
+                      src="{{ block.settings.contact_icon | image_url: width: 20 }}"
+                      alt="icon"
+                      width="20"
+                      height="20"
+                    >
+                  {% else %}
+                    {{ 'image' | placeholder_svg_tag }}
+                  {% endif %}
+                </div>
+                <div class="contact-info_content">
+                  {% if block.settings.contact_details != blank %}
+                    {{ block.settings.contact_details }}
+                  {% else %}
+                    1234567895 <!-- Default value -->
+                  {% endif %}
+                </div>
               </div>
             </div>
           {% endfor %}
         </div>
+        
       </div>
     </div>
   </div>
