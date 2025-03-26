@@ -221,3 +221,8 @@ img.is-loading {
         display: none;
     }
 }
+@media screen and (max-width: 749px) {
+    .inline-image {
+        width: var(--image-width-mobile, var(--image-width));
+    }
+}

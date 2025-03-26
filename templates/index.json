@@ -24,11 +24,11 @@
           "type": "product",
           "settings": {
             "image_position": 1,
-            "product": "the-3p-fulfilled-snowboard",
-            "image": "shopify://shop_images/images_9.jpg",
-            "aspect_ratio": 1,
+            "product": "selling-plans-ski-wax",
+            "image": "shopify://shop_images/image-with-text.png",
+            "aspect_ratio": 0.7,
             "mobile_aspect_ratio": 0.8,
-            "width": 80,
+            "width": 100,
             "mobile_width": 60
           }
         },
@@ -51,7 +51,7 @@
             "image_position": 9,
             "collection": "automated-collection",
             "aspect_ratio": 1,
-            "mobile_aspect_ratio": 1,
+            "mobile_aspect_ratio": 0.9,
             "width": 80,
             "mobile_width": 60
           }
@@ -63,12 +63,12 @@
         "collection_V4gMTf"
       ],
       "settings": {
-        "subheading": "Text with Image",
+        "subheading": "Radian skin, Timeless Beauty",
         "subheading_size": 4,
-        "heading": "Highlight products, a collection or images alongside a brand message",
+        "heading": "Introducing Aura Beauty, where luxury meets skincare. Embrace your natural radiance with our premium products.",
         "heading_size": 7,
         "mobile_heading_size": 5,
-        "text_align": "text-left",
+        "text_align": "text-center",
         "bg_color": "#ffe7e7",
         "color": "#944e63",
         "padding_top": 32,
