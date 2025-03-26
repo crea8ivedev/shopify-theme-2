@@ -239,6 +239,68 @@
         "has_cards_info": "To change the card color scheme, update your theme settings."
       }
     },
+    "text_with_image": {
+      "name": "Text with Image",
+      "settings": {
+        "subheading": "Subheading",
+        "subheading_size": "Text Size",
+        "heading": "Heading",
+        "heading_size": "Desktop Heading Size",
+        "mobile_heading_size": "Mobile Heading Size",
+        "text_align": {
+          "label": "Text Alignment",
+          "options": {
+            "text-left": "Left",
+            "text-center": "Center",
+            "text-right": "Right"
+          }
+        },
+        "bg_color": "Background Color",
+        "color": "Text Color",
+        "block_padding": "Block padding",
+        "padding_top": "Top Padding",
+        "padding_bottom": "Bottom Padding"
+      },
+      "blocks": {
+        "image": {
+          "name": "Image",
+          "settings": {
+            "image_position": "Image position",
+            "image": "Image",
+            "aspect_ratio": "Desktop aspect ratio",
+            "mobile_aspect_ratio": "Mobile aspect ratio",
+            "width": "Desktop width",
+            "mobile_width": "Mobile width",
+            "link": "Link",
+            "external_link": "External Link"
+          }
+        },
+        "product": {
+          "name": "Product",
+          "settings": {
+            "image_position": "Product position",
+            "product": "Product",
+            "image": "Image override",
+            "aspect_ratio": "Desktop aspect ratio",
+            "mobile_aspect_ratio": "Mobile aspect ratio",
+            "width": "Desktop width",
+            "mobile_width": "Mobile width"
+          }
+        },
+        "collection": {
+          "name": "Collection",
+          "settings": {
+            "image_position": "Collection position",
+            "collection": "Collection",
+            "image": "Image Override",
+            "aspect_ratio": "Desktop aspect ratio",
+            "mobile_aspect_ratio": "Mobile aspect ratio",
+            "width": "Desktop width",
+            "mobile_width": "Mobile width"
+          }
+        }
+      }
+    },
     "header": {
       "name": "Header",
       "settings": {

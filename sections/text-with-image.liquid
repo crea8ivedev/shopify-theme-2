@@ -1,3 +1,5 @@
+{{ 'text-with-image.css' | asset_url | stylesheet_tag }}
+
 <!-- /sections/section-text-with-products.liquid -->
 {%- liquid
   assign bg_color = section.settings.bg_color
@@ -40,218 +42,6 @@
       color: {{ text_color }};
     {%- endunless -%}
   }
-  .section-padding {
-    padding-top: var(--PT);
-    padding-bottom: var(--PB);
-  }
-  .text-right {
-    text-align: right;
-  }
-  .text-center {
-    text-align: center;
-  }
-  .text-left {
-    text-align: left;
-  }
-  .h2.text-img-subheading {
-    margin: .5em 0;
-  }
-  .inline-image {
-    display: inline-block;
-    width: var(--image-width);
-    margin: 2px 0;
-    vertical-align: middle;
-  }
-  .inline-image__inner {
-    overflow: hidden;
-  }
-  .inline-image__image {
-    display: block;
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-top: calc(1 / var(--aspect-ratio)* 100%);
-    transition: transform 2s cubic-bezier(.215,.61,.355,1);
-    margin: 0;
-  }
-  img.is-loading {
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    image-rendering: auto;
-    transition: opacity .5s ease-in;
-  }
-  .subheading-size-1 {
-    font-size: var(--font-1);
-  }
-  .subheading-size-2 {
-    font-size: var(--font-2);
-  }
-  .subheading-size-3 {
-    font-size: var(--font-3);
-  }
-  .subheading-size-4 {
-    font-size: var(--font-4);
-  }
-  .subheading-size-5 {
-    font-size: var(--font-5);
-  }
-  .subheading-size-6 {
-    font-size: var(--font-6);
-  }
-  .subheading-size-7 {
-    font-size: var(--font-7);
-  }
-  .subheading-size-8 {
-    font-size: var(--font-8);
-  }
-  .subheading-size-9 {
-    font-size: var(--font-9);
-  }
-  .subheading-size-10 {
-    font-size: var(--font-10);
-  }
-  .subheading-size-11 {
-    font-size: var(--font-11);
-  }
-  .subheading-size-12 {
-    font-size: var(--font-12);
-  }
-  .subheading-size-13 {
-    font-size: var(--font-13);
-  }
-  .subheading-size-14 {
-    font-size: var(--font-14);
-  }
-  .subheading-size-15 {
-    font-size: var(--font-15);
-  }
-
-  @media screen and (min-width: 750px) {
-    .heading-desktop-size-1 {
-      font-size: var(--font-1);
-    }
-
-    .heading-desktop-size-2 {
-      font-size: var(--font-2);
-    }
-
-    .heading-desktop-size-3 {
-      font-size: var(--font-3);
-    }
-
-    .heading-desktop-size-4 {
-      font-size: var(--font-4);
-    }
-
-    .heading-desktop-size-5 {
-      font-size: var(--font-5);
-    }
-
-    .heading-desktop-size-6 {
-      font-size: var(--font-6);
-    }
-
-    .heading-desktop-size-7 {
-      font-size: var(--font-7);
-    }
-
-    .heading-desktop-size-8 {
-      font-size: var(--font-8);
-    }
-
-    .heading-desktop-size-9 {
-      font-size: var(--font-9);
-    }
-
-    .heading-desktop-size-10 {
-      font-size: var(--font-10);
-    }
-
-    .heading-desktop-size-11 {
-      font-size: var(--font-11);
-    }
-
-    .heading-desktop-size-12 {
-      font-size: var(--font-12);
-    }
-
-    .heading-desktop-size-13 {
-      font-size: var(--font-13);
-    }
-
-    .heading-desktop-size-14 {
-      font-size: var(--font-14);
-    }
-
-    .heading-desktop-size-15 {
-      font-size: var(--font-15);
-    }
-  }
-  @media screen and (max-width: 749px) {
-    .heading-mobile-size-1 {
-      font-size: var(--font-1);
-    }
-
-    .heading-mobile-size-2 {
-      font-size: var(--font-2);
-    }
-
-    .heading-mobile-size-3 {
-      font-size: var(--font-3);
-    }
-
-    .heading-mobile-size-4 {
-      font-size: var(--font-4);
-    }
-
-    .heading-mobile-size-5 {
-      font-size: var(--font-5);
-    }
-
-    .heading-mobile-size-6 {
-      font-size: var(--font-6);
-    }
-
-    .heading-mobile-size-7 {
-      font-size: var(--font-7);
-    }
-
-    .heading-mobile-size-8 {
-      font-size: var(--font-8);
-    }
-
-    .heading-mobile-size-9 {
-      font-size: var(--font-9);
-    }
-
-    .heading-mobile-size-10 {
-      font-size: var(--font-10);
-    }
-
-    .heading-mobile-size-11 {
-      font-size: var(--font-11);
-    }
-
-    .heading-mobile-size-12 {
-      font-size: var(--font-12);
-    }
-
-    .heading-mobile-size-13 {
-      font-size: var(--font-13);
-    }
-
-    .heading-mobile-size-14 {
-      font-size: var(--font-14);
-    }
-
-    .heading-mobile-size-15 {
-      font-size: var(--font-15);
-    }
-  }
 {%- endstyle -%}
 
 {%- if section.blocks.size > 0 -%}
@@ -267,6 +57,7 @@
       assign aspect_ratio_mobile = 1 | divided_by: aspect_ratio_mobile
       assign items_index = items_index | append: arr_separator | append: image_position
       assign link = block.settings.link
+      assign external_link = block.settings.external_link
 
       if block.settings.product != blank
         assign product = all_products[block.settings.product]
@@ -305,7 +96,7 @@
         data-aos-duration="1000"
         {{ block.shopify_attributes }}>
         {%- if link != blank -%}
-          <a href="{{ link }}" class="inline-image__link">
+        <a href="{{ link }}" {% if external_link != blank %}target="_blank"{% endif %} class="inline-image__link">
         {%- endif -%}
 
         <div class="inline-image__inner">
@@ -363,6 +154,7 @@
   {%- endfor -%}
 {%- endif -%}
 
+{% if heading != blank %}
 <section
   id="TextProducts--{{ section.id }}"
   class="index-text-products section-padding"
@@ -435,20 +227,21 @@
     {%- endif -%}
   </div>
 </section>
+{% endif %}
 
 {% schema %}
 {
-  "name": "Text with products",
+  "name": "t:sections.text_with_image.name",
   "settings": [
     {
       "type": "text",
       "id": "subheading",
-      "label": "Subheading"
+      "label": "t:sections.text_with_image.settings.subheading"
     },
     {
       "type": "range",
       "id": "subheading_size",
-      "label": "Text Size",
+      "label": "t:sections.text_with_image.settings.subheading_size",
       "min": 1,
       "max": 15,
       "step": 1,
@@ -457,13 +250,13 @@
     {
       "type": "textarea",
       "id": "heading",
-      "label": "Heading",
+      "label": "t:sections.text_with_image.settings.heading",
       "default": "Highlight products, a collection or images alongside a brand message"
     },
     {
       "type": "range",
       "id": "heading_size",
-      "label": "Desktop Heading Size",
+      "label": "t:sections.text_with_image.settings.heading_size",
       "min": 1,
       "max": 15,
       "step": 1,
@@ -472,7 +265,7 @@
     {
       "type": "range",
       "id": "mobile_heading_size",
-      "label": "Mobile Heading Size",
+      "label": "t:sections.text_with_image.settings.mobile_heading_size",
       "min": 1,
       "max": 15,
       "step": 1,
@@ -481,95 +274,95 @@
     {
       "type": "select",
       "id": "text_align",
-      "label": "Text Alignment",
+      "label": "t:sections.text_with_image.settings.text_align.label",
       "default": "text-left",
       "options": [
-        { "value": "text-left", "label": "Left" },
-        { "value": "text-center", "label": "Center" },
-        { "value": "text-right", "label": "Right" }
+        { "value": "text-left", "label": "t:sections.text_with_image.settings.text_align.options.text-left" },
+        { "value": "text-center", "label": "t:sections.text_with_image.settings.text_align.options.text-center" },
+        { "value": "text-right", "label": "t:sections.text_with_image.settings.text_align.options.text-right" }
       ]
     },
     {
       "type": "color",
       "id": "bg_color",
-      "label": "Background Color"
+      "label": "t:sections.text_with_image.settings.bg_color"
     },
     {
       "type": "color",
       "id": "color",
-      "label": "Text Color"
+      "label": "t:sections.text_with_image.settings.color"
     },
     {
       "type": "header",
-      "content": "Block padding"
+      "content": "t:sections.text_with_image.settings.block_padding"
     },
     {
       "type": "range",
       "id": "padding_top",
+      "label": "t:sections.text_with_image.settings.padding_top",
       "min": 0,
       "max": 100,
       "step": 1,
       "unit": "px",
-      "label": "Top Padding",
       "default": 32
     },
     {
       "type": "range",
       "id": "padding_bottom",
+      "label": "t:sections.text_with_image.settings.padding_bottom",
       "min": 0,
       "max": 100,
       "step": 1,
       "unit": "px",
-      "label": "Bottom Padding",
       "default": 32
     }
   ],
   "blocks": [
     {
       "type": "image",
-      "name": "Image",
+      "name": "t:sections.text_with_image.blocks.image.name",
       "settings": [
         {
           "type": "range",
           "id": "image_position",
+          "label": "t:sections.text_with_image.blocks.image.settings.image_position",
           "min": 1,
           "max": 30,
           "step": 1,
-          "label": "Image position",
           "default": 1,
-          "info": "Each image will appear within the text. To place an image after the 3rd word, choose 3."
+          "info": "To place an image after the 3rd word, choose 3."
         },
         {
           "type": "image_picker",
           "id": "image",
-          "label": "Image"
+          "label": "t:sections.text_with_image.blocks.image.settings.image"
         },
         {
           "type": "range",
           "id": "aspect_ratio",
+          "label": "t:sections.text_with_image.blocks.image.settings.aspect_ratio",
           "min": 0.5,
           "max": 1.5,
           "step": 0.1,
           "unit": ":1",
-          "label": "Desktop aspect ratio",
           "info": "Wide to tall",
           "default": 1
         },
         {
           "type": "range",
           "id": "mobile_aspect_ratio",
+          "label": "t:sections.text_with_image.blocks.image.settings.mobile_aspect_ratio",
           "min": 0.5,
           "max": 1.5,
           "step": 0.1,
           "unit": ":1",
-          "label": "Mobile aspect ratio",
           "info": "Wide to tall",
           "default": 1
         },
         {
           "type": "range",
           "id": "width",
-          "label": "Desktop width",
+          "label": "t:sections.text_with_image.blocks.image.settings.width",
           "unit": "px",
           "min": 30,
           "max": 300,
@@ -579,7 +372,7 @@
         {
           "type": "range",
           "id": "mobile_width",
-          "label": "Mobile width",
+          "label": "t:sections.text_with_image.blocks.image.settings.mobile_width",
           "unit": "px",
           "min": 20,
           "max": 200,
@@ -589,60 +382,66 @@
         {
           "type": "url",
           "id": "link",
-          "label": "Link"
+          "label": "t:sections.text_with_image.blocks.image.settings.link"
+        },
+        {
+          "type": "checkbox",
+          "id": "external_link",
+          "label": "t:sections.text_with_image.blocks.image.settings.external_link",
+          "default": false
         }
       ]
     },
     {
       "type": "product",
-      "name": "Product",
+      "name": "t:sections.text_with_image.blocks.product.name",
       "settings": [
         {
           "type": "range",
           "id": "image_position",
+          "label": "t:sections.text_with_image.blocks.product.settings.image_position",
           "min": 1,
           "max": 30,
           "step": 1,
-          "label": "Image position",
           "default": 1,
-          "info": "Each image will appear within the text. To place an image after the 3rd word, choose 3."
+          "info": "To place a product after the 3rd word, choose 3."
         },
         {
-          "label": "Product",
+          "type": "product",
           "id": "product",
-          "type": "product"
+          "label": "t:sections.text_with_image.blocks.product.settings.product"
         },
         {
           "type": "image_picker",
           "id": "image",
-          "label": "Image override"
+          "label": "t:sections.text_with_image.blocks.product.settings.image"
         },
         {
           "type": "range",
           "id": "aspect_ratio",
+          "label": "t:sections.text_with_image.blocks.product.settings.aspect_ratio",
           "min": 0.5,
           "max": 1.5,
           "step": 0.1,
           "unit": ":1",
-          "label": "Desktop aspect ratio",
           "info": "Wide to tall",
           "default": 1
         },
         {
           "type": "range",
           "id": "mobile_aspect_ratio",
+          "label": "t:sections.text_with_image.blocks.product.settings.mobile_aspect_ratio",
           "min": 0.5,
           "max": 1.5,
           "step": 0.1,
           "unit": ":1",
-          "label": "Mobile aspect ratio",
           "info": "Wide to tall",
           "default": 1
         },
         {
           "type": "range",
           "id": "width",
-          "label": "Desktop width",
+          "label": "t:sections.text_with_image.blocks.product.settings.width",
           "unit": "px",
           "min": 30,
           "max": 300,
@@ -652,7 +451,7 @@
         {
           "type": "range",
           "id": "mobile_width",
-          "label": "Mobile width",
+          "label": "t:sections.text_with_image.blocks.product.settings.mobile_width",
           "unit": "px",
           "min": 20,
           "max": 200,
@@ -663,54 +462,54 @@
     },
     {
       "type": "collection",
-      "name": "Collection",
+      "name": "t:sections.text_with_image.blocks.collection.name",
       "settings": [
         {
           "type": "range",
           "id": "image_position",
+          "label": "t:sections.text_with_image.blocks.collection.settings.image_position",
           "min": 1,
           "max": 30,
           "step": 1,
-          "label": "Image position",
           "default": 1,
-          "info": "Each image will appear within the text. To place an image after the 3rd word, choose 3."
+          "info": "To place a collection after the 3rd word, choose 3."
         },
         {
-          "label": "Collection",
+          "type": "collection",
           "id": "collection",
-          "type": "collection"
+          "label": "t:sections.text_with_image.blocks.collection.settings.collection"
         },
         {
           "type": "image_picker",
           "id": "image",
-          "label": "Image Override"
+          "label": "t:sections.text_with_image.blocks.collection.settings.image"
         },
         {
           "type": "range",
           "id": "aspect_ratio",
+          "label": "t:sections.text_with_image.blocks.collection.settings.aspect_ratio",
           "min": 0.5,
           "max": 1.5,
           "step": 0.1,
           "unit": ":1",
-          "label": "Desktop aspect ratio",
           "info": "Wide to tall",
           "default": 1
         },
         {
           "type": "range",
           "id": "mobile_aspect_ratio",
+          "label": "t:sections.text_with_image.blocks.collection.settings.mobile_aspect_ratio",
           "min": 0.5,
           "max": 1.5,
           "step": 0.1,
           "unit": ":1",
-          "label": "Mobile aspect ratio",
           "info": "Wide to tall",
           "default": 1
         },
         {
           "type": "range",
           "id": "width",
-          "label": "Desktop width",
+          "label": "t:sections.text_with_image.blocks.collection.settings.width",
           "unit": "px",
           "min": 30,
           "max": 300,
@@ -720,7 +519,7 @@
         {
           "type": "range",
           "id": "mobile_width",
-          "label": "Mobile width",
+          "label": "t:sections.text_with_image.blocks.collection.settings.mobile_width",
           "unit": "px",
           "min": 20,
           "max": 200,
@@ -733,7 +532,7 @@
   "presets": [
     {
       "category": "Text",
-      "name": "Text with products",
+      "name": "t:sections.text_with_image.name",
       "blocks": [
         {
           "type": "product",
@@ -757,7 +556,7 @@
     }
   ],
   "disabled_on": {
-    "groups": ["header", "aside", "footer"]
+    "groups": ["header", "footer"]
   }
 }
 {% endschema %}

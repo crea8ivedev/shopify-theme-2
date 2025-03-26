@@ -1,0 +1,223 @@
+.section-padding {
+    padding-top: var(--PT);
+    padding-bottom: var(--PB);
+}
+.text-right {
+    text-align: right;
+}
+.text-center {
+    text-align: center;
+}
+.text-left {
+    text-align: left;
+}
+.h2.text-img-subheading {
+    margin: .5em 0;
+    line-height: 2rem;
+}
+.inline-image {
+    display: inline-block;
+    width: var(--image-width);
+    margin: 2px 0;
+    vertical-align: middle;
+}
+.inline-image__inner {
+    overflow: hidden;
+}
+.inline-image__image {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: calc(1 / var(--aspect-ratio)* 100%);
+    transition: transform 2s cubic-bezier(.215,.61,.355,1);
+    margin: 0;
+}
+img.is-loading {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    image-rendering: auto;
+    transition: opacity .5s ease-in;
+}
+.subheading-size-1 {
+    font-size: var(--font-1);
+}
+.subheading-size-2 {
+    font-size: var(--font-2);
+}
+.subheading-size-3 {
+    font-size: var(--font-3);
+}
+.subheading-size-4 {
+    font-size: var(--font-4);
+}
+.subheading-size-5 {
+    font-size: var(--font-5);
+}
+.subheading-size-6 {
+    font-size: var(--font-6);
+}
+.subheading-size-7 {
+    font-size: var(--font-7);
+}
+.subheading-size-8 {
+    font-size: var(--font-8);
+}
+.subheading-size-9 {
+    font-size: var(--font-9);
+}
+.subheading-size-10 {
+    font-size: var(--font-10);
+}
+.subheading-size-11 {
+    font-size: var(--font-11);
+}
+.subheading-size-12 {
+    font-size: var(--font-12);
+}
+.subheading-size-13 {
+    font-size: var(--font-13);
+}
+.subheading-size-14 {
+    font-size: var(--font-14);
+}
+.subheading-size-15 {
+    font-size: var(--font-15);
+}
+
+@media screen and (min-width: 750px) {
+    .heading-desktop-size-1 {
+      font-size: var(--font-1);
+    }
+
+    .heading-desktop-size-2 {
+      font-size: var(--font-2);
+    }
+
+    .heading-desktop-size-3 {
+      font-size: var(--font-3);
+    }
+
+    .heading-desktop-size-4 {
+      font-size: var(--font-4);
+    }
+
+    .heading-desktop-size-5 {
+      font-size: var(--font-5);
+    }
+
+    .heading-desktop-size-6 {
+      font-size: var(--font-6);
+    }
+
+    .heading-desktop-size-7 {
+      font-size: var(--font-7);
+    }
+
+    .heading-desktop-size-8 {
+      font-size: var(--font-8);
+    }
+
+    .heading-desktop-size-9 {
+      font-size: var(--font-9);
+    }
+
+    .heading-desktop-size-10 {
+      font-size: var(--font-10);
+    }
+
+    .heading-desktop-size-11 {
+      font-size: var(--font-11);
+    }
+
+    .heading-desktop-size-12 {
+      font-size: var(--font-12);
+    }
+
+    .heading-desktop-size-13 {
+      font-size: var(--font-13);
+    }
+
+    .heading-desktop-size-14 {
+      font-size: var(--font-14);
+    }
+
+    .heading-desktop-size-15 {
+      font-size: var(--font-15);
+    }
+}
+@media screen and (max-width: 749px) {
+    .heading-mobile-size-1 {
+      font-size: var(--font-1);
+    }
+
+    .heading-mobile-size-2 {
+      font-size: var(--font-2);
+    }
+
+    .heading-mobile-size-3 {
+      font-size: var(--font-3);
+    }
+
+    .heading-mobile-size-4 {
+      font-size: var(--font-4);
+    }
+
+    .heading-mobile-size-5 {
+      font-size: var(--font-5);
+    }
+
+    .heading-mobile-size-6 {
+      font-size: var(--font-6);
+    }
+
+    .heading-mobile-size-7 {
+      font-size: var(--font-7);
+    }
+
+    .heading-mobile-size-8 {
+      font-size: var(--font-8);
+    }
+
+    .heading-mobile-size-9 {
+      font-size: var(--font-9);
+    }
+
+    .heading-mobile-size-10 {
+      font-size: var(--font-10);
+    }
+
+    .heading-mobile-size-11 {
+      font-size: var(--font-11);
+    }
+
+    .heading-mobile-size-12 {
+      font-size: var(--font-12);
+    }
+
+    .heading-mobile-size-13 {
+      font-size: var(--font-13);
+    }
+
+    .heading-mobile-size-14 {
+      font-size: var(--font-14);
+    }
+
+    .heading-mobile-size-15 {
+      font-size: var(--font-15);
+    }
+}
+@media screen and (min-width: 750px) {
+    .image-wrapper.mobile {
+      display: none;
+    }
+}
+@media screen and (max-width: 749px) {
+    .image-wrapper.desktop {
+        display: none;
+    }
+}
