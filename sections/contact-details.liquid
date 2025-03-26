@@ -49,14 +49,19 @@
                       height="20"
                     >
                   {% else %}
-                    {{ 'image' | placeholder_svg_tag }}
+                    <img
+                      src="https://cdn.shopify.com/s/files/1/0877/8481/6962/files/question_2.png?v=1741247064"
+                      alt="Default Icon"
+                      width="20"
+                      height="20"
+                    >
                   {% endif %}
                 </div>
                 <div class="contact-info_content">
                   {% if block.settings.contact_details != blank %}
                     {{ block.settings.contact_details }}
                   {% else %}
-                    1234567895 <!-- Default value -->
+                    1234567895 
                   {% endif %}
                 </div>
               </div>
@@ -139,7 +144,8 @@
         {
           "type": "image_picker",
           "label": "t:sections.contact_info.blocks.contact_details.settings.contact_icon.label",
-          "id": "contact_icon"
+          "id": "contact_icon",
+          "info": "20 x 20 svg recommended"
         }
       ]
     }

@@ -68,7 +68,6 @@
         "contact_details_6Q3yGt",
         "contact_details_QDzRhR"
       ],
-      "disabled": true,
       "settings": {
         "color_scheme": "scheme-9a4ed46b-85e4-406e-bd00-b3b0c4b545b2",
         "title": "<p>Contact Information</p>",
@@ -77,50 +76,10 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "contact_details_dcFRfc": {
-      "type": "contact-details",
-      "blocks": {
-        "contact_details_8cRacb": {
-          "type": "contact_details",
-          "settings": {
-            "contact_text": "Toll Free",
-            "contact_details": ""
-          }
-        },
-        "contact_details_aQydPm": {
-          "type": "contact_details",
-          "settings": {
-            "contact_text": "Toll Free",
-            "contact_details": ""
-          }
-        },
-        "contact_details_TxzTe3": {
-          "type": "contact_details",
-          "settings": {
-            "contact_text": "Toll Free",
-            "contact_details": ""
-          }
-        }
-      },
-      "block_order": [
-        "contact_details_8cRacb",
-        "contact_details_aQydPm",
-        "contact_details_TxzTe3"
-      ],
-      "settings": {
-        "color_scheme": "",
-        "title": "",
-        "sub_title": "",
-        "map_url": "",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
     "main",
-    "contact_details_BAGgQK",
-    "contact_details_dcFRfc"
+    "contact_details_BAGgQK"
   ]
 }

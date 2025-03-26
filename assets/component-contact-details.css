@@ -9,16 +9,38 @@
     padding: 0 30px;
   }
   .contact-info_detail {
-    display: flex;
-    justify-content: center;
+    display: grid;
     align-items: center;
+    grid-template-columns: repeat(1, minmax(0, 1fr)); /* Default for smallest screens */
+}
+
+@media screen and (min-width: 640px) {
+    .contact-info_detail {
+        grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 columns for small screens */
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .contact-info_detail {
+        grid-template-columns: repeat(3, minmax(0, 1fr)); /* 3 columns for tablets */
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .contact-info_detail {
+        grid-template-columns: repeat(5, minmax(0, 1fr)); /* 5 columns for large screens */
+    }
+}
+
+  .contact-info_details{
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
 
-  .contact-info_details {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-  }
+.contact-info_icon{
+  display: flex;
+}
   .contact-info_content {
     color: black;
   }
