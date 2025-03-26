@@ -43,7 +43,15 @@
     {{ section.settings.content }}
   </div>
 
-  {% assign collection_products = section.settings.collection.products %}
+  {% if section.settings.collection %}
+    {% assign collection_products = section.settings.collection.products %}
+  {% endif %}
+  
+  {% if section.settings.products %}
+    {% assign selected_products = section.settings.products %}
+  {% endif %}
+
+ 
   {% assign show_slider = section.settings.enable_slider_mobile %}
 
   {% assign product_layout = section.settings.product_layout %}
@@ -57,7 +65,7 @@
       <div class="product-list {% if section.settings.product_layout == 'slider' or section.settings.enable_slider_mobile %}swiper-container{% else %}grid grid--{{ section.settings.products_per_row_desktop }}-col{% endif %}">
       <div class="{% if section.settings.product_layout == 'slider' or section.settings.enable_slider_mobile %}swiper-wrapper{% else %}grid_item{% endif %}">
       
-        {% if section.settings.collection and section.settings.collection.products != blank %}
+        {% if collection_products != blank %}
           {% for product in collection_products limit: section.settings.max_products %}
             <div class="{% if product_layout == 'slider' or show_slider == 'true' %}swiper-slide{% else %}grid-cell{% endif %}" data-show-second-image="{{ section.settings.show_second_image }}">
               {% render 'card-product', 
@@ -67,8 +75,17 @@
                  show_vendor: section.settings.show_vendor %}
             </div>
           {% endfor %}
+        {% elsif selected_products != blank%}
+          {% for product in selected_products limit: section.settings.max_products %}
+            <div class="{% if product_layout == 'slider' or show_slider == 'true' %}swiper-slide{% else %}grid-cell{% endif %}" data-show-second-image="{{ section.settings.show_second_image }}">
+              {% render 'card-product', 
+                 product: product, 
+                 show_second_image: section.settings.show_second_image, 
+                 enable_quick_view: section.settings.enable_quick_view, 
+                 show_vendor: section.settings.show_vendor %}
+            </div>
+          {% endfor %}
         {% else %}
-         
           {% for i in (1..section.settings.products_per_row_desktop) %}
             {%- assign placeholder_image_index = forloop.index  -%}
             {%- assign placeholder_image = 'product-apparel-' | append: placeholder_image_index -%}
@@ -86,6 +103,7 @@
           {% endfor %}
         {% endif %}
 
+       
       </div>
 
       {% if section.settings.product_layout == 'slider' or section.settings.enable_slider_mobile %}
