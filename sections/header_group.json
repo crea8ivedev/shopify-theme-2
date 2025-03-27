@@ -24,6 +24,15 @@
         "announcement_text_slider_gRg9PC": {
           "type": "announcement_text_slider",
           "settings": {
+            "announcement_text": "123 Welcome to our store",
+            "link_text": "",
+            "link_url": "",
+            "target_blank": false
+          }
+        },
+        "announcement_text_slider_hLqUxf": {
+          "type": "announcement_text_slider",
+          "settings": {
             "announcement_text": "Welcome to our store",
             "link_text": "",
             "link_url": "",
@@ -42,6 +51,7 @@
       },
       "block_order": [
         "announcement_text_slider_gRg9PC",
+        "announcement_text_slider_hLqUxf",
         "announcement_text_slider_YgyfYa"
       ],
       "settings": {
