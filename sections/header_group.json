@@ -34,8 +34,8 @@
           "type": "announcement_text_slider",
           "settings": {
             "announcement_text": "Welcome to our store",
-            "link_text": "",
-            "link_url": "",
+            "link_text": "test link",
+            "link_url": "shopify://products/liquid-foundation",
             "target_blank": false
           }
         },
