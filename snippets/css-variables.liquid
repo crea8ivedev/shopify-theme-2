@@ -83,6 +83,9 @@
     --font-body-letter-spacing: {{ settings.body_letter_spacing }}px;
     --font-body-lineheight: {{ settings.body_line_height }}px;
 
+    /* custom fonts */
+    --font-heading-custom: 'AmericanaFont';
+
     /* Font sizes */
     --font-h0: {% if settings.heading_font_size == 'small' %}2.5rem{% elsif settings.heading_font_size == 'medium' %}2.75rem{% else %}3rem{% endif %};
     --font-h1: {% if settings.heading_font_size == 'small' %}1.75rem{% elsif settings.heading_font_size == 'medium' %}2rem{% else %}2.5rem{% endif %};
