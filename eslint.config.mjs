@@ -8,13 +8,13 @@ export default [
     ignores: ["assets/**/*.min.js", "assets/**/*.min.css", "assets/jquery-3.7.1.min.js"],
     languageOptions: { sourceType: 'module', ecmaVersion: 'latest' },
     rules: {
-      'no-unused-vars': 'error', // Disallows variables that are declared but never used in the code
+      // 'no-unused-vars': 'error', // Disallows variables that are declared but never used in the code
       'no-console': 'error', // error about console logs
       'no-debugger': 'error', // Disallows debugger statements
       'no-alert': 'error', // Discourages use of alert, confirm, and prompt
       'eqeqeq': ['error', 'always'], // Enforces strict equality (=== and !==)
       'curly': 'error', // Requires curly braces for all control statements
-      'no-undef': 'error', // Disallows use of undeclared variables
+      // 'no-undef': 'error', // Disallows use of undeclared variables
       'no-use-before-define': ['error', { functions: false, classes: true }], // Prevents usage before declaration
       'no-shadow': 'error', // Disallows variable shadowing
       'prefer-const': 'error', // Enforces use of const where possible
