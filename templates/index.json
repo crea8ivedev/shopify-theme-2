@@ -61,10 +61,10 @@
       ],
       "settings": {
         "heading": "Frequently Asked Questions",
-        "color_scheme": "",
-        "open_first_accordion": true,
-        "padding_top": 80,
-        "padding_bottom": 72
+        "color_scheme": "scheme-1",
+        "open_first_accordion": false,
+        "padding_top": 28,
+        "padding_bottom": 28
       }
     }
   },
