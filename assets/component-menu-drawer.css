@@ -132,7 +132,7 @@ details[open].menu-opening > .menu-drawer__submenu {
   background-color: rgba(var(--color-foreground), 0.08);
 }
 
-.js .menu-drawer__menu-item .icon-caret {
+.js .menu-drawer__menu-item .icon-arrow {
   display: none;
 }
 

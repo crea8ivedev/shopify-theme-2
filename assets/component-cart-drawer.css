@@ -317,7 +317,7 @@ cart-drawer-items {
   word-break: break-word;
 }
 
-.cart-drawer details[open] > summary .icon-caret {
+.cart-drawer details[open] > summary .icon-arrow {
   transform: rotate(180deg);
 }
 

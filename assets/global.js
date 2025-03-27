@@ -6,6 +6,14 @@ function getFocusableElements(container) {
   );
 }
 
+const closeIcon = document.querySelector('.slide-close-icon');
+const announcementBar = document.querySelector('.utility-bar');
+if (closeIcon && announcementBar){
+closeIcon.addEventListener('click', function () {
+  announcementBar.classList.add('hidden');
+});
+}
+
 class SectionId {
   static #separator = "__";
 
@@ -1609,3 +1617,5 @@ class CartPerformance {
     performance.measure(metricName, `${metricName}:start`, `${metricName}:end`);
   }
 }
+
+

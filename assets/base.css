@@ -661,7 +661,7 @@ summary {
   position: relative;
 }
 
-summary .icon-caret {
+summary .icon-arrow {
   position: absolute;
   height: 0.6rem;
   right: 1.5rem;
@@ -2869,7 +2869,7 @@ details[open]:hover > .header__menu-item {
   text-decoration-thickness: 0.2rem;
 }
 
-details[open] > .header__menu-item .icon-caret {
+details[open] > .header__menu-item .icon-arrow {
   transform: rotate(180deg);
 }
 
@@ -2925,11 +2925,11 @@ details[open] > .header__menu-item .icon-caret {
   text-decoration-line: underline;
 }
 
-.header__menu-item .icon-caret {
+.header__menu-item .icon-arrow {
   right: 0.8rem;
 }
 
-.header__submenu .icon-caret {
+.header__submenu .icon-arrow {
   flex-shrink: 0;
   margin-left: 1rem;
   position: static;

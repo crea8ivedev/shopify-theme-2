@@ -76,7 +76,7 @@
   background: rgb(var(--color-background));
 }
 
-.localization-form__select .icon-caret {
+.localization-form__select .icon-arrow {
   position: absolute;
   content: "";
   height: 0.6rem;
@@ -337,7 +337,11 @@
   opacity: 1;
 }
 
+<<<<<<< Updated upstream
 .disclosure__button[aria-expanded="true"] .icon-caret {
+=======
+.disclosure__button[aria-expanded='true'] .icon-arrow {
+>>>>>>> Stashed changes
   transform: rotate(180deg);
 }
 
@@ -420,9 +424,13 @@
   max-width: 26ch;
 }
 
+<<<<<<< Updated upstream
 .header-localization:not(.menu-drawer__localization)
   .localization-form__select
   .icon-caret {
+=======
+.header-localization:not(.menu-drawer__localization) .localization-form__select .icon-arrow {
+>>>>>>> Stashed changes
   right: 0.8rem;
 }
 

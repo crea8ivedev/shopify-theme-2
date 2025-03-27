@@ -39,7 +39,7 @@ a.pagination__item:hover::after {
   height: 0.1rem;
 }
 
-.pagination__item .icon-caret {
+.pagination__item .icon-arrow {
   height: 0.6rem;
 }
 

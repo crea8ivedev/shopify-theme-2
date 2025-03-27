@@ -363,6 +363,7 @@
     "announcements": {
       "previous_announcement": "Předchozí oznámení",
       "next_announcement": "Další oznámení",
+      "close_icon": "Zavírá oznámení",
       "carousel": "Karusel",
       "announcement": "Oznámení",
       "announcement_bar": "Panel oznámení"

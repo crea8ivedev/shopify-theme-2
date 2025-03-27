@@ -343,6 +343,7 @@
     "announcements": {
       "previous_announcement": "Forrige meddelelse",
       "next_announcement": "Næste meddelelse",
+      "close_icon": "Lukker notifikation",
       "carousel": "Karrusel",
       "announcement": "Meddelelse",
       "announcement_bar": "Meddelelseslinje"

@@ -343,6 +343,7 @@
     "announcements": {
       "previous_announcement": "Предишно известие",
       "next_announcement": "Следващо известие",
+      "close_icon": "Затваря Announce",
       "carousel": "Въртележка",
       "announcement": "Известие",
       "announcement_bar": "Лента с известия"

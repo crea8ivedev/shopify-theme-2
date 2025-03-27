@@ -10,7 +10,7 @@
   flex: 1;
 }
 
-.accordion .summary__title + .icon-caret {
+.accordion .summary__title + .icon-arrow {
   height: calc(var(--font-heading-scale) * 0.6rem);
 }
 
@@ -42,7 +42,7 @@
   width: calc(var(--font-heading-scale) * 2rem);
 }
 
-.accordion details[open] > summary .icon-caret {
+.accordion details[open] > summary .icon-arrow {
   transform: rotate(180deg);
 }
 
