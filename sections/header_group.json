@@ -51,7 +51,7 @@
         "auto_slide": false,
         "slides_speed": 4,
         "text_align": "center",
-        "hide_navigation_buttons": true,
+        "hide_navigation_buttons": false,
         "padding_top": 12,
         "padding_bottom": 12
       }
