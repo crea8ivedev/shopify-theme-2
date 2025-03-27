@@ -12,8 +12,9 @@ function onIntersection(elements, observer) {
         elementTarget.classList.contains(SCROLL_ANIMATION_OFFSCREEN_CLASSNAME)
       ) {
         elementTarget.classList.remove(SCROLL_ANIMATION_OFFSCREEN_CLASSNAME);
-        if (elementTarget.hasAttribute("data-cascade"))
-          {elementTarget.setAttribute("style", `--animation-order: ${index};`);}
+        if (elementTarget.hasAttribute("data-cascade")) {
+          elementTarget.setAttribute("style", `--animation-order: ${index};`);
+        }
       }
       observer.unobserve(elementTarget);
     } else {
@@ -30,7 +31,9 @@ function initializeScrollAnimationTrigger(
   const animationTriggerElements = Array.from(
     rootEl.getElementsByClassName(SCROLL_ANIMATION_TRIGGER_CLASSNAME),
   );
-  if (animationTriggerElements.length === 0) {return;}
+  if (animationTriggerElements.length === 0) {
+    return;
+  }
 
   if (isDesignModeEvent) {
     animationTriggerElements.forEach((element) => {
@@ -47,13 +50,17 @@ function initializeScrollAnimationTrigger(
 
 // Zoom in animation logic
 function initializeScrollZoomAnimationTrigger() {
-  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {return;}
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    return;
+  }
 
   const animationTriggerElements = Array.from(
     document.getElementsByClassName(SCROLL_ZOOM_IN_TRIGGER_CLASSNAME),
   );
 
-  if (animationTriggerElements.length === 0) {return;}
+  if (animationTriggerElements.length === 0) {
+    return;
+  }
 
   const scaleAmount = 0.2 / 100;
 
@@ -74,7 +81,9 @@ function initializeScrollZoomAnimationTrigger() {
     window.addEventListener(
       "scroll",
       throttle(() => {
-        if (!elementIsVisible) {return;}
+        if (!elementIsVisible) {
+          return;
+        }
 
         element.style.setProperty(
           "--zoom-in-ratio",

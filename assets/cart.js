@@ -201,16 +201,18 @@ class CartItems extends HTMLElement {
             const cartDrawerWrapper = document.querySelector("cart-drawer");
             const cartFooter = document.getElementById("main-cart-footer");
 
-            if (cartFooter)
-              {cartFooter.classList.toggle(
+            if (cartFooter) {
+              cartFooter.classList.toggle(
                 "is-empty",
                 parsedState.item_count === 0,
-              );}
-            if (cartDrawerWrapper)
-              {cartDrawerWrapper.classList.toggle(
+              );
+            }
+            if (cartDrawerWrapper) {
+              cartDrawerWrapper.classList.toggle(
                 "is-empty",
                 parsedState.item_count === 0,
-              );}
+              );
+            }
 
             this.getSectionsToRender().forEach((section) => {
               const elementToReplace =
@@ -295,9 +297,10 @@ class CartItems extends HTMLElement {
     const lineItemError =
       document.getElementById(`Line-item-error-${line}`) ||
       document.getElementById(`CartDrawer-LineItemError-${line}`);
-    if (lineItemError)
-      {lineItemError.querySelector(".cart-item__error-text").textContent =
-        message;}
+    if (lineItemError) {
+      lineItemError.querySelector(".cart-item__error-text").textContent =
+        message;
+    }
 
     this.lineItemStatusElement.setAttribute("aria-hidden", true);
 
