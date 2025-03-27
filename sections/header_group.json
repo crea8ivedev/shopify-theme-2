@@ -21,6 +21,15 @@
     "announcement_bar_rY98XK": {
       "type": "announcement-bar",
       "blocks": {
+        "announcement_text_slider_CwzzWF": {
+          "type": "announcement_text_slider",
+          "settings": {
+            "announcement_text": "Welcome to our store",
+            "link_text": "",
+            "link_url": "",
+            "target_blank": false
+          }
+        },
         "announcement_text_slider_gRg9PC": {
           "type": "announcement_text_slider",
           "settings": {
@@ -50,6 +59,7 @@
         }
       },
       "block_order": [
+        "announcement_text_slider_CwzzWF",
         "announcement_text_slider_gRg9PC",
         "announcement_text_slider_hLqUxf",
         "announcement_text_slider_YgyfYa"
@@ -58,24 +68,17 @@
         "color_scheme": "scheme-9a4ed46b-85e4-406e-bd00-b3b0c4b545b2",
         "show_close_button": true,
         "show_navigation_buttons": true,
-        "auto_slide": false,
-        "slides_speed": 4,
+        "auto_slide": true,
+        "slides_speed": 5,
         "text_align": "center",
         "hide_navigation_buttons": false,
         "padding_top": 12,
         "padding_bottom": 12
       }
-    },
-    "header_XDHbjy": {
-      "type": "header",
-      "settings": {
-        "color_scheme": ""
-      }
     }
   },
   "order": [
     "header",
-    "announcement_bar_rY98XK",
-    "header_XDHbjy"
+    "announcement_bar_rY98XK"
   ]
 }
