@@ -28,7 +28,13 @@
         "text_block_hcMxGc": {
           "type": "text_block",
           "settings": {
-            "text-marqee": "Hurry up 10% off for all items <a href=\"#\">Click here</a>"
+            "text-marqee": "Hurry up 10% off for all items Click here"
+          }
+        },
+        "text_block_FWyBGc": {
+          "type": "text_block",
+          "settings": {
+            "text-marqee": "Welcome To The Store"
           }
         },
         "text_block_nLUWP9": {
@@ -48,14 +54,22 @@
           "settings": {
             "text-marqee": "Summer sale 40% off everything"
           }
+        },
+        "text_block_tqCnnL": {
+          "type": "text_block",
+          "settings": {
+            "text-marqee": "Welcome To The Store Text"
+          }
         }
       },
       "block_order": [
         "text_block_gXK3Xa",
         "text_block_hcMxGc",
+        "text_block_FWyBGc",
         "text_block_nLUWP9",
         "text_block_mwRHfe",
-        "text_block_n9rqWm"
+        "text_block_n9rqWm",
+        "text_block_tqCnnL"
       ],
       "settings": {
         "color_scheme": "scheme-f8ab58ef-474a-4153-acc3-2dfb57594448",
@@ -64,10 +78,28 @@
         "padding_top": 20,
         "padding_bottom": 20
       }
+    },
+    "text_rotate_hDKCJb": {
+      "type": "text-rotate",
+      "settings": {
+        "color_scheme": "",
+        "scrolling_speed": 10,
+        "show_border": true,
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
+    "header_mDY36M": {
+      "type": "header",
+      "settings": {
+        "color_scheme": ""
+      }
     }
   },
   "order": [
     "main",
-    "text_rotate_aTrKf8"
+    "text_rotate_aTrKf8",
+    "header_mDY36M",
+    "text_rotate_hDKCJb"
   ]
 }
