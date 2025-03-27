@@ -24,7 +24,7 @@
         "announcement_text_slider_CwzzWF": {
           "type": "announcement_text_slider",
           "settings": {
-            "announcement_text": "Welcome to our store",
+            "announcement_text": "Welcome to our <a href=\"#\">Text</a> \n store",
             "link_text": "",
             "link_url": "",
             "target_blank": false
@@ -70,8 +70,8 @@
         "show_navigation_buttons": true,
         "auto_slide": true,
         "slides_speed": 5,
-        "text_align": "right",
-        "hide_navigation_buttons": false,
+        "text_align": "left",
+        "hide_navigation_buttons": true,
         "padding_top": 12,
         "padding_bottom": 12
       }
