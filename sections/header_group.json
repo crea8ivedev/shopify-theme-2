@@ -24,7 +24,7 @@
         "announcement_text_slider_gRg9PC": {
           "type": "announcement_text_slider",
           "settings": {
-            "announcement_text": "Welcome to our store",
+            "announcement_text": "Welcome to our store <a href=\"#\"> hii</a>",
             "link_text": "",
             "link_url": "",
             "target_blank": false
@@ -50,7 +50,7 @@
         "show_navigation_buttons": true,
         "auto_slide": false,
         "slides_speed": 4,
-        "text_align": "center",
+        "text_align": "left",
         "hide_navigation_buttons": true,
         "padding_top": 12,
         "padding_bottom": 12

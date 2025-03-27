@@ -34,7 +34,7 @@
   }
 {% endstyle %}
 
-{% if announcement_count >= 1 %}
+{% if announcement_count > 0 %}
 <e-announcement-bar data-autoplay="{% if section.settings.auto_slide == true %}true{% else %}false{% endif %}" data-autoplaySpeed="{{ section.settings.slides_speed }}" data-enableArrows="{{ section.settings.show_navigation_buttons }}" data-enableDots="true"  {% if announcement_count > 1 %} data-enable-slider="true" {% endif %}>
 <div class="utility-bar color-{{ section.settings.color_scheme }} background section-{{ section.id }}-padding">
   <div class="announcement-bar-main">
@@ -68,7 +68,7 @@
                         {% if block.settings.target_blank == true %}
                           target="_blank"
                         {% endif %}
-                        aria-label="{{ block.settings.link_text }} - {{ block.settings.announcement_text }}"
+                        aria-label="{{ block.settings.link_text }}"
                         class="announcement-link"
                       >
                         {{- block.settings.link_text -}}
