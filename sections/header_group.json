@@ -65,10 +65,17 @@
         "padding_top": 12,
         "padding_bottom": 12
       }
+    },
+    "header_XDHbjy": {
+      "type": "header",
+      "settings": {
+        "color_scheme": ""
+      }
     }
   },
   "order": [
     "header",
-    "announcement_bar_rY98XK"
+    "announcement_bar_rY98XK",
+    "header_XDHbjy"
   ]
 }
