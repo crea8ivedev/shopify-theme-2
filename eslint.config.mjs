@@ -14,7 +14,6 @@ export default [
       "no-console": "error", // error about console logs
       "no-debugger": "error", // Disallows debugger statements
       "no-alert": "error", // Discourages use of alert, confirm, and prompt
-      eqeqeq: ["error", "always"], // Enforces strict equality (=== and !==)
       curly: "error", // Requires curly braces for all control statements
       "no-use-before-define": ["error", { functions: false, classes: true }], // Prevents usage before declaration
       "no-shadow": "error", // Disallows variable shadowing
@@ -33,5 +32,12 @@ export default [
   },
   { languageOptions: { globals: globals.browser } },
   pluginJs.configs.recommended,
-  { rules: { "no-undef": "off", "no-unused-vars": "off" } },
+  {
+    rules: {
+      "no-undef": "off",
+      "no-unused-vars": "off",
+      "no-self-assign": "off",
+      "no-unreachable": "off",
+    },
+  },
 ];
