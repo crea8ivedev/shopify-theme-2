@@ -38,21 +38,11 @@
             "link_url": "",
             "target_blank": true
           }
-        },
-        "announcement_text_slider_9hjBjc": {
-          "type": "announcement_text_slider",
-          "settings": {
-            "announcement_text": "tecsc <a href=\"#\">Text</a>",
-            "link_text": "",
-            "link_url": "",
-            "target_blank": false
-          }
         }
       },
       "block_order": [
         "announcement_text_slider_gRg9PC",
-        "announcement_text_slider_YgyfYa",
-        "announcement_text_slider_9hjBjc"
+        "announcement_text_slider_YgyfYa"
       ],
       "settings": {
         "color_scheme": "scheme-9a4ed46b-85e4-406e-bd00-b3b0c4b545b2",
@@ -60,7 +50,7 @@
         "show_navigation_buttons": true,
         "auto_slide": false,
         "slides_speed": 4,
-        "text_align": "right",
+        "text_align": "left",
         "hide_navigation_buttons": true,
         "padding_top": 12,
         "padding_bottom": 12
