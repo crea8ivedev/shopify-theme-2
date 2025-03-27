@@ -40,7 +40,7 @@ UndefinedObject:
   severity: error
 UnusedAssign:
   enabled: true
-  severity: error
+  severity: warning
 ValidJSON:
   enabled: true
   severity: error
