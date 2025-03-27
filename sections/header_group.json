@@ -23,7 +23,6 @@
       "blocks": {
         "announcement_text_slider_CwzzWF": {
           "type": "announcement_text_slider",
-          "disabled": true,
           "settings": {
             "announcement_text": "Welcome to our store",
             "link_text": "",
@@ -33,7 +32,6 @@
         },
         "announcement_text_slider_gRg9PC": {
           "type": "announcement_text_slider",
-          "disabled": true,
           "settings": {
             "announcement_text": "123 Welcome to our store",
             "link_text": "",
@@ -43,7 +41,6 @@
         },
         "announcement_text_slider_hLqUxf": {
           "type": "announcement_text_slider",
-          "disabled": true,
           "settings": {
             "announcement_text": "Welcome to our store",
             "link_text": "test link",
@@ -53,21 +50,11 @@
         },
         "announcement_text_slider_YgyfYa": {
           "type": "announcement_text_slider",
-          "disabled": true,
           "settings": {
             "announcement_text": "FREE RETURNS &amp; 60 DAY RETURN WINDOW",
             "link_text": "",
             "link_url": "",
             "target_blank": true
-          }
-        },
-        "announcement_text_slider_XKLRkD": {
-          "type": "announcement_text_slider",
-          "settings": {
-            "announcement_text": "Test <a href=\"#\">Text</a>",
-            "link_text": "",
-            "link_url": "",
-            "target_blank": false
           }
         }
       },
@@ -75,17 +62,16 @@
         "announcement_text_slider_CwzzWF",
         "announcement_text_slider_gRg9PC",
         "announcement_text_slider_hLqUxf",
-        "announcement_text_slider_YgyfYa",
-        "announcement_text_slider_XKLRkD"
+        "announcement_text_slider_YgyfYa"
       ],
       "settings": {
         "color_scheme": "scheme-9a4ed46b-85e4-406e-bd00-b3b0c4b545b2",
         "show_close_button": true,
         "show_navigation_buttons": true,
-        "auto_slide": true,
-        "slides_speed": 5,
-        "text_align": "left",
-        "hide_navigation_buttons": true,
+        "auto_slide": false,
+        "slides_speed": 3,
+        "text_align": "center",
+        "hide_navigation_buttons": false,
         "padding_top": 12,
         "padding_bottom": 12
       }
