@@ -70,7 +70,7 @@
         "show_navigation_buttons": true,
         "auto_slide": true,
         "slides_speed": 5,
-        "text_align": "center",
+        "text_align": "right",
         "hide_navigation_buttons": false,
         "padding_top": 12,
         "padding_bottom": 12
