@@ -1,0 +1,21 @@
+{% assign placeholder_images = '' %}
+
+{% if class == 'product-placeholder' %}
+  {% assign placeholder_images = 'product-placeholder.jpg, product-placeholder1.jpg, product-placeholder2.jpg, product-placeholder3.jpg' %}
+{% elsif class == 'collection-placeholder' %}
+  {% assign placeholder_images = 'collection-placeholder.jpg' %}
+{% else %}
+  {% assign placeholder_images = 'default-placeholder.jpg' %}
+{% endif %}
+
+{% assign images_array = placeholder_images | split: ', ' %}
+
+{% for image in images_array %}
+  <img
+    src="{{ image | asset_img_url }}"
+    alt="Placeholder Image"
+    class="{{ class }}"
+    width="330"
+    height="481"
+  >
+{% endfor %}

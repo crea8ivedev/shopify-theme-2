@@ -6,6 +6,29 @@ function getFocusableElements(container) {
   );
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+  // Slider functionality for the announcement bar
+  const announcementBar = document.getElementById("Slider-show");
+
+  if (announcementBar) {
+    const autoplay = announcementBar.dataset.autoplay === "true";
+    const speed = parseInt(announcementBar.dataset.speed, 10) * 1000;
+
+    new Swiper(".slidshow_main", {
+      loop: true,
+      autoplay: autoplay
+        ? {
+            delay: speed,
+            disableOnInteraction: false,
+          }
+        : false,
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+  }
+});
+
 const closeIcon = document.querySelector(".slide-close-icon");
 const announcementBar = document.querySelector(".utility-bar");
 if (closeIcon && announcementBar) {

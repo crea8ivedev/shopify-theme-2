@@ -92,7 +92,12 @@
                   {%- endif -%}
                 {% endif %}
                 {% if block.settings.image == blank and block.settings.mobile_image == blank %}
-                  {{ 'hero-apparel-2' | placeholder_svg_tag: 'placeholder-svg' }}
+                  <img
+                    src="{{ 'banner-placeholder.jpg' | asset_img_url }}"
+                    height="600px"
+                    width="1400px"
+                    alt="mobile image"
+                  >
                 {%- endif -%}
               </div>
               <div class="slideshow__text-wrapper banner__content banner__content--{{ block.settings.box_align }} page-width{% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}{% if settings.animations_reveal_on_scroll and forloop.index == 1 %} scroll-trigger animate--slide-in{% endif %}">
@@ -235,21 +240,19 @@
                             <div class="gallery-image__img relative">
                               <img
                                 class="fill-dimensions cover-img"
-                                src="{{ product.featured_image | image_url: 'master' }}"
-                                width="1000"
-                                height="1000"
+                                src="{{ product.featured_image | image_url: width: 330 }}"
+                                width="330"
+                                height="481"
                               >
                             </div>
                           </div>
                         {% endfor %}
                       {% else %}
-                        {% for i in (1..5) %}
-                          <div class="gallery-image relative">
-                            <div class="gallery-image__img relative">
-                              {{ 'hero-apparel-2' | placeholder_svg_tag: 'placeholder-svg' }}
-                            </div>
+                        <div class="gallery-image relative">
+                          <div class="gallery-image__img relative">
+                            {% render 'placeholder', class: 'product-placeholder' %}
                           </div>
-                        {% endfor %}
+                        </div>
                       {% endif %}
                     </div>
                   </div>
@@ -264,21 +267,19 @@
                             <div class="gallery-image__img relative">
                               <img
                                 class="fill-dimensions cover-img"
-                                src="{{ product.featured_image | image_url: 'master' }}"
-                                width="1000"
-                                height="1000"
+                                src="{{ product.featured_image | image_url: width: 330 }}"
+                                width="330"
+                                height="481"
                               >
                             </div>
                           </div>
                         {% endfor %}
                       {% else %}
-                        {% for i in (1..5) %}
-                          <div class="gallery-image relative">
-                            <div class="gallery-image__img relative">
-                              {{ 'hero-apparel-2' | placeholder_svg_tag: 'placeholder-svg' }}
-                            </div>
+                        <div class="gallery-image relative">
+                          <div class="gallery-image__img relative">
+                            {% render 'placeholder', class: 'product-placeholder' %}
                           </div>
-                        {% endfor %}
+                        </div>
                       {% endif %}
                     </div>
                   </div>
@@ -303,12 +304,6 @@
     "groups": ["header", "footer"]
   },
   "settings": [
-    {
-      "type": "checkbox",
-      "id": "show_navigation_buttons",
-      "label": "t:sections.slideshow.settings.show_navigation_buttons.label",
-      "default": false
-    },
     {
       "type": "checkbox",
       "id": "auto_rotate",
@@ -495,22 +490,26 @@
         {
           "type": "text",
           "id": "subheading-marqee",
-          "label": "t:sections.slideshow.blocks.marqee.settings.subheading-marqee.label"
+          "label": "t:sections.slideshow.blocks.marqee.settings.subheading-marqee.label",
+          "default": "Skin Friendly"
         },
         {
           "type": "text",
           "id": "heading-marqee",
-          "label": "t:sections.slideshow.blocks.marqee.settings.heading-marqee.label"
+          "label": "t:sections.slideshow.blocks.marqee.settings.heading-marqee.label",
+          "default": "Unveil Your Radiance with Aura Beauty"
         },
         {
           "type": "richtext",
           "id": "content-marqee",
-          "label": "t:sections.slideshow.blocks.marqee.settings.subheading-marqee.label"
+          "label": "t:sections.slideshow.blocks.marqee.settings.subheading-marqee.label",
+          "default": "<p>Elevating Your Natural Glow with Every Application. Dive into Luxurious Beauty, Redefined.</p>"
         },
         {
           "type": "text",
           "id": "button_label-marqee",
-          "label": "t:sections.slideshow.blocks.marqee.settings.button_label-marqee.label"
+          "label": "t:sections.slideshow.blocks.marqee.settings.button_label-marqee.label",
+          "default": "Shop Now"
         },
         {
           "type": "url",

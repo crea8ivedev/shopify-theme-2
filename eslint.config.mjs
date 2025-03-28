@@ -7,7 +7,7 @@ export default [
     ignores: [
       "assets/**/*.min.js",
       "assets/**/*.min.css",
-      "assets/jquery-3.7.1.min.js",
+      "**/*.min.js"
     ],
     languageOptions: { sourceType: "module", ecmaVersion: "latest" },
     rules: {
@@ -38,6 +38,6 @@ export default [
       "no-unused-vars": "off",
       "no-self-assign": "off",
       "no-unreachable": "off",
-    },
-  },
+    }
+  }, 
 ];
