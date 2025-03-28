@@ -12,8 +12,8 @@
     "slideshow_eqDDp9": {
       "type": "slideshow",
       "blocks": {
-        "object_fAqgQG": {
-          "type": "object",
+        "marquee_fAqgQG": {
+          "type": "marquee",
           "settings": {
             "collection": "",
             "subheading-marqee": "",
@@ -25,7 +25,7 @@
           }
         }
       },
-      "block_order": ["object_fAqgQG"],
+      "block_order": ["marquee_fAqgQG"],
       "settings": {
         "show_navigation_buttons": false,
         "auto_rotate": false,
