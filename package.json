@@ -2,10 +2,12 @@
   "name": "shopify-theme-2",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "format": "prettier --write snippets/ templates/ sections/ layout/ config/ assets/",
     "lint": "eslint . --ext .js",
-    "prepare": "husky"
+    "prepare": "husky",
+    "start": "shopify theme dev --store=aurabeuty.myshopify.com --theme-editor-sync"
   },
   "keywords": [],
   "author": "",
