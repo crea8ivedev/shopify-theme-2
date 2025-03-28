@@ -88,10 +88,75 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "icon_with_text_wKVBAr": {
+      "type": "icon-with-text",
+      "blocks": {
+        "column_i9qbLh": {
+          "type": "column",
+          "settings": {
+            "grid_title": "Free shipping",
+            "grid_description": "Standard shipping",
+            "grid_image": "shopify://shop_images/Vector_ce405dbc-3cd8-4fd4-969e-76fde25f3ed2.png",
+            "svg_icon": ""
+          }
+        },
+        "column_q6hQyE": {
+          "type": "column",
+          "settings": {
+            "grid_title": "Free shipping",
+            "grid_description": "Standard shipping",
+            "grid_image": "shopify://shop_images/Vector_1.png",
+            "svg_icon": ""
+          }
+        },
+        "column_giMLYF": {
+          "type": "column",
+          "settings": {
+            "grid_title": "Free shipping",
+            "grid_description": "Standard shipping",
+            "grid_image": "shopify://shop_images/Vector_2.png",
+            "svg_icon": ""
+          }
+        },
+        "column_wNfyVj": {
+          "type": "column",
+          "settings": {
+            "grid_title": "Free shipping",
+            "grid_description": "Standard shipping",
+            "grid_image": "shopify://shop_images/Vector_3.png",
+            "svg_icon": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_i9qbLh",
+        "column_q6hQyE",
+        "column_giMLYF",
+        "column_wNfyVj"
+      ],
+      "settings": {
+        "color_scheme": "scheme-2",
+        "heading": "",
+        "sec_content": "",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "desktop_columns": 4,
+        "column_alignment": "left",
+        "icon_alignment": "icon_left",
+        "columns_mobile": "1",
+        "icon_bg": "none",
+        "icon_background_color": "#ffe7e7",
+        "icon_color": "#b47b84",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "show_mobile_slider": true
+      }
     }
   },
   "order": [
     "slideshow_eqDDp9",
-    "multicolumn"
+    "multicolumn",
+    "icon_with_text_wKVBAr"
   ]
 }
