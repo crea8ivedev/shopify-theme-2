@@ -25,7 +25,10 @@
           }
         }
       },
-      "block_order": ["marquee_fAqgQG"],
+      "block_order": [
+        "marquee_fAqgQG"
+      ],
+      "disabled": true,
       "settings": {
         "show_navigation_buttons": false,
         "auto_rotate": false,
@@ -64,7 +67,11 @@
           }
         }
       },
-      "block_order": ["column1", "column2", "column3"],
+      "block_order": [
+        "column1",
+        "column2",
+        "column3"
+      ],
       "settings": {
         "title": "",
         "heading_size": "h1",
@@ -83,5 +90,8 @@
       }
     }
   },
-  "order": ["slideshow_eqDDp9", "multicolumn"]
+  "order": [
+    "slideshow_eqDDp9",
+    "multicolumn"
+  ]
 }
