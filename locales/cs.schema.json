@@ -2768,29 +2768,29 @@
         "layout": {
           "label": "Rozvržení",
           "options__1": {
-            "label": "Plná šířka"
+            "label": "Celá šířka"
           },
           "options__2": {
-            "label": "stránka"
+            "label": "Mřížka"
           }
         },
         "slide_height": {
-          "label": "Výška",
+          "label": "Výška snímku",
           "options__1": {
-            "label": "Přizpůsobení prvnímu obrázku"
+            "label": "Přizpůsobit prvnímu obrázku"
           },
           "options__2": {
-            "label": "Malá"
+            "label": "Malý"
           },
           "options__3": {
             "label": "Střední"
           },
           "options__4": {
-            "label": "Velká"
+            "label": "Velký"
           }
         },
         "slider_visual": {
-          "label": "Stránkování",
+          "label": "Styl stránkování",
           "options__1": {
             "label": "Počítadlo"
           },
@@ -2802,16 +2802,19 @@
           }
         },
         "auto_rotate": {
-          "label": "Automaticky otočit snímky"
+          "label": "Automatické otáčení snímků"
         },
         "change_slides_speed": {
-          "label": "Změnit snímek co"
+          "label": "Změnit snímky každých"
         },
         "show_text_below": {
           "label": "Text pod obrázkem"
         },
         "mobile": {
           "content": "Mobilní rozvržení"
+        },
+        "show_navigation_buttons": {
+          "label": "Zobrazit navigační tlačítka"
         },
         "accessibility": {
           "content": "Přístupnost",
@@ -2829,30 +2832,32 @@
             },
             "heading": {
               "label": "Nadpis",
-              "default": "Obrázkový snímek"
+              "default": "Prezentace obrázků"
+            },
+            "mobile_image": {
+              "label": "Mobilní obrázek"
             },
             "subheading": {
-              "label": "Podnadpis",
-              "default": "Představte příběh své značky prostřednictvím obrázků"
+              "label": "Podnadpis"
             },
             "button_label": {
-              "label": "Štítek",
-              "info": "Pro skrytí nechte prázdné",
-              "default": "Text tlačítka"
+              "label": "Popisek tlačítka",
+              "info": "Nechte popisek prázdný pro skrytí tlačítka."
             },
             "link": {
-              "label": "Odkaz"
+              "label": "Odkaz na tlačítko"
             },
             "secondary_style": {
-              "label": "Styl osnovy"
+              "label": "Použít styl obrysového tlačítka"
             },
             "box_align": {
-              "label": "Pozice obsahu",
+              "label": "Pozice obsahu na ploše",
+              "info": "Pozice je automaticky optimalizována pro mobil.",
               "options__1": {
                 "label": "Nahoře vlevo"
               },
               "options__2": {
-                "label": "Nahoře ve středu"
+                "label": "Nahoře uprostřed"
               },
               "options__3": {
                 "label": "Nahoře vpravo"
@@ -2861,7 +2866,7 @@
                 "label": "Uprostřed vlevo"
               },
               "options__5": {
-                "label": "Uprostřed ve středu"
+                "label": "Uprostřed"
               },
               "options__6": {
                 "label": "Uprostřed vpravo"
@@ -2870,53 +2875,87 @@
                 "label": "Dole vlevo"
               },
               "options__8": {
-                "label": "Dole ve středu"
+                "label": "Dole uprostřed"
               },
               "options__9": {
                 "label": "Dole vpravo"
               }
             },
-            "show_text_box": {
-              "label": "Kontejner"
-            },
             "text_alignment": {
-              "label": "Zarovnání obsahu",
+              "label": "Zarovnání obsahu na ploše",
               "option_1": {
-                "label": "Doleva"
+                "label": "Vlevo"
               },
               "option_2": {
                 "label": "Na střed"
               },
               "option_3": {
-                "label": "Doprava"
+                "label": "Vpravo"
               }
             },
             "image_overlay_opacity": {
-              "label": "Neprůhlednost překryvu"
+              "label": "Průhlednost překrytí obrázku"
             },
             "text_alignment_mobile": {
-              "label": "Zarovnání obsahu v mobilním prostředí",
+              "label": "Zarovnání obsahu na mobilu",
               "options__1": {
-                "label": "Doleva"
+                "label": "Vlevo"
               },
               "options__2": {
                 "label": "Na střed"
               },
               "options__3": {
-                "label": "Doprava"
+                "label": "Vpravo"
               }
+            }
+          }
+        },
+        "video": {
+          "name": "Video",
+          "settings": {
+            "poster_image": {
+              "label": "Náhledový obrázek"
+            }
+          }
+        },
+        "marqee": {
+          "name": "Marqee",
+          "settings": {
+            "image-marqee-1": {
+              "label": "Marqee obrázek 1"
             },
-            "header_button": {
-              "content": "Tlačítko"
+            "image-marqee-2": {
+              "label": "Marqee obrázek 2"
             },
-            "header_layout": {
-              "content": "Rozvržení"
+            "image-marqee-3": {
+              "label": "Marqee obrázek 3"
             },
-            "header_text": {
-              "content": "Text"
+            "image-marqee-4": {
+              "label": "Marqee obrázek 4"
             },
-            "header_colors": {
-              "content": "Barvy"
+            "image-marqee-5": {
+              "label": "Marqee obrázek 5"
+            },
+            "image-marqee-6": {
+              "label": "Marqee obrázek 6"
+            },
+            "heading-marqee": {
+              "label": "Nadpis"
+            },
+            "subheading-marqee": {
+              "label": "Podnadpis"
+            },
+            "button_label-marqee": {
+              "label": "Popisek tlačítka"
+            },
+            "link-marqee": {
+              "label": "Odkaz na tlačítko"
+            },
+            "content-marqee": {
+              "label": "Obsah"
+            },
+            "color_bg": {
+              "label": "Barva pozadí"
             }
           }
         }

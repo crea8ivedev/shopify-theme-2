@@ -2771,13 +2771,13 @@
             "label": "全幅"
           },
           "options__2": {
-            "label": "ページ"
+            "label": "グリッド"
           }
         },
         "slide_height": {
-          "label": "高さ",
+          "label": "スライドの高さ",
           "options__1": {
-            "label": "最初の画像に対応"
+            "label": "最初の画像に適応"
           },
           "options__2": {
             "label": "小"
@@ -2790,7 +2790,7 @@
           }
         },
         "slider_visual": {
-          "label": "ページネーション",
+          "label": "ページネーションスタイル",
           "options__1": {
             "label": "カウンター"
           },
@@ -2798,26 +2798,29 @@
             "label": "ドット"
           },
           "options__3": {
-            "label": "数字"
+            "label": "番号"
           }
         },
         "auto_rotate": {
-          "label": "スライドの自動切り替え"
+          "label": "スライドを自動回転"
         },
         "change_slides_speed": {
-          "label": "スライドを変更する間隔"
-        },
-        "mobile": {
-          "content": "モバイルのレイアウト"
+          "label": "スライドを切り替える間隔"
         },
         "show_text_below": {
-          "label": "画像の下にテキストを重ねる"
+          "label": "画像の下にテキストを表示"
+        },
+        "mobile": {
+          "content": "モバイルレイアウト"
+        },
+        "show_navigation_buttons": {
+          "label": "ナビゲーションボタンを表示"
         },
         "accessibility": {
           "content": "アクセシビリティ",
           "label": "スライドショーの説明",
-          "info": "スクリーンリーダーを使用している人のためにスライドショーを説明する",
-          "default": "ブランドについてのスライドショー"
+          "info": "スクリーンリーダーを使用するお客様のためにスライドショーを説明してください。",
+          "default": "ブランドに関するスライドショー"
         }
       },
       "blocks": {
@@ -2829,58 +2832,57 @@
             },
             "heading": {
               "label": "見出し",
-              "default": "画像スライド"
+              "default": "画像スライドショー"
+            },
+            "mobile_image": {
+              "label": "モバイル画像"
             },
             "subheading": {
-              "label": "小見出し",
-              "default": "ブランドのストーリーを画像で伝える"
+              "label": "サブ見出し"
             },
             "button_label": {
-              "label": "ラベル",
-              "info": "非表示にするには空白のままにしてください。",
-              "default": "ボタンのラベル"
+              "label": "ボタンラベル",
+              "info": "ラベルを空欄にするとボタンは非表示になります。"
             },
             "link": {
-              "label": "リンク"
+              "label": "ボタンリンク"
             },
             "secondary_style": {
-              "label": "アウトラインスタイル"
+              "label": "アウトラインボタンスタイルを使用"
             },
             "box_align": {
-              "label": "コンテンツンの位置",
+              "label": "デスクトップのコンテンツ位置",
+              "info": "モバイルでは位置が自動的に最適化されます。",
               "options__1": {
                 "label": "左上"
               },
               "options__2": {
-                "label": "上部中央"
+                "label": "中央上"
               },
               "options__3": {
                 "label": "右上"
               },
               "options__4": {
-                "label": "中央部左側"
+                "label": "左中央"
               },
               "options__5": {
                 "label": "中央"
               },
               "options__6": {
-                "label": "中央部右側"
+                "label": "右中央"
               },
               "options__7": {
                 "label": "左下"
               },
               "options__8": {
-                "label": "下部中央"
+                "label": "中央下"
               },
               "options__9": {
                 "label": "右下"
               }
             },
-            "show_text_box": {
-              "label": "コンテナー"
-            },
             "text_alignment": {
-              "label": "コンテンツアラインメント",
+              "label": "デスクトップのコンテンツ配置",
               "option_1": {
                 "label": "左"
               },
@@ -2892,7 +2894,7 @@
               }
             },
             "image_overlay_opacity": {
-              "label": "オーバーレイの不透明率"
+              "label": "画像オーバーレイの不透明度"
             },
             "text_alignment_mobile": {
               "label": "モバイルのコンテンツ配置",
@@ -2905,18 +2907,55 @@
               "options__3": {
                 "label": "右"
               }
+            }
+          }
+        },
+        "video": {
+          "name": "ビデオ",
+          "settings": {
+            "poster_image": {
+              "label": "ポスター画像"
+            }
+          }
+        },
+        "marqee": {
+          "name": "マルキー",
+          "settings": {
+            "image-marqee-1": {
+              "label": "マルキー画像1"
             },
-            "header_button": {
-              "content": "ボタン"
+            "image-marqee-2": {
+              "label": "マルキー画像2"
             },
-            "header_layout": {
-              "content": "レイアウト"
+            "image-marqee-3": {
+              "label": "マルキー画像3"
             },
-            "header_text": {
-              "content": "テキスト"
+            "image-marqee-4": {
+              "label": "マルキー画像4"
             },
-            "header_colors": {
-              "content": "色"
+            "image-marqee-5": {
+              "label": "マルキー画像5"
+            },
+            "image-marqee-6": {
+              "label": "マルキー画像6"
+            },
+            "heading-marqee": {
+              "label": "見出し"
+            },
+            "subheading-marqee": {
+              "label": "サブ見出し"
+            },
+            "button_label-marqee": {
+              "label": "ボタンラベル"
+            },
+            "link-marqee": {
+              "label": "ボタンリンク"
+            },
+            "content-marqee": {
+              "label": "コンテンツ"
+            },
+            "color_bg": {
+              "label": "背景色"
             }
           }
         }

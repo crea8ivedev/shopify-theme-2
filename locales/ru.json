@@ -365,7 +365,8 @@
       "next_announcement": "Следующее объявление",
       "carousel": "Карусель",
       "announcement": "Объявление",
-      "announcement_bar": "Строка объявления"
+      "announcement_bar": "Строка объявления",
+      "close_icon": "Закрыть объявление"
     },
     "quick_order_list": {
       "product_total": "Промежуточный итог по товару",

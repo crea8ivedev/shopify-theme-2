@@ -355,7 +355,8 @@
       "next_announcement": "Comunicado seguinte",
       "carousel": "Carrossel",
       "announcement": "Comunicado",
-      "announcement_bar": "Barra de comunicado"
+      "announcement_bar": "Barra de comunicado",
+      "close_icon": "Fechar comunicado"
     },
     "quick_order_list": {
       "product_total": "Subtotal dos produtos",

@@ -365,7 +365,8 @@
       "next_announcement": "Kolejne ogłoszenie",
       "carousel": "Karuzela",
       "announcement": "Ogłoszenie",
-      "announcement_bar": "Pasek ogłoszeń"
+      "announcement_bar": "Pasek ogłoszeń",
+      "close_icon": "Zamknij ogłoszenie"
     },
     "quick_order_list": {
       "product_total": "Suma częściowa dla produktu",

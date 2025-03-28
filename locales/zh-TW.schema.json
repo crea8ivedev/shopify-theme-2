@@ -2763,21 +2763,21 @@
       }
     },
     "slideshow": {
-      "name": "素材輪播",
+      "name": "幻燈片",
       "settings": {
         "layout": {
           "label": "版面配置",
           "options__1": {
-            "label": "完整寬度"
+            "label": "全寬"
           },
           "options__2": {
-            "label": "頁面"
+            "label": "網格"
           }
         },
         "slide_height": {
-          "label": "高度",
+          "label": "幻燈片高度",
           "options__1": {
-            "label": "配合第一張圖片"
+            "label": "適應第一張圖片"
           },
           "options__2": {
             "label": "小"
@@ -2790,139 +2790,178 @@
           }
         },
         "slider_visual": {
-          "label": "分頁",
+          "label": "分頁樣式",
           "options__1": {
             "label": "計數器"
           },
           "options__2": {
-            "label": "圓點"
+            "label": "點"
           },
           "options__3": {
             "label": "數字"
           }
         },
         "auto_rotate": {
-          "label": "自動旋轉投影片"
+          "label": "自動輪播幻燈片"
         },
         "change_slides_speed": {
-          "label": "每過以下時間即變更投影片"
-        },
-        "mobile": {
-          "content": "行動版版面配置"
+          "label": "更改幻燈片間隔"
         },
         "show_text_below": {
-          "label": "將文字堆疊在圖片下方"
+          "label": "圖片下方文字"
+        },
+        "mobile": {
+          "content": "行動版版面"
+        },
+        "show_navigation_buttons": {
+          "label": "顯示導航按鈕"
         },
         "accessibility": {
           "content": "無障礙功能",
-          "label": "素材輪播說明",
-          "info": "為使用螢幕助讀程式的顧客說明素材輪播內容",
-          "default": "我們的品牌素材輪播"
+          "label": "幻燈片描述",
+          "info": "為使用螢幕閱讀器的客戶描述幻燈片。",
+          "default": "品牌幻燈片"
         }
       },
       "blocks": {
         "slide": {
-          "name": "投影片",
+          "name": "幻燈片",
           "settings": {
             "image": {
               "label": "圖片"
             },
             "heading": {
               "label": "標題",
-              "default": "圖片投影片"
+              "default": "圖片幻燈片"
+            },
+            "mobile_image": {
+              "label": "行動版圖片"
             },
             "subheading": {
-              "label": "子標題",
-              "default": "用圖片講述您的品牌故事"
+              "label": "副標題"
             },
             "button_label": {
-              "label": "標籤",
-              "info": "留白以隱藏",
-              "default": "按鈕標籤"
+              "label": "按鈕文字",
+              "info": "留空則隱藏按鈕。"
             },
             "link": {
-              "label": "連結"
+              "label": "按鈕連結"
             },
             "secondary_style": {
-              "label": "外框樣式"
+              "label": "使用外框按鈕樣式"
             },
             "box_align": {
-              "label": "內容位置",
+              "label": "桌面端內容位置",
+              "info": "行動端位置將自動最佳化。",
               "options__1": {
-                "label": "上方靠左"
+                "label": "左上角"
               },
               "options__2": {
-                "label": "上方置中"
+                "label": "頂部置中"
               },
               "options__3": {
-                "label": "上方靠右"
+                "label": "右上角"
               },
               "options__4": {
-                "label": "中間靠左"
+                "label": "左中"
               },
               "options__5": {
-                "label": "中間置中"
-              },
-              "options__6": {
-                "label": "中間靠右"
-              },
-              "options__7": {
-                "label": "下方靠左"
-              },
-              "options__8": {
-                "label": "下方置中"
-              },
-              "options__9": {
-                "label": "下方靠右"
-              }
-            },
-            "show_text_box": {
-              "label": "容器"
-            },
-            "text_alignment": {
-              "label": "內容對齊",
-              "option_1": {
-                "label": "靠左"
-              },
-              "option_2": {
                 "label": "置中"
               },
+              "options__6": {
+                "label": "右中"
+              },
+              "options__7": {
+                "label": "左下角"
+              },
+              "options__8": {
+                "label": "底部置中"
+              },
+              "options__9": {
+                "label": "右下角"
+              }
+            },
+            "text_alignment": {
+              "label": "桌面端內容對齊方式",
+              "option_1": {
+                "label": "左對齊"
+              },
+              "option_2": {
+                "label": "置中對齊"
+              },
               "option_3": {
-                "label": "靠右"
+                "label": "右對齊"
               }
             },
             "image_overlay_opacity": {
-              "label": "疊加層不透明度"
+              "label": "圖片覆蓋透明度"
             },
             "text_alignment_mobile": {
-              "label": "行動版內容對齊方式",
+              "label": "行動端內容對齊方式",
               "options__1": {
-                "label": "靠左"
+                "label": "左對齊"
               },
               "options__2": {
-                "label": "置中"
+                "label": "置中對齊"
               },
               "options__3": {
-                "label": "靠右"
+                "label": "右對齊"
               }
+            }
+          }
+        },
+        "video": {
+          "name": "影片",
+          "settings": {
+            "poster_image": {
+              "label": "封面圖片"
+            }
+          }
+        },
+        "marqee": {
+          "name": "跑馬燈",
+          "settings": {
+            "image-marqee-1": {
+              "label": "跑馬燈圖片 1"
             },
-            "header_button": {
-              "content": "按鈕"
+            "image-marqee-2": {
+              "label": "跑馬燈圖片 2"
             },
-            "header_layout": {
-              "content": "版面配置"
+            "image-marqee-3": {
+              "label": "跑馬燈圖片 3"
             },
-            "header_text": {
-              "content": "文字"
+            "image-marqee-4": {
+              "label": "跑馬燈圖片 4"
             },
-            "header_colors": {
-              "content": "顏色"
+            "image-marqee-5": {
+              "label": "跑馬燈圖片 5"
+            },
+            "image-marqee-6": {
+              "label": "跑馬燈圖片 6"
+            },
+            "heading-marqee": {
+              "label": "標題"
+            },
+            "subheading-marqee": {
+              "label": "副標題"
+            },
+            "button_label-marqee": {
+              "label": "按鈕文字"
+            },
+            "link-marqee": {
+              "label": "按鈕連結"
+            },
+            "content-marqee": {
+              "label": "內容"
+            },
+            "color_bg": {
+              "label": "背景顏色"
             }
           }
         }
       },
       "presets": {
-        "name": "素材輪播"
+        "name": "幻燈片"
       }
     },
     "collapsible_content": {

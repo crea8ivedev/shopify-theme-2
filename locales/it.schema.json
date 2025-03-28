@@ -2771,11 +2771,11 @@
             "label": "Larghezza intera"
           },
           "options__2": {
-            "label": "Pagina"
+            "label": "Griglia"
           }
         },
         "slide_height": {
-          "label": "Altezza",
+          "label": "Altezza della diapositiva",
           "options__1": {
             "label": "Adatta alla prima immagine"
           },
@@ -2790,7 +2790,7 @@
           }
         },
         "slider_visual": {
-          "label": "Impaginazione",
+          "label": "Stile della paginazione",
           "options__1": {
             "label": "Contatore"
           },
@@ -2802,52 +2802,57 @@
           }
         },
         "auto_rotate": {
-          "label": "Ruota slide automaticamente"
+          "label": "Rotazione automatica delle diapositive"
         },
         "change_slides_speed": {
-          "label": "Cambia slide ogni"
-        },
-        "mobile": {
-          "content": "Layout dispositivo mobile"
+          "label": "Cambia diapositiva ogni"
         },
         "show_text_below": {
-          "label": "Elenca testo sotto l'immagine"
+          "label": "Testo sotto l'immagine"
+        },
+        "mobile": {
+          "content": "Layout mobile"
+        },
+        "show_navigation_buttons": {
+          "label": "Mostra pulsanti di navigazione"
         },
         "accessibility": {
           "content": "Accessibilità",
-          "label": "Descrizione presentazione",
-          "info": "Descrivi la presentazione per gli utenti che utilizzano i lettori di schermo",
-          "default": "Presentazione sul nostro brand"
+          "label": "Descrizione della presentazione",
+          "info": "Descrivi la presentazione per i clienti che utilizzano lettori di schermo.",
+          "default": "Presentazione sul marchio"
         }
       },
       "blocks": {
         "slide": {
-          "name": "Scorrimento",
+          "name": "Diapositiva",
           "settings": {
             "image": {
-              "label": "Image"
+              "label": "Immagine"
             },
             "heading": {
               "label": "Titolo",
-              "default": "Slide immagine"
+              "default": "Presentazione di immagini"
+            },
+            "mobile_image": {
+              "label": "Immagine mobile"
             },
             "subheading": {
-              "label": "Sottotitolo",
-              "default": "Racconta la storia del tuo brand con video e immagini"
+              "label": "Sottotitolo"
             },
             "button_label": {
-              "label": "Etichetta",
-              "info": "Lascia vuoto per nascondere",
-              "default": "Etichetta pulsante"
+              "label": "Etichetta pulsante",
+              "info": "Lascia vuoto per nascondere il pulsante."
             },
             "link": {
-              "label": "Link"
+              "label": "Link del pulsante"
             },
             "secondary_style": {
-              "label": "Stile contorno"
+              "label": "Usa stile pulsante con contorno"
             },
             "box_align": {
-              "label": "Posizione contenuto",
+              "label": "Posizione del contenuto su desktop",
+              "info": "La posizione è ottimizzata automaticamente per il mobile.",
               "options__1": {
                 "label": "In alto a sinistra"
               },
@@ -2858,13 +2863,13 @@
                 "label": "In alto a destra"
               },
               "options__4": {
-                "label": "In mezzo a sinistra"
+                "label": "Al centro a sinistra"
               },
               "options__5": {
-                "label": "In mezzo al centro"
+                "label": "Al centro"
               },
               "options__6": {
-                "label": "In mezzo a destra"
+                "label": "Al centro a destra"
               },
               "options__7": {
                 "label": "In basso a sinistra"
@@ -2876,47 +2881,81 @@
                 "label": "In basso a destra"
               }
             },
-            "show_text_box": {
-              "label": "Contenitore"
-            },
             "text_alignment": {
-              "label": "Allineamento contenuto",
+              "label": "Allineamento del contenuto su desktop",
               "option_1": {
-                "label": "A sinistra"
+                "label": "Sinistra"
               },
               "option_2": {
-                "label": "Al centro"
+                "label": "Centro"
               },
               "option_3": {
-                "label": "A destra"
+                "label": "Destra"
               }
             },
             "image_overlay_opacity": {
-              "label": "Opacità della sovrapposizione"
+              "label": "Opacità della sovrapposizione dell'immagine"
             },
             "text_alignment_mobile": {
-              "label": "Allineamento contenuto su dispositivi mobili",
+              "label": "Allineamento del contenuto su mobile",
               "options__1": {
-                "label": "A sinistra"
+                "label": "Sinistra"
               },
               "options__2": {
-                "label": "Al centro"
+                "label": "Centro"
               },
               "options__3": {
-                "label": "A destra"
+                "label": "Destra"
               }
+            }
+          }
+        },
+        "video": {
+          "name": "Video",
+          "settings": {
+            "poster_image": {
+              "label": "Immagine di copertina"
+            }
+          }
+        },
+        "marqee": {
+          "name": "Marquee",
+          "settings": {
+            "image-marqee-1": {
+              "label": "Immagine Marquee 1"
             },
-            "header_button": {
-              "content": "Pulsante"
+            "image-marqee-2": {
+              "label": "Immagine Marquee 2"
             },
-            "header_layout": {
-              "content": "Layout"
+            "image-marqee-3": {
+              "label": "Immagine Marquee 3"
             },
-            "header_text": {
-              "content": "Testo"
+            "image-marqee-4": {
+              "label": "Immagine Marquee 4"
             },
-            "header_colors": {
-              "content": "Colori"
+            "image-marqee-5": {
+              "label": "Immagine Marquee 5"
+            },
+            "image-marqee-6": {
+              "label": "Immagine Marquee 6"
+            },
+            "heading-marqee": {
+              "label": "Titolo"
+            },
+            "subheading-marqee": {
+              "label": "Sottotitolo"
+            },
+            "button_label-marqee": {
+              "label": "Etichetta pulsante"
+            },
+            "link-marqee": {
+              "label": "Link pulsante"
+            },
+            "content-marqee": {
+              "label": "Contenuto"
+            },
+            "color_bg": {
+              "label": "Colore di sfondo"
             }
           }
         }

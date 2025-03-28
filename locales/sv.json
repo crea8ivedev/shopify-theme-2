@@ -345,7 +345,8 @@
       "next_announcement": "Kommande meddelande",
       "carousel": "Karusell",
       "announcement": "Meddelande",
-      "announcement_bar": "Meddelandefält"
+      "announcement_bar": "Meddelandefält",
+      "close_icon": "Stäng meddelande"
     },
     "quick_order_list": {
       "product_total": "Delsumma för produkt",

@@ -2771,26 +2771,26 @@
             "label": "Ancho completo"
           },
           "options__2": {
-            "label": "Página"
+            "label": "Cuadrícula"
           }
         },
         "slide_height": {
-          "label": "Altura",
+          "label": "Altura de la diapositiva",
           "options__1": {
             "label": "Adaptar a la primera imagen"
           },
           "options__2": {
-            "label": "Pequeña"
+            "label": "Pequeño"
           },
           "options__3": {
-            "label": "Mediana"
+            "label": "Mediano"
           },
           "options__4": {
             "label": "Grande"
           }
         },
         "slider_visual": {
-          "label": "Paginación",
+          "label": "Estilo de paginación",
           "options__1": {
             "label": "Contador"
           },
@@ -2802,22 +2802,25 @@
           }
         },
         "auto_rotate": {
-          "label": "Rotar las diapositivas automáticamente"
+          "label": "Rotación automática de diapositivas"
         },
         "change_slides_speed": {
           "label": "Cambiar diapositivas cada"
         },
-        "mobile": {
-          "content": "Diseño para móviles"
-        },
         "show_text_below": {
-          "label": "Apilar el texto debajo de la imagen"
+          "label": "Texto debajo de la imagen"
+        },
+        "mobile": {
+          "content": "Diseño para móvil"
+        },
+        "show_navigation_buttons": {
+          "label": "Mostrar botones de navegación"
         },
         "accessibility": {
           "content": "Accesibilidad",
-          "label": "Descripción de la presentación de diapositivas",
-          "info": "Describir la presentación de diapositivas para quienes usan lectores de pantalla",
-          "default": "Presentación de diapositivas sobre tu marca"
+          "label": "Descripción de la presentación",
+          "info": "Describe la presentación de diapositivas para los clientes que usan lectores de pantalla.",
+          "default": "Presentación sobre la marca"
         }
       },
       "blocks": {
@@ -2829,94 +2832,130 @@
             },
             "heading": {
               "label": "Título",
-              "default": "Diapositiva de imagen"
+              "default": "Presentación de imágenes"
+            },
+            "mobile_image": {
+              "label": "Imagen para móvil"
             },
             "subheading": {
-              "label": "Subtítulo",
-              "default": "Cuenta la historia de tu marca a través de imágenes"
+              "label": "Subtítulo"
             },
             "button_label": {
-              "label": "Etiqueta",
-              "info": "Dejar en blanco para ocultar",
-              "default": "Etiqueta de botón"
+              "label": "Etiqueta del botón",
+              "info": "Déjalo en blanco para ocultar el botón."
             },
             "link": {
-              "label": "Enlace"
+              "label": "Enlace del botón"
             },
             "secondary_style": {
-              "label": "Estilo de contorno"
+              "label": "Usar estilo de botón con contorno"
             },
             "box_align": {
-              "label": "Posición de contenido",
+              "label": "Posición del contenido en escritorio",
+              "info": "La posición se optimiza automáticamente para móviles.",
               "options__1": {
-                "label": "Arriba a la izquierda"
+                "label": "Superior izquierda"
               },
               "options__2": {
-                "label": "Arriba en el centro"
+                "label": "Superior centro"
               },
               "options__3": {
-                "label": "Arriba a la derecha"
+                "label": "Superior derecha"
               },
               "options__4": {
-                "label": "Centrado a la izquierda"
+                "label": "Centro izquierda"
               },
               "options__5": {
-                "label": "Centrado en el medio"
+                "label": "Centro"
               },
               "options__6": {
-                "label": "Centrado a la derecha"
+                "label": "Centro derecha"
               },
               "options__7": {
-                "label": "Abajo a la izquierda"
+                "label": "Inferior izquierda"
               },
               "options__8": {
-                "label": "Abajo en el centro"
+                "label": "Inferior centro"
               },
               "options__9": {
-                "label": "Abajo a la derecha"
+                "label": "Inferior derecha"
               }
             },
-            "show_text_box": {
-              "label": "Contenedor"
-            },
             "text_alignment": {
-              "label": "Alineación de contenido",
+              "label": "Alineación del contenido en escritorio",
               "option_1": {
                 "label": "Izquierda"
               },
               "option_2": {
-                "label": "Centrado"
+                "label": "Centro"
               },
               "option_3": {
                 "label": "Derecha"
               }
             },
             "image_overlay_opacity": {
-              "label": "Opacidad de sobreposición"
+              "label": "Opacidad de la superposición de imagen"
             },
             "text_alignment_mobile": {
-              "label": "Alineación del contenido en dispositivos móviles",
+              "label": "Alineación del contenido en móvil",
               "options__1": {
                 "label": "Izquierda"
               },
               "options__2": {
-                "label": "Centrado"
+                "label": "Centro"
               },
               "options__3": {
                 "label": "Derecha"
               }
+            }
+          }
+        },
+        "video": {
+          "name": "Vídeo",
+          "settings": {
+            "poster_image": {
+              "label": "Imagen de portada"
+            }
+          }
+        },
+        "marqee": {
+          "name": "Marquesina",
+          "settings": {
+            "image-marqee-1": {
+              "label": "Imagen Marquesina 1"
             },
-            "header_button": {
-              "content": "Botón"
+            "image-marqee-2": {
+              "label": "Imagen Marquesina 2"
             },
-            "header_layout": {
-              "content": "Diseño"
+            "image-marqee-3": {
+              "label": "Imagen Marquesina 3"
             },
-            "header_text": {
-              "content": "Texto"
+            "image-marqee-4": {
+              "label": "Imagen Marquesina 4"
             },
-            "header_colors": {
-              "content": "Colores"
+            "image-marqee-5": {
+              "label": "Imagen Marquesina 5"
+            },
+            "image-marqee-6": {
+              "label": "Imagen Marquesina 6"
+            },
+            "heading-marqee": {
+              "label": "Título"
+            },
+            "subheading-marqee": {
+              "label": "Subtítulo"
+            },
+            "button_label-marqee": {
+              "label": "Etiqueta del botón"
+            },
+            "link-marqee": {
+              "label": "Enlace del botón"
+            },
+            "content-marqee": {
+              "label": "Contenido"
+            },
+            "color_bg": {
+              "label": "Color de fondo"
             }
           }
         }

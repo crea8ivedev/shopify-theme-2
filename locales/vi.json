@@ -345,7 +345,8 @@
       "next_announcement": "Thông báo sau",
       "carousel": "Quay vòng",
       "announcement": "Thông báo",
-      "announcement_bar": "Thanh thông báo"
+      "announcement_bar": "Thanh thông báo",
+      "close_icon": "Đóng thông báo"
     },
     "quick_order_list": {
       "product_total": "Tổng phụ sản phẩm",

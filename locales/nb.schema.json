@@ -2771,26 +2771,26 @@
             "label": "Full bredde"
           },
           "options__2": {
-            "label": "Side"
+            "label": "Rutenett"
           }
         },
         "slide_height": {
-          "label": "Høyde",
+          "label": "Lysbildehøyde",
           "options__1": {
-            "label": "Tilpass etter første bilde"
+            "label": "Tilpass til første bilde"
           },
           "options__2": {
             "label": "Liten"
           },
           "options__3": {
-            "label": "Medie"
+            "label": "Medium"
           },
           "options__4": {
             "label": "Stor"
           }
         },
         "slider_visual": {
-          "label": "Sideinndeling",
+          "label": "Pagineringstil",
           "options__1": {
             "label": "Teller"
           },
@@ -2798,25 +2798,28 @@
             "label": "Prikker"
           },
           "options__3": {
-            "label": "Tall"
+            "label": "Nummer"
           }
         },
         "auto_rotate": {
-          "label": "Auto-roter lysbilder"
+          "label": "Automatisk rotering av lysbilder"
         },
         "change_slides_speed": {
-          "label": "Endre lysbilde hvert"
+          "label": "Bytt lysbilder hvert"
         },
         "show_text_below": {
-          "label": "Stable tekst under bilde"
+          "label": "Tekst under bilde"
         },
         "mobile": {
-          "content": "Mobillayout"
+          "content": "Mobiloppsett"
+        },
+        "show_navigation_buttons": {
+          "label": "Vis navigasjonsknapper"
         },
         "accessibility": {
           "content": "Tilgjengelighet",
           "label": "Beskrivelse av lysbildefremvisning",
-          "info": "Beskriv lysbildefremvisningen for de som bruker skjermlesere",
+          "info": "Beskriv lysbildefremvisningen for kunder som bruker skjermlesere.",
           "default": "Lysbildefremvisning om merkevaren"
         }
       },
@@ -2829,94 +2832,130 @@
             },
             "heading": {
               "label": "Overskrift",
-              "default": "Lysbilde"
+              "default": "Bildekarusell"
+            },
+            "mobile_image": {
+              "label": "Mobilbilde"
             },
             "subheading": {
-              "label": "Underoverskrift",
-              "default": "Fortell merkevarens historie gjennom bilder"
+              "label": "Underoverskrift"
             },
             "button_label": {
-              "label": "Etikett",
-              "info": "La stå tom for å skjule",
-              "default": "Knappetikett"
+              "label": "Knappeetikett",
+              "info": "La etiketten være tom for å skjule knappen."
             },
             "link": {
-              "label": "Kobling"
+              "label": "Knappelink"
             },
             "secondary_style": {
-              "label": "Stil på omriss"
+              "label": "Bruk omrissknappstil"
             },
             "box_align": {
-              "label": "Innholdsplassering",
+              "label": "Skrivebordsinnholdets posisjon",
+              "info": "Posisjonen optimaliseres automatisk for mobil.",
               "options__1": {
                 "label": "Øverst til venstre"
               },
               "options__2": {
-                "label": "Toppsentrert"
+                "label": "Øverst i midten"
               },
               "options__3": {
                 "label": "Øverst til høyre"
               },
               "options__4": {
-                "label": "Midt til venstre"
+                "label": "Midten til venstre"
               },
               "options__5": {
-                "label": "Midt i senter"
+                "label": "Midten i midten"
               },
               "options__6": {
-                "label": "Midt til høyre"
+                "label": "Midten til høyre"
               },
               "options__7": {
                 "label": "Nederst til venstre"
               },
               "options__8": {
-                "label": "Bunnsentrert"
+                "label": "Nederst i midten"
               },
               "options__9": {
                 "label": "Nederst til høyre"
               }
             },
-            "show_text_box": {
-              "label": "Beholder"
-            },
             "text_alignment": {
-              "label": "Innholdsjustering",
+              "label": "Justering av skrivebordsinnhold",
               "option_1": {
                 "label": "Venstre"
               },
               "option_2": {
-                "label": "Sentrert"
+                "label": "Midten"
               },
               "option_3": {
                 "label": "Høyre"
               }
             },
             "image_overlay_opacity": {
-              "label": "Overleggets gjennomsiktighet"
+              "label": "Bildeoverlegg gjennomsiktighet"
             },
             "text_alignment_mobile": {
-              "label": "Innholdsjustering på mobiltelefon",
+              "label": "Justering av mobilinnhold",
               "options__1": {
                 "label": "Venstre"
               },
               "options__2": {
-                "label": "Sentrert"
+                "label": "Midten"
               },
               "options__3": {
                 "label": "Høyre"
               }
+            }
+          }
+        },
+        "video": {
+          "name": "Video",
+          "settings": {
+            "poster_image": {
+              "label": "Plakatbilde"
+            }
+          }
+        },
+        "marqee": {
+          "name": "Marquee",
+          "settings": {
+            "image-marqee-1": {
+              "label": "Marquee-bilde 1"
             },
-            "header_button": {
-              "content": "Knapp"
+            "image-marqee-2": {
+              "label": "Marquee-bilde 2"
             },
-            "header_layout": {
-              "content": "Layout"
+            "image-marqee-3": {
+              "label": "Marquee-bilde 3"
             },
-            "header_text": {
-              "content": "Tekst"
+            "image-marqee-4": {
+              "label": "Marquee-bilde 4"
             },
-            "header_colors": {
-              "content": "Farger"
+            "image-marqee-5": {
+              "label": "Marquee-bilde 5"
+            },
+            "image-marqee-6": {
+              "label": "Marquee-bilde 6"
+            },
+            "heading-marqee": {
+              "label": "Overskrift"
+            },
+            "subheading-marqee": {
+              "label": "Underoverskrift"
+            },
+            "button_label-marqee": {
+              "label": "Knappeetikett"
+            },
+            "link-marqee": {
+              "label": "Knappelink"
+            },
+            "content-marqee": {
+              "label": "Innhold"
+            },
+            "color_bg": {
+              "label": "Bakgrunnsfarge"
             }
           }
         }

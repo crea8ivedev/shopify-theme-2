@@ -345,7 +345,8 @@
       "next_announcement": "次回のお知らせ",
       "carousel": "カルーセル",
       "announcement": "お知らせ",
-      "announcement_bar": "お知らせバー"
+      "announcement_bar": "お知らせバー",
+      "close_icon": "お知らせを閉じる"
     },
     "quick_order_list": {
       "product_total": "商品の小計",

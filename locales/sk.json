@@ -365,7 +365,8 @@
       "next_announcement": "Nasledujúce oznámenie",
       "carousel": "Karusel",
       "announcement": "Oznámenie",
-      "announcement_bar": "Panel s oznámeniami"
+      "announcement_bar": "Panel s oznámeniami",
+      "close_icon": "Zatvoriť oznámenie"
     },
     "quick_order_list": {
       "product_total": "Medzisúčet produktov",

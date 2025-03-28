@@ -2771,13 +2771,13 @@
             "label": "Pełna szerokość"
           },
           "options__2": {
-            "label": "Strona"
+            "label": "Siatka"
           }
         },
         "slide_height": {
-          "label": "Wysokość",
+          "label": "Wysokość slajdu",
           "options__1": {
-            "label": "Dostosuj do pierwszego obrazu"
+            "label": "Dopasuj do pierwszego obrazu"
           },
           "options__2": {
             "label": "Mały"
@@ -2790,7 +2790,7 @@
           }
         },
         "slider_visual": {
-          "label": "Paginacja",
+          "label": "Styl paginacji",
           "options__1": {
             "label": "Licznik"
           },
@@ -2798,26 +2798,29 @@
             "label": "Kropki"
           },
           "options__3": {
-            "label": "Liczby"
+            "label": "Numery"
           }
         },
         "auto_rotate": {
-          "label": "Automatyczna zmiana slajdów"
+          "label": "Automatyczne obracanie slajdów"
         },
         "change_slides_speed": {
-          "label": "Zmieniaj slajdy co"
+          "label": "Zmień slajdy co"
         },
         "show_text_below": {
-          "label": "Układaj tekst pod obrazami na sobie"
+          "label": "Tekst pod obrazem"
         },
         "mobile": {
-          "content": "Układ na urządzeniu mobilnym"
+          "content": "Układ mobilny"
+        },
+        "show_navigation_buttons": {
+          "label": "Pokaż przyciski nawigacyjne"
         },
         "accessibility": {
           "content": "Dostępność",
           "label": "Opis pokazu slajdów",
-          "info": "Opisz pokaz slajdów dla użytkowników korzystających z czytników ekranu",
-          "default": "Pokaz slajdów na temat naszej marki"
+          "info": "Opisz pokaz slajdów dla klientów korzystających z czytników ekranu.",
+          "default": "Pokaz slajdów o marce"
         }
       },
       "blocks": {
@@ -2829,94 +2832,130 @@
             },
             "heading": {
               "label": "Nagłówek",
-              "default": "Slajd obrazu"
+              "default": "Pokaz slajdów z obrazami"
+            },
+            "mobile_image": {
+              "label": "Obraz mobilny"
             },
             "subheading": {
-              "label": "Nagłówek podrzędny",
-              "default": "Opowiedz historię swojej marki za pomocą obrazów"
+              "label": "Podtytuł"
             },
             "button_label": {
-              "label": "Etykieta",
-              "info": "Pozostaw puste, aby ukryć",
-              "default": "Przycisk z etykietą"
+              "label": "Etykieta przycisku",
+              "info": "Pozostaw puste, aby ukryć przycisk."
             },
             "link": {
-              "label": "Link"
+              "label": "Link przycisku"
             },
             "secondary_style": {
-              "label": "Styl konspektu"
+              "label": "Użyj stylu przycisku z obramowaniem"
             },
             "box_align": {
-              "label": "Położenie zawartości",
+              "label": "Pozycja treści na komputerze",
+              "info": "Pozycja jest automatycznie optymalizowana dla urządzeń mobilnych.",
               "options__1": {
-                "label": "Do góry, do lewej"
+                "label": "Góra lewo"
               },
               "options__2": {
-                "label": "Do góry, wyśrodkowany"
+                "label": "Góra środek"
               },
               "options__3": {
-                "label": "Do góry, do prawej"
+                "label": "Góra prawo"
               },
               "options__4": {
-                "label": "Do środka, do lewej"
+                "label": "Środek lewo"
               },
               "options__5": {
-                "label": "Do środka, wyśrodkowany"
+                "label": "Środek środek"
               },
               "options__6": {
-                "label": "Do środka, do prawej"
+                "label": "Środek prawo"
               },
               "options__7": {
-                "label": "Lewy dolny"
+                "label": "Dół lewo"
               },
               "options__8": {
-                "label": "Na dole, pośrodku"
+                "label": "Dół środek"
               },
               "options__9": {
-                "label": "Prawy dolny"
+                "label": "Dół prawo"
               }
             },
-            "show_text_box": {
-              "label": "Kontener"
-            },
             "text_alignment": {
-              "label": "Wyrównanie zawartości",
+              "label": "Wyrównanie treści na komputerze",
               "option_1": {
-                "label": "Lewa strona"
+                "label": "Lewo"
               },
               "option_2": {
                 "label": "Środek"
               },
               "option_3": {
-                "label": "Prawa strona"
+                "label": "Prawo"
               }
             },
             "image_overlay_opacity": {
-              "label": "Nieprzezroczystość nakładki"
+              "label": "Nieprzezroczystość nakładki obrazu"
             },
             "text_alignment_mobile": {
-              "label": "Wyrównanie treści na urządzeniu mobilnym",
+              "label": "Wyrównanie treści na urządzeniach mobilnych",
               "options__1": {
-                "label": "Lewa strona"
+                "label": "Lewo"
               },
               "options__2": {
                 "label": "Środek"
               },
               "options__3": {
-                "label": "Prawa strona"
+                "label": "Prawo"
               }
+            }
+          }
+        },
+        "video": {
+          "name": "Wideo",
+          "settings": {
+            "poster_image": {
+              "label": "Obraz okładki"
+            }
+          }
+        },
+        "marqee": {
+          "name": "Marquee",
+          "settings": {
+            "image-marqee-1": {
+              "label": "Obraz Marquee 1"
             },
-            "header_button": {
-              "content": "Przycisk"
+            "image-marqee-2": {
+              "label": "Obraz Marquee 2"
             },
-            "header_layout": {
-              "content": "Układ"
+            "image-marqee-3": {
+              "label": "Obraz Marquee 3"
             },
-            "header_text": {
-              "content": "Tekst"
+            "image-marqee-4": {
+              "label": "Obraz Marquee 4"
             },
-            "header_colors": {
-              "content": "Kolory"
+            "image-marqee-5": {
+              "label": "Obraz Marquee 5"
+            },
+            "image-marqee-6": {
+              "label": "Obraz Marquee 6"
+            },
+            "heading-marqee": {
+              "label": "Nagłówek"
+            },
+            "subheading-marqee": {
+              "label": "Podtytuł"
+            },
+            "button_label-marqee": {
+              "label": "Etykieta przycisku"
+            },
+            "link-marqee": {
+              "label": "Link przycisku"
+            },
+            "content-marqee": {
+              "label": "Treść"
+            },
+            "color_bg": {
+              "label": "Kolor tła"
             }
           }
         }

@@ -345,7 +345,8 @@
       "next_announcement": "다음 공지",
       "carousel": "캐러셀",
       "announcement": "공지",
-      "announcement_bar": "공지 표시줄"
+      "announcement_bar": "공지 표시줄",
+      "close_icon": "공지 닫기"
     },
     "quick_order_list": {
       "product_total": "제품 소계",

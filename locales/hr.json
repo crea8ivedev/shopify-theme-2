@@ -355,7 +355,8 @@
       "next_announcement": "Sljedeća objava",
       "carousel": "Vrtuljak",
       "announcement": "Objava",
-      "announcement_bar": "Traka za objave"
+      "announcement_bar": "Traka za objave",
+      "close_icon": "Zatvori objava"
     },
     "quick_order_list": {
       "product_total": "Podzbroj proizvoda",

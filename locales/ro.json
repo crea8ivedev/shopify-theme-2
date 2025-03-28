@@ -355,7 +355,8 @@
       "next_announcement": "Anunțul următor",
       "carousel": "Carusel",
       "announcement": "Anunț",
-      "announcement_bar": "Bară cu anunțuri"
+      "announcement_bar": "Bară cu anunțuri",
+      "close_icon": "Închide anunț"
     },
     "quick_order_list": {
       "product_total": "Subtotal produs",

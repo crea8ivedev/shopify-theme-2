@@ -2763,7 +2763,7 @@
       }
     },
     "slideshow": {
-      "name": "Slideshow",
+      "name": "Diashow",
       "settings": {
         "layout": {
           "label": "Layout",
@@ -2771,11 +2771,11 @@
             "label": "Volle Breite"
           },
           "options__2": {
-            "label": "Seite"
+            "label": "Raster"
           }
         },
         "slide_height": {
-          "label": "Höhe",
+          "label": "Folienhöhe",
           "options__1": {
             "label": "An erstes Bild anpassen"
           },
@@ -2790,7 +2790,7 @@
           }
         },
         "slider_visual": {
-          "label": "Seitennummerierung",
+          "label": "Seitennummerierungsstil",
           "options__1": {
             "label": "Zähler"
           },
@@ -2798,26 +2798,29 @@
             "label": "Punkte"
           },
           "options__3": {
-            "label": "Zahlen"
+            "label": "Nummern"
           }
         },
         "auto_rotate": {
-          "label": "Autorotieren der Slides"
+          "label": "Folien automatisch drehen"
         },
         "change_slides_speed": {
-          "label": "Anzeige der nächsten Folie alle"
+          "label": "Folie wechseln alle"
         },
         "show_text_below": {
-          "label": "Text unter Bild stapeln"
+          "label": "Text unter dem Bild"
         },
         "mobile": {
           "content": "Mobiles Layout"
         },
+        "show_navigation_buttons": {
+          "label": "Navigationsknöpfe anzeigen"
+        },
         "accessibility": {
           "content": "Barrierefreiheit",
-          "label": "Slideshow-Beschreibung",
-          "info": "Beschreibe die Slideshow für Nutzer von Bildschirmlesegeräten",
-          "default": "Slideshow zu deiner Marke"
+          "label": "Diashow-Beschreibung",
+          "info": "Beschreiben Sie die Diashow für Kunden, die Bildschirmleser verwenden.",
+          "default": "Diashow über die Marke"
         }
       },
       "blocks": {
@@ -2828,31 +2831,33 @@
               "label": "Bild"
             },
             "heading": {
-              "label": "Titel",
-              "default": "Slideshow"
+              "label": "Überschrift",
+              "default": "Bild-Diashow"
+            },
+            "mobile_image": {
+              "label": "Mobiles Bild"
             },
             "subheading": {
-              "label": "Unter-Überschrift",
-              "default": "Erzähle deine Geschichte mit Fotos"
+              "label": "Unterüberschrift"
             },
             "button_label": {
-              "label": "Etikett",
-              "info": "Zum Ausblenden leer lassen",
-              "default": "Schaltflächenbeschriftung"
+              "label": "Schaltflächenbeschriftung",
+              "info": "Lassen Sie das Feld leer, um die Schaltfläche auszublenden."
             },
             "link": {
-              "label": "Link"
+              "label": "Schaltflächenlink"
             },
             "secondary_style": {
-              "label": "Umriss-Stil"
+              "label": "Umrandeten Schaltflächenstil verwenden"
             },
             "box_align": {
-              "label": "Inhaltsposition",
+              "label": "Desktop-Position des Inhalts",
+              "info": "Die Position wird für Mobilgeräte automatisch optimiert.",
               "options__1": {
                 "label": "Oben links"
               },
               "options__2": {
-                "label": "Oben zentriert"
+                "label": "Oben Mitte"
               },
               "options__3": {
                 "label": "Oben rechts"
@@ -2861,7 +2866,7 @@
                 "label": "Mitte links"
               },
               "options__5": {
-                "label": "Mitte mittig"
+                "label": "Mitte Mitte"
               },
               "options__6": {
                 "label": "Mitte rechts"
@@ -2870,29 +2875,26 @@
                 "label": "Unten links"
               },
               "options__8": {
-                "label": "Unten mittig"
+                "label": "Unten Mitte"
               },
               "options__9": {
                 "label": "Unten rechts"
               }
             },
-            "show_text_box": {
-              "label": "Container"
-            },
             "text_alignment": {
-              "label": "Inhaltsausrichtung",
+              "label": "Desktop-Inhaltsausrichtung",
               "option_1": {
                 "label": "Links"
               },
               "option_2": {
-                "label": "Zentriert"
+                "label": "Mitte"
               },
               "option_3": {
                 "label": "Rechts"
               }
             },
             "image_overlay_opacity": {
-              "label": "Überlagerungsdeckkraft"
+              "label": "Bildüberlagerungs-Deckkraft"
             },
             "text_alignment_mobile": {
               "label": "Mobile Inhaltsausrichtung",
@@ -2900,29 +2902,66 @@
                 "label": "Links"
               },
               "options__2": {
-                "label": "Zentriert"
+                "label": "Mitte"
               },
               "options__3": {
                 "label": "Rechts"
               }
+            }
+          }
+        },
+        "video": {
+          "name": "Video",
+          "settings": {
+            "poster_image": {
+              "label": "Vorschaubild"
+            }
+          }
+        },
+        "marqee": {
+          "name": "Marquee",
+          "settings": {
+            "image-marqee-1": {
+              "label": "Marquee Bild 1"
             },
-            "header_button": {
-              "content": "Schaltfläche"
+            "image-marqee-2": {
+              "label": "Marquee Bild 2"
             },
-            "header_layout": {
-              "content": "Layout"
+            "image-marqee-3": {
+              "label": "Marquee Bild 3"
             },
-            "header_text": {
-              "content": "Text"
+            "image-marqee-4": {
+              "label": "Marquee Bild 4"
             },
-            "header_colors": {
-              "content": "Farben"
+            "image-marqee-5": {
+              "label": "Marquee Bild 5"
+            },
+            "image-marqee-6": {
+              "label": "Marquee Bild 6"
+            },
+            "heading-marqee": {
+              "label": "Überschrift"
+            },
+            "subheading-marqee": {
+              "label": "Unterüberschrift"
+            },
+            "button_label-marqee": {
+              "label": "Schaltflächenbeschriftung"
+            },
+            "link-marqee": {
+              "label": "Schaltflächenlink"
+            },
+            "content-marqee": {
+              "label": "Inhalt"
+            },
+            "color_bg": {
+              "label": "Hintergrundfarbe"
             }
           }
         }
       },
       "presets": {
-        "name": "Slideshow"
+        "name": "Diashow"
       }
     },
     "collapsible_content": {

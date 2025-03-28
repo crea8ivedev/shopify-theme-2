@@ -2771,26 +2771,26 @@
             "label": "Fuld bredde"
           },
           "options__2": {
-            "label": "Side"
+            "label": "Gitter"
           }
         },
         "slide_height": {
-          "label": "Højde",
+          "label": "Dias højde",
           "options__1": {
-            "label": "Tilpas til første side"
+            "label": "Tilpas til første billede"
           },
           "options__2": {
             "label": "Lille"
           },
           "options__3": {
-            "label": "Medium"
+            "label": "Mellem"
           },
           "options__4": {
             "label": "Stor"
           }
         },
         "slider_visual": {
-          "label": "Sideinddeling",
+          "label": "Pagineringstil",
           "options__1": {
             "label": "Tæller"
           },
@@ -2802,121 +2802,160 @@
           }
         },
         "auto_rotate": {
-          "label": "Roter slides automatisk"
+          "label": "Automatisk rotering af dias"
         },
         "change_slides_speed": {
-          "label": "Skift slide hver"
-        },
-        "mobile": {
-          "content": "Mobillayout"
+          "label": "Skift dias hver"
         },
         "show_text_below": {
-          "label": "Stabl tekst under billede"
+          "label": "Tekst under billede"
+        },
+        "mobile": {
+          "content": "Mobil layout"
+        },
+        "show_navigation_buttons": {
+          "label": "Vis navigationsknapper"
         },
         "accessibility": {
           "content": "Tilgængelighed",
-          "label": "Beskrivelse af diasshow",
-          "info": "Beskriv diasshowet for brugere med skærmlæser",
-          "default": "Diasshow om vores brand"
+          "label": "Diasshow beskrivelse",
+          "info": "Beskriv diasshowet for kunder, der bruger skærmlæsere.",
+          "default": "Diasshow om brandet"
         }
       },
       "blocks": {
         "slide": {
-          "name": "Slide",
+          "name": "Dias",
           "settings": {
             "image": {
               "label": "Billede"
             },
             "heading": {
               "label": "Overskrift",
-              "default": "Billeddias"
+              "default": "Billeddiasshow"
+            },
+            "mobile_image": {
+              "label": "Mobilbillede"
             },
             "subheading": {
-              "label": "Underoverskrift",
-              "default": "Fortæl dit brands historie gennem billeder"
+              "label": "Underoverskrift"
             },
             "button_label": {
-              "label": "Etiket",
-              "info": "Lad stå tom for at skjule",
-              "default": "Knaptekst"
+              "label": "Knaptekst",
+              "info": "Lad teksten være tom for at skjule knappen."
             },
             "link": {
-              "label": "Link"
+              "label": "Knap link"
             },
             "secondary_style": {
-              "label": "Rammetypografi"
+              "label": "Brug omrids-knapstil"
             },
             "box_align": {
-              "label": "Indholdets placering",
+              "label": "Desktop indholdsposition",
+              "info": "Positionen optimeres automatisk til mobil.",
               "options__1": {
-                "label": "Øverst til venstre"
+                "label": "Øverst venstre"
               },
               "options__2": {
-                "label": "Øverst i midten"
+                "label": "Øverst center"
               },
               "options__3": {
-                "label": "Øverst til højre"
+                "label": "Øverst højre"
               },
               "options__4": {
-                "label": "Midt på til venstre"
+                "label": "Midt venstre"
               },
               "options__5": {
-                "label": "Midt på centreret"
+                "label": "Midt center"
               },
               "options__6": {
-                "label": "Midt på til højre"
+                "label": "Midt højre"
               },
               "options__7": {
-                "label": "Nederst til venstre"
+                "label": "Nederst venstre"
               },
               "options__8": {
-                "label": "Nederst i midten"
+                "label": "Nederst center"
               },
               "options__9": {
-                "label": "Nederst til højre"
+                "label": "Nederst højre"
               }
             },
-            "show_text_box": {
-              "label": "Beholder"
-            },
             "text_alignment": {
-              "label": "Indholdets justering",
+              "label": "Desktop indholdsjustering",
               "option_1": {
                 "label": "Venstre"
               },
               "option_2": {
-                "label": "Centreret"
+                "label": "Center"
               },
               "option_3": {
                 "label": "Højre"
               }
             },
             "image_overlay_opacity": {
-              "label": "Overlejringens uigennemsigtighed"
+              "label": "Billede overlay opacitet"
             },
             "text_alignment_mobile": {
-              "label": "Justering af indhold på mobil",
+              "label": "Mobil indholdsjustering",
               "options__1": {
                 "label": "Venstre"
               },
               "options__2": {
-                "label": "Centreret"
+                "label": "Center"
               },
               "options__3": {
                 "label": "Højre"
               }
+            }
+          }
+        },
+        "video": {
+          "name": "Video",
+          "settings": {
+            "poster_image": {
+              "label": "Plakatbillede"
+            }
+          }
+        },
+        "marqee": {
+          "name": "Marqee",
+          "settings": {
+            "image-marqee-1": {
+              "label": "Marqee billede 1"
             },
-            "header_button": {
-              "content": "Knap"
+            "image-marqee-2": {
+              "label": "Marqee billede 2"
             },
-            "header_layout": {
-              "content": "Layout"
+            "image-marqee-3": {
+              "label": "Marqee billede 3"
             },
-            "header_text": {
-              "content": "Tekst"
+            "image-marqee-4": {
+              "label": "Marqee billede 4"
             },
-            "header_colors": {
-              "content": "Farver"
+            "image-marqee-5": {
+              "label": "Marqee billede 5"
+            },
+            "image-marqee-6": {
+              "label": "Marqee billede 6"
+            },
+            "heading-marqee": {
+              "label": "Overskrift"
+            },
+            "subheading-marqee": {
+              "label": "Underoverskrift"
+            },
+            "button_label-marqee": {
+              "label": "Knaptekst"
+            },
+            "link-marqee": {
+              "label": "Knap link"
+            },
+            "content-marqee": {
+              "label": "Indhold"
+            },
+            "color_bg": {
+              "label": "Baggrundsfarve"
             }
           }
         }

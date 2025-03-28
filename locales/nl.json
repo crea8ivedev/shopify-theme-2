@@ -345,7 +345,8 @@
       "next_announcement": "Volgende aankondiging",
       "carousel": "Carrousel",
       "announcement": "Aankondiging",
-      "announcement_bar": "Aankondigingsbalk"
+      "announcement_bar": "Aankondigingsbalk",
+      "close_icon": "Aankondiging sluiten"
     },
     "quick_order_list": {
       "product_total": "Productsubtotaal",

@@ -2763,21 +2763,21 @@
       }
     },
     "slideshow": {
-      "name": "Apresentação de diapositivos",
+      "name": "Apresentação de Slides",
       "settings": {
         "layout": {
-          "label": "Esquema",
+          "label": "Layout",
           "options__1": {
             "label": "Largura total"
           },
           "options__2": {
-            "label": "Página"
+            "label": "Grade"
           }
         },
         "slide_height": {
-          "label": "Altura",
+          "label": "Altura do slide",
           "options__1": {
-            "label": "Adaptar à primeira imagem"
+            "label": "Ajustar à primeira imagem"
           },
           "options__2": {
             "label": "Pequeno"
@@ -2790,7 +2790,7 @@
           }
         },
         "slider_visual": {
-          "label": "Paginação",
+          "label": "Estilo de paginação",
           "options__1": {
             "label": "Contador"
           },
@@ -2802,127 +2802,166 @@
           }
         },
         "auto_rotate": {
-          "label": "Rodar diapositivos automaticamente"
+          "label": "Girar slides automaticamente"
         },
         "change_slides_speed": {
-          "label": "Mudar diapositivos a cada"
-        },
-        "mobile": {
-          "content": "Esquema móvel"
+          "label": "Alterar slides a cada"
         },
         "show_text_below": {
-          "label": "Empilhar texto abaixo da imagem"
+          "label": "Texto abaixo da imagem"
+        },
+        "mobile": {
+          "content": "Layout móvel"
+        },
+        "show_navigation_buttons": {
+          "label": "Mostrar botões de navegação"
         },
         "accessibility": {
           "content": "Acessibilidade",
-          "label": "Descrição da apresentação de diapositivos",
-          "info": "Descreve a apresentação de diapositivos para quem usa leitor de ecrã",
-          "default": "Apresentação de diapositivos sobre a nossa marca"
+          "label": "Descrição da apresentação de slides",
+          "info": "Descreva a apresentação de slides para clientes que usam leitores de tela.",
+          "default": "Apresentação de slides sobre a marca"
         }
       },
       "blocks": {
         "slide": {
-          "name": "Diapositivo",
+          "name": "Slide",
           "settings": {
             "image": {
               "label": "Imagem"
             },
             "heading": {
-              "label": "Cabeçalho",
-              "default": "Diapositivo de imagem"
+              "label": "Título",
+              "default": "Apresentação de slides com imagens"
+            },
+            "mobile_image": {
+              "label": "Imagem para celular"
             },
             "subheading": {
-              "label": "Subtítulo",
-              "default": "Conte a história da sua marca através de imagens"
+              "label": "Subtítulo"
             },
             "button_label": {
-              "label": "Etiqueta",
-              "info": "Deixe em branco para ocultar",
-              "default": "Etiqueta do botão"
+              "label": "Rótulo do botão",
+              "info": "Deixe o rótulo em branco para ocultar o botão."
             },
             "link": {
-              "label": "Ligação"
+              "label": "Link do botão"
             },
             "secondary_style": {
-              "label": "Estilo do contorno"
+              "label": "Usar estilo de botão contornado"
             },
             "box_align": {
-              "label": "Posição do conteúdo",
+              "label": "Posição do conteúdo na área de trabalho",
+              "info": "A posição é automaticamente otimizada para dispositivos móveis.",
               "options__1": {
-                "label": "Canto superior esquerdo"
+                "label": "Topo esquerdo"
               },
               "options__2": {
-                "label": "Superior centro"
+                "label": "Topo centro"
               },
               "options__3": {
-                "label": "Canto superior direito"
+                "label": "Topo direito"
               },
               "options__4": {
-                "label": "Intermédio à esquerda"
+                "label": "Meio esquerdo"
               },
               "options__5": {
-                "label": "Intermédio ao centro"
+                "label": "Meio centro"
               },
               "options__6": {
-                "label": "Intermédio à direita"
+                "label": "Meio direito"
               },
               "options__7": {
-                "label": "Canto inferior esquerdo"
+                "label": "Inferior esquerdo"
               },
               "options__8": {
                 "label": "Inferior centro"
               },
               "options__9": {
-                "label": "Canto inferior direito"
+                "label": "Inferior direito"
               }
             },
-            "show_text_box": {
-              "label": "Recipiente"
-            },
             "text_alignment": {
-              "label": "Alinhamento de conteúdo",
+              "label": "Alinhamento do conteúdo na área de trabalho",
               "option_1": {
                 "label": "Esquerda"
               },
               "option_2": {
-                "label": "Ao centro"
+                "label": "Centro"
               },
               "option_3": {
                 "label": "Direita"
               }
             },
             "image_overlay_opacity": {
-              "label": "Opacidade de sobreposição"
+              "label": "Opacidade da sobreposição da imagem"
             },
             "text_alignment_mobile": {
-              "label": "Alinhamento do conteúdo em dispositivos móveis",
+              "label": "Alinhamento do conteúdo no celular",
               "options__1": {
                 "label": "Esquerda"
               },
               "options__2": {
-                "label": "Ao centro"
+                "label": "Centro"
               },
               "options__3": {
                 "label": "Direita"
               }
+            }
+          }
+        },
+        "video": {
+          "name": "Vídeo",
+          "settings": {
+            "poster_image": {
+              "label": "Imagem de capa"
+            }
+          }
+        },
+        "marqee": {
+          "name": "Marquee",
+          "settings": {
+            "image-marqee-1": {
+              "label": "Imagem Marquee 1"
             },
-            "header_button": {
-              "content": "Botão"
+            "image-marqee-2": {
+              "label": "Imagem Marquee 2"
             },
-            "header_layout": {
-              "content": "Esquema"
+            "image-marqee-3": {
+              "label": "Imagem Marquee 3"
             },
-            "header_text": {
-              "content": "Texto"
+            "image-marqee-4": {
+              "label": "Imagem Marquee 4"
             },
-            "header_colors": {
-              "content": "Cores"
+            "image-marqee-5": {
+              "label": "Imagem Marquee 5"
+            },
+            "image-marqee-6": {
+              "label": "Imagem Marquee 6"
+            },
+            "heading-marqee": {
+              "label": "Título"
+            },
+            "subheading-marqee": {
+              "label": "Subtítulo"
+            },
+            "button_label-marqee": {
+              "label": "Rótulo do botão"
+            },
+            "link-marqee": {
+              "label": "Link do botão"
+            },
+            "content-marqee": {
+              "label": "Conteúdo"
+            },
+            "color_bg": {
+              "label": "Cor de fundo"
             }
           }
         }
       },
       "presets": {
-        "name": "Apresentação de diapositivos"
+        "name": "Apresentação de Slides"
       }
     },
     "collapsible_content": {

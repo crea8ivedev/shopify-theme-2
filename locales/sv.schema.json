@@ -2771,53 +2771,56 @@
             "label": "Full bredd"
           },
           "options__2": {
-            "label": "Sida"
+            "label": "Rutnät"
           }
         },
         "slide_height": {
-          "label": "Höjd",
+          "label": "Bildhöjd",
           "options__1": {
-            "label": "Anpassa efter första bilden"
+            "label": "Anpassa till första bilden"
           },
           "options__2": {
             "label": "Liten"
           },
           "options__3": {
-            "label": "Medel"
+            "label": "Medium"
           },
           "options__4": {
             "label": "Stor"
           }
         },
         "slider_visual": {
-          "label": "Paginering",
+          "label": "Pagineringsstil",
           "options__1": {
             "label": "Räknare"
           },
           "options__2": {
-            "label": "Prickar"
+            "label": "Punkter"
           },
           "options__3": {
-            "label": "Siffror"
+            "label": "Nummer"
           }
         },
         "auto_rotate": {
-          "label": "Rotera bilder automatiskt"
+          "label": "Automatisk rotation av bilder"
         },
         "change_slides_speed": {
-          "label": "Byt bilder varje"
+          "label": "Byt bild var"
+        },
+        "show_text_below": {
+          "label": "Text under bild"
         },
         "mobile": {
           "content": "Mobil layout"
         },
-        "show_text_below": {
-          "label": "Stapla text under bild"
+        "show_navigation_buttons": {
+          "label": "Visa navigeringsknappar"
         },
         "accessibility": {
           "content": "Tillgänglighet",
-          "label": "Beskrivning bildspel",
-          "info": "Beskriv bildspelet för användere av skärmläsare",
-          "default": "Bildspel om vårt varumärke"
+          "label": "Bildspelsbeskrivning",
+          "info": "Beskriv bildspelet för kunder som använder skärmläsare.",
+          "default": "Bildspel om varumärket"
         }
       },
       "blocks": {
@@ -2829,94 +2832,130 @@
             },
             "heading": {
               "label": "Rubrik",
-              "default": "Bild i bildspel"
+              "default": "Bildspel"
+            },
+            "mobile_image": {
+              "label": "Mobilbild"
             },
             "subheading": {
-              "label": "Underrubrik",
-              "default": "Berätta ditt varumärkes historia genom video och bilder"
+              "label": "Underrubrik"
             },
             "button_label": {
-              "label": "Etikett",
-              "info": "Lämna tomt för att dölja",
-              "default": "Knappetikett"
+              "label": "Knapptext",
+              "info": "Lämna etiketten tom för att dölja knappen."
             },
             "link": {
-              "label": "Länk"
+              "label": "Knappens länk"
             },
             "secondary_style": {
-              "label": "Konturstil"
+              "label": "Använd konturknappsstil"
             },
             "box_align": {
-              "label": "Innehållets position",
+              "label": "Innehållsposition på dator",
+              "info": "Positionen optimeras automatiskt för mobil.",
               "options__1": {
-                "label": "Överst till vänster"
+                "label": "Övre vänster"
               },
               "options__2": {
-                "label": "Längst upp i mitten"
+                "label": "Övre mitten"
               },
               "options__3": {
-                "label": "Överst till höger"
+                "label": "Övre höger"
               },
               "options__4": {
-                "label": "Mitten till vänster"
+                "label": "Mitten vänster"
               },
               "options__5": {
-                "label": "Mitten centrerat"
+                "label": "Mitten center"
               },
               "options__6": {
-                "label": "Mitten till höger"
+                "label": "Mitten höger"
               },
               "options__7": {
-                "label": "Nere till vänster"
+                "label": "Nedre vänster"
               },
               "options__8": {
-                "label": "Längst ner i mitten"
+                "label": "Nedre mitten"
               },
               "options__9": {
-                "label": "Nere till höger"
+                "label": "Nedre höger"
               }
             },
-            "show_text_box": {
-              "label": "Behållare"
-            },
             "text_alignment": {
-              "label": "Innehållsjustering",
+              "label": "Textjustering på dator",
               "option_1": {
                 "label": "Vänster"
               },
               "option_2": {
-                "label": "Centrera"
+                "label": "Mitten"
               },
               "option_3": {
                 "label": "Höger"
               }
             },
             "image_overlay_opacity": {
-              "label": "Överlagring av opacitet"
+              "label": "Bildöverläggsopacitet"
             },
             "text_alignment_mobile": {
-              "label": "Linjering av innehåll på mobil",
+              "label": "Textjustering på mobil",
               "options__1": {
                 "label": "Vänster"
               },
               "options__2": {
-                "label": "Centrera"
+                "label": "Mitten"
               },
               "options__3": {
                 "label": "Höger"
               }
+            }
+          }
+        },
+        "video": {
+          "name": "Video",
+          "settings": {
+            "poster_image": {
+              "label": "Affischbild"
+            }
+          }
+        },
+        "marqee": {
+          "name": "Marquee",
+          "settings": {
+            "image-marqee-1": {
+              "label": "Marquee-bild 1"
             },
-            "header_button": {
-              "content": "Knapp"
+            "image-marqee-2": {
+              "label": "Marquee-bild 2"
             },
-            "header_layout": {
-              "content": "Layout"
+            "image-marqee-3": {
+              "label": "Marquee-bild 3"
             },
-            "header_text": {
-              "content": "Text"
+            "image-marqee-4": {
+              "label": "Marquee-bild 4"
             },
-            "header_colors": {
-              "content": "Färger"
+            "image-marqee-5": {
+              "label": "Marquee-bild 5"
+            },
+            "image-marqee-6": {
+              "label": "Marquee-bild 6"
+            },
+            "heading-marqee": {
+              "label": "Rubrik"
+            },
+            "subheading-marqee": {
+              "label": "Underrubrik"
+            },
+            "button_label-marqee": {
+              "label": "Knapptext"
+            },
+            "link-marqee": {
+              "label": "Knappens länk"
+            },
+            "content-marqee": {
+              "label": "Innehåll"
+            },
+            "color_bg": {
+              "label": "Bakgrundsfärg"
             }
           }
         }

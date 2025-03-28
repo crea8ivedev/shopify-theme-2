@@ -2771,26 +2771,26 @@
             "label": "เต็มความกว้าง"
           },
           "options__2": {
-            "label": "หน้า"
+            "label": "ตาราง"
           }
         },
         "slide_height": {
-          "label": "ความสูง",
+          "label": "ความสูงของสไลด์",
           "options__1": {
-            "label": "ปรับให้เข้ากับรูปภาพแรก"
+            "label": "ปรับตามภาพแรก"
           },
           "options__2": {
             "label": "เล็ก"
           },
           "options__3": {
-            "label": "ปานกลาง"
+            "label": "กลาง"
           },
           "options__4": {
             "label": "ใหญ่"
           }
         },
         "slider_visual": {
-          "label": "การแบ่งหน้า",
+          "label": "สไตล์การแบ่งหน้า",
           "options__1": {
             "label": "ตัวนับ"
           },
@@ -2802,22 +2802,25 @@
           }
         },
         "auto_rotate": {
-          "label": "หมุนสไลด์อัตโนมัติ"
+          "label": "เลื่อนสไลด์อัตโนมัติ"
         },
         "change_slides_speed": {
-          "label": "เปลี่ยนสไลด์ทุก"
-        },
-        "mobile": {
-          "content": "เลย์เอาต์สำหรับมือถือ"
+          "label": "เปลี่ยนสไลด์ทุก ๆ"
         },
         "show_text_below": {
-          "label": "ซ้อนข้อความไว้ใต้รูปภาพ"
+          "label": "ข้อความใต้ภาพ"
+        },
+        "mobile": {
+          "content": "เลย์เอาต์มือถือ"
+        },
+        "show_navigation_buttons": {
+          "label": "แสดงปุ่มนำทาง"
         },
         "accessibility": {
           "content": "การเข้าถึง",
           "label": "คำอธิบายสไลด์โชว์",
-          "info": "อธิบายสไลด์โชว์สำหรับผู้ที่ใช้เครื่องอ่านหน้าจอ",
-          "default": "สไลด์โชว์เกี่ยวกับแบรนด์ของเรา"
+          "info": "อธิบายสไลด์โชว์สำหรับลูกค้าที่ใช้โปรแกรมอ่านหน้าจอ",
+          "default": "สไลด์โชว์เกี่ยวกับแบรนด์"
         }
       },
       "blocks": {
@@ -2828,71 +2831,70 @@
               "label": "รูปภาพ"
             },
             "heading": {
-              "label": "หัวเรื่อง",
-              "default": "สไลด์รูปภาพ"
+              "label": "หัวข้อ",
+              "default": "สไลด์โชว์รูปภาพ"
+            },
+            "mobile_image": {
+              "label": "รูปภาพสำหรับมือถือ"
             },
             "subheading": {
-              "label": "หัวเรื่องย่อย",
-              "default": "บอกเล่าเรื่องราวของแบรนด์คุณผ่านรูปภาพ"
+              "label": "หัวข้อย่อย"
             },
             "button_label": {
-              "label": "ใบจ่าหน้า",
-              "info": "ปล่อยว่างไว้เพื่อซ่อน",
-              "default": "ป้ายกำกับปุ่ม"
+              "label": "ข้อความบนปุ่ม",
+              "info": "เว้นว่างไว้เพื่อซ่อนปุ่ม"
             },
             "link": {
-              "label": "ลิงก์"
+              "label": "ลิงก์ปุ่ม"
             },
             "secondary_style": {
-              "label": "รูปแบบเค้าโครง"
+              "label": "ใช้สไตล์ปุ่มเส้นขอบ"
             },
             "box_align": {
-              "label": "ตำแหน่งเนื้อหา",
+              "label": "ตำแหน่งเนื้อหาบนเดสก์ท็อป",
+              "info": "ตำแหน่งจะถูกปรับโดยอัตโนมัติสำหรับมือถือ",
               "options__1": {
-                "label": "ซ้ายบน"
+                "label": "บนซ้าย"
               },
               "options__2": {
-                "label": "กึ่งกลางด้านบน"
+                "label": "บนกลาง"
               },
               "options__3": {
-                "label": "ขวาบน"
+                "label": "บนขวา"
               },
               "options__4": {
-                "label": "ตรงกลางด้านซ้าย"
+                "label": "กลางซ้าย"
               },
               "options__5": {
-                "label": "กึ่งกลาง"
+                "label": "กลางกลาง"
               },
               "options__6": {
-                "label": "ตรงกลางด้านขวา"
+                "label": "กลางขวา"
               },
               "options__7": {
-                "label": "ซ้ายล่าง"
+                "label": "ล่างซ้าย"
               },
               "options__8": {
-                "label": "กึ่งกลางด้านล่าง"
+                "label": "ล่างกลาง"
               },
               "options__9": {
-                "label": "ขวาล่าง"
+                "label": "ล่างขวา"
               }
             },
-            "show_text_box": {
-              "label": "คอนเทนเนอร์"
-            },
             "text_alignment": {
-              "label": "การจัดวางเนื้อหา",
+              "label": "การจัดวางเนื้อหาบนเดสก์ท็อป",
               "option_1": {
                 "label": "ซ้าย"
               },
               "option_2": {
-                "label": "กึ่งกลาง"
+                "label": "กลาง"
               },
               "option_3": {
                 "label": "ขวา"
               }
             },
             "image_overlay_opacity": {
-              "label": "ความทึบของการวางซ้อน"
+              "label": "ความทึบของภาพซ้อนทับ"
             },
             "text_alignment_mobile": {
               "label": "การจัดวางเนื้อหาบนมือถือ",
@@ -2900,23 +2902,60 @@
                 "label": "ซ้าย"
               },
               "options__2": {
-                "label": "กึ่งกลาง"
+                "label": "กลาง"
               },
               "options__3": {
                 "label": "ขวา"
               }
+            }
+          }
+        },
+        "video": {
+          "name": "วิดีโอ",
+          "settings": {
+            "poster_image": {
+              "label": "ภาพปก"
+            }
+          }
+        },
+        "marqee": {
+          "name": "Marquee",
+          "settings": {
+            "image-marqee-1": {
+              "label": "ภาพ Marquee 1"
             },
-            "header_button": {
-              "content": "ปุ่ม"
+            "image-marqee-2": {
+              "label": "ภาพ Marquee 2"
             },
-            "header_layout": {
-              "content": "เลย์เอาต์"
+            "image-marqee-3": {
+              "label": "ภาพ Marquee 3"
             },
-            "header_text": {
-              "content": "ข้อความ"
+            "image-marqee-4": {
+              "label": "ภาพ Marquee 4"
             },
-            "header_colors": {
-              "content": "สี"
+            "image-marqee-5": {
+              "label": "ภาพ Marquee 5"
+            },
+            "image-marqee-6": {
+              "label": "ภาพ Marquee 6"
+            },
+            "heading-marqee": {
+              "label": "หัวข้อ"
+            },
+            "subheading-marqee": {
+              "label": "หัวข้อย่อย"
+            },
+            "button_label-marqee": {
+              "label": "ข้อความบนปุ่ม"
+            },
+            "link-marqee": {
+              "label": "ลิงก์ปุ่ม"
+            },
+            "content-marqee": {
+              "label": "เนื้อหา"
+            },
+            "color_bg": {
+              "label": "สีพื้นหลัง"
             }
           }
         }

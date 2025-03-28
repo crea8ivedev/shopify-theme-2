@@ -2763,7 +2763,7 @@
       }
     },
     "slideshow": {
-      "name": "Slayt gösterisi",
+      "name": "Slayt Gösterisi",
       "settings": {
         "layout": {
           "label": "Düzen",
@@ -2771,13 +2771,13 @@
             "label": "Tam genişlik"
           },
           "options__2": {
-            "label": "Sayfa"
+            "label": "Izgara"
           }
         },
         "slide_height": {
-          "label": "Yükseklik",
+          "label": "Slayt yüksekliği",
           "options__1": {
-            "label": "İlk görsele uyarla"
+            "label": "İlk görsele uyum sağla"
           },
           "options__2": {
             "label": "Küçük"
@@ -2790,7 +2790,7 @@
           }
         },
         "slider_visual": {
-          "label": "Sayfalara ayırma",
+          "label": "Sayfalama stili",
           "options__1": {
             "label": "Sayaç"
           },
@@ -2802,22 +2802,25 @@
           }
         },
         "auto_rotate": {
-          "label": "Slaytları otomatik olarak döndür"
+          "label": "Slaytları otomatik döndür"
         },
         "change_slides_speed": {
-          "label": "Slaytları şu zaman aralığında değiştir:"
+          "label": "Slaytları değiştirme süresi"
         },
         "show_text_below": {
-          "label": "Görselin altına metin ekle"
+          "label": "Görselin altında metin göster"
         },
         "mobile": {
           "content": "Mobil düzen"
         },
+        "show_navigation_buttons": {
+          "label": "Gezinme düğmelerini göster"
+        },
         "accessibility": {
           "content": "Erişilebilirlik",
           "label": "Slayt gösterisi açıklaması",
-          "info": "Ekran okuyucu kullanan müşteriler için slayt gösterisini açıklayın",
-          "default": "Markamız hakkında slayt gösterisi"
+          "info": "Ekran okuyucu kullanan müşteriler için slayt gösterisini açıklayın.",
+          "default": "Marka hakkında slayt gösterisi"
         }
       },
       "blocks": {
@@ -2829,25 +2832,27 @@
             },
             "heading": {
               "label": "Başlık",
-              "default": "Görsel slaytı"
+              "default": "Görsel slayt gösterisi"
+            },
+            "mobile_image": {
+              "label": "Mobil Görsel"
             },
             "subheading": {
-              "label": "Alt başlık",
-              "default": "Görsellerle marka öykünüzü anlatın"
+              "label": "Alt başlık"
             },
             "button_label": {
-              "label": "Etiket",
-              "info": "Gizlemek için boş bırakın",
-              "default": "Düğme etiketi"
+              "label": "Düğme etiketi",
+              "info": "Düğmeyi gizlemek için etiketi boş bırakın."
             },
             "link": {
-              "label": "Bağlantı"
+              "label": "Düğme bağlantısı"
             },
             "secondary_style": {
-              "label": "Dış çizgi stili"
+              "label": "Çerçeveli düğme stilini kullan"
             },
             "box_align": {
-              "label": "İçerik konumu",
+              "label": "Masaüstü içerik konumu",
+              "info": "Mobil için konum otomatik olarak optimize edilir.",
               "options__1": {
                 "label": "Üst sol"
               },
@@ -2861,7 +2866,7 @@
                 "label": "Orta sol"
               },
               "options__5": {
-                "label": "Orta kısmın ortası"
+                "label": "Orta"
               },
               "options__6": {
                 "label": "Orta sağ"
@@ -2876,11 +2881,8 @@
                 "label": "Alt sağ"
               }
             },
-            "show_text_box": {
-              "label": "Kapsayıcı"
-            },
             "text_alignment": {
-              "label": "İçerik hizalaması",
+              "label": "Masaüstü içerik hizalaması",
               "option_1": {
                 "label": "Sol"
               },
@@ -2892,7 +2894,7 @@
               }
             },
             "image_overlay_opacity": {
-              "label": "Yer paylaşımı opaklığı"
+              "label": "Görsel kaplama opaklığı"
             },
             "text_alignment_mobile": {
               "label": "Mobil içerik hizalaması",
@@ -2905,24 +2907,61 @@
               "options__3": {
                 "label": "Sağ"
               }
+            }
+          }
+        },
+        "video": {
+          "name": "Video",
+          "settings": {
+            "poster_image": {
+              "label": "Poster Görseli"
+            }
+          }
+        },
+        "marqee": {
+          "name": "Marquee",
+          "settings": {
+            "image-marqee-1": {
+              "label": "Marquee Görsel 1"
             },
-            "header_button": {
-              "content": "Düğme"
+            "image-marqee-2": {
+              "label": "Marquee Görsel 2"
             },
-            "header_layout": {
-              "content": "Düzen"
+            "image-marqee-3": {
+              "label": "Marquee Görsel 3"
             },
-            "header_text": {
-              "content": "Metin"
+            "image-marqee-4": {
+              "label": "Marquee Görsel 4"
             },
-            "header_colors": {
-              "content": "Renkler"
+            "image-marqee-5": {
+              "label": "Marquee Görsel 5"
+            },
+            "image-marqee-6": {
+              "label": "Marquee Görsel 6"
+            },
+            "heading-marqee": {
+              "label": "Başlık"
+            },
+            "subheading-marqee": {
+              "label": "Alt başlık"
+            },
+            "button_label-marqee": {
+              "label": "Düğme etiketi"
+            },
+            "link-marqee": {
+              "label": "Düğme bağlantısı"
+            },
+            "content-marqee": {
+              "label": "İçerik"
+            },
+            "color_bg": {
+              "label": "Arka Plan Rengi"
             }
           }
         }
       },
       "presets": {
-        "name": "Slayt gösterisi"
+        "name": "Slayt Gösterisi"
       }
     },
     "collapsible_content": {

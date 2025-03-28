@@ -2771,26 +2771,26 @@
             "label": "Täysi leveys"
           },
           "options__2": {
-            "label": "Sivu"
+            "label": "Ristikko"
           }
         },
         "slide_height": {
-          "label": "Korkeus",
+          "label": "Dian korkeus",
           "options__1": {
-            "label": "Mukauta ensimmäisen kuvan mukaan"
+            "label": "Sovita ensimmäiseen kuvaan"
           },
           "options__2": {
             "label": "Pieni"
           },
           "options__3": {
-            "label": "Keskisuuri"
+            "label": "Keskikokoinen"
           },
           "options__4": {
             "label": "Suuri"
           }
         },
         "slider_visual": {
-          "label": "Sivunumerointi",
+          "label": "Sivutus tyyli",
           "options__1": {
             "label": "Laskuri"
           },
@@ -2802,22 +2802,25 @@
           }
         },
         "auto_rotate": {
-          "label": "Käännä diat automaattisesti"
+          "label": "Automaattinen dian vaihto"
         },
         "change_slides_speed": {
-          "label": "Vaihda diat joka"
+          "label": "Vaihda dia joka"
         },
         "show_text_below": {
-          "label": "Pinoa teksti kuvan alle"
+          "label": "Teksti kuvan alla"
         },
         "mobile": {
           "content": "Mobiiliasettelu"
         },
+        "show_navigation_buttons": {
+          "label": "Näytä navigointipainikkeet"
+        },
         "accessibility": {
-          "content": "Käytettävyys",
+          "content": "Saavutettavuus",
           "label": "Diaesityksen kuvaus",
-          "info": "Kuvaile diaesitystä näytönlukijoita käyttäville",
-          "default": "Diaesitys brändistäsi"
+          "info": "Kuvaile diaesitys asiakkaille, jotka käyttävät ruudunlukijoita.",
+          "default": "Diaesitys brändistä"
         }
       },
       "blocks": {
@@ -2829,94 +2832,130 @@
             },
             "heading": {
               "label": "Otsikko",
-              "default": "Kuvadia"
+              "default": "Kuvadiaesitys"
+            },
+            "mobile_image": {
+              "label": "Mobiilikuva"
             },
             "subheading": {
-              "label": "Alaotsikko",
-              "default": "Kerro brändisi tarina kuvilla"
+              "label": "Alaotsikko"
             },
             "button_label": {
-              "label": "Merkintä",
-              "info": "Jos haluat piilottaa, jätä tyhjäksi",
-              "default": "Tekstipainike"
+              "label": "Painikkeen nimi",
+              "info": "Jätä tyhjäksi piilottaaksesi painikkeen."
             },
             "link": {
-              "label": "Linkki"
+              "label": "Painikkeen linkki"
             },
             "secondary_style": {
-              "label": "Ääriviivatyyli"
+              "label": "Käytä reunaviivapainiketyyliä"
             },
             "box_align": {
-              "label": "Sisällön sijainti",
+              "label": "Sisällön sijainti työpöydällä",
+              "info": "Sijainti optimoidaan automaattisesti mobiilille.",
               "options__1": {
-                "label": "Ylhäällä vasemmalla"
+                "label": "Ylä vasen"
               },
               "options__2": {
-                "label": "Keskellä ylhäällä"
+                "label": "Ylä keskellä"
               },
               "options__3": {
-                "label": "Ylhäällä oikealla"
+                "label": "Ylä oikea"
               },
               "options__4": {
-                "label": "Keskellä vasemmalla"
+                "label": "Keski vasen"
               },
               "options__5": {
                 "label": "Keskellä"
               },
               "options__6": {
-                "label": "Keskellä oikealla"
+                "label": "Keski oikea"
               },
               "options__7": {
-                "label": "Alhaalla vasemmalla"
+                "label": "Ala vasen"
               },
               "options__8": {
-                "label": "Keskellä alhaalla"
+                "label": "Ala keskellä"
               },
               "options__9": {
-                "label": "Alhaalla oikealla"
+                "label": "Ala oikea"
               }
             },
-            "show_text_box": {
-              "label": "Säiliö"
-            },
             "text_alignment": {
-              "label": "Sisällön kohdistus",
+              "label": "Sisällön tasaus työpöydällä",
               "option_1": {
-                "label": "Vasemmalla"
+                "label": "Vasen"
               },
               "option_2": {
-                "label": "Keskitetty"
+                "label": "Keskellä"
               },
               "option_3": {
-                "label": "Oikealla"
+                "label": "Oikea"
               }
             },
             "image_overlay_opacity": {
-              "label": "Peittokuvan läpikuultavuus"
+              "label": "Kuvan peittävyyden läpinäkyvyys"
             },
             "text_alignment_mobile": {
-              "label": "Mobiilisisällön tasaus",
+              "label": "Sisällön tasaus mobiilissa",
               "options__1": {
-                "label": "Vasemmalla"
+                "label": "Vasen"
               },
               "options__2": {
-                "label": "Keskitetty"
+                "label": "Keskellä"
               },
               "options__3": {
-                "label": "Oikealla"
+                "label": "Oikea"
               }
+            }
+          }
+        },
+        "video": {
+          "name": "Video",
+          "settings": {
+            "poster_image": {
+              "label": "Julistekuva"
+            }
+          }
+        },
+        "marqee": {
+          "name": "Marquee",
+          "settings": {
+            "image-marqee-1": {
+              "label": "Marquee-kuva 1"
             },
-            "header_button": {
-              "content": "Painike"
+            "image-marqee-2": {
+              "label": "Marquee-kuva 2"
             },
-            "header_layout": {
-              "content": "Asettelu"
+            "image-marqee-3": {
+              "label": "Marquee-kuva 3"
             },
-            "header_text": {
-              "content": "Teksti"
+            "image-marqee-4": {
+              "label": "Marquee-kuva 4"
             },
-            "header_colors": {
-              "content": "Värit"
+            "image-marqee-5": {
+              "label": "Marquee-kuva 5"
+            },
+            "image-marqee-6": {
+              "label": "Marquee-kuva 6"
+            },
+            "heading-marqee": {
+              "label": "Otsikko"
+            },
+            "subheading-marqee": {
+              "label": "Alaotsikko"
+            },
+            "button_label-marqee": {
+              "label": "Painikkeen nimi"
+            },
+            "link-marqee": {
+              "label": "Painikkeen linkki"
+            },
+            "content-marqee": {
+              "label": "Sisältö"
+            },
+            "color_bg": {
+              "label": "Taustaväri"
             }
           }
         }

@@ -345,7 +345,8 @@
       "next_announcement": "Sonraki duyuru",
       "carousel": "Carousel",
       "announcement": "Duyuru",
-      "announcement_bar": "Duyuru çubuğu"
+      "announcement_bar": "Duyuru çubuğu",
+      "close_icon": "Duyuru kapat"
     },
     "quick_order_list": {
       "product_total": "Ürün alt toplamı",

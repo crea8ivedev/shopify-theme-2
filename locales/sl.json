@@ -365,7 +365,8 @@
       "next_announcement": "Naslednje obvestilo",
       "carousel": "Vrtiljak",
       "announcement": "Obvestilo",
-      "announcement_bar": "Vrstica za obvestila"
+      "announcement_bar": "Vrstica za obvestila",
+      "close_icon": "Zapri obvestilo"
     },
     "quick_order_list": {
       "product_total": "Vmesna vsota",

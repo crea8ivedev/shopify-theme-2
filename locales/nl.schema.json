@@ -2766,16 +2766,16 @@
       "name": "Diavoorstelling",
       "settings": {
         "layout": {
-          "label": "Opmaak",
+          "label": "Indeling",
           "options__1": {
             "label": "Volledige breedte"
           },
           "options__2": {
-            "label": "Pagina"
+            "label": "Raster"
           }
         },
         "slide_height": {
-          "label": "Hoogte",
+          "label": "Diahoogte",
           "options__1": {
             "label": "Aanpassen aan eerste afbeelding"
           },
@@ -2783,41 +2783,44 @@
             "label": "Klein"
           },
           "options__3": {
-            "label": "Gemiddeld"
+            "label": "Middelgroot"
           },
           "options__4": {
             "label": "Groot"
           }
         },
         "slider_visual": {
-          "label": "Paginering",
+          "label": "Paginatiestijl",
           "options__1": {
             "label": "Teller"
           },
           "options__2": {
-            "label": "Stippen"
+            "label": "Punten"
           },
           "options__3": {
-            "label": "Getallen"
+            "label": "Nummers"
           }
         },
         "auto_rotate": {
-          "label": "Dia's automatisch draaien"
+          "label": "Dia's automatisch roteren"
         },
         "change_slides_speed": {
-          "label": "Wijzig dia's elke"
-        },
-        "mobile": {
-          "content": "Mobiele opmaak"
+          "label": "Dia's wisselen elke"
         },
         "show_text_below": {
-          "label": "Stapel tekst onder afbeelding"
+          "label": "Tekst onder afbeelding"
+        },
+        "mobile": {
+          "content": "Mobiele indeling"
+        },
+        "show_navigation_buttons": {
+          "label": "Navigatieknoppen weergeven"
         },
         "accessibility": {
           "content": "Toegankelijkheid",
           "label": "Beschrijving van diavoorstelling",
-          "info": "Geef een beschrijving van de diavoorstelling voor mensen die schermlezers gebruiken",
-          "default": "Diavoorstelling over ons merk"
+          "info": "Beschrijf de diavoorstelling voor klanten die schermlezers gebruiken.",
+          "default": "Diavoorstelling over het merk"
         }
       },
       "blocks": {
@@ -2829,94 +2832,130 @@
             },
             "heading": {
               "label": "Kop",
-              "default": "Afbeelding dia"
+              "default": "Afbeeldingendiavoorstelling"
+            },
+            "mobile_image": {
+              "label": "Mobiele afbeelding"
             },
             "subheading": {
-              "label": "Subkop",
-              "default": "Vertel met afbeeldingen het verhaal van je merk"
+              "label": "Subkop"
             },
             "button_label": {
-              "label": "Label",
-              "info": "Laat leeg om te verbergen",
-              "default": "Knoplabel"
+              "label": "Knoplabel",
+              "info": "Laat het label leeg om de knop te verbergen."
             },
             "link": {
-              "label": "Link"
+              "label": "Knoplink"
             },
             "secondary_style": {
-              "label": "Stijl omlijnen"
+              "label": "Omrande knopstijl gebruiken"
             },
             "box_align": {
-              "label": "Positie van content",
+              "label": "Positie van desktopinhoud",
+              "info": "Positie wordt automatisch geoptimaliseerd voor mobiel.",
               "options__1": {
-                "label": "Linksboven"
+                "label": "Boven links"
               },
               "options__2": {
-                "label": "Centraal boven"
+                "label": "Boven midden"
               },
               "options__3": {
-                "label": "Rechtsboven"
+                "label": "Boven rechts"
               },
               "options__4": {
                 "label": "Midden links"
               },
               "options__5": {
-                "label": "Centraal midden"
+                "label": "Midden midden"
               },
               "options__6": {
                 "label": "Midden rechts"
               },
               "options__7": {
-                "label": "Linksonder"
+                "label": "Onder links"
               },
               "options__8": {
-                "label": "Midden onder"
+                "label": "Onder midden"
               },
               "options__9": {
-                "label": "Rechtsonder"
+                "label": "Onder rechts"
               }
             },
-            "show_text_box": {
-              "label": "Container"
-            },
             "text_alignment": {
-              "label": "Uitlijning van content",
+              "label": "Uitlijning desktopinhoud",
               "option_1": {
                 "label": "Links"
               },
               "option_2": {
-                "label": "Centraal"
+                "label": "Midden"
               },
               "option_3": {
                 "label": "Rechts"
               }
             },
             "image_overlay_opacity": {
-              "label": "Dekking van overlay"
+              "label": "Doorzichtigheid van afbeeldingsoverlay"
             },
             "text_alignment_mobile": {
-              "label": "Uitlijning van content op mobiel",
+              "label": "Uitlijning mobiele inhoud",
               "options__1": {
                 "label": "Links"
               },
               "options__2": {
-                "label": "Centraal"
+                "label": "Midden"
               },
               "options__3": {
                 "label": "Rechts"
               }
+            }
+          }
+        },
+        "video": {
+          "name": "Video",
+          "settings": {
+            "poster_image": {
+              "label": "Posterafbeelding"
+            }
+          }
+        },
+        "marqee": {
+          "name": "Marquee",
+          "settings": {
+            "image-marqee-1": {
+              "label": "Marquee-afbeelding 1"
             },
-            "header_button": {
-              "content": "Knop"
+            "image-marqee-2": {
+              "label": "Marquee-afbeelding 2"
             },
-            "header_layout": {
-              "content": "Opmaak"
+            "image-marqee-3": {
+              "label": "Marquee-afbeelding 3"
             },
-            "header_text": {
-              "content": "Tekst"
+            "image-marqee-4": {
+              "label": "Marquee-afbeelding 4"
             },
-            "header_colors": {
-              "content": "Kleuren"
+            "image-marqee-5": {
+              "label": "Marquee-afbeelding 5"
+            },
+            "image-marqee-6": {
+              "label": "Marquee-afbeelding 6"
+            },
+            "heading-marqee": {
+              "label": "Kop"
+            },
+            "subheading-marqee": {
+              "label": "Subkop"
+            },
+            "button_label-marqee": {
+              "label": "Knoplabel"
+            },
+            "link-marqee": {
+              "label": "Knoplink"
+            },
+            "content-marqee": {
+              "label": "Inhoud"
+            },
+            "color_bg": {
+              "label": "Achtergrondkleur"
             }
           }
         }

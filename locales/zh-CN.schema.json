@@ -2771,11 +2771,11 @@
             "label": "全宽"
           },
           "options__2": {
-            "label": "页面"
+            "label": "网格"
           }
         },
         "slide_height": {
-          "label": "高度",
+          "label": "幻灯片高度",
           "options__1": {
             "label": "适应第一张图片"
           },
@@ -2790,7 +2790,7 @@
           }
         },
         "slider_visual": {
-          "label": "分页",
+          "label": "分页样式",
           "options__1": {
             "label": "计数器"
           },
@@ -2802,22 +2802,25 @@
           }
         },
         "auto_rotate": {
-          "label": "自动旋转幻灯片"
+          "label": "自动轮播幻灯片"
         },
         "change_slides_speed": {
-          "label": "幻灯片更换时间间隔"
-        },
-        "mobile": {
-          "content": "移动布局"
+          "label": "更换幻灯片时间"
         },
         "show_text_below": {
-          "label": "在图片下方堆叠文本"
+          "label": "图片下方显示文本"
+        },
+        "mobile": {
+          "content": "移动端布局"
+        },
+        "show_navigation_buttons": {
+          "label": "显示导航按钮"
         },
         "accessibility": {
-          "content": "辅助功能",
+          "content": "无障碍功能",
           "label": "幻灯片描述",
-          "info": "为使用屏幕阅读器的客户描述幻灯片",
-          "default": "关于我们品牌的幻灯片"
+          "info": "为使用屏幕阅读器的客户描述幻灯片。",
+          "default": "品牌相关幻灯片"
         }
       },
       "blocks": {
@@ -2831,92 +2834,128 @@
               "label": "标题",
               "default": "图片幻灯片"
             },
+            "mobile_image": {
+              "label": "移动端图片"
+            },
             "subheading": {
-              "label": "副标题",
-              "default": "通过图片讲述您的品牌故事"
+              "label": "副标题"
             },
             "button_label": {
-              "label": "标签",
-              "info": "留空以隐藏",
-              "default": "按钮标签"
+              "label": "按钮文本",
+              "info": "留空则隐藏按钮。"
             },
             "link": {
-              "label": "链接"
+              "label": "按钮链接"
             },
             "secondary_style": {
-              "label": "轮廓样式"
+              "label": "使用描边按钮样式"
             },
             "box_align": {
-              "label": "内容位置",
+              "label": "桌面端内容位置",
+              "info": "移动端位置自动优化。",
               "options__1": {
-                "label": "左上方"
+                "label": "顶部左侧"
               },
               "options__2": {
                 "label": "顶部居中"
               },
               "options__3": {
-                "label": "右上方"
+                "label": "顶部右侧"
               },
               "options__4": {
-                "label": "中间居左"
+                "label": "中部左侧"
               },
               "options__5": {
-                "label": "中间居中"
+                "label": "中部居中"
               },
               "options__6": {
-                "label": "中间居右"
+                "label": "中部右侧"
               },
               "options__7": {
-                "label": "左下方"
+                "label": "底部左侧"
               },
               "options__8": {
                 "label": "底部居中"
               },
               "options__9": {
-                "label": "右下方"
+                "label": "底部右侧"
               }
             },
-            "show_text_box": {
-              "label": "容器"
-            },
             "text_alignment": {
-              "label": "内容对齐方式",
+              "label": "桌面端文本对齐",
               "option_1": {
-                "label": "左"
+                "label": "左对齐"
               },
               "option_2": {
-                "label": "居中"
+                "label": "居中对齐"
               },
               "option_3": {
-                "label": "右"
+                "label": "右对齐"
               }
             },
             "image_overlay_opacity": {
-              "label": "叠加不透明度"
+              "label": "图片覆盖层透明度"
             },
             "text_alignment_mobile": {
-              "label": "移动设备内容对齐方式",
+              "label": "移动端文本对齐",
               "options__1": {
-                "label": "左"
+                "label": "左对齐"
               },
               "options__2": {
-                "label": "居中"
+                "label": "居中对齐"
               },
               "options__3": {
-                "label": "右"
+                "label": "右对齐"
               }
+            }
+          }
+        },
+        "video": {
+          "name": "视频",
+          "settings": {
+            "poster_image": {
+              "label": "封面图片"
+            }
+          }
+        },
+        "marqee": {
+          "name": "跑马灯",
+          "settings": {
+            "image-marqee-1": {
+              "label": "跑马灯图片 1"
             },
-            "header_button": {
-              "content": "按钮"
+            "image-marqee-2": {
+              "label": "跑马灯图片 2"
             },
-            "header_layout": {
-              "content": "布局"
+            "image-marqee-3": {
+              "label": "跑马灯图片 3"
             },
-            "header_text": {
-              "content": "文本"
+            "image-marqee-4": {
+              "label": "跑马灯图片 4"
             },
-            "header_colors": {
-              "content": "颜色"
+            "image-marqee-5": {
+              "label": "跑马灯图片 5"
+            },
+            "image-marqee-6": {
+              "label": "跑马灯图片 6"
+            },
+            "heading-marqee": {
+              "label": "标题"
+            },
+            "subheading-marqee": {
+              "label": "副标题"
+            },
+            "button_label-marqee": {
+              "label": "按钮文本"
+            },
+            "link-marqee": {
+              "label": "按钮链接"
+            },
+            "content-marqee": {
+              "label": "内容"
+            },
+            "color_bg": {
+              "label": "背景颜色"
             }
           }
         }
