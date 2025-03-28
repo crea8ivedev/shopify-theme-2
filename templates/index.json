@@ -12,21 +12,21 @@
     "slideshow_eqDDp9": {
       "type": "slideshow",
       "blocks": {
-        "marqee_X3tmVB": {
-          "type": "marqee",
+        "object_fAqgQG": {
+          "type": "object",
           "settings": {
             "collection": "",
-            "subheading-marqee": "Skin Friendly",
-            "heading-marqee": "Unveil Your Radiance with Aura Beauty",
-            "content-marqee": "<p>Elevating Your Natural Glow with Every Application. Dive into Luxurious Beauty, Redefined.</p>",
-            "button_label-marqee": "Shop Now",
-            "link-marqee": "#",
-            "color_bg": "#ffe7e7"
+            "subheading-marqee": "",
+            "heading-marqee": "",
+            "content-marqee": "",
+            "button_label-marqee": "",
+            "link-marqee": "",
+            "color_bg": ""
           }
         }
       },
       "block_order": [
-        "marqee_X3tmVB"
+        "object_fAqgQG"
       ],
       "settings": {
         "show_navigation_buttons": false,
