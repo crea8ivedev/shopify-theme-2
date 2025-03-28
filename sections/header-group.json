@@ -29,10 +29,7 @@
           }
         }
       },
-      "block_order": [
-        "announcement-bar-0",
-        "announcement_aUcpYc"
-      ],
+      "block_order": ["announcement-bar-0", "announcement_aUcpYc"],
       "settings": {
         "auto_rotate": false,
         "change_slides_speed": 5,
@@ -63,8 +60,5 @@
       }
     }
   },
-  "order": [
-    "announcement-bar",
-    "header"
-  ]
+  "order": ["announcement-bar", "header"]
 }

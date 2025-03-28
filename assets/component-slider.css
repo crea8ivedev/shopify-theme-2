@@ -415,9 +415,9 @@ slider-component.slider-component-full-width {
 .block-33 {
   width: 33.33%;
 }
-.display--inline-top{
-  display:inline-block;
-  vertical-align:top;
+.display--inline-top {
+  display: inline-block;
+  vertical-align: top;
 }
 .fill-dimensions {
   width: 100%;
@@ -430,59 +430,57 @@ slider-component.slider-component-full-width {
   position: relative;
 }
 .cover-img {
-    background-size:cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    border-radius: 180px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-radius: 180px;
 }
 .gallery-image {
- padding-bottom: 2.35em;
+  padding-bottom: 2.35em;
   animation: marqueeTop 8s linear infinite;
 }
 
 .gallery-h--tb {
   .gallery-image {
-  animation: marqueeBottom 8s linear infinite;
+    animation: marqueeBottom 8s linear infinite;
   }
 }
 
-
-.gallery-image__img  {
+.gallery-image__img {
   padding-top: 50vh;
   max-width: 35vh;
   margin: 0 auto;
-  
 }
 
 .gallery-h {
-overflow: hidden;
+  overflow: hidden;
 }
 
 @keyframes marqueeTop {
   0% {
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0)
-    }
-    100% {
-        -webkit-transform: translate3d(0, -100%, 0);
-        transform: translate3d(0, -100%, 0)
-    }
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
 }
 
 @keyframes marqueeBottom {
   0% {
-        -webkit-transform: translate3d(0, -100%, 0);
-        transform: translate3d(0, -100%, 0)
-    }
-    100% {
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0)
-    }
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
 }
-.marqee-content{
+.marqee-content {
   width: 40%;
 }
-.marqee_images{
+.marqee_images {
   width: 60%;
 }
 .video-container {
@@ -518,9 +516,6 @@ overflow: hidden;
 .video-element {
   width: 100%;
 }
-.swiper-slide{
-  height:auto !important;
-}
-#Slider-{{ section.id }} .slidshow_main .swiper-wrapper {
-  height:auto !important;
+.swiper-slide {
+  height: auto !important;
 }

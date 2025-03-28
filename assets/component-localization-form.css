@@ -337,11 +337,7 @@
   opacity: 1;
 }
 
-<<<<<<< Updated upstream
-.disclosure__button[aria-expanded="true"] .icon-caret {
-=======
-.disclosure__button[aria-expanded='true'] .icon-arrow {
->>>>>>> Stashed changes
+.disclosure__button[aria-expanded="true"] .icon-arrow {
   transform: rotate(180deg);
 }
 
@@ -424,13 +420,9 @@
   max-width: 26ch;
 }
 
-<<<<<<< Updated upstream
 .header-localization:not(.menu-drawer__localization)
   .localization-form__select
-  .icon-caret {
-=======
-.header-localization:not(.menu-drawer__localization) .localization-form__select .icon-arrow {
->>>>>>> Stashed changes
+  .icon-arrow {
   right: 0.8rem;
 }
 
