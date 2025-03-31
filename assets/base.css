@@ -2269,6 +2269,12 @@ input[type="checkbox"] {
     margin-left: 8px;
   }
 }
+@media screen and (min-width: 750px) {
+  .announcement-bar-slider .slide-close-icon .svg-wrapper {
+    width: 13px;
+    height: 12px;
+  }
+}
 @media screen and (min-width: 990px) {
   body:has(.section-header .header:not(.drawer-menu)) .utility-bar .page-width {
     padding-left: 6rem;
@@ -2282,13 +2288,12 @@ input[type="checkbox"] {
   .announcement-bar-slider {
     width: 60%;
   }
-}
-@media screen and (min-width: 750px) {
   .announcement-bar-slider .slide-close-icon .svg-wrapper {
-    width: 13px;
-    height: 12px;
+    width: 15px;
+    height: 15px;
   }
 }
+
 .announcement-bar__link {
   display: flex;
   width: 100%;
