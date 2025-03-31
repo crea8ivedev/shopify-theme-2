@@ -6,23 +6,29 @@ function getFocusableElements(container) {
   );
 }
 
-const closeIcon = document.querySelector(".slide-close-icon");
-const announcementBar = document.querySelector(".utility-bar");
-if (closeIcon && announcementBar) {
-  closeIcon.addEventListener("click", function () {
-    announcementBar.classList.add("hidden");
-  });
-}
+document.addEventListener("DOMContentLoaded", function () {
+  const closeIcon = document.querySelector(".slide-close-icon");
+  const announcementBar = document.querySelector(".utility-bar");
+
+  if (announcementBar && !localStorage.getItem("announcement-bar")) {
+    announcementBar.style.display = "block"; 
+  }
+
+  if (closeIcon && announcementBar) {
+    closeIcon.addEventListener("click", function () {
+      announcementBar.classList.add("hidden");
+      localStorage.setItem("announcement-bar", true);
+    });
+  }
+});
 
 class SectionId {
   static #separator = "__";
 
-  // for a qualified section id (e.g. 'template--22224696705326__main'), return just the section id (e.g. 'template--22224696705326')
   static parseId(qualifiedSectionId) {
     return qualifiedSectionId.split(SectionId.#separator)[0];
   }
 
-  // for a qualified section id (e.g. 'template--22224696705326__main'), return just the section name (e.g. 'main')
   static parseSectionName(qualifiedSectionId) {
     return qualifiedSectionId.split(SectionId.#separator)[1];
   }

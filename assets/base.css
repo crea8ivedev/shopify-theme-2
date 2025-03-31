@@ -193,10 +193,12 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
   list-style: none;
 }
 
-.hidden {
+.utility-bar.hidden {
   display: none !important;
 }
-
+.utility-bar {
+  display: none; /* Hide by default */
+}
 .visually-hidden {
   position: absolute !important;
   overflow: hidden;
