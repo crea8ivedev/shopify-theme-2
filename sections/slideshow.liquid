@@ -143,17 +143,6 @@
             >
               <div class="slideshow__media banner__media media placeholder {% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}">
                 <div class="video-container">
-                  {% if block.settings.poster_image != blank %}
-                    <div class="video-placeholder">
-                      <img
-                        src="{{ block.settings.poster_image | image_url: 'master' }}"
-                        class="placeholder-image"
-                        width="1000"
-                        height="1000"
-                      >
-                      <div class="play-icon">&#9658;</div>
-                    </div>
-                  {% endif %}
                   <video
                     id="video"
                     playsinline="playsinline"
@@ -162,12 +151,8 @@
                     muted
                     id="video"
                     class="video-element"
-                    controls
-                    {% if block.settings.poster_image != blank %}
-                      style="display: none;"
-                    {% endif %}
                   >
-                    <source src="{{ block.settings.video | asset_url }}" type="video/mp4">
+                    <source src="{{ block.settings.video }}" type="video/mp4">
                   </video>
                 </div>
                 <div class="slideshow__text-wrapper video__content video__content--{{ block.settings.box_align_video }} page-width{% if block.settings.show_text_box == false %} video--desktop-transparent{% endif %}{% if settings.animations_reveal_on_scroll and forloop.index == 1 %} scroll-trigger animate--slide-in{% endif %}">
@@ -207,31 +192,8 @@
             </div>
           {% when 'marquee' %}
             <div class="gallery swiper-slide" style="background-color: {{ block.settings.color_bg }};">
-              <div class="marqee-content">
-                <div class="banner__text rte" {{ block.shopify_attributes }}>
-                  <p>{{ block.settings['subheading-marqee'] }}</p>
-                </div>
-                <h1 class="banner__heading inline-richtext {{ block.settings.heading_size }}">
-                  {{ block.settings['heading-marqee'] }}
-                </h1>
-                <div class="banner__text rte" {{ block.shopify_attributes }}>
-                  <p>{{ block.settings['content-marqee'] }}</p>
-                </div>
-                <div class="banner__buttons">
-                  <a
-                    {% if block.settings['link-marqee'] %}
-                      href="{{ block.settings.link-marqee }}"
-                    {% else %}
-                      role="link" aria-disabled="true"
-                    {% endif %}
-                    class="button"
-                  >
-                    {{- block.settings['button_label-marqee'] | escape -}}
-                  </a>
-                </div>
-              </div>
               <div class="marqee_images">
-                <div class="block-33 display--inline-top">
+                <div class="block-33 display--inline-top first">
                   <div class="gutter relative">
                     <div class="gallery-h">
                       {% if block.settings.collection != blank %}
@@ -257,7 +219,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="block-33 display--inline-top">
+                <div class="block-33 display--inline-top second">
                   <div class="gutter relative">
                     <div class="gallery-h gallery-h--tb">
                       {% assign product_index = 0 %}
@@ -283,6 +245,29 @@
                       {% endif %}
                     </div>
                   </div>
+                </div>
+              </div>
+              <div class="marqee-content">
+                <div class="banner__text rte" {{ block.shopify_attributes }}>
+                  <p>{{ block.settings['subheading-marqee'] }}</p>
+                </div>
+                <h1 class="banner__heading inline-richtext {{ block.settings.heading_size }}">
+                  {{ block.settings['heading-marqee'] }}
+                </h1>
+                <div class="banner__text rte" {{ block.shopify_attributes }}>
+                  <p>{{ block.settings['content-marqee'] }}</p>
+                </div>
+                <div class="banner__buttons">
+                  <a
+                    {% if block.settings['link-marqee'] %}
+                      href="{{ block.settings.link-marqee }}"
+                    {% else %}
+                      role="link" aria-disabled="true"
+                    {% endif %}
+                    class="button"
+                  >
+                    {{- block.settings['button_label-marqee'] | escape -}}
+                  </a>
                 </div>
               </div>
             </div>
@@ -502,7 +487,7 @@
         {
           "type": "richtext",
           "id": "content-marqee",
-          "label": "t:sections.slideshow.blocks.marqee.settings.subheading-marqee.label",
+          "label": "t:sections.slideshow.blocks.marqee.settings.content-marqee.label",
           "default": "<p>Elevating Your Natural Glow with Every Application. Dive into Luxurious Beauty, Redefined.</p>"
         },
         {
@@ -529,17 +514,12 @@
       "limit": 5,
       "settings": [
         {
-          "type": "image_picker",
-          "id": "poster_image",
-          "label": "t:sections.slideshow.blocks.video.settings.poster_image.label"
-        },
-        {
           "type": "url",
           "id": "video",
-          "label": "t:sections.multicolumn.blocks.column.settings.video.label"
+          "label": "t:sections.slideshow.blocks.video.name"
         },
         {
-          "type": "select",
+          "type": "select", 
           "id": "box_align_video",
           "options": [
             {

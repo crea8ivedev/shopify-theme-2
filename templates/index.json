@@ -12,7 +12,7 @@
     "slideshow_eqDDp9": {
       "type": "slideshow",
       "blocks": {
-        "marquee_hExiqb": {
+        "marquee_P4Kiwd": {
           "type": "marquee",
           "settings": {
             "collection": "",
@@ -25,7 +25,9 @@
           }
         }
       },
-      "block_order": ["marquee_hExiqb"],
+      "block_order": [
+        "marquee_P4Kiwd"
+      ],
       "settings": {
         "auto_rotate": true,
         "change_slides_speed": 3,
@@ -63,7 +65,11 @@
           }
         }
       },
-      "block_order": ["column1", "column2", "column3"],
+      "block_order": [
+        "column1",
+        "column2",
+        "column3"
+      ],
       "settings": {
         "title": "",
         "heading_size": "h1",
@@ -82,5 +88,8 @@
       }
     }
   },
-  "order": ["slideshow_eqDDp9", "multicolumn"]
+  "order": [
+    "slideshow_eqDDp9",
+    "multicolumn"
+  ]
 }
