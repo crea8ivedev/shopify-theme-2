@@ -626,6 +626,10 @@ details > * {
   width: 1.5rem;
 }
 
+.icon-down-arrow {
+  transform: rotate(0deg);
+}
+
 h3 .icon-arrow,
 .h3 .icon-arrow {
   width: calc(var(--font-heading-scale) * 1.5rem);
@@ -2119,7 +2123,7 @@ input[type="checkbox"] {
 
 .cart-count-bubble {
   position: absolute;
-  background-color: rgb(var(--color-button));
+  background-color: #944e63;
   color: rgb(var(--color-button-text));
   height: 1.7rem;
   width: 1.7rem;
@@ -2128,8 +2132,8 @@ input[type="checkbox"] {
   justify-content: center;
   align-items: center;
   font-size: 0.9rem;
-  bottom: 0.8rem;
-  left: 2.2rem;
+  left: 1.5rem;
+  top: 3px;
   line-height: calc(1 + 0.1 / var(--font-body-scale));
 }
 
@@ -2429,7 +2433,6 @@ input[type="checkbox"] {
 
   .header--middle-left {
     grid-template-areas: "heading navigation icons";
-    grid-template-columns: auto auto 1fr;
     column-gap: 2rem;
   }
 
