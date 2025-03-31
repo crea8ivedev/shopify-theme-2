@@ -87,7 +87,9 @@
 body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
   max-width: 100%;
 }
-
+.announcement-bar-section .page-width {
+  max-width: 100%;
+}
 .page-width.drawer-menu {
   max-width: 100%;
 }
@@ -104,7 +106,7 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
 
 @media screen and (min-width: 750px) {
   .page-width {
-    padding: 0 5rem;
+    padding: 0 6rem;
   }
 
   .header.page-width,
@@ -2220,17 +2222,9 @@ input[type="checkbox"] {
 .announcement-bar-slider .slider {
   width: 100%;
 }
-
-.announcement-bar .slider-button--next {
-  margin-right: -1.5rem;
-  min-width: 44px;
+.announcement-bar-slider .slide-close-icon {
+  padding-left: 1.8rem;
 }
-
-.announcement-bar .slider-button--prev {
-  margin-left: -1.5rem;
-  min-width: 44px;
-}
-
 .announcement-bar .slider-button--next:focus-visible,
 .announcement-bar .slider-button--prev:focus-visible,
 .utility-bar .list-social__link:focus-visible {
@@ -2253,22 +2247,48 @@ input[type="checkbox"] {
 .utility-bar .localization-wrapper .disclosure__link {
   font-size: calc(var(--font-heading-scale) * 1.3rem);
 }
-
+.announcement-bar .slider-button {
+  width: auto;
+  height: 100%;
+ }
+@media screen and (max-width: 750px) {
+  .announcement-bar-section .page-width {
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+  }
+  .announcement-bar-slider .slider-button {
+    padding: 0;
+  }
+  .announcement-bar-slider .slider-button--prev .svg-wrapper , .announcement-bar-slider .slider-button--next .svg-wrapper {
+    width: 15px;
+    height: 8px;
+  }
+  .announcement-bar-slider .slide-close-icon .svg-wrapper {
+    width: 10px;
+    height: 10px;
+    margin-left: 8px;
+  }
+}
 @media screen and (min-width: 990px) {
   body:has(.section-header .header:not(.drawer-menu)) .utility-bar .page-width {
-    padding-left: 5rem;
-    padding-right: 5rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
   }
-
+  
+  .announcement-bar-slider .slider-button--prev .svg-wrapper , .announcement-bar-slider .slider-button--next .svg-wrapper {
+    width: 27px;
+    height: 15px;
+  }
   .announcement-bar-slider {
     width: 60%;
   }
-
-  .announcement-bar .slider-button {
-    height: 3.8rem;
+}
+@media screen and (min-width: 750px) {
+  .announcement-bar-slider .slide-close-icon .svg-wrapper {
+    width: 13px;
+    height: 12px;
   }
 }
-
 .announcement-bar__link {
   display: flex;
   width: 100%;
@@ -2292,10 +2312,12 @@ input[type="checkbox"] {
 
 .announcement-bar__message {
   text-align: center;
-  padding: 1rem 0;
+  padding: 1.4rem 0;
   margin: 0;
-  letter-spacing: 0.1rem;
-  min-height: 3.8rem;
+  letter-spacing: 0.2rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 100%;
 }
 
 .announcement-bar-slider--fade-in-next .announcement-bar__message,

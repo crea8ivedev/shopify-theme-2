@@ -403,14 +403,6 @@ slider-component.slider-component-full-width {
 .slider-button--next:not([disabled]):hover .icon {
   transform: rotate(-180deg) scale(1.1);
 }
-.announcement-bar-slider .svg-wrapper{
-  width: 27px;
-  height: 15px;
-}
-.announcement-bar-slider .slide-close-icon .svg-wrapper{
-  margin: 0 0px 0 15px;
-}
-
 /* vertical slider - marqee */
 .gallery {
   top: 0;
