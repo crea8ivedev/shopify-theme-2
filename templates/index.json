@@ -88,10 +88,29 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "featured_blog_BUDKkX": {
+      "type": "featured-blog",
+      "settings": {
+        "blog": "news",
+        "post_limit": 3,
+        "heading": "Blog posts",
+        "subheading": "The freshest and most exciting blogs",
+        "heading_size": "h1",
+        "columns_desktop": 3,
+        "show_view_all": true,
+        "show_image": true,
+        "show_date": false,
+        "show_author": false,
+        "color_scheme": "scheme-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "slideshow_eqDDp9",
-    "multicolumn"
+    "multicolumn",
+    "featured_blog_BUDKkX"
   ]
 }

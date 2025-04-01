@@ -137,6 +137,20 @@
                 {%- endif -%}
               </p>
             {%- endif -%}
+            <div class="blog-button">
+              <a
+                href="{{ article.url }}"
+                id="ViewAll-{{ section.id }}"
+                class=" button"
+                aria-labelledby="ViewAll-{{ section.id }} SectionHeading-{{ section.id }}"
+              >
+                Read More
+                <span>
+                {% render 'icon-up-arrow' %}
+                </span>
+              </a>
+            </div>
+          
             <div class="article-card__footer">
               {%- if article.comments_count > 0 and blog.comments_enabled? -%}
                 <span>{{ 'blogs.article.comments' | t: count: article.comments_count }}</span>

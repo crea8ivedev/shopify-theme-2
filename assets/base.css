@@ -353,7 +353,9 @@ h5,
     font-size: calc(var(--font-heading-scale) * 1.3rem);
   }
 }
-
+a{
+  text-decoration: none;
+}
 h6,
 .h6 {
   color: rgba(var(--color-foreground), 0.75);
