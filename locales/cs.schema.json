@@ -994,6 +994,27 @@
         "header__utilities": {
           "content": "Veřejné služby"
         }
+      },
+      "blocks": {
+        "image-mega-menu": {
+          "name": "Mega nabídka obrázků",
+          "settings": {
+            "menu_item": {
+              "label": "Menu element",
+              "info": "Zadejte menu element pro použití mega nabídky."
+            },
+            "product_list": {
+              "label": "Seznam produktů"
+            },
+            "collection": {
+              "label": "Kolekce",
+              "info": "V jednom okamžiku můžete použít pouze jednu seznam produktů nebo kolekci"
+            },
+            "products_to_show": {
+              "label": "Produkt k zobrazení"
+            }
+          }
+        }
       }
     },
     "image-banner": {

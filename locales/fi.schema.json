@@ -994,6 +994,27 @@
         "header__utilities": {
           "content": "Apuohjelmat"
         }
+      },
+      "blocks": {
+        "image-mega-menu": {
+          "name": "Kuvabanneri",
+          "settings": {
+            "menu_item": {
+              "label": "Menu elementti",
+              "info": "Syötä menun elementti mega-valikossa."
+            },
+            "product_list": {
+              "label": "Tuotelista"
+            },
+            "collection": {
+              "label": "Kokoelma",
+              "info": "Yhdellä kerralla voit käyttää vain yhtä tuotelista tai kokoelmaa."
+            },
+            "products_to_show": {
+              "label": "Tuote näytettäväksi"
+            }
+          }
+        }
       }
     },
     "image-banner": {

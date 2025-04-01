@@ -994,6 +994,27 @@
         "header__utilities": {
           "content": "Użyteczne funkcje"
         }
+      },
+      "blocks": {
+        "image-mega-menu": {
+          "name": "Menu Mega-obraz",
+          "settings": {
+            "menu_item": {
+              "label": "Menu element",
+              "info": "Wprowadź element menu, aby zastosować menu mega-menu."
+            },
+            "product_list": {
+              "label": "Lista produktów"
+            },
+            "collection": {
+              "label": "Kolekcja",
+              "info": "W jednym momencie można używać tylko jednej listy produktów lub kolekcji"
+            },
+            "products_to_show": {
+              "label": "Produkt do pokazania"
+            }
+          }
+        }
       }
     },
     "image-banner": {

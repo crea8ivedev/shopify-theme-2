@@ -994,6 +994,27 @@
         "header__utilities": {
           "content": "Yardımcı araçlar"
         }
+      },
+      "blocks": {
+        "image-mega-menu": {
+          "name": "Görsel Mega Menü",
+          "settings": {
+            "menu_item": {
+              "label": "Menü öğesi",
+              "info": "Mega menü açılır menüsünü uygulamak için menü öğesini girin."
+            },
+            "product_list": {
+              "label": "Ürün listesi"
+            },
+            "collection": {
+              "label": "Koleksiyon",
+              "info": "Bir kerelikte yalnızca bir Ürün Listesi veya Koleksiyon kullanabilirsiniz."
+            },
+            "products_to_show": {
+              "label": "Görüntülenecek ürün"
+            }
+          }
+        }
       }
     },
     "image-banner": {

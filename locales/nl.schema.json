@@ -994,6 +994,27 @@
         "header__utilities": {
           "content": "Hulpprogramma's"
         }
+      },
+      "blocks": {
+        "image-mega-menu": {
+          "name": "Afbeelding Mega Menu",
+          "settings": {
+            "menu_item": {
+              "label": "Menu element",
+              "info": "Voer menuitem in om een mega menu-dropdown toe te passen."
+            },
+            "product_list": {
+              "label": "Productlijst"
+            },
+            "collection": {
+              "label": "Collectie",
+              "info": "Op een moment kunt u alleen een Productlijst of een Collectie gebruiken"
+            },
+            "products_to_show": {
+              "label": "Product te tonen"
+            }
+          }
+        }
       }
     },
     "image-banner": {

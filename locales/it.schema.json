@@ -994,6 +994,27 @@
         "header__utilities": {
           "content": "Utility"
         }
+      },
+      "blocks": {
+        "image-mega-menu": {
+          "name": "Mega menu immagine",
+          "settings": {
+            "menu_item": {
+              "label": "Elemento menu",
+              "info": "Inserisci l'elemento menu per applicare un menu a discesa mega."
+            },
+            "product_list": {
+              "label": "Lista prodotti"
+            },
+            "collection": {
+              "label": "Collezione",
+              "info": "Puoi utilizzare solo una Lista prodotti o una Collezione"
+            },
+            "products_to_show": {
+              "label": "Prodotto da mostrare"
+            }
+          }
+        }
       }
     },
     "image-banner": {

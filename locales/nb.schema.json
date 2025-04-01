@@ -994,6 +994,27 @@
         "header__utilities": {
           "content": "Verktøy"
         }
+      },
+      "blocks": {
+        "image-mega-menu": {
+          "name": "Bilde-mega-meny",
+          "settings": {
+            "menu_item": {
+              "label": "Menu element",
+              "info": "Skriv inn menyelement for å anvende et mega meny-nedtrekksmeny."
+            },
+            "product_list": {
+              "label": "Produktliste"
+            },
+            "collection": {
+              "label": "Samling",
+              "info": "På et tidspunkt kan du kun bruke en Produktliste eller en Samling"
+            },
+            "products_to_show": {
+              "label": "Produkt å vise"
+            }
+          }
+        }
       }
     },
     "image-banner": {

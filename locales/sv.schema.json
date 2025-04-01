@@ -994,6 +994,27 @@
         "header__utilities": {
           "content": "Verktyg"
         }
+      },
+      "blocks": {
+        "image-mega-menu": {
+          "name": "Bild Mega-meny",
+          "settings": {
+            "menu_item": {
+              "label": "Menu element",
+              "info": "Ange menuelement för att tillämpa ett mega-meny-nedrullningsmeny."
+            },
+            "product_list": {
+              "label": "Produktlista"
+            },
+            "collection": {
+              "label": "Kollektion",
+              "info": "På ett tillfälle kan du bara använda en Produktlista eller en Kollektion"
+            },
+            "products_to_show": {
+              "label": "Produkt att visa"
+            }
+          }
+        }
       }
     },
     "image-banner": {

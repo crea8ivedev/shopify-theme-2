@@ -651,7 +651,43 @@
   ],
   "blocks": [
     {
-      "type": "@app"
+      "type": "image-mega-menu",
+      "name": "t:sections.header.blocks.image-mega-menu.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "menu_item",
+          "label": "t:sections.header.blocks.image-mega-menu.settings.menu_item.label",
+          "info": "t:sections.header.blocks.image-mega-menu.settings.menu_item.info"
+        },
+        {
+          "type": "product_list",
+          "id": "product_list",
+          "label": "t:sections.header.blocks.image-mega-menu.settings.product_list.label",
+          "limit": 12
+        },
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "t:sections.header.blocks.image-mega-menu.settings.collection.label",
+          "info": "t:sections.header.blocks.image-mega-menu.settings.collection.info"
+        },
+        {
+          "type": "range",
+          "id": "products_to_show",
+          "min": 2,
+          "max": 6,
+          "step": 1,
+          "default": 4,
+          "label": "t:sections.header.blocks.image-mega-menu.settings.products_to_show.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Header",
+      "category": "Header"
     }
   ]
 }

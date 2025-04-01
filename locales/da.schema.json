@@ -994,6 +994,27 @@
         "header__utilities": {
           "content": "Forsyning"
         }
+      },
+      "blocks": {
+        "image-mega-menu": {
+          "name": "Billedmegamenu",
+          "settings": {
+            "menu_item": {
+              "label": "Menu element",
+              "info": "Indtast menuelement for at anvende et megamenu-dropdown."
+            },
+            "product_list": {
+              "label": "Produktliste"
+            },
+            "collection": {
+              "label": "Kollektion",
+              "info": "På et tidspunkt kan du kun anvende en Produktliste eller en Kollektion"
+            },
+            "products_to_show": {
+              "label": "Produkt at vise"
+            }
+          }
+        }
       }
     },
     "image-banner": {
