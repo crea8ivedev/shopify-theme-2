@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "settings_schema": {
     "global": {
@@ -437,6 +446,31 @@
           "label": "Round"
         },
         "label": "Image shape"
+      }
+    },
+    "marquee": {
+      "name": "Marquee",
+      "settings": {
+        "section_padding": "Section Padding",
+        "padding_top": "Top Padding",
+        "padding_bottom": "Bottom Padding",
+        "color_scheme": "Color Scheme",
+        "swiper_settings": "Swiper Settings",
+        "enable_autoplay": "Enable Autoplay For Desktop",
+        "marquee_breakpoint_desktop": "Desktop Slides",
+        "marquee_breakpoint_tablet": "Tablet Slides",
+        "marquee_breakpoint_mobile": "Mobile Slides"
+      },
+      "blocks": {
+        "image": {
+          "name": "Image",
+          "settings": {
+            "logo_image": "Logo Image"
+          }
+        }
+      },
+      "presets": {
+        "name": "Marquee"
       }
     },
     "slideshow": {
