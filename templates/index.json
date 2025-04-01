@@ -140,46 +140,11 @@
         "marquee_breakpoint_tablet": 6,
         "marquee_breakpoint_mobile": 3
       }
-    },
-    "marquee2_VLL736": {
-      "type": "marquee2",
-      "blocks": {
-        "image_6qKeEW": {
-          "type": "image",
-          "settings": {
-            "logo_image": "shopify://shop_images/p_g_1.png"
-          }
-        },
-        "image_Keqfbx": {
-          "type": "image",
-          "settings": {
-            "logo_image": "shopify://shop_images/mac_1.png"
-          }
-        },
-        "image_aR6nJ4": {
-          "type": "image",
-          "settings": {
-            "logo_image": "shopify://shop_images/LOreal-Symbol-1024x403_1.png"
-          }
-        }
-      },
-      "block_order": [
-        "image_6qKeEW",
-        "image_Keqfbx",
-        "image_aR6nJ4"
-      ],
-      "disabled": true,
-      "settings": {
-        "padding_top": 40,
-        "padding_bottom": 40,
-        "color_scheme": ""
-      }
     }
   },
   "order": [
     "slideshow_eqDDp9",
     "multicolumn",
-    "marquee_Wgw8KT",
-    "marquee2_VLL736"
+    "marquee_Wgw8KT"
   ]
 }
