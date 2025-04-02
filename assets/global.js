@@ -6,6 +6,32 @@ function getFocusableElements(container) {
   );
 }
 
+document.querySelectorAll(".mega-menu").forEach((menu) => {
+  const summary = menu.querySelector("summary");
+  const content = menu.querySelector(".mega-menu__content");
+
+  if (summary && content) {
+    menu.addEventListener("mouseenter", () => {
+      menu.setAttribute("open", "true");
+      content.style.display = "block";
+      content.style.opacity = "1";
+      content.style.visibility = "visible";
+    });
+
+    menu.addEventListener("mouseleave", () => {
+      menu.removeAttribute("open");
+      content.style.display = "none";
+      content.style.opacity = "0";
+      content.style.visibility = "hidden";
+    });
+
+    // Prevent default click behavior on summary
+    summary.addEventListener("click", (e) => {
+      e.preventDefault();
+    });
+  }
+});
+
 const closeIcon = document.querySelector(".slide-close-icon");
 const announcementBar = document.querySelector(".utility-bar");
 if (closeIcon && announcementBar) {

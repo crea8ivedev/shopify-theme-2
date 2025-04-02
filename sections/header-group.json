@@ -46,7 +46,7 @@
         "image_mega_menu_LRbyXV": {
           "type": "image-mega-menu",
           "settings": {
-            "menu_item": "Shop",
+            "menu_item": "Pages",
             "product_list": [],
             "collection": "all",
             "products_to_show": 4

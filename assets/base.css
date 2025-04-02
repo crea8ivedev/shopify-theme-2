@@ -3706,3 +3706,25 @@ details-disclosure > details {
     transform: translateX(100%) scaleX(0);
   }
 }
+
+.mega-menu__content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+}
+
+.mega-menu:hover .mega-menu__content {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
