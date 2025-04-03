@@ -105,6 +105,7 @@
 
 .collection_list-button {
   margin-top: 20px;
+  pointer-events: auto;
 }
 
 .collection_list-button a {
@@ -115,7 +116,28 @@
   border-radius: 100px;
 }
 
+.collection_list-button a:hover {
+  background: #944e63;
+  color: #FFE7E7;
+}
+
 .collection_list-button svg {
-  fill: #944E63;
+  fill: currentColor;
   margin-left: 5px;
+}
+
+.collection-list.contains-card .collection-list__item.grid__item {
+  pointer-events: none;
+}
+
+svg.icon.icon-arrow path {
+  fill: #944E63;
+}
+
+.slider-button[disabled="disabled"] {
+  opacity: 40%;
+}
+
+.slider-counter.caption {
+  display: none;
 }
