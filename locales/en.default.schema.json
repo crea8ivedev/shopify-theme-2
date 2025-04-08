@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "settings_schema": {
     "global": {
@@ -1228,6 +1237,10 @@
         "newsletter_heading": {
           "label": "Heading",
           "default": "Subscribe to our emails"
+        },
+        "newsletter_subheading": {
+          "label": "Sub heading",
+          "default": "Sign up & enjoy 10% off your first order"
         },
         "header__1": {
           "content": "Email signup",
