@@ -32,7 +32,7 @@
           "type": "text",
           "settings": {
             "heading": "Contact",
-            "subtext": "<p>Regarding your order</p><p>+01 2345 6789</p><p>aurabeauty@example.com</p><p>Other inquiries</p><p>+01 2345 6789</p><p>aurabeauty@example.com</p>"
+            "subtext": "<p><strong>Regarding your order</strong></p><p>+01 2345 6789</p><p>aurabeauty@example.com</p><p><strong>Other inquiries</strong></p><p>+01 2345 6789</p><p>aurabeauty@example.com</p>"
           }
         }
       },
@@ -44,7 +44,7 @@
       "settings": {
         "color_scheme": "scheme-1",
         "newsletter_enable": true,
-        "newsletter_heading": "Subscribe to our emails",
+        "newsletter_heading": "Email That's you Get Offers",
         "newsletter_subheading": "Sign up and enjoy 10% off your first order.",
         "enable_follow_on_shop": true,
         "show_social": true,

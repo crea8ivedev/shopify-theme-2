@@ -205,7 +205,9 @@
                             aria-label="{{ 'newsletter.button_label' | t }}"
                           >
                             <span class="svg-wrapper">
-                              {{- 'icon-arrow.svg' | inline_asset_content -}}
+                              <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.0625 1.25C1.84766 1.25 1.67188 1.4375 1.67188 1.66667V2.24219L5.8833 5.92969C6.38867 6.3724 7.11377 6.3724 7.61914 5.92969L11.8281 2.24219V1.66667C11.8281 1.4375 11.6523 1.25 11.4375 1.25H2.0625ZM1.67188 3.85938V8.33333C1.67188 8.5625 1.84766 8.75 2.0625 8.75H11.4375C11.6523 8.75 11.8281 8.5625 11.8281 8.33333V3.85938L8.36133 6.89583C7.42383 7.71615 6.07373 7.71615 5.13867 6.89583L1.67188 3.85938ZM0.5 1.66667C0.5 0.747396 1.20068 0 2.0625 0H11.4375C12.2993 0 13 0.747396 13 1.66667V8.33333C13 9.2526 12.2993 10 11.4375 10H2.0625C1.20068 10 0.5 9.2526 0.5 8.33333V1.66667Z" fill="#686868"/>
+                              </svg>
                             </span>
                           </button>
                         </div>
@@ -242,9 +244,47 @@
                   </div>
                 {%- endif -%}
       
-                {%- if section.settings.show_social and has_social_icons -%}
-                  {%- render 'social-icons', class: 'footer__list-social' -%}
-                {%- endif -%}
+                <div class="footer__content-bottom-wrapper">
+                  <div class="footer__column footer__localization isolate">
+                    {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
+                      <localization-form>
+                        {%- form 'localization', id: 'FooterCountryForm', class: 'localization-form' -%}
+                          <div>
+                            <h2 class="caption-large text-body" id="FooterCountryLabel">{{ 'localization.country_label' | t }}</h2>
+                            {%- render 'country-localization', localPosition: 'FooterCountry' -%}
+                          </div>
+                        {%- endform -%}
+                      </localization-form>
+                    {%- endif -%}
+            
+                    {%- if section.settings.enable_language_selector and localization.available_languages.size > 1 -%}
+                      <localization-form>
+                        {%- form 'localization', id: 'FooterLanguageForm', class: 'localization-form' -%}
+                          <div>
+                            <h2 class="caption-large text-body" id="FooterLanguageLabel">
+                              {{ 'localization.language_label' | t }}
+                            </h2>
+                            {%- render 'language-localization', localPosition: 'FooterLanguage' -%}
+                          </div>
+                        {%- endform -%}
+                      </localization-form>
+                    {%- endif -%}
+                  </div>
+                  <div class="footer__column footer__column--info">
+                    {%- if section.settings.payment_enable -%}
+                      <div class="footer__payment">
+                        <span class="visually-hidden">{{ 'sections.footer.payment' | t }}</span>
+                        <ul class="list list-payment" role="list">
+                          {%- for type in shop.enabled_payment_types -%}
+                            <li class="list-payment__item">
+                              {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
+                            </li>
+                          {%- endfor -%}
+                        </ul>
+                      </div>
+                    {%- endif -%}
+                  </div>
+                </div>
               </div>
           </div>
         {%- endif -%}
@@ -259,68 +299,17 @@
       data-cascade
     {% endif %}
   >
-    <div class="footer__content-bottom-wrapper page-width">
-      <div class="footer__column footer__localization isolate">
-        {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
-          <localization-form>
-            {%- form 'localization', id: 'FooterCountryForm', class: 'localization-form' -%}
-              <div>
-                <h2 class="caption-large text-body" id="FooterCountryLabel">{{ 'localization.country_label' | t }}</h2>
-                {%- render 'country-localization', localPosition: 'FooterCountry' -%}
-              </div>
-            {%- endform -%}
-          </localization-form>
-        {%- endif -%}
-
-        {%- if section.settings.enable_language_selector and localization.available_languages.size > 1 -%}
-          <localization-form>
-            {%- form 'localization', id: 'FooterLanguageForm', class: 'localization-form' -%}
-              <div>
-                <h2 class="caption-large text-body" id="FooterLanguageLabel">
-                  {{ 'localization.language_label' | t }}
-                </h2>
-                {%- render 'language-localization', localPosition: 'FooterLanguage' -%}
-              </div>
-            {%- endform -%}
-          </localization-form>
-        {%- endif -%}
-      </div>
-      <div class="footer__column footer__column--info">
-        {%- if section.settings.payment_enable -%}
-          <div class="footer__payment">
-            <span class="visually-hidden">{{ 'sections.footer.payment' | t }}</span>
-            <ul class="list list-payment" role="list">
-              {%- for type in shop.enabled_payment_types -%}
-                <li class="list-payment__item">
-                  {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
-                </li>
-              {%- endfor -%}
-            </ul>
-          </div>
-        {%- endif -%}
-      </div>
-    </div>
     <div class="footer__content-bottom-wrapper page-width{% if section.settings.enable_country_selector == false and section.settings.enable_language_selector == false %} footer__content-bottom-wrapper--center{% endif %}">
       <div class="footer__copyright caption">
         <small class="copyright__content"
-          >&copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: routes.root_url -}}
+          >&copy; {{ 'now' | date: '%Y' }}, Aura Beauty is proudly powered by
         </small>
-        <small class="copyright__content">{{ powered_by_link }}</small>
-        {%- if section.settings.show_policy -%}
-          <ul class="policies list-unstyled">
-            {%- for policy in shop.policies -%}
-              {%- if policy != blank -%}
-                <li>
-                  <small class="copyright__content"
-                    ><a href="{{ policy.url }}">{{ policy.title | escape }}</a></small
-                  >
-                </li>
-              {%- endif -%}
-            {%- endfor -%}
-          </ul>
-        {%- endif -%}
+        <a class="powered-by list-unstyled" href="https://encircletechnologies.com/"> | Encircle Technologies</a>
       </div>
     </div>
+    {%- if section.settings.show_social and has_social_icons -%}
+      {%- render 'social-icons', class: 'footer__list-social' -%}
+    {%- endif -%}
   </div>
 </footer>
 
