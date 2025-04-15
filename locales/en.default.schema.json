@@ -456,16 +456,24 @@
         "padding_bottom": "Bottom Padding",
         "color_scheme": "Color Scheme",
         "swiper_settings": "Swiper Settings",
-        "enable_autoplay": "Enable Autoplay For Desktop",
+        "enable_autoplay": "Enable Autoplay",
+        "autoplay_speed": "Autoplay Speed",
         "marquee_breakpoint_desktop": "Desktop Slides",
         "marquee_breakpoint_tablet": "Tablet Slides",
-        "marquee_breakpoint_mobile": "Mobile Slides"
+        "marquee_breakpoint_mobile": "Mobile Slides",
+        "stop_on_hover": "Stop on Hover"
       },
       "blocks": {
-        "image": {
+        "image_slide": {
           "name": "Image",
           "settings": {
             "logo_image": "Logo Image"
+          }
+        },
+        "content_slide": {
+          "name": "Content",
+          "settings": {
+            "content": "Content"
           }
         }
       },

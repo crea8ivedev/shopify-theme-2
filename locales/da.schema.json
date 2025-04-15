@@ -2771,15 +2771,23 @@
         "color_scheme": "Farveskema",
         "swiper_settings": "Swiper Indstillinger",
         "enable_autoplay": "Aktiver automatisk afspilning til desktop",
+        "autoplay_speed": "Automatisk afspilninghastighed",
+        "stop_on_hover": "Stop på hover",
         "marquee_breakpoint_desktop": "Slides til desktop",
         "marquee_breakpoint_tablet": "Slides til tablet",
         "marquee_breakpoint_mobile": "Slides til mobil"
       },
       "blocks": {
-        "image": {
+        "image_slide": {
           "name": "Billede",
           "settings": {
             "logo_image": "Logo Billede"
+          }
+        },
+        "content_slide": {
+          "name": "Indhold",
+          "settings": {
+            "content": "Indhold"
           }
         }
       },

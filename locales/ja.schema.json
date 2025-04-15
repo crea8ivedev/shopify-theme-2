@@ -2771,15 +2771,23 @@
         "color_scheme": "カラースキーム",
         "swiper_settings": "Swiper設定",
         "enable_autoplay": "デスクトップで自動再生を有効にする",
+        "autoplay_speed": "自動再生速度",
+        "stop_on_hover": "ホバー時に停止",
         "marquee_breakpoint_desktop": "デスクトップスライド",
         "marquee_breakpoint_tablet": "タブレットスライド",
         "marquee_breakpoint_mobile": "モバイルスライド"
       },
       "blocks": {
-        "image": {
+        "image_slide": {
           "name": "画像",
           "settings": {
             "logo_image": "ロゴ画像"
+          }
+        },
+        "content_slide": {
+          "name": "コンテンツ",
+          "settings": {
+            "content": "コンテンツ"
           }
         }
       },

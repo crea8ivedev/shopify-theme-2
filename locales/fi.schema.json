@@ -777,7 +777,7 @@
           }
         },
         "view_all_style": {
-          "label": "”Katso kaikki” tyylit",
+          "label": "Katso kaikki tyylit",
           "options__1": {
             "label": "Linkki"
           },
@@ -2771,15 +2771,23 @@
         "color_scheme": "Värimaailma",
         "swiper_settings": "Swiper Asetukset",
         "enable_autoplay": "Ota Automaattinen Toisto Käyttöön Työpöydällä",
+        "autoplay_speed": "Automaattinen toiston nopeus",
+        "stop_on_hover": "Pysäytä kun hiiren alla",
         "marquee_breakpoint_desktop": "Työpöytänäkymän Diat",
         "marquee_breakpoint_tablet": "Tablet-näkymän Diat",
         "marquee_breakpoint_mobile": "Mobiilinäkymän Diat"
       },
       "blocks": {
-        "image": {
-          "name": "Kuva",
+        "image_slide": {
+          "name": "",
           "settings": {
             "logo_image": "Logokuva"
+          }
+        },
+        "content_slide": {
+          "name": "Sisältö",
+          "settings": {
+            "content": "Sisältö"
           }
         }
       },

@@ -2770,16 +2770,24 @@
         "padding_bottom": "Unteres Polster",
         "color_scheme": "Farbschema",
         "swiper_settings": "Swiper-Einstellungen",
+        "autoplay_speed": "Autoplay-Geschwindigkeit",
+        "stop_on_hover": "Beim Hovern stoppen",
         "enable_autoplay": "Autoplay für Desktop aktivieren",
         "marquee_breakpoint_desktop": "Desktop-Slides",
         "marquee_breakpoint_tablet": "Tablet-Slides",
         "marquee_breakpoint_mobile": "Mobile-Slides"
       },
       "blocks": {
-        "image": {
+        "image_slide": {
           "name": "Bild",
           "settings": {
             "logo_image": "Logo-Bild"
+          }
+        },
+        "content_slide": {
+          "name": "Inhalt",
+          "settings": {
+            "content": "Inhalt"
           }
         }
       },

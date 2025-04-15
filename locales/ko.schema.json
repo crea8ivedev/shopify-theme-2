@@ -2770,16 +2770,24 @@
         "padding_bottom": "하단 여백",
         "color_scheme": "색 구성표",
         "swiper_settings": "Swiper 설정",
+        "autoplay_speed": "자동 재생 속도",
+        "stop_on_hover": "마우스 오버 시 중지",
         "enable_autoplay": "데스크탑 자동 재생 활성화",
         "marquee_breakpoint_desktop": "데스크탑 슬라이드",
         "marquee_breakpoint_tablet": "태블릿 슬라이드",
         "marquee_breakpoint_mobile": "모바일 슬라이드"
       },
       "blocks": {
-        "image": {
+        "image_slide": {
           "name": "이미지",
           "settings": {
             "logo_image": "로고 이미지"
+          }
+        },
+        "content_slide": {
+          "name": "콘텐츠",
+          "settings": {
+            "content": "콘텐츠"
           }
         }
       },

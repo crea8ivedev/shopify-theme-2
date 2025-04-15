@@ -2771,15 +2771,23 @@
         "color_scheme": "Färgschema",
         "swiper_settings": "Swiper-inställningar",
         "enable_autoplay": "Aktivera autospel för stationära datorer",
+        "autoplay_speed": "Autoplay-hastighet",
+        "stop_on_hover": "Stoppa vid hover",
         "marquee_breakpoint_desktop": "Desktop slides",
         "marquee_breakpoint_tablet": "Tablet slides",
         "marquee_breakpoint_mobile": "Mobil slides"
       },
       "blocks": {
-        "image": {
+        "image_slide": {
           "name": "Bild",
           "settings": {
             "logo_image": "Logobild"
+          }
+        },
+        "content_slide": {
+          "name": "Innehåll",
+          "settings": {
+            "content": "Innehåll"
           }
         }
       },

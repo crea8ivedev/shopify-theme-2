@@ -2771,15 +2771,23 @@
         "color_scheme": "Kleurenschema",
         "swiper_settings": "Swiper-instellingen",
         "enable_autoplay": "Automatisch afspelen inschakelen voor desktop",
+        "autoplay_speed": "Autoplay-snelheid",
+        "stop_on_hover": "Stoppen bij hover",
         "marquee_breakpoint_desktop": "Slides voor desktop",
         "marquee_breakpoint_tablet": "Slides voor tablet",
         "marquee_breakpoint_mobile": "Slides voor mobiel"
       },
       "blocks": {
-        "image": {
+        "image_slide": {
           "name": "Afbeelding",
           "settings": {
             "logo_image": "Logo-afbeelding"
+          }
+        },
+        "content_slide": {
+          "name": "Inhoud",
+          "settings": {
+            "content": "Inhoud"
           }
         }
       },

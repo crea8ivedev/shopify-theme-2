@@ -2771,15 +2771,23 @@
         "color_scheme": "Renk Şeması",
         "swiper_settings": "Swiper Ayarları",
         "enable_autoplay": "Masaüstü için Otomatik Oynatmayı Etkinleştir",
+        "autoplay_speed": "Otomatik Oynatma Hızı",
+        "stop_on_hover": "Fare Üzerinde Duraklat",
         "marquee_breakpoint_desktop": "Masaüstü Slaytları",
         "marquee_breakpoint_tablet": "Tablet Slaytları",
         "marquee_breakpoint_mobile": "Mobil Slaytları"
       },
       "blocks": {
-        "image": {
+        "image_slide": {
           "name": "Görsel",
           "settings": {
             "logo_image": "Logo Görseli"
+          }
+        },
+        "content_slide": {
+          "name": "İçerik",
+          "settings": {
+            "content": "İçerik"
           }
         }
       },

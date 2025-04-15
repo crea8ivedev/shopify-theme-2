@@ -2771,15 +2771,23 @@
         "color_scheme": "Schemat kolorów",
         "swiper_settings": "Ustawienia Swipera",
         "enable_autoplay": "Włącz automatyczne odtwarzanie na komputerze stacjonarnym",
+        "autoplay_speed": "Szybkość automatycznego odtwarzania",
+        "stop_on_hover": "Zatrzymaj przy najechaniu",
         "marquee_breakpoint_desktop": "Slajdy na komputerze stacjonarnym",
         "marquee_breakpoint_tablet": "Slajdy na tablecie",
         "marquee_breakpoint_mobile": "Slajdy na telefonie komórkowym"
       },
       "blocks": {
-        "image": {
+        "image_slide": {
           "name": "Obraz",
           "settings": {
             "logo_image": "Obraz logo"
+          }
+        },
+        "content_slide": {
+          "name": "Treść",
+          "settings": {
+            "content": "Treść"
           }
         }
       },

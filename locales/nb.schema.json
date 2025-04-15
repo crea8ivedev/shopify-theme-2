@@ -2771,15 +2771,23 @@
         "color_scheme": "Fargeskjema",
         "swiper_settings": "Swiper-innstillinger",
         "enable_autoplay": "Aktiver automatisk avspilling for skrivebord",
+        "autoplay_speed": "Autoplay-hastighet",
+        "stop_on_hover": "Stopp ved hover",
         "marquee_breakpoint_desktop": "Skrivebordsslider",
         "marquee_breakpoint_tablet": "Nettbrettslider",
         "marquee_breakpoint_mobile": "Mobilsilder"
       },
       "blocks": {
-        "image": {
+        "image_slide": {
           "name": "Bilde",
           "settings": {
             "logo_image": "Logo bilde"
+          }
+        },
+        "content_slide": {
+          "name": "Innhold",
+          "settings": {
+            "content": "Innhold"
           }
         }
       },

@@ -2771,15 +2771,23 @@
         "color_scheme": "Schema dei colori",
         "swiper_settings": "Impostazioni dello swiper",
         "enable_autoplay": "Abilita riproduzione automatica su desktop",
+        "autoplay_speed": "Velocità di riproduzione automatica",
+        "stop_on_hover": "Ferma al passaggio del cursore",
         "marquee_breakpoint_desktop": "Diapositive desktop",
         "marquee_breakpoint_tablet": "Diapositive tablet",
         "marquee_breakpoint_mobile": "Diapositive mobile"
       },
       "blocks": {
-        "image": {
+        "image_slide": {
           "name": "Immagine",
           "settings": {
             "logo_image": "Immagine del logo"
+          }
+        },
+        "content_slide": {
+          "name": "Contenuto",
+          "settings": {
+            "content": "Contenuto"
           }
         }
       },

@@ -2771,15 +2771,23 @@
         "color_scheme": "配色方案",
         "swiper_settings": "Swiper 設定",
         "enable_autoplay": "啟用桌面自動播放",
+        "autoplay_speed": "自動播放速度",
+        "stop_on_hover": "懸停時停止",
         "marquee_breakpoint_desktop": "桌面幻燈片",
         "marquee_breakpoint_tablet": "平板幻燈片",
         "marquee_breakpoint_mobile": "手機幻燈片"
       },
       "blocks": {
-        "image": {
+        "image_slide": {
           "name": "圖片",
           "settings": {
             "logo_image": "Logo 圖片"
+          }
+        },
+        "content_slide": {
+          "name": "內容",
+          "settings": {
+            "content": "內容"
           }
         }
       },

@@ -2771,15 +2771,23 @@
         "color_scheme": "Esquema de Cores",
         "swiper_settings": "Configurações do Swiper",
         "enable_autoplay": "Ativar Reprodução Automática para Desktop",
+        "autoplay_speed": "Velocidade de Reprodução Automática",
+        "stop_on_hover": "Parar ao passar o cursor",
         "marquee_breakpoint_desktop": "Slides para Desktop",
         "marquee_breakpoint_tablet": "Slides para Tablet",
         "marquee_breakpoint_mobile": "Slides para Móvel"
       },
       "blocks": {
-        "image": {
+        "image_slide": {
           "name": "Imagem",
           "settings": {
             "logo_image": "Imagem do Logo"
+          }
+        },
+        "content_slide": {
+          "name": "Conteúdo",
+          "settings": {
+            "content": "Conteúdo"
           }
         }
       },

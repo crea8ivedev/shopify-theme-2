@@ -2771,15 +2771,23 @@
         "color_scheme": "Barevné schéma",
         "swiper_settings": "Nastavení posuvníku",
         "enable_autoplay": "Povolit automatické přehrávání pro desktop",
+        "autoplay_speed": "Rychlost automatického přehrávání",
         "marquee_breakpoint_desktop": "Snímky pro desktop",
         "marquee_breakpoint_tablet": "Snímky pro tablet",
-        "marquee_breakpoint_mobile": "Snímky pro mobil"
+        "marquee_breakpoint_mobile": "Snímky pro mobil",
+        "stop_on_hover": "Zastavit při najetí"
       },
       "blocks": {
-        "image": {
+        "image_slide": {
           "name": "Obrázek",
           "settings": {
             "logo_image": "Logo obrázek"
+          }
+        },
+        "content_slide": {
+          "name": "Obsah",
+          "settings": {
+            "content": "Obsah"
           }
         }
       },
