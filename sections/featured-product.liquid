@@ -150,6 +150,13 @@
                       {%- endform -%}
                     </div>
                   {%- endunless -%}
+                  <p class="description-block">
+                    {% if product.description != blank %}
+                      {{ product.description }}
+                    {% else %}
+                      Cursus sit amet dictum sit amet. Cras adipiscing enim eu turpis egestas pretium aenean.
+                    {% endif %}
+                  </p>
                 {%- when 'sku' -%}
                   <p
                     class="product__sku{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.sku.size == 0 %} visibility-hidden{% endif %}"
@@ -395,6 +402,8 @@
                     product_form_id: product_form_id,
                     section_id: section.id
                   -%}
+                {% when 'count_down' %}
+                  {% render 'countdown', block: block %}
                 {%- when 'custom_liquid' -%}
                   {{ block.settings.custom_liquid }}
                 {%- when 'rating' -%}
@@ -435,21 +444,11 @@
                       </p>
                     </div>
                   {%- endif -%}
+
                 {%- when 'icon-with-text' -%}
                   {% render 'icon-with-text', block: block %}
               {%- endcase -%}
             {%- endfor -%}
-            <a
-              {% if product == blank %}
-                role="link" aria-disabled="true"
-              {% else %}
-                href="{{ product.url }}"
-              {% endif %}
-              class="link product__view-details animate-arrow"
-            >
-              {{ 'products.product.view_full_details' | t }}
-              {{- 'icon-arrow.svg' | inline_asset_content -}}
-            </a>
           </section>
         </div>
       </div>
@@ -650,7 +649,7 @@
         {
           "type": "checkbox",
           "id": "show_dynamic_checkout",
-          "default": true,
+          "default": false,
           "label": "t:sections.featured-product.blocks.buy_buttons.settings.show_dynamic_checkout.label",
           "info": "t:sections.featured-product.blocks.buy_buttons.settings.show_dynamic_checkout.info"
         },
@@ -660,6 +659,26 @@
           "default": true,
           "label": "t:sections.main-product.blocks.buy_buttons.settings.show_gift_card_recipient.label",
           "info": "t:sections.main-product.blocks.buy_buttons.settings.show_gift_card_recipient.info"
+        }
+      ]
+    },
+    {
+      "type": "count_down",
+      "name": "Count Down",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "sale_text",
+          "label": "Count Down",
+          "default": "Hurry up! Deals end up"
+        },
+        {
+          "type": "text",
+          "id": "date",
+          "label": "Date",
+          "default": "2025-05-05",
+          "info": "This will be something like '2025-05-05'"
         }
       ]
     },
@@ -1470,16 +1489,13 @@
           "type": "price"
         },
         {
+          "type": "rating"
+        },
+        {
           "type": "variant_picker"
         },
         {
-          "type": "quantity_selector"
-        },
-        {
           "type": "buy_buttons"
-        },
-        {
-          "type": "share"
         }
       ]
     }

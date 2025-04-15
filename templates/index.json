@@ -9,89 +9,76 @@
  */
 {
   "sections": {
-    "slideshow_eqDDp9": {
-      "type": "slideshow",
+    "featured_product_UaQn9b": {
+      "type": "featured-product",
       "blocks": {
-        "marquee_fAqgQG": {
-          "type": "marquee",
+        "text_3kQY3G": {
+          "type": "text",
           "settings": {
-            "collection": "",
-            "subheading-marqee": "",
-            "heading-marqee": "",
-            "content-marqee": "",
-            "button_label-marqee": "",
-            "link-marqee": "",
-            "color_bg": ""
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title_R8zHH3": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price_giwkcq": {
+          "type": "price",
+          "settings": {}
+        },
+        "rating_MVnDbA": {
+          "type": "rating",
+          "settings": {}
+        },
+        "variant_picker_gQcgVU": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "count_down_9eq6QG": {
+          "type": "count_down",
+          "settings": {
+            "sale_text": "Hurry up! Deals end up",
+            "date": "2025-05-05"
+          }
+        },
+        "buy_buttons_fLYnwG": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": true
           }
         }
       },
       "block_order": [
-        "marquee_fAqgQG"
-      ],
-      "disabled": true,
-      "settings": {
-        "show_navigation_buttons": false,
-        "auto_rotate": false,
-        "change_slides_speed": 5,
-        "slide_height": "small"
-      }
-    },
-    "multicolumn": {
-      "type": "multicolumn",
-      "blocks": {
-        "column1": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column2": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column3": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column1",
-        "column2",
-        "column3"
+        "text_3kQY3G",
+        "title_R8zHH3",
+        "price_giwkcq",
+        "rating_MVnDbA",
+        "variant_picker_gQcgVU",
+        "count_down_9eq6QG",
+        "buy_buttons_fLYnwG"
       ],
       "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "third",
-        "image_ratio": "adapt",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "none",
-        "color_scheme": "scheme-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
+        "product": "hair-spray",
+        "color_scheme": "",
+        "secondary_background": false,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
     }
   },
-  "order": [
-    "slideshow_eqDDp9",
-    "multicolumn"
-  ]
+  "order": ["featured_product_UaQn9b"]
 }
