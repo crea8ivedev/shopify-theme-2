@@ -3,8 +3,6 @@
 
 {%- style -%}
   .section-{{ section.id }}-padding {
-    padding-left: 20px;
-    padding-right: 20px;
     padding-top: calc({{ section.settings.padding_top }}px * 0.75);
     padding-bottom: calc({{ section.settings.padding_bottom }}px  * 0.75);
   }
@@ -35,7 +33,7 @@
     {% if section.blocks.size > 0 %}
       <div class="marquee-images">
         <div
-          class="swiper swiper-container marquee-swiper {% if section.settings.stop_on_hover %} stop-on-hover {% endif %} {% unless section.settings.enable_autoplay %} no-autoplay{% endunless %}"
+          class="swiper swiper-container marquee-swiper {% if section.blocks.size <= 4 %} no-swiper {% endif %} {% if section.settings.stop_on_hover %} stop-on-hover {% endif %} {% unless section.settings.enable_autoplay %} no-autoplay{% endunless %}"
           aria-live="polite"
         >
           <div class="swiper-wrapper">
@@ -57,24 +55,26 @@
                 </div>
               {% endif %}
             {% endfor %}
-            {% for block in section.blocks %}
-              {% if block.settings.logo_image != blank %}
-                <div class="swiper-slide" role="listitem">
-                  <img
-                    src="{{ block.settings.logo_image | image_url }}"
-                    alt="{{ block.settings.logo_image.alt | escape }}"
-                    loading="lazy"
-                    height="auto"
-                    width="auto"
-                  >
-                </div>
-              {% endif %}
-              {% if block.settings.content != blank %}
-                <div class="swiper-slide" role="listitem">
-                  <p>{{ block.settings.content }}</p>
-                </div>
-              {% endif %}
-            {% endfor %}
+            {% if section.blocks.size > 4 %}
+              {% for block in section.blocks %}
+                {% if block.settings.logo_image != blank %}
+                  <div class="swiper-slide" role="listitem">
+                    <img
+                      src="{{ block.settings.logo_image | image_url }}"
+                      alt="{{ block.settings.logo_image.alt | escape }}"
+                      loading="lazy"
+                      height="auto"
+                      width="auto"
+                    >
+                  </div>
+                {% endif %}
+                {% if block.settings.content != blank %}
+                  <div class="swiper-slide" role="listitem">
+                    <p>{{ block.settings.content }}</p>
+                  </div>
+                {% endif %}
+              {% endfor %}
+            {% endif %}
           </div>
         </div>
       </div>
@@ -149,7 +149,7 @@
       "label": "t:sections.marquee.settings.marquee_breakpoint_desktop",
       "id": "marquee_breakpoint_desktop",
       "default": 5,
-      "min": 0,
+      "min": 1,
       "max": 10,
       "step": 1
     },
@@ -158,7 +158,7 @@
       "label": "t:sections.marquee.settings.marquee_breakpoint_tablet",
       "id": "marquee_breakpoint_tablet",
       "default": 4,
-      "min": 0,
+      "min": 1,
       "max": 10,
       "step": 1
     },
@@ -167,7 +167,7 @@
       "label": "t:sections.marquee.settings.marquee_breakpoint_mobile",
       "id": "marquee_breakpoint_mobile",
       "default": 3,
-      "min": 0,
+      "min": 1,
       "max": 10,
       "step": 1
     }

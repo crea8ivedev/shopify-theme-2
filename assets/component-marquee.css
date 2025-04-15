@@ -16,7 +16,7 @@
   display: none;
 }
 
-.marquee-swiper:not(.no-autoplay) .swiper-wrapper {
+.marquee-swiper:not(.no-autoplay):not(.no-swiper) .swiper-wrapper {
   animation: marquee var(--marquee-duration) linear infinite;
   animation-play-state: running;
 }
