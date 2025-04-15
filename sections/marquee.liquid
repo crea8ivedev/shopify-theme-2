@@ -33,13 +33,13 @@
     {% if section.blocks.size > 0 %}
       <div class="marquee-images">
         <div
-          class="swiper swiper-container marquee-swiper {% if section.blocks.size <= 4 %} no-swiper {% endif %} {% if section.settings.stop_on_hover %} stop-on-hover {% endif %} {% unless section.settings.enable_autoplay %} no-autoplay{% endunless %}"
+          class="{% if section.blocks.size <= 4 %} no-swiper {% else %} swiper swiper-container marquee-swiper {% endif %} {% if section.settings.stop_on_hover %} stop-on-hover {% endif %} {% unless section.settings.enable_autoplay %} no-autoplay{% endunless %}"
           aria-live="polite"
         >
-          <div class="swiper-wrapper">
+          <div class="{% if section.blocks.size > 4 %} swiper-wrapper {% else %} marquee-wrapper {% endif %}">
             {% for block in section.blocks %}
               {% if block.settings.logo_image != blank %}
-                <div class="swiper-slide" role="listitem">
+                <div class="{% if section.blocks.size > 4 %} swiper-slide {% else %} marquee-slide {% endif %}">
                   <img
                     src="{{ block.settings.logo_image | image_url }}"
                     alt="{{ block.settings.logo_image.alt | escape }}"
@@ -50,7 +50,7 @@
                 </div>
               {% endif %}
               {% if block.settings.content != blank %}
-                <div class="swiper-slide" role="listitem">
+                <div class="{% if section.blocks.size > 4 %} swiper-slide {% else %} marquee-slide {% endif %}">
                   <p>{{ block.settings.content }}</p>
                 </div>
               {% endif %}
