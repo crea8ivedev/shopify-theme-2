@@ -2762,6 +2762,31 @@
         "name": "电子邮件注册横幅"
       }
     },
+    "marquee": {
+      "name": "Marquee",
+      "settings": {
+        "section_padding": "区域内边距",
+        "padding_top": "顶部内边距",
+        "padding_bottom": "底部内边距",
+        "color_scheme": "配色方案",
+        "swiper_settings": "Swiper 设置",
+        "enable_autoplay": "启用桌面自动播放",
+        "marquee_breakpoint_desktop": "桌面幻灯片",
+        "marquee_breakpoint_tablet": "平板幻灯片",
+        "marquee_breakpoint_mobile": "手机幻灯片"
+      },
+      "blocks": {
+        "image": {
+          "name": "图片",
+          "settings": {
+            "logo_image": "Logo 图片"
+          }
+        }
+      },
+      "presets": {
+        "name": "Marquee"
+      }
+    },
     "slideshow": {
       "name": "幻灯片",
       "settings": {

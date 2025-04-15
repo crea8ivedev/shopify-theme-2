@@ -25,9 +25,7 @@
           }
         }
       },
-      "block_order": [
-        "marquee_fAqgQG"
-      ],
+      "block_order": ["marquee_fAqgQG"],
       "disabled": true,
       "settings": {
         "show_navigation_buttons": false,
@@ -67,11 +65,7 @@
           }
         }
       },
-      "block_order": [
-        "column1",
-        "column2",
-        "column3"
-      ],
+      "block_order": ["column1", "column2", "column3"],
       "disabled": true,
       "settings": {
         "title": "",
@@ -93,58 +87,63 @@
     "marquee_Wgw8KT": {
       "type": "marquee",
       "blocks": {
-        "image_QFWL97": {
-          "type": "image",
+        "image_slide_awDcTz": {
+          "type": "image_slide",
           "settings": {
-            "logo_image": "shopify://shop_images/p_g_1.png"
+            "logo_image": "shopify://shop_images/wella_1.png"
           }
         },
-        "image_t8htmx": {
-          "type": "image",
-          "settings": {
-            "logo_image": "shopify://shop_images/mac_1.png"
-          }
-        },
-        "image_7w4hhm": {
-          "type": "image",
+        "image_slide_kwaPKr": {
+          "type": "image_slide",
           "settings": {
             "logo_image": "shopify://shop_images/LOreal-Symbol-1024x403_1.png"
           }
         },
-        "image_MwYAX9": {
-          "type": "image",
+        "image_slide_aGH9nn": {
+          "type": "image_slide",
           "settings": {
-            "logo_image": "shopify://shop_images/png-clipart-brand-logo-product-design-font-cosmetic-beauty-text-cosmetics_1.png"
+            "logo_image": "shopify://shop_images/p_g_1.png"
           }
         },
-        "image_LcFRyY": {
-          "type": "image",
+        "content_slide_ckwFmF": {
+          "type": "content_slide",
           "settings": {
-            "logo_image": "shopify://shop_images/wella_1.png"
+            "content": "Hurry up 10% off for all items"
+          }
+        },
+        "image_slide_4hDtmG": {
+          "type": "image_slide",
+          "settings": {
+            "logo_image": "shopify://shop_images/mac_1.png"
+          }
+        },
+        "image_slide_cwDyqw": {
+          "type": "image_slide",
+          "settings": {
+            "logo_image": "shopify://shop_images/png-clipart-brand-logo-product-design-font-cosmetic-beauty-text-cosmetics_1.png"
           }
         }
       },
       "block_order": [
-        "image_QFWL97",
-        "image_t8htmx",
-        "image_7w4hhm",
-        "image_MwYAX9",
-        "image_LcFRyY"
+        "image_slide_awDcTz",
+        "image_slide_kwaPKr",
+        "image_slide_aGH9nn",
+        "content_slide_ckwFmF",
+        "image_slide_4hDtmG",
+        "image_slide_cwDyqw"
       ],
       "settings": {
         "padding_top": 50,
         "padding_bottom": 50,
         "color_scheme": "scheme-1",
         "enable_autoplay": true,
-        "marquee_breakpoint_desktop": 7,
-        "marquee_breakpoint_tablet": 6,
+        "stop_on_hover": true,
+        "autoplay_speed": 35,
+        "marquee_breakpoint_desktop": 5,
+        "marquee_breakpoint_tablet": 4,
         "marquee_breakpoint_mobile": 3
       }
     }
   },
-  "order": [
-    "slideshow_eqDDp9",
-    "multicolumn",
-    "marquee_Wgw8KT"
-  ]
+  "order": ["slideshow_eqDDp9", "multicolumn", "marquee_Wgw8KT"]
 }

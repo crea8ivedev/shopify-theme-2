@@ -2762,6 +2762,31 @@
         "name": "Bannière d'inscription à la liste de diffusion"
       }
     },
+    "marquee": {
+      "name": "Marquee défilante",
+      "settings": {
+        "section_padding": "Marge de la section",
+        "padding_top": "Marge supérieure",
+        "padding_bottom": "Marge inférieure",
+        "color_scheme": "Schéma de couleurs",
+        "swiper_settings": "Paramètres du carrousel",
+        "enable_autoplay": "Activer la lecture automatique sur ordinateur",
+        "marquee_breakpoint_desktop": "Diapositives sur ordinateur",
+        "marquee_breakpoint_tablet": "Diapositives sur tablette",
+        "marquee_breakpoint_mobile": "Diapositives sur mobile"
+      },
+      "blocks": {
+        "image": {
+          "name": "Image",
+          "settings": {
+            "logo_image": "Image du logo"
+          }
+        }
+      },
+      "presets": {
+        "name": "Marquee défilante"
+      }
+    },
     "slideshow": {
       "name": "Diaporama",
       "settings": {

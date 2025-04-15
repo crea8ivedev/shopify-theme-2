@@ -2762,6 +2762,31 @@
         "name": "Banner voor aanmelding voor het ontvangen van e-mail"
       }
     },
+    "marquee": {
+      "name": "Marquee",
+      "settings": {
+        "section_padding": "Sectie-opvulling",
+        "padding_top": "Bovenopvulling",
+        "padding_bottom": "Onderopvulling",
+        "color_scheme": "Kleurenschema",
+        "swiper_settings": "Swiper-instellingen",
+        "enable_autoplay": "Automatisch afspelen inschakelen voor desktop",
+        "marquee_breakpoint_desktop": "Slides voor desktop",
+        "marquee_breakpoint_tablet": "Slides voor tablet",
+        "marquee_breakpoint_mobile": "Slides voor mobiel"
+      },
+      "blocks": {
+        "image": {
+          "name": "Afbeelding",
+          "settings": {
+            "logo_image": "Logo-afbeelding"
+          }
+        }
+      },
+      "presets": {
+        "name": "Marquee"
+      }
+    },
     "slideshow": {
       "name": "Diavoorstelling",
       "settings": {

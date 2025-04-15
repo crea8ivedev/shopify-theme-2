@@ -2762,6 +2762,31 @@
         "name": "แบนเนอร์การลงทะเบียนอีเมล"
       }
     },
+    "marquee": {
+      "name": "Marquee",
+      "settings": {
+        "section_padding": "การเว้นระยะของส่วน",
+        "padding_top": "การเว้นระยะด้านบน",
+        "padding_bottom": "การเว้นระยะด้านล่าง",
+        "color_scheme": "โทนสี",
+        "swiper_settings": "การตั้งค่า Swiper",
+        "enable_autoplay": "เปิดใช้งานการเล่นอัตโนมัติสำหรับเดสก์ท็อป",
+        "marquee_breakpoint_desktop": "สไลด์สำหรับเดสก์ท็อป",
+        "marquee_breakpoint_tablet": "สไลด์สำหรับแท็บเล็ต",
+        "marquee_breakpoint_mobile": "สไลด์สำหรับมือถือ"
+      },
+      "blocks": {
+        "image": {
+          "name": "รูปภาพ",
+          "settings": {
+            "logo_image": "รูปภาพโลโก้"
+          }
+        }
+      },
+      "presets": {
+        "name": "Marquee"
+      }
+    },
     "slideshow": {
       "name": "สไลด์โชว์",
       "settings": {

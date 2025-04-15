@@ -2762,6 +2762,31 @@
         "name": "Banner di iscrizione alla newsletter"
       }
     },
+    "marquee": {
+      "name": "Marquee",
+      "settings": {
+        "section_padding": "Spaziatura della sezione",
+        "padding_top": "Spaziatura superiore",
+        "padding_bottom": "Spaziatura inferiore",
+        "color_scheme": "Schema dei colori",
+        "swiper_settings": "Impostazioni dello swiper",
+        "enable_autoplay": "Abilita riproduzione automatica su desktop",
+        "marquee_breakpoint_desktop": "Diapositive desktop",
+        "marquee_breakpoint_tablet": "Diapositive tablet",
+        "marquee_breakpoint_mobile": "Diapositive mobile"
+      },
+      "blocks": {
+        "image": {
+          "name": "Immagine",
+          "settings": {
+            "logo_image": "Immagine del logo"
+          }
+        }
+      },
+      "presets": {
+        "name": "Marquee"
+      }
+    },
     "slideshow": {
       "name": "Presentazione",
       "settings": {

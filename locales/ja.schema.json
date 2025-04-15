@@ -2762,6 +2762,31 @@
         "name": "メール登録者バナー"
       }
     },
+    "marquee": {
+      "name": "マーキー",
+      "settings": {
+        "section_padding": "セクションの余白",
+        "padding_top": "上部の余白",
+        "padding_bottom": "下部の余白",
+        "color_scheme": "カラースキーム",
+        "swiper_settings": "Swiper設定",
+        "enable_autoplay": "デスクトップで自動再生を有効にする",
+        "marquee_breakpoint_desktop": "デスクトップスライド",
+        "marquee_breakpoint_tablet": "タブレットスライド",
+        "marquee_breakpoint_mobile": "モバイルスライド"
+      },
+      "blocks": {
+        "image": {
+          "name": "画像",
+          "settings": {
+            "logo_image": "ロゴ画像"
+          }
+        }
+      },
+      "presets": {
+        "name": "マーキー"
+      }
+    },
     "slideshow": {
       "name": "スライドショー",
       "settings": {

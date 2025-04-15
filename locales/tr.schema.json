@@ -2762,6 +2762,31 @@
         "name": "E-posta kaydı banner'ı"
       }
     },
+    "marquee": {
+      "name": "Marquee",
+      "settings": {
+        "section_padding": "Bölüm Dolgusu",
+        "padding_top": "Üst Dolgu",
+        "padding_bottom": "Alt Dolgu",
+        "color_scheme": "Renk Şeması",
+        "swiper_settings": "Swiper Ayarları",
+        "enable_autoplay": "Masaüstü için Otomatik Oynatmayı Etkinleştir",
+        "marquee_breakpoint_desktop": "Masaüstü Slaytları",
+        "marquee_breakpoint_tablet": "Tablet Slaytları",
+        "marquee_breakpoint_mobile": "Mobil Slaytları"
+      },
+      "blocks": {
+        "image": {
+          "name": "Görsel",
+          "settings": {
+            "logo_image": "Logo Görseli"
+          }
+        }
+      },
+      "presets": {
+        "name": "Marquee"
+      }
+    },
     "slideshow": {
       "name": "Slayt Gösterisi",
       "settings": {

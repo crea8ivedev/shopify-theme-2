@@ -1617,33 +1617,3 @@ class CartPerformance {
     performance.measure(metricName, `${metricName}:start`, `${metricName}:end`);
   }
 }
-
-//Marquee Swiper
-const swiper = new Swiper(".marquee-swiper", {
-  slidesPerView: 1,
-  slidesPerGroup: 1,
-  centeredSlides: true, 
-  loop: true,
-  speed:3000,
-  autoplay: window.swiperSettings.autoplay ? { delay: 1000 } : false,
-  breakpoints: {
-    300: {
-      slidesPerView: window.swiperSettings.marquee_breakpoint_mobile, // Set slides per view based on schema setting
-      slidesPerGroup: 1,
-      spaceBetween: 5,
-      centeredSlides: false
-    },
-    768: {
-      slidesPerView: window.swiperSettings.marquee_breakpoint_tablet,  // Set slides per view based on schema setting
-      slidesPerGroup: 1,
-      spaceBetween: 5,
-      centeredSlides: false
-    },
-    1200: {
-      slidesPerView: window.swiperSettings.marquee_breakpoint_desktop + 1,  // Set slides per view based on schema setting
-      slidesPerGroup: 1,
-      spaceBetween: 5,
-      centeredSlides: false
-    }
-  }
-});

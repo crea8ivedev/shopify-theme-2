@@ -2762,6 +2762,31 @@
         "name": "Banner for tilmelding med mail"
       }
     },
+    "marquee": {
+      "name": "Marquee",
+      "settings": {
+        "section_padding": "Sektion Polstring",
+        "padding_top": "Top Polstring",
+        "padding_bottom": "Bund Polstring",
+        "color_scheme": "Farveskema",
+        "swiper_settings": "Swiper Indstillinger",
+        "enable_autoplay": "Aktiver automatisk afspilning til desktop",
+        "marquee_breakpoint_desktop": "Slides til desktop",
+        "marquee_breakpoint_tablet": "Slides til tablet",
+        "marquee_breakpoint_mobile": "Slides til mobil"
+      },
+      "blocks": {
+        "image": {
+          "name": "Billede",
+          "settings": {
+            "logo_image": "Logo Billede"
+          }
+        }
+      },
+      "presets": {
+        "name": "Marquee"
+      }
+    },
     "slideshow": {
       "name": "Diasshow",
       "settings": {

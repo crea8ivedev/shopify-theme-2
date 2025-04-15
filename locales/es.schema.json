@@ -2762,6 +2762,31 @@
         "name": "Banner de suscripción de correo electrónico"
       }
     },
+    "marquee": {
+      "name": "Marquesina",
+      "settings": {
+        "section_padding": "Relleno de Sección",
+        "padding_top": "Relleno Superior",
+        "padding_bottom": "Relleno Inferior",
+        "color_scheme": "Esquema de Colores",
+        "swiper_settings": "Configuración del Swiper",
+        "enable_autoplay": "Activar Reproducción Automática en Escritorio",
+        "marquee_breakpoint_desktop": "Diapositivas de Escritorio",
+        "marquee_breakpoint_tablet": "Diapositivas de Tableta",
+        "marquee_breakpoint_mobile": "Diapositivas de Móvil"
+      },
+      "blocks": {
+        "image": {
+          "name": "Imagen",
+          "settings": {
+            "logo_image": "Imagen del Logo"
+          }
+        }
+      },
+      "presets": {
+        "name": "Marquesina"
+      }
+    },
     "slideshow": {
       "name": "Presentación de diapositivas",
       "settings": {

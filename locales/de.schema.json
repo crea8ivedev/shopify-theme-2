@@ -2762,6 +2762,31 @@
         "name": "Banner für E-Mail-Anmeldung"
       }
     },
+    "marquee": {
+      "name": "Laufband",
+      "settings": {
+        "section_padding": "Abschnittspolsterung",
+        "padding_top": "Oberes Polster",
+        "padding_bottom": "Unteres Polster",
+        "color_scheme": "Farbschema",
+        "swiper_settings": "Swiper-Einstellungen",
+        "enable_autoplay": "Autoplay für Desktop aktivieren",
+        "marquee_breakpoint_desktop": "Desktop-Slides",
+        "marquee_breakpoint_tablet": "Tablet-Slides",
+        "marquee_breakpoint_mobile": "Mobile-Slides"
+      },
+      "blocks": {
+        "image": {
+          "name": "Bild",
+          "settings": {
+            "logo_image": "Logo-Bild"
+          }
+        }
+      },
+      "presets": {
+        "name": "Laufband"
+      }
+    },
     "slideshow": {
       "name": "Diashow",
       "settings": {

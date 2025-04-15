@@ -2762,6 +2762,31 @@
         "name": "Faixa de registo de e-mail"
       }
     },
+    "marquee": {
+      "name": "Marquee",
+      "settings": {
+        "section_padding": "Espaçamento da Seção",
+        "padding_top": "Espaçamento Superior",
+        "padding_bottom": "Espaçamento Inferior",
+        "color_scheme": "Esquema de Cores",
+        "swiper_settings": "Configurações do Swiper",
+        "enable_autoplay": "Ativar Reprodução Automática para Desktop",
+        "marquee_breakpoint_desktop": "Slides para Desktop",
+        "marquee_breakpoint_tablet": "Slides para Tablet",
+        "marquee_breakpoint_mobile": "Slides para Móvel"
+      },
+      "blocks": {
+        "image": {
+          "name": "Imagem",
+          "settings": {
+            "logo_image": "Imagem do Logo"
+          }
+        }
+      },
+      "presets": {
+        "name": "Marquee"
+      }
+    },
     "slideshow": {
       "name": "Apresentação de Slides",
       "settings": {

@@ -2762,6 +2762,31 @@
         "name": "이메일 가입 배너"
       }
     },
+    "marquee": {
+      "name": "마키",
+      "settings": {
+        "section_padding": "섹션 여백",
+        "padding_top": "상단 여백",
+        "padding_bottom": "하단 여백",
+        "color_scheme": "색 구성표",
+        "swiper_settings": "Swiper 설정",
+        "enable_autoplay": "데스크탑 자동 재생 활성화",
+        "marquee_breakpoint_desktop": "데스크탑 슬라이드",
+        "marquee_breakpoint_tablet": "태블릿 슬라이드",
+        "marquee_breakpoint_mobile": "모바일 슬라이드"
+      },
+      "blocks": {
+        "image": {
+          "name": "이미지",
+          "settings": {
+            "logo_image": "로고 이미지"
+          }
+        }
+      },
+      "presets": {
+        "name": "마키"
+      }
+    },
     "slideshow": {
       "name": "슬라이드쇼",
       "settings": {

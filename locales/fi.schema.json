@@ -2762,6 +2762,31 @@
         "name": "Sähköpostirekisteröitymisen banneri"
       }
     },
+    "marquee": {
+      "name": "Mainosnauha",
+      "settings": {
+        "section_padding": "Osion Täyte",
+        "padding_top": "Yläreunan Täyte",
+        "padding_bottom": "Alareunan Täyte",
+        "color_scheme": "Värimaailma",
+        "swiper_settings": "Swiper Asetukset",
+        "enable_autoplay": "Ota Automaattinen Toisto Käyttöön Työpöydällä",
+        "marquee_breakpoint_desktop": "Työpöytänäkymän Diat",
+        "marquee_breakpoint_tablet": "Tablet-näkymän Diat",
+        "marquee_breakpoint_mobile": "Mobiilinäkymän Diat"
+      },
+      "blocks": {
+        "image": {
+          "name": "Kuva",
+          "settings": {
+            "logo_image": "Logokuva"
+          }
+        }
+      },
+      "presets": {
+        "name": "Mainosnauha"
+      }
+    },
     "slideshow": {
       "name": "Diaesitys",
       "settings": {

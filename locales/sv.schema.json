@@ -2762,6 +2762,31 @@
         "name": "Banner för e-postregistrering"
       }
     },
+    "marquee": {
+      "name": "Marquee",
+      "settings": {
+        "section_padding": "Sektionens padding",
+        "padding_top": "Översta padding",
+        "padding_bottom": "Undre padding",
+        "color_scheme": "Färgschema",
+        "swiper_settings": "Swiper-inställningar",
+        "enable_autoplay": "Aktivera autospel för stationära datorer",
+        "marquee_breakpoint_desktop": "Desktop slides",
+        "marquee_breakpoint_tablet": "Tablet slides",
+        "marquee_breakpoint_mobile": "Mobil slides"
+      },
+      "blocks": {
+        "image": {
+          "name": "Bild",
+          "settings": {
+            "logo_image": "Logobild"
+          }
+        }
+      },
+      "presets": {
+        "name": "Marquee"
+      }
+    },
     "slideshow": {
       "name": "Bildspel",
       "settings": {

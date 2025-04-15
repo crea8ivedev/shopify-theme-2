@@ -3,12 +3,13 @@ import pluginJs from "@eslint/js";
 
 export default [
   {
-    files: ["**/*.js"],
     ignores: [
       "assets/**/*.min.js",
       "assets/**/*.min.css",
-      "assets/jquery-3.7.1.min.js",
     ],
+  },
+  {
+    files: ["**/*.js"],
     languageOptions: { sourceType: "module", ecmaVersion: "latest" },
     rules: {
       "no-console": "error", // error about console logs

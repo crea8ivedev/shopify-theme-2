@@ -1,52 +1,86 @@
 {{ 'component-marquee.css' | asset_url | stylesheet_tag }}
-<script src="{{ 'component-marquee.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'component-marquee.js' | asset_url }}" defer></script>
 
 {%- style -%}
-    .section-{{ section.id }}-padding {
-      padding-left: 20px;
-      padding-right: 20px;
-      padding-top: calc({{ section.settings.padding_top }}px * 0.75);
-      padding-bottom: calc({{ section.settings.padding_bottom }}px  * 0.75);
-    }
-  
-    @media screen and (min-width: 750px) {
-      .section-{{ section.id }}-padding {
-        padding-top: {{ section.settings.padding_top }}px;
-        padding-bottom: {{ section.settings.padding_bottom }}px;
-      }
-    }
-{%- endstyle -%}
+  .section-{{ section.id }}-padding {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: calc({{ section.settings.padding_top }}px * 0.75);
+    padding-bottom: calc({{ section.settings.padding_bottom }}px  * 0.75);
+  }
 
-<div class="color-{{ section.settings.color_scheme }} gradient" role="region" aria-label="Image Gallery">
-    <div class="section-{{ section.id }}-padding">
-        {% if section.blocks.size > 0 %}
-        <div class="marquee-images">
-            <div class="swiper marquee-swiper" aria-live="polite">
-                <div class="swiper-wrapper">
-                    {% for block in section.blocks %}
-                    <div class="image swiper-slide" role="listitem">
-                        {% if block.settings.logo_image != '' %}
-                            <img src="{{ block.settings.logo_image | image_url }}" 
-                                 alt="Brand Logo Image" 
-                                 height="auto" width="auto" loading="lazy">
-                        {% endif %}
-                    </div>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
-        {% endif %}
-    </div>
-</div>
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+  {% assign duration = 42 | minus: section.settings.autoplay_speed %}
+  :root {
+    --marquee-duration: {{ duration }}s;
+  }
+{%- endstyle -%}
 
 <script>
   window.swiperSettings = {
     marquee_breakpoint_mobile: {{ section.settings.marquee_breakpoint_mobile }},
     marquee_breakpoint_tablet: {{ section.settings.marquee_breakpoint_tablet }},
     marquee_breakpoint_desktop: {{ section.settings.marquee_breakpoint_desktop }},
-    autoplay: {{ section.settings.enable_autoplay }}
+    autoplay: {{ section.settings.enable_autoplay }},
   };
 </script>
+
+<div class="color-{{ section.settings.color_scheme }} gradient" role="region" aria-label="Image Gallery">
+  <div class="section-{{ section.id }}-padding">
+    {% if section.blocks.size > 0 %}
+      <div class="marquee-images">
+        <div
+          class="swiper swiper-container marquee-swiper {% if section.settings.stop_on_hover %} stop-on-hover {% endif %} {% unless section.settings.enable_autoplay %} no-autoplay{% endunless %}"
+          aria-live="polite"
+        >
+          <div class="swiper-wrapper">
+            {% for block in section.blocks %}
+              {% if block.settings.logo_image != blank %}
+                <div class="swiper-slide" role="listitem">
+                  <img
+                    src="{{ block.settings.logo_image | image_url }}"
+                    alt="{{ block.settings.logo_image.alt | escape }}"
+                    loading="lazy"
+                    height="auto"
+                    width="auto"
+                  >
+                </div>
+              {% endif %}
+              {% if block.settings.content != blank %}
+                <div class="swiper-slide" role="listitem">
+                  <p>{{ block.settings.content }}</p>
+                </div>
+              {% endif %}
+            {% endfor %}
+            {% for block in section.blocks %}
+              {% if block.settings.logo_image != blank %}
+                <div class="swiper-slide" role="listitem">
+                  <img
+                    src="{{ block.settings.logo_image | image_url }}"
+                    alt="{{ block.settings.logo_image.alt | escape }}"
+                    loading="lazy"
+                    height="auto"
+                    width="auto"
+                  >
+                </div>
+              {% endif %}
+              {% if block.settings.content != blank %}
+                <div class="swiper-slide" role="listitem">
+                  <p>{{ block.settings.content }}</p>
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</div>
 
 {% schema %}
 {
@@ -90,16 +124,31 @@
       "content": "t:sections.marquee.settings.swiper_settings"
     },
     {
-        "type": "checkbox",
-        "label": "t:sections.marquee.settings.enable_autoplay",
-        "id": "enable_autoplay",
-        "default": true
+      "type": "checkbox",
+      "label": "t:sections.marquee.settings.enable_autoplay",
+      "id": "enable_autoplay",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "label": "t:sections.marquee.settings.stop_on_hover",
+      "id": "stop_on_hover",
+      "default": true
+    },
+    {
+      "type": "range",
+      "label": "t:sections.marquee.settings.autoplay_speed",
+      "id": "autoplay_speed",
+      "default": 10,
+      "min": 1,
+      "max": 40,
+      "step": 1
     },
     {
       "type": "range",
       "label": "t:sections.marquee.settings.marquee_breakpoint_desktop",
       "id": "marquee_breakpoint_desktop",
-      "default": 8,
+      "default": 5,
       "min": 0,
       "max": 10,
       "step": 1
@@ -108,7 +157,7 @@
       "type": "range",
       "label": "t:sections.marquee.settings.marquee_breakpoint_tablet",
       "id": "marquee_breakpoint_tablet",
-      "default": 7,
+      "default": 4,
       "min": 0,
       "max": 10,
       "step": 1
@@ -125,13 +174,24 @@
   ],
   "blocks": [
     {
-      "type": "image",
-      "name": "t:sections.marquee.blocks.image.name",
+      "type": "image_slide",
+      "name": "t:sections.marquee.blocks.image_slide.name",
       "settings": [
         {
           "type": "image_picker",
-          "label": "t:sections.marquee.blocks.image.settings.logo_image",
+          "label": "t:sections.marquee.blocks.image_slide.settings.logo_image",
           "id": "logo_image"
+        }
+      ]
+    },
+    {
+      "type": "content_slide",
+      "name": "t:sections.marquee.blocks.content_slide.name",
+      "settings": [
+        {
+          "type": "text",
+          "label": "t:sections.marquee.blocks.content_slide.settings.content",
+          "id": "content"
         }
       ]
     }

@@ -2762,6 +2762,31 @@
         "name": "Baner rejestracji w celu otrzymywania e-maili"
       }
     },
+    "marquee": {
+      "name": "Marquee",
+      "settings": {
+        "section_padding": "Odstęp sekcji",
+        "padding_top": "Odstęp u góry",
+        "padding_bottom": "Odstęp na dole",
+        "color_scheme": "Schemat kolorów",
+        "swiper_settings": "Ustawienia Swipera",
+        "enable_autoplay": "Włącz automatyczne odtwarzanie na komputerze stacjonarnym",
+        "marquee_breakpoint_desktop": "Slajdy na komputerze stacjonarnym",
+        "marquee_breakpoint_tablet": "Slajdy na tablecie",
+        "marquee_breakpoint_mobile": "Slajdy na telefonie komórkowym"
+      },
+      "blocks": {
+        "image": {
+          "name": "Obraz",
+          "settings": {
+            "logo_image": "Obraz logo"
+          }
+        }
+      },
+      "presets": {
+        "name": "Marquee"
+      }
+    },
     "slideshow": {
       "name": "Pokaz slajdów",
       "settings": {
