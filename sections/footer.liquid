@@ -206,7 +206,7 @@
                           >
                             <span class="svg-wrapper">
                               <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M2.0625 1.25C1.84766 1.25 1.67188 1.4375 1.67188 1.66667V2.24219L5.8833 5.92969C6.38867 6.3724 7.11377 6.3724 7.61914 5.92969L11.8281 2.24219V1.66667C11.8281 1.4375 11.6523 1.25 11.4375 1.25H2.0625ZM1.67188 3.85938V8.33333C1.67188 8.5625 1.84766 8.75 2.0625 8.75H11.4375C11.6523 8.75 11.8281 8.5625 11.8281 8.33333V3.85938L8.36133 6.89583C7.42383 7.71615 6.07373 7.71615 5.13867 6.89583L1.67188 3.85938ZM0.5 1.66667C0.5 0.747396 1.20068 0 2.0625 0H11.4375C12.2993 0 13 0.747396 13 1.66667V8.33333C13 9.2526 12.2993 10 11.4375 10H2.0625C1.20068 10 0.5 9.2526 0.5 8.33333V1.66667Z" fill="#686868"/>
+                                <path style="fill: #944E63;" d="M2.0625 1.25C1.84766 1.25 1.67188 1.4375 1.67188 1.66667V2.24219L5.8833 5.92969C6.38867 6.3724 7.11377 6.3724 7.61914 5.92969L11.8281 2.24219V1.66667C11.8281 1.4375 11.6523 1.25 11.4375 1.25H2.0625ZM1.67188 3.85938V8.33333C1.67188 8.5625 1.84766 8.75 2.0625 8.75H11.4375C11.6523 8.75 11.8281 8.5625 11.8281 8.33333V3.85938L8.36133 6.89583C7.42383 7.71615 6.07373 7.71615 5.13867 6.89583L1.67188 3.85938ZM0.5 1.66667C0.5 0.747396 1.20068 0 2.0625 0H11.4375C12.2993 0 13 0.747396 13 1.66667V8.33333C13 9.2526 12.2993 10 11.4375 10H2.0625C1.20068 10 0.5 9.2526 0.5 8.33333V1.66667Z" fill="#686868"/>
                               </svg>
                             </span>
                           </button>
@@ -299,10 +299,10 @@
       data-cascade
     {% endif %}
   >
-    <div class="footer__content-bottom-wrapper page-width{% if section.settings.enable_country_selector == false and section.settings.enable_language_selector == false %} footer__content-bottom-wrapper--center{% endif %}">
+    <div class="footer__content-bottom-wrapper {% if section.settings.enable_country_selector == false and section.settings.enable_language_selector == false %} footer__content-bottom-wrapper--center{% endif %}">
       <div class="footer__copyright caption">
         <small class="copyright__content"
-          >&copy; {{ 'now' | date: '%Y' }}, Aura Beauty is proudly powered by
+          >&copy;{{ 'now' | date: '%Y' }} Aura Beauty is proudly powered by
         </small>
         <a class="powered-by list-unstyled" href="https://encircletechnologies.com/"> | Encircle Technologies</a>
       </div>
