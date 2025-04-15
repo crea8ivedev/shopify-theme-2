@@ -1183,6 +1183,29 @@
         "name": "Bannerafbeelding"
       }
     },
+    "login_popup": {
+      "name": "Klantenpop-up",
+      "settings": {
+        "display_logo": {
+          "label": "Logo weergeven"
+        },
+        "color_popup": {
+          "label": "Achtergrondkleur"
+        },
+        "bg-image": {
+          "label": "Achtergrondafbeelding"
+        },
+        "position_popup": {
+          "label": "Popup-positie",
+          "options__1": {
+            "label": "Links"
+          },
+          "options__2": {
+            "label": "Midden"
+          }
+        }
+      }
+    },
     "image-with-text": {
       "name": "Afbeelding met tekst",
       "settings": {

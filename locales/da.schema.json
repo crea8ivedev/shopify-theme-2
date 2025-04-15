@@ -1183,6 +1183,29 @@
         "name": "Billedbanner"
       }
     },
+    "login_popup": {
+      "name": "Kundenpopup",
+      "settings": {
+        "display_logo": {
+          "label": "Logo anzeigen"
+        },
+        "color_popup": {
+          "label": "Baggrundsfarve"
+        },
+        "bg-image": {
+          "label": "Vælg baggrundsbillede"
+        },
+        "position_popup": {
+          "label": "Popup-position",
+          "options__1": {
+            "label": "Venstre"
+          },
+          "options__2": {
+            "label": "Center"
+          }
+        }
+      }
+    },
     "image-with-text": {
       "name": "Billede med tekst",
       "settings": {

@@ -1183,6 +1183,29 @@
         "name": "Bild-Banner"
       }
     },
+    "login_popup": {
+      "name": "Kundenpopup",
+      "settings": {
+        "display_logo": {
+          "label": "Logo anzeigen"
+        },
+        "color_popup": {
+          "label": "Hintergrundfarbe"
+        },
+        "bg-image": {
+          "label": "Hintergrundbild"
+        },
+        "position_popup": {
+          "label": "Popup-Position",
+          "options__1": {
+            "label": "Links"
+          },
+          "options__2": {
+            "label": "Mitte"
+          }
+        }
+      }
+    },
     "image-with-text": {
       "name": "Bild mit Text",
       "settings": {

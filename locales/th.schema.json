@@ -1183,6 +1183,29 @@
         "name": "แบนเนอร์รูปภาพ"
       }
     },
+    "login_popup": {
+      "name": "ป๊อปอัพของลูกค้า",
+      "settings": {
+        "display_logo": {
+          "label": "แสดงโลโก้"
+        },
+        "color_popup": {
+          "label": "สีพื้นหลัง"
+        },
+        "bg-image": {
+          "label": "รูปภาพพื้นหลัง"
+        },
+        "position_popup": {
+          "label": "ตำแหน่ง",
+          "options__1": {
+            "label": "ซ้าย"
+          },
+          "options__2": {
+            "label": "กึ่งกลาง"
+          }
+        }
+      }
+    },
     "image-with-text": {
       "name": "รูปภาพพร้อมข้อความ",
       "settings": {

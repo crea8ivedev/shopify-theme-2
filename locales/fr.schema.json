@@ -1183,6 +1183,29 @@
         "name": "Bannière avec image"
       }
     },
+    "login_popup": {
+      "name": "Popup de client",
+      "settings": {
+        "display_logo": {
+          "label": "Afficher le logo"
+        },
+        "color_popup": {
+          "label": "Couleur de fond"
+        },
+        "bg-image": {
+          "label": "Image de fond"
+        },
+        "position_popup": {
+          "label": "Position du popup",
+          "options__1": {
+            "label": "Gauche"
+          },
+          "options__2": {
+            "label": "Centre"
+          }
+        }
+      }
+    },
     "image-with-text": {
       "name": "Image avec texte",
       "settings": {

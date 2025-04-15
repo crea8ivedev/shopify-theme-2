@@ -1183,6 +1183,29 @@
         "name": "Görsel banner'ı"
       }
     },
+    "login_popup": {
+      "name": "Müşteri pop-up",
+      "settings": {
+        "display_logo": {
+          "label": "Logo görüntüle"
+        },
+        "color_popup": {
+          "label": "Arka plan rengi"
+        },
+        "bg-image": {
+          "label": "Arka plan görseli"
+        },
+        "position_popup": {
+          "label": "Pozisyon",
+          "options__1": {
+            "label": "Sol"
+          },
+          "options__2": {
+            "label": "Orta"
+          }
+        }
+      }
+    },
     "image-with-text": {
       "name": "Metin içeren görsel",
       "settings": {

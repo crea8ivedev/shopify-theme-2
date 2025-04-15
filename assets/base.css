@@ -2783,16 +2783,6 @@ details[open] > .header__icon--menu .icon-hamburger {
   transform: scale(0.8);
 }
 
-.js details[open]:not(.menu-opening) > .header__icon--menu .icon-close {
-  visibility: hidden;
-}
-
-.js details[open]:not(.menu-opening) > .header__icon--menu .icon-hamburger {
-  visibility: visible;
-  opacity: 1;
-  transform: scale(1.07);
-}
-
 .js details > .header__submenu {
   opacity: 0;
   transform: translateY(-1.5rem);
@@ -3722,9 +3712,36 @@ details-disclosure > details {
     opacity 0.3s ease,
     visibility 0.3s ease;
 }
-
 .mega-menu:hover .mega-menu__content {
   display: block;
   opacity: 1;
   visibility: visible;
+}
+.accordion_main {
+  padding: 0.5em 0;
+  border-bottom: 1px solid #ccc;
+}
+.accordion_question {
+  color: #333;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.3s;
+}
+.accordion_question:hover {
+  color: #000;
+}
+.accordion_main .accordion_question::before {
+  content: ">";
+  display: inline-block;
+  margin-right: 5px;
+  transition: transform 0.3s;
+}
+.accordion_main.active .accordion_question::before {
+  transform: rotate(90deg);
+}
+.accordion_main .accordion_answer {
+  height: 100%;
+  transition: 0.3s linear;
+  overflow: hidden;
+  padding: 0 0.8em;
 }

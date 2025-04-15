@@ -1540,6 +1540,29 @@
         "name": "Image banner"
       }
     },
+    "login_popup": {
+      "name": "Account Popup",
+      "settings": {
+        "display_logo": {
+          "label": "Display Logo"
+        },
+        "color_popup": {
+          "label": "Backgroud Color"
+        },
+        "bg-image": {
+          "label": "Custom Background Image"
+        },
+        "position_popup": {
+          "label": "Popup Position",
+          "options__1": {
+            "label": "Left"
+          },
+          "options__2": {
+            "label": "Center"
+          }
+        }
+      }
+    },
     "image-with-text": {
       "name": "Image with text",
       "settings": {

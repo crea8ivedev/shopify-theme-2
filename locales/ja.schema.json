@@ -1183,6 +1183,29 @@
         "name": "画像バナー"
       }
     },
+    "login_popup": {
+      "name": "顧客ポップアップ",
+      "settings": {
+        "display_logo": {
+          "label": "ロゴを表示"
+        },
+        "color_popup": {
+          "label": "背景色"
+        },
+        "bg-image": {
+          "label": "背景画像"
+        },
+        "position_popup": {
+          "label": "ポップアップ位置",
+          "options__1": {
+            "label": "左"
+          },
+          "options__2": {
+            "label": "中央"
+          }
+        }
+      }
+    },
     "image-with-text": {
       "name": "テキスト付き画像",
       "settings": {

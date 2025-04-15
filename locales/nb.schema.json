@@ -1183,6 +1183,29 @@
         "name": "Bildeoverskrift"
       }
     },
+    "login_popup": {
+      "name": "Kundepopup",
+      "settings": {
+        "display_logo": {
+          "label": "Vis logo"
+        },
+        "color_popup": {
+          "label": "Bakgrunnsfarge"
+        },
+        "bg-image": {
+          "label": "Bakgrunnsbilde"
+        },
+        "position_popup": {
+          "label": "Popup-posisjon",
+          "options__1": {
+            "label": "Venstre"
+          },
+          "options__2": {
+            "label": "Midt"
+          }
+        }
+      }
+    },
     "image-with-text": {
       "name": "Bilde med tekst",
       "settings": {

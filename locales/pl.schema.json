@@ -1183,6 +1183,29 @@
         "name": "Baner z obrazem"
       }
     },
+    "login_popup": {
+      "name": "Popup klienta",
+      "settings": {
+        "display_logo": {
+          "label": "Logo wyświetlić"
+        },
+        "color_popup": {
+          "label": "Kolor tła"
+        },
+        "bg-image": {
+          "label": "Obraz tła"
+        },
+        "position_popup": {
+          "label": "Pozycja",
+          "options__1": {
+            "label": "Lewa strona"
+          },
+          "options__2": {
+            "label": "Środek"
+          }
+        }
+      }
+    },
     "image-with-text": {
       "name": "Obraz z tekstem",
       "settings": {

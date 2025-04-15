@@ -1150,6 +1150,11 @@
         "content": "t:settings_schema.global.settings.header__border.content"
       },
       {
+        "type": "checkbox",
+        "id": "login_popup",
+        "label": "Login Popup"
+      },
+      {
         "type": "range",
         "id": "drawer_border_thickness",
         "min": 0,

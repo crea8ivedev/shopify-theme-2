@@ -1183,6 +1183,29 @@
         "name": "圖片橫幅"
       }
     },
+    "login_popup": {
+      "name": "客戶彈窗",
+      "settings": {
+        "display_logo": {
+          "label": "顯示 logo"
+        },
+        "color_popup": {
+          "label": "背景顏色"
+        },
+        "bg-image": {
+          "label": "背景圖片"
+        },
+        "position_popup": {
+          "label": "位置",
+          "options__1": {
+            "label": "左"
+          },
+          "options__2": {
+            "label": "中間"
+          }
+        }
+      }
+    },
     "image-with-text": {
       "name": "附文字的圖片",
       "settings": {

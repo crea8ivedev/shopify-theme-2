@@ -1183,6 +1183,29 @@
         "name": "Kuvabanneri"
       }
     },
+    "login_popup": {
+      "name": "Kundenpopup",
+      "settings": {
+        "display_logo": {
+          "label": "Näytä logo"
+        },
+        "color_popup": {
+          "label": "Taustavari"
+        },
+        "bg-image": {
+          "label": "Taustakuva"
+        },
+        "position_popup": {
+          "label": "Popup-sijainti",
+          "options__1": {
+            "label": "Vasen"
+          },
+          "options__2": {
+            "label": "Keskellä"
+          }
+        }
+      }
+    },
     "image-with-text": {
       "name": "Kuva tekstillä",
       "settings": {

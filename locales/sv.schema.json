@@ -1183,6 +1183,29 @@
         "name": "Bildbanner"
       }
     },
+    "login_popup": {
+      "name": "Kundenpopup",
+      "settings": {
+        "display_logo": {
+          "label": "Visa logo"
+        },
+        "color_popup": {
+          "label": "Hintergrundfärg"
+        },
+        "bg-image": {
+          "label": "Hintergrundbild"
+        },
+        "position_popup": {
+          "label": "Position",
+          "options__1": {
+            "label": "Vänster"
+          },
+          "options__2": {
+            "label": "Centrera"
+          }
+        }
+      }
+    },
     "image-with-text": {
       "name": "Bild med text",
       "settings": {
