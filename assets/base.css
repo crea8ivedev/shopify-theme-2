@@ -1238,6 +1238,7 @@ button.shopify-payment-button__button--unbranded {
   -webkit-appearance: none;
   appearance: none;
   background-color: rgba(var(--color-button), var(--alpha-button-background));
+  border-radius: 100px;
 }
 
 .button:before,
@@ -1254,26 +1255,6 @@ button.shopify-payment-button__button--unbranded {
   border-radius: var(--buttons-radius-outset);
   box-shadow: var(--shadow-horizontal-offset) var(--shadow-vertical-offset)
     var(--shadow-blur-radius) rgba(var(--color-shadow), var(--shadow-opacity));
-}
-
-.button:after,
-.shopify-challenge__button:after,
-.customer button:after,
-.shopify-payment-button__button--unbranded:after {
-  content: "";
-  position: absolute;
-  top: var(--buttons-border-width);
-  right: var(--buttons-border-width);
-  bottom: var(--buttons-border-width);
-  left: var(--buttons-border-width);
-  z-index: 1;
-  border-radius: var(--buttons-radius);
-  box-shadow:
-    0 0 0 calc(var(--buttons-border-width) + var(--border-offset))
-      rgba(var(--color-button-text), var(--border-opacity)),
-    0 0 0 var(--buttons-border-width)
-      rgba(var(--color-button), var(--alpha-button-background));
-  transition: box-shadow var(--duration-short) ease;
 }
 
 .button:not([disabled]):hover::after,
@@ -1375,7 +1356,6 @@ shopify-accelerated-checkout-cart {
 
 .button--full-width {
   display: flex;
-  width: 100%;
 }
 
 .button.loading {
