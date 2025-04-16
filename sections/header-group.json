@@ -32,7 +32,7 @@
           "type": "announcement",
           "settings": {
             "text": "🌟 New test content 🌟",
-            "link": "https://www.google.com"
+            "link": ""
           }
         }
       },
