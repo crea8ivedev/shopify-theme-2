@@ -390,7 +390,7 @@
       },
       "spacing": "Spacing",
       "colors": {
-        "label": "Color scheme",
+        "label": "Color Scheme",
         "has_cards_info": "To change the card color scheme, update your theme settings."
       },
       "heading_size": {
@@ -1520,7 +1520,7 @@
       }
     },
     "image-with-text": {
-      "name": "Image with text",
+      "name": "Media With Text",
       "settings": {
         "header": {
           "content": "Content"
@@ -1531,6 +1531,16 @@
         "image": {
           "label": "Image"
         },
+        "video": {
+          "label": "Video"
+        },
+        "video_url": {
+          "label": "URL"
+        },
+        "cover_image": {
+          "label": "Cover Image"
+        },
+        
         "height": {
           "options__1": {
             "label": "Adapt to image"
@@ -1560,10 +1570,10 @@
         },
         "layout": {
           "options__1": {
-            "label": "Image first"
+            "label": "Image First"
           },
           "options__2": {
-            "label": "Image second"
+            "label": "Image Second"
           },
           "label": "Placement"
         },
@@ -1593,7 +1603,7 @@
         },
         "content_layout": {
           "options__1": {
-            "label": "No overlap"
+            "label": "No Overlap"
           },
           "options__2": {
             "label": "Overlap"
@@ -1610,7 +1620,7 @@
           "options__3": {
             "label": "Right"
           },
-          "label": "Mobile alignment"
+          "label": "Mobile Alignment"
         }
       },
       "blocks": {
@@ -1619,7 +1629,7 @@
           "settings": {
             "heading": {
               "label": "Heading",
-              "default": "Image with text"
+              "default": "Media With Text"
             }
           }
         },
@@ -1683,13 +1693,13 @@
               "label": "Link"
             },
             "outline_button": {
-              "label": "Outline style"
+              "label": "Outline Style"
             }
           }
         }
       },
       "presets": {
-        "name": "Image with text"
+        "name": "Media with text"
       }
     },
     "multirow": {
@@ -1792,7 +1802,7 @@
           "label": "Placement"
         },
         "container_color_scheme": {
-          "label": "Container color scheme"
+          "label": "Container Color Scheme"
         },
         "mobile_content_alignment": {
           "options__1": {
@@ -3244,10 +3254,10 @@
           }
         },
         "container_color_scheme": {
-          "label": "Container color scheme"
+          "label": "Container Color Scheme"
         },
         "section_color_scheme": {
-          "label": "Section color scheme"
+          "label": "Section Color Scheme"
         },
         "open_first_collapsible_row": {
           "label": "Open first row"
@@ -3273,10 +3283,10 @@
         "desktop_layout": {
           "label": "Placement",
           "options__1": {
-            "label": "Image first"
+            "label": "Media first"
           },
           "options__2": {
-            "label": "Image second"
+            "label": "Media second"
           }
         }
       },
