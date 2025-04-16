@@ -102,6 +102,13 @@
   .blog .blog__view-all .blog__button {
     margin-top: 10px;
   }
+  .blog-title-wrapper {
+    margin-bottom: 30px;
+  }
+  .blog-heading-wrapper {
+    text-align: center;
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 750px) {
