@@ -41,16 +41,5 @@
     }
   ],
   "variant": [],
-  "shop": [
-    {
-      "key": "alpine_sports",
-      "namespace": "test_data",
-      "name": "Alpine sport types",
-      "description": "The set of alpine sports that this sport shop specializes in",
-      "type": {
-        "name": "list.single_line_text_field",
-        "category": "TEXT"
-      }
-    }
-  ]
+  "shop": []
 }
