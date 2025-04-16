@@ -390,7 +390,7 @@
       },
       "spacing": "Spacing",
       "colors": {
-        "label": "Color scheme",
+        "label": "Color Scheme",
         "has_cards_info": "To change the card color scheme, update your theme settings."
       },
       "heading_size": {
@@ -2110,7 +2110,11 @@
       "name": "Order"
     },
     "main-page": {
-      "name": "Page"
+      "name": "Page",
+      "settings": {
+        "title_background": "Background Image",
+        "page_title_black": "Title",
+      }
     },
     "main-password-footer": {
       "name": "Password footer"
@@ -3244,10 +3248,10 @@
           }
         },
         "container_color_scheme": {
-          "label": "Container color scheme"
+          "label": "Container Color scheme"
         },
         "section_color_scheme": {
-          "label": "Section color scheme"
+          "label": "Section Color scheme"
         },
         "open_first_collapsible_row": {
           "label": "Open first row"
