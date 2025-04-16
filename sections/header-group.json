@@ -40,7 +40,7 @@
         "show_line_separator": true,
         "show_social": true,
         "enable_country_selector": true,
-        "enable_language_selector": true
+        "enable_language_selector": false
       }
     },
     "header": {
