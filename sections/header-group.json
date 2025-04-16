@@ -21,13 +21,6 @@
             "link": ""
           }
         },
-        "announcement_EfpQki": {
-          "type": "announcement",
-          "settings": {
-            "text": "🌟ABC WOWO GREAT ABC DEMO🌟",
-            "link": "shopify://blogs/news"
-          }
-        },
         "announcement_Fn9RNb": {
           "type": "announcement",
           "settings": {
@@ -38,7 +31,6 @@
       },
       "block_order": [
         "announcement_Q6HNbz",
-        "announcement_EfpQki",
         "announcement_Fn9RNb"
       ],
       "settings": {
