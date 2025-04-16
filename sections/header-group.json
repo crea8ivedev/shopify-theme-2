@@ -14,7 +14,7 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
-        "announcement_Q6HNbz": {
+        "announcement_3Y7mGD": {
           "type": "announcement",
           "settings": {
             "text": "FREE RETURNS & 60 DAY RETURN WINDOW",
@@ -24,13 +24,13 @@
         "announcement_Fn9RNb": {
           "type": "announcement",
           "settings": {
-            "text": "FREE RETURNS & 60 DAY RETURN WINDOW 12 fdsfdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsds",
+            "text": "FREE RETURNS & 60 DAY RETURN WINDOW 12 || FREE RETURNS & 60 DAY RETURN WINDOW 12 || FREE RETURNS & 60 DAY RETURN WINDOW 12",
             "link": ""
           }
         }
       },
       "block_order": [
-        "announcement_Q6HNbz",
+        "announcement_3Y7mGD",
         "announcement_Fn9RNb"
       ],
       "settings": {
