@@ -21,25 +21,25 @@
             "link": ""
           }
         },
+        "announcement_EfpQki": {
+          "type": "announcement",
+          "settings": {
+            "text": "🌟ABC WOWO GREAT ABC DEMO🌟",
+            "link": ""
+          }
+        },
         "announcement_Fn9RNb": {
           "type": "announcement",
           "settings": {
             "text": "FREE RETURNS & 60 DAY RETURN WINDOW",
             "link": ""
           }
-        },
-        "announcement_EfpQki": {
-          "type": "announcement",
-          "settings": {
-            "text": "🌟ABC dsfsdfsfsdfdsfsfdsfsf🌟",
-            "link": ""
-          }
         }
       },
       "block_order": [
         "announcement_Q6HNbz",
-        "announcement_Fn9RNb",
-        "announcement_EfpQki"
+        "announcement_EfpQki",
+        "announcement_Fn9RNb"
       ],
       "settings": {
         "auto_rotate": false,
