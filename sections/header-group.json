@@ -23,6 +23,7 @@
         },
         "announcement_Fn9RNb": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "FREE RETURNS & 60 DAY RETURN WINDOW",
             "link": ""
