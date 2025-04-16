@@ -12,13 +12,6 @@
     "featured_product_UaQn9b": {
       "type": "featured-product",
       "blocks": {
-        "text_3kQY3G": {
-          "type": "text",
-          "settings": {
-            "text": "{{ section.settings.product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
         "title_R8zHH3": {
           "type": "title",
           "settings": {
@@ -44,7 +37,7 @@
           "type": "count_down",
           "settings": {
             "sale_text": "HURRY UP! DEALS END UP",
-            "date": "2025-05-05"
+            "date": "2025-05-07"
           }
         },
         "buy_buttons_fLYnwG": {
@@ -56,7 +49,6 @@
         }
       },
       "block_order": [
-        "text_3kQY3G",
         "title_R8zHH3",
         "price_giwkcq",
         "rating_MVnDbA",
@@ -66,6 +58,8 @@
       ],
       "settings": {
         "product": "hair-spray",
+        "gallery_layout": "thumbnail_slider",
+        "mobile_thumbnails": "show",
         "color_scheme": "scheme-1",
         "secondary_background": false,
         "media_size": "medium",

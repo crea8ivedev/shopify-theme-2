@@ -77,3 +77,6 @@
     z-index: 1;
   }
 }
+.product__info-wrapper.grid__item.scroll-trigger.animate--slide-in {
+  background-color: white;
+}
