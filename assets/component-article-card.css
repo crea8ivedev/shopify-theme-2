@@ -141,11 +141,15 @@
 }
 
 .blog .blog__posts .blog__post {
-  border: 1px solid #944e63;
+  border: 1px solid currentColor;
   border-radius: 20px;
-  padding: 20px;
+  padding: 15px;
 }
 
 .blog-card-btn-icon-up-arrow {
   padding-left: 10px;
+}
+
+.blog-card-btn-icon-up-arrow svg path {
+  fill: currentColor;
 }

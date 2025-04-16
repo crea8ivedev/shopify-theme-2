@@ -699,6 +699,9 @@
         "show_author": {
           "label": "Författare"
         },
+        "gradient_bg_color": {
+          "label": "Gradientbakgrund"
+        },
         "columns_desktop": {
           "label": "Kolumner"
         },

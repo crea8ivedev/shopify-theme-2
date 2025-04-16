@@ -699,6 +699,9 @@
         "show_author": {
           "label": "작성자"
         },
+        "gradient_bg_color": {
+          "label": "그라데이션 배경"
+        },
         "columns_desktop": {
           "label": "열"
         },

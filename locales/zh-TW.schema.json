@@ -699,6 +699,9 @@
         "show_author": {
           "label": "作者"
         },
+        "gradient_bg_color": {
+          "label": "漸層背景"
+        },
         "columns_desktop": {
           "label": "欄"
         },
