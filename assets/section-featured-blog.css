@@ -80,6 +80,10 @@
   .blog__posts.articles-wrapper {
     margin-bottom: 0;
   }
+
+  .blog .slider-buttons {
+    margin-right: 15px;
+  }
 }
 
 @media screen and (max-width: 749px) {
