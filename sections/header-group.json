@@ -23,10 +23,9 @@
         },
         "announcement_EfpQki": {
           "type": "announcement",
-          "disabled": true,
           "settings": {
             "text": "🌟ABC WOWO GREAT ABC DEMO🌟",
-            "link": ""
+            "link": "shopify://blogs/news"
           }
         },
         "announcement_Fn9RNb": {
