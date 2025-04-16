@@ -32,7 +32,10 @@
 
 .article-card-wrapper .card__heading {
   color: inherit;
-  text-transform: uppercase;
+}
+
+.blog-title-wrapper {
+  margin-bottom: 50px;
 }
 
 .blog .slider-buttons svg.icon-arrow path {
