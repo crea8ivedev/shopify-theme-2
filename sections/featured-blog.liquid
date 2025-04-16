@@ -28,43 +28,29 @@
   <div class="page-width-desktop isolate{% if posts_displayed < 3 %} page-width-tablet{% endif %} section-{{ section.id }}-padding">
     {%- unless section.settings.heading == blank -%}
       <div class="title-wrapper-with-link{% if posts_displayed > 2 %} title-wrapper--self-padded-tablet-down{% else %} title-wrapper--self-padded-mobile{% endif %} title-wrapper--no-top-margin">
-       <div class="blog-heading-wrapper">
-        <h2
-          id="SectionHeading-{{ section.id }}"
-          class="blog__title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-          {% if settings.animations_reveal_on_scroll %}
-            data-cascade
-          {% endif %}
-        >
-          {{ section.settings.heading }}
-        </h2>
-        <p
-          id="SectionsubHeading-{{ section.id }}"
-          class="blog-subtitle inline-richtext {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-          {% if settings.animations_reveal_on_scroll %}
-            data-cascade
-          {% endif %}
-        >
-          {{ section.settings.subheading }}
-        </p>
-       </div>
-       
-       
-        {%- if section.settings.blog != blank
-          and section.settings.show_view_all
-          and section.settings.post_limit < section.settings.blog.articles_count
-        -%}
-          <a
-            href="{{ section.settings.blog.url }}"
-            class="link underlined-link large-up-hide{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+        <div class="blog-heading-wrapper">
+          <h2
+            id="SectionHeading-{{ section.id }}"
+            class="blog__title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            {% if settings.animations_reveal_on_scroll %}
+              data-cascade
+            {% endif %}
           >
-            {{ 'sections.featured_blog.view_all' | t }}
-           
-          </a>
-        {%- endif -%}
+            {{ section.settings.heading }}
+          </h2>
+          <p
+            id="SectionsubHeading-{{ section.id }}"
+            class="blog-subtitle inline-richtext {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            {% if settings.animations_reveal_on_scroll %}
+              data-cascade
+            {% endif %}
+          >
+            {{ section.settings.subheading }}
+          </p>
+        </div>
         {%- if section.settings.show_view_all and section.settings.post_limit < section.settings.blog.articles_count -%}
           <div
-            class="blog__view-all center small-hide medium-hide{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            class="blog__view-all center small-hide {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
             {% if settings.animations_reveal_on_scroll %}
               data-cascade
             {% endif %}
@@ -76,19 +62,19 @@
               aria-labelledby="ViewAll-{{ section.id }} SectionHeading-{{ section.id }}"
             >
               {{ 'sections.featured_blog.view_all' | t }}
-              <span>
-              {% render 'icon-up-arrow' %}
+              <span class="blog-card-btn-icon-up-arrow">
+                {% render 'icon-up-arrow' %}
               </span>
             </a>
           </div>
         {%- endif -%}
       </div>
     {%- endunless -%}
-    
+
     <slider-component class="slider-mobile-gutter{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
       <ul
         id="Slider-{{ section.id }}"
-        class="blog__posts articles-wrapper contains-card contains-card--article{% if settings.blog_card_style == 'standard' %} contains-card--standard{% endif %} grid grid--peek grid--2-col-tablet grid--{{ section.settings.columns_desktop }}-col-desktop slider {% if posts_displayed > 2 %}slider--tablet{% else %}slider--mobile{% endif %}"
+        class="blog__posts articles-wrapper contains-card contains-card--article{% if settings.blog_card_style == 'standard' %} contains-card--standard{% endif %} grid grid--peek grid--2-col-tablet grid--{{ section.settings.columns_desktop }}-col-desktop slider slider--tablet slider--desktop"
         role="list"
       >
         {%- if section.settings.blog != blank and section.settings.blog.articles_count > 0 -%}
@@ -201,9 +187,27 @@
           </button>
         </div>
       {%- endif -%}
+      {%- if section.settings.show_view_all and section.settings.post_limit < section.settings.blog.articles_count -%}
+        <div
+          class="blog__view-all center large-up-hide medium-hide {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+          {% if settings.animations_reveal_on_scroll %}
+            data-cascade
+          {% endif %}
+        >
+          <a
+            href="{{ section.settings.blog.url }}"
+            id="ViewAll-{{ section.id }}"
+            class="blog__button button"
+            aria-labelledby="ViewAll-{{ section.id }} SectionHeading-{{ section.id }}"
+          >
+            {{ 'sections.featured_blog.view_all' | t }}
+            <span class="blog-card-btn-icon-up-arrow">
+              {% render 'icon-up-arrow' %}
+            </span>
+          </a>
+        </div>
+      {%- endif -%}
     </slider-component>
-
-   
   </div>
 </div>
 
@@ -224,9 +228,9 @@
       "type": "range",
       "id": "post_limit",
       "min": 2,
-      "max": 4,
+      "max": 10,
       "step": 1,
-      "default": 3,
+      "default": 4,
       "label": "t:sections.featured-blog.settings.post_limit.label"
     },
     {
