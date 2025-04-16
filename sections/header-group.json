@@ -34,11 +34,11 @@
         "announcement_YG76Hr"
       ],
       "settings": {
-        "auto_rotate": true,
+        "auto_rotate": false,
         "change_slides_speed": 10,
         "color_scheme": "scheme-3",
         "show_line_separator": true,
-        "show_social": false,
+        "show_social": true,
         "enable_country_selector": false,
         "enable_language_selector": false
       }
