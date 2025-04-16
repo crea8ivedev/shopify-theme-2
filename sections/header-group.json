@@ -38,8 +38,8 @@
         "change_slides_speed": 10,
         "color_scheme": "scheme-3",
         "show_line_separator": true,
-        "show_social": true,
-        "enable_country_selector": false,
+        "show_social": false,
+        "enable_country_selector": true,
         "enable_language_selector": false
       }
     },
