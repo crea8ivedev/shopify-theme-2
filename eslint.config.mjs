@@ -3,6 +3,12 @@ import pluginJs from "@eslint/js";
 
 export default [
   {
+    ignores: [
+      "assets/**/*.min.js",
+      "assets/**/*.min.css",
+    ],
+  },
+  {
     files: ["**/*.js"],
     ignores: [
       "assets/**/*.min.js",
