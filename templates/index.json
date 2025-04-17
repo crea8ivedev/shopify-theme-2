@@ -11,6 +11,7 @@
   "sections": {
     "featured_blog_BUDKkX": {
       "type": "featured-blog",
+      "disabled": true,
       "settings": {
         "blog": "news",
         "post_limit": 3,
@@ -29,5 +30,7 @@
       }
     }
   },
-  "order": ["featured_blog_BUDKkX"]
+  "order": [
+    "featured_blog_BUDKkX"
+  ]
 }
