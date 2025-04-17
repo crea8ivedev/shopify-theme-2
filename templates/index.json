@@ -11,10 +11,9 @@
   "sections": {
     "featured_blog_BUDKkX": {
       "type": "featured-blog",
-      "disabled": true,
       "settings": {
         "blog": "news",
-        "post_limit": 3,
+        "post_limit": 2,
         "heading": "Latest blog posts",
         "subheading": "The freshest and most exciting blogs",
         "heading_size": "h1",
