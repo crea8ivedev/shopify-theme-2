@@ -1221,11 +1221,11 @@
           "settings": {
             "heading": {
               "label": "Heading",
-              "default": "Heading"
+              "default": "Contact"
             },
             "subtext": {
               "label": "Subtext",
-              "default": "<p>Share contact information, store details, and brand content with your customers.</p>"
+              "default": "<p><strong>Regarding your order</strong></p><p>+01 2345 6789</p><p>aurabeauty@example.com</p><p><strong>Other inquiries</strong></p><p>+01 2345 6789</p><p>aurabeauty@example.com</p>"
             }
           }
         }
@@ -1236,11 +1236,11 @@
         },
         "newsletter_heading": {
           "label": "Heading",
-          "default": "Subscribe to our emails"
+          "default": "Email That's you Get Offers"
         },
         "newsletter_subheading": {
           "label": "Sub heading",
-          "default": "Sign up & enjoy 10% off your first order"
+          "default": "Sign up and enjoy 10% off your first order."
         },
         "header__1": {
           "content": "Email signup",
