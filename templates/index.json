@@ -14,7 +14,7 @@
       "settings": {
         "blog": "news",
         "post_limit": 6,
-        "heading": "<em><strong>Latest blog posts</strong></em>",
+        "heading": "<strong>Latest blog posts</strong>",
         "subheading": "The freshest and most exciting blogs",
         "heading_size": "h1",
         "columns_desktop": 3,
