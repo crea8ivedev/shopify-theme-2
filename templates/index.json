@@ -13,7 +13,7 @@
       "type": "featured-blog",
       "settings": {
         "blog": "news",
-        "post_limit": 4,
+        "post_limit": 3,
         "heading": "Latest blog posts",
         "subheading": "The freshest and most exciting blogs",
         "heading_size": "h1",
