@@ -15,7 +15,7 @@
         "blog": "news",
         "post_limit": 4,
         "heading": "😊 Latest blog post 😊",
-        "subheading": "<em><strong>fsdfsfdsfdsfsfsfsfsfsfThe freshest and most exciting blogssdfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff</strong></em>",
+        "subheading": "<em><strong>The freshest and most exciting </strong></em>",
         "heading_size": "h1",
         "columns_desktop": 3,
         "show_view_all": true,
