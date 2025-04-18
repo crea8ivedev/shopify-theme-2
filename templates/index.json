@@ -14,7 +14,7 @@
       "settings": {
         "blog": "news",
         "post_limit": 6,
-        "heading": "<a href=\"/pages/contact\" title=\"Contact\"><strong>Latest blog posts</strong></a>",
+        "heading": "<a href=\"/pages/contact\" target=\"_blank\" title=\"Contact\"><strong>Latest blog posts</strong></a>",
         "subheading": "The freshest and most exciting blogs",
         "heading_size": "h1",
         "columns_desktop": 3,
