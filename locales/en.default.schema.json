@@ -834,6 +834,9 @@
           "default": "Collections",
           "label": "Heading"
         },
+        "subheading": {
+          "default": "Shop our trendy collection."
+        },
         "header_layout": {
           "content": "Layout"
         },

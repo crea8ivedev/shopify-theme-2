@@ -138,8 +138,9 @@
 }
 
 .card__information {
-  grid-row-start: 2;
+  grid-row-start: 4;
   padding: 1.3rem 1rem;
+  z-index: 1;
 }
 
 .card:not(.ratio) > .card__content {
@@ -425,7 +426,7 @@
   }
 }
 
-.collection_list.card__content,
+.blank_coll.collection_list.card__content,
 .card--standard.card--media .card__inner .card__information .icon-wrap,
 .card--standard.card--media .card__inner .card__information,
 .card--standard.card--text:not(.card--horizontal)
