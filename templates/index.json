@@ -15,7 +15,7 @@
         "blog": "news",
         "post_limit": 6,
         "heading": "<strong>Latest blog posts</strong>",
-        "subheading": "<a href=\"/blogs/news/lorem-ipsum-2\" target=\"_blank\" title=\"Natural And Detergent-Free Handmade Soap\"><strong>The newest and most captivating content</strong></a>",
+        "subheading": "<em>The newest and most captivating content</em>",
         "heading_size": "h1",
         "columns_desktop": 3,
         "show_view_all": true,
