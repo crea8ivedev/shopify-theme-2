@@ -17,7 +17,7 @@
         "heading": "Latest blog posts",
         "subheading": "<em><strong>The freshest and most exciting blogs</strong></em>",
         "heading_size": "h1",
-        "columns_desktop": 1,
+        "columns_desktop": 3,
         "show_view_all": false,
         "show_image": true,
         "show_date": false,
