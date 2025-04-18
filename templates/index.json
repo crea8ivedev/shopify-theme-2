@@ -19,7 +19,7 @@
         "heading_size": "h1",
         "columns_desktop": 3,
         "show_view_all": true,
-        "show_image": true,
+        "show_image": false,
         "show_date": false,
         "show_author": false,
         "color_scheme": "scheme-1",
