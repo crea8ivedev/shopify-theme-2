@@ -18,7 +18,7 @@
         "subheading": "<em><strong>The freshest and most exciting blogs</strong></em>",
         "heading_size": "h1",
         "columns_desktop": 3,
-        "show_view_all": false,
+        "show_view_all": true,
         "show_image": true,
         "show_date": false,
         "show_author": false,
