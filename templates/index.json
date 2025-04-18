@@ -22,7 +22,7 @@
         "show_image": true,
         "show_date": true,
         "show_author": true,
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-5",
         "gradient_bg_color": "linear-gradient(0deg, rgba(255, 251, 251, 1) 7%, rgba(255, 231, 231, 1) 100%)",
         "padding_top": 64,
         "padding_bottom": 56
