@@ -76,7 +76,7 @@
   background: rgb(var(--color-background));
 }
 
-.localization-form__select .icon-arrow {
+.localization-form__select .icon-caret {
   position: absolute;
   content: "";
   height: 0.6rem;
@@ -337,7 +337,7 @@
   opacity: 1;
 }
 
-.disclosure__button[aria-expanded="true"] .icon-arrow {
+.disclosure__button[aria-expanded="true"] .icon-caret {
   transform: rotate(180deg);
 }
 
@@ -422,7 +422,7 @@
 
 .header-localization:not(.menu-drawer__localization)
   .localization-form__select
-  .icon-arrow {
+  .icon-caret {
   right: 0.8rem;
 }
 

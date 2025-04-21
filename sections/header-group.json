@@ -18,7 +18,7 @@
           "type": "announcement",
           "settings": {
             "text": "FREE RETURNS & 60 DAY RETURN WINDOW",
-            "link": ""
+            "link": "#"
           }
         },
         "announcement_YG76Hr": {
@@ -37,34 +37,16 @@
         "show_line_separator": true,
         "show_social": false,
         "enable_country_selector": false,
-        "enable_language_selector": false
+        "enable_language_selector": true
       }
     },
     "header": {
       "type": "header",
-      "blocks": {
-        "image_mega_menu_WWpkV8": {
-          "type": "image-mega-menu",
-          "settings": {
-            "text1": "By Category",
-            "link1": "",
-            "text2": "By Product",
-            "link2": "",
-            "text3": "By Collection",
-            "link3": "",
-            "menu_item": "Pages",
-            "product_list": [],
-            "collection": "",
-            "products_to_show": 4
-          }
-        }
-      },
-      "block_order": ["image_mega_menu_WWpkV8"],
       "settings": {
         "logo_position": "middle-left",
         "mobile_logo_position": "center",
         "menu": "main-menu",
-        "menu_type_desktop": "mega",
+        "menu_type_desktop": "dropdown",
         "sticky_header_type": "on-scroll-up",
         "show_line_separator": true,
         "color_scheme": "scheme-1",

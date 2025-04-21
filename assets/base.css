@@ -2174,6 +2174,11 @@ input[type="checkbox"] {
     display: none;
   }
 }
+@media screen and (max-width: 425px) {
+  .announcement-bar__message {
+    letter-spacing: 0 !important;
+  }
+}
 
 .utility-bar .list-social__item .icon {
   scale: 0.9;
@@ -2181,7 +2186,7 @@ input[type="checkbox"] {
 
 @media screen and (min-width: 990px) {
   .utility-bar__grid--3-col {
-    grid-template-columns: 3fr 4fr 3fr;
+    grid-template-columns: 4fr 25fr 3fr;
     grid-template-areas: "social-icons announcements language-currency";
   }
 
