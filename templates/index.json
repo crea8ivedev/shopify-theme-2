@@ -21,7 +21,6 @@
         },
         "image_slide_HwV4kj": {
           "type": "image_slide",
-          "disabled": true,
           "settings": {
             "logo_image": "shopify://shop_images/LOreal-Symbol-1024x403_1.png"
           }
@@ -42,7 +41,6 @@
         },
         "image_slide_cwDyqw": {
           "type": "image_slide",
-          "disabled": true,
           "settings": {
             "logo_image": "shopify://shop_images/png-clipart-brand-logo-product-design-font-cosmetic-beauty-text-cosmetics_1.png"
           }
