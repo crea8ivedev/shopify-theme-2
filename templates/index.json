@@ -33,7 +33,6 @@
         },
         "image_slide_4hDtmG": {
           "type": "image_slide",
-          "disabled": true,
           "settings": {
             "logo_image": "shopify://shop_images/mac_1.png"
           }
