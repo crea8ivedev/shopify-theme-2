@@ -95,7 +95,7 @@
                           </li>
                         {%- endfor -%}
                       {%- endif -%}
-                      {%- if block.settings.product_list == blank or block.settings.collection == blank -%}
+                      {%- if block.settings.product_list == blank and block.settings.collection == blank -%}
                         {% render 'placeholder', class: 'header-placeholder' %}
                       {%- endif -%}
                     {%- endif -%}

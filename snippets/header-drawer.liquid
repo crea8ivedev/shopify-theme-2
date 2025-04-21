@@ -97,6 +97,9 @@
                                   {%- endfor -%}
                                 {%- endif -%}
                               {%- endif -%}
+                              {%- if block.settings.product_list == blank and block.settings.collection == blank -%}
+                                {% render 'placeholder', class: 'header-placeholder' %}
+                              {%- endif -%}
                             {%- endfor -%}
                             {%- for block in section.blocks -%}
                               {%- if block.settings.menu_item == link.title and block.type != 'image-mega-menu' -%}
