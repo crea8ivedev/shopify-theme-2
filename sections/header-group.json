@@ -43,17 +43,23 @@
     "header": {
       "type": "header",
       "blocks": {
-        "image_mega_menu_LRbyXV": {
+        "image_mega_menu_WWpkV8": {
           "type": "image-mega-menu",
           "settings": {
+            "text1": "By Category",
+            "link1": "",
+            "text2": "By Product",
+            "link2": "",
+            "text3": "By Collection",
+            "link3": "",
             "menu_item": "Pages",
             "product_list": [],
-            "collection": "all",
+            "collection": "",
             "products_to_show": 4
           }
         }
       },
-      "block_order": ["image_mega_menu_LRbyXV"],
+      "block_order": ["image_mega_menu_WWpkV8"],
       "settings": {
         "logo_position": "middle-left",
         "mobile_logo_position": "center",

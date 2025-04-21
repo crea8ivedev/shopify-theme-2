@@ -41,7 +41,22 @@
                   role="list"
                 >
                   {%- for block in section.blocks -%}
+                    <div class="mega-menu__container">
+                      <div class="mega-menu__row">
+                        <a href="{{ block.settings.link1 }}" class="mega-menu__link link">
+                          {{ block.settings.text1 }}
+                        </a>
+                        <a href="{{ block.settings.link2 }}" class="mega-menu__link link">
+                          {{ block.settings.text2 }}
+                        </a>
+                        <a href="{{ block.settings.link3 }}" class="mega-menu__link link">
+                          {{ block.settings.text3 }}
+                        </a>
+                      </div>
+                    </div>
+                    {% assign dropdown_true = false %}
                     {%- if block.settings.menu_item == link.title and block.type == 'image-mega-menu' -%}
+                      {% assign dropdown_true = true %}
                       {%- if block.settings.product_list != blank -%}
                         {%- for product in block.settings.product_list limit: block.settings.products_to_show -%}
                           <li>
@@ -60,6 +75,7 @@
                             </a>
                           </li>
                         {%- endfor -%}
+
                       {%- else -%}
                         {%- for product in block.settings.collection.products limit: block.settings.products_to_show -%}
                           <li>
@@ -78,6 +94,9 @@
                             </a>
                           </li>
                         {%- endfor -%}
+                      {%- endif -%}
+                      {%- if block.settings.product_list == blank or block.settings.collection == blank -%}
+                        {% render 'placeholder', class: 'header-placeholder' %}
                       {%- endif -%}
                     {%- endif -%}
                   {%- endfor -%}
@@ -141,7 +160,7 @@
               </summary>
               <div
                 id="MegaMenu-Content-{{ forloop.index }}"
-                class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup"
+                class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup {% if dropdown_true %}mega-menu__content--condensed{% endif %}"
                 tabindex="-1"
               >
                 <ul
