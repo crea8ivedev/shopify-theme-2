@@ -26,7 +26,6 @@
         },
         "image_slide_aGH9nn": {
           "type": "image_slide",
-          "disabled": true,
           "settings": {
             "logo_image": "shopify://shop_images/p_g_1.png"
           }
