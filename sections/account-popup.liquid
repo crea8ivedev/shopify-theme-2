@@ -1,0 +1,152 @@
+<style>
+  {% if section.settings.bg-image %}
+     .customer-account.ctm-login-modal.login-left{
+        background: url("{{ section.settings.bgimage | image_url: width: 200 }}");
+      }
+  {% else %}
+     .customer-account.ctm-login-modal.login-left{
+        background-color: {{ section.settings.color_popup }};
+      }
+  {% endif %}
+  {% if section.settings.position_popup == 'center' %}
+    .ctm-login-modal.c-modal{
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  {% endif %}
+</style>
+<div class="ctm-login-modal-bg"></div>
+<div class="c-modal shadow-shadow-xl customer-account hidden ctm-login-modal" data-modal-login>
+  <div class="c-modal-body">
+    <!--
+      <div class="modal-login-close w-15 h-15 absolute top-[15px] right-[15px] text-body">
+        <a href="javascript:void(0)" class="c-close text-white" data-login-modal> {% render 'icon-close' %} </a>
+      </div>
+    -->
+
+    <div class="modal-login w-full h-full flex justify-center items-center">
+      <div class="modal-login__inner w-full">
+        <div class="login-model-logo w-[142px] h-[80px] mx-auto">
+          {% if section.settings.display_logo == true %}
+            <img
+              class="w-full h-full object-contain"
+              src="{{ settings.logo | image_url: width: 200 }}"
+              alt="logo_image"
+              height="100"
+              width="100"
+            >
+          {% endif %}
+        </div>
+        <div class="tab-heading d-flex justify-content-center relative z-100 pt-40">
+          <ul
+            class="nav nav-pills flex flex-wrap justify-between items-center pl-0 mb-0 list-none gap-10"
+            id="pills-tab"
+            role="tablist"
+          >
+            <li class="nav-item text-center w-full flex-1">
+              <a
+                class="nav-link current cursor-pointer block !w-full"
+                href="javascript:void(0);"
+                data-tab="tab-1"
+                id="login"
+                role="tab"
+                aria-controls="pills-home1"
+                data-title="My Account"
+                aria-selected="true"
+                >Log in</a
+              >
+            </li>
+            <li class="nav-item text-center w-full flex-1">
+              <a
+                class="nav-link cursor-pointer block !w-full"
+                href="javascript:void(0);"
+                id="signup"
+                data-tab="tab-2"
+                role="tab"
+                aria-controls="pills-profile2"
+                data-title="Create an Account"
+                aria-selected="false"
+                >Sign Up</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="tab-content relative z-100" id="pills-tabContent">
+          {% if customer %}
+            <span class="text-brown mt-20 text-center mb-20 block"
+              >welcome to your account
+              <strong>{{ customer.name }}</strong>
+            </span>
+            <div class="flex flex-wrap justify-center smscreen:flex-col items-center gap-20">
+              <a href="/account" class="btn-white flex-1 text-center smscreen:w-full brown-btn">My Account</a>
+              <a href="{{ routes.account_logout_url }}" class="btn-white flex-1 text-center smscreen:w-full brown-btn"
+                >Logout</a
+              >
+            </div>
+          {% else %}
+            <div
+              class="account-tab tab-pane current !px-0"
+              data-tab="tab-1"
+              id="tab-1"
+              role="tabpanel"
+              aria-labelledby="pills-home-tab"
+            >
+              {% render 'login' %}
+            </div>
+            <div
+              class="account-tab tab-pane !px-0"
+              data-tab="tab-2"
+              id="tab-2"
+              role="tabpanel"
+              aria-labelledby="pills-profile-tab"
+            >
+              {% render 'register' %}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+​
+
+{% schema %}
+{
+  "name": "t:sections.login_popup.name",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "display_logo",
+      "label": "t:sections.login_popup.settings.display_logo.label"
+    },
+    {
+      "type": "color",
+      "id": "color_popup",
+      "label": "t:sections.login_popup.settings.color_popup.label",
+      "default": "#FFF"
+    },
+    {
+      "type": "image_picker",
+      "id": "bg-image",
+      "label": "t:sections.login_popup.settings.bg-image.label"
+    },
+    {
+      "type": "select",
+      "id": "position_popup",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.login_popup.settings.position_popup.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.login_popup.settings.position_popup.options__2.label"
+        }
+      ],
+      "default": "left",
+      "label": "t:sections.login_popup.settings.position_popup.label"
+    }
+  ]
+}
+{% endschema %}

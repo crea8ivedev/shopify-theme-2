@@ -994,6 +994,27 @@
         "header__utilities": {
           "content": "公用事業"
         }
+      },
+      "blocks": {
+        "image-mega-menu": {
+          "name": "圖片超級選單",
+          "settings": {
+            "menu_item": {
+              "label": "選單項目",
+              "info": "輸入選單項目以應用超級選單下拉選單。"
+            },
+            "product_list": {
+              "label": "產品列表"
+            },
+            "collection": {
+              "label": "集合",
+              "info": "一次只能使用一個產品列表或集合"
+            },
+            "products_to_show": {
+              "label": "顯示產品"
+            }
+          }
+        }
       }
     },
     "image-banner": {
@@ -1160,6 +1181,29 @@
       },
       "presets": {
         "name": "圖片橫幅"
+      }
+    },
+    "login_popup": {
+      "name": "客戶彈窗",
+      "settings": {
+        "display_logo": {
+          "label": "顯示 logo"
+        },
+        "color_popup": {
+          "label": "背景顏色"
+        },
+        "bg-image": {
+          "label": "背景圖片"
+        },
+        "position_popup": {
+          "label": "位置",
+          "options__1": {
+            "label": "左"
+          },
+          "options__2": {
+            "label": "中間"
+          }
+        }
       }
     },
     "image-with-text": {

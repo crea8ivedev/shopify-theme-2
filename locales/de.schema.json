@@ -994,6 +994,27 @@
         "header__utilities": {
           "content": "Versorgungsunternehmen"
         }
+      },
+      "blocks": {
+        "image-mega-menu": {
+          "name": "Bild-Mega-Menü",
+          "settings": {
+            "menu_item": {
+              "label": "Menüelement",
+              "info": "Menüelement eingeben, um ein Mega-Menü-Dropdown anzuwenden."
+            },
+            "product_list": {
+              "label": "Produktliste"
+            },
+            "collection": {
+              "label": "Kollektion",
+              "info": "In einem Moment können Sie nur eine Produktliste oder eine Kollektion verwenden."
+            },
+            "products_to_show": {
+              "label": "Produkt anzeigen"
+            }
+          }
+        }
       }
     },
     "image-banner": {
@@ -1160,6 +1181,29 @@
       },
       "presets": {
         "name": "Bild-Banner"
+      }
+    },
+    "login_popup": {
+      "name": "Kundenpopup",
+      "settings": {
+        "display_logo": {
+          "label": "Logo anzeigen"
+        },
+        "color_popup": {
+          "label": "Hintergrundfarbe"
+        },
+        "bg-image": {
+          "label": "Hintergrundbild"
+        },
+        "position_popup": {
+          "label": "Popup-Position",
+          "options__1": {
+            "label": "Links"
+          },
+          "options__2": {
+            "label": "Mitte"
+          }
+        }
       }
     },
     "image-with-text": {

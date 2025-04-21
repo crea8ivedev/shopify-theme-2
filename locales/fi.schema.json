@@ -994,6 +994,27 @@
         "header__utilities": {
           "content": "Apuohjelmat"
         }
+      },
+      "blocks": {
+        "image-mega-menu": {
+          "name": "Kuvabanneri",
+          "settings": {
+            "menu_item": {
+              "label": "Menu elementti",
+              "info": "Syötä menun elementti mega-valikossa."
+            },
+            "product_list": {
+              "label": "Tuotelista"
+            },
+            "collection": {
+              "label": "Kokoelma",
+              "info": "Yhdellä kerralla voit käyttää vain yhtä tuotelista tai kokoelmaa."
+            },
+            "products_to_show": {
+              "label": "Tuote näytettäväksi"
+            }
+          }
+        }
       }
     },
     "image-banner": {
@@ -1160,6 +1181,29 @@
       },
       "presets": {
         "name": "Kuvabanneri"
+      }
+    },
+    "login_popup": {
+      "name": "Kundenpopup",
+      "settings": {
+        "display_logo": {
+          "label": "Näytä logo"
+        },
+        "color_popup": {
+          "label": "Taustavari"
+        },
+        "bg-image": {
+          "label": "Taustakuva"
+        },
+        "position_popup": {
+          "label": "Popup-sijainti",
+          "options__1": {
+            "label": "Vasen"
+          },
+          "options__2": {
+            "label": "Keskellä"
+          }
+        }
       }
     },
     "image-with-text": {

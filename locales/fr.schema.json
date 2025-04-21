@@ -994,6 +994,27 @@
         "header__utilities": {
           "content": "Utilitaires"
         }
+      },
+      "blocks": {
+        "image-mega-menu": {
+          "name": "Menu Méga-Image",
+          "settings": {
+            "menu_item": {
+              "label": "Élément de menu",
+              "info": "Enter menu item to apply a mega menu dropdown."
+            },
+            "product_list": {
+              "label": "Liste de produits"
+            },
+            "collection": {
+              "label": "Collection",
+              "info": "À un moment donné, vous ne pouvez utiliser qu’une Liste de produits ou une Collection"
+            },
+            "products_to_show": {
+              "label": "Produit à afficher"
+            }
+          }
+        }
       }
     },
     "image-banner": {
@@ -1160,6 +1181,29 @@
       },
       "presets": {
         "name": "Bannière avec image"
+      }
+    },
+    "login_popup": {
+      "name": "Popup de client",
+      "settings": {
+        "display_logo": {
+          "label": "Afficher le logo"
+        },
+        "color_popup": {
+          "label": "Couleur de fond"
+        },
+        "bg-image": {
+          "label": "Image de fond"
+        },
+        "position_popup": {
+          "label": "Position du popup",
+          "options__1": {
+            "label": "Gauche"
+          },
+          "options__2": {
+            "label": "Centre"
+          }
+        }
       }
     },
     "image-with-text": {

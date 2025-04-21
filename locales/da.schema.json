@@ -994,6 +994,27 @@
         "header__utilities": {
           "content": "Forsyning"
         }
+      },
+      "blocks": {
+        "image-mega-menu": {
+          "name": "Billedmegamenu",
+          "settings": {
+            "menu_item": {
+              "label": "Menu element",
+              "info": "Indtast menuelement for at anvende et megamenu-dropdown."
+            },
+            "product_list": {
+              "label": "Produktliste"
+            },
+            "collection": {
+              "label": "Kollektion",
+              "info": "På et tidspunkt kan du kun anvende en Produktliste eller en Kollektion"
+            },
+            "products_to_show": {
+              "label": "Produkt at vise"
+            }
+          }
+        }
       }
     },
     "image-banner": {
@@ -1160,6 +1181,29 @@
       },
       "presets": {
         "name": "Billedbanner"
+      }
+    },
+    "login_popup": {
+      "name": "Kundenpopup",
+      "settings": {
+        "display_logo": {
+          "label": "Logo anzeigen"
+        },
+        "color_popup": {
+          "label": "Baggrundsfarve"
+        },
+        "bg-image": {
+          "label": "Vælg baggrundsbillede"
+        },
+        "position_popup": {
+          "label": "Popup-position",
+          "options__1": {
+            "label": "Venstre"
+          },
+          "options__2": {
+            "label": "Center"
+          }
+        }
       }
     },
     "image-with-text": {

@@ -994,6 +994,27 @@
         "header__utilities": {
           "content": "ユーティリティー"
         }
+      },
+      "blocks": {
+        "image-mega-menu": {
+          "name": "画像メガメニュー",
+          "settings": {
+            "menu_item": {
+              "label": "メニューアイテム",
+              "info": "メガメニューのドロップダウンを適用するには、メニューアイテムを入力してください。"
+            },
+            "product_list": {
+              "label": "商品リスト"
+            },
+            "collection": {
+              "label": "コレクション",
+              "info": "一度に1つの商品リストまたはコレクションしか使用できません。"
+            },
+            "products_to_show": {
+              "label": "表示する商品"
+            }
+          }
+        }
       }
     },
     "image-banner": {
@@ -1160,6 +1181,29 @@
       },
       "presets": {
         "name": "画像バナー"
+      }
+    },
+    "login_popup": {
+      "name": "顧客ポップアップ",
+      "settings": {
+        "display_logo": {
+          "label": "ロゴを表示"
+        },
+        "color_popup": {
+          "label": "背景色"
+        },
+        "bg-image": {
+          "label": "背景画像"
+        },
+        "position_popup": {
+          "label": "ポップアップ位置",
+          "options__1": {
+            "label": "左"
+          },
+          "options__2": {
+            "label": "中央"
+          }
+        }
       }
     },
     "image-with-text": {

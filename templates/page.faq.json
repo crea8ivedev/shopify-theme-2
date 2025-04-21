@@ -1,0 +1,74 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner_ctm_fzzJyB": {
+      "type": "banner_ctm",
+      "settings": {
+        "background_image": "shopify://shop_images/content_7.png",
+        "text": "FAQs"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "faq_bQ3pnC": {
+      "type": "faq",
+      "blocks": {
+        "faq_block_dYDgGJ": {
+          "type": "faq_block",
+          "settings": {
+            "faq_question": "What Makes These Bites Special?",
+            "faq_answer": "These rich, gooey brownie bites are more than just a treat-they're infused with 50MG of the real stuff in every bite. Small but mighty, they deliver a powerful, next-level experience."
+          }
+        },
+        "faq_block_knFJML": {
+          "type": "faq_block",
+          "settings": {
+            "faq_question": "How Many Should I Have?",
+            "faq_answer": "These rich, gooey brownie bites are more than just a treat-they're infused with 50MG of the real stuff in every bite. Small but mighty, they deliver a powerful, next-level experience."
+          }
+        },
+        "faq_block_FwRXTP": {
+          "type": "faq_block",
+          "settings": {
+            "faq_question": "Are These Good for Any Occasion?",
+            "faq_answer": "These rich, gooey brownie bites are more than just a treat-they're infused with 50MG of the real stuff in every bite. Small but mighty, they deliver a powerful, next-level experience."
+          }
+        },
+        "faq_block_XDjHLM": {
+          "type": "faq_block",
+          "settings": {
+            "faq_question": "How Long Does It Take to Kick In?",
+            "faq_answer": "These rich, gooey brownie bites are more than just a treat-they're infused with 50MG of the real stuff in every bite. Small but mighty, they deliver a powerful, next-level experience."
+          }
+        }
+      },
+      "block_order": [
+        "faq_block_dYDgGJ",
+        "faq_block_knFJML",
+        "faq_block_FwRXTP",
+        "faq_block_XDjHLM"
+      ],
+      "settings": {
+        "main_title": "Frequently Asked Questions",
+        "extra_class": "",
+        "first_accordion_open": true,
+        "btn_text": "Shop Now",
+        "btn_url": "shopify://collections"
+      }
+    }
+  },
+  "order": ["banner_ctm_fzzJyB", "main", "faq_bQ3pnC"]
+}

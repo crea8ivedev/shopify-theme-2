@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const announcementBar = document.querySelector(".utility-bar");
 
   if (announcementBar && !localStorage.getItem("announcement-bar")) {
-    announcementBar.style.display = "block"; 
+    announcementBar.style.display = "block";
   }
 
   if (closeIcon && announcementBar) {
@@ -21,6 +21,65 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+// Login popup functionality
+$(".login_popup").click(function () {
+  $(".customer-account").removeClass("hidden").addClass("login-left");
+  $(".ctm-login-modal-bg").addClass("active");
+  $(".login_popup.header__icon").addClass("active");
+  $("body").addClass("login-popu-active");
+});
+
+$(".ctm-login-modal-bg").click(function () {
+  $(this).removeClass("active");
+  $(".customer-account").addClass("hidden").removeClass("login-left");
+  $(".login_popup.header__icon").removeClass("active");
+  $("body").removeClass(
+    "modal-overflow modal-overlay-active login-popu-active",
+  );
+});
+
+// Tab functionality
+$(".tab-heading ul li a").click(function () {
+  const tabId = $(this).data("tab");
+  $(".tab-heading ul li a").removeClass("current");
+  $(".account-tab.tab-pane").removeClass("current");
+  $(this).addClass("current");
+  $(`#${tabId}`).addClass("current");
+});
+
+document.querySelectorAll(".mega-menu").forEach((menu) => {
+  const summary = menu.querySelector("summary");
+  const content = menu.querySelector(".mega-menu__content");
+
+  if (summary && content) {
+    menu.addEventListener("mouseenter", () => {
+      menu.setAttribute("open", "true");
+      content.style.display = "block";
+      content.style.opacity = "1";
+      content.style.visibility = "visible";
+    });
+
+    menu.addEventListener("mouseleave", () => {
+      menu.removeAttribute("open");
+      content.style.display = "none";
+      content.style.opacity = "0";
+      content.style.visibility = "hidden";
+    });
+
+    // Prevent default click behavior on summary
+    summary.addEventListener("click", (e) => {
+      e.preventDefault();
+    });
+  }
+});
+
+const closeIcon = document.querySelector(".slide-close-icon");
+const announcementBar = document.querySelector(".utility-bar");
+if (closeIcon && announcementBar) {
+  closeIcon.addEventListener("click", function () {
+    announcementBar.classList.add("hidden");
+  });
+}
 
 class SectionId {
   static #separator = "__";
@@ -574,18 +633,6 @@ class MenuDrawer extends HTMLElement {
           `${window.innerHeight}px`,
         );
       }
-    } else {
-      setTimeout(() => {
-        detailsElement.classList.add("menu-opening");
-        summaryElement.setAttribute("aria-expanded", true);
-        parentMenuElement && parentMenuElement.classList.add("submenu-open");
-        !reducedMotion || reducedMotion.matches
-          ? addTrapFocus()
-          : summaryElement.nextElementSibling.addEventListener(
-              "transitionend",
-              addTrapFocus,
-            );
-      }, 100);
     }
   }
 
