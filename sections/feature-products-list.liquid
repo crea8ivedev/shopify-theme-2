@@ -27,12 +27,7 @@
                 height="300px"
               />
               <div class="icon-group">
-                <div class="wishlist-icon" style="width: 32px; height: 32px; background-color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);">
-                  <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7.75703 11.2006L7.82051 11.1428L12.2689 7.04997C13.0484 6.33304 13.4902 5.32682 13.4902 4.2728V4.18978C13.4902 2.41883 12.2207 0.899429 10.4637 0.567375C9.46328 0.376193 8.44004 0.605108 7.625 1.17363C7.39648 1.33462 7.1832 1.52077 6.99023 1.7346C6.88359 1.61385 6.76934 1.50316 6.64746 1.40003C6.55352 1.31953 6.45703 1.24406 6.35547 1.17363C5.54043 0.605108 4.51719 0.376193 3.5168 0.56486C1.75977 0.896913 0.490234 2.41883 0.490234 4.18978V4.2728C0.490234 5.32682 0.932032 6.33304 1.71152 7.04997L6.15996 11.1428L6.22344 11.2006C6.43164 11.3918 6.70586 11.5 6.99023 11.5C7.27461 11.5 7.54883 11.3943 7.75703 11.2006ZM7.41934 3.07036C7.42949 3.06281 7.43711 3.05275 7.44473 3.04269L7.89668 2.53957L7.89922 2.53706C8.48574 1.88553 9.37188 1.58869 10.2352 1.7522C11.4184 1.97609 12.2715 2.99741 12.2715 4.18978V4.2728C12.2715 4.98973 11.9693 5.67648 11.4387 6.1645L6.99023 10.2573L2.5418 6.1645C2.01113 5.67648 1.70898 4.98973 1.70898 4.2728V4.18978C1.70898 2.99992 2.56211 1.97609 3.74277 1.7522C4.60606 1.58869 5.49473 1.88804 6.07871 2.53706C6.07871 2.53706 6.07871 2.53706 6.08125 2.53957C6.08379 2.54209 6.08125 2.53957 6.08379 2.54209L6.53574 3.0452C6.54336 3.05526 6.55352 3.06281 6.56113 3.07287C6.67539 3.18607 6.83027 3.24896 6.99023 3.24896C7.1502 3.24896 7.30508 3.18607 7.41934 3.07287V3.07036Z" fill="#B47B84"/>
-                  </svg>
-                </div>
-                <div class="quick-view-icon desktop-only" style="width: 32px; height: 32px; background-color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);">
+                <div data-product-handle="{{ product.handle }}" onclick="openQuickView('{{ product.handle }}')" class="quick-view-icon desktop-only" style="width: 32px; height: 32px; background-color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);">
                   <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M7.00001 1.5C4.71341 1.5 2.72758 3.23295 1.48635 5.84664C1.46605 5.88941 1.45101 5.92111 1.43833 5.9487C1.42714 5.97302 1.4202 5.98897 1.41566 6C1.4202 6.01103 1.42714 6.02698 1.43833 6.0513C1.45101 6.07889 1.46605 6.11059 1.48635 6.15334C2.72758 8.76705 4.71341 10.5 7.00001 10.5C9.2866 10.5 11.2724 8.76705 12.5136 6.15334C12.534 6.11059 12.549 6.07889 12.5617 6.0513C12.5729 6.02698 12.5798 6.01103 12.5843 6C12.5798 5.98895 12.5729 5.973 12.5617 5.9487C12.549 5.92111 12.534 5.88941 12.5136 5.84664C11.2724 3.23295 9.2866 1.5 7.00001 1.5ZM0.222881 5.17202C1.59484 2.28301 3.97255 0 7.00001 0C10.0274 0 12.4052 2.28301 13.7771 5.17202C13.7821 5.18248 13.7872 5.19319 13.7925 5.20415C13.857 5.33922 13.9405 5.51359 13.9777 5.72861C14.0074 5.8996 14.0074 6.1004 13.9777 6.27139C13.9405 6.48642 13.857 6.6608 13.7925 6.79585C13.7872 6.80682 13.7821 6.81752 13.7771 6.82798C12.4052 9.71699 10.0274 12 7.00001 12C3.97255 12 1.59484 9.71699 0.222881 6.82798C0.217907 6.81752 0.212781 6.80682 0.207542 6.79585C0.142951 6.66078 0.0595517 6.4864 0.0222498 6.27139C-0.00741659 6.1004 -0.00741659 5.8996 0.0222498 5.72861C0.0595517 5.51359 0.142951 5.33922 0.207542 5.20415C0.212781 5.19319 0.217907 5.18248 0.222881 5.17202ZM7.00001 4.5C6.21873 4.5 5.58537 5.17157 5.58537 6C5.58537 6.82843 6.21873 7.5 7.00001 7.5C7.78127 7.5 8.41462 6.82843 8.41462 6C8.41462 5.17157 7.78127 4.5 7.00001 4.5ZM4.17075 6C4.17075 4.34313 5.43745 2.99999 7.00001 2.99999C8.56255 2.99999 9.82924 4.34313 9.82924 6C9.82924 7.65685 8.56255 9.00001 7.00001 9.00001C5.43745 9.00001 4.17075 7.65685 4.17075 6Z" fill="#B47B84"/>
                   </svg>            
@@ -48,7 +43,7 @@
               </div>
             </div>
             <product-form
-            class="product-form desktop-only"
+            class="product-form mobile-only"
             data-hide-errors="{{ gift_card_recipient_feature_active }}"
             data-section-id="{{ section.id }}"
           >
@@ -97,7 +92,7 @@
                   id="ProductSubmitButton-{{ section_id }}"
                   type="submit"
                   name="add"
-                  class="product-form__submit button button--full-width {% if show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}"
+                  class="add-to-cart product-form__submit button button--full-width {% if show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}"
                   {% if product.selected_or_first_available_variant.available == false
                     or quantity_rule_soldout
                     or product.selected_or_first_available_variant == null
@@ -127,11 +122,26 @@
       {% endfor %}
     </div>
   </div>
+  {% if section.settings.button != blank %}
+    <div class="feature-products-btn mobile-only">
+        <a href="{{ section.settings.button_url }}" class="shop-all-btn">
+            {{ section.settings.button }}
+        </a>
+    </div>
+    {% endif %}
 </div>
+
+<div id="quick-view-modal" class="quick-view-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1000; justify-content: center; align-items: center;">
+  <div id="quick-view-content" class="quick-view-content" style="background: white; max-width: 500px; width: 90%; padding: 20px; border-radius: 8px; position: relative;">
+    <button onclick="closeQuickView()" style="position: absolute; top: 10px; right: 10px;">&times;</button>
+    <div id="quick-view-body">Loading...</div>
+  </div>
+</div>
+
 
 {%  style  %}
 .feature-products-section {
-  padding: 40px 80px;
+  padding: 50px 80px;
   background: linear-gradient(to bottom, #FFE7E7, #FFFBFB);
 }
 @media screen and (min-width: 768px) {
@@ -142,6 +152,7 @@
 }
 .feature-products-btn {
   align-self: center;
+  justify-self: center;
 }
 .featured-product-price {
   flex-direction: row;
@@ -178,7 +189,6 @@
   font-size: 34px;
   margin: 0;
 }
-.wishlist-icon,
 .quick-view-icon {
   background: white;
   padding: 4px;
@@ -187,19 +197,15 @@
   cursor: pointer;
   transition: transform 0.2s;
 }
-
-.wishlist-icon:hover,
 .quick-view-icon:hover {
   transform: scale(1.1);
 }
-
 .custom-slider-wrapper {
   overflow: hidden;
   width: 100%;
   -ms-overflow-style: none;  /* IE/Edge */
   scrollbar-width: none;     /* Firefox */
 }
-
 .custom-slider-track {
   display: flex;
   gap: 20px;
@@ -209,15 +215,14 @@
   -webkit-overflow-scrolling: touch;
   cursor: grab;
 }
-
 .custom-slider-track::-webkit-scrollbar {
   display: none;
 }
-
 .custom-slide {
   scroll-snap-align: start;
   border-radius: 8px;
   padding: 10px;
+  padding-bottom: 40px;
 }
 .custom-slider-track.dragging {
   cursor: grabbing;
@@ -239,7 +244,49 @@
   padding: 12px 36px;
   border-radius: 100px;
 }
+.add-to-cart.product-form__submit {
+  background-color: transparent;
+  color: #944E63;
+  width: fit-content;
+  justify-self: center;
+  padding: 12px 20px;
+  margin-top: 15px;
+}
+.add-to-cart::after {
+  transition: none;
+  box-shadow: none;
+  border: 1px solid #944E63;
+  border-radius: 100px;
+}
+.add-to-cart.button span,
+.feature-products-btn a.shop-all-btn {
+  text-transform: capitalize;
+}
+.featured-pd-content h3 {
+  margin-bottom: 5px;
+}
+a.shop-all-btn:hover {
+  background: transparent;
+  color: #944E63;
+  border: 1px solid #944E63;
+}
 {% endstyle %}
+
+<script>
+  function openQuickView(handle) {
+    fetch(`/products/${handle}?view=quick-view`)
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('quick-view-body').innerHTML = html;
+        document.getElementById('quick-view-modal').style.display = 'flex';
+      });
+  }
+
+  function closeQuickView() {
+    document.getElementById('quick-view-modal').style.display = 'none';
+    document.getElementById('quick-view-body').innerHTML = 'Loading...';
+  }
+</script>
 
 {% schema %}
     {

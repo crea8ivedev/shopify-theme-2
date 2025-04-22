@@ -1,0 +1,15 @@
+<div class="quick-view-product">
+  {% comment %} <img src="{{ product.featured_image | image_url: width: 500 }}" width="100px" height="100px" alt="{{ product.title }}"> {% endcomment %}
+  {% section 'main-product' %}
+  <div class="quick-view-pd-content">
+      <h2>{{ product.title }}</h2>
+      <div class="quick-view featured-product-price">
+        <div class="compare-price"><s>{{ product.compare_at_price | money }}</s></div>
+        <div class="price">{{ product.price | money }}</div>
+      </div>
+      <form method="post" action="/cart/add">
+        <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+        <button type="submit">Add to Cart</button>
+      </form>
+  </div>
+</div>
