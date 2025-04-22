@@ -107,6 +107,7 @@ details[open].menu-opening > .menu-drawer__submenu {
 
 .js .menu-drawer__menu li {
   margin-bottom: 0.2rem;
+  max-width: fit-content;
 }
 
 .menu-drawer__menu-item {

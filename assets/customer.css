@@ -778,3 +778,9 @@ li[data-address] > h2 {
 .c-modal .modal-login__inner .tab-content .tab-pane.current {
   display: block;
 }
+.login-image-container,
+.register-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -139,8 +139,10 @@
         "type": "account-popup",
         "settings": {
           "display_logo": false,
-          "color_popup": "#FFF",
-          "position_popup": "left"
+          "login-image": "shopify://shop_images/Rectangle_152.png",
+          "register-image": "shopify://shop_images/Rectangle_152_1.png",
+          "color_popup": "#ffffff",
+          "position_popup": "center"
         }
       }
     },

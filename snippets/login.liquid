@@ -1,6 +1,7 @@
 {{ 'customer.css' | asset_url | stylesheet_tag }}
 
 <div class="customer login !max-w-full !p-0 !mt-40 !mb-0">
+  <h2>Log in</h2>
   <div class="drawer_reset_area hidden">
     <h2
       id="drawer_recover"
@@ -137,7 +138,7 @@
       <button
         class="brown-btn !my-20 w-fit font-body !pt-10 !pb-7 !px-20 !font-semibold !bg-brown !text-white !border !border-solid !border-brown !rounded-4 !text-16 !leading-26 !tracking-normal text-center flex flex-col items-center capitalize cursor-pointer transition-all duration-300 ease-in-out relative hover:!bg-transparent hover:!text-brown"
       >
-        Log Into Your Account
+        Login
       </button>
 
       <a
@@ -149,7 +150,20 @@
       </a>
     {%- endform -%}
   </div>
-
+  <div class="login-cta reset-below-btn">
+    Need an account?
+    <a
+      class="nav-link cursor-pointer block !w-full"
+      href="javascript:void(0);"
+      id="signup"
+      data-tab="tab-2"
+      role="tab"
+      aria-controls="pills-profile2"
+      data-title="Create an Account"
+      aria-selected="false"
+      >Sign Up</a
+    >
+  </div>
   {%- if shop.checkout.guest_login -%}
     <div>
       <hr>

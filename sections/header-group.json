@@ -43,7 +43,7 @@
     "header": {
       "type": "header",
       "blocks": {
-        "image_mega_menu_WWpkV8": {
+        "image_mega_menu_Xmy833": {
           "type": "image-mega-menu",
           "settings": {
             "text1": "By Category",
@@ -53,13 +53,13 @@
             "text3": "By Collection",
             "link3": "",
             "menu_item": "Pages",
-            "product_list": ["pink-lipstick-and-blush-on", "liquid-foundation"],
+            "product_list": [],
             "collection": "",
             "products_to_show": 4
           }
         }
       },
-      "block_order": ["image_mega_menu_WWpkV8"],
+      "block_order": ["image_mega_menu_Xmy833"],
       "settings": {
         "logo_position": "middle-left",
         "mobile_logo_position": "center",

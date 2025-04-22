@@ -51,15 +51,15 @@
                         class="accordion_answer gradient motion-reduce"
                         tabindex="-1"
                       >
-                        <div class="menu-drawer__inner-submenu">
-                          <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
+                        <div class="swiper menu-drawer__inner-submenu mobile-swiper">
+                          <ul class="swiper-wrapper menu-drawer__menu list-menu" role="list" tabindex="-1">
                             {%- for block in section.blocks -%}
                               {%- if block.settings.menu_item == link.title and block.type == 'image-mega-menu' -%}
                                 {%- if block.settings.product_list != blank -%}
                                   {%- for product in block.settings.product_list
                                     limit: block.settings.products_to_show
                                   -%}
-                                    <li>
+                                    <li class="swiper-slide">
                                       <a href="{{ product.url }}">
                                         <div class="mega-menu__product-image">
                                           <img
@@ -79,7 +79,7 @@
                                   {%- for product in block.settings.collection.products
                                     limit: block.settings.products_to_show
                                   -%}
-                                    <li>
+                                    <li class="swiper-slide">
                                       <a href="{{ product.url }}">
                                         <div class="mega-menu__product-image">
                                           <img

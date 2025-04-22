@@ -37,9 +37,9 @@
             >
           {% endif %}
         </div>
-        <div class="tab-heading d-flex justify-content-center relative z-100 pt-40">
+        <div class="tab-heading">
           <ul
-            class="nav nav-pills flex flex-wrap justify-between items-center pl-0 mb-0 list-none gap-10"
+            class="nav nav-pills"
             id="pills-tab"
             role="tablist"
           >
@@ -92,7 +92,15 @@
               role="tabpanel"
               aria-labelledby="pills-home-tab"
             >
-              {% render 'login' %}
+              <div class="login-image-container">
+                <img
+                  src="{{ section.settings.login-image | image_url: width: 400 }}"
+                  height=""
+                  width=""
+                  alt="login-image"
+                >
+                {% render 'login' %}
+              </div>
             </div>
             <div
               class="account-tab tab-pane !px-0"
@@ -101,7 +109,15 @@
               role="tabpanel"
               aria-labelledby="pills-profile-tab"
             >
-              {% render 'register' %}
+              <div class="register-image-container">
+                <img
+                  src="{{ section.settings.register-image | image_url: width: 400 }}"
+                  height=""
+                  width=""
+                  alt="register-image"
+                >
+                {% render 'register' %}
+              </div>
             </div>
           {% endif %}
         </div>
@@ -119,6 +135,16 @@
       "type": "checkbox",
       "id": "display_logo",
       "label": "t:sections.login_popup.settings.display_logo.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "login-image",
+      "label": "Login Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "register-image",
+      "label": "Register Image"
     },
     {
       "type": "color",
