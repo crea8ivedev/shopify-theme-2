@@ -12,6 +12,18 @@
     "marquee_Wgw8KT": {
       "type": "marquee",
       "blocks": {
+        "image_slide_eet93P": {
+          "type": "image_slide",
+          "settings": {
+            "logo_image": "shopify://shop_images/wella_1_624d7277-6672-41f2-9fe3-b8a07800f08f.png"
+          }
+        },
+        "image_slide_4hDtmG": {
+          "type": "image_slide",
+          "settings": {
+            "logo_image": "shopify://shop_images/mac_1.png"
+          }
+        },
         "image_slide_HwV4kj": {
           "type": "image_slide",
           "settings": {
@@ -24,31 +36,19 @@
             "logo_image": "shopify://shop_images/p_g_1.png"
           }
         },
-        "image_slide_4hDtmG": {
-          "type": "image_slide",
-          "settings": {
-            "logo_image": "shopify://shop_images/mac_1.png"
-          }
-        },
         "image_slide_cwDyqw": {
           "type": "image_slide",
           "settings": {
             "logo_image": "shopify://shop_images/png-clipart-brand-logo-product-design-font-cosmetic-beauty-text-cosmetics_1.png"
           }
-        },
-        "image_slide_eet93P": {
-          "type": "image_slide",
-          "settings": {
-            "logo_image": "shopify://shop_images/wella_1_624d7277-6672-41f2-9fe3-b8a07800f08f.png"
-          }
         }
       },
       "block_order": [
+        "image_slide_eet93P",
+        "image_slide_4hDtmG",
         "image_slide_HwV4kj",
         "image_slide_aGH9nn",
-        "image_slide_4hDtmG",
-        "image_slide_cwDyqw",
-        "image_slide_eet93P"
+        "image_slide_cwDyqw"
       ],
       "settings": {
         "padding_top": 50,
