@@ -47,6 +47,12 @@
           "settings": {
             "logo_image": "shopify://shop_images/wella_1_624d7277-6672-41f2-9fe3-b8a07800f08f.png"
           }
+        },
+        "content_slide_ChJMbt": {
+          "type": "content_slide",
+          "settings": {
+            "content": "Content for testing ....created by QA"
+          }
         }
       },
       "block_order": [
@@ -55,7 +61,8 @@
         "image_slide_aGH9nn",
         "image_slide_4hDtmG",
         "image_slide_cwDyqw",
-        "image_slide_eet93P"
+        "image_slide_eet93P",
+        "content_slide_ChJMbt"
       ],
       "settings": {
         "padding_top": 50,
