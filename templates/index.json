@@ -56,7 +56,7 @@
         "color_scheme": "scheme-1",
         "enable_autoplay": true,
         "stop_on_hover": true,
-        "autoplay_speed": 15,
+        "autoplay_speed": 20,
         "marquee_breakpoint_desktop": 10,
         "marquee_breakpoint_tablet": 5,
         "marquee_breakpoint_mobile": 5
