@@ -58,7 +58,7 @@
         "stop_on_hover": true,
         "autoplay_speed": 27,
         "marquee_breakpoint_desktop": 10,
-        "marquee_breakpoint_tablet": 5,
+        "marquee_breakpoint_tablet": 3,
         "marquee_breakpoint_mobile": 10
       }
     }
