@@ -57,9 +57,9 @@
         "enable_autoplay": true,
         "stop_on_hover": true,
         "autoplay_speed": 15,
-        "marquee_breakpoint_desktop": 1,
-        "marquee_breakpoint_tablet": 1,
-        "marquee_breakpoint_mobile": 1
+        "marquee_breakpoint_desktop": 3,
+        "marquee_breakpoint_tablet": 5,
+        "marquee_breakpoint_mobile": 5
       }
     }
   },
