@@ -58,8 +58,8 @@
         "stop_on_hover": false,
         "autoplay_speed": 2,
         "marquee_breakpoint_desktop": 1,
-        "marquee_breakpoint_tablet": 4,
-        "marquee_breakpoint_mobile": 3
+        "marquee_breakpoint_tablet": 1,
+        "marquee_breakpoint_mobile": 1
       }
     }
   },
