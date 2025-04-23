@@ -53,10 +53,10 @@
       "settings": {
         "padding_top": 30,
         "padding_bottom": 30,
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-1",
         "enable_autoplay": true,
         "stop_on_hover": true,
-        "autoplay_speed": 34,
+        "autoplay_speed": 31,
         "marquee_breakpoint_desktop": 2,
         "marquee_breakpoint_tablet": 2,
         "marquee_breakpoint_mobile": 2
