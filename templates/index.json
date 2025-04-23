@@ -51,8 +51,8 @@
         "image_slide_cwDyqw"
       ],
       "settings": {
-        "padding_top": 50,
-        "padding_bottom": 50,
+        "padding_top": 10,
+        "padding_bottom": 10,
         "color_scheme": "scheme-1",
         "enable_autoplay": true,
         "stop_on_hover": true,
