@@ -54,7 +54,7 @@
         "padding_top": 50,
         "padding_bottom": 50,
         "color_scheme": "scheme-2",
-        "enable_autoplay": false,
+        "enable_autoplay": true,
         "stop_on_hover": true,
         "autoplay_speed": 27,
         "marquee_breakpoint_desktop": 10,
