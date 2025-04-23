@@ -495,7 +495,7 @@ h6:empty {
   box-shadow: none;
   text-decoration: underline;
   text-underline-offset: 0.3rem;
-  color: rgb(var(--color-link));
+  color: #944e63;
   background-color: transparent;
   font-size: 1.4rem;
   font-family: inherit;
@@ -607,7 +607,7 @@ details > * {
 
 .underlined-link,
 .customer a {
-  color: rgba(var(--color-link), var(--alpha-link));
+  color: #944e63;
 }
 
 .inline-richtext a,
@@ -1241,7 +1241,7 @@ button.shopify-payment-button__button--unbranded {
   transition: box-shadow var(--duration-short) ease;
   -webkit-appearance: none;
   appearance: none;
-  background-color: rgba(var(--color-button), var(--alpha-button-background));
+  background-color: #944e63;
 }
 
 .button:before,
@@ -1609,7 +1609,7 @@ details[open] > .share-button__fallback {
 .customer select {
   -webkit-appearance: none;
   appearance: none;
-  background-color: rgb(var(--color-background));
+  background-color: #ffffff;
   color: rgb(var(--color-foreground));
   font-family: var(--font-body-family);
   font-style: var(--font-body-style);
@@ -1618,7 +1618,7 @@ details[open] > .share-button__fallback {
   width: 100%;
   box-sizing: border-box;
   transition: box-shadow var(--duration-short) ease;
-  border-radius: var(--inputs-radius);
+  border-radius: 100px;
   height: 4.5rem;
   min-height: calc(var(--inputs-border-width) * 2);
   min-width: calc(7rem + (var(--inputs-border-width) * 2));
@@ -1658,9 +1658,8 @@ details[open] > .share-button__fallback {
   bottom: var(--inputs-border-width);
   left: var(--inputs-border-width);
   border: 0.1rem solid transparent;
-  border-radius: var(--inputs-radius);
-  box-shadow: 0 0 0 var(--inputs-border-width)
-    rgba(var(--color-foreground), var(--inputs-border-opacity));
+  border-radius: 100px;
+  border-color: #e0e0e0;
   transition: box-shadow var(--duration-short) ease;
   z-index: 1;
 }
@@ -1673,38 +1672,26 @@ details[open] > .share-button__fallback {
   color: rgba(var(--color-foreground), 0.75);
 }
 
-.field:hover.field:after,
-.select:hover.select:after,
-.select__select:hover.select__select:after,
-.customer .field:hover.field:after,
-.customer select:hover.select:after,
-.localization-form__select:hover.localization-form__select:after {
-  box-shadow: 0 0 0 calc(0.1rem + var(--inputs-border-width))
-    rgba(var(--color-foreground), var(--inputs-border-opacity));
-  outline: 0;
-  border-radius: var(--inputs-radius);
-}
-
 .field__input:focus-visible,
 .select__select:focus-visible,
 .customer .field input:focus-visible,
 .customer select:focus-visible,
 .localization-form__select:focus-visible.localization-form__select:after {
-  box-shadow: 0 0 0 calc(0.1rem + var(--inputs-border-width))
-    rgba(var(--color-foreground));
+  box-shadow: 0 0 0 calc(0.1rem) #944e63;
   outline: 0;
-  border-radius: var(--inputs-radius);
+  border-radius: 100px;
 }
-
+.ctm-login-modal {
+  border-radius: 20px;
+}
 .field__input:focus,
 .select__select:focus,
 .customer .field input:focus,
 .customer select:focus,
 .localization-form__select:focus.localization-form__select:after {
-  box-shadow: 0 0 0 calc(0.1rem + var(--inputs-border-width))
-    rgba(var(--color-foreground));
+  box-shadow: 0 0 0 calc(0.1rem) #944e63;
   outline: 0;
-  border-radius: var(--inputs-radius);
+  border-radius: 100px;
 }
 
 .localization-form__select:focus {
@@ -1777,7 +1764,7 @@ details[open] > .share-button__fallback {
   transition:
     top var(--duration-short) ease,
     font-size var(--duration-short) ease;
-  color: rgba(var(--color-foreground), 0.75);
+  color: #944e634d;
   letter-spacing: 0.1rem;
   line-height: 1.5;
 }
@@ -2168,6 +2155,9 @@ input[type="checkbox"] {
 @media screen and (max-width: 989px) {
   .utility-bar .utility-bar__grid .list-social {
     display: none;
+  }
+  .login-image-container {
+    display: block;
   }
 }
 

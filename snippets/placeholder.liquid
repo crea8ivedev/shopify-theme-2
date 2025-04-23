@@ -6,6 +6,10 @@
   {% assign placeholder_images = 'collection-placeholder.jpg' %}
 {% elsif class == 'header-placeholder' %}
   {% assign placeholder_images = 'header-placeholder.png, header-placeholder.png, header-placeholder.png, header-placeholder.png' %}
+{% elsif class == 'login-placeholder' %}
+  {% assign placeholder_images = 'login-placeholder.jpg' %}
+{% elsif class == 'register-placeholder' %}
+  {% assign placeholder_images = 'register-placeholder.jpg' %}
 {% else %}
   {% assign placeholder_images = 'default-placeholder.jpg' %}
 {% endif %}

@@ -370,6 +370,12 @@
         "padding_top": "Oben",
         "padding_bottom": "Unten"
       },
+      "login": {
+        "login_image": "Login Bild"
+      },
+      "register": {
+        "register_image": "Register Bild"
+      },
       "spacing": "Abstand",
       "colors": {
         "label": "Farbschema",
@@ -1188,6 +1194,12 @@
       "settings": {
         "display_logo": {
           "label": "Logo anzeigen"
+        },
+        "login-image": {
+          "label": "Login Bild"
+        },
+        "register-image": {
+          "label": "Register Bild"
         },
         "color_popup": {
           "label": "Hintergrundfarbe"

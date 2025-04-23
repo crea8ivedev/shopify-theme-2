@@ -370,6 +370,12 @@
         "padding_top": "Top",
         "padding_bottom": "Bund"
       },
+      "login": {
+        "login_image": "Login billede"
+      },
+      "register": {
+        "register_image": "Register billede"
+      },
       "spacing": "Mellemrum",
       "colors": {
         "label": "Farveskema",
@@ -1191,6 +1197,12 @@
         },
         "color_popup": {
           "label": "Baggrundsfarve"
+        },
+        "login-image": {
+          "label": "Login billede"
+        },
+        "register-image": {
+          "label": "Register billede"
         },
         "bg-image": {
           "label": "Vælg baggrundsbillede"

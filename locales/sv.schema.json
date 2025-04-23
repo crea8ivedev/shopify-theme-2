@@ -370,6 +370,12 @@
         "padding_top": "Högst upp",
         "padding_bottom": "Längst ner"
       },
+      "login": {
+        "login_image": "Login bild"
+      },
+      "register": {
+        "register_image": "Register bild"
+      },
       "spacing": "Radavstånd",
       "colors": {
         "label": "Färgschema",
@@ -1191,6 +1197,12 @@
         },
         "color_popup": {
           "label": "Hintergrundfärg"
+        },
+        "login-image": {
+          "label": "Login bild"
+        },
+        "register-image": {
+          "label": "Register bild"
         },
         "bg-image": {
           "label": "Hintergrundbild"

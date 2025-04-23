@@ -370,6 +370,12 @@
         "padding_top": "위쪽",
         "padding_bottom": "아래쪽"
       },
+      "login": {
+        "login_image": "로그인 이미지"
+      },
+      "register": {
+        "register_image": "등록 이미지"
+      },
       "spacing": "간격",
       "colors": {
         "label": "색상 배합",
@@ -1188,6 +1194,12 @@
       "settings": {
         "display_logo": {
           "label": "로고 표시"
+        },
+        "login-image": {
+          "label": "로그인 이미지"
+        },
+        "register-image": {
+          "label": "등록 이미지"
         },
         "color_popup": {
           "label": "배경색"

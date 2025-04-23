@@ -24,9 +24,9 @@ $(".ctm-login-modal-bg").click(function () {
 });
 
 // Tab functionality
-$(".tab-heading ul li a").click(function () {
+$(".login-cta a, .register-cta a").click(function () {
   const tabId = $(this).data("tab");
-  $(".tab-heading ul li a").removeClass("current");
+  $(".login-cta a").removeClass("current");
   $(".account-tab.tab-pane").removeClass("current");
   $(this).addClass("current");
   $(`#${tabId}`).addClass("current");

@@ -370,6 +370,12 @@
         "padding_top": "上",
         "padding_bottom": "下"
       },
+      "login": {
+        "login_image": "ログイン画像"
+      },
+      "register": {
+        "register_image": "登録画像"
+      },
       "spacing": "間隔",
       "colors": {
         "label": "配色",
@@ -1191,6 +1197,12 @@
         },
         "color_popup": {
           "label": "背景色"
+        },
+        "login-image": {
+          "label": "ログイン画像"
+        },
+        "register-image": {
+          "label": "登録画像"
         },
         "bg-image": {
           "label": "背景画像"

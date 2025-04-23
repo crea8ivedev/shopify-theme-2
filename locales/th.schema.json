@@ -370,6 +370,12 @@
         "padding_top": "ด้านบน",
         "padding_bottom": "ด้านล่าง"
       },
+      "login": {
+        "login_image": "รูปภาพล็อกอิน"
+      },
+      "register": {
+        "register_image": "รูปภาพล็อกอิน"
+      },
       "spacing": "การเว้นระยะห่าง",
       "colors": {
         "label": "รูปแบบสี",
@@ -1194,6 +1200,12 @@
         },
         "bg-image": {
           "label": "รูปภาพพื้นหลัง"
+        },
+        "login-image": {
+          "label": "รูปภาพล็อกอิน"
+        },
+        "register-image": {
+          "label": "รูปภาพล็อกอิน"
         },
         "position_popup": {
           "label": "ตำแหน่ง",

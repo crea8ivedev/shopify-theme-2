@@ -114,7 +114,7 @@
           placeholder="Email"
           class="!font-body !text-body !text-16 !leading-26"
         >
-        <label for="CustomerEmail" class="italic"> Email Address </label>
+        <label for="CustomerEmail" class="italic"> Email Address or Mobile Number </label>
       </div>
 
       {%- if form.password_needed -%}
@@ -134,20 +134,18 @@
           <label for="CustomerPassword" class="italic"> Password </label>
         </div>
       {%- endif -%}
-
-      <button
-        class="brown-btn !my-20 w-fit font-body !pt-10 !pb-7 !px-20 !font-semibold !bg-brown !text-white !border !border-solid !border-brown !rounded-4 !text-16 !leading-26 !tracking-normal text-center flex flex-col items-center capitalize cursor-pointer transition-all duration-300 ease-in-out relative hover:!bg-transparent hover:!text-brown"
-      >
-        Login
-      </button>
-
       <a
         href="/account/login#recover"
         id="login-none"
         class="drawer_reset_btn text-center font-body font-semibold !text-16 leading-26 !text-brown !no-underline transition-all duration-300 hover:!text-brown_100 hover:no-underline !mx-auto !block"
       >
-        Reset Password
+        Forgot password?
       </a>
+      <button
+        class="brown-btn"
+      >
+        Login {{ 'icon-button-arrow.svg' | inline_asset_content }}
+      </button>
     {%- endform -%}
   </div>
   <div class="login-cta reset-below-btn">

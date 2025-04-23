@@ -370,6 +370,12 @@
         "padding_top": "Góra",
         "padding_bottom": "Dół"
       },
+      "login": {
+        "login_image": "Obraz logowania"
+      },
+      "register": {
+        "register_image": "Obraz rejestracji"
+      },
       "spacing": "Odstępy",
       "colors": {
         "label": "Kolorystyka",
@@ -1191,6 +1197,12 @@
         },
         "color_popup": {
           "label": "Kolor tła"
+        },
+        "login-image": {
+          "label": "Obraz logowania"
+        },
+        "register-image": {
+          "label": "Obraz rejestracji"
         },
         "bg-image": {
           "label": "Obraz tła"

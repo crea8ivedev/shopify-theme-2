@@ -9,33 +9,6 @@
  */
 {
   "sections": {
-    "slideshow_eqDDp9": {
-      "type": "slideshow",
-      "blocks": {
-        "marquee_fAqgQG": {
-          "type": "marquee",
-          "settings": {
-            "collection": "",
-            "subheading-marqee": "",
-            "heading-marqee": "",
-            "content-marqee": "",
-            "button_label-marqee": "",
-            "link-marqee": "",
-            "color_bg": ""
-          }
-        }
-      },
-      "block_order": [
-        "marquee_fAqgQG"
-      ],
-      "disabled": true,
-      "settings": {
-        "show_navigation_buttons": false,
-        "auto_rotate": false,
-        "change_slides_speed": 5,
-        "slide_height": "small"
-      }
-    },
     "multicolumn": {
       "type": "multicolumn",
       "blocks": {
@@ -67,11 +40,7 @@
           }
         }
       },
-      "block_order": [
-        "column1",
-        "column2",
-        "column3"
-      ],
+      "block_order": ["column1", "column2", "column3"],
       "settings": {
         "title": "",
         "heading_size": "h1",
@@ -90,8 +59,5 @@
       }
     }
   },
-  "order": [
-    "slideshow_eqDDp9",
-    "multicolumn"
-  ]
+  "order": ["multicolumn"]
 }

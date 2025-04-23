@@ -370,6 +370,12 @@
         "padding_top": "Nahoře",
         "padding_bottom": "Dole"
       },
+      "login": {
+        "login_image": "Login obrázek"
+      },
+      "register": {
+        "register_image": "Register obrázek"
+      },
       "spacing": "Rozestupy",
       "colors": {
         "label": "Barevné schéma",
@@ -1188,6 +1194,12 @@
       "settings": {
         "display_logo": {
           "label": "Logo zobrazit"
+        },
+        "login-image": {
+          "label": "Obrázek přihlášení"
+        },
+        "register-image": {
+          "label": "Obrázek registrace"
         },
         "color_popup": {
           "label": "Barva pozadí"

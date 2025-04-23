@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "settings_schema": {
     "colors": {
@@ -369,6 +378,12 @@
         "section_padding_heading": "Remplissage",
         "padding_top": "Haut",
         "padding_bottom": "Bas"
+      },
+      "login": {
+        "login_image": "Image de connexion"
+      },
+      "register": {
+        "register_image": "Image d'inscription"
       },
       "spacing": "Espacement",
       "colors": {
@@ -1191,6 +1206,12 @@
         },
         "color_popup": {
           "label": "Couleur de fond"
+        },
+        "login-image": {
+          "label": "Image de connexion"
+        },
+        "register-image": {
+          "label": "Image d'inscription"
         },
         "bg-image": {
           "label": "Image de fond"

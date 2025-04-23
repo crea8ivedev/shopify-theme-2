@@ -370,6 +370,12 @@
         "padding_top": "Topp",
         "padding_bottom": "Bunn"
       },
+      "login": {
+        "login_image": "Login bilde"
+      },
+      "register": {
+        "register_image": "Register bilde"
+      },
       "spacing": "Mellomrom",
       "colors": {
         "label": "Fargepalett",
@@ -1191,6 +1197,12 @@
         },
         "color_popup": {
           "label": "Bakgrunnsfarge"
+        },
+        "login-image": {
+          "label": "Login bilde"
+        },
+        "register-image": {
+          "label": "Register bilde"
         },
         "bg-image": {
           "label": "Bakgrunnsbilde"

@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "settings_schema": {
     "colors": {
@@ -369,6 +378,12 @@
         "section_padding_heading": "Opvulling",
         "padding_top": "Boven",
         "padding_bottom": "Onder"
+      },
+      "login": {
+        "login_image": "Login afbeelding"
+      },
+      "register": {
+        "register_image": "Register afbeelding"
       },
       "spacing": "Afstand",
       "colors": {
@@ -1191,6 +1206,12 @@
         },
         "color_popup": {
           "label": "Achtergrondkleur"
+        },
+        "login-image": {
+          "label": "Login afbeelding"
+        },
+        "register-image": {
+          "label": "Registratie afbeelding"
         },
         "bg-image": {
           "label": "Achtergrondafbeelding"

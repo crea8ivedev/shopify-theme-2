@@ -17,7 +17,21 @@
     }
   }
 {%- endstyle -%}
-
+<div class="register-image-container">
+  {% if section.settings.register_image %}
+    <img
+      src="{{ section.settings.register_image | image_url: width: 1000 }}"
+      width="100%"
+      height="100%"
+      alt="Register Image"
+    >
+  {% else %}
+    {% render 'placeholder' | class: 'login-placeholder' %}
+  {% endif %}
+</div>
+<div>
+  <h2>Sign Up</h2>
+</div>
 <div class="customer register section-{{ section.id }}-padding">
   <svg style="display: none">
     <symbol id="icon-error" viewBox="0 0 13 13">
@@ -42,11 +56,8 @@
         stroke-width="0.7">
     </symbol>
   </svg>
-  <h2 class="font-heading font-bold text-grey text-32 leading-42 md:text-32 md:leading-42 desktop:text-48 desktop:leading-63 uppercase">
-    Create account
-  </h2>
   {%- form 'create_customer', novalidate: 'novalidate' -%}
-    <div class="field border border-solid border-body rounded-4 focus:!shadow-none focus:!outline-0 overflow-hidden">
+    <div class="field">
       <input
         type="text"
         name="customer[first_name]"
@@ -59,20 +70,7 @@
       >
       <label for="RegisterForm-FirstName"> First name </label>
     </div>
-    <div class="field border border-solid border-body rounded-4 focus:!shadow-none focus:!outline-0 overflow-hidden">
-      <input
-        type="text"
-        name="customer[last_name]"
-        id="RegisterForm-LastName"
-        {% if form.last_name %}
-          value="{{ form.last_name }}"
-        {% endif %}
-        autocomplete="family-name"
-        placeholder="Last name"
-      >
-      <label for="RegisterForm-LastName"> Last name </label>
-    </div>
-    <div class="field border border-solid border-body rounded-4 focus:!shadow-none focus:!outline-0 overflow-hidden">
+    <div class="field">
       <input
         type="email"
         name="customer[email]"
@@ -105,7 +103,7 @@
         {{ form.errors.messages.email }}.
       </span>
     {%- endif -%}
-    <div class="field border border-solid border-body rounded-4 focus:!shadow-none focus:!outline-0 overflow-hidden">
+    <div class="field">
       <input
         type="password"
         name="customer[password]"
@@ -132,9 +130,11 @@
         {{ form.errors.messages.password }}.
       </span>
     {%- endif -%}
-    <button class="brown-btn !my-20 w-fit font-body !pt-10 !pb-7 !px-20 !font-semibold !bg-brown !text-white !border !border-solid !border-brown !rounded-4 !text-16 !leading-26 !tracking-normal text-center flex flex-col items-center capitalize cursor-pointer transition-all duration-300 ease-in-out relative hover:!bg-transparent hover:!text-brown">
-      Submit
-    </button>
+    <button class="brown-btn">Sign Up {{ 'icon-button-arrow.svg' | inline_asset_content }}</button>
+    <div>
+      Already have an account?
+      <a href="{{ routes.account_login_url }}"> Log in </a>
+    </div>
   {%- endform -%}
 </div>
 
@@ -145,6 +145,11 @@
     {
       "type": "header",
       "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "image_picker",
+      "id": "register_image",
+      "label": "t:sections.all.register.register_image"
     },
     {
       "type": "range",

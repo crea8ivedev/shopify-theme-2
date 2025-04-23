@@ -365,6 +365,12 @@
   },
   "sections": {
     "all": {
+      "login": {
+        "login_image": "Kirjautumiskuva"
+      },
+      "register": {
+        "register_image": "Rekisteröitymiskuva"
+      },
       "padding": {
         "section_padding_heading": "Puskuri",
         "padding_top": "Yläreuna",
@@ -1188,6 +1194,12 @@
       "settings": {
         "display_logo": {
           "label": "Näytä logo"
+        },
+        "login-image": {
+          "label": "Kirjautumiskuva"
+        },
+        "register-image": {
+          "label": "Rekisteröitymiskuva"
         },
         "color_popup": {
           "label": "Taustavari"

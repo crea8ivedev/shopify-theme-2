@@ -370,6 +370,12 @@
         "padding_top": "Üst",
         "padding_bottom": "Alt"
       },
+      "login": {
+        "login_image": "Giriş resmi"
+      },
+      "register": {
+        "register_image": "Kayıt resmi"
+      },
       "spacing": "Boşluk",
       "colors": {
         "label": "Renk şeması",
@@ -1194,6 +1200,12 @@
         },
         "bg-image": {
           "label": "Arka plan görseli"
+        },
+        "login-image": {
+          "label": "Giriş görseli"
+        },
+        "register-image": {
+          "label": "Kayıt görseli"
         },
         "position_popup": {
           "label": "Pozisyon",

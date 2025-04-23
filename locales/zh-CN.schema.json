@@ -370,6 +370,12 @@
         "padding_top": "顶部",
         "padding_bottom": "底部"
       },
+      "login": {
+        "login_image": "登录图片"
+      },
+      "register": {
+        "register_image": "注册图片"
+      },
       "spacing": "间距",
       "colors": {
         "label": "配色方案",
@@ -1194,6 +1200,12 @@
         },
         "bg-image": {
           "label": "背景图片"
+        },
+        "login-image": {
+          "label": "登录图片"
+        },
+        "register-image": {
+          "label": "注册图片"
         },
         "position_popup": {
           "label": "位置",

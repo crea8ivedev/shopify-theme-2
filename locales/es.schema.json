@@ -370,6 +370,12 @@
         "padding_top": "Arriba",
         "padding_bottom": "Abajo"
       },
+      "login": {
+        "login_image": "Imagen de inicio de sesión"
+      },
+      "register": {
+        "register_image": "Imagen de registro"
+      },
       "spacing": "Espaciado",
       "colors": {
         "label": "Esquema de colores",
@@ -1191,6 +1197,12 @@
         },
         "color_popup": {
           "label": "Color de fondo"
+        },
+        "login-image": {
+          "label": "Imagen de inicio de sesión"
+        },
+        "register-image": {
+          "label": "Imagen de registro"
         },
         "bg-image": {
           "label": "Imagen de fondo"
