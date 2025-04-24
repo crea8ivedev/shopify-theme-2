@@ -20,6 +20,11 @@
   <div class="c-modal-body">
     <div class="modal-login w-full h-full flex justify-center items-center">
       <div class="modal-login__inner w-full">
+        <div class="popup-close">
+          <span class="popup-close-btn-icon">
+            {{ 'icon-close.svg' | inline_asset_content }}
+          </span>
+        </div>
         <div class="login-model-logo w-[142px] h-[80px] mx-auto">
           {% if section.settings.display_logo == true %}
             <img

@@ -7,20 +7,28 @@ function getFocusableElements(container) {
 }
 
 // Login popup functionality
-$(".login_popup").click(function () {
+// Open login popup
+$(".login_popup").on("click", function () {
   $(".customer-account").removeClass("hidden").addClass("login-left");
   $(".ctm-login-modal-bg").addClass("active");
   $(".login_popup.header__icon").addClass("active");
   $("body").addClass("login-popu-active");
 });
 
-$(".ctm-login-modal-bg").click(function () {
+// Close login popup via close button
+$(".popup-close").on("click", function () {
+  $(".customer-account").addClass("hidden").removeClass("login-left");
+  $(".ctm-login-modal-bg").removeClass("active");
+  $(".login_popup.header__icon").removeClass("active");
+  $("body").removeClass("login-popu-active");
+});
+
+// Close login popup by clicking modal background
+$(".ctm-login-modal-bg").on("click", function () {
   $(this).removeClass("active");
   $(".customer-account").addClass("hidden").removeClass("login-left");
   $(".login_popup.header__icon").removeClass("active");
-  $("body").removeClass(
-    "modal-overflow modal-overlay-active login-popu-active",
-  );
+  $("body").removeClass("login-popu-active");
 });
 
 // Tab functionality

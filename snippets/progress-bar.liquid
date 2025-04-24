@@ -1,5 +1,86 @@
-<div class="progress-bar-container hidden">
-  <div class="progress-bar">
-    <div class="progress-bar-value"></div>
+<div class="cart-shipping__wrapper custom-progress-bar">
+  <p id="cart-shipping__success"></p>
+  <p id="progress-message"></p>
+  <div id="cart-shippingThreshold__bar">
+    <span class="cart-shippingThreshold__progress"></span>
   </div>
 </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const freeShippingThreshold = {{ settings.free_shipping_threshold }} * 100; // Convert dollars to cents
+    const freeShippingMessage = "{{ settings.free_shipping_message }}";
+    const freeShippingUnlockedMessage = "{{ settings.free_shipping_unlocked_message }}";
+    let lastKnownValue = 0;
+    let isUpdating = false;
+
+    function calculateProgress(currentVal) {
+      const progressBar = document.querySelector(".cart-shippingThreshold__progress");
+      const progressMessage = document.getElementById("progress-message");
+      const successMessage = document.getElementById("cart-shipping__success");
+      const progressBarWrapper = document.querySelector(".cart-shipping__wrapper");
+
+      if (currentVal === 0) {
+        progressBarWrapper.style.display = "none";
+        return;
+      }
+
+      progressBarWrapper.style.display = "block";
+
+      let progressPercentage = (currentVal / freeShippingThreshold) * 100;
+      progressPercentage = Math.min(progressPercentage, 100);
+
+      if (currentVal < freeShippingThreshold) {
+        let remainingAmount = ((freeShippingThreshold - currentVal) / 100).toFixed(2);
+        progressMessage.innerHTML = freeShippingMessage.replace("X", remainingAmount);
+        successMessage.style.display = "none";
+        progressMessage.style.display = "block";
+      } else {
+        successMessage.innerHTML = freeShippingUnlockedMessage;
+        successMessage.style.display = "block";
+        progressMessage.style.display = "none";
+      }
+
+      progressBar.style.width = `${progressPercentage}%`;
+    }
+
+    function cartDrawerUpdate() {
+      if (isUpdating) return;
+      isUpdating = true;
+
+      fetch("/cart.js")
+        .then(response => response.json())
+        .then(data => {
+          if (data.item_count === 0) {
+            document.querySelector(".cart-shipping__wrapper").style.display = "none";
+          } else {
+            document.querySelector(".cart-shipping__wrapper").style.display = "block";
+            calculateProgress(data.total_price);
+          }
+        })
+        .catch(error => console.error("Cart update error:", error))
+        .finally(() => {
+          isUpdating = false;
+        });
+    }
+
+    function forceCartUpdate() {
+      setTimeout(cartDrawerUpdate, 100);
+    }
+
+    cartDrawerUpdate();
+
+    document.addEventListener("cart:updated", cartDrawerUpdate);
+    document.addEventListener("cart:change", cartDrawerUpdate);
+
+    const originalFetch = window.fetch;
+    window.fetch = function (url, options) {
+      return originalFetch(url, options).then(response => {
+        if (url.includes("/cart/add") || url.includes("/cart/update") || url.includes("/cart/change")) {
+          forceCartUpdate();
+        }
+        return response;
+      });
+    };
+  });
+</script>

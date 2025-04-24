@@ -1454,6 +1454,25 @@
         "id": "cart_color_scheme",
         "label": "t:sections.all.colors.label",
         "default": "scheme-1"
+      },
+      {
+        "type": "number",
+        "id": "free_shipping_threshold",
+        "label": "Free Shipping Threshold (in dollars)",
+        "default": 55
+      },
+      {
+        "type": "text",
+        "id": "free_shipping_message",
+        "label": "Message before unlocking Free Shipping",
+        "default": "You're $X away from Free Shipping!",
+        "info": "Use '$X' to dynamically show the remaining amount."
+      },
+      {
+        "type": "text",
+        "id": "free_shipping_unlocked_message",
+        "label": "Message after unlocking Free Shipping",
+        "default": "🎉 Congrats! You unlocked Free Shipping!"
       }
     ]
   }

@@ -1,0 +1,156 @@
+{%- if cart != empty -%}
+  {% comment %} yml section start {% endcomment %}
+  <div class="ctm_cart">
+    {% capture productslist %}
+                {% for item in cart.items %}
+                  {% assign product_rec = item.product %}
+                  {{ item.product_id | append: ',' }}
+                {% endfor %}
+              {% endcapture %}
+
+    {% assign collection_handle = '' %}
+    {% for collection in collections %}
+      {% if collection.products != null %}
+        {% assign collection_handle = collection.products %}
+      {% else %}
+        {% assign collection_handle = collections['all-products'].products %}
+      {% endif %}
+    {% endfor %}
+
+    <div class="cart_related_product px-0 py-40">
+      <div class="cart_related_iner_main bg-butter_yellow p-20 rounded-[28px]">
+        <div class="ctm_yml_head text-black-900 mb-28">
+          <h4>Build your routine</h4>
+        </div>
+        <div
+          class="collection-list card_relatedslide_block contains-card contains-card--collection{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down{% if section.settings.swipe_on_mobile %} slider slider--tablet grid--peek{% endif %} collection-list--{{ section.blocks.size }}-items"
+          id="Slider-{{ section.id }}"
+          role="list"
+        >
+          {% assign productnumber = 0 %}
+          {% for prod in collection_handle limit: 40 %}
+            {% if productslist contains prod.id %}
+              {% continue %}
+            {% endif %}
+            {% assign productnumber = productnumber | plus: 1 %}
+            {% if productnumber == 1 %}
+              <div class="related-main related-products collection-list__item flex-grow remove-{{ productnumber }}">
+                <div class="main-img-related">
+                  <div class="related-inner-block flex items-center gap-20 mb-20">
+                    <div class="related-img shrink-0 p-10">
+                      {% if prod.featured_image %}
+                        <a href="{{ prod.url }}">
+                          <img
+                            alt="{{ prod.title }}"
+                            class="w-[100px] h-[100px] object-cover shadow-shadow-2xl"
+                            src="{{ prod.featured_image | image_url: width: 2000 }}"
+                            loading="lazy"
+                            height="100"
+                            width="100"
+                          >
+                        </a>
+                      {% elsif prod.featured_media.media_type == 'video' %}
+                        <a href="{{ prod.url }}">
+                          <div class="related_video">
+                            {{
+                              prod.featured_media
+                              | video_tag:
+                                controls: false,
+                                autoplay: true,
+                                loop: true,
+                                muted: true,
+                                playsinline: true,
+                                webkit-playsinline: true
+                            }}
+                          </div>
+                        </a>
+                      {% else %}
+                        <img
+                          class="w-[100px] h-[100px] object-cover shadow-shadow-2xl"
+                          src="https://cdn.shopify.com/s/files/1/0633/2524/1527/files/500x500.gif"
+                          loading="lazy"
+                          height="100"
+                          width="100"
+                        >
+                      {% endif %}
+                    </div>
+                    <div class="related_content flex gap-10">
+                      <div class="related_contentgrp group">
+                        <div class="related-img_title mb-5">
+                          <a
+                            class="group-hover:text-dark_gray transition-all duration-300 ease-in-out"
+                            href="{{ prod.url }}"
+                          >
+                            <h4 class="group-hover:text-dark_gray transition-all duration-300 ease-in-out">
+                              {{ prod.title }}
+                            </h4>
+                          </a>
+                        </div>
+                        <div class="related_price">
+                          <h6 class="related_price text-20">
+                            {{ prod.price | money }}
+
+                            <s class="font-normal">{{ prod.compare_at_price | money }}</s>
+                          </h6>
+                        </div>
+                      </div>
+                      <div class="related_remove hidden">
+                        <cart-remove-button
+                          class=""
+                          id="CartDrawer-Remove-{{ prod.index | plus: 1 }}"
+                          data-index="{{ prod.index | plus: 1 }}"
+                        >
+                          <button
+                            type="button"
+                            class="button button--tertiary cart-remove-button"
+                            aria-label="{{ 'sections.cart.remove_title' | t: title: prod.title }}"
+                            data-variant-id="{{ prod.variants.first.id }}"
+                          >
+                            {{ 'icon-close.svg' | inline_asset_content }}
+                          </button>
+                        </cart-remove-button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="qty_related_btn flex items-center gap-20 w-full">
+                    <product-form data-section-id="slide-cart" class="w-full">
+                      {%- assign product_form_id = 'quick-add-' | append: 'slide-cart' | append: prod.id -%}
+                      {%- form 'product',
+                        prod,
+                        id: product_form_id,
+                        class: 'form cart_relaterd_form',
+                        novalidate: 'novalidate',
+                        data-type: 'add-to-cart-form'
+                      -%}
+                        <input type="hidden" name="id" value="{{ prod.variants.first.id }}">
+                        {%- render 'loading-spinner' -%}
+                        <div class="cart_btngrp flex items-center gap-20">
+                          {% if prod.available %}
+                            <button
+                              type="submit"
+                              class="btn_fill btn_fill_black flex-grow w-full xsscreen1:w-1/2 tracking-tighter"
+                            >
+                              ADD TO CART
+                            </button>
+                          {% else %}
+                            <button
+                              class="btn_fill btn_fill_black flex-grow w-full xsscreen1:w-1/2 btn_soldout tracking-tighter"
+                              disabled
+                            >
+                              Sold Out
+                            </button>
+                          {% endif %}
+                        </div>
+                      {%- endform -%}
+                    </product-form>
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+  {% comment %} yml section end {% endcomment %}
+{% endif %}
