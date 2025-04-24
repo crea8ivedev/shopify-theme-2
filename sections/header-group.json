@@ -17,29 +17,21 @@
         "announcement_krJPQL": {
           "type": "announcement",
           "settings": {
-            "text": "FREE RETURNS & 60 DAY RETURN WINDOW 1",
+            "text": "FREE RETURNS & 60 DAY RETURN WINDOW",
             "link": ""
           }
         },
         "announcement_3Y7mGD": {
           "type": "announcement",
           "settings": {
-            "text": "FREE RETURNS & 60 DAY RETURN WINDOW 2",
+            "text": "FREE RETURNS & 60 DAY RETURN WINDOW",
             "link": ""
-          }
-        },
-        "announcement_fqpnma": {
-          "type": "announcement",
-          "settings": {
-            "text": "QA purpose",
-            "link": "shopify://collections/face-cream"
           }
         }
       },
       "block_order": [
         "announcement_krJPQL",
-        "announcement_3Y7mGD",
-        "announcement_fqpnma"
+        "announcement_3Y7mGD"
       ],
       "settings": {
         "auto_rotate": true,
