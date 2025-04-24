@@ -31,8 +31,8 @@
         "announcement_fqpnma": {
           "type": "announcement",
           "settings": {
-            "text": "FREE RETURNS & 60 DAY RETURN WINDOW 3",
-            "link": ""
+            "text": "QA purpose",
+            "link": "shopify://collections/face-cream"
           }
         }
       },
