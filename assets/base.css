@@ -3719,3 +3719,25 @@ details-disclosure > details {
 .quick-view-product {
   display: flex;
 }
+.quick-view-product #shopify-section-main-product {
+  width: 100%;
+}
+.quick-view-product .page-width, 
+.quick-view-product .section-main-product-padding {
+  padding: 0;
+}
+.quick-view-pd-content button, 
+.quick-view-content button {
+  cursor: pointer;
+}
+.quick-view-product #Slider-Gallery-main-product {
+  margin: 0;
+}
+.quick-view-pd-content button.add-to-cart.product-form__submit {
+  border: 1px solid #944E63;
+  border-radius: 100px;
+}
+.quick-view-pd-content button.add-to-cart.product-form__submit:hover {
+  background-color: #944E63;
+  color: white;
+}

@@ -127,7 +127,7 @@
         "heading": "Feature Products",
         "sub_heading": "Shop our summer trendy collection.",
         "button": "Shop All Collections",
-        "button_url": ""
+        "button_url": "shopify://collections/all"
       }
     }
   },

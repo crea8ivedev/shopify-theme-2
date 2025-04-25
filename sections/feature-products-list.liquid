@@ -1,3 +1,5 @@
+{{ 'feature-products-list.css' | asset_url | stylesheet_tag }}
+
 <div class="feature-products-section">
   <div class="feature-pd-header">
     <div class="feature-products-heading">
@@ -8,6 +10,9 @@
     <div class="feature-products-btn desktop-only">
         <a href="{{ section.settings.button_url }}" class="shop-all-btn">
             {{ section.settings.button }}
+            <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.91988 10.1574L10 0.5C7.58106 0.523477 2.7615 0.556619 0.342494 0.580096L0.322628 1.7891C2.49837 1.76773 5.38677 1.74999 7.92773 1.72694L0 9.65453L0.845473 10.5L8.77321 2.57237L8.70443 10.1708L9.91988 10.1574Z"/>
+            </svg>
         </a>
     </div>
     {% endif %}
@@ -26,11 +31,93 @@
                 width="300px"
                 height="300px"
               />
-              <div class="icon-group">
-                <div data-product-handle="{{ product.handle }}" onclick="openQuickView('{{ product.handle }}')" class="quick-view-icon desktop-only" style="width: 32px; height: 32px; background-color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);">
+              <div class="icon-group mobile-only">
+                <div data-product-handle="{{ product.handle }}" onclick="openQuickView('{{ product.handle }}')" class="quick-view-icon mobile-only" style="width: 32px; height: 32px; background-color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);">
                   <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M7.00001 1.5C4.71341 1.5 2.72758 3.23295 1.48635 5.84664C1.46605 5.88941 1.45101 5.92111 1.43833 5.9487C1.42714 5.97302 1.4202 5.98897 1.41566 6C1.4202 6.01103 1.42714 6.02698 1.43833 6.0513C1.45101 6.07889 1.46605 6.11059 1.48635 6.15334C2.72758 8.76705 4.71341 10.5 7.00001 10.5C9.2866 10.5 11.2724 8.76705 12.5136 6.15334C12.534 6.11059 12.549 6.07889 12.5617 6.0513C12.5729 6.02698 12.5798 6.01103 12.5843 6C12.5798 5.98895 12.5729 5.973 12.5617 5.9487C12.549 5.92111 12.534 5.88941 12.5136 5.84664C11.2724 3.23295 9.2866 1.5 7.00001 1.5ZM0.222881 5.17202C1.59484 2.28301 3.97255 0 7.00001 0C10.0274 0 12.4052 2.28301 13.7771 5.17202C13.7821 5.18248 13.7872 5.19319 13.7925 5.20415C13.857 5.33922 13.9405 5.51359 13.9777 5.72861C14.0074 5.8996 14.0074 6.1004 13.9777 6.27139C13.9405 6.48642 13.857 6.6608 13.7925 6.79585C13.7872 6.80682 13.7821 6.81752 13.7771 6.82798C12.4052 9.71699 10.0274 12 7.00001 12C3.97255 12 1.59484 9.71699 0.222881 6.82798C0.217907 6.81752 0.212781 6.80682 0.207542 6.79585C0.142951 6.66078 0.0595517 6.4864 0.0222498 6.27139C-0.00741659 6.1004 -0.00741659 5.8996 0.0222498 5.72861C0.0595517 5.51359 0.142951 5.33922 0.207542 5.20415C0.212781 5.19319 0.217907 5.18248 0.222881 5.17202ZM7.00001 4.5C6.21873 4.5 5.58537 5.17157 5.58537 6C5.58537 6.82843 6.21873 7.5 7.00001 7.5C7.78127 7.5 8.41462 6.82843 8.41462 6C8.41462 5.17157 7.78127 4.5 7.00001 4.5ZM4.17075 6C4.17075 4.34313 5.43745 2.99999 7.00001 2.99999C8.56255 2.99999 9.82924 4.34313 9.82924 6C9.82924 7.65685 8.56255 9.00001 7.00001 9.00001C5.43745 9.00001 4.17075 7.65685 4.17075 6Z" fill="#B47B84"/>
                   </svg>            
+                </div>
+              </div>
+              <div class="icon-group desktop-only">
+                <div class="icon-group-desktop">
+                  <div data-product-handle="{{ product.handle }}" onclick="openQuickView('{{ product.handle }}')" class="quick-view-icon desktop-only">
+                    <span>Quick View</span>           
+                  </div>
+                  <product-form
+                  class="product-form desktop-only"
+                  data-hide-errors="{{ gift_card_recipient_feature_active }}"
+                  data-section-id="{{ section.id }}"
+                  >
+                  <div class="product-form__error-message-wrapper" role="alert" hidden>
+                    <span class="svg-wrapper">
+                      {{- 'icon-error.svg' | inline_asset_content -}}
+                    </span>
+                    <span class="product-form__error-message"></span>
+                  </div>
+            
+                  {%- form 'product',
+                    product,
+                    id: product_form_id,
+                    class: 'form',
+                    novalidate: 'novalidate',
+                    data-type: 'add-to-cart-form'
+                  -%}
+                    <input
+                      type="hidden"
+                      name="id"
+                      value="{{ product.selected_or_first_available_variant.id }}"
+                      {% if product.selected_or_first_available_variant.available == false
+                        or quantity_rule_soldout
+                        or product.selected_or_first_available_variant == null
+                      %}
+                        disabled
+                      {% endif %}
+                      class="product-variant-id"
+                    >
+            
+                    {%- if gift_card_recipient_feature_active -%}
+                      {%- render 'gift-card-recipient-form', product: product, form: form, section: section -%}
+                    {%- endif -%}
+            
+                    <div class="product-form__buttons">
+                      {%- liquid
+                        assign check_against_inventory = true
+                        if product.selected_or_first_available_variant.inventory_management != 'shopify' or product.selected_or_first_available_variant.inventory_policy == 'continue'
+                          assign check_against_inventory = false
+                        endif
+                        if product.selected_or_first_available_variant.quantity_rule.min > product.selected_or_first_available_variant.inventory_quantity and check_against_inventory
+                          assign quantity_rule_soldout = true
+                        endif
+                      -%}
+                      <button
+                        id="ProductSubmitButton-{{ section_id }}"
+                        type="submit"
+                        name="add"
+                        class="add-to-cart product-form__submit button button--full-width {% if show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}"
+                        {% if product.selected_or_first_available_variant.available == false
+                          or quantity_rule_soldout
+                          or product.selected_or_first_available_variant == null
+                        %}
+                          disabled
+                        {% endif %}
+                      >
+                        <span>
+                          {%- if product.selected_or_first_available_variant == null -%}
+                            {{ 'products.product.unavailable' | t }}
+                          {%- elsif product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
+                            {{ 'products.product.sold_out' | t }}
+                          {%- else -%}
+                            {{ 'products.product.add_to_cart' | t }}
+                          {%- endif -%}
+                        </span>
+                        {%- render 'loading-spinner' -%}
+                      </button>
+                      {%- if show_dynamic_checkout -%}
+                        {{ form | payment_button }}
+                      {%- endif -%}
+                    </div>
+                  {%- endform -%}
+                  </product-form>
                 </div>
               </div>
             </div>
@@ -126,6 +213,9 @@
     <div class="feature-products-btn mobile-only">
         <a href="{{ section.settings.button_url }}" class="shop-all-btn">
             {{ section.settings.button }}
+            <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.91988 10.1574L10 0.5C7.58106 0.523477 2.7615 0.556619 0.342494 0.580096L0.322628 1.7891C2.49837 1.76773 5.38677 1.74999 7.92773 1.72694L0 9.65453L0.845473 10.5L8.77321 2.57237L8.70443 10.1708L9.91988 10.1574Z"/>
+            </svg>
         </a>
     </div>
     {% endif %}
@@ -137,140 +227,6 @@
     <div id="quick-view-body">Loading...</div>
   </div>
 </div>
-
-
-{%  style  %}
-.feature-products-section {
-  padding: 50px 80px;
-  background: linear-gradient(to bottom, #FFE7E7, #FFFBFB);
-}
-@media screen and (min-width: 768px) {
-  .feature-pd-header {
-    display: flex;
-    justify-content: space-between;
-  }
-}
-.feature-products-btn {
-  align-self: center;
-  justify-self: center;
-}
-.featured-product-price {
-  flex-direction: row;
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  justify-content: center;
-}
-.image-wrapper {
-  position: relative;
-}
-.image-wrapper img {
-  border-radius: 25px;
-}
-.icon-group {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  display: flex;
-  gap: 8px;
-  flex-direction: column;
-}
-.featured-pd-content {
-  text-align: center;
-}
-.featured-pd-content .compare-price {
-  color: #25252566;
-}
-.feature-products-heading p {
-  color: #B47B84;
-  margin-top: 0;
-}
-.feature-products-heading h3 {
-  font-size: 34px;
-  margin: 0;
-}
-.quick-view-icon {
-  background: white;
-  padding: 4px;
-  border-radius: 50%;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-.quick-view-icon:hover {
-  transform: scale(1.1);
-}
-.custom-slider-wrapper {
-  overflow: hidden;
-  width: 100%;
-  -ms-overflow-style: none;  /* IE/Edge */
-  scrollbar-width: none;     /* Firefox */
-}
-.custom-slider-track {
-  display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-  cursor: grab;
-}
-.custom-slider-track::-webkit-scrollbar {
-  display: none;
-}
-.custom-slide {
-  scroll-snap-align: start;
-  border-radius: 8px;
-  padding: 10px;
-  padding-bottom: 40px;
-}
-.custom-slider-track.dragging {
-  cursor: grabbing;
-  user-select: none;
-}
-.custom-slider-track {
-  cursor: default;
-}
-.custom-slider-track:hover {
-  cursor: grab;
-}
-.custom-slider-track.dragging {
-  cursor: grabbing;
-}
-.feature-products-btn a.shop-all-btn {
-  text-decoration: none;
-  color: white;
-  background-color: #944E63;
-  padding: 12px 36px;
-  border-radius: 100px;
-}
-.add-to-cart.product-form__submit {
-  background-color: transparent;
-  color: #944E63;
-  width: fit-content;
-  justify-self: center;
-  padding: 12px 20px;
-  margin-top: 15px;
-}
-.add-to-cart::after {
-  transition: none;
-  box-shadow: none;
-  border: 1px solid #944E63;
-  border-radius: 100px;
-}
-.add-to-cart.button span,
-.feature-products-btn a.shop-all-btn {
-  text-transform: capitalize;
-}
-.featured-pd-content h3 {
-  margin-bottom: 5px;
-}
-a.shop-all-btn:hover {
-  background: transparent;
-  color: #944E63;
-  border: 1px solid #944E63;
-}
-{% endstyle %}
 
 <script>
   function openQuickView(handle) {

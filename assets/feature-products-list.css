@@ -1,0 +1,189 @@
+.feature-products-section {
+    padding: 50px 80px;
+    background: linear-gradient(to bottom, #FFE7E7, #FFFBFB);
+}
+@media screen and (min-width: 768px) {
+    .feature-pd-header {
+      display: flex;
+      justify-content: space-between;
+    }
+}
+.feature-products-btn {
+    align-self: center;
+    justify-self: center;
+}
+.featured-product-price {
+    flex-direction: row;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.image-wrapper {
+    position: relative;
+}
+.image-wrapper img {
+    border-radius: 25px;
+}
+.icon-group {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+}
+.featured-pd-content {
+    text-align: center;
+}
+.featured-pd-content .compare-price {
+    color: #25252566;
+}
+.feature-products-heading p {
+    color: #B47B84;
+    margin-top: 0;
+}
+.feature-products-heading h3 {
+    font-size: 34px;
+    margin: 0;
+}
+.quick-view-icon {
+    background: white;
+    padding: 4px;
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.quick-view-icon:hover {
+    transform: scale(1.1);
+}
+.custom-slider-wrapper {
+    overflow: hidden;
+    width: 100%;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.custom-slider-track {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    cursor: grab;
+}
+.custom-slider-track::-webkit-scrollbar {
+    display: none;
+}
+.custom-slide {
+    scroll-snap-align: start;
+    border-radius: 8px;
+    padding: 10px;
+    padding-bottom: 40px;
+}
+.custom-slider-track.dragging {
+    cursor: grabbing;
+    user-select: none;
+}
+.custom-slider-track {
+    cursor: default;
+}
+.custom-slider-track:hover {
+    cursor: grab;
+}
+.custom-slider-track.dragging {
+    cursor: grabbing;
+}
+.feature-products-btn a.shop-all-btn {
+    text-decoration: none;
+    color: white;
+    background-color: #944E63;
+    padding: 12px 36px;
+    border-radius: 100px;
+}
+.add-to-cart.product-form__submit {
+    background-color: transparent;
+    color: #944E63;
+    width: fit-content;
+    justify-self: center;
+    padding: 12px 20px;
+    margin-top: 15px;
+}
+.add-to-cart::after {
+    transition: none;
+    box-shadow: none;
+    border: 1px solid #944E63;
+    border-radius: 100px;
+}
+.add-to-cart.button span,
+.feature-products-btn a.shop-all-btn {
+    text-transform: capitalize;
+}
+.featured-pd-content h3 {
+    margin-bottom: 5px;
+}
+a.shop-all-btn:hover {
+    background: transparent;
+    color: #944E63;
+    border: 1px solid #944E63;
+}
+a.shop-all-btn svg path {
+    fill: white;
+    transition: fill 0.3s ease;
+}
+a.shop-all-btn:hover svg path {
+    fill: #944E63;
+}
+@media screen and (max-width: 768px) {
+    .feature-products-section {
+      padding: 50px 50px;
+    }
+    .feature-products-heading h3 {
+      font-size: 30px;
+    }
+}
+@media screen and (max-width: 425px) {
+    .custom-slide .image-wrapper img {
+      width: 200px;
+      height: 200px;
+    }
+    .feature-products-heading h3 {
+      font-size: 26px;
+    }
+    .feature-products-btn a.shop-all-btn {
+      padding: 12px 25px;
+    }
+}
+.image-wrapper .icon-group-desktop {
+    opacity: 0;
+    display: flex;
+    flex-direction: row;
+} 
+.image-wrapper:hover .icon-group-desktop {
+    opacity: 1;
+}  
+.icon-group-desktop .quick-view-icon, .icon-group-desktop .product-form.desktop-only button {
+    background-color: #944e63;
+    color: #fff;
+    border: 1px solid #944e63;
+    border-radius: 100px;
+    margin: 0;
+    padding: 12px 20px;
+}
+.icon-group-desktop .quick-view-icon:hover {
+    background-color: #fff;
+    color: #944e63;
+}
+.icon-group-desktop .quick-view-icon:hover {
+    transform: none;
+}
+.icon-group-desktop .product-form.desktop-only button:hover {
+    border: 1px solid #944e63;
+    color: #944e63;
+    background-color: #fff;
+}
+.icon-group.desktop-only {
+    top: 40%;
+    right: 20px;
+}
