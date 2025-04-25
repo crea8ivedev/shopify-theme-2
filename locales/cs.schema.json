@@ -135,10 +135,6 @@
         "predictive_search_show_vendor": {
           "label": "Dodavatel produktu",
           "info": "Zobrazuje se, když jsou povoleny návrhy vyhledávání"
-        },
-        "predictive_search_show_price": {
-          "label": "Cena produktu",
-          "info": "Zobrazuje se, když jsou povoleny návrhy vyhledávání"
         }
       }
     },

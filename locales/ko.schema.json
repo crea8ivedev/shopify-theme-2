@@ -135,10 +135,6 @@
         "predictive_search_show_vendor": {
           "label": "제품 공급업체",
           "info": "검색 제안이 활성화된 경우 표시됩니다"
-        },
-        "predictive_search_show_price": {
-          "label": "제품 가격",
-          "info": "검색 제안이 활성화된 경우 표시됩니다"
         }
       }
     },

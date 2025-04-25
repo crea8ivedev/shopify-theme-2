@@ -135,10 +135,6 @@
         "predictive_search_show_vendor": {
           "label": "Produktsäljare",
           "info": "Visas när sökförslag är aktiverat"
-        },
-        "predictive_search_show_price": {
-          "label": "Produktpris",
-          "info": "Visas när sökförslag är aktiverat"
         }
       }
     },

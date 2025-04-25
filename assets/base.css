@@ -2728,6 +2728,7 @@ details[open] .modal-overlay::after {
 
 .search-modal__form {
   width: 100%;
+  max-width: 100%;
 }
 
 .search-modal__close-button {
@@ -2747,7 +2748,7 @@ details[open] .modal-overlay::after {
 
 @media screen and (min-width: 990px) {
   .search-modal__form {
-    max-width: 74.2rem;
+    max-width: 100%;
   }
 
   .search-modal__close-button {
@@ -3739,4 +3740,7 @@ details-disclosure > details {
 .popup-close .popup-close-btn-icon svg path,
 .drawer__close .svg-wrapper svg path {
   fill: #944e63;
+}
+ul#predictive-search-results-products-list {
+  display: flex;
 }

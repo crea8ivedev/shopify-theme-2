@@ -135,10 +135,6 @@
         "predictive_search_show_vendor": {
           "label": "商品廠商",
           "info": "啟用搜尋建議時顯示"
-        },
-        "predictive_search_show_price": {
-          "label": "商品價格",
-          "info": "啟用搜尋建議時顯示"
         }
       }
     },

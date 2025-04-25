@@ -135,10 +135,6 @@
         "predictive_search_show_vendor": {
           "label": "Ürün satıcısı",
           "info": "Arama önerileri etkin durumdayken gösterilir"
-        },
-        "predictive_search_show_price": {
-          "label": "Ürün fiyatı",
-          "info": "Arama önerileri etkin durumdayken gösterilir"
         }
       }
     },

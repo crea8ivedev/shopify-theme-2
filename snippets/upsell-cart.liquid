@@ -1,40 +1,26 @@
 {%- if cart != empty -%}
-  {% comment %} yml section start {% endcomment %}
   <div class="ctm_cart">
     {% capture productslist %}
-                {% for item in cart.items %}
-                  {% assign product_rec = item.product %}
-                  {{ item.product_id | append: ',' }}
-                {% endfor %}
-              {% endcapture %}
-
-    {% assign collection_handle = '' %}
-    {% for collection in collections %}
-      {% if collection.products != null %}
-        {% assign collection_handle = collection.products %}
-      {% else %}
-        {% assign collection_handle = collections['all-products'].products %}
-      {% endif %}
-    {% endfor %}
+        {% for item in cart.items %}
+          {% assign product_rec = item.product %}
+          {{ item.product_id | append: ',' }}
+        {% endfor %}
+      {% endcapture %}
 
     <div class="cart_related_product px-0 py-40">
+      <div class="ctm_yml_head text-black-900 mb-28">
+        <h4 class="!text-24 !leading-26 font-bold text-bloodstone">You Might Also Like</h4>
+      </div>
       <div class="cart_related_iner_main bg-butter_yellow p-20 rounded-[28px]">
-        <div class="ctm_yml_head text-black-900 mb-28">
-          <h4>Build your routine</h4>
-        </div>
         <div
           class="collection-list card_relatedslide_block contains-card contains-card--collection{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down{% if section.settings.swipe_on_mobile %} slider slider--tablet grid--peek{% endif %} collection-list--{{ section.blocks.size }}-items"
           id="Slider-{{ section.id }}"
           role="list"
         >
-          {% assign productnumber = 0 %}
-          {% for prod in collection_handle limit: 40 %}
-            {% if productslist contains prod.id %}
-              {% continue %}
-            {% endif %}
-            {% assign productnumber = productnumber | plus: 1 %}
-            {% if productnumber == 1 %}
-              <div class="related-main related-products collection-list__item flex-grow remove-{{ productnumber }}">
+          {% assign list_item = settings.upsell_collection %}
+          {% for prod in list_item %}
+            {% if prod.id != product_rec.id %}
+              <div class="related-main related-products collection-list__item flex-grow ">
                 <div class="main-img-related">
                   <div class="related-inner-block flex items-center gap-20 mb-20">
                     <div class="related-img shrink-0 p-10">
@@ -152,5 +138,4 @@
       </div>
     </div>
   </div>
-  {% comment %} yml section end {% endcomment %}
 {% endif %}

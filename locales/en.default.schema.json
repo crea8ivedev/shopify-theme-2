@@ -302,10 +302,6 @@
         "predictive_search_show_vendor": {
           "label": "Product vendor",
           "info": "Shown when search suggestions enabled"
-        },
-        "predictive_search_show_price": {
-          "label": "Product price",
-          "info": "Shown when search suggestions enabled"
         }
       }
     },

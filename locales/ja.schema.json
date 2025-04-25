@@ -135,10 +135,6 @@
         "predictive_search_show_vendor": {
           "label": "商品の販売元",
           "info": "検索候補が有効になっている場合に表示されます"
-        },
-        "predictive_search_show_price": {
-          "label": "商品価格",
-          "info": "検索候補が有効になっている場合に表示されます"
         }
       }
     },

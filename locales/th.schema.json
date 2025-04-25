@@ -135,10 +135,6 @@
         "predictive_search_show_vendor": {
           "label": "ผู้ขายสินค้า",
           "info": "แสดงผลเมื่อเปิดใช้งานคำแนะการค้นหา"
-        },
-        "predictive_search_show_price": {
-          "label": "ราคาสินค้า",
-          "info": "แสดงผลเมื่อเปิดใช้งานคำแนะการค้นหา"
         }
       }
     },

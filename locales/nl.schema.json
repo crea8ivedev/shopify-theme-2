@@ -144,10 +144,6 @@
         "predictive_search_show_vendor": {
           "label": "Productverkoper",
           "info": "Weergegeven als zoeksuggesties zijn ingeschakeld"
-        },
-        "predictive_search_show_price": {
-          "label": "Productprijs",
-          "info": "Weergegeven als zoeksuggesties zijn ingeschakeld"
         }
       }
     },

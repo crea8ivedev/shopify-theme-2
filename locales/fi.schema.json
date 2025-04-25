@@ -135,10 +135,6 @@
         "predictive_search_show_vendor": {
           "label": "Tuotteen myyjä",
           "info": "Näytetään, kun hakuehdotukset ovat käytössä"
-        },
-        "predictive_search_show_price": {
-          "label": "Tuotteen hinta",
-          "info": "Näytetään, kun hakuehdotukset ovat käytössä"
         }
       }
     },

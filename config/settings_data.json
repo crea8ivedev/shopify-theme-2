@@ -116,9 +116,14 @@
     "social_vimeo_link": "",
     "predictive_search_enabled": true,
     "predictive_search_show_vendor": false,
-    "predictive_search_show_price": false,
     "currency_code_enabled": true,
     "cart_type": "drawer",
+    "upsell_collection": [
+      "pink-lipstick-and-blush-on",
+      "hair-spray",
+      "liquid-foundation",
+      "pink-lipstick"
+    ],
     "show_vendor": false,
     "show_cart_note": false,
     "cart_drawer_collection": "",
@@ -379,7 +384,6 @@
       "social_vimeo_link": "",
       "predictive_search_enabled": true,
       "predictive_search_show_vendor": false,
-      "predictive_search_show_price": false,
       "currency_code_enabled": true,
       "cart_type": "notification",
       "show_vendor": false,

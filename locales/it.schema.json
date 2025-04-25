@@ -135,10 +135,6 @@
         "predictive_search_show_vendor": {
           "label": "Venditore del prodotto",
           "info": "Visibile quando i suggerimenti di ricerca sono abilitati"
-        },
-        "predictive_search_show_price": {
-          "label": "Prezzo del prodotto",
-          "info": "Visibile quando i suggerimenti di ricerca sono abilitati"
         }
       }
     },

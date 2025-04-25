@@ -135,10 +135,6 @@
         "predictive_search_show_vendor": {
           "label": "产品厂商",
           "info": "在启用搜索建议时可见"
-        },
-        "predictive_search_show_price": {
-          "label": "产品价格",
-          "info": "在启用搜索建议时可见"
         }
       }
     },
