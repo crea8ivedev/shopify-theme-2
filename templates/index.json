@@ -86,6 +86,71 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "icon_with_text_dHL6RP": {
+      "type": "icon-with-text",
+      "blocks": {
+        "column_6QiQit": {
+          "type": "column",
+          "settings": {
+            "grid_title": "Free shipping",
+            "grid_description": "Standard shipping",
+            "grid_image": "shopify://shop_images/Vector.svg",
+            "svg_icon": ""
+          }
+        },
+        "column_VAhitH": {
+          "type": "column",
+          "settings": {
+            "grid_title": "Special discounts",
+            "grid_description": "Guaranteed saving",
+            "grid_image": "shopify://shop_images/Vector_1.svg",
+            "svg_icon": ""
+          }
+        },
+        "column_EG6gNw": {
+          "type": "column",
+          "settings": {
+            "grid_title": "Buyers protection",
+            "grid_description": "Secure payment",
+            "grid_image": "shopify://shop_images/Vector_2.svg",
+            "svg_icon": ""
+          }
+        },
+        "column_3WPVYU": {
+          "type": "column",
+          "settings": {
+            "grid_title": "Customer service",
+            "grid_description": "Give us feedback",
+            "grid_image": "shopify://shop_images/Vector_3.svg",
+            "svg_icon": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_6QiQit",
+        "column_VAhitH",
+        "column_EG6gNw",
+        "column_3WPVYU"
+      ],
+      "settings": {
+        "color_scheme": "scheme-ee9bfb00-7c2b-43f1-8576-9e95237047fb",
+        "heading": "Icon With Text",
+        "sec_content": "Icon With Text",
+        "heading_size": "h1",
+        "heading_alignment": "right",
+        "desktop_columns": 4,
+        "column_alignment": "left",
+        "icon_alignment": "icon_left",
+        "columns_mobile": "1",
+        "icon_bg": "none",
+        "icon_background_color": "#252525",
+        "icon_color": "#b47b84",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "show_mobile_slider": false,
+        "show_pagination": false
+      }
     }
   },
   "order": [

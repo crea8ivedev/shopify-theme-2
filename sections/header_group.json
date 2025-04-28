@@ -13,8 +13,13 @@
   "sections": {
     "header": {
       "type": "header",
-      "settings": {}
+      "disabled": true,
+      "settings": {
+        "color_scheme": ""
+      }
     }
   },
-  "order": ["header"]
+  "order": [
+    "header"
+  ]
 }
