@@ -144,10 +144,6 @@
         "predictive_search_show_vendor": {
           "label": "产品厂商",
           "info": "在启用搜索建议时可见"
-        },
-        "predictive_search_show_price": {
-          "label": "产品价格",
-          "info": "在启用搜索建议时可见"
         }
       }
     },
@@ -378,6 +374,12 @@
         "section_padding_heading": "填充",
         "padding_top": "顶部",
         "padding_bottom": "底部"
+      },
+      "login": {
+        "login_image": "登录图片"
+      },
+      "register": {
+        "register_image": "注册图片"
       },
       "spacing": "间距",
       "colors": {
@@ -1006,6 +1008,27 @@
         "header__utilities": {
           "content": "公共设施"
         }
+      },
+      "blocks": {
+        "image-mega-menu": {
+          "name": "图片超级菜单",
+          "settings": {
+            "menu_item": {
+              "label": "菜单项",
+              "info": "输入菜单项以应用超级菜单下拉菜单。"
+            },
+            "product_list": {
+              "label": "产品列表"
+            },
+            "collection": {
+              "label": "集合",
+              "info": "一次只能使用一个产品列表或集合"
+            },
+            "products_to_show": {
+              "label": "显示产品"
+            }
+          }
+        }
       }
     },
     "image-banner": {
@@ -1172,6 +1195,35 @@
       },
       "presets": {
         "name": "图片横幅"
+      }
+    },
+    "login_popup": {
+      "name": "客户弹窗",
+      "settings": {
+        "display_logo": {
+          "label": "显示 logo"
+        },
+        "color_popup": {
+          "label": "背景颜色"
+        },
+        "bg-image": {
+          "label": "背景图片"
+        },
+        "login-image": {
+          "label": "登录图片"
+        },
+        "register-image": {
+          "label": "注册图片"
+        },
+        "position_popup": {
+          "label": "位置",
+          "options__1": {
+            "label": "左"
+          },
+          "options__2": {
+            "label": "Mitte"
+          }
+        }
       }
     },
     "image-with-text": {

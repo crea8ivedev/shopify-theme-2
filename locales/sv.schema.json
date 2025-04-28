@@ -144,10 +144,6 @@
         "predictive_search_show_vendor": {
           "label": "Produktsäljare",
           "info": "Visas när sökförslag är aktiverat"
-        },
-        "predictive_search_show_price": {
-          "label": "Produktpris",
-          "info": "Visas när sökförslag är aktiverat"
         }
       }
     },
@@ -378,6 +374,12 @@
         "section_padding_heading": "Utfyllnad",
         "padding_top": "Högst upp",
         "padding_bottom": "Längst ner"
+      },
+      "login": {
+        "login_image": "Login bild"
+      },
+      "register": {
+        "register_image": "Register bild"
       },
       "spacing": "Radavstånd",
       "colors": {
@@ -1006,6 +1008,27 @@
         "header__utilities": {
           "content": "Verktyg"
         }
+      },
+      "blocks": {
+        "image-mega-menu": {
+          "name": "Bild Mega-meny",
+          "settings": {
+            "menu_item": {
+              "label": "Menu element",
+              "info": "Ange menuelement för att tillämpa ett mega-meny-nedrullningsmeny."
+            },
+            "product_list": {
+              "label": "Produktlista"
+            },
+            "collection": {
+              "label": "Kollektion",
+              "info": "På ett tillfälle kan du bara använda en Produktlista eller en Kollektion"
+            },
+            "products_to_show": {
+              "label": "Produkt att visa"
+            }
+          }
+        }
       }
     },
     "image-banner": {
@@ -1172,6 +1195,35 @@
       },
       "presets": {
         "name": "Bildbanner"
+      }
+    },
+    "login_popup": {
+      "name": "Kundenpopup",
+      "settings": {
+        "display_logo": {
+          "label": "Visa logo"
+        },
+        "color_popup": {
+          "label": "Hintergrundfärg"
+        },
+        "login-image": {
+          "label": "Login bild"
+        },
+        "register-image": {
+          "label": "Register bild"
+        },
+        "bg-image": {
+          "label": "Hintergrundbild"
+        },
+        "position_popup": {
+          "label": "Position",
+          "options__1": {
+            "label": "Vänster"
+          },
+          "options__2": {
+            "label": "Centrera"
+          }
+        }
       }
     },
     "image-with-text": {

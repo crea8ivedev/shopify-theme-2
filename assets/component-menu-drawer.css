@@ -107,6 +107,7 @@ details[open].menu-opening > .menu-drawer__submenu {
 
 .js .menu-drawer__menu li {
   margin-bottom: 0.2rem;
+  max-width: fit-content;
 }
 
 .menu-drawer__menu-item {
@@ -132,16 +133,10 @@ details[open].menu-opening > .menu-drawer__submenu {
   background-color: rgba(var(--color-foreground), 0.08);
 }
 
-.js .menu-drawer__menu-item .icon-arrow {
-  display: none;
-}
-
 .menu-drawer__menu-item > .svg-wrapper {
   width: 15px;
   position: absolute;
   right: 3rem;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
 .js .menu-drawer__submenu {
@@ -175,9 +170,13 @@ details[open].menu-opening > .menu-drawer__submenu {
 }
 
 .menu-drawer__close-button .svg-wrapper {
-  transform: rotate(180deg);
   margin-right: 1rem;
   width: 15px;
+}
+
+.menu-drawer__menu-item.list-menu__item .svg-wrapper,
+.disclosure__button.localization-selector .icon-arrow {
+  transform: rotate(180deg);
 }
 
 .menu-drawer__utility-links {

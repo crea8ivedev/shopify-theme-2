@@ -144,10 +144,6 @@
         "predictive_search_show_vendor": {
           "label": "제품 공급업체",
           "info": "검색 제안이 활성화된 경우 표시됩니다"
-        },
-        "predictive_search_show_price": {
-          "label": "제품 가격",
-          "info": "검색 제안이 활성화된 경우 표시됩니다"
         }
       }
     },
@@ -378,6 +374,12 @@
         "section_padding_heading": "패딩",
         "padding_top": "위쪽",
         "padding_bottom": "아래쪽"
+      },
+      "login": {
+        "login_image": "로그인 이미지"
+      },
+      "register": {
+        "register_image": "등록 이미지"
       },
       "spacing": "간격",
       "colors": {
@@ -1006,6 +1008,27 @@
         "header__utilities": {
           "content": "유틸리티"
         }
+      },
+      "blocks": {
+        "image-mega-menu": {
+          "name": "이미지 메가 메뉴",
+          "settings": {
+            "menu_item": {
+              "label": "메뉴 요소",
+              "info": "메가 메뉴 드롭다운을 적용하려면 메뉴 요소를 입력하세요."
+            },
+            "product_list": {
+              "label": "제품 목록"
+            },
+            "collection": {
+              "label": "컬렉션",
+              "info": "한 번에 하나의 제품 목록 또는 컬렉션만 사용할 수 있습니다."
+            },
+            "products_to_show": {
+              "label": "표시할 제품"
+            }
+          }
+        }
       }
     },
     "image-banner": {
@@ -1172,6 +1195,35 @@
       },
       "presets": {
         "name": "이미지 배너"
+      }
+    },
+    "login_popup": {
+      "name": "고객 팝업",
+      "settings": {
+        "display_logo": {
+          "label": "로고 표시"
+        },
+        "login-image": {
+          "label": "로그인 이미지"
+        },
+        "register-image": {
+          "label": "등록 이미지"
+        },
+        "color_popup": {
+          "label": "배경색"
+        },
+        "bg-image": {
+          "label": "배경 이미지"
+        },
+        "position_popup": {
+          "label": "팝업 위치",
+          "options__1": {
+            "label": "왼쪽"
+          },
+          "options__2": {
+            "label": "가운데"
+          }
+        }
       }
     },
     "image-with-text": {

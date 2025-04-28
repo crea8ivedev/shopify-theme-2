@@ -15,7 +15,12 @@
   right: 0;
   top: 100%;
 }
-
+ul.mega-menu__list.page-width.mega-menu__list--condensed {
+  display: flex;
+}
+.mega-menu__content--condensed ul.mega-menu__list {
+  display: block !important;
+}
 .shopify-section-header-sticky .mega-menu__content {
   max-height: calc(100vh - var(--header-bottom-position-desktop, 20rem) - 4rem);
 }

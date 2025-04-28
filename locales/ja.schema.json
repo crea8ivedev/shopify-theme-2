@@ -144,10 +144,6 @@
         "predictive_search_show_vendor": {
           "label": "商品の販売元",
           "info": "検索候補が有効になっている場合に表示されます"
-        },
-        "predictive_search_show_price": {
-          "label": "商品価格",
-          "info": "検索候補が有効になっている場合に表示されます"
         }
       }
     },
@@ -378,6 +374,12 @@
         "section_padding_heading": "余白",
         "padding_top": "上",
         "padding_bottom": "下"
+      },
+      "login": {
+        "login_image": "ログイン画像"
+      },
+      "register": {
+        "register_image": "登録画像"
       },
       "spacing": "間隔",
       "colors": {
@@ -1006,6 +1008,27 @@
         "header__utilities": {
           "content": "ユーティリティー"
         }
+      },
+      "blocks": {
+        "image-mega-menu": {
+          "name": "画像メガメニュー",
+          "settings": {
+            "menu_item": {
+              "label": "メニューアイテム",
+              "info": "メガメニューのドロップダウンを適用するには、メニューアイテムを入力してください。"
+            },
+            "product_list": {
+              "label": "商品リスト"
+            },
+            "collection": {
+              "label": "コレクション",
+              "info": "一度に1つの商品リストまたはコレクションしか使用できません。"
+            },
+            "products_to_show": {
+              "label": "表示する商品"
+            }
+          }
+        }
       }
     },
     "image-banner": {
@@ -1172,6 +1195,35 @@
       },
       "presets": {
         "name": "画像バナー"
+      }
+    },
+    "login_popup": {
+      "name": "顧客ポップアップ",
+      "settings": {
+        "display_logo": {
+          "label": "ロゴを表示"
+        },
+        "color_popup": {
+          "label": "背景色"
+        },
+        "login-image": {
+          "label": "ログイン画像"
+        },
+        "register-image": {
+          "label": "登録画像"
+        },
+        "bg-image": {
+          "label": "背景画像"
+        },
+        "position_popup": {
+          "label": "ポップアップ位置",
+          "options__1": {
+            "label": "左"
+          },
+          "options__2": {
+            "label": "中央"
+          }
+        }
       }
     },
     "image-with-text": {

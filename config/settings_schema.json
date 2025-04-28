@@ -1150,6 +1150,11 @@
         "content": "t:settings_schema.global.settings.header__border.content"
       },
       {
+        "type": "checkbox",
+        "id": "login_popup",
+        "label": "Login Popup"
+      },
+      {
         "type": "range",
         "id": "drawer_border_thickness",
         "min": 0,
@@ -1374,13 +1379,6 @@
         "default": false,
         "label": "t:settings_schema.search_input.settings.predictive_search_show_vendor.label",
         "info": "t:settings_schema.search_input.settings.predictive_search_show_vendor.info"
-      },
-      {
-        "type": "checkbox",
-        "id": "predictive_search_show_price",
-        "default": false,
-        "label": "t:settings_schema.search_input.settings.predictive_search_show_price.label",
-        "info": "t:settings_schema.search_input.settings.predictive_search_show_price.info"
       }
     ]
   },
@@ -1423,6 +1421,12 @@
         "label": "t:settings_schema.cart.settings.cart_type.label"
       },
       {
+        "type": "product_list",
+        "id": "upsell_collection",
+        "label": "Upsell Collection",
+        "info": "Enter the handle of the collection to display in the upsell section."
+      },
+      {
         "type": "checkbox",
         "id": "show_vendor",
         "label": "t:settings_schema.cart.settings.show_vendor.label",
@@ -1449,6 +1453,25 @@
         "id": "cart_color_scheme",
         "label": "t:sections.all.colors.label",
         "default": "scheme-1"
+      },
+      {
+        "type": "number",
+        "id": "free_shipping_threshold",
+        "label": "Free Shipping Threshold (in dollars)",
+        "default": 55
+      },
+      {
+        "type": "text",
+        "id": "free_shipping_message",
+        "label": "Message before unlocking Free Shipping",
+        "default": "You're $X away from Free Shipping!",
+        "info": "Use '$X' to dynamically show the remaining amount."
+      },
+      {
+        "type": "text",
+        "id": "free_shipping_unlocked_message",
+        "label": "Message after unlocking Free Shipping",
+        "default": "🎉 Congrats! You unlocked Free Shipping!"
       }
     ]
   }

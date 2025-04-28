@@ -251,8 +251,7 @@
 
       {%- if shop.customer_accounts_enabled -%}
         <a
-          href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
-          class="header__icon header__icon--account link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}"
+          class="header__icon login_popup header__icon--account link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}"
           rel="nofollow"
         >
           {%- if section.settings.enable_customer_avatar -%}
@@ -292,14 +291,12 @@
           <span class="svg-wrapper">{{ 'icon-cart.svg' | inline_asset_content }}</span>
         {% endif %}
         <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
-        {%- if cart != empty -%}
-          <div class="cart-count-bubble">
-            {%- if cart.item_count < 100 -%}
-              <span aria-hidden="true">{{ cart.item_count }}</span>
-            {%- endif -%}
-            <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
-          </div>
-        {%- endif -%}
+        <div class="cart-count-bubble">
+          {%- if cart.item_count < 100 -%}
+            <span aria-hidden="true">{{ cart.item_count }}</span>
+          {%- endif -%}
+          <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
+        </div>
       </a>
     </div>
   </header>
@@ -651,7 +648,76 @@
   ],
   "blocks": [
     {
-      "type": "@app"
+      "type": "image-mega-menu",
+      "name": "t:sections.header.blocks.image-mega-menu.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text1",
+          "label": "Manual Menu Item 1",
+          "default": "By Category"
+        },
+        {
+          "type": "url",
+          "id": "link1",
+          "label": "Link 1"
+        },
+        {
+          "type": "text",
+          "id": "text2",
+          "label": "Manual Menu Item 2",
+          "default": "By Product"
+        },
+        {
+          "type": "url",
+          "id": "link2",
+          "label": "Link 2"
+        },
+        {
+          "type": "text",
+          "id": "text3",
+          "label": "Manual Menu Item 3",
+          "default": "By Collection"
+        },
+        {
+          "type": "url",
+          "id": "link3",
+          "label": "Link 3"
+        },
+        {
+          "type": "text",
+          "id": "menu_item",
+          "label": "t:sections.header.blocks.image-mega-menu.settings.menu_item.label",
+          "info": "t:sections.header.blocks.image-mega-menu.settings.menu_item.info"
+        },
+        {
+          "type": "product_list",
+          "id": "product_list",
+          "label": "t:sections.header.blocks.image-mega-menu.settings.product_list.label",
+          "limit": 12
+        },
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "t:sections.header.blocks.image-mega-menu.settings.collection.label",
+          "info": "t:sections.header.blocks.image-mega-menu.settings.collection.info"
+        },
+        {
+          "type": "range",
+          "id": "products_to_show",
+          "min": 2,
+          "max": 6,
+          "step": 1,
+          "default": 4,
+          "label": "t:sections.header.blocks.image-mega-menu.settings.products_to_show.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Header",
+      "category": "Header"
     }
   ]
 }

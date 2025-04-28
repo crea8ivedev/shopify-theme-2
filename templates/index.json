@@ -9,13 +9,40 @@
  */
 {
   "sections": {
-    "featured_blog_BUDKkX": {
-      "type": "featured-blog",
+    "multicolumn": {
+      "type": "multicolumn",
+      "blocks": {
+        "column1": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column2": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column3": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": ["column1", "column2", "column3"],
       "settings": {
-        "blog": "news",
-        "post_limit": 5,
-        "heading": "Latest blog post",
-        "subheading": "<em><strong>The freshest and most exciting </strong></em>",
+        "title": "",
         "heading_size": "h1",
         "columns_desktop": 3,
         "show_view_all": true,
@@ -29,7 +56,5 @@
       }
     }
   },
-  "order": [
-    "featured_blog_BUDKkX"
-  ]
+  "order": ["multicolumn"]
 }

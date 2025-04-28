@@ -144,10 +144,6 @@
         "predictive_search_show_vendor": {
           "label": "Venditore del prodotto",
           "info": "Visibile quando i suggerimenti di ricerca sono abilitati"
-        },
-        "predictive_search_show_price": {
-          "label": "Prezzo del prodotto",
-          "info": "Visibile quando i suggerimenti di ricerca sono abilitati"
         }
       }
     },
@@ -378,6 +374,12 @@
         "section_padding_heading": "Spaziatura",
         "padding_top": "In alto",
         "padding_bottom": "In basso"
+      },
+      "login": {
+        "login_image": "Immagine di login"
+      },
+      "register": {
+        "register_image": "Immagine di registrazione"
       },
       "spacing": "Spaziatura",
       "colors": {
@@ -1006,6 +1008,27 @@
         "header__utilities": {
           "content": "Utility"
         }
+      },
+      "blocks": {
+        "image-mega-menu": {
+          "name": "Mega menu immagine",
+          "settings": {
+            "menu_item": {
+              "label": "Elemento menu",
+              "info": "Inserisci l'elemento menu per applicare un menu a discesa mega."
+            },
+            "product_list": {
+              "label": "Lista prodotti"
+            },
+            "collection": {
+              "label": "Collezione",
+              "info": "Puoi utilizzare solo una Lista prodotti o una Collezione"
+            },
+            "products_to_show": {
+              "label": "Prodotto da mostrare"
+            }
+          }
+        }
       }
     },
     "image-banner": {
@@ -1172,6 +1195,35 @@
       },
       "presets": {
         "name": "Immagine banner"
+      }
+    },
+    "login_popup": {
+      "name": "Popup cliente",
+      "settings": {
+        "display_logo": {
+          "label": "Mostra logo"
+        },
+        "color_popup": {
+          "label": "Colore di sfondo"
+        },
+        "login-image": {
+          "label": "Immagine di login"
+        },
+        "register-image": {
+          "label": "Immagine di registrazione"
+        },
+        "bg-image": {
+          "label": "Immagine di sfondo"
+        },
+        "position_popup": {
+          "label": "Posizione",
+          "options__1": {
+            "label": "Sinistra"
+          },
+          "options__2": {
+            "label": "Centro"
+          }
+        }
       }
     },
     "image-with-text": {

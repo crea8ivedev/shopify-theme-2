@@ -1,0 +1,285 @@
+{{ 'customer.css' | asset_url | stylesheet_tag }}
+
+<div
+  class="customer register"
+>
+  <h2>Sign up</h2>
+  <div class="forgot_pass_block hidden">
+    <h2
+      id="forgot_recover"
+      tabindex="-1"
+      class="font-heading"
+    >
+      Reset your password
+    </h2>
+
+    <div class="reset-password">
+      <p class="font-body">We will send you an email to reset your password</p>
+
+      {%- form 'recover_customer_password' -%}
+        <div class="field">
+          <input
+            type="email"
+            value=""
+            name="email"
+            id="RecoverEmail"
+            autocorrect="off"
+            autocapitalize="off"
+            autocomplete="off"
+            {% if form.errors %}
+              aria-invalid="true"
+              aria-describedby="RecoverEmail-email-error"
+              autofocus
+            {% endif %}
+            placeholder="Email"
+            class="!font-body !text-body !text-16 !leading-26"
+          >
+          <label for="RecoverEmail" class="italic"> Email </label>
+        </div>
+        {%- if form.errors -%}
+          <small id="RecoverEmail-email-error" class="form__message">
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 13 13"
+            >
+              <circle
+                cx="6.5"
+                cy="6.50049"
+                r="5.5"
+                stroke="white"
+                stroke-width="2" />
+              <circle
+                cx="6.5"
+                cy="6.5"
+                r="5.5"
+                fill="#EB001B"
+                stroke="#EB001B"
+                stroke-width="0.7" />
+              <path d="M5.87413 3.52832L5.97439 7.57216H7.02713L7.12739 3.52832H5.87413ZM6.50076 9.66091C6.88091 9.66091 7.18169 9.37267 7.18169 9.00504C7.18169 8.63742 6.88091 8.34917 6.50076 8.34917C6.12061 8.34917 5.81982 8.63742 5.81982 9.00504C5.81982 9.37267 6.12061 9.66091 6.50076 9.66091Z" fill="white" />
+              <path
+                d="M5.87413 3.17832H5.51535L5.52424 3.537L5.6245 7.58083L5.63296 7.92216H5.97439H7.02713H7.36856L7.37702 7.58083L7.47728 3.537L7.48617 3.17832H7.12739H5.87413ZM6.50076 10.0109C7.06121 10.0109 7.5317 9.57872 7.5317 9.00504C7.5317 8.43137 7.06121 7.99918 6.50076 7.99918C5.94031 7.99918 5.46982 8.43137 5.46982 9.00504C5.46982 9.57872 5.94031 10.0109 6.50076 10.0109Z"
+                fill="white"
+                stroke="#EB001B"
+                stroke-width="0.7">
+            </svg>
+            {{ form.errors.messages.form }}
+          </small>
+        {%- endif -%}
+
+        <button class="brown-btn !my-20 w-fit font-body !pt-10 !pb-7 !px-20 !font-semibold !bg-brown !text-white !border !border-solid !border-brown !rounded-4 !text-16 !leading-26 !tracking-normal text-center flex flex-col items-center capitalize cursor-pointer transition-all duration-300 ease-in-out relative hover:!bg-transparent hover:!text-brown">
+          Submit
+        </button>
+
+        <a
+          href="#login"
+          id="recover-cancel"
+          class="forgot_reset-cancel"
+        >
+          Cancel
+        </a>
+      {%- endform -%}
+    </div>
+  </div>
+
+  <svg
+    style="display: none"
+  >
+    <symbol
+      id="icon-error"
+      viewBox="0 0 13 13">
+      <circle
+        cx="6.5"
+        cy="6.50049"
+        r="5.5"
+        stroke="white"
+        stroke-width="2" />
+      <circle
+        cx="6.5"
+        cy="6.5"
+        r="5.5"
+        fill="#EB001B"
+        stroke="#EB001B"
+        stroke-width="0.7" />
+      <path
+        d="M5.87413 3.52832L5.97439 7.57216H7.02713L7.12739 3.52832H5.87413ZM6.50076 9.66091C6.88091 9.66091 7.18169 9.37267 7.18169 9.00504C7.18169 8.63742 6.88091 8.34917 6.50076 8.34917C6.12061 8.34917 5.81982 8.63742 5.81982 9.00504C5.81982 9.37267 6.12061 9.66091 6.50076 9.66091Z"
+        fill="white" />
+      <path
+        d="M5.87413 3.17832H5.51535L5.52424 3.537L5.6245 7.58083L5.63296 7.92216H5.97439H7.02713H7.36856L7.37702 7.58083L7.47728 3.537L7.48617 3.17832H7.12739H5.87413ZM6.50076 10.0109C7.06121 10.0109 7.5317 9.57872 7.5317 9.00504C7.5317 8.43137 7.06121 7.99918 6.50076 7.99918C5.94031 7.99918 5.46982 8.43137 5.46982 9.00504C5.46982 9.57872 5.94031 10.0109 6.50076 10.0109Z"
+        fill="white"
+        stroke="#EB001B"
+        stroke-width="0.7">
+    </symbol>
+  </svg>
+
+  <div class="forgot-block-area">
+    {%- form 'create_customer', novalidate: 'novalidate' -%}
+      {%- if form.errors -%}
+        <h2
+          class="form__message"
+          tabindex="-1"
+          autofocus
+        >
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            role="presentation"
+          >
+            <use
+              href="#icon-error" />
+          </svg>
+          Please adjust the following:
+        </h2>
+        <ul
+          class="!p-0"
+        >
+          {%- for field in form.errors -%}
+            <li>
+              {%- if field == 'form' -%}
+                {{ form.errors.messages[field] }}
+              {%- else -%}
+                <a
+                  href="#RegisterForm-{{ field }}"
+                >
+                  {{ form.errors.translated_fields[field] | capitalize }}
+                  {{ form.errors.messages[field] }}
+                </a>
+              {%- endif -%}
+            </li>
+          {%- endfor -%}
+        </ul>
+      {%- endif -%}
+      <div class="field">
+        <input
+          type="text"
+          name="customer[first_name]"
+          id="RegisterForm-FirstName"
+          {% if form.first_name %}
+            value="{{ form.first_name }}"
+          {% endif %}
+          autocomplete="off"
+          placeholder="{{ 'customer.register.first_name' | t }}"
+          class="!font-body !text-body !text-16 !leading-26"
+        >
+        <label for="RegisterForm-FirstName" class="italic">
+          {{ 'customer.register.first_name' | t }}
+        </label>
+      </div>
+      <div
+        class="field"
+      >
+        <input
+          type="email"
+          name="customer[email]"
+          id="RegisterForm-email"
+          {% if form.email %}
+            value="{{ form.email }}"
+          {% endif %}
+          spellcheck="false"
+          autocapitalize="off"
+          autocomplete="off"
+          aria-required="true"
+          {% if form.errors contains 'email' %}
+            aria-invalid="true"
+            aria-describedby="RegisterForm-email-error"
+          {% endif %}
+          placeholder="Email"
+          class="!font-body !text-body !text-16 !leading-26"
+          required
+        >
+        <label
+          for="RegisterForm-email"
+          class="italic"
+        >
+          Email Address
+        </label>
+      </div>
+      {%- if form.errors contains 'email' -%}
+        <span
+          id="RegisterForm-email-error"
+          class="form__message"
+        >
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            role="presentation"
+          >
+            <use
+              href="#icon-error" />
+          </svg>
+          {{ form.errors.translated_fields.email | capitalize }}
+          {{ form.errors.messages.email }}.
+        </span>
+      {%- endif -%}
+      <div
+        class="field"
+      >
+        <input
+          type="password"
+          name="customer[password]"
+          id="RegisterForm-password"
+          aria-required="true"
+          {% if form.errors contains 'password' %}
+            aria-invalid="true"
+            aria-describedby="RegisterForm-password-error"
+          {% endif %}
+          placeholder="Password"
+          class="!font-body !text-body !text-16 !leading-26"
+          required
+        >
+        <label
+          for="RegisterForm-password"
+          class="italic"
+        >
+          Password
+        </label>
+      </div>
+      {%- if form.errors contains 'password' -%}
+        <span
+          id="RegisterForm-password-error"
+          class="form__message"
+        >
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            role="presentation"
+          >
+            <use
+              href="#icon-error" />
+          </svg>
+          {{ form.errors.translated_fields.password | capitalize }}
+          {{ form.errors.messages.password }}.
+        </span>
+      {%- endif -%}
+      <div
+        class="flex flex-col justify-center items-center"
+      >
+        <button class="brown-btn">Signup {{ 'icon-button-arrow.svg' | inline_asset_content }}</button>
+      </div>
+
+      <p
+        class="text-center !text-20 leading-30 !font-body !font-normal text-brown pt-20 block hidden"
+      >
+        Have an account?
+
+        <a
+          class="trigger_login"
+          href="#"
+        >
+          Login
+        </a>
+      </p>
+    {%- endform -%}
+  </div>
+  <div class="register-cta reset-below-btn">
+    Already have an account?
+    <a
+      class="nav-link current"
+      href="javascript:void(0);"
+      data-tab="tab-1"
+      id="login"
+      >Log in</a
+    >
+  </div>
+</div>

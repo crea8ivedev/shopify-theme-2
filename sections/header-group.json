@@ -42,11 +42,29 @@
     },
     "header": {
       "type": "header",
+      "blocks": {
+        "image_mega_menu_Xmy833": {
+          "type": "image-mega-menu",
+          "settings": {
+            "text1": "By Category",
+            "link1": "",
+            "text2": "By Product",
+            "link2": "",
+            "text3": "By Collection",
+            "link3": "",
+            "menu_item": "Pages",
+            "product_list": [],
+            "collection": "",
+            "products_to_show": 4
+          }
+        }
+      },
+      "block_order": ["image_mega_menu_Xmy833"],
       "settings": {
         "logo_position": "middle-left",
         "mobile_logo_position": "center",
         "menu": "main-menu",
-        "menu_type_desktop": "dropdown",
+        "menu_type_desktop": "mega",
         "sticky_header_type": "on-scroll-up",
         "show_line_separator": true,
         "color_scheme": "scheme-1",

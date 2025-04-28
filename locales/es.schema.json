@@ -144,10 +144,6 @@
         "predictive_search_show_vendor": {
           "label": "Proveedor de producto",
           "info": "Se muestra cuando las sugerencias de búsqueda están activadas"
-        },
-        "predictive_search_show_price": {
-          "label": "Precio del producto",
-          "info": "Se muestra cuando las sugerencias de búsqueda están activadas"
         }
       }
     },
@@ -378,6 +374,12 @@
         "section_padding_heading": "Relleno",
         "padding_top": "Arriba",
         "padding_bottom": "Abajo"
+      },
+      "login": {
+        "login_image": "Imagen de inicio de sesión"
+      },
+      "register": {
+        "register_image": "Imagen de registro"
       },
       "spacing": "Espaciado",
       "colors": {
@@ -1006,6 +1008,27 @@
         "header__utilities": {
           "content": "Utilidades"
         }
+      },
+      "blocks": {
+        "image-mega-menu": {
+          "name": "Mega menú de imágenes",
+          "settings": {
+            "menu_item": {
+              "label": "Elemento de menú",
+              "info": "Enter menu item to apply a mega menu dropdown."
+            },
+            "product_list": {
+              "label": "Lista de productos"
+            },
+            "collection": {
+              "label": "Colección",
+              "info": "En un momento puedes usar solo una Lista de productos o una Colección"
+            },
+            "products_to_show": {
+              "label": "Producto a mostrar"
+            }
+          }
+        }
       }
     },
     "image-banner": {
@@ -1172,6 +1195,35 @@
       },
       "presets": {
         "name": "Banner de imagen"
+      }
+    },
+    "login_popup": {
+      "name": "Popup de cliente",
+      "settings": {
+        "display_logo": {
+          "label": "Mostrar logo"
+        },
+        "color_popup": {
+          "label": "Color de fondo"
+        },
+        "login-image": {
+          "label": "Imagen de inicio de sesión"
+        },
+        "register-image": {
+          "label": "Imagen de registro"
+        },
+        "bg-image": {
+          "label": "Imagen de fondo"
+        },
+        "position_popup": {
+          "label": "Posición",
+          "options__1": {
+            "label": "Izquierda"
+          },
+          "options__2": {
+            "label": "Centro"
+          }
+        }
       }
     },
     "image-with-text": {

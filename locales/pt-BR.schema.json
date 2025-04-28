@@ -144,10 +144,6 @@
         "predictive_search_show_vendor": {
           "label": "Fabricante do produto",
           "info": "Exibido quando as sugestões de pesquisa estão habilitadas"
-        },
-        "predictive_search_show_price": {
-          "label": "Preço do produto",
-          "info": "Exibido quando as sugestões de pesquisa estão habilitadas"
         }
       }
     },
@@ -378,6 +374,12 @@
         "section_padding_heading": "Preenchimento",
         "padding_top": "Acima",
         "padding_bottom": "Abaixo"
+      },
+      "login": {
+        "login_image": "Imagem de login"
+      },
+      "register": {
+        "register_image": "Imagem de registro"
       },
       "spacing": "Espaçamento",
       "colors": {
@@ -1006,6 +1008,27 @@
         "header__utilities": {
           "content": "Serviços públicos"
         }
+      },
+      "blocks": {
+        "image-mega-menu": {
+          "name": "Menu Mega-imagem",
+          "settings": {
+            "menu_item": {
+              "label": "Elemento de menu",
+              "info": "Insira o elemento de menu para aplicar um menu mega-menu."
+            },
+            "product_list": {
+              "label": "Lista de produtos"
+            },
+            "collection": {
+              "label": "Coleção",
+              "info": "Em um momento, você só pode usar uma Lista de produtos ou uma Coleção"
+            },
+            "products_to_show": {
+              "label": "Produto para mostrar"
+            }
+          }
+        }
       }
     },
     "image-banner": {
@@ -1172,6 +1195,35 @@
       },
       "presets": {
         "name": "Banner de imagem"
+      }
+    },
+    "login_popup": {
+      "name": "Popup de cliente",
+      "settings": {
+        "display_logo": {
+          "label": "Exibir logo"
+        },
+        "color_popup": {
+          "label": "Cor de fundo"
+        },
+        "login-image": {
+          "label": "Imagem de login"
+        },
+        "register-image": {
+          "label": "Imagem de registro"
+        },
+        "bg-image": {
+          "label": "Imagem de fundo"
+        },
+        "position_popup": {
+          "label": "Posição",
+          "options__1": {
+            "label": "Esquerda"
+          },
+          "options__2": {
+            "label": "Centralizado"
+          }
+        }
       }
     },
     "image-with-text": {

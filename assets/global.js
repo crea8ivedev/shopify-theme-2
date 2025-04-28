@@ -6,25 +6,62 @@ function getFocusableElements(container) {
   );
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  // Slider functionality for the announcement bar
-  const announcementBar = document.getElementById("Slider-show");
+// Login popup functionality
+// Open login popup
+$(".login_popup").on("click", function () {
+  $(".customer-account").removeClass("hidden").addClass("login-left");
+  $(".ctm-login-modal-bg").addClass("active");
+  $(".login_popup.header__icon").addClass("active");
+  $("body").addClass("login-popu-active");
+});
 
-  if (announcementBar) {
-    const autoplay = announcementBar.dataset.autoplay === "true";
-    const speed = parseInt(announcementBar.dataset.speed, 10) * 1000;
+// Close login popup via close button
+$(".popup-close").on("click", function () {
+  $(".customer-account").addClass("hidden").removeClass("login-left");
+  $(".ctm-login-modal-bg").removeClass("active");
+  $(".login_popup.header__icon").removeClass("active");
+  $("body").removeClass("login-popu-active");
+});
 
-    new Swiper(".slidshow_main", {
-      loop: true,
-      autoplay: autoplay
-        ? {
-            delay: speed,
-            disableOnInteraction: false,
-          }
-        : false,
-      pagination: {
-        el: ".swiper-pagination",
-      },
+// Close login popup by clicking modal background
+$(".ctm-login-modal-bg").on("click", function () {
+  $(this).removeClass("active");
+  $(".customer-account").addClass("hidden").removeClass("login-left");
+  $(".login_popup.header__icon").removeClass("active");
+  $("body").removeClass("login-popu-active");
+});
+
+// Tab functionality
+$(".login-cta a, .register-cta a").click(function () {
+  const tabId = $(this).data("tab");
+  $(".login-cta a").removeClass("current");
+  $(".account-tab.tab-pane").removeClass("current");
+  $(this).addClass("current");
+  $(`#${tabId}`).addClass("current");
+});
+
+document.querySelectorAll(".mega-menu").forEach((menu) => {
+  const summary = menu.querySelector("summary");
+  const content = menu.querySelector(".mega-menu__content");
+
+  if (summary && content) {
+    menu.addEventListener("mouseenter", () => {
+      menu.setAttribute("open", "true");
+      content.style.display = "block";
+      content.style.opacity = "1";
+      content.style.visibility = "visible";
+    });
+
+    menu.addEventListener("mouseleave", () => {
+      menu.removeAttribute("open");
+      content.style.display = "none";
+      content.style.opacity = "0";
+      content.style.visibility = "hidden";
+    });
+
+    // Prevent default click behavior on summary
+    summary.addEventListener("click", (e) => {
+      e.preventDefault();
     });
   }
 });
@@ -591,18 +628,6 @@ class MenuDrawer extends HTMLElement {
           `${window.innerHeight}px`,
         );
       }
-    } else {
-      setTimeout(() => {
-        detailsElement.classList.add("menu-opening");
-        summaryElement.setAttribute("aria-expanded", true);
-        parentMenuElement && parentMenuElement.classList.add("submenu-open");
-        !reducedMotion || reducedMotion.matches
-          ? addTrapFocus()
-          : summaryElement.nextElementSibling.addEventListener(
-              "transitionend",
-              addTrapFocus,
-            );
-      }, 100);
     }
   }
 

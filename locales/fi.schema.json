@@ -144,10 +144,6 @@
         "predictive_search_show_vendor": {
           "label": "Tuotteen myyjä",
           "info": "Näytetään, kun hakuehdotukset ovat käytössä"
-        },
-        "predictive_search_show_price": {
-          "label": "Tuotteen hinta",
-          "info": "Näytetään, kun hakuehdotukset ovat käytössä"
         }
       }
     },
@@ -374,6 +370,12 @@
   },
   "sections": {
     "all": {
+      "login": {
+        "login_image": "Kirjautumiskuva"
+      },
+      "register": {
+        "register_image": "Rekisteröitymiskuva"
+      },
       "padding": {
         "section_padding_heading": "Puskuri",
         "padding_top": "Yläreuna",
@@ -1006,6 +1008,27 @@
         "header__utilities": {
           "content": "Apuohjelmat"
         }
+      },
+      "blocks": {
+        "image-mega-menu": {
+          "name": "Kuvabanneri",
+          "settings": {
+            "menu_item": {
+              "label": "Menu elementti",
+              "info": "Syötä menun elementti mega-valikossa."
+            },
+            "product_list": {
+              "label": "Tuotelista"
+            },
+            "collection": {
+              "label": "Kokoelma",
+              "info": "Yhdellä kerralla voit käyttää vain yhtä tuotelista tai kokoelmaa."
+            },
+            "products_to_show": {
+              "label": "Tuote näytettäväksi"
+            }
+          }
+        }
       }
     },
     "image-banner": {
@@ -1172,6 +1195,35 @@
       },
       "presets": {
         "name": "Kuvabanneri"
+      }
+    },
+    "login_popup": {
+      "name": "Kundenpopup",
+      "settings": {
+        "display_logo": {
+          "label": "Näytä logo"
+        },
+        "login-image": {
+          "label": "Kirjautumiskuva"
+        },
+        "register-image": {
+          "label": "Rekisteröitymiskuva"
+        },
+        "color_popup": {
+          "label": "Taustavari"
+        },
+        "bg-image": {
+          "label": "Taustakuva"
+        },
+        "position_popup": {
+          "label": "Popup-sijainti",
+          "options__1": {
+            "label": "Vasen"
+          },
+          "options__2": {
+            "label": "Keskellä"
+          }
+        }
       }
     },
     "image-with-text": {

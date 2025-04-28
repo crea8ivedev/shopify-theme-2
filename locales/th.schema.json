@@ -144,10 +144,6 @@
         "predictive_search_show_vendor": {
           "label": "ผู้ขายสินค้า",
           "info": "แสดงผลเมื่อเปิดใช้งานคำแนะการค้นหา"
-        },
-        "predictive_search_show_price": {
-          "label": "ราคาสินค้า",
-          "info": "แสดงผลเมื่อเปิดใช้งานคำแนะการค้นหา"
         }
       }
     },
@@ -378,6 +374,12 @@
         "section_padding_heading": "ระยะห่าง",
         "padding_top": "ด้านบน",
         "padding_bottom": "ด้านล่าง"
+      },
+      "login": {
+        "login_image": "รูปภาพล็อกอิน"
+      },
+      "register": {
+        "register_image": "รูปภาพล็อกอิน"
       },
       "spacing": "การเว้นระยะห่าง",
       "colors": {
@@ -1006,6 +1008,27 @@
         "header__utilities": {
           "content": "สาธารณูปโภค"
         }
+      },
+      "blocks": {
+        "image-mega-menu": {
+          "name": "เมนูลงลงมือถือรูปภาพ",
+          "settings": {
+            "menu_item": {
+              "label": "รายการเมนู",
+              "info": "ป้อนรายการเมนูเพื่อใช้งานเมนูลงลงมือถือ"
+            },
+            "product_list": {
+              "label": "รายการสินค้า"
+            },
+            "collection": {
+              "label": "คอลเลกชัน",
+              "info": "ที่เวลาเดียวกันคุณสามารถใช้เพียงรายการสินค้าเดียวหรือคอลเลกชันเดียว"
+            },
+            "products_to_show": {
+              "label": "สินค้าให้แสดง"
+            }
+          }
+        }
       }
     },
     "image-banner": {
@@ -1172,6 +1195,35 @@
       },
       "presets": {
         "name": "แบนเนอร์รูปภาพ"
+      }
+    },
+    "login_popup": {
+      "name": "ป๊อปอัพของลูกค้า",
+      "settings": {
+        "display_logo": {
+          "label": "แสดงโลโก้"
+        },
+        "color_popup": {
+          "label": "สีพื้นหลัง"
+        },
+        "bg-image": {
+          "label": "รูปภาพพื้นหลัง"
+        },
+        "login-image": {
+          "label": "รูปภาพล็อกอิน"
+        },
+        "register-image": {
+          "label": "รูปภาพล็อกอิน"
+        },
+        "position_popup": {
+          "label": "ตำแหน่ง",
+          "options__1": {
+            "label": "ซ้าย"
+          },
+          "options__2": {
+            "label": "กึ่งกลาง"
+          }
+        }
       }
     },
     "image-with-text": {

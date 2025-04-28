@@ -144,10 +144,6 @@
         "predictive_search_show_vendor": {
           "label": "Ürün satıcısı",
           "info": "Arama önerileri etkin durumdayken gösterilir"
-        },
-        "predictive_search_show_price": {
-          "label": "Ürün fiyatı",
-          "info": "Arama önerileri etkin durumdayken gösterilir"
         }
       }
     },
@@ -378,6 +374,12 @@
         "section_padding_heading": "Dolgu",
         "padding_top": "Üst",
         "padding_bottom": "Alt"
+      },
+      "login": {
+        "login_image": "Giriş resmi"
+      },
+      "register": {
+        "register_image": "Kayıt resmi"
       },
       "spacing": "Boşluk",
       "colors": {
@@ -1006,6 +1008,27 @@
         "header__utilities": {
           "content": "Yardımcı araçlar"
         }
+      },
+      "blocks": {
+        "image-mega-menu": {
+          "name": "Görsel Mega Menü",
+          "settings": {
+            "menu_item": {
+              "label": "Menü öğesi",
+              "info": "Mega menü açılır menüsünü uygulamak için menü öğesini girin."
+            },
+            "product_list": {
+              "label": "Ürün listesi"
+            },
+            "collection": {
+              "label": "Koleksiyon",
+              "info": "Bir kerelikte yalnızca bir Ürün Listesi veya Koleksiyon kullanabilirsiniz."
+            },
+            "products_to_show": {
+              "label": "Görüntülenecek ürün"
+            }
+          }
+        }
       }
     },
     "image-banner": {
@@ -1172,6 +1195,35 @@
       },
       "presets": {
         "name": "Görsel banner'ı"
+      }
+    },
+    "login_popup": {
+      "name": "Müşteri pop-up",
+      "settings": {
+        "display_logo": {
+          "label": "Logo görüntüle"
+        },
+        "color_popup": {
+          "label": "Arka plan rengi"
+        },
+        "bg-image": {
+          "label": "Arka plan görseli"
+        },
+        "login-image": {
+          "label": "Giriş görseli"
+        },
+        "register-image": {
+          "label": "Kayıt görseli"
+        },
+        "position_popup": {
+          "label": "Pozisyon",
+          "options__1": {
+            "label": "Sol"
+          },
+          "options__2": {
+            "label": "Orta"
+          }
+        }
       }
     },
     "image-with-text": {

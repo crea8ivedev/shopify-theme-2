@@ -1,0 +1,99 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner_ctm_j9hQgy": {
+      "type": "banner_ctm",
+      "settings": {
+        "background_image": "shopify://shop_images/content_5.png",
+        "text": "About"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "zig_zag_qymATY": {
+      "type": "zig-zag",
+      "blocks": {
+        "zig_zag_LidjQU": {
+          "type": "zig-zag",
+          "settings": {
+            "layout": "right",
+            "alignment": "left",
+            "image": "shopify://shop_images/image.jpg",
+            "heading": "Welcome to the World of Binoid Brownies",
+            "subheading": "Deliciously Elevated",
+            "content": "We believe life is better with a brownie. But not just any brownie—our specially crafted brownies are made for ultimate enjoyment and relaxation. Each delectable bite is enhanced with pure, premium-quality extracts, delivering consistent potency and unmatched flavor.",
+            "button-text": "",
+            "link": ""
+          }
+        },
+        "zig_zag_XVWGtn": {
+          "type": "zig-zag",
+          "settings": {
+            "layout": "left",
+            "alignment": "left",
+            "image": "shopify://shop_images/image_1.jpg",
+            "bg_img": "shopify://shop_images/content_1_529b4cbd-dcac-4ab2-bedf-ad226835b462.png",
+            "heading": "Make Every Moment Sweeter",
+            "subheading": "Crafted For Shared Experiences",
+            "content": "Life’s sweetest moments are better when shared. Binoid brownies are designed to bring friends together and elevate the ordinary into something extraordinary. From cozy gatherings to special celebrations, each bite is crafted with care to deliver consistent quality and pure deliciousness. Gather your favorite people, warm up some brownies and pass the plate!",
+            "button-text": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": ["zig_zag_LidjQU", "zig_zag_XVWGtn"],
+      "settings": {
+        "heading": ""
+      }
+    },
+    "rich_text_kn4VKz": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_76rwHw": {
+          "type": "heading",
+          "settings": {
+            "heading": "Quality You Can Trust",
+            "heading_size": "h2"
+          }
+        },
+        "heading_feTwED": {
+          "type": "heading",
+          "settings": {
+            "heading": "Our Promise To You",
+            "heading_size": "h0"
+          }
+        },
+        "text_AKcHci": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At Binoid, we're dedicated to excellence in every step. From sourcing premium ingredients to using pure, carefully measured extracts, quality is our top priority. Each batch of brownies is thoughtfully created to ensure consistent deliciousness and reliability you can count on. We believe in transparency, attention to detail, and above all, crafting products that genuinely enhance your experiences.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_76rwHw", "heading_feTwED", "text_AKcHci"],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": ["banner_ctm_j9hQgy", "main", "zig_zag_qymATY", "rich_text_kn4VKz"]
+}

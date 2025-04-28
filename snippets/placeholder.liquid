@@ -4,6 +4,12 @@
   {% assign placeholder_images = 'product-placeholder.jpg, product-placeholder1.jpg, product-placeholder2.jpg, product-placeholder3.jpg' %}
 {% elsif class == 'collection-placeholder' %}
   {% assign placeholder_images = 'collection-placeholder.jpg' %}
+{% elsif class == 'header-placeholder' %}
+  {% assign placeholder_images = 'header-placeholder.png, header-placeholder.png, header-placeholder.png, header-placeholder.png' %}
+{% elsif class == 'login-placeholder' %}
+  {% assign placeholder_images = 'login-placeholder.jpg' %}
+{% elsif class == 'register-placeholder' %}
+  {% assign placeholder_images = 'register-placeholder.jpg' %}
 {% else %}
   {% assign placeholder_images = 'default-placeholder.jpg' %}
 {% endif %}
@@ -15,7 +21,7 @@
     src="{{ image | asset_img_url }}"
     alt="Placeholder Image"
     class="{{ class }}"
-    width="330" 
+    width="330"
     height="481"
   >
 {% endfor %}

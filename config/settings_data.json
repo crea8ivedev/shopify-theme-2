@@ -9,7 +9,8 @@
  */
 {
   "current": {
-    "logo_width": 90,
+    "logo": "shopify://shop_images/Logo_a6d82c13-1066-484c-b420-6736b274b802.png",
+    "logo_width": 100,
     "type_header_font": "americana_n4",
     "heading_scale": 100,
     "type_body_font": "karla_n4",
@@ -20,7 +21,7 @@
     "spacing_grid_vertical": 12,
     "animations_reveal_on_scroll": false,
     "buttons_border_thickness": 1,
-    "buttons_border_opacity": 100,
+    "buttons_border_opacity": 0,
     "buttons_radius": 40,
     "buttons_shadow_opacity": 0,
     "buttons_shadow_horizontal_offset": 0,
@@ -94,6 +95,7 @@
     "popup_shadow_horizontal_offset": 0,
     "popup_shadow_vertical_offset": 4,
     "popup_shadow_blur": 5,
+    "login_popup": true,
     "drawer_border_thickness": 1,
     "drawer_border_opacity": 10,
     "drawer_shadow_opacity": 0,
@@ -115,12 +117,18 @@
     "social_vimeo_link": "",
     "predictive_search_enabled": true,
     "predictive_search_show_vendor": false,
-    "predictive_search_show_price": false,
     "currency_code_enabled": true,
-    "cart_type": "notification",
+    "cart_type": "drawer",
+    "upsell_collection": [
+      "pink-lipstick-and-blush-on",
+      "hair-spray",
+      "liquid-foundation",
+      "pink-lipstick"
+    ],
     "show_vendor": false,
     "show_cart_note": false,
     "cart_drawer_collection": "",
+    "cart_color_scheme": "scheme-f691cbbc-70ed-46c2-8527-5313951de5a7",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
@@ -132,6 +140,14 @@
         "type": "main-password-footer",
         "settings": {
           "color_scheme": "scheme-1"
+        }
+      },
+      "account-popup": {
+        "type": "account-popup",
+        "settings": {
+          "display_logo": false,
+          "color_popup": "#ffffff",
+          "position_popup": "center"
         }
       }
     },
@@ -189,6 +205,17 @@
           "button": "#ffffff",
           "button_label": "#334fb4",
           "secondary_button_label": "#ffffff",
+          "shadow": "#121212"
+        }
+      },
+      "scheme-f691cbbc-70ed-46c2-8527-5313951de5a7": {
+        "settings": {
+          "background": "#ffffff",
+          "background_gradient": "",
+          "text": "#121212",
+          "button": "#121212",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#121212",
           "shadow": "#121212"
         }
       }
@@ -358,7 +385,6 @@
       "social_vimeo_link": "",
       "predictive_search_enabled": true,
       "predictive_search_show_vendor": false,
-      "predictive_search_show_price": false,
       "currency_code_enabled": true,
       "cart_type": "notification",
       "show_vendor": false,

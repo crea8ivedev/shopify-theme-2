@@ -144,10 +144,6 @@
         "predictive_search_show_vendor": {
           "label": "Dostawca produktu",
           "info": "Pokazywane, gdy podpowiedzi wyszukiwania są włączone"
-        },
-        "predictive_search_show_price": {
-          "label": "Cena produktu",
-          "info": "Pokazywane, gdy podpowiedzi wyszukiwania są włączone"
         }
       }
     },
@@ -378,6 +374,12 @@
         "section_padding_heading": "Wypełnienie",
         "padding_top": "Góra",
         "padding_bottom": "Dół"
+      },
+      "login": {
+        "login_image": "Obraz logowania"
+      },
+      "register": {
+        "register_image": "Obraz rejestracji"
       },
       "spacing": "Odstępy",
       "colors": {
@@ -1006,6 +1008,27 @@
         "header__utilities": {
           "content": "Użyteczne funkcje"
         }
+      },
+      "blocks": {
+        "image-mega-menu": {
+          "name": "Menu Mega-obraz",
+          "settings": {
+            "menu_item": {
+              "label": "Menu element",
+              "info": "Wprowadź element menu, aby zastosować menu mega-menu."
+            },
+            "product_list": {
+              "label": "Lista produktów"
+            },
+            "collection": {
+              "label": "Kolekcja",
+              "info": "W jednym momencie można używać tylko jednej listy produktów lub kolekcji"
+            },
+            "products_to_show": {
+              "label": "Produkt do pokazania"
+            }
+          }
+        }
       }
     },
     "image-banner": {
@@ -1172,6 +1195,35 @@
       },
       "presets": {
         "name": "Baner z obrazem"
+      }
+    },
+    "login_popup": {
+      "name": "Popup klienta",
+      "settings": {
+        "display_logo": {
+          "label": "Logo wyświetlić"
+        },
+        "color_popup": {
+          "label": "Kolor tła"
+        },
+        "login-image": {
+          "label": "Obraz logowania"
+        },
+        "register-image": {
+          "label": "Obraz rejestracji"
+        },
+        "bg-image": {
+          "label": "Obraz tła"
+        },
+        "position_popup": {
+          "label": "Pozycja",
+          "options__1": {
+            "label": "Lewa strona"
+          },
+          "options__2": {
+            "label": "Środek"
+          }
+        }
       }
     },
     "image-with-text": {
