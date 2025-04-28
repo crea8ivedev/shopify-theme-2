@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "settings_schema": {
     "colors": {
@@ -2760,6 +2769,39 @@
       },
       "presets": {
         "name": "Banner for e-postregistrering"
+      }
+    },
+    "marquee": {
+      "name": "Marquee",
+      "settings": {
+        "section_padding": "Seksjonsavstand",
+        "padding_top": "Toppmarg",
+        "padding_bottom": "Bunnmarg",
+        "color_scheme": "Fargeskjema",
+        "swiper_settings": "Swiper-innstillinger",
+        "enable_autoplay": "Aktiver automatisk avspilling for skrivebord",
+        "autoplay_speed": "Autoplay-hastighet",
+        "stop_on_hover": "Stopp ved hover",
+        "marquee_breakpoint_desktop": "Skrivebordsslider",
+        "marquee_breakpoint_tablet": "Nettbrettslider",
+        "marquee_breakpoint_mobile": "Mobilsilder"
+      },
+      "blocks": {
+        "image_slide": {
+          "name": "Bilde",
+          "settings": {
+            "logo_image": "Logo bilde"
+          }
+        },
+        "content_slide": {
+          "name": "Innhold",
+          "settings": {
+            "content": "Innhold"
+          }
+        }
+      },
+      "presets": {
+        "name": "Marquee"
       }
     },
     "slideshow": {

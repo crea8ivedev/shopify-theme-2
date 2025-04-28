@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "settings_schema": {
     "colors": {
@@ -2760,6 +2769,39 @@
       },
       "presets": {
         "name": "E-posta kaydı banner'ı"
+      }
+    },
+    "marquee": {
+      "name": "Marquee",
+      "settings": {
+        "section_padding": "Bölüm Dolgusu",
+        "padding_top": "Üst Dolgu",
+        "padding_bottom": "Alt Dolgu",
+        "color_scheme": "Renk Şeması",
+        "swiper_settings": "Swiper Ayarları",
+        "enable_autoplay": "Masaüstü için Otomatik Oynatmayı Etkinleştir",
+        "autoplay_speed": "Otomatik Oynatma Hızı",
+        "stop_on_hover": "Fare Üzerinde Duraklat",
+        "marquee_breakpoint_desktop": "Masaüstü Slaytları",
+        "marquee_breakpoint_tablet": "Tablet Slaytları",
+        "marquee_breakpoint_mobile": "Mobil Slaytları"
+      },
+      "blocks": {
+        "image_slide": {
+          "name": "Görsel",
+          "settings": {
+            "logo_image": "Logo Görseli"
+          }
+        },
+        "content_slide": {
+          "name": "İçerik",
+          "settings": {
+            "content": "İçerik"
+          }
+        }
+      },
+      "presets": {
+        "name": "Marquee"
       }
     },
     "slideshow": {

@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "settings_schema": {
     "colors": {
@@ -2760,6 +2769,39 @@
       },
       "presets": {
         "name": "แบนเนอร์การลงทะเบียนอีเมล"
+      }
+    },
+    "marquee": {
+      "name": "Marquee",
+      "settings": {
+        "section_padding": "การเว้นระยะของส่วน",
+        "padding_top": "การเว้นระยะด้านบน",
+        "padding_bottom": "การเว้นระยะด้านล่าง",
+        "color_scheme": "โทนสี",
+        "swiper_settings": "การตั้งค่า Swiper",
+        "enable_autoplay": "เปิดใช้งานการเล่นอัตโนมัติสำหรับเดสก์ท็อป",
+        "autoplay_speed": "ความเร็วของการเล่นอัตโนมัติ",
+        "stop_on_hover": "หยุดเมื่อมีการนำเมาส์ไปวางบนสไลด์",
+        "marquee_breakpoint_desktop": "สไลด์สำหรับเดสก์ท็อป",
+        "marquee_breakpoint_tablet": "สไลด์สำหรับแท็บเล็ต",
+        "marquee_breakpoint_mobile": "สไลด์สำหรับมือถือ"
+      },
+      "blocks": {
+        "image_slide": {
+          "name": "รูปภาพ",
+          "settings": {
+            "logo_image": "รูปภาพโลโก้"
+          }
+        },
+        "content_slide": {
+          "name": "เนื้อหา",
+          "settings": {
+            "content": "เนื้อหา"
+          }
+        }
+      },
+      "presets": {
+        "name": "Marquee"
       }
     },
     "slideshow": {

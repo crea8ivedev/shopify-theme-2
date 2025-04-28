@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "settings_schema": {
     "colors": {
@@ -2760,6 +2769,39 @@
       },
       "presets": {
         "name": "Banner für E-Mail-Anmeldung"
+      }
+    },
+    "marquee": {
+      "name": "Laufband",
+      "settings": {
+        "section_padding": "Abschnittspolsterung",
+        "padding_top": "Oberes Polster",
+        "padding_bottom": "Unteres Polster",
+        "color_scheme": "Farbschema",
+        "swiper_settings": "Swiper-Einstellungen",
+        "autoplay_speed": "Autoplay-Geschwindigkeit",
+        "stop_on_hover": "Beim Hovern stoppen",
+        "enable_autoplay": "Autoplay für Desktop aktivieren",
+        "marquee_breakpoint_desktop": "Desktop-Slides",
+        "marquee_breakpoint_tablet": "Tablet-Slides",
+        "marquee_breakpoint_mobile": "Mobile-Slides"
+      },
+      "blocks": {
+        "image_slide": {
+          "name": "Bild",
+          "settings": {
+            "logo_image": "Logo-Bild"
+          }
+        },
+        "content_slide": {
+          "name": "Inhalt",
+          "settings": {
+            "content": "Inhalt"
+          }
+        }
+      },
+      "presets": {
+        "name": "Laufband"
       }
     },
     "slideshow": {

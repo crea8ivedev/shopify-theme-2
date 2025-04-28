@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "settings_schema": {
     "colors": {
@@ -2760,6 +2769,39 @@
       },
       "presets": {
         "name": "Bannière d'inscription à la liste de diffusion"
+      }
+    },
+    "marquee": {
+      "name": "Marquee défilante",
+      "settings": {
+        "section_padding": "Marge de la section",
+        "padding_top": "Marge supérieure",
+        "padding_bottom": "Marge inférieure",
+        "color_scheme": "Schéma de couleurs",
+        "swiper_settings": "Paramètres du carrousel",
+        "enable_autoplay": "Activer la lecture automatique sur ordinateur",
+        "autoplay_speed": "Vitesse de lecture automatique",
+        "stop_on_hover": "Arrêter au survol",
+        "marquee_breakpoint_desktop": "Diapositives sur ordinateur",
+        "marquee_breakpoint_tablet": "Diapositives sur tablette",
+        "marquee_breakpoint_mobile": "Diapositives sur mobile"
+      },
+      "blocks": {
+        "image_slide": {
+          "name": "Image",
+          "settings": {
+            "logo_image": "Image du Logo"
+          }
+        },
+        "content_slide": {
+          "name": "Contenu",
+          "settings": {
+            "content": "Contenu"
+          }
+        }
+      },
+      "presets": {
+        "name": "Marquee défilante"
       }
     },
     "slideshow": {

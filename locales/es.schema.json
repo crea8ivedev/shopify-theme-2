@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "settings_schema": {
     "colors": {
@@ -2760,6 +2769,39 @@
       },
       "presets": {
         "name": "Banner de suscripción de correo electrónico"
+      }
+    },
+    "marquee": {
+      "name": "Marquesina",
+      "settings": {
+        "section_padding": "Relleno de Sección",
+        "padding_top": "Relleno Superior",
+        "padding_bottom": "Relleno Inferior",
+        "color_scheme": "Esquema de Colores",
+        "swiper_settings": "Configuración del Swiper",
+        "enable_autoplay": "Activar Reproducción Automática en Escritorio",
+        "autoplay_speed": "Velocidad de Reproducción Automática",
+        "marquee_breakpoint_desktop": "Diapositivas de Escritorio",
+        "marquee_breakpoint_tablet": "Diapositivas de Tableta",
+        "marquee_breakpoint_mobile": "Diapositivas de Móvil",
+        "stop_on_hover": "Detener al pasar el cursor"
+      },
+      "blocks": {
+        "image_slide": {
+          "name": "",
+          "settings": {
+            "logo_image": "Imagen del logo"
+          }
+        },
+        "content_slide": {
+          "name": "Contenido",
+          "settings": {
+            "content": "Contenido"
+          }
+        }
+      },
+      "presets": {
+        "name": "Marquesina"
       }
     },
     "slideshow": {

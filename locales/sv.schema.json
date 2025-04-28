@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "settings_schema": {
     "colors": {
@@ -2760,6 +2769,39 @@
       },
       "presets": {
         "name": "Banner för e-postregistrering"
+      }
+    },
+    "marquee": {
+      "name": "Marquee",
+      "settings": {
+        "section_padding": "Sektionens padding",
+        "padding_top": "Översta padding",
+        "padding_bottom": "Undre padding",
+        "color_scheme": "Färgschema",
+        "swiper_settings": "Swiper-inställningar",
+        "enable_autoplay": "Aktivera autospel för stationära datorer",
+        "autoplay_speed": "Autoplay-hastighet",
+        "stop_on_hover": "Stoppa vid hover",
+        "marquee_breakpoint_desktop": "Desktop slides",
+        "marquee_breakpoint_tablet": "Tablet slides",
+        "marquee_breakpoint_mobile": "Mobil slides"
+      },
+      "blocks": {
+        "image_slide": {
+          "name": "Bild",
+          "settings": {
+            "logo_image": "Logobild"
+          }
+        },
+        "content_slide": {
+          "name": "Innehåll",
+          "settings": {
+            "content": "Innehåll"
+          }
+        }
+      },
+      "presets": {
+        "name": "Marquee"
       }
     },
     "slideshow": {

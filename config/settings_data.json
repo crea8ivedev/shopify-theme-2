@@ -150,12 +150,12 @@
       "scheme-2": {
         "settings": {
           "background": "#ffffff",
-          "background_gradient": "",
-          "text": "#252525",
-          "button": "#944e63",
-          "button_label": "#f3f3f3",
+          "background_gradient": "linear-gradient(89deg, rgba(NaN, NaN, NaN, 1) 7%, rgba(148, 88, 255, 1) 94%)",
+          "text": "#121212",
+          "button": "#121212",
+          "button_label": "#121212",
           "secondary_button_label": "#121212",
-          "shadow": "#121212"
+          "shadow": "rgba(0,0,0,0)"
         }
       },
       "scheme-3": {

@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "settings_schema": {
     "colors": {
@@ -2760,6 +2769,39 @@
       },
       "presets": {
         "name": "Banner di iscrizione alla newsletter"
+      }
+    },
+    "marquee": {
+      "name": "Marquee",
+      "settings": {
+        "section_padding": "Spaziatura della sezione",
+        "padding_top": "Spaziatura superiore",
+        "padding_bottom": "Spaziatura inferiore",
+        "color_scheme": "Schema dei colori",
+        "swiper_settings": "Impostazioni dello swiper",
+        "enable_autoplay": "Abilita riproduzione automatica su desktop",
+        "autoplay_speed": "Velocità di riproduzione automatica",
+        "stop_on_hover": "Ferma al passaggio del cursore",
+        "marquee_breakpoint_desktop": "Diapositive desktop",
+        "marquee_breakpoint_tablet": "Diapositive tablet",
+        "marquee_breakpoint_mobile": "Diapositive mobile"
+      },
+      "blocks": {
+        "image_slide": {
+          "name": "Immagine",
+          "settings": {
+            "logo_image": "Immagine del logo"
+          }
+        },
+        "content_slide": {
+          "name": "Contenuto",
+          "settings": {
+            "content": "Contenuto"
+          }
+        }
+      },
+      "presets": {
+        "name": "Marquee"
       }
     },
     "slideshow": {

@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "settings_schema": {
     "colors": {
@@ -2760,6 +2769,39 @@
       },
       "presets": {
         "name": "电子邮件注册横幅"
+      }
+    },
+    "marquee": {
+      "name": "Marquee",
+      "settings": {
+        "section_padding": "区域内边距",
+        "padding_top": "顶部内边距",
+        "padding_bottom": "底部内边距",
+        "color_scheme": "配色方案",
+        "swiper_settings": "Swiper 设置",
+        "enable_autoplay": "启用桌面自动播放",
+        "autoplay_speed": "自动播放速度",
+        "stop_on_hover": "悬停时停止",
+        "marquee_breakpoint_desktop": "桌面幻灯片",
+        "marquee_breakpoint_tablet": "平板幻灯片",
+        "marquee_breakpoint_mobile": "手机幻灯片"
+      },
+      "blocks": {
+        "image_slide": {
+          "name": "图片",
+          "settings": {
+            "logo_image": "Logo 图片"
+          }
+        },
+        "content_slide": {
+          "name": "内容",
+          "settings": {
+            "content": "内容"
+          }
+        }
+      },
+      "presets": {
+        "name": "Marquee"
       }
     },
     "slideshow": {

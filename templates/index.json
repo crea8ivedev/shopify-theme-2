@@ -9,82 +9,57 @@
  */
 {
   "sections": {
-    "slideshow_eqDDp9": {
-      "type": "slideshow",
+    "marquee_Wgw8KT": {
+      "type": "marquee",
       "blocks": {
-        "marquee_P4Kiwd": {
-          "type": "marquee",
+        "image_slide_eet93P": {
+          "type": "image_slide",
           "settings": {
-            "collection": "",
-            "subheading-marqee": "Skin Friendly",
-            "heading-marqee": "Unveil Your Radiance with Aura Beauty",
-            "content-marqee": "<p>Elevating Your Natural Glow with Every Application. Dive into Luxurious Beauty, Redefined.</p>",
-            "button_label-marqee": "Shop Now",
-            "link-marqee": "",
-            "color_bg": ""
+            "logo_image": "shopify://shop_images/wella_1_624d7277-6672-41f2-9fe3-b8a07800f08f.png"
+          }
+        },
+        "image_slide_4hDtmG": {
+          "type": "image_slide",
+          "settings": {
+            "logo_image": "shopify://shop_images/mac_1.png"
+          }
+        },
+        "image_slide_HwV4kj": {
+          "type": "image_slide",
+          "settings": {
+            "logo_image": "shopify://shop_images/LOreal-Symbol-1024x403_1.png"
+          }
+        },
+        "image_slide_aGH9nn": {
+          "type": "image_slide",
+          "settings": {
+            "logo_image": "shopify://shop_images/p_g_1.png"
+          }
+        },
+        "image_slide_cwDyqw": {
+          "type": "image_slide",
+          "settings": {
+            "logo_image": "shopify://shop_images/png-clipart-brand-logo-product-design-font-cosmetic-beauty-text-cosmetics_1.png"
           }
         }
       },
       "block_order": [
-        "marquee_P4Kiwd"
+        "image_slide_eet93P",
+        "image_slide_4hDtmG",
+        "image_slide_HwV4kj",
+        "image_slide_aGH9nn",
+        "image_slide_cwDyqw"
       ],
       "settings": {
-        "auto_rotate": true,
-        "change_slides_speed": 3,
-        "slide_height": "small"
-      }
-    },
-    "multicolumn": {
-      "type": "multicolumn",
-      "blocks": {
-        "column1": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column2": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column3": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column1",
-        "column2",
-        "column3"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "third",
-        "image_ratio": "adapt",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "none",
+        "padding_top": 30,
+        "padding_bottom": 30,
         "color_scheme": "scheme-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "enable_autoplay": true,
+        "stop_on_hover": true,
+        "autoplay_speed": 31,
+        "marquee_breakpoint_desktop": 2,
+        "marquee_breakpoint_tablet": 2,
+        "marquee_breakpoint_mobile": 2
       }
     },
     "image_with_text_fXeVxz": {
@@ -206,9 +181,6 @@
     }
   },
   "order": [
-    "slideshow_eqDDp9",
-    "multicolumn",
-    "image_with_text_fXeVxz",
-    "image_with_text_UFnWJy"
+    "marquee_Wgw8KT"
   ]
 }

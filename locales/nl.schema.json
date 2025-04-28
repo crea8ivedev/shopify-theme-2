@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "settings_schema": {
     "colors": {
@@ -2760,6 +2769,39 @@
       },
       "presets": {
         "name": "Banner voor aanmelding voor het ontvangen van e-mail"
+      }
+    },
+    "marquee": {
+      "name": "Marquee",
+      "settings": {
+        "section_padding": "Sectie-opvulling",
+        "padding_top": "Bovenopvulling",
+        "padding_bottom": "Onderopvulling",
+        "color_scheme": "Kleurenschema",
+        "swiper_settings": "Swiper-instellingen",
+        "enable_autoplay": "Automatisch afspelen inschakelen voor desktop",
+        "autoplay_speed": "Autoplay-snelheid",
+        "stop_on_hover": "Stoppen bij hover",
+        "marquee_breakpoint_desktop": "Slides voor desktop",
+        "marquee_breakpoint_tablet": "Slides voor tablet",
+        "marquee_breakpoint_mobile": "Slides voor mobiel"
+      },
+      "blocks": {
+        "image_slide": {
+          "name": "Afbeelding",
+          "settings": {
+            "logo_image": "Logo-afbeelding"
+          }
+        },
+        "content_slide": {
+          "name": "Inhoud",
+          "settings": {
+            "content": "Inhoud"
+          }
+        }
+      },
+      "presets": {
+        "name": "Marquee"
       }
     },
     "slideshow": {
