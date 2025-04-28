@@ -367,8 +367,8 @@
   }
 }
 
-.image-with-text__content > * + * {
-  margin-top: 2rem;
+.image-with-text__content > * + * , .image-with-text__text--caption{
+  margin-top: 15px;
 }
 
 .image-with-text__content > .image-with-text__text:empty ~ a {
@@ -381,9 +381,8 @@
   margin-top: 0;
 }
 
-.image-with-text__content :last-child:is(.image-with-text__heading),
-.image-with-text__text--caption {
-  margin-bottom: 0;
+.image-with-text__content :last-child:is(.image-with-text__heading) {
+  margin-bottom: 15px;
 }
 
 .image-with-text__content .button + .image-with-text__text {
@@ -391,22 +390,78 @@
 }
 
 .image-with-text__content .image-with-text__text + .button {
-  margin-top: 3rem;
+  margin-top: 4rem;
 }
 
 .image-with-text__heading {
   margin-bottom: 0;
+  font-size: 36px;
 }
 
 .image-with-text__text p {
   margin-top: 0;
   margin-bottom: 1rem;
 }
+.image-with-text__content a.button{
+  gap: 10px;
+  border-radius: 100px;
+}
+.image-with-text__text--caption{
+  color: #B47B84;
+  font-weight: 700;
+  font-size: 14px;
+}
+.image-with-text__grid--reverse .image-with-text__content {
+  padding-left: 0;
+}
+.video-with-text-container .video-play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+.video-with-text-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+.video-with-text-container img {
+  display: block;
+  max-width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+ .video-with-text-container {
+  width: 100%;
+  height: 100%;
+} 
+.video-with-text-container iframe {
+  width: 100%;
+  height: 100%;
+} 
+.image-with-text__content > * + *, .image-with-text__text--caption {
+  margin-top: 12px;
+}
+.image-with-text__content .image-with-text__text + .button {
+  margin-top: 2.5rem;
+}
 
 @media screen and (max-width: 749px) {
   .collapse-padding .image-with-text__grid .image-with-text__content {
     padding-left: 0;
     padding-right: 0;
+  }
+  .image-with-text__content {
+    padding-inline: 0;
+    padding-block: 25px;
   }
 }
 

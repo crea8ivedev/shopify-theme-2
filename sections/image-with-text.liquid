@@ -1,4 +1,5 @@
 {{ 'component-image-with-text.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'media-with-text.js' | asset_url }}" defer="defer"></script>
 
 {%- style -%}
   .section-{{ section.id }}-padding {
@@ -22,6 +23,9 @@
   if section.settings.color_scheme == section.settings.section_color_scheme and section.settings.content_layout == 'no-overlap'
     assign remove_color_classes = true
   endif
+  assign poster = section.settings.cover_image | default: section.settings.video.preview_image
+  assign video_id = section.settings.video.id | default: section.settings.video_url.id
+
 -%}
 
 <div class="section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }}">
@@ -41,21 +45,102 @@
                 {%- capture sizes -%}
               (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 1.6667 }}px,
               (min-width: 750px) calc((100vw - 130px) / 1.667), calc((100vw - 50px) / 1.667)
-            {%- endcapture -%}
+             {%- endcapture -%}
               {%- else -%}
                 {%- assign widths = '165, 360, 535, 750, 1070, 1500' -%}
                 {%- capture sizes -%}
               (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px,
               (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)
-            {%- endcapture -%}
+              {%- endcapture -%}
               {%- endif -%}
               {{
                 section.settings.image
                 | image_url: width: 1500
                 | image_tag: sizes: sizes, widths: widths, fetchpriority: fetch_priority
               }}
-            {%- else -%}
+             
+              {%- elsif section.settings.video != blank
+                and section.settings.image == blank
+     and section.settings.video_url == blank
+
+              -%}
+
+                <div class="video-with-text-container">
+                  <div class="video-with-text-cover" id="video-tag-with-text-cover">
+                    {% if poster != null %}
+                      {%- assign poster_alt_text = section.settings.image.alt | default: 'Placeholder' -%}
+                      {{
+                        poster
+                        | image_url: width: 3840
+                        | image_tag: sizes: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840', alt: poster_alt_text
+                      }}
+                    {% endif %}
+                  </div>
+                  <button id="video-tag-play-button" class="video-play-button" aria-label="Play video" tabindex="0">
+                    <div id="video-play-icon" class="visible">
+                      {% render 'video-icon-play' %}
+                    </div>
+                    <div id="video-pause-icon" class="hidden">
+                      {% render 'video-icon-pause' %}
+                    </div>
+                  </button>
+                  {{
+                    section.settings.video
+                    | video_tag:
+                    id: 'video-tag-player',
+                      image_size: '1100x',
+                      autoplay: false,
+                      controls: false,
+                      muted: false,
+                      poster: false,
+                      attributes: 'aria-label="Product demonstration video"'
+                  }}
+                </div>
+          {%- elsif section.settings.video_url != blank
+                  and section.settings.image == blank
+                  and section.settings.video == blank
+                -%}
+                  <div class="video-with-text-container">
+                    <div class="video-with-text-cover" id="video-with-text-cover">
+                      {% if poster != null %}
+                        {%- assign poster_alt_text = section.settings.image.alt | default: 'Placeholder' -%}
+                        {{
+                          poster
+                          | image_url: width: 3840
+                          | image_tag: sizes: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840', alt: poster_alt_text
+                        }}
+                        <button id="video-play-button" class="video-play-button" aria-label="Play video" tabindex="0">
+                          <div id="video-play-icon" class="visible">
+                            {% render 'video-icon-play' %}
+                          </div>
+                        </button>
+                      {% endif %}
+                    </div>
+                    {% if section.settings.video_url contains 'youtube.com'
+                      or section.settings.video_url contains 'youtu.be'
+                    %}
+                      <iframe
+                        id="video-player"
+                        src="https://www.youtube.com/embed/{{ video_id }}?enablejsapi=1"
+                        class="js-youtube"
+                        allow="autoplay; encrypted-media"
+                        allowfullscreen
+                        title="{{ section.settings.description | escape }}"
+                      ></iframe>
+                    {% elsif section.settings.video_url contains 'vimeo.com' %}
+                      <iframe
+                        id="video-player"
+                        src="https://player.vimeo.com/video/{{ video_id }}"
+                        class="js-vimeo"
+                        allow="autoplay; encrypted-media"
+                        allowfullscreen
+                        title="{{ section.settings.description | escape }}"
+                      ></iframe>
+                    {% endif %}
+                  </div> 
+                {%- else -%}
               {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+             
             {%- endif -%}
           </div>
         </div>
@@ -96,6 +181,9 @@
                       {{ block.shopify_attributes }}
                     >
                       {{ block.settings.button_label | escape }}
+                      <span>
+                        {% render 'icon-up-arrow' %}
+                        </span>
                     </a>
                   {%- endif -%}
               {%- endcase -%}
@@ -119,6 +207,36 @@
       "type": "image_picker",
       "id": "image",
       "label": "t:sections.image-with-text.settings.image.label"
+    },
+    {
+      "type": "header",
+      "content": "Video"
+    },
+    {
+      "type": "video",
+      "label": "t:sections.image-with-text.settings.video.label",
+      "id": "video",
+      "info": "MP4 format recommended"
+    },
+    {
+      "type": "header",
+      "content": "Embedded Video"
+    },
+    {
+      "type": "video_url",
+      "id": "video_url",
+      "accept": ["youtube", "vimeo"],
+      "label": "t:sections.image-with-text.settings.video_url.label"
+    },
+    {
+      "type": "header",
+      "content": "Video Cover Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "cover_image",
+      "label": "t:sections.image-with-text.settings.cover_image.label",
+      "info": "1200x1200 PX recommended"
     },
     {
       "type": "select",
