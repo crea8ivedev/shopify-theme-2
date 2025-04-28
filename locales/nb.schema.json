@@ -708,6 +708,9 @@
         "show_author": {
           "label": "Forfatter"
         },
+        "gradient_bg_color": {
+          "label": "Gradientbakgrunn"
+        },
         "columns_desktop": {
           "label": "Kolonner"
         },

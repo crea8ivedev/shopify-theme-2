@@ -9,229 +9,27 @@
  */
 {
   "sections": {
-    "marquee_Wgw8KT": {
-      "type": "marquee",
-      "blocks": {
-        "image_slide_eet93P": {
-          "type": "image_slide",
-          "settings": {
-            "logo_image": "shopify://shop_images/wella_1_624d7277-6672-41f2-9fe3-b8a07800f08f.png"
-          }
-        },
-        "image_slide_4hDtmG": {
-          "type": "image_slide",
-          "settings": {
-            "logo_image": "shopify://shop_images/mac_1.png"
-          }
-        },
-        "image_slide_HwV4kj": {
-          "type": "image_slide",
-          "settings": {
-            "logo_image": "shopify://shop_images/LOreal-Symbol-1024x403_1.png"
-          }
-        },
-        "image_slide_aGH9nn": {
-          "type": "image_slide",
-          "settings": {
-            "logo_image": "shopify://shop_images/p_g_1.png"
-          }
-        },
-        "image_slide_cwDyqw": {
-          "type": "image_slide",
-          "settings": {
-            "logo_image": "shopify://shop_images/png-clipart-brand-logo-product-design-font-cosmetic-beauty-text-cosmetics_1.png"
-          }
-        }
-      },
-      "block_order": [
-        "image_slide_eet93P",
-        "image_slide_4hDtmG",
-        "image_slide_HwV4kj",
-        "image_slide_aGH9nn",
-        "image_slide_cwDyqw"
-      ],
+    "featured_blog_BUDKkX": {
+      "type": "featured-blog",
       "settings": {
-        "padding_top": 30,
-        "padding_bottom": 30,
-        "color_scheme": "scheme-1",
-        "enable_autoplay": true,
-        "stop_on_hover": true,
-        "autoplay_speed": 31,
-        "marquee_breakpoint_desktop": 2,
-        "marquee_breakpoint_tablet": 2,
-        "marquee_breakpoint_mobile": 2
-      }
-    },
-    "image_with_text_fXeVxz": {
-      "type": "image-with-text",
-      "blocks": {
-        "caption_jxtfMa": {
-          "type": "caption",
-          "settings": {
-            "caption": "Radiant Skin, Timeless Beauty.",
-            "text_style": "subtitle",
-            "text_size": "small"
-          }
-        },
-        "heading_c7dLDb": {
-          "type": "heading",
-          "settings": {
-            "heading": "Skin care",
-            "heading_size": "h1"
-          }
-        },
-        "text_qjiwzA": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Introducing Aura Beauty, where luxury meets skincare. Embrace your natural radiance with our premium products. Crafted with care, our formulas are designed to nourish and rejuvenate. Experience the essence of beauty in every drop. Enhance your routine with our effective, gentle skincare solutions. Unveil a smoother, more radiant complexion today. Elevate your skincare regimen with Aura Beauty. Discover the glow you've been searching for.</p>",
-            "text_style": "body"
-          }
-        },
-        "button_6iNNJd": {
-          "type": "button",
-          "settings": {
-            "button_label": "About Us",
-            "button_link": "#",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "caption_jxtfMa",
-        "heading_c7dLDb",
-        "text_qjiwzA",
-        "button_6iNNJd"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "image": "shopify://shop_images/image-with-text.png",
-        "video_url": "",
-        "height": "medium",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "center",
-        "section_color_scheme": "scheme-2",
-        "color_scheme": "scheme-2",
-        "padding_top": 100,
-        "padding_bottom": 100
-      }
-    },
-    "image_with_text_UFnWJy": {
-      "type": "image-with-text",
-      "blocks": {
-        "caption_taedP7": {
-          "type": "caption",
-          "settings": {
-            "caption": "Revitalize Your Hair, Embrace the Radiance.",
-            "text_style": "subtitle",
-            "text_size": "small"
-          }
-        },
-        "heading_iYkX4C": {
-          "type": "heading",
-          "settings": {
-            "heading": "Hair care",
-            "heading_size": "h1"
-          }
-        },
-        "text_JiJkBz": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Transform your hair care routine with Aura Beauty. Our premium products are infused with nourishing ingredients to restore and strengthen your hair. Experience the luxury of salon-quality treatments at home. Achieve lustrous, healthy-looking hair with our gentle formulas. Embrace the natural beauty of your hair with our range of products. Enhance shine and manageability for every hair type. Trust in our commitment to quality and visible results. Discover the secret to beautiful, radiant hair with Aura Beauty.</p>",
-            "text_style": "body"
-          }
-        },
-        "button_4DVbWy": {
-          "type": "button",
-          "settings": {
-            "button_label": "Learn More",
-            "button_link": "#",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "caption_taedP7",
-        "heading_iYkX4C",
-        "text_JiJkBz",
-        "button_4DVbWy"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "video": "shopify://files/videos/mixkit-a-young-woman-in-front-of-a-light-ring-uses-50420-hd-ready.mp4",
-        "video_url": "",
-        "cover_image": "shopify://shop_images/Frame_91.jpg",
-        "height": "medium",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "center",
-        "section_color_scheme": "scheme-2",
-        "color_scheme": "scheme-2",
-        "padding_top": 100,
-        "padding_bottom": 100
-      }
-    },
-    "collection_list_RTDEmq": {
-      "type": "collection-list",
-      "blocks": {
-        "featured_collection_fqEcRf": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "herbal-lotion"
-          }
-        },
-        "featured_collection_dLEWG3": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "hair-care"
-          }
-        },
-        "featured_collection_wCVjnj": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "skin-care"
-          }
-        },
-        "featured_collection_qXn9bq": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "face-cream"
-          }
-        }
-      },
-      "block_order": [
-        "featured_collection_fqEcRf",
-        "featured_collection_dLEWG3",
-        "featured_collection_wCVjnj",
-        "featured_collection_qXn9bq"
-      ],
-      "settings": {
-        "title": "Beauty collections",
-        "subheading": "Shop our summer trendy collection.",
-        "text_alignment": "center",
+        "blog": "news",
+        "post_limit": 5,
+        "heading": "Latest blog post",
+        "subheading": "<em><strong>The freshest and most exciting </strong></em>",
         "heading_size": "h1",
-        "image_ratio": "square",
-        "columns_desktop": 2,
-        "color_scheme": "scheme-2",
-        "show_view_all": false,
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
+        "columns_desktop": 3,
+        "show_view_all": true,
+        "show_image": true,
+        "show_date": false,
+        "show_author": false,
+        "color_scheme": "scheme-1",
+        "gradient_bg_color": "linear-gradient(0deg, rgba(255, 251, 251, 1) 7%, rgba(255, 231, 231, 1) 100%)",
         "padding_top": 36,
         "padding_bottom": 36
       }
     }
   },
   "order": [
-    "slideshow_eqDDp9",
-    "multicolumn",
-    "collection_list_RTDEmq"
+    "featured_blog_BUDKkX"
   ]
 }

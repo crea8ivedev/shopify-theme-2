@@ -980,6 +980,9 @@
         },
         "show_author": {
           "label": "Author"
+        },
+        "gradient_bg_color": {
+          "label": "Gradient Background"
         }
       },
       "presets": {

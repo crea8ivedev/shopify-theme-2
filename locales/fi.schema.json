@@ -708,6 +708,9 @@
         "show_author": {
           "label": "Tekijä"
         },
+        "gradient_bg_color": {
+          "label": "Gradientti taustavari"
+        },
         "columns_desktop": {
           "label": "Sarakkeet"
         },

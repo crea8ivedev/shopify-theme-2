@@ -708,6 +708,9 @@
         "show_author": {
           "label": "Autor"
         },
+        "gradient_bg_color": {
+          "label": "Gradientní pozadí"
+        },
         "columns_desktop": {
           "label": "Sloupce"
         },

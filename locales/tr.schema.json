@@ -708,6 +708,9 @@
         "show_author": {
           "label": "Yazar"
         },
+        "gradient_bg_color": {
+          "label": "Gradient arka plan"
+        },
         "columns_desktop": {
           "label": "Sütunlar"
         },

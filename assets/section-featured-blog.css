@@ -2,10 +2,8 @@
   height: 100%;
 }
 
-@media screen and (min-width: 990px) {
-  .grid--1-col-desktop .article-card .card__content {
-    text-align: center;
-  }
+.blog .blog-subtitle {
+  margin: 0;
 }
 
 .blog__title {
@@ -16,20 +14,8 @@
   margin-bottom: 1rem;
 }
 
-@media screen and (min-width: 990px) {
-  .blog__posts.articles-wrapper {
-    margin-bottom: 0;
-  }
-}
-
 .blog__posts.articles-wrapper .article {
   scroll-snap-align: start;
-}
-
-@media screen and (max-width: 749px) {
-  .blog__post.article {
-    width: calc(100% - 3rem - var(--grid-mobile-horizontal-spacing));
-  }
 }
 
 .background-secondary .blog-placeholder__content {
@@ -44,13 +30,93 @@
   margin-top: 3rem;
 }
 
+.article-card-wrapper .card__heading {
+  color: inherit;
+}
+
+.blog-title-wrapper {
+  margin-bottom: 50px;
+}
+
+.blog .slider-buttons svg.icon-arrow path {
+  fill: currentColor;
+}
+
+.blog .slider-buttons {
+  justify-content: flex-end;
+  margin-top: 15px;
+}
+
+.blog .slider-buttons .slider-button:disabled {
+  opacity: 0.5;
+}
+
+.blog .slider-buttons .slider-counter {
+  display: none;
+}
+
+.blog
+  .slider-buttons:has(.slider-button--prev:disabled):has(
+    .slider-button--next:disabled
+  ) {
+  display: none;
+}
+
+.blog .slider--desktop::after {
+  padding: 0;
+  margin: 0;
+}
+
+.blog .blog__view-all {
+  margin-block: auto;
+}
+
+@media screen and (min-width: 990px) {
+  .blog .slider--desktop .slider__slide:first-child {
+    margin-left: 0;
+  }
+
+  .grid--1-col-desktop .article-card .card__content {
+    text-align: center;
+  }
+
+  .blog__posts.articles-wrapper {
+    margin-bottom: 0;
+  }
+
+  .blog .slider-buttons {
+    margin-right: 15px;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .blog__post.article {
+    width: calc(100% - 6rem - var(--grid-mobile-horizontal-spacing));
+  }
+  .blog .slider-buttons {
+    justify-content: center;
+  }
+  .blog .slider--desktop .slider__slide:first-child {
+    margin-inline: 10px;
+  }
+  .blog .blog__view-all .blog__button {
+    margin-top: 10px;
+  }
+  .blog-title-wrapper {
+    margin-bottom: 30px;
+  }
+  .blog-heading-wrapper {
+    text-align: center;
+    width: 100%;
+  }
+}
+
 @media screen and (min-width: 750px) {
   .blog__button {
     margin-top: 5rem;
   }
 }
 
-/* check for flexbox gap in older Safari versions */
 @supports not (inset: 10px) {
   @media screen and (min-width: 750px) {
     .blog__posts .article + .article {

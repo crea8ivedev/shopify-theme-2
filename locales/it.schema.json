@@ -708,6 +708,9 @@
         "show_author": {
           "label": "Autore"
         },
+        "gradient_bg_color": {
+          "label": "Gradiente di sfondo"
+        },
         "columns_desktop": {
           "label": "Colonne"
         },
