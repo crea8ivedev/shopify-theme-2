@@ -407,7 +407,7 @@
       "subheading": {
         "label": "Subheading"
       },
-      "text_alignment":{
+      "text_alignment": {
         "label": "Text Alignment",
         "options_1": {
           "label": "Left"
@@ -1655,7 +1655,7 @@
         "cover_image": {
           "label": "Cover Image"
         },
-        
+
         "height": {
           "options__1": {
             "label": "Adapt to image"
@@ -2588,63 +2588,6 @@
             },
             "enable_quick_add": {
               "label": "Quick add"
-            }
-          }
-        },
-        "icon_with_text": {
-          "name": "Icon with text",
-          "settings": {
-            "layout": {
-              "label": "Layout",
-              "options__1": {
-                "label": "Horizontal"
-              },
-              "options__2": {
-                "label": "Vertical"
-              }
-            },
-            "pairing_1": {
-              "label": "Pairing 1",
-              "info": "Choose an icon or add an image for each pairing"
-            },
-            "heading": {
-              "info": "Leave blank to hide this pairing"
-            },
-            "icon_1": {
-              "label": "Icon"
-            },
-            "image_1": {
-              "label": "Image"
-            },
-            "heading_1": {
-              "label": "Heading",
-              "default": "Heading"
-            },
-            "pairing_2": {
-              "label": "Pairing 2"
-            },
-            "icon_2": {
-              "label": "Icon"
-            },
-            "image_2": {
-              "label": "Image"
-            },
-            "heading_2": {
-              "label": "Heading",
-              "default": "Heading"
-            },
-            "pairing_3": {
-              "label": "Pairing 3"
-            },
-            "icon_3": {
-              "label": "Icon"
-            },
-            "image_3": {
-              "label": "Image"
-            },
-            "heading_3": {
-              "label": "Heading",
-              "default": "Heading"
             }
           }
         }
@@ -3679,5 +3622,4 @@
       }
     }
   }
-  }
-
+}

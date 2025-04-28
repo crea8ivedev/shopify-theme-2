@@ -375,6 +375,21 @@
         "padding_top": "Topp",
         "padding_bottom": "Bunn"
       },
+      "subheading": {
+        "label": "Undertittel"
+      },
+      "text_alignment": {
+        "label": "Tekstjustering",
+        "options_1": {
+          "label": "Venstre"
+        },
+        "options_2": {
+          "label": "Sentrert"
+        },
+        "options_3": {
+          "label": "Høyre"
+        }
+      },
       "login": {
         "login_image": "Login bilde"
       },
@@ -446,6 +461,123 @@
           },
           "options__4": {
             "label": "Zoom inn på rulling"
+          }
+        }
+      }
+    },
+    "icon_with_text": {
+      "name": "Ikoni med tekst",
+      "settings": {
+        "heading": {
+          "label": "Overskrift"
+        },
+        "sec_content": {
+          "label": "Undertittel"
+        },
+        "heading_size": {
+          "label": "Overskriftsstørrelse",
+          "options__1": {
+            "label": "Liten"
+          },
+          "options__2": {
+            "label": "Medium"
+          },
+          "options__3": {
+            "label": "Stor"
+          }
+        },
+        "desktop_columns": {
+          "label": "Antall kolonner på større skjermer"
+        },
+        "column_alignment": {
+          "label": "Innholdjustering",
+          "options__1": {
+            "label": "Venstre"
+          },
+          "options__2": {
+            "label": "Sentrert"
+          }
+        },
+        "columns_mobile": {
+          "label": "Mobil kolonner",
+          "options__1": {
+            "label": "En"
+          },
+          "options__2": {
+            "label": "To"
+          }
+        },
+        "icon_alignment": {
+          "label": "Desktop Icon Alignment",
+          "options__1": {
+            "label": "Ikon til venstre"
+          },
+          "options__2": {
+            "label": "Ikon øverst"
+          }
+        },
+        "heading_alignment": {
+          "label": "Overskriftsjustering",
+          "options__1": {
+            "label": "Venstre"
+          },
+          "options__2": {
+            "label": "Sentrert"
+          },
+          "options__3": {
+            "label": "Høyre"
+          }
+        },
+        "show_mobile_slider": {
+          "label": "Aktiver rullefunksjon på mobil"
+        },
+        "show_pagination": {
+          "label": "Aktiver paginering"
+        },
+        "padding_top": {
+          "label": "Topp-paddling"
+        },
+        "padding_bottom": {
+          "label": "Bunn-paddling"
+        },
+        "color_scheme": {
+          "label": "Fargeoppsett"
+        },
+        "icon_color": {
+          "label": "SVG-ikonfarge"
+        },
+        "icon_background_color": {
+          "label": "Ikonbakgrunnsfarge"
+        },
+        "icon_bg": {
+          "label": "Ikonbakgrunnsstil",
+          "options__1": {
+            "label": "Ingen"
+          },
+          "options__2": {
+            "label": "Kvadrat"
+          },
+          "options__3": {
+            "label": "Sirkel"
+          }
+        }
+      },
+      "blocks": {
+        "column": {
+          "name": "Ikoni med tekst",
+          "settings": {
+            "grid_title": {
+              "label": "Tittel"
+            },
+            "grid_description": {
+              "label": "Beskrivelse"
+            },
+            "grid_image": {
+              "label": "Bilde"
+            },
+            "svg_icon": {
+              "label": "SVG-ikon"
+            }
           }
         }
       }
@@ -607,6 +739,9 @@
         "title": {
           "label": "Overskrift",
           "default": "Samlinger"
+        },
+        "subheading": {
+          "default": "Shop our trendy collection."
         },
         "image_ratio": {
           "label": "Bildeforhold",
@@ -1231,6 +1366,15 @@
       "settings": {
         "image": {
           "label": "Bilde"
+        },
+        "video": {
+          "label": "Video"
+        },
+        "video_url": {
+          "label": "URL"
+        },
+        "cover_image": {
+          "label": "Cover Image"
         },
         "height": {
           "options__1": {
@@ -1962,63 +2106,6 @@
             },
             "enable_quick_add": {
               "label": "Hurtigregistrering"
-            }
-          }
-        },
-        "icon_with_text": {
-          "name": "Ikon med tekst",
-          "settings": {
-            "layout": {
-              "label": "Oppsett",
-              "options__1": {
-                "label": "Horisontalt"
-              },
-              "options__2": {
-                "label": "Vertikalt"
-              }
-            },
-            "heading": {
-              "info": "La stå tom for å skjule denne sammenkoblingen"
-            },
-            "icon_1": {
-              "label": "Ikon"
-            },
-            "image_1": {
-              "label": "Bilde"
-            },
-            "heading_1": {
-              "label": "Overskrift",
-              "default": "Overskrift"
-            },
-            "icon_2": {
-              "label": "Ikon"
-            },
-            "image_2": {
-              "label": "Bilde"
-            },
-            "heading_2": {
-              "label": "Overskrift",
-              "default": "Overskrift"
-            },
-            "icon_3": {
-              "label": "Ikon"
-            },
-            "image_3": {
-              "label": "Bilde"
-            },
-            "heading_3": {
-              "label": "Overskrift",
-              "default": "Overskrift"
-            },
-            "pairing_1": {
-              "label": "Sammenkobling 1",
-              "info": "Velg et ikon eller legg til et bilde for hver sammenkobling"
-            },
-            "pairing_2": {
-              "label": "Sammenkobling 2"
-            },
-            "pairing_3": {
-              "label": "Sammenkobling 3"
             }
           }
         },

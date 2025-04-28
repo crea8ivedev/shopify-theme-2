@@ -386,6 +386,21 @@
         "label": "Kleurschema",
         "has_cards_info": "Werk je thema-instellingen bij om het kleurschema van de kaart te wijzigen."
       },
+      "subheading": {
+        "label": "Subheading"
+      },
+      "text_alignment": {
+        "label": "Tekstuitlijning",
+        "options_1": {
+          "label": "Links"
+        },
+        "options_2": {
+          "label": "Midden"
+        },
+        "options_3": {
+          "label": "Right"
+        }
+      },
       "heading_size": {
         "label": "Grootte kop",
         "options__1": {
@@ -446,6 +461,123 @@
           },
           "options__4": {
             "label": "Inzoomen bij scrollen"
+          }
+        }
+      }
+    },
+    "icon_with_text": {
+      "name": "Pictogram met tekst",
+      "settings": {
+        "heading": {
+          "label": "Kop"
+        },
+        "sec_content": {
+          "label": "Subheading"
+        },
+        "heading_size": {
+          "label": "Kopgrootte",
+          "options__1": {
+            "label": "Klein"
+          },
+          "options__2": {
+            "label": "Gemiddeld"
+          },
+          "options__3": {
+            "label": "Groot"
+          }
+        },
+        "desktop_columns": {
+          "label": "Aantal kolommen op grote schermen"
+        },
+        "column_alignment": {
+          "label": "Contentuitlijning",
+          "options__1": {
+            "label": "Links"
+          },
+          "options__2": {
+            "label": "Midden"
+          }
+        },
+        "columns_mobile": {
+          "label": "Mobiele kolommen",
+          "options__1": {
+            "label": "Een"
+          },
+          "options__2": {
+            "label": "Twee"
+          }
+        },
+        "icon_alignment": {
+          "label": "Desktop-pictogramuitlijning",
+          "options__1": {
+            "label": "Pictogram links"
+          },
+          "options__2": {
+            "label": "Pictogram boven"
+          }
+        },
+        "heading_alignment": {
+          "label": "Kopuitlijning",
+          "options__1": {
+            "label": "Links"
+          },
+          "options__2": {
+            "label": "Midden"
+          },
+          "options__3": {
+            "label": "Rechts"
+          }
+        },
+        "show_mobile_slider": {
+          "label": "Mobiel schuinen"
+        },
+        "show_pagination": {
+          "label": "Paginatie"
+        },
+        "padding_top": {
+          "label": "Bovenste opvulling"
+        },
+        "padding_bottom": {
+          "label": "Onderste opvulling"
+        },
+        "color_scheme": {
+          "label": "Kleurschema"
+        },
+        "icon_color": {
+          "label": "SVG-pictogramkleur"
+        },
+        "icon_background_color": {
+          "label": "Pictogram-achtergrondkleur"
+        },
+        "icon_bg": {
+          "label": "Pictogram-achtergrondtype",
+          "options__1": {
+            "label": "Geen"
+          },
+          "options__2": {
+            "label": "Vierkant"
+          },
+          "options__3": {
+            "label": "Cirkel"
+          }
+        }
+      },
+      "blocks": {
+        "column": {
+          "name": "Pictogram met tekst",
+          "settings": {
+            "grid_title": {
+              "label": "Titel"
+            },
+            "grid_description": {
+              "label": "Beschrijving"
+            },
+            "grid_image": {
+              "label": "Afbeelding"
+            },
+            "svg_icon": {
+              "label": "SVG-pictogram"
+            }
           }
         }
       }
@@ -607,6 +739,9 @@
         "title": {
           "label": "Opschrift",
           "default": "Collecties"
+        },
+        "subheading": {
+          "default": "Ontdek onze trendy collectie."
         },
         "image_ratio": {
           "label": "Breedte-/hoogteverhouding van afbeeldingen",
@@ -1231,6 +1366,15 @@
       "settings": {
         "image": {
           "label": "Afbeelding"
+        },
+        "video": {
+          "label": "Video"
+        },
+        "video_url": {
+          "label": "URL"
+        },
+        "cover_image": {
+          "label": "Coverafbeelding"
         },
         "height": {
           "options__1": {
@@ -1963,63 +2107,6 @@
             },
             "enable_quick_add": {
               "label": "Snel toevoegen"
-            }
-          }
-        },
-        "icon_with_text": {
-          "name": "Pictogram met tekst",
-          "settings": {
-            "layout": {
-              "label": "Opmaak",
-              "options__1": {
-                "label": "Horizontaal"
-              },
-              "options__2": {
-                "label": "Verticaal"
-              }
-            },
-            "heading": {
-              "info": "Laat leeg om deze koppeling te verbergen"
-            },
-            "icon_1": {
-              "label": "Pictogram"
-            },
-            "image_1": {
-              "label": "Afbeelding"
-            },
-            "heading_1": {
-              "label": "Kop",
-              "default": "Koptekst"
-            },
-            "icon_2": {
-              "label": "Pictogram"
-            },
-            "image_2": {
-              "label": "Afbeelding"
-            },
-            "heading_2": {
-              "label": "Kop",
-              "default": "Koptekst"
-            },
-            "icon_3": {
-              "label": "Pictogram"
-            },
-            "image_3": {
-              "label": "Afbeelding"
-            },
-            "heading_3": {
-              "label": "Kop",
-              "default": "Koptekst"
-            },
-            "pairing_1": {
-              "label": "Koppeling 1",
-              "info": "Kies een pictogram of voeg een afbeelding toe voor elke koppeling"
-            },
-            "pairing_2": {
-              "label": "Koppeling 2"
-            },
-            "pairing_3": {
-              "label": "Koppeling 3"
             }
           }
         },

@@ -2,7 +2,7 @@
   margin-bottom: 1.25rem;
 }
 
-.icon-with-text-main .icon-with-text-inner .content-wrapper.right  {
+.icon-with-text-main .icon-with-text-inner .content-wrapper.right {
   margin-bottom: 1.25rem;
 }
 
@@ -35,7 +35,12 @@
   margin-top: 0;
 }
 
-.icon-with-text-main .grid-boxes .grid__item .icon_left .grid-text *:last-child {
+.icon-with-text-main
+  .grid-boxes
+  .grid__item
+  .icon_left
+  .grid-text
+  *:last-child {
   margin-bottom: 0;
 }
 
@@ -154,6 +159,7 @@
 .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
   border-color: rgba(var(--color-text));
 }
-.swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active:before {
+.swiper-pagination
+  .swiper-pagination-bullet.swiper-pagination-bullet-active:before {
   background: rgba(var(--color-text));
 }

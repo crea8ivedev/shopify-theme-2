@@ -375,6 +375,21 @@
         "padding_top": "上",
         "padding_bottom": "下"
       },
+      "subheading": {
+        "label": "サブタイトル"
+      },
+      "text_alignment": {
+        "label": "テキストの配置",
+        "options_1": {
+          "label": "左"
+        },
+        "options_2": {
+          "label": "中央"
+        },
+        "options_3": {
+          "label": "右"
+        }
+      },
       "login": {
         "login_image": "ログイン画像"
       },
@@ -446,6 +461,123 @@
           },
           "options__4": {
             "label": "スクロールで拡大する"
+          }
+        }
+      }
+    },
+    "icon_with_text": {
+      "name": "アイコン付きテキスト",
+      "settings": {
+        "heading": {
+          "label": "見出し"
+        },
+        "sec_content": {
+          "label": "サブタイトル"
+        },
+        "heading_size": {
+          "label": "見出しのサイズ",
+          "options__1": {
+            "label": "小"
+          },
+          "options__2": {
+            "label": "中"
+          },
+          "options__3": {
+            "label": "大"
+          }
+        },
+        "desktop_columns": {
+          "label": "デスクトップの列数"
+        },
+        "column_alignment": {
+          "label": "コンテンツの配置",
+          "options__1": {
+            "label": "左"
+          },
+          "options__2": {
+            "label": "中央"
+          }
+        },
+        "columns_mobile": {
+          "label": "モバイルの列数",
+          "options__1": {
+            "label": "1"
+          },
+          "options__2": {
+            "label": "2"
+          }
+        },
+        "icon_alignment": {
+          "label": "デスクトップのアイコンの配置",
+          "options__1": {
+            "label": "アイコン左"
+          },
+          "options__2": {
+            "label": "アイコン上"
+          }
+        },
+        "heading_alignment": {
+          "label": "見出しの配置",
+          "options__1": {
+            "label": "左"
+          },
+          "options__2": {
+            "label": "中央"
+          },
+          "options__3": {
+            "label": "右"
+          }
+        },
+        "show_mobile_slider": {
+          "label": "モバイルでスワイプする"
+        },
+        "show_pagination": {
+          "label": "ページネーションを有効にする"
+        },
+        "padding_top": {
+          "label": "上のパディング"
+        },
+        "padding_bottom": {
+          "label": "下のパディング"
+        },
+        "color_scheme": {
+          "label": "配色"
+        },
+        "icon_color": {
+          "label": "SVGアイコンの色"
+        },
+        "icon_background_color": {
+          "label": "アイコンの背景色"
+        },
+        "icon_bg": {
+          "label": "アイコンの背景のタイプ",
+          "options__1": {
+            "label": "なし"
+          },
+          "options__2": {
+            "label": "正方形"
+          },
+          "options__3": {
+            "label": "円"
+          }
+        }
+      },
+      "blocks": {
+        "column": {
+          "name": "アイコン付きテキスト",
+          "settings": {
+            "grid_title": {
+              "label": "タイトル"
+            },
+            "grid_description": {
+              "label": "説明"
+            },
+            "grid_image": {
+              "label": "画像"
+            },
+            "svg_icon": {
+              "label": "SVGアイコン"
+            }
           }
         }
       }
@@ -607,6 +739,9 @@
         "title": {
           "label": "見出し",
           "default": "コレクション"
+        },
+        "subheading": {
+          "default": "Shop our trendy collection."
         },
         "image_ratio": {
           "label": "画像比",
@@ -1231,6 +1366,15 @@
       "settings": {
         "image": {
           "label": "画像"
+        },
+        "video": {
+          "label": "ビデオ"
+        },
+        "video_url": {
+          "label": "URL"
+        },
+        "cover_image": {
+          "label": "カバー画像"
         },
         "height": {
           "options__1": {
@@ -1963,63 +2107,6 @@
             },
             "enable_quick_add": {
               "label": "クイック追加"
-            }
-          }
-        },
-        "icon_with_text": {
-          "name": "テキスト付きアイコン",
-          "settings": {
-            "layout": {
-              "label": "レイアウト",
-              "options__1": {
-                "label": "水平"
-              },
-              "options__2": {
-                "label": "垂直"
-              }
-            },
-            "heading": {
-              "info": "このペアリングを非表示にするには空白のままにします"
-            },
-            "icon_1": {
-              "label": "アイコン"
-            },
-            "image_1": {
-              "label": "画像"
-            },
-            "heading_1": {
-              "label": "見出し",
-              "default": "見出し"
-            },
-            "icon_2": {
-              "label": "アイコン"
-            },
-            "image_2": {
-              "label": "画像"
-            },
-            "heading_2": {
-              "label": "見出し",
-              "default": "見出し"
-            },
-            "icon_3": {
-              "label": "アイコン"
-            },
-            "image_3": {
-              "label": "画像"
-            },
-            "heading_3": {
-              "label": "見出し",
-              "default": "見出し"
-            },
-            "pairing_1": {
-              "label": "ペアリング1",
-              "info": "各ペアリングのアイコンを選択するか、画像を追加します"
-            },
-            "pairing_2": {
-              "label": "ペアリング2"
-            },
-            "pairing_3": {
-              "label": "ペアリング3"
             }
           }
         },

@@ -620,7 +620,10 @@
   }
 }
 
-.card--standard.card--media .card__inner .card__content.new-collection-list-section .card__information {
+.card--standard.card--media
+  .card__inner
+  .card__content.new-collection-list-section
+  .card__information {
   display: block !important;
 }
 

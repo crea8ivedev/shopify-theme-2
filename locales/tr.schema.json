@@ -375,6 +375,21 @@
         "padding_top": "Üst",
         "padding_bottom": "Alt"
       },
+      "subheading": {
+        "label": "Alt başlık"
+      },
+      "text_alignment": {
+        "label": "Metin hizalaması",
+        "options_1": {
+          "label": "Sol"
+        },
+        "options_2": {
+          "label": "Orta"
+        },
+        "options_3": {
+          "label": "Sağ"
+        }
+      },
       "login": {
         "login_image": "Giriş resmi"
       },
@@ -446,6 +461,123 @@
           },
           "options__4": {
             "label": "Kaydırarak yakınlaştır"
+          }
+        }
+      }
+    },
+    "icon_with_text": {
+      "name": "Icon With Text",
+      "settings": {
+        "heading": {
+          "label": "Heading"
+        },
+        "sec_content": {
+          "label": "Subheading"
+        },
+        "heading_size": {
+          "label": "Heading Size",
+          "options__1": {
+            "label": "Small"
+          },
+          "options__2": {
+            "label": "Medium"
+          },
+          "options__3": {
+            "label": "Large"
+          }
+        },
+        "desktop_columns": {
+          "label": "Number Of Columns On Desktop"
+        },
+        "column_alignment": {
+          "label": "Content Alignment",
+          "options__1": {
+            "label": "Left"
+          },
+          "options__2": {
+            "label": "Center"
+          }
+        },
+        "columns_mobile": {
+          "label": "Mobile Columns",
+          "options__1": {
+            "label": "One"
+          },
+          "options__2": {
+            "label": "Two"
+          }
+        },
+        "icon_alignment": {
+          "label": "Desktop Icon Alignment",
+          "options__1": {
+            "label": "Icon Left"
+          },
+          "options__2": {
+            "label": "Icon Top"
+          }
+        },
+        "heading_alignment": {
+          "label": "Heading Alignment",
+          "options__1": {
+            "label": "Left"
+          },
+          "options__2": {
+            "label": "Center"
+          },
+          "options__3": {
+            "label": "Right"
+          }
+        },
+        "show_mobile_slider": {
+          "label": "Enable Swipe On Mobile"
+        },
+        "show_pagination": {
+          "label": "Enable Pagination"
+        },
+        "padding_top": {
+          "label": "Top Padding"
+        },
+        "padding_bottom": {
+          "label": "Bottom Padding"
+        },
+        "color_scheme": {
+          "label": "Color Scheme"
+        },
+        "icon_color": {
+          "label": "SVG Icon Color"
+        },
+        "icon_background_color": {
+          "label": "Icon Background Color"
+        },
+        "icon_bg": {
+          "label": "Icon Background Type",
+          "options__1": {
+            "label": "None"
+          },
+          "options__2": {
+            "label": "Square"
+          },
+          "options__3": {
+            "label": "Circle"
+          }
+        }
+      },
+      "blocks": {
+        "column": {
+          "name": "Icon with text",
+          "settings": {
+            "grid_title": {
+              "label": "Title"
+            },
+            "grid_description": {
+              "label": "Description"
+            },
+            "grid_image": {
+              "label": "Image"
+            },
+            "svg_icon": {
+              "label": "SVG Icon"
+            }
           }
         }
       }
@@ -607,6 +739,9 @@
         "title": {
           "label": "Başlık",
           "default": "Koleksiyonlar"
+        },
+        "subheading": {
+          "default": "Shop our trendy collection."
         },
         "image_ratio": {
           "label": "Görsel oranı",
@@ -1231,6 +1366,15 @@
       "settings": {
         "image": {
           "label": "Görsel"
+        },
+        "video": {
+          "label": "Video"
+        },
+        "video_url": {
+          "label": "URL"
+        },
+        "cover_image": {
+          "label": "Kapak görseli"
         },
         "height": {
           "options__1": {
@@ -1962,63 +2106,6 @@
             },
             "enable_quick_add": {
               "label": "Hızlı ekle"
-            }
-          }
-        },
-        "icon_with_text": {
-          "name": "Metin içeren simge",
-          "settings": {
-            "layout": {
-              "label": "Düzen",
-              "options__1": {
-                "label": "Yatay"
-              },
-              "options__2": {
-                "label": "Dikey"
-              }
-            },
-            "heading": {
-              "info": "Bu eşlemeyi gizlemek için boş bırakın"
-            },
-            "icon_1": {
-              "label": "Simge"
-            },
-            "image_1": {
-              "label": "Görsel"
-            },
-            "heading_1": {
-              "label": "Başlık",
-              "default": "Başlık"
-            },
-            "icon_2": {
-              "label": "Simge"
-            },
-            "image_2": {
-              "label": "Görsel"
-            },
-            "heading_2": {
-              "label": "Başlık",
-              "default": "Başlık"
-            },
-            "icon_3": {
-              "label": "Simge"
-            },
-            "image_3": {
-              "label": "Görsel"
-            },
-            "heading_3": {
-              "label": "Başlık",
-              "default": "Başlık"
-            },
-            "pairing_1": {
-              "label": "Eşleme 1",
-              "info": "Her eşleme için bir simge seçin veya bir görsel ekleyin"
-            },
-            "pairing_2": {
-              "label": "Eşleme 2"
-            },
-            "pairing_3": {
-              "label": "Eşleme 3"
             }
           }
         },

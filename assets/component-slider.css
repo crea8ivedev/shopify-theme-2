@@ -493,14 +493,14 @@ slider-component.slider-component-full-width {
   .block-33.display--inline-top.second {
     display: none;
   }
-  .gallery{
+  .gallery {
     display: block;
   }
   .marqee-content,
-  .marqee_images{
+  .marqee_images {
     width: 100% !important;
   }
-  .block-33{
+  .block-33 {
     width: 100%;
   }
 }
@@ -508,7 +508,7 @@ slider-component.slider-component-full-width {
   width: 60%;
 }
 .marqee_images {
-  width: 40%; 
+  width: 40%;
   order: 2;
 }
 .video-container {

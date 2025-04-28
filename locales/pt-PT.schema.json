@@ -375,6 +375,21 @@
         "padding_top": "Superior",
         "padding_bottom": "Inferior"
       },
+      "subheading": {
+        "label": "Subheading"
+      },
+      "text_alignment": {
+        "label": "Alinhamento do texto",
+        "options_1": {
+          "label": "Esquerda"
+        },
+        "options_2": {
+          "label": "Ao centro"
+        },
+        "options_3": {
+          "label": "Direita"
+        }
+      },
       "login": {
         "login_image": "Imagem de login"
       },
@@ -446,6 +461,123 @@
           },
           "options__4": {
             "label": "Ampliar ao rodar a roda do rato"
+          }
+        }
+      }
+    },
+    "icon_with_text": {
+      "name": "Icon With Text",
+      "settings": {
+        "heading": {
+          "label": "Heading"
+        },
+        "sec_content": {
+          "label": "Subheading"
+        },
+        "heading_size": {
+          "label": "Heading Size",
+          "options__1": {
+            "label": "Small"
+          },
+          "options__2": {
+            "label": "Medium"
+          },
+          "options__3": {
+            "label": "Large"
+          }
+        },
+        "desktop_columns": {
+          "label": "Number Of Columns On Desktop"
+        },
+        "column_alignment": {
+          "label": "Content Alignment",
+          "options__1": {
+            "label": "Left"
+          },
+          "options__2": {
+            "label": "Center"
+          }
+        },
+        "columns_mobile": {
+          "label": "Mobile Columns",
+          "options__1": {
+            "label": "One"
+          },
+          "options__2": {
+            "label": "Two"
+          }
+        },
+        "icon_alignment": {
+          "label": "Desktop Icon Alignment",
+          "options__1": {
+            "label": "Icon Left"
+          },
+          "options__2": {
+            "label": "Icon Top"
+          }
+        },
+        "heading_alignment": {
+          "label": "Heading Alignment",
+          "options__1": {
+            "label": "Left"
+          },
+          "options__2": {
+            "label": "Center"
+          },
+          "options__3": {
+            "label": "Right"
+          }
+        },
+        "show_mobile_slider": {
+          "label": "Enable Swipe On Mobile"
+        },
+        "show_pagination": {
+          "label": "Enable Pagination"
+        },
+        "padding_top": {
+          "label": "Top Padding"
+        },
+        "padding_bottom": {
+          "label": "Bottom Padding"
+        },
+        "color_scheme": {
+          "label": "Color Scheme"
+        },
+        "icon_color": {
+          "label": "SVG Icon Color"
+        },
+        "icon_background_color": {
+          "label": "Icon Background Color"
+        },
+        "icon_bg": {
+          "label": "Icon Background Type",
+          "options__1": {
+            "label": "None"
+          },
+          "options__2": {
+            "label": "Square"
+          },
+          "options__3": {
+            "label": "Circle"
+          }
+        }
+      },
+      "blocks": {
+        "column": {
+          "name": "Icon with text",
+          "settings": {
+            "grid_title": {
+              "label": "Title"
+            },
+            "grid_description": {
+              "label": "Description"
+            },
+            "grid_image": {
+              "label": "Image"
+            },
+            "svg_icon": {
+              "label": "SVG Icon"
+            }
           }
         }
       }
@@ -607,6 +739,9 @@
         "title": {
           "label": "Título",
           "default": "Coleções"
+        },
+        "subheading": {
+          "default": "Shop our trendy collection."
         },
         "image_ratio": {
           "label": "Proporção de imagem",
@@ -1231,6 +1366,15 @@
       "settings": {
         "image": {
           "label": "Imagem"
+        },
+        "video": {
+          "label": "Vídeo"
+        },
+        "video_url": {
+          "label": "URL"
+        },
+        "cover_image": {
+          "label": "Imagem de fundo"
         },
         "height": {
           "options__1": {
@@ -1963,63 +2107,6 @@
             },
             "enable_quick_add": {
               "label": "Adição rápida"
-            }
-          }
-        },
-        "icon_with_text": {
-          "name": "Ícone com texto",
-          "settings": {
-            "layout": {
-              "label": "Esquema",
-              "options__1": {
-                "label": "Horizontal"
-              },
-              "options__2": {
-                "label": "Vertical"
-              }
-            },
-            "heading": {
-              "info": "Deixe em branco para ocultar este emparelhamento"
-            },
-            "icon_1": {
-              "label": "Ícone"
-            },
-            "image_1": {
-              "label": "Imagem"
-            },
-            "heading_1": {
-              "label": "Título",
-              "default": "Cabeçalho"
-            },
-            "icon_2": {
-              "label": "Ícone"
-            },
-            "image_2": {
-              "label": "Imagem"
-            },
-            "heading_2": {
-              "label": "Título",
-              "default": "Cabeçalho"
-            },
-            "icon_3": {
-              "label": "Ícone"
-            },
-            "image_3": {
-              "label": "Imagem"
-            },
-            "heading_3": {
-              "label": "Título",
-              "default": "Cabeçalho"
-            },
-            "pairing_1": {
-              "label": "Emparelhamento 1",
-              "info": "Escolha um ícone ou adicione uma imagem para cada emparelhamento"
-            },
-            "pairing_2": {
-              "label": "Emparelhamento 2"
-            },
-            "pairing_3": {
-              "label": "Emparelhamento 3"
             }
           }
         },

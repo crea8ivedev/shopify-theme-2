@@ -373,6 +373,21 @@
       "login": {
         "login_image": "Kirjautumiskuva"
       },
+      "subheading": {
+        "label": "Otsikko"
+      },
+      "text_alignment": {
+        "label": "Tekstin tasaus",
+        "options_1": {
+          "label": "Vasen"
+        },
+        "options_2": {
+          "label": "Keskitetty"
+        },
+        "options_3": {
+          "label": "Oikea"
+        }
+      },
       "register": {
         "register_image": "Rekisteröitymiskuva"
       },
@@ -446,6 +461,123 @@
           },
           "options__4": {
             "label": "Lähennä vierittäessäsi"
+          }
+        }
+      }
+    },
+    "icon_with_text": {
+      "name": "Ikoni ja teksti",
+      "settings": {
+        "heading": {
+          "label": "Otsikko"
+        },
+        "sec_content": {
+          "label": "Otsikko"
+        },
+        "heading_size": {
+          "label": "Otsikon koko",
+          "options__1": {
+            "label": "Pieni"
+          },
+          "options__2": {
+            "label": "Keskisuuri"
+          },
+          "options__3": {
+            "label": "Suuri"
+          }
+        },
+        "desktop_columns": {
+          "label": "Sarakkeet"
+        },
+        "column_alignment": {
+          "label": "Sisältön tasaus",
+          "options__1": {
+            "label": "Vasen"
+          },
+          "options__2": {
+            "label": "Keskitetty"
+          }
+        },
+        "columns_mobile": {
+          "label": "Mobiiliasakkeet",
+          "options__1": {
+            "label": "Yksi"
+          },
+          "options__2": {
+            "label": "Kaksi"
+          }
+        },
+        "icon_alignment": {
+          "label": "Desktop ikoni-tasaus",
+          "options__1": {
+            "label": "Ikoni vasemmalla"
+          },
+          "options__2": {
+            "label": "Ikoni ylhäällä"
+          }
+        },
+        "heading_alignment": {
+          "label": "Otsikon tasaus",
+          "options__1": {
+            "label": "Vasen"
+          },
+          "options__2": {
+            "label": "Keskitetty"
+          },
+          "options__3": {
+            "label": "Oikea"
+          }
+        },
+        "show_mobile_slider": {
+          "label": "Ota käyttöön mobiilinäyttöjen vieritys"
+        },
+        "show_pagination": {
+          "label": "Ota käyttöön sivunumerointi"
+        },
+        "padding_top": {
+          "label": "Yläpuskuri"
+        },
+        "padding_bottom": {
+          "label": "Alapuskuri"
+        },
+        "color_scheme": {
+          "label": "Värimalli"
+        },
+        "icon_color": {
+          "label": "SVG-ikoni väri"
+        },
+        "icon_background_color": {
+          "label": "Ikoni taustaväri"
+        },
+        "icon_bg": {
+          "label": "Ikoni taustan tyyppi",
+          "options__1": {
+            "label": "Ei mitään"
+          },
+          "options__2": {
+            "label": "Neliö"
+          },
+          "options__3": {
+            "label": "Ympyrä"
+          }
+        }
+      },
+      "blocks": {
+        "column": {
+          "name": "Ikoni ja teksti",
+          "settings": {
+            "grid_title": {
+              "label": "Otsikko"
+            },
+            "grid_description": {
+              "label": "Kuvaus"
+            },
+            "grid_image": {
+              "label": "Kuva"
+            },
+            "svg_icon": {
+              "label": "SVG-ikoni"
+            }
           }
         }
       }
@@ -607,6 +739,9 @@
         "title": {
           "label": "Otsikko",
           "default": "Kokoelmat"
+        },
+        "subheading": {
+          "default": "Shop our trendy collection."
         },
         "image_ratio": {
           "label": "Kuvasuhde",
@@ -1231,6 +1366,15 @@
       "settings": {
         "image": {
           "label": "Kuva"
+        },
+        "video": {
+          "label": "Video"
+        },
+        "video_url": {
+          "label": "URL"
+        },
+        "cover_image": {
+          "label": "Cover Image"
         },
         "height": {
           "options__1": {
@@ -1962,63 +2106,6 @@
             },
             "enable_quick_add": {
               "label": "Pikalisäys"
-            }
-          }
-        },
-        "icon_with_text": {
-          "name": "Kuvake johon liittyy teksti",
-          "settings": {
-            "layout": {
-              "label": "Asettelu",
-              "options__1": {
-                "label": "Vaaka"
-              },
-              "options__2": {
-                "label": "Pysty"
-              }
-            },
-            "heading": {
-              "info": "Jos haluat piilottaa tämän parin, jätä tyhjäksi"
-            },
-            "icon_1": {
-              "label": "Kuvake"
-            },
-            "image_1": {
-              "label": "Kuva"
-            },
-            "heading_1": {
-              "label": "Otsikko",
-              "default": "Otsikko"
-            },
-            "icon_2": {
-              "label": "Kuvake"
-            },
-            "image_2": {
-              "label": "Kuva"
-            },
-            "heading_2": {
-              "label": "Otsikko",
-              "default": "Otsikko"
-            },
-            "icon_3": {
-              "label": "Kuvake"
-            },
-            "image_3": {
-              "label": "Kuva"
-            },
-            "heading_3": {
-              "label": "Otsikko",
-              "default": "Otsikko"
-            },
-            "pairing_1": {
-              "label": "Pari 1",
-              "info": "Valitse kuvake tai lisää kuva jokaiselle parille"
-            },
-            "pairing_2": {
-              "label": "Pari 2"
-            },
-            "pairing_3": {
-              "label": "Pari 3"
             }
           }
         },

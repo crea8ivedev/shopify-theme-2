@@ -1,7 +1,6 @@
 {{ 'component-icon-with-text.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'component-icon-with-text.js' | asset_url }}" defer="defer"></script>
 
-
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.50 | round: 0 }}px;
@@ -23,66 +22,84 @@
 {%- endstyle -%}
 
 {%- liquid
-      assign show_mobile_slider = false
-      if section.settings.show_mobile_slider
-        assign show_mobile_slider = true
-      endif
--%} 
-<e-iconwithtext data-show-mobile-slider="{% if section.settings.show_mobile_slider == true %}true{% else %}false{% endif %}" >
+  assign show_mobile_slider = false
+  if section.settings.show_mobile_slider
+    assign show_mobile_slider = true
+  endif
+-%}
+<e-iconwithtext data-show-mobile-slider="{% if section.settings.show_mobile_slider == true %}true{% else %}false{% endif %}">
   <div class="icon-with-text-wrapper color-{{ section.settings.color_scheme }} icon-with-text-main">
     <div class="page-width">
-    <div class="icon-with-text-inner swiper icon-with-text-slider section-{{ section.id }}-padding" role="region" aria-label="Icon with text slider" tabindex="0" data-show-mobile-slider="{% if show_mobile_slider %}true{% else %}false{% endif %}">
-      {% if section.settings.heading != blank %}
-        <div class="title-wrapper {{ section.settings.heading_alignment }}">
-          <h2 class="title no-top-margin no-bottom-margin {{ section.settings.heading_size }}">
-            {{ section.settings.heading }}
-          </h2>
-        </div>
-      {% endif %}
-      {% if section.settings.sec_content != blank %}
-      <div class="content-wrapper {{ section.settings.heading_alignment }}">
-        <p class="title no-top-margin no-bottom-margin">
-          {{ section.settings.sec_content }}
-        </p>
-      </div>
-    {% endif %}
-      <div class="grid-boxes grid--{{ section.settings.desktop_columns }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down" data-show-mobile-slider="{% if show_mobile_slider %}true{% else %}false{% endif %}">
-        {% for block in section.blocks %}
-          <div class="grid-box grid__item" role="group" aria-labelledby="grid-title-{{ block.id }}" aria-describedby="grid-desc-{{ block.id }}">
-            <div class="grid {{ section.settings.column_alignment }} {{ section.settings.icon_alignment }}">
-              <div class="grid-image {{ section.settings.image_width }} {{ section.settings.icon_bg }}">
+      <div
+        class="icon-with-text-inner swiper icon-with-text-slider section-{{ section.id }}-padding"
+        role="region"
+        aria-label="Icon with text slider"
+        tabindex="0"
+        data-show-mobile-slider="{% if show_mobile_slider %}true{% else %}false{% endif %}"
+      >
+        {% if section.settings.heading != blank %}
+          <div class="title-wrapper {{ section.settings.heading_alignment }}">
+            <h2 class="title no-top-margin no-bottom-margin {{ section.settings.heading_size }}">
+              {{ section.settings.heading }}
+            </h2>
+          </div>
+        {% endif %}
+        {% if section.settings.sec_content != blank %}
+          <div class="content-wrapper {{ section.settings.heading_alignment }}">
+            <p class="title no-top-margin no-bottom-margin">
+              {{ section.settings.sec_content }}
+            </p>
+          </div>
+        {% endif %}
+        <div
+          class="grid-boxes grid--{{ section.settings.desktop_columns }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down"
+          data-show-mobile-slider="{% if show_mobile_slider %}true{% else %}false{% endif %}"
+        >
+          {% for block in section.blocks %}
+            <div
+              class="grid-box grid__item"
+              role="group"
+              aria-labelledby="grid-title-{{ block.id }}"
+              aria-describedby="grid-desc-{{ block.id }}"
+            >
+              <div class="grid {{ section.settings.column_alignment }} {{ section.settings.icon_alignment }}">
+                <div class="grid-image {{ section.settings.image_width }} {{ section.settings.icon_bg }}">
                   {% if block.settings.grid_image != blank %}
-                    <img src="{{ block.settings.grid_image | image_url }}" alt="{{ block.settings.grid_title }}" width="60" height="60">
+                    <img
+                      src="{{ block.settings.grid_image | image_url }}"
+                      alt="{{ block.settings.grid_title }}"
+                      width="60"
+                      height="60"
+                    >
                   {% else %}
                     {% if block.settings.svg_icon != blank %}
-                      <div class="svg-image"> 
+                      <div class="svg-image">
                         {{ block.settings.svg_icon }}
                       </div>
-
                     {% endif %}
                   {% endif %}
-              </div>
-              
-              <div class="grid-box-inner">
-                {% if block.settings.grid_title != blank %}
-                <div class="grid-title" id="grid-title-{{ block.id }}">
-                  <h5>{{ block.settings.grid_title }}</h5>
                 </div>
-                {% endif %}
-                {% if block.settings.grid_description != blank %}
-                <div class="grid-text" id="grid-desc-{{ block.id }}">
-                  <p>{{ block.settings.grid_description }}</p>
+
+                <div class="grid-box-inner">
+                  {% if block.settings.grid_title != blank %}
+                    <div class="grid-title" id="grid-title-{{ block.id }}">
+                      <h5>{{ block.settings.grid_title }}</h5>
+                    </div>
+                  {% endif %}
+                  {% if block.settings.grid_description != blank %}
+                    <div class="grid-text" id="grid-desc-{{ block.id }}">
+                      <p>{{ block.settings.grid_description }}</p>
+                    </div>
+                  {% endif %}
                 </div>
-                {% endif %}
               </div>
             </div>
-          </div>
-        {% endfor %}
+          {% endfor %}
         </div>
         {% if section.settings.show_pagination %}
-        <div class="swiper-pagination"></div>
+          <div class="swiper-pagination"></div>
         {% endif %}
-    </div>
+      </div>
     </div>
   </div>
 </e-iconwithtext>
@@ -307,21 +324,21 @@
   "presets": [
     {
       "name": "t:sections.icon_with_text.name",
-    "blocks": [
-      {
-        "type": "column"
-      },
-      {
-        "type": "column"
-      },
-      {
-        "type": "column"
-      },
-      {
-        "type": "column"
-      }
+      "blocks": [
+        {
+          "type": "column"
+        },
+        {
+          "type": "column"
+        },
+        {
+          "type": "column"
+        },
+        {
+          "type": "column"
+        }
       ]
-    },
-  ] 
+    }
+  ]
 }
 {% endschema %}

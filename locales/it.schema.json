@@ -386,6 +386,21 @@
         "label": "Schema colori",
         "has_cards_info": "Per modificare lo schema dei colori delle schede, aggiorna le impostazioni del tema."
       },
+      "subheading": {
+        "label": "Sottotitolo"
+      },
+      "text_alignment": {
+        "label": "Allineamento testo",
+        "options_1": {
+          "label": "Sinistra"
+        },
+        "options_2": {
+          "label": "Centro"
+        },
+        "options_3": {
+          "label": "Right"
+        }
+      },
       "heading_size": {
         "label": "Dimensione titolo",
         "options__1": {
@@ -446,6 +461,123 @@
           },
           "options__4": {
             "label": "Zoom avanti durante lo scorrimento"
+          }
+        }
+      }
+    },
+    "icon_with_text": {
+      "name": "Icona con testo",
+      "settings": {
+        "heading": {
+          "label": "Titolo"
+        },
+        "sec_content": {
+          "label": "Sottotitolo"
+        },
+        "heading_size": {
+          "label": "Dimensione titolo",
+          "options__1": {
+            "label": "Piccola"
+          },
+          "options__2": {
+            "label": "Media"
+          },
+          "options__3": {
+            "label": "Grande"
+          }
+        },
+        "desktop_columns": {
+          "label": "Numero di colonne sul desktop"
+        },
+        "column_alignment": {
+          "label": "Allineamento contenuto",
+          "options__1": {
+            "label": "Sinistra"
+          },
+          "options__2": {
+            "label": "Centro"
+          }
+        },
+        "columns_mobile": {
+          "label": "Colonne su mobile",
+          "options__1": {
+            "label": "Uno"
+          },
+          "options__2": {
+            "label": "Due"
+          }
+        },
+        "icon_alignment": {
+          "label": "Allineamento icona sul desktop",
+          "options__1": {
+            "label": "Icona a sinistra"
+          },
+          "options__2": {
+            "label": "Icona in alto"
+          }
+        },
+        "heading_alignment": {
+          "label": "Allineamento titolo",
+          "options__1": {
+            "label": "Sinistra"
+          },
+          "options__2": {
+            "label": "Centro"
+          },
+          "options__3": {
+            "label": "Destra"
+          }
+        },
+        "show_mobile_slider": {
+          "label": "Mostra scorrimento su mobile"
+        },
+        "show_pagination": {
+          "label": "Mostra pagine"
+        },
+        "padding_top": {
+          "label": "Paddings in alto"
+        },
+        "padding_bottom": {
+          "label": "Paddings in basso"
+        },
+        "color_scheme": {
+          "label": "Schema colori"
+        },
+        "icon_color": {
+          "label": "Colore icona SVG"
+        },
+        "icon_background_color": {
+          "label": "Colore sfondo icona"
+        },
+        "icon_bg": {
+          "label": "Tipo sfondo icona",
+          "options__1": {
+            "label": "Nessuno"
+          },
+          "options__2": {
+            "label": "Quadrato"
+          },
+          "options__3": {
+            "label": "Cerchio"
+          }
+        }
+      },
+      "blocks": {
+        "column": {
+          "name": "Icona con testo",
+          "settings": {
+            "grid_title": {
+              "label": "Titolo"
+            },
+            "grid_description": {
+              "label": "Descrizione"
+            },
+            "grid_image": {
+              "label": "Immagine"
+            },
+            "svg_icon": {
+              "label": "Icona SVG"
+            }
           }
         }
       }
@@ -607,6 +739,9 @@
         "title": {
           "label": "Titolo",
           "default": "Collezioni"
+        },
+        "subheading": {
+          "default": "Acquista la nostra collezione alla moda."
         },
         "image_ratio": {
           "label": "Proporzioni delle immagini",
@@ -1231,6 +1366,15 @@
       "settings": {
         "image": {
           "label": "Immagine"
+        },
+        "video": {
+          "label": "Video"
+        },
+        "video_url": {
+          "label": "URL"
+        },
+        "cover_image": {
+          "label": "Immagine di copertura"
         },
         "height": {
           "options__1": {
@@ -1963,63 +2107,6 @@
             },
             "enable_quick_add": {
               "label": "Aggiunta rapida"
-            }
-          }
-        },
-        "icon_with_text": {
-          "name": "Icona con testo",
-          "settings": {
-            "layout": {
-              "label": "Layout",
-              "options__1": {
-                "label": "Orizzontale"
-              },
-              "options__2": {
-                "label": "Verticale"
-              }
-            },
-            "heading": {
-              "info": "Lascia vuoto per nascondere questa associazione"
-            },
-            "icon_1": {
-              "label": "Icona"
-            },
-            "image_1": {
-              "label": "Immagine"
-            },
-            "heading_1": {
-              "label": "Titolo",
-              "default": "Titolo"
-            },
-            "icon_2": {
-              "label": "Icona"
-            },
-            "image_2": {
-              "label": "Immagine"
-            },
-            "heading_2": {
-              "label": "Titolo",
-              "default": "Titolo"
-            },
-            "icon_3": {
-              "label": "Icona"
-            },
-            "image_3": {
-              "label": "Immagine"
-            },
-            "heading_3": {
-              "label": "Titolo",
-              "default": "Titolo"
-            },
-            "pairing_1": {
-              "label": "Associazione 1",
-              "info": "Scegli un'icona o aggiungi un'immagine per ogni associazione"
-            },
-            "pairing_2": {
-              "label": "Associazione 2"
-            },
-            "pairing_3": {
-              "label": "Associazione 3"
             }
           }
         },

@@ -48,7 +48,9 @@
       </div>
 
       {% if section.settings.subheading != blank %}
-        <div class="title-wrapper-with-link collection-list-subheading {% if section.settings.text_alignment == 'left' %}left{% endif %}{% if section.settings.text_alignment == 'center' %}center{% endif %}{% if section.settings.text_alignment == 'right' %}right{% endif %}">{{ section.settings.subheading }}</div>
+        <div class="title-wrapper-with-link collection-list-subheading {% if section.settings.text_alignment == 'left' %}left{% endif %}{% if section.settings.text_alignment == 'center' %}center{% endif %}{% if section.settings.text_alignment == 'right' %}right{% endif %}">
+          {{ section.settings.subheading }}
+        </div>
       {% endif %}
     {%- endunless -%}
 

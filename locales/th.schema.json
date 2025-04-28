@@ -381,6 +381,21 @@
       "register": {
         "register_image": "รูปภาพล็อกอิน"
       },
+      "subheading": {
+        "label": "หัวเรื่อง"
+      },
+      "text_alignment": {
+        "label": "การจัดวางข้อความ",
+        "options_1": {
+          "label": "ซ้าย"
+        },
+        "options_2": {
+          "label": "กึ่งกลาง"
+        },
+        "options_3": {
+          "label": "ขวา"
+        }
+      },
       "spacing": "การเว้นระยะห่าง",
       "colors": {
         "label": "รูปแบบสี",
@@ -446,6 +461,123 @@
           },
           "options__4": {
             "label": "ซูมเข้าเมื่อเลื่อนเมาส์"
+          }
+        }
+      }
+    },
+    "icon_with_text": {
+      "name": "รูปภาพกับข้อความ",
+      "settings": {
+        "heading": {
+          "label": "หัวเรื่อง"
+        },
+        "sec_content": {
+          "label": "หัวเรื่อง"
+        },
+        "heading_size": {
+          "label": "ขนาดของส่วนหัว",
+          "options__1": {
+            "label": "เล็ก"
+          },
+          "options__2": {
+            "label": "ปานกลาง"
+          },
+          "options__3": {
+            "label": "ใหญ่"
+          }
+        },
+        "desktop_columns": {
+          "label": "จำนวนคอลัมน์บนคอมพิวเตอร์"
+        },
+        "column_alignment": {
+          "label": "การจัดวางเนื้อหา",
+          "options__1": {
+            "label": "ซ้าย"
+          },
+          "options__2": {
+            "label": "กึ่งกลาง"
+          }
+        },
+        "columns_mobile": {
+          "label": "จำนวนคอลัมน์บนมือถือ",
+          "options__1": {
+            "label": "หนึ่ง"
+          },
+          "options__2": {
+            "label": "สอง"
+          }
+        },
+        "icon_alignment": {
+          "label": "การจัดวางรูปภาพบนคอมพิวเตอร์",
+          "options__1": {
+            "label": "รูปภาพซ้าย"
+          },
+          "options__2": {
+            "label": "รูปภาพบน"
+          }
+        },
+        "heading_alignment": {
+          "label": "การจัดวางหัวเรื่อง",
+          "options__1": {
+            "label": "ซ้าย"
+          },
+          "options__2": {
+            "label": "กึ่งกลาง"
+          },
+          "options__3": {
+            "label": "ขวา"
+          }
+        },
+        "show_mobile_slider": {
+          "label": "เปิดการสไลด์บนมือถือ"
+        },
+        "show_pagination": {
+          "label": "เปิดการจัดหมวดหมู่"
+        },
+        "padding_top": {
+          "label": "ระยะห่างด้านบน"
+        },
+        "padding_bottom": {
+          "label": "ระยะห่างด้านล่าง"
+        },
+        "color_scheme": {
+          "label": "รูปแบบสี"
+        },
+        "icon_color": {
+          "label": "สี SVG รูปภาพ"
+        },
+        "icon_background_color": {
+          "label": "สีพื้นหลังรูปภาพ"
+        },
+        "icon_bg": {
+          "label": "ประเภทพื้นหลังรูปภาพ",
+          "options__1": {
+            "label": "ไม่มี"
+          },
+          "options__2": {
+            "label": "สี่เหลี่ยม"
+          },
+          "options__3": {
+            "label": "วงกลม"
+          }
+        }
+      },
+      "blocks": {
+        "column": {
+          "name": "รูปภาพกับข้อความ",
+          "settings": {
+            "grid_title": {
+              "label": "หัวเรื่อง"
+            },
+            "grid_description": {
+              "label": "คำอธิบาย"
+            },
+            "grid_image": {
+              "label": "รูปภาพ"
+            },
+            "svg_icon": {
+              "label": "SVG รูปภาพ"
+            }
           }
         }
       }
@@ -607,6 +739,9 @@
         "title": {
           "label": "หัวเรื่อง",
           "default": "คอลเลกชัน"
+        },
+        "subheading": {
+          "default": "ร้านของเรามีคอลเลกชันที่ติดตามกัน"
         },
         "image_ratio": {
           "label": "อัตราส่วนรูปภาพ",
@@ -1231,6 +1366,15 @@
       "settings": {
         "image": {
           "label": "รูปภาพ"
+        },
+        "video": {
+          "label": "วิดีโอ"
+        },
+        "video_url": {
+          "label": "URL"
+        },
+        "cover_image": {
+          "label": "รูปภาพครอบ"
         },
         "height": {
           "options__1": {
@@ -1963,63 +2107,6 @@
             },
             "enable_quick_add": {
               "label": "เพิ่มด่วน"
-            }
-          }
-        },
-        "icon_with_text": {
-          "name": "ไอคอนที่มีข้อความ",
-          "settings": {
-            "layout": {
-              "label": "เลย์เอาต์",
-              "options__1": {
-                "label": "แนวนอน"
-              },
-              "options__2": {
-                "label": "แนวตั้ง"
-              }
-            },
-            "heading": {
-              "info": "ปล่อยว่างไว้เพื่อซ่อนการจับคู่นี้"
-            },
-            "icon_1": {
-              "label": "ไอคอน"
-            },
-            "image_1": {
-              "label": "รูปภาพ"
-            },
-            "heading_1": {
-              "label": "ส่วนหัว",
-              "default": "หัวเรื่อง"
-            },
-            "icon_2": {
-              "label": "ไอคอน"
-            },
-            "image_2": {
-              "label": "รูปภาพ"
-            },
-            "heading_2": {
-              "label": "ส่วนหัว",
-              "default": "หัวเรื่อง"
-            },
-            "icon_3": {
-              "label": "ไอคอน"
-            },
-            "image_3": {
-              "label": "รูปภาพ"
-            },
-            "heading_3": {
-              "label": "ส่วนหัว",
-              "default": "หัวเรื่อง"
-            },
-            "pairing_1": {
-              "label": "การจับคู่ 1",
-              "info": "เลือกไอคอนหรือเพิ่มรูปภาพสำหรับการจับคู่แต่ละรายการ"
-            },
-            "pairing_2": {
-              "label": "การจับคู่ 2"
-            },
-            "pairing_3": {
-              "label": "การจับคู่ 3"
             }
           }
         },

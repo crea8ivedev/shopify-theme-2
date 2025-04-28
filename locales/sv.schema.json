@@ -375,6 +375,21 @@
         "padding_top": "Högst upp",
         "padding_bottom": "Längst ner"
       },
+      "subheading": {
+        "label": "Subheading"
+      },
+      "text_alignment": {
+        "label": "Text Alignment",
+        "options_1": {
+          "label": "Left"
+        },
+        "options_2": {
+          "label": "Center"
+        },
+        "options_3": {
+          "label": "Right"
+        }
+      },
       "login": {
         "login_image": "Login bild"
       },
@@ -446,6 +461,123 @@
           },
           "options__4": {
             "label": "Zooma in vid skrollning"
+          }
+        }
+      }
+    },
+    "icon_with_text": {
+      "name": "Icon With Text",
+      "settings": {
+        "heading": {
+          "label": "Heading"
+        },
+        "sec_content": {
+          "label": "Subheading"
+        },
+        "heading_size": {
+          "label": "Heading Size",
+          "options__1": {
+            "label": "Small"
+          },
+          "options__2": {
+            "label": "Medium"
+          },
+          "options__3": {
+            "label": "Large"
+          }
+        },
+        "desktop_columns": {
+          "label": "Number Of Columns On Desktop"
+        },
+        "column_alignment": {
+          "label": "Content Alignment",
+          "options__1": {
+            "label": "Left"
+          },
+          "options__2": {
+            "label": "Center"
+          }
+        },
+        "columns_mobile": {
+          "label": "Mobile Columns",
+          "options__1": {
+            "label": "One"
+          },
+          "options__2": {
+            "label": "Two"
+          }
+        },
+        "icon_alignment": {
+          "label": "Desktop Icon Alignment",
+          "options__1": {
+            "label": "Icon Left"
+          },
+          "options__2": {
+            "label": "Icon Top"
+          }
+        },
+        "heading_alignment": {
+          "label": "Heading Alignment",
+          "options__1": {
+            "label": "Left"
+          },
+          "options__2": {
+            "label": "Center"
+          },
+          "options__3": {
+            "label": "Right"
+          }
+        },
+        "show_mobile_slider": {
+          "label": "Enable Swipe On Mobile"
+        },
+        "show_pagination": {
+          "label": "Enable Pagination"
+        },
+        "padding_top": {
+          "label": "Top Padding"
+        },
+        "padding_bottom": {
+          "label": "Bottom Padding"
+        },
+        "color_scheme": {
+          "label": "Color Scheme"
+        },
+        "icon_color": {
+          "label": "SVG Icon Color"
+        },
+        "icon_background_color": {
+          "label": "Icon Background Color"
+        },
+        "icon_bg": {
+          "label": "Icon Background Type",
+          "options__1": {
+            "label": "None"
+          },
+          "options__2": {
+            "label": "Square"
+          },
+          "options__3": {
+            "label": "Circle"
+          }
+        }
+      },
+      "blocks": {
+        "column": {
+          "name": "Icon with text",
+          "settings": {
+            "grid_title": {
+              "label": "Title"
+            },
+            "grid_description": {
+              "label": "Description"
+            },
+            "grid_image": {
+              "label": "Image"
+            },
+            "svg_icon": {
+              "label": "SVG Icon"
+            }
           }
         }
       }
@@ -607,6 +739,9 @@
         "title": {
           "label": "Rubrik",
           "default": "Produktserier"
+        },
+        "subheading": {
+          "default": "Shop our trendy collection."
         },
         "image_ratio": {
           "label": "Bildförhållande",
@@ -1231,6 +1366,15 @@
       "settings": {
         "image": {
           "label": "Bild"
+        },
+        "video": {
+          "label": "Video"
+        },
+        "video_url": {
+          "label": "URL"
+        },
+        "cover_image": {
+          "label": "Cover Image"
         },
         "height": {
           "options__1": {
@@ -1963,63 +2107,6 @@
             },
             "enable_quick_add": {
               "label": "Lägg till direkt"
-            }
-          }
-        },
-        "icon_with_text": {
-          "name": "Ikon med text",
-          "settings": {
-            "layout": {
-              "label": "Layout",
-              "options__1": {
-                "label": "Liggande"
-              },
-              "options__2": {
-                "label": "Stående"
-              }
-            },
-            "heading": {
-              "info": "Lämna tomt för att dölja den här parkoppling"
-            },
-            "icon_1": {
-              "label": "Ikon"
-            },
-            "image_1": {
-              "label": "Bild"
-            },
-            "heading_1": {
-              "label": "Rubrik",
-              "default": "Rubrik"
-            },
-            "icon_2": {
-              "label": "Ikon"
-            },
-            "image_2": {
-              "label": "Bild"
-            },
-            "heading_2": {
-              "label": "Rubrik",
-              "default": "Rubrik"
-            },
-            "icon_3": {
-              "label": "Ikon"
-            },
-            "image_3": {
-              "label": "Bild"
-            },
-            "heading_3": {
-              "label": "Rubrik",
-              "default": "Rubrik"
-            },
-            "pairing_1": {
-              "label": "Parkoppling 1",
-              "info": "Välj en ikon eller lägg till en bild för varje parkoppling"
-            },
-            "pairing_2": {
-              "label": "Parkoppling 2"
-            },
-            "pairing_3": {
-              "label": "Parkoppling 3"
             }
           }
         },

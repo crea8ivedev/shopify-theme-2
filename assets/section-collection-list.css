@@ -64,8 +64,8 @@
 
 @media screen and (min-width: 990px) {
   .collection-list-subheading {
-      padding-left: 0;
-      padding-right: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -79,7 +79,7 @@
 .title-wrapper-with-link.collection-list-subheading {
   margin-top: 0;
   display: block;
-  color: #B47B84;
+  color: #b47b84;
 }
 
 .left {
@@ -109,7 +109,7 @@
 }
 
 .collection_list-button a {
-  color: #944E63;
+  color: #944e63;
   text-decoration: none;
   background: white;
   padding: 12px 25px;
@@ -118,7 +118,7 @@
 
 .collection_list-button a:hover {
   background: #944e63;
-  color: #FFE7E7;
+  color: #ffe7e7;
 }
 
 .collection_list-button svg {
@@ -131,7 +131,7 @@
 }
 
 svg.icon.icon-arrow path {
-  fill: #944E63;
+  fill: #944e63;
 }
 
 .slider-button[disabled="disabled"] {

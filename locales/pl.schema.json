@@ -386,6 +386,21 @@
         "label": "Kolorystyka",
         "has_cards_info": "Aby zmienić kolorystykę karty, zaktualizuj ustawienia szablonu."
       },
+      "subheading": {
+        "label": "Podtytuł"
+      },
+      "text_alignment": {
+        "label": "Wyrównanie tekstu",
+        "options_1": {
+          "label": "Lewa strona"
+        },
+        "options_2": {
+          "label": "Środek"
+        },
+        "options_3": {
+          "label": "Prawa strona"
+        }
+      },
       "heading_size": {
         "label": "Rozmiar nagłówka",
         "options__1": {
@@ -446,6 +461,123 @@
           },
           "options__4": {
             "label": "Powiększenie przy przewijaniu"
+          }
+        }
+      }
+    },
+    "icon_with_text": {
+      "name": "Ikona z tekstem",
+      "settings": {
+        "heading": {
+          "label": "Nagłówek"
+        },
+        "sec_content": {
+          "label": "Podtytuł"
+        },
+        "heading_size": {
+          "label": "Rozmiar nagłówka",
+          "options__1": {
+            "label": "Mały"
+          },
+          "options__2": {
+            "label": "Średni"
+          },
+          "options__3": {
+            "label": "Duży"
+          }
+        },
+        "desktop_columns": {
+          "label": "Liczba kolumn na dużym ekranie"
+        },
+        "column_alignment": {
+          "label": "Wyrównanie zawartości",
+          "options__1": {
+            "label": "Lewa strona"
+          },
+          "options__2": {
+            "label": "Środek"
+          }
+        },
+        "columns_mobile": {
+          "label": "Kolumny na urządzeniu mobilnym",
+          "options__1": {
+            "label": "Jeden"
+          },
+          "options__2": {
+            "label": "Dwa"
+          }
+        },
+        "icon_alignment": {
+          "label": "Wyrównanie ikony na dużym ekranie",
+          "options__1": {
+            "label": "Lewa strona"
+          },
+          "options__2": {
+            "label": "Góra"
+          }
+        },
+        "heading_alignment": {
+          "label": "Wyrównanie nagłówka",
+          "options__1": {
+            "label": "Lewa strona"
+          },
+          "options__2": {
+            "label": "Środek"
+          },
+          "options__3": {
+            "label": "Prawa strona"
+          }
+        },
+        "show_mobile_slider": {
+          "label": "Pokaż przewijanie na urządzeniu mobilnym"
+        },
+        "show_pagination": {
+          "label": "Pokaż paginację"
+        },
+        "padding_top": {
+          "label": "Górna wysokość"
+        },
+        "padding_bottom": {
+          "label": "Dolna wysokość"
+        },
+        "color_scheme": {
+          "label": "Schemat kolorów"
+        },
+        "icon_color": {
+          "label": "Kolor ikony SVG"
+        },
+        "icon_background_color": {
+          "label": "Kolor tła ikony"
+        },
+        "icon_bg": {
+          "label": "Typ tła ikony",
+          "options__1": {
+            "label": "Brak"
+          },
+          "options__2": {
+            "label": "Kwadrat"
+          },
+          "options__3": {
+            "label": "Okrągły"
+          }
+        }
+      },
+      "blocks": {
+        "column": {
+          "name": "Ikona z tekstem",
+          "settings": {
+            "grid_title": {
+              "label": "Nagłówek"
+            },
+            "grid_description": {
+              "label": "Opis"
+            },
+            "grid_image": {
+              "label": "Obraz"
+            },
+            "svg_icon": {
+              "label": "SVG-ikona"
+            }
           }
         }
       }
@@ -607,6 +739,9 @@
         "title": {
           "label": "Nagłówek",
           "default": "Kolekcje"
+        },
+        "subheading": {
+          "default": "Kupuj naszą modną kolekcję."
         },
         "image_ratio": {
           "label": "Proporcja obrazu",
@@ -1231,6 +1366,15 @@
       "settings": {
         "image": {
           "label": "Obraz"
+        },
+        "video": {
+          "label": "Wideo"
+        },
+        "video_url": {
+          "label": "URL"
+        },
+        "cover_image": {
+          "label": "Obraz pokrywy"
         },
         "height": {
           "options__1": {
@@ -1963,63 +2107,6 @@
             },
             "enable_quick_add": {
               "label": "Szybkie dodawanie"
-            }
-          }
-        },
-        "icon_with_text": {
-          "name": "Ikona z tekstem",
-          "settings": {
-            "layout": {
-              "label": "Układ",
-              "options__1": {
-                "label": "W poziomie"
-              },
-              "options__2": {
-                "label": "W pionie"
-              }
-            },
-            "heading": {
-              "info": "Pozostaw puste, aby ukryć parowanie"
-            },
-            "icon_1": {
-              "label": "Ikona"
-            },
-            "image_1": {
-              "label": "Obraz"
-            },
-            "heading_1": {
-              "label": "Nagłówek",
-              "default": "Nagłówek"
-            },
-            "icon_2": {
-              "label": "Ikona"
-            },
-            "image_2": {
-              "label": "Obraz"
-            },
-            "heading_2": {
-              "label": "Nagłówek",
-              "default": "Nagłówek"
-            },
-            "icon_3": {
-              "label": "Ikona"
-            },
-            "image_3": {
-              "label": "Obraz"
-            },
-            "heading_3": {
-              "label": "Nagłówek",
-              "default": "Nagłówek"
-            },
-            "pairing_1": {
-              "label": "Parowanie 1",
-              "info": "Wybierz ikonę lub dodaj obraz dla każdego parowania"
-            },
-            "pairing_2": {
-              "label": "Parowanie 2"
-            },
-            "pairing_3": {
-              "label": "Parowanie 3"
             }
           }
         },

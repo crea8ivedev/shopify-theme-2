@@ -375,6 +375,21 @@
         "padding_top": "Arriba",
         "padding_bottom": "Abajo"
       },
+      "subheading": {
+        "label": "Subheading"
+      },
+      "text_alignment": {
+        "label": "Text Alignment",
+        "options_1": {
+          "label": "Left"
+        },
+        "options_2": {
+          "label": "Center"
+        },
+        "options_3": {
+          "label": "Right"
+        }
+      },
       "login": {
         "login_image": "Imagen de inicio de sesión"
       },
@@ -607,6 +622,9 @@
         "title": {
           "label": "Título",
           "default": "Colecciones"
+        },
+        "subheading": {
+          "default": "Shop our trendy collection."
         },
         "image_ratio": {
           "label": "Relación de aspecto de imagen",
@@ -1231,6 +1249,15 @@
       "settings": {
         "image": {
           "label": "Imagen"
+        },
+        "video": {
+          "label": "Video"
+        },
+        "video_url": {
+          "label": "URL"
+        },
+        "cover_image": {
+          "label": "Cover Image"
         },
         "height": {
           "options__1": {
@@ -1963,63 +1990,6 @@
             },
             "enable_quick_add": {
               "label": "Agregado rápido"
-            }
-          }
-        },
-        "icon_with_text": {
-          "name": "Ícono con texto",
-          "settings": {
-            "layout": {
-              "label": "Diseño",
-              "options__1": {
-                "label": "Horizontal"
-              },
-              "options__2": {
-                "label": "Vertical"
-              }
-            },
-            "heading": {
-              "info": "Dejar en blanco para ocultar este emparejamiento"
-            },
-            "icon_1": {
-              "label": "Ícono"
-            },
-            "image_1": {
-              "label": "Imagen"
-            },
-            "heading_1": {
-              "label": "Encabezado",
-              "default": "Encabezado"
-            },
-            "icon_2": {
-              "label": "Ícono"
-            },
-            "image_2": {
-              "label": "Imagen"
-            },
-            "heading_2": {
-              "label": "Encabezado",
-              "default": "Encabezado"
-            },
-            "icon_3": {
-              "label": "Ícono"
-            },
-            "image_3": {
-              "label": "Imagen"
-            },
-            "heading_3": {
-              "label": "Encabezado",
-              "default": "Encabezado"
-            },
-            "pairing_1": {
-              "label": "Emparejamiento 1",
-              "info": "Elegir un ícono o agregar una imagen para cada emparejamiento"
-            },
-            "pairing_2": {
-              "label": "Emparejamiento 2"
-            },
-            "pairing_3": {
-              "label": "Emparejamiento 3"
             }
           }
         },
@@ -3531,6 +3501,123 @@
       },
       "presets": {
         "name": "Lista de pedidos rápidos"
+      }
+    },
+    "icon_with_text": {
+      "name": "Icon With Text",
+      "settings": {
+        "heading": {
+          "label": "Heading"
+        },
+        "sec_content": {
+          "label": "Subheading"
+        },
+        "heading_size": {
+          "label": "Heading Size",
+          "options__1": {
+            "label": "Small"
+          },
+          "options__2": {
+            "label": "Medium"
+          },
+          "options__3": {
+            "label": "Large"
+          }
+        },
+        "desktop_columns": {
+          "label": "Number Of Columns On Desktop"
+        },
+        "column_alignment": {
+          "label": "Content Alignment",
+          "options__1": {
+            "label": "Left"
+          },
+          "options__2": {
+            "label": "Center"
+          }
+        },
+        "columns_mobile": {
+          "label": "Mobile Columns",
+          "options__1": {
+            "label": "One"
+          },
+          "options__2": {
+            "label": "Two"
+          }
+        },
+        "icon_alignment": {
+          "label": "Desktop Icon Alignment",
+          "options__1": {
+            "label": "Icon Left"
+          },
+          "options__2": {
+            "label": "Icon Top"
+          }
+        },
+        "heading_alignment": {
+          "label": "Heading Alignment",
+          "options__1": {
+            "label": "Left"
+          },
+          "options__2": {
+            "label": "Center"
+          },
+          "options__3": {
+            "label": "Right"
+          }
+        },
+        "show_mobile_slider": {
+          "label": "Enable Swipe On Mobile"
+        },
+        "show_pagination": {
+          "label": "Enable Pagination"
+        },
+        "padding_top": {
+          "label": "Top Padding"
+        },
+        "padding_bottom": {
+          "label": "Bottom Padding"
+        },
+        "color_scheme": {
+          "label": "Color Scheme"
+        },
+        "icon_color": {
+          "label": "SVG Icon Color"
+        },
+        "icon_background_color": {
+          "label": "Icon Background Color"
+        },
+        "icon_bg": {
+          "label": "Icon Background Type",
+          "options__1": {
+            "label": "None"
+          },
+          "options__2": {
+            "label": "Square"
+          },
+          "options__3": {
+            "label": "Circle"
+          }
+        }
+      },
+      "blocks": {
+        "column": {
+          "name": "Icon with text",
+          "settings": {
+            "grid_title": {
+              "label": "Title"
+            },
+            "grid_description": {
+              "label": "Description"
+            },
+            "grid_image": {
+              "label": "Image"
+            },
+            "svg_icon": {
+              "label": "SVG Icon"
+            }
+          }
+        }
       }
     }
   }

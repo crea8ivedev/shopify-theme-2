@@ -378,6 +378,21 @@
       "login": {
         "login_image": "登入圖片"
       },
+      "subheading": {
+        "label": "副標題"
+      },
+      "text_alignment": {
+        "label": "文字對齊方式",
+        "options_1": {
+          "label": "靠左"
+        },
+        "options_2": {
+          "label": "置中"
+        },
+        "options_3": {
+          "label": "靠右"
+        }
+      },
       "register": {
         "register_image": "註冊圖片"
       },
@@ -446,6 +461,123 @@
           },
           "options__4": {
             "label": "捲動時放大"
+          }
+        }
+      }
+    },
+    "icon_with_text": {
+      "name": "圖示文字",
+      "settings": {
+        "heading": {
+          "label": "標題"
+        },
+        "sec_content": {
+          "label": "副標題"
+        },
+        "heading_size": {
+          "label": "標題大小",
+          "options__1": {
+            "label": "小"
+          },
+          "options__2": {
+            "label": "中"
+          },
+          "options__3": {
+            "label": "大"
+          }
+        },
+        "desktop_columns": {
+          "label": "桌機欄數"
+        },
+        "column_alignment": {
+          "label": "內容對齊方式",
+          "options__1": {
+            "label": "靠左"
+          },
+          "options__2": {
+            "label": "置中"
+          }
+        },
+        "columns_mobile": {
+          "label": "行動版欄數",
+          "options__1": {
+            "label": "一"
+          },
+          "options__2": {
+            "label": "二"
+          }
+        },
+        "icon_alignment": {
+          "label": "桌機圖示對齊方式",
+          "options__1": {
+            "label": "圖示靠左"
+          },
+          "options__2": {
+            "label": "圖示置上"
+          }
+        },
+        "heading_alignment": {
+          "label": "標題對齊方式",
+          "options__1": {
+            "label": "靠左"
+          },
+          "options__2": {
+            "label": "置中"
+          },
+          "options__3": {
+            "label": "靠右"
+          }
+        },
+        "show_mobile_slider": {
+          "label": "啟用行動版滑動"
+        },
+        "show_pagination": {
+          "label": "啟用分頁"
+        },
+        "padding_top": {
+          "label": "上間距"
+        },
+        "padding_bottom": {
+          "label": "下間距"
+        },
+        "color_scheme": {
+          "label": "顏色配置"
+        },
+        "icon_color": {
+          "label": "SVG 圖示顏色"
+        },
+        "icon_background_color": {
+          "label": "圖示背景顏色"
+        },
+        "icon_bg": {
+          "label": "圖示背景類型",
+          "options__1": {
+            "label": "無"
+          },
+          "options__2": {
+            "label": "方形"
+          },
+          "options__3": {
+            "label": "圓形"
+          }
+        }
+      },
+      "blocks": {
+        "column": {
+          "name": "圖示文字",
+          "settings": {
+            "grid_title": {
+              "label": "標題"
+            },
+            "grid_description": {
+              "label": "說明"
+            },
+            "grid_image": {
+              "label": "圖片"
+            },
+            "svg_icon": {
+              "label": "SVG 圖示"
+            }
           }
         }
       }
@@ -607,6 +739,9 @@
         "title": {
           "label": "標題",
           "default": "商品系列"
+        },
+        "subheading": {
+          "default": "瀏覽我們的時尚系列。"
         },
         "image_ratio": {
           "label": "圖片比例",
@@ -1231,6 +1366,15 @@
       "settings": {
         "image": {
           "label": "圖片"
+        },
+        "video": {
+          "label": "影片"
+        },
+        "video_url": {
+          "label": "URL"
+        },
+        "cover_image": {
+          "label": "封面圖片"
         },
         "height": {
           "options__1": {
@@ -1963,63 +2107,6 @@
             },
             "enable_quick_add": {
               "label": "快速新增"
-            }
-          }
-        },
-        "icon_with_text": {
-          "name": "圖示與文字",
-          "settings": {
-            "layout": {
-              "label": "版面配置",
-              "options__1": {
-                "label": "水平"
-              },
-              "options__2": {
-                "label": "垂直"
-              }
-            },
-            "heading": {
-              "info": "留白以隱藏此配對"
-            },
-            "icon_1": {
-              "label": "圖示"
-            },
-            "image_1": {
-              "label": "圖片"
-            },
-            "heading_1": {
-              "label": "標題",
-              "default": "標題"
-            },
-            "icon_2": {
-              "label": "圖示"
-            },
-            "image_2": {
-              "label": "圖片"
-            },
-            "heading_2": {
-              "label": "標題",
-              "default": "標題"
-            },
-            "icon_3": {
-              "label": "圖示"
-            },
-            "image_3": {
-              "label": "圖片"
-            },
-            "heading_3": {
-              "label": "標題",
-              "default": "標題"
-            },
-            "pairing_1": {
-              "label": "配對 1",
-              "info": "選擇一個圖示或為每個配對新增一張圖片"
-            },
-            "pairing_2": {
-              "label": "配對 2"
-            },
-            "pairing_3": {
-              "label": "配對 3"
             }
           }
         },

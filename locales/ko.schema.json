@@ -386,6 +386,21 @@
         "label": "색상 배합",
         "has_cards_info": "카드 색상 배합을 변경하려면 테마 설정을 업데이트하십시오."
       },
+      "subheading": {
+        "label": "서브헤드라인"
+      },
+      "text_alignment": {
+        "label": "텍스트 정렬",
+        "options_1": {
+          "label": "왼쪽"
+        },
+        "options_2": {
+          "label": "가운데"
+        },
+        "options_3": {
+          "label": "오른쪽"
+        }
+      },
       "heading_size": {
         "label": "제목 사이즈",
         "options__1": {
@@ -446,6 +461,123 @@
           },
           "options__4": {
             "label": "스크롤 시 확대"
+          }
+        }
+      }
+    },
+    "icon_with_text": {
+      "name": "아이콘 텍스트",
+      "settings": {
+        "heading": {
+          "label": "제목"
+        },
+        "sec_content": {
+          "label": "서브헤드라인"
+        },
+        "heading_size": {
+          "label": "제목 사이즈",
+          "options__1": {
+            "label": "작게"
+          },
+          "options__2": {
+            "label": "보통"
+          },
+          "options__3": {
+            "label": "크게"
+          }
+        },
+        "desktop_columns": {
+          "label": "데스크톱에서의 열 수"
+        },
+        "column_alignment": {
+          "label": "콘텐츠 정렬",
+          "options__1": {
+            "label": "왼쪽"
+          },
+          "options__2": {
+            "label": "가운데"
+          }
+        },
+        "columns_mobile": {
+          "label": "모바일 열 수",
+          "options__1": {
+            "label": "하나"
+          },
+          "options__2": {
+            "label": "둘"
+          }
+        },
+        "icon_alignment": {
+          "label": "데스크톱에서의 아이콘 정렬",
+          "options__1": {
+            "label": "아이콘 왼쪽"
+          },
+          "options__2": {
+            "label": "아이콘 위"
+          }
+        },
+        "heading_alignment": {
+          "label": "제목 정렬",
+          "options__1": {
+            "label": "왼쪽"
+          },
+          "options__2": {
+            "label": "가운데"
+          },
+          "options__3": {
+            "label": "오른쪽"
+          }
+        },
+        "show_mobile_slider": {
+          "label": "모바일에서 스와이프 활성화"
+        },
+        "show_pagination": {
+          "label": "페이지네이션 활성화"
+        },
+        "padding_top": {
+          "label": "위쪽 패딩"
+        },
+        "padding_bottom": {
+          "label": "아래쪽 패딩"
+        },
+        "color_scheme": {
+          "label": "색상 테마"
+        },
+        "icon_color": {
+          "label": "SVG 아이콘 색상"
+        },
+        "icon_background_color": {
+          "label": "아이콘 배경 색상"
+        },
+        "icon_bg": {
+          "label": "아이콘 배경 유형",
+          "options__1": {
+            "label": "없음"
+          },
+          "options__2": {
+            "label": "정사각형"
+          },
+          "options__3": {
+            "label": "원"
+          }
+        }
+      },
+      "blocks": {
+        "column": {
+          "name": "아이콘 텍스트",
+          "settings": {
+            "grid_title": {
+              "label": "제목"
+            },
+            "grid_description": {
+              "label": "설명"
+            },
+            "grid_image": {
+              "label": "이미지"
+            },
+            "svg_icon": {
+              "label": "SVG 아이콘"
+            }
           }
         }
       }
@@ -607,6 +739,9 @@
         "title": {
           "label": "제목",
           "default": "컬렉션"
+        },
+        "subheading": {
+          "default": "トレンドのコレクションをお買い求めください。"
         },
         "image_ratio": {
           "label": "이미지 비율",
@@ -1231,6 +1366,15 @@
       "settings": {
         "image": {
           "label": "이미지"
+        },
+        "video": {
+          "label": "비디오"
+        },
+        "video_url": {
+          "label": "URL"
+        },
+        "cover_image": {
+          "label": "커버 이미지"
         },
         "height": {
           "options__1": {
@@ -1963,63 +2107,6 @@
             },
             "enable_quick_add": {
               "label": "빠른 추가"
-            }
-          }
-        },
-        "icon_with_text": {
-          "name": "아이콘 텍스트",
-          "settings": {
-            "layout": {
-              "label": "레이아웃",
-              "options__1": {
-                "label": "수평"
-              },
-              "options__2": {
-                "label": "수직"
-              }
-            },
-            "heading": {
-              "info": "이 페어링을 숨기려면 비워 둡니다"
-            },
-            "icon_1": {
-              "label": "아이콘"
-            },
-            "image_1": {
-              "label": "이미지"
-            },
-            "heading_1": {
-              "label": "제목",
-              "default": "제목"
-            },
-            "icon_2": {
-              "label": "아이콘"
-            },
-            "image_2": {
-              "label": "이미지"
-            },
-            "heading_2": {
-              "label": "제목",
-              "default": "제목"
-            },
-            "icon_3": {
-              "label": "아이콘"
-            },
-            "image_3": {
-              "label": "이미지"
-            },
-            "heading_3": {
-              "label": "제목",
-              "default": "제목"
-            },
-            "pairing_1": {
-              "label": "페어링 1",
-              "info": "각 페어링에 사용할 아이콘을 선택하거나 이미지를 추가합니다"
-            },
-            "pairing_2": {
-              "label": "페어링 2"
-            },
-            "pairing_3": {
-              "label": "페어링 3"
             }
           }
         },

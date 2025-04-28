@@ -1,26 +1,27 @@
 .swiper-pagination .swiper-pagination-bullet {
-    width: .875rem;
-    height: .875rem;
-    margin: 0;
-    border: 1px solid rgba(var(--color-text));
-    border-radius: 50%;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    background: transparent;
+  width: 0.875rem;
+  height: 0.875rem;
+  margin: 0;
+  border: 1px solid rgba(var(--color-text));
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: transparent;
 }
 .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
-    background-color: transparent;
-    border-color: rgba(var(--color-button));
+  background-color: transparent;
+  border-color: rgba(var(--color-button));
 }
-.swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active:before {
-    content: "";
-    width: .5rem;
-    height: .5rem;
-    background: rgba(var(--color-button));
-    border-radius: 50%;
-    position: absolute;
+.swiper-pagination
+  .swiper-pagination-bullet.swiper-pagination-bullet-active:before {
+  content: "";
+  width: 0.5rem;
+  height: 0.5rem;
+  background: rgba(var(--color-button));
+  border-radius: 50%;
+  position: absolute;
 }
 :root {
   --alpha-button-background: 1;
@@ -1324,11 +1325,11 @@ button.shopify-payment-button__button--unbranded {
     0 0 0 calc(var(--buttons-border-width) + 1px)
       rgba(var(--color-button), var(--alpha-button-background)); */
 }
-.button:hover{
+.button:hover {
   background-color: rgba(var(--color-button-hover), 1);
   color: rgba(var(--color-button), var(--alpha-button-background));
 }
-.button:hover span svg{
+.button:hover span svg {
   fill: rgba(var(--color-button), var(--alpha-button-background));
   transition: all var(--duration-short) ease;
 }
