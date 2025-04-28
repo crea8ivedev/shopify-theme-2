@@ -402,6 +402,21 @@
         "label": "Color Scheme",
         "has_cards_info": "To change the card color scheme, update your theme settings."
       },
+      "subheading": {
+        "label": "Subheading"
+      },
+      "text_alignment":{
+        "label": "Text Alignment",
+        "options_1": {
+          "label": "Left"
+        },
+        "options_2": {
+          "label": "Center"
+        },
+        "options_3": {
+          "label": "Right"
+        }
+      },
       "heading_size": {
         "label": "Heading size",
         "options__1": {
@@ -851,6 +866,9 @@
         "title": {
           "default": "Collections",
           "label": "Heading"
+        },
+        "subheading": {
+          "default": "Shop our trendy collection."
         },
         "header_layout": {
           "content": "Layout"
