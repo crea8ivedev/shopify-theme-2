@@ -28,7 +28,7 @@
         "tiktok": "TikTok"
       }
     },
-    "continue_shopping": "Продължете да пазарувате",
+    "continue_shopping": "Продължи с покупките",
     "pagination": {
       "label": "Страниране",
       "page": "Страница {{ number }}",

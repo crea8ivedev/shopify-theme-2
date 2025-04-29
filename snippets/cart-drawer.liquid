@@ -1,10 +1,3 @@
-{% comment %}
-  Renders cart drawer
-
-  Usage:
-  {% render 'cart-drawer' %}
-{% endcomment %}
-
 {{ 'quantity-popover.css' | asset_url | stylesheet_tag }}
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 
@@ -50,7 +43,9 @@
       </div>
       {%- if cart == empty -%}
         <div class="drawer__inner-empty">
-          <div class="cart-drawer__warnings center{% if settings.cart_drawer_collection != blank %} cart-drawer__warnings--has-collection{% endif %}">
+          <div
+            class="cart-drawer__warnings center{% if settings.cart_drawer_collection != blank %} cart-drawer__warnings--has-collection{% endif %}"
+          >
             <div class="cart-drawer__empty-content">
               <h2 class="cart__empty-text">{{ 'sections.cart.empty' | t }}</h2>
               <button
@@ -59,9 +54,6 @@
                 onclick="this.closest('cart-drawer').close()"
                 aria-label="{{ 'accessibility.close' | t }}"
               ></button>
-              <a href="{{ routes.all_products_collection_url }}" class="button">
-                {{ 'general.continue_shopping' | t }}
-              </a>
             </div>
           </div>
           {%- if settings.cart_drawer_collection != blank -%}
@@ -205,12 +197,14 @@
                             {%- endfor -%}
                           </ul>
                         </td>
+                        {% assign has_qty_rules = false %}
+                        {% if item.variant.quantity_rule.increment > 1
+                          or item.variant.quantity_rule.min > 1
+                          or item.variant.quantity_rule.max != null
+                        %}
+                          {% assign has_qty_rules = true %}
+                        {% endif %}
                         {%- liquid
-                          assign has_qty_rules = false
-                          if item.variant.quantity_rule.increment > 1 or item.variant.quantity_rule.min > 1 or item.variant.quantity_rule.max != null
-                            assign has_qty_rules = true
-                          endif
-
                           assign has_vol_pricing = false
                           if item.variant.quantity_price_breaks.size > 0
                             assign has_vol_pricing = true
@@ -223,7 +217,9 @@
                         >
                           <quantity-popover>
                             <div class="cart-item__quantity-wrapper quantity-popover-wrapper">
-                              <div class="quantity-popover-container{% if has_qty_rules or has_vol_pricing %} quantity-popover-container--hover{% endif %}">
+                              <div
+                                class="quantity-popover-container{% if has_qty_rules or has_vol_pricing %} quantity-popover-container--hover{% endif %}"
+                              >
                                 <quantity-input class="quantity cart-quantity">
                                   <button class="quantity__button" name="minus" type="button">
                                     <span class="visually-hidden">
@@ -398,64 +394,70 @@
         </form>
       </cart-drawer-items>
       {% render 'upsell-cart' %}
-      <div class="drawer__footer">
-        {%- if settings.show_cart_note -%}
-          <details id="Details-CartDrawer">
-            <summary>
-              <span class="summary__title">
-                {{ 'sections.cart.note' | t }}
-                {{- 'icon-arrow.svg' | inline_asset_content -}}
-              </span>
-            </summary>
-            <cart-note class="cart__note field">
-              <label class="visually-hidden" for="CartDrawer-Note">{{ 'sections.cart.note' | t }}</label>
-              <textarea
-                id="CartDrawer-Note"
-                class="text-area text-area--resize-vertical field__input"
-                name="note"
-                placeholder="{{ 'sections.cart.note' | t }}"
-              >{{ cart.note }}</textarea>
-            </cart-note>
-          </details>
-        {%- endif -%}
+      {% if cart == empty %}
+        {% if settings.show_cartbundle %}
+          {% render 'empty-cartupsell' %}
+          <a href="{{ routes.all_products_collection_url }}" class="button">
+            {{ 'general.continue_shopping' | t }}
+            {{ 'icon-button-arrow.svg' | inline_asset_content }}
+          </a>
+        {% endif %}
+      {% endif %}
+      {% if cart != empty %}
+        <div class="drawer__footer">
+          {%- if settings.show_cart_note -%}
+            <details id="Details-CartDrawer">
+              <summary>
+                <span class="summary__title">
+                  {{ 'sections.cart.note' | t }}
+                  {{- 'icon-arrow.svg' | inline_asset_content -}}
+                </span>
+              </summary>
+              <cart-note class="cart__note field">
+                <label class="visually-hidden" for="CartDrawer-Note">{{ 'sections.cart.note' | t }}</label>
+                <textarea
+                  id="CartDrawer-Note"
+                  class="text-area text-area--resize-vertical field__input"
+                  name="note"
+                  placeholder="{{ 'sections.cart.note' | t }}"
+                >{{ cart.note }}</textarea>
+              </cart-note>
+            </details>
+          {%- endif -%}
 
-        <!-- Start blocks -->
-        <!-- Subtotals -->
+          <div class="cart-drawer__footer" {{ block.shopify_attributes }}>
+            <div>
+              {%- if cart.cart_level_discount_applications.size > 0 -%}
+                <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}">
+                  {%- for discount in cart.cart_level_discount_applications -%}
+                    <li class="discounts__discount discounts__discount--end">
+                      {{- 'icon-discount.svg' | inline_asset_content -}}
+                      {{ discount.title | escape }}
+                      (-{{ discount.total_allocated_amount | money }})
+                    </li>
+                  {%- endfor -%}
+                </ul>
+              {%- endif -%}
+            </div>
+          </div>
 
-        <div class="cart-drawer__footer" {{ block.shopify_attributes }}>
-          <div>
-            {%- if cart.cart_level_discount_applications.size > 0 -%}
-              <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}">
-                {%- for discount in cart.cart_level_discount_applications -%}
-                  <li class="discounts__discount discounts__discount--end">
-                    {{- 'icon-discount.svg' | inline_asset_content -}}
-                    {{ discount.title | escape }}
-                    (-{{ discount.total_allocated_amount | money }})
-                  </li>
-                {%- endfor -%}
-              </ul>
-            {%- endif -%}
+          <div class="cart__ctas" {{ block.shopify_attributes }}>
+            <button
+              type="submit"
+              id="CartDrawer-Checkout"
+              class="cart__checkout-button button"
+              name="checkout"
+              form="CartDrawer-Form"
+              {% if cart == empty %}
+                disabled
+              {% endif %}
+            >
+              {{ 'sections.cart.checkout' | t }} | {{ cart.total_price | money }}
+              {{ 'icon-button-arrow.svg' | inline_asset_content }}
+            </button>
           </div>
         </div>
-
-        <!-- CTAs -->
-
-        <div class="cart__ctas" {{ block.shopify_attributes }}>
-          <button
-            type="submit"
-            id="CartDrawer-Checkout"
-            class="cart__checkout-button button"
-            name="checkout"
-            form="CartDrawer-Form"
-            {% if cart == empty %}
-              disabled
-            {% endif %}
-          >
-            {{ 'sections.cart.checkout' | t }} | {{ cart.total_price | money }}
-            {{ 'icon-button-arrow.svg' | inline_asset_content }}
-          </button>
-        </div>
-      </div>
+      {% endif %}
     </div>
   </div>
 </cart-drawer>

@@ -1,0 +1,47 @@
+<div class="empty-cart-upsell">
+  <h4>{{ settings.title_emptyupsell }}</h4>
+
+  <div class="upsell-products">
+    {% assign all_upsell_products = settings.upsell_collection %}
+    {% for prod in all_upsell_products limit: 2 %}
+      <div class="upsell-product">
+        <a href="{{ prod.url }}">
+          {% if prod.featured_image %}
+            <img
+              src="{{ prod.featured_image | image_url: width: 400 }}"
+              alt="{{ prod.title }}"
+              class="product-image"
+              width="100"
+              height="100"
+              loading="lazy"
+            >
+          {% endif %}
+        </a>
+
+        <div class="product-info">
+          <a href="{{ prod.url }}">
+            <h4>{{ prod.title }}</h4>
+          </a>
+          <p class="product-price">
+            {{ prod.price | money }}
+            {% if prod.compare_at_price > prod.price %}
+              <s>{{ prod.compare_at_price | money }}</s>
+            {% endif %}
+          </p>
+
+          <product-form data-section-id="empty-cart-upsell">
+            {% form 'product', prod, class: 'upsell-atc-form' %}
+              <input type="hidden" name="id" value="{{ prod.variants.first.id }}">
+              {%- render 'loading-spinner' -%}
+              {% if prod.available %}
+                <button type="submit" class="button button--primary">Add to Cart</button>
+              {% else %}
+                <button class="button button--primary" disabled>Sold Out</button>
+              {% endif %}
+            {% endform %}
+          </product-form>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>

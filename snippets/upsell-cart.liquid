@@ -7,13 +7,25 @@
         {% endfor %}
       {% endcapture %}
 
-    <div class="cart_related_product px-0 py-40">
-      <div class="ctm_yml_head text-black-900 mb-28">
-        <h4 class="!text-24 !leading-26 font-bold text-bloodstone">You Might Also Like</h4>
-      </div>
-      <div class="cart_related_iner_main bg-butter_yellow p-20 rounded-[28px]">
+    <div class="cart_related_product">
+      <div class="cart_related_iner_main swiper">
+        <div class="title_arrow_flex">
+          <div class="ctm_yml_head">
+            {%- if cart != empty -%}
+              <h4>{{ settings.title_upsell }}</h4>
+            {% endif %}
+          </div>
+          <div class="arrow-flex">
+            <div class="slider-button--prev">
+              {{- 'icon-arrow.svg' | inline_asset_content -}}
+            </div>
+            <div class="slider-button--next">
+              {{- 'icon-arrow.svg' | inline_asset_content -}}
+            </div>
+          </div>
+        </div>
         <div
-          class="collection-list card_relatedslide_block contains-card contains-card--collection{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down{% if section.settings.swipe_on_mobile %} slider slider--tablet grid--peek{% endif %} collection-list--{{ section.blocks.size }}-items"
+          class="swiper-wrapper collection-list card_relatedslide_block contains-card contains-card--collection{% if settings.card_style == 'standard' %} contains-card--standard{% endif %}"
           id="Slider-{{ section.id }}"
           role="list"
         >
@@ -21,11 +33,11 @@
           {% for prod in list_item %}
             {% if prod.id != product_rec.id %}
               <div
-                class="related-main related-products collection-list__item flex-grow"
+                class="swiper-slide related-main related-products collection-list__item"
                 data-variant-id="{{ prod.variants.first.id }}"
               >
                 <div class="main-img-related">
-                  <div class="related-inner-block flex items-center gap-20 mb-20">
+                  <div class="related-inner-block">
                     <div class="related-img shrink-0 p-10">
                       {% if prod.featured_image %}
                         <a href="{{ prod.url }}">
@@ -99,39 +111,39 @@
                           </button>
                         </cart-remove-button>
                       </div>
+                      <div class="qty_related_btn flex items-center gap-20 w-full">
+                        <product-form data-section-id="slide-cart" class="w-full">
+                          {%- assign product_form_id = 'quick-add-' | append: 'slide-cart' | append: prod.id -%}
+                          {%- form 'product',
+                            prod,
+                            id: product_form_id,
+                            class: 'form cart_relaterd_form',
+                            novalidate: 'novalidate',
+                            data-type: 'add-to-cart-form'
+                          -%}
+                            <input type="hidden" name="id" value="{{ prod.variants.first.id }}">
+                            {%- render 'loading-spinner' -%}
+                            <div class="cart_btngrp flex items-center gap-20">
+                              {% if prod.available %}
+                                <button
+                                  type="submit"
+                                  class="button button--primary btn_fill btn_fill_black tracking-tighter"
+                                >
+                                  ADD TO CART
+                                </button>
+                              {% else %}
+                                <button
+                                  class="button button--primary btn_fill btn_fill_black tracking-tighter"
+                                  disabled
+                                >
+                                  Sold Out
+                                </button>
+                              {% endif %}
+                            </div>
+                          {%- endform -%}
+                        </product-form>
+                      </div>
                     </div>
-                  </div>
-                  <div class="qty_related_btn flex items-center gap-20 w-full">
-                    <product-form data-section-id="slide-cart" class="w-full">
-                      {%- assign product_form_id = 'quick-add-' | append: 'slide-cart' | append: prod.id -%}
-                      {%- form 'product',
-                        prod,
-                        id: product_form_id,
-                        class: 'form cart_relaterd_form',
-                        novalidate: 'novalidate',
-                        data-type: 'add-to-cart-form'
-                      -%}
-                        <input type="hidden" name="id" value="{{ prod.variants.first.id }}">
-                        {%- render 'loading-spinner' -%}
-                        <div class="cart_btngrp flex items-center gap-20">
-                          {% if prod.available %}
-                            <button
-                              type="submit"
-                              class="btn_fill btn_fill_black flex-grow w-full xsscreen1:w-1/2 tracking-tighter"
-                            >
-                              ADD TO CART
-                            </button>
-                          {% else %}
-                            <button
-                              class="btn_fill btn_fill_black flex-grow w-full xsscreen1:w-1/2 btn_soldout tracking-tighter"
-                              disabled
-                            >
-                              Sold Out
-                            </button>
-                          {% endif %}
-                        </div>
-                      {%- endform -%}
-                    </product-form>
                   </div>
                 </div>
               </div>

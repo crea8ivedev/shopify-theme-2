@@ -1428,6 +1428,23 @@
       },
       {
         "type": "checkbox",
+        "id": "show_cartbundle",
+        "label": "Show Empty Upsell"
+      },
+      {
+        "type": "text",
+        "id": "title_upsell",
+        "label": "Upsell Title",
+        "default": "Build your routine"
+      },
+      {
+        "type": "text",
+        "id": "title_emptyupsell",
+        "label": "Empty Upsell Title",
+        "default": "Shop Best Products"
+      },
+      {
+        "type": "checkbox",
         "id": "show_vendor",
         "label": "t:settings_schema.cart.settings.show_vendor.label",
         "default": false

@@ -125,6 +125,7 @@
       "liquid-foundation",
       "pink-lipstick"
     ],
+    "show_cartbundle": true,
     "show_vendor": false,
     "show_cart_note": false,
     "cart_drawer_collection": "",

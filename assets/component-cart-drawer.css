@@ -447,3 +447,29 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
 #cart-shipping__success {
   font-weight: 500;
 }
+.slider-button--next .icon {
+  transform: rotate(-180deg);
+}
+.cart_related_iner_main .slider-button--next .icon path,
+.cart_related_iner_main .slider-button--prev .icon path {
+  fill: #944e63;
+}
+.title_arrow_flex {
+  display: flex;
+  justify-content: space-between;
+}
+.cart_related_iner_main .arrow-flex {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.related-inner-block {
+  display: flex;
+}
+.upsell-products {
+  display: flex;
+  justify-content: space-evenly;
+}
+.empty-cart-upsell h4 {
+  text-align: center;
+}

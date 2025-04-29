@@ -396,10 +396,6 @@ slider-component.slider-component-full-width {
   cursor: not-allowed;
 }
 
-.slider-button--next .icon {
-  transform: rotate(-180deg);
-}
-
 .slider-button--next:not([disabled]):hover .icon {
   transform: rotate(-180deg) scale(1.1);
 }
