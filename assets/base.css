@@ -1325,14 +1325,7 @@ button.shopify-payment-button__button--unbranded {
     0 0 0 calc(var(--buttons-border-width) + 1px)
       rgba(var(--color-button), var(--alpha-button-background)); */
 }
-.button:hover {
-  background-color: rgba(var(--color-button-hover), 1);
-  color: rgba(var(--color-button), var(--alpha-button-background));
-}
-.button:hover span svg {
-  fill: rgba(var(--color-button), var(--alpha-button-background));
-  transition: all var(--duration-short) ease;
-}
+
 .button--secondary:after {
   --border-opacity: var(--buttons-border-opacity);
 }

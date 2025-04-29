@@ -101,6 +101,29 @@ class CartItems extends HTMLElement {
     this.validateQuantity(event);
   }
 
+  hideUpsellProducts() {
+    const cartItems = document.querySelectorAll(".cart-item");
+    if (cartItems?.length === 0) {
+      return;
+    }
+    const cartVariantIds = Array.from(cartItems).map(
+      (item) => item.dataset.variantId,
+    );
+    const relatedProducts = document.querySelectorAll(".related-main");
+    if (relatedProducts?.length === 0) {
+      return;
+    }
+
+    relatedProducts.forEach((product) => {
+      const variantId = product.dataset.variantId;
+      if (cartVariantIds.includes(variantId)) {
+        product.style.display = "none";
+      } else {
+        product.style.display = "block";
+      }
+    });
+  }
+
   onCartUpdate() {
     if (this.tagName === "CART-DRAWER-ITEMS") {
       return fetch(`${routes.cart_url}?section_id=cart-drawer`)
@@ -118,6 +141,7 @@ class CartItems extends HTMLElement {
               targetElement.replaceWith(sourceElement);
             }
           }
+          this.hideUpsellProducts();
         })
         .catch((e) => {
           return e;
@@ -132,6 +156,7 @@ class CartItems extends HTMLElement {
           );
           const sourceQty = html.querySelector("cart-items");
           this.innerHTML = sourceQty.innerHTML;
+          this.hideUpsellProducts();
         })
         .catch((e) => {
           return e;
@@ -278,6 +303,7 @@ class CartItems extends HTMLElement {
           cartData: parsedState,
           variantId: variantId,
         });
+        this.hideUpsellProducts();
       })
       .catch(() => {
         this.querySelectorAll(".loading__spinner").forEach((overlay) =>

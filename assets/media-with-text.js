@@ -1,5 +1,4 @@
 function handleMediaInteraction(e) {
-  e.preventDefault();
   const videoContainer = e.target.closest(".video-with-text-container");
   if (
     !videoContainer ||

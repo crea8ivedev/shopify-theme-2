@@ -9,6 +9,43 @@
  */
 {
   "sections": {
+    "slideshow_rFYUmf": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_gBKJFJ": {
+          "type": "slide",
+          "settings": {
+            "box_align": "middle-center",
+            "text_alignment_mobile": "center",
+            "heading": "Image slide",
+            "subheading": "Tell your brand's story through images",
+            "content": "",
+            "button_label": "Button label",
+            "link": "",
+            "text_alignment": "center"
+          }
+        },
+        "marquee_hDBLmD": {
+          "type": "marquee",
+          "settings": {
+            "collection": "",
+            "subheading-marqee": "Skin Friendly",
+            "heading-marqee": "Unveil Your Radiance with Aura Beauty",
+            "content-marqee": "<p>Elevating Your Natural Glow with Every Application. Dive into Luxurious Beauty, Redefined.</p>",
+            "button_label-marqee": "Shop Now",
+            "link-marqee": "",
+            "color_bg": ""
+          }
+        }
+      },
+      "block_order": ["slide_gBKJFJ", "marquee_hDBLmD"],
+      "name": "t:sections.slideshow.presets.name",
+      "settings": {
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "slide_height": "medium"
+      }
+    },
     "multicolumn": {
       "type": "multicolumn",
       "blocks": {
@@ -44,12 +81,20 @@
       "settings": {
         "title": "",
         "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "Button label",
+        "button_link": "",
         "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
         "color_scheme": "scheme-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
     }
   },
-  "order": ["multicolumn"]
+  "order": ["slideshow_rFYUmf", "multicolumn"]
 }

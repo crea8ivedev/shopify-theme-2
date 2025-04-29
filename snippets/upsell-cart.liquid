@@ -20,7 +20,10 @@
           {% assign list_item = settings.upsell_collection %}
           {% for prod in list_item %}
             {% if prod.id != product_rec.id %}
-              <div class="related-main related-products collection-list__item flex-grow ">
+              <div
+                class="related-main related-products collection-list__item flex-grow"
+                data-variant-id="{{ prod.variants.first.id }}"
+              >
                 <div class="main-img-related">
                   <div class="related-inner-block flex items-center gap-20 mb-20">
                     <div class="related-img shrink-0 p-10">
