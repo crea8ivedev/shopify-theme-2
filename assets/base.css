@@ -3715,6 +3715,10 @@ details-disclosure > details {
 }
 .quick-view.featured-product-price {
   justify-content: flex-start;
+  margin-bottom: 1.5rem;
+}
+.quick-view-pd-content variant-selects {
+  margin-bottom: 1.5rem;
 }
 .quick-view-product {
   display: flex;
@@ -3740,4 +3744,11 @@ details-disclosure > details {
 .quick-view-pd-content button.add-to-cart.product-form__submit:hover {
   background-color: #944E63;
   color: white;
+}
+.quick-view-pd-content .product-form__input--pill input[type=radio]:checked+label {
+  color: #fff;
+}
+.quick-view-pd-content .product-form__input--pill input[type=radio]+label,
+.quick-view-pd-content button {
+  background-color: #fff;
 }

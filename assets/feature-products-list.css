@@ -187,3 +187,6 @@ a.shop-all-btn:hover svg path {
     top: 40%;
     right: 20px;
 }
+.product {
+    background-color: #fff;
+}
