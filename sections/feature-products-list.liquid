@@ -22,17 +22,22 @@
       {% for block in section.blocks %}
         {% assign product = block.settings.select_product %}
         {% if product %}
+          {% if block.settings.select_product != blank %}
           <div class="custom-slide">
             <div class="image-wrapper" style="position: relative; display: inline-block;">
-              <img 
-                src="{{ product.featured_image | image_url: width: 600 }}" 
-                alt="{{ product.title | escape }}" 
-                loading="lazy"
-                width="300px"
-                height="300px"
-              />
+              {% if block.settings.select_product != blank %}
+                <img 
+                  src="{{ product.featured_image | image_url: width: 600 }}" 
+                  alt="{{ product.title | escape }}" 
+                  loading="lazy"
+                  width="300px"
+                  height="300px"
+                />
+              {% else %}
+                {{ 'product-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+              {% endif %}
               <div class="icon-group mobile-only">
-                <div data-product-handle="{{ product.handle }}" onclick="openQuickView('{{ product.handle }}')" class="quick-view-icon mobile-only" style="width: 32px; height: 32px; background-color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);">
+            <div data-product-handle="{{ product.handle }}" onclick="openQuickView('{{ product.handle }}')" class="quick-view-icon mobile-only" style="width: 32px; height: 32px; background-color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);">
                   <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M7.00001 1.5C4.71341 1.5 2.72758 3.23295 1.48635 5.84664C1.46605 5.88941 1.45101 5.92111 1.43833 5.9487C1.42714 5.97302 1.4202 5.98897 1.41566 6C1.4202 6.01103 1.42714 6.02698 1.43833 6.0513C1.45101 6.07889 1.46605 6.11059 1.48635 6.15334C2.72758 8.76705 4.71341 10.5 7.00001 10.5C9.2866 10.5 11.2724 8.76705 12.5136 6.15334C12.534 6.11059 12.549 6.07889 12.5617 6.0513C12.5729 6.02698 12.5798 6.01103 12.5843 6C12.5798 5.98895 12.5729 5.973 12.5617 5.9487C12.549 5.92111 12.534 5.88941 12.5136 5.84664C11.2724 3.23295 9.2866 1.5 7.00001 1.5ZM0.222881 5.17202C1.59484 2.28301 3.97255 0 7.00001 0C10.0274 0 12.4052 2.28301 13.7771 5.17202C13.7821 5.18248 13.7872 5.19319 13.7925 5.20415C13.857 5.33922 13.9405 5.51359 13.9777 5.72861C14.0074 5.8996 14.0074 6.1004 13.9777 6.27139C13.9405 6.48642 13.857 6.6608 13.7925 6.79585C13.7872 6.80682 13.7821 6.81752 13.7771 6.82798C12.4052 9.71699 10.0274 12 7.00001 12C3.97255 12 1.59484 9.71699 0.222881 6.82798C0.217907 6.81752 0.212781 6.80682 0.207542 6.79585C0.142951 6.66078 0.0595517 6.4864 0.0222498 6.27139C-0.00741659 6.1004 -0.00741659 5.8996 0.0222498 5.72861C0.0595517 5.51359 0.142951 5.33922 0.207542 5.20415C0.212781 5.19319 0.217907 5.18248 0.222881 5.17202ZM7.00001 4.5C6.21873 4.5 5.58537 5.17157 5.58537 6C5.58537 6.82843 6.21873 7.5 7.00001 7.5C7.78127 7.5 8.41462 6.82843 8.41462 6C8.41462 5.17157 7.78127 4.5 7.00001 4.5ZM4.17075 6C4.17075 4.34313 5.43745 2.99999 7.00001 2.99999C8.56255 2.99999 9.82924 4.34313 9.82924 6C9.82924 7.65685 8.56255 9.00001 7.00001 9.00001C5.43745 9.00001 4.17075 7.65685 4.17075 6Z" fill="#B47B84"/>
                   </svg>            
@@ -43,6 +48,7 @@
                   <div data-product-handle="{{ product.handle }}" onclick="openQuickView('{{ product.handle }}')" class="quick-view-icon desktop-only">
                     <span>Quick View</span>           
                   </div>
+                  {% if block.settings.select_product != blank %}
                   <product-form
                   class="product-form desktop-only"
                   data-hide-errors="{{ gift_card_recipient_feature_active }}"
@@ -121,7 +127,7 @@
                 </div>
               </div>
             </div>
-
+           
             <div class="featured-pd-content">
               <h3>{{ product.title }}</h3>
               <div class="featured-product-price">
@@ -129,6 +135,17 @@
                 <div class="price">{{ product.price | money }}</div>
               </div>
             </div>
+            {% if block.settings.select_product == blank %}
+            <div class="featured-pd-content">
+              <h3>Your Product's Title</h3>
+              <div class="featured-product-price">
+                <div class="compare-price"><s>$0.00</s></div>
+                <div class="price">$0.00</div>
+              </div>
+            </div>
+            {% endif %}
+          
+            
             <product-form
             class="product-form mobile-only"
             data-hide-errors="{{ gift_card_recipient_feature_active }}"
@@ -204,7 +221,68 @@
               </div>
             {%- endform -%}
           </product-form>
+          {% else %}
+              <button
+              id="ProductSubmitButton-{{ section_id }}"
+              type="submit"
+              name="add"
+              class="quick-view-icon add-to-cart product-form__submit button button--full-width {% if show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}"
+            >
+              <span>Add to cart</span>
+              {%- render 'loading-spinner' -%}
+            </button>
+          {% endif %}
           </div>
+        {% else %}
+        {% endif %}
+        {% if block.settings.select_product == blank %}
+          <div class="custom-slide">
+            <div class="image-wrapper" style="position: relative; display: inline-block;">
+                {{ 'product-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+              <div class="icon-group mobile-only">
+                <div data-product-handle="{{ product.handle }}" class="quick-view-icon mobile-only" style="width: 32px; height: 32px; background-color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);">
+                  <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.00001 1.5C4.71341 1.5 2.72758 3.23295 1.48635 5.84664C1.46605 5.88941 1.45101 5.92111 1.43833 5.9487C1.42714 5.97302 1.4202 5.98897 1.41566 6C1.4202 6.01103 1.42714 6.02698 1.43833 6.0513C1.45101 6.07889 1.46605 6.11059 1.48635 6.15334C2.72758 8.76705 4.71341 10.5 7.00001 10.5C9.2866 10.5 11.2724 8.76705 12.5136 6.15334C12.534 6.11059 12.549 6.07889 12.5617 6.0513C12.5729 6.02698 12.5798 6.01103 12.5843 6C12.5798 5.98895 12.5729 5.973 12.5617 5.9487C12.549 5.92111 12.534 5.88941 12.5136 5.84664C11.2724 3.23295 9.2866 1.5 7.00001 1.5ZM0.222881 5.17202C1.59484 2.28301 3.97255 0 7.00001 0C10.0274 0 12.4052 2.28301 13.7771 5.17202C13.7821 5.18248 13.7872 5.19319 13.7925 5.20415C13.857 5.33922 13.9405 5.51359 13.9777 5.72861C14.0074 5.8996 14.0074 6.1004 13.9777 6.27139C13.9405 6.48642 13.857 6.6608 13.7925 6.79585C13.7872 6.80682 13.7821 6.81752 13.7771 6.82798C12.4052 9.71699 10.0274 12 7.00001 12C3.97255 12 1.59484 9.71699 0.222881 6.82798C0.217907 6.81752 0.212781 6.80682 0.207542 6.79585C0.142951 6.66078 0.0595517 6.4864 0.0222498 6.27139C-0.00741659 6.1004 -0.00741659 5.8996 0.0222498 5.72861C0.0595517 5.51359 0.142951 5.33922 0.207542 5.20415C0.212781 5.19319 0.217907 5.18248 0.222881 5.17202ZM7.00001 4.5C6.21873 4.5 5.58537 5.17157 5.58537 6C5.58537 6.82843 6.21873 7.5 7.00001 7.5C7.78127 7.5 8.41462 6.82843 8.41462 6C8.41462 5.17157 7.78127 4.5 7.00001 4.5ZM4.17075 6C4.17075 4.34313 5.43745 2.99999 7.00001 2.99999C8.56255 2.99999 9.82924 4.34313 9.82924 6C9.82924 7.65685 8.56255 9.00001 7.00001 9.00001C5.43745 9.00001 4.17075 7.65685 4.17075 6Z" fill="#B47B84"/>
+                  </svg>            
+                </div>
+              </div>
+              <div class="icon-group desktop-only">
+                <div class="icon-group-desktop">
+                  <div data-product-handle="{{ product.handle }}" class="quick-view-icon desktop-only">
+                    <span>Quick View</span>           
+                  </div>
+                  <button
+                    id="ProductSubmitButton-{{ section_id }}"
+                    type="submit"
+                    name="add"
+                    class="quick-view-icon add-to-cart product-form__submit button button--full-width {% if show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}"
+                  >
+                    <span>Add to cart</span>
+                    {%- render 'loading-spinner' -%}
+                  </button>
+                </div>
+              </div>
+            </div>
+          
+            <div class="featured-pd-content">
+              <h3>Your Product's Title</h3>
+              <div class="featured-product-price">
+                <div class="compare-price"><s>$0.00</s></div>
+                <div class="price">$0.00</div>
+              </div>
+            </div>         
+            
+            <button
+              id="ProductSubmitButton-{{ section_id }}"
+              type="submit"
+              name="add"
+              class=" mobile-only add-to-cart product-form__submit button button--full-width {% if show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}"
+            >
+              <span>Add to cart</span>
+              {%- render 'loading-spinner' -%}
+            </button>
+          </div>
+        {% endif %}
         {% endif %}
       {% endfor %}
     </div>
@@ -227,22 +305,6 @@
     <div id="quick-view-body">Loading...</div>
   </div>
 </div>
-
-<script>
-  function openQuickView(handle) {
-    fetch(`/products/${handle}?view=quick-view`)
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById('quick-view-body').innerHTML = html;
-        document.getElementById('quick-view-modal').style.display = 'flex';
-      });
-  }
-
-  function closeQuickView() {
-    document.getElementById('quick-view-modal').style.display = 'none';
-    document.getElementById('quick-view-body').innerHTML = 'Loading...';
-  }
-</script>
 
 {% schema %}
     {
@@ -287,15 +349,46 @@
       ],
       "presets": [
         {
-          "name": "Feature Products List"
+          "name": "Feature Products List",
+          "blocks": [
+            {
+              "type": "Products"
+            },
+            {
+              "type": "Products"
+            },
+            {
+              "type": "Products"
+            },
+            {
+              "type": "Products"
+            }
+          ]
         }
       ]
     }
 {% endschema %}
 
 {% javascript %}
-  document.addEventListener('DOMContentLoaded', function () {
-    const slider = document.querySelector('.custom-slider-track');
+
+function openQuickView(handle) {
+    fetch(`/products/${handle}?view=quick-view`)
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('quick-view-body').innerHTML = html;
+        document.getElementById('quick-view-modal').style.display = 'flex';
+      });
+  }
+
+  function closeQuickView() {
+    document.getElementById('quick-view-modal').style.display = 'none';
+    document.getElementById('quick-view-body').innerHTML = 'Loading...';
+  }
+
+document.addEventListener('DOMContentLoaded', function () {
+  const sliders = document.querySelectorAll('.custom-slider-track');
+
+  sliders.forEach((slider) => {
     let isDown = false;
     let startX;
     let scrollLeft;
@@ -305,6 +398,25 @@
       slider.classList.add('dragging');
       startX = e.pageX - slider.offsetLeft;
       scrollLeft = slider.scrollLeft;
+
+      // Mousemove and mouseup need to be on the document for proper behavior
+      const onMouseMove = (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - slider.offsetLeft;
+        const walk = (x - startX) * 1.5;
+        slider.scrollLeft = scrollLeft - walk;
+      };
+
+      const onMouseUp = () => {
+        isDown = false;
+        slider.classList.remove('dragging');
+        document.removeEventListener('mousemove', onMouseMove);
+        document.removeEventListener('mouseup', onMouseUp);
+      };
+
+      document.addEventListener('mousemove', onMouseMove);
+      document.addEventListener('mouseup', onMouseUp);
     });
 
     slider.addEventListener('mouseleave', () => {
@@ -312,33 +424,20 @@
       slider.classList.remove('dragging');
     });
 
-    window.addEventListener('mouseup', () => {
-      isDown = false;
-      slider.classList.remove('dragging');
-    });
-
-    window.addEventListener('mousemove', (e) => {
-      if (!isDown) return;
-      e.preventDefault();
-      const x = e.pageX - slider.offsetLeft;
-      const walk = (x - startX) * 1.5; // speed
-      slider.scrollLeft = scrollLeft - walk;
-      slider.classList.remove('dragging');
-    });
-
     // Mobile touch support
     let touchStartX = 0;
     let touchScrollLeft = 0;
 
-    window.addEventListener('touchstart', (e) => {
+    slider.addEventListener('touchstart', (e) => {
       touchStartX = e.touches[0].pageX;
       touchScrollLeft = slider.scrollLeft;
     });
 
-    window.addEventListener('touchmove', (e) => {
+    slider.addEventListener('touchmove', (e) => {
       const x = e.touches[0].pageX;
       const walk = (x - touchStartX) * 1.5;
       slider.scrollLeft = touchScrollLeft - walk;
     });
   });
+}); 
 {% endjavascript %}

@@ -3752,3 +3752,14 @@ details-disclosure > details {
 .quick-view-pd-content button {
   background-color: #fff;
 }
+.image-wrapper svg {
+  width: 300px;
+  height: 300px;
+  border-radius: 25px;
+}
+@media screen and (max-width: 425px) {
+  .image-wrapper svg {
+    width: 200px;
+    height: 200px;
+  }
+}
