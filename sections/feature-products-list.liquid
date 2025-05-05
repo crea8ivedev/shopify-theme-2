@@ -307,66 +307,58 @@
 </div>
 
 {% schema %}
+{
+  "name": "t:sections.feature_products_list.name",
+  "settings": [
     {
-      "name": "Feature Products List",
+      "type": "text",
+      "label": "t:sections.feature_products_list.settings.heading.label",
+      "id": "heading",
+      "default": "t:sections.feature_products_list.settings.heading.default"
+    },
+    {
+      "type": "text",
+      "label": "t:sections.feature_products_list.settings.sub_heading.label",
+      "id": "sub_heading",
+      "default": "t:sections.feature_products_list.settings.sub_heading.default"
+    },
+    {
+      "type": "text",
+      "label": "t:sections.feature_products_list.settings.button.label",
+      "id": "button",
+      "default": "t:sections.feature_products_list.settings.button.default"
+    },
+    {
+      "type": "url",
+      "label": "t:sections.feature_products_list.settings.button_url.label",
+      "id": "button_url"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "Products",
+      "name": "t:sections.feature_products_list.blocks.product.name",
       "settings": [
         {
-          "type": "text",
-          "label": "Heading",
-          "id": "heading",
-          "default": "Feature Products"
-        },
-        {
-          "type": "text",
-          "label": "Sub Heading",
-          "id": "sub_heading",
-          "default": "Shop our collection."
-        },
-        {
-          "type": "text",
-          "label": "Button",
-          "id": "button",
-          "default": "Shop All"
-        },
-        {
-          "type": "url",
-          "label": "Button URL",
-          "id": "button_url"
-        }
-      ],
-      "blocks": [
-        {
-          "type": "Products",
-          "name": "Products",
-          "settings": [
-            {
-              "type": "product",
-              "label": "Select Product",
-              "id": "select_product"
-            }
-          ]
-        }
-      ],
-      "presets": [
-        {
-          "name": "Feature Products List",
-          "blocks": [
-            {
-              "type": "Products"
-            },
-            {
-              "type": "Products"
-            },
-            {
-              "type": "Products"
-            },
-            {
-              "type": "Products"
-            }
-          ]
+          "type": "product",
+          "label": "t:sections.feature_products_list.blocks.product.settings.select_product.label",
+          "id": "select_product"
         }
       ]
     }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.feature_products_list.presets.name",
+      "blocks": [
+        { "type": "Products" },
+        { "type": "Products" },
+        { "type": "Products" },
+        { "type": "Products" }
+      ]
+    }
+  ]
+}
 {% endschema %}
 
 {% javascript %}
