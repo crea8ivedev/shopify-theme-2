@@ -2997,40 +2997,40 @@
             }
           }
         },
-        "marqee": {
+        "marquee": {
           "name": "Marquee",
           "settings": {
-            "image-marqee-1": {
+            "image-marquee-1": {
               "label": "Marquee Bild 1"
             },
-            "image-marqee-2": {
+            "image-marquee-2": {
               "label": "Marquee Bild 2"
             },
-            "image-marqee-3": {
+            "image-marquee-3": {
               "label": "Marquee Bild 3"
             },
-            "image-marqee-4": {
-              "label": "Marquee Bild 4"
+            "image-marquee": {
+              "label": "Marquee Bild"
             },
-            "image-marqee-5": {
+            "image-marquee-5": {
               "label": "Marquee Bild 5"
             },
-            "image-marqee-6": {
+            "image-marquee-6": {
               "label": "Marquee Bild 6"
             },
-            "heading-marqee": {
+            "heading-marquee": {
               "label": "Überschrift"
             },
-            "subheading-marqee": {
+            "subheading-marquee": {
               "label": "Unterüberschrift"
             },
-            "button_label-marqee": {
+            "button_label-marquee": {
               "label": "Schaltflächenbeschriftung"
             },
-            "link-marqee": {
+            "link-marquee": {
               "label": "Schaltflächenlink"
             },
-            "content-marqee": {
+            "content-marquee": {
               "label": "Inhalt"
             },
             "color_bg": {

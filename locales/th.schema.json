@@ -3114,40 +3114,40 @@
             }
           }
         },
-        "marqee": {
+        "marquee": {
           "name": "Marquee",
           "settings": {
-            "image-marqee-1": {
+            "image-marquee-1": {
               "label": "ภาพ Marquee 1"
             },
-            "image-marqee-2": {
+            "image-marquee-2": {
               "label": "ภาพ Marquee 2"
             },
-            "image-marqee-3": {
+            "image-marquee-3": {
               "label": "ภาพ Marquee 3"
             },
-            "image-marqee-4": {
-              "label": "ภาพ Marquee 4"
+            "image-marquee": {
+              "label": "ภาพ Marquee"
             },
-            "image-marqee-5": {
+            "image-marquee-5": {
               "label": "ภาพ Marquee 5"
             },
-            "image-marqee-6": {
+            "image-marquee-6": {
               "label": "ภาพ Marquee 6"
             },
-            "heading-marqee": {
+            "heading-marquee": {
               "label": "หัวข้อ"
             },
-            "subheading-marqee": {
+            "subheading-marquee": {
               "label": "หัวข้อย่อย"
             },
-            "button_label-marqee": {
+            "button_label-marquee": {
               "label": "ข้อความบนปุ่ม"
             },
-            "link-marqee": {
+            "link-marquee": {
               "label": "ลิงก์ปุ่ม"
             },
-            "content-marqee": {
+            "content-marquee": {
               "label": "เนื้อหา"
             },
             "color_bg": {

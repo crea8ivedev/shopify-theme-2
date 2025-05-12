@@ -96,6 +96,30 @@ slideshow-component .slideshow.banner {
   height: 100%;
 }
 
+.slideshow-swiper .swiper-slide {
+  height: calc(100vh - 250px) !important;
+}
+
+.slideshow__text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 30px;
+  padding-block: 0 !important;
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  top: 0;
+}
+
+.slideshow__text-wrapper .slideshow__text {
+  background: transparent;
+}
+
+.slideshow__text-wrapper .slideshow__text h2.h1 {
+  margin: 20px 0 25px;
+}
+
 @media screen and (min-width: 750px) {
   .slideshow__text-wrapper.banner__content {
     height: 100%;

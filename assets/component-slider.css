@@ -477,8 +477,8 @@ slider-component.slider-component-full-width {
   .gallery {
     display: block;
   }
-  .marqee-content,
-  .marqee_images {
+  .marquee-content,
+  .marquee_images {
     width: 100% !important;
   }
   .block-33 {
@@ -486,11 +486,11 @@ slider-component.slider-component-full-width {
   }
 }
 
-.marqee-content {
+.marquee-content {
   width: 50%;
 }
 
-.marqee_images {
+.marquee_images {
   width: 50%;
   order: 2;
 }
@@ -534,21 +534,21 @@ slider-component.slider-component-full-width {
 }
 
 .marquee-slideshow-gallery {
-  height: calc(100vh - 150px) !important;
+  height: calc(100vh - 250px) !important;
   overflow-y: hidden;
   gap: 50px;
 }
 
-.marqee-content .banner__subtext,
-.marqee-content .banner__heading {
+.banner__subtext,
+.banner__heading {
   color: rgb(var(--color-subtext));
 }
 
-.marqee-content .banner__text {
+.banner__text {
   color: rgb(var(--color-foreground));
 }
 
-.marqee-content {
+.marquee-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -557,17 +557,17 @@ slider-component.slider-component-full-width {
   max-width: 35%;
 }
 
-.marqee-content h1 {
+.marquee-content h1 {
   margin: 0;
   margin-top: 24px;
   margin-bottom: 12px;
 }
 
-.marqee-content .banner__buttons {
+.marquee-content .banner__buttons {
   margin-top: 30px;
 }
 
-.marqee_images {
+.marquee_images {
   display: flex;
   gap: 30px;
   padding: 20px;

@@ -3114,40 +3114,40 @@
             }
           }
         },
-        "marqee": {
+        "marquee": {
           "name": "マルキー",
           "settings": {
-            "image-marqee-1": {
+            "image-marquee-1": {
               "label": "マルキー画像1"
             },
-            "image-marqee-2": {
+            "image-marquee-2": {
               "label": "マルキー画像2"
             },
-            "image-marqee-3": {
+            "image-marquee-3": {
               "label": "マルキー画像3"
             },
-            "image-marqee-4": {
-              "label": "マルキー画像4"
+            "image-marquee": {
+              "label": "マルキー画像"
             },
-            "image-marqee-5": {
+            "image-marquee-5": {
               "label": "マルキー画像5"
             },
-            "image-marqee-6": {
+            "image-marquee-6": {
               "label": "マルキー画像6"
             },
-            "heading-marqee": {
+            "heading-marquee": {
               "label": "見出し"
             },
-            "subheading-marqee": {
+            "subheading-marquee": {
               "label": "サブ見出し"
             },
-            "button_label-marqee": {
+            "button_label-marquee": {
               "label": "ボタンラベル"
             },
-            "link-marqee": {
+            "link-marquee": {
               "label": "ボタンリンク"
             },
-            "content-marqee": {
+            "content-marquee": {
               "label": "コンテンツ"
             },
             "color_bg": {

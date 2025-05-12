@@ -35,7 +35,7 @@
 
 <div class="slideshow-container color-{{ section.settings.color_scheme }}" id="Slider-{{ section.id }}">
   <div
-    class="swiper slidshow-swiper banner banner--{{ section.settings.slide_height }} {% if section.settings.auto_rotate == true %}auto-slide{% endif %} slidshow_main"
+    class="swiper slideshow-swiper banner banner--{{ section.settings.slide_height }} {% if section.settings.auto_rotate == true %}auto-slide{% endif %} slidshow_main"
     id="Slider-show"
     aria-live="polite"
     data-autoplay="{% if section.settings.auto_rotate == true %}true{% else %}false{% endif %}"
@@ -45,11 +45,6 @@
       {%- for block in section.blocks -%}
         {% case block.type %}
           {% when 'slide' %}
-            <style>
-              #Slide-{{ section.id }}-{{ forloop.index }} .banner__media::after {
-                opacity: {{ block.settings.image_overlay_opacity | divided_by: 100.0 }};
-              }
-            </style>
             <div
               class="swiper-slide slidshow-blocks"
               id="Slide-{{ section.id }}-{{ forloop.index }}"
@@ -105,12 +100,12 @@
                   class="slideshow__text banner__box content-container content-container--full-width-mobile gradient slideshow__text--{{ block.settings.text_alignment }} slideshow__text-mobile--{{ block.settings.text_alignment_mobile-video }}"
                 >
                   {%- if block.settings.subheading != blank -%}
-                    <div class="banner__text rte" {{ block.shopify_attributes }}>
+                    <div class="banner__subtext rte" {{ block.shopify_attributes }}>
                       <p>{{ block.settings.subheading }}</p>
                     </div>
                   {%- endif -%}
                   {%- if block.settings.heading != blank -%}
-                    <h2 class="banner__heading inline-richtext {{ block.settings.heading_size }}">
+                    <h2 class="banner__text inline-richtext h1 {{ block.settings.heading_size }}">
                       {{ block.settings.heading }}
                     </h2>
                   {%- endif -%}
@@ -146,12 +141,16 @@
               <div
                 class="slideshow__media banner__media media placeholder {% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}"
               >
-                <div class="video-container">
-                  {{
-                    block.settings.video
-                    | video_tag: image_size: '1100x', autoplay: true, loop: true, muted: true, controls: false
-                  }}
-                </div>
+                {% if block.settings.video != blank %}
+                  <div class="video-container">
+                    {{
+                      block.settings.video
+                      | video_tag: image_size: '1100x', autoplay: true, loop: true, muted: true, controls: false
+                    }}
+                  </div>
+                {% else %}
+                  {% render 'placeholder', class: 'slideshow-video-placeholder' %}
+                {% endif %}
                 <div
                   class="slideshow__text-wrapper video__content video__content--{{ block.settings.box_align_video }} page-width{% if block.settings.show_text_box == false %} video--desktop-transparent{% endif %}{% if settings.animations_reveal_on_scroll and forloop.index == 1 %} scroll-trigger animate--slide-in{% endif %}"
                 >
@@ -196,7 +195,7 @@
               class="gallery swiper-slide marquee-slideshow-gallery"
               style="background-color: {{ block.settings.color_bg }};"
             >
-              <div class="marqee_images">
+              <div class="marquee_images">
                 <div class="block-33 display--inline-top first slideshow-slide">
                   <div class="gutter relative">
                     <div class="gallery-h">
@@ -251,26 +250,26 @@
                   </div>
                 </div>
               </div>
-              <div class="marqee-content">
+              <div class="marquee-content">
                 <div class="banner__subtext rte" {{ block.shopify_attributes }}>
-                  <p>{{ block.settings['subheading-marqee'] }}</p>
+                  <p>{{ block.settings['subheading-marquee'] }}</p>
                 </div>
                 <h1 class="banner__heading inline-richtext {{ block.settings.heading_size }}">
-                  {{ block.settings['heading-marqee'] }}
+                  {{ block.settings['heading-marquee'] }}
                 </h1>
                 <div class="banner__text rte" {{ block.shopify_attributes }}>
-                  <p>{{ block.settings['content-marqee'] }}</p>
+                  <p>{{ block.settings['content-marquee'] }}</p>
                 </div>
                 <div class="banner__buttons">
                   <a
-                    {% if block.settings['link-marqee'] %}
-                      href="{{ block.settings.link-marqee }}"
+                    {% if block.settings['link-marquee'] %}
+                      href="{{ block.settings.link-marquee }}"
                     {% else %}
                       role="link" aria-disabled="true"
                     {% endif %}
                     class="button"
                   >
-                    {{- block.settings['button_label-marqee'] | escape -}}
+                    {{- block.settings['button_label-marquee'] | escape -}}
                   </a>
                 </div>
               </div>
@@ -314,30 +313,6 @@
       "unit": "s",
       "label": "t:sections.slideshow.settings.change_slides_speed.label",
       "default": 5
-    },
-    {
-      "type": "select",
-      "id": "slide_height",
-      "options": [
-        {
-          "value": "adapt_image",
-          "label": "t:sections.slideshow.settings.slide_height.options__1.label"
-        },
-        {
-          "value": "small",
-          "label": "t:sections.slideshow.settings.slide_height.options__2.label"
-        },
-        {
-          "value": "medium",
-          "label": "t:sections.slideshow.settings.slide_height.options__3.label"
-        },
-        {
-          "value": "large",
-          "label": "t:sections.slideshow.settings.slide_height.options__4.label"
-        }
-      ],
-      "default": "medium",
-      "label": "t:sections.slideshow.settings.slide_height.label"
     }
   ],
   "blocks": [
@@ -422,35 +397,6 @@
           "label": "t:sections.slideshow.blocks.slide.settings.text_alignment_mobile.label"
         },
         {
-          "type": "text",
-          "id": "heading",
-          "default": "Image slide",
-          "label": "t:sections.slideshow.blocks.slide.settings.heading.label"
-        },
-        {
-          "type": "html",
-          "id": "subheading",
-          "default": "Tell your brand's story through images",
-          "label": "t:sections.slideshow.blocks.slide.settings.subheading.label"
-        },
-        {
-          "type": "html",
-          "id": "content",
-          "label": "t:sections.slideshow.blocks.slide.settings.image_overlay_opacity.label"
-        },
-        {
-          "type": "text",
-          "id": "button_label",
-          "default": "Button label",
-          "label": "t:sections.slideshow.blocks.slide.settings.button_label.label",
-          "info": "t:sections.slideshow.blocks.slide.settings.button_label.info"
-        },
-        {
-          "type": "url",
-          "id": "link",
-          "label": "t:sections.slideshow.blocks.slide.settings.link.label"
-        },
-        {
           "type": "select",
           "id": "text_alignment",
           "options": [
@@ -469,52 +415,76 @@
           ],
           "default": "center",
           "label": "t:sections.slideshow.blocks.slide.settings.text_alignment.label"
+        },
+        {
+          "type": "html",
+          "id": "subheading",
+          "default": "Tell your brand's story through images",
+          "label": "t:sections.slideshow.blocks.slide.settings.subheading.label"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Image slide",
+          "label": "t:sections.slideshow.blocks.slide.settings.heading.label"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "default": "Button label",
+          "label": "t:sections.slideshow.blocks.slide.settings.button_label.label",
+          "info": "t:sections.slideshow.blocks.slide.settings.button_label.info"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "t:sections.slideshow.blocks.slide.settings.link.label"
         }
       ]
     },
     {
       "type": "marquee",
-      "name": "t:sections.slideshow.blocks.marqee.name",
+      "name": "t:sections.slideshow.blocks.marquee.name",
       "limit": 5,
       "settings": [
         {
           "type": "collection",
           "id": "collection",
-          "label": "t:sections.slideshow.blocks.marqee.settings.image-marqee-4.label"
+          "label": "t:sections.slideshow.blocks.marquee.settings.image-marquee.label"
         },
         {
           "type": "text",
-          "id": "subheading-marqee",
-          "label": "t:sections.slideshow.blocks.marqee.settings.subheading-marqee.label",
+          "id": "subheading-marquee",
+          "label": "t:sections.slideshow.blocks.marquee.settings.subheading-marquee.label",
           "default": "Skin Friendly"
         },
         {
           "type": "text",
-          "id": "heading-marqee",
-          "label": "t:sections.slideshow.blocks.marqee.settings.heading-marqee.label",
+          "id": "heading-marquee",
+          "label": "t:sections.slideshow.blocks.marquee.settings.heading-marquee.label",
           "default": "Unveil Your Radiance with Aura Beauty"
         },
         {
           "type": "richtext",
-          "id": "content-marqee",
-          "label": "t:sections.slideshow.blocks.marqee.settings.content-marqee.label",
+          "id": "content-marquee",
+          "label": "t:sections.slideshow.blocks.marquee.settings.content-marquee.label",
           "default": "<p>Elevating Your Natural Glow with Every Application. Dive into Luxurious Beauty, Redefined.</p>"
         },
         {
           "type": "text",
-          "id": "button_label-marqee",
-          "label": "t:sections.slideshow.blocks.marqee.settings.button_label-marqee.label",
+          "id": "button_label-marquee",
+          "label": "t:sections.slideshow.blocks.marquee.settings.button_label-marquee.label",
           "default": "Shop Now"
         },
         {
           "type": "url",
-          "id": "link-marqee",
-          "label": "t:sections.slideshow.blocks.marqee.settings.link-marqee.label"
+          "id": "link-marquee",
+          "label": "t:sections.slideshow.blocks.marquee.settings.link-marquee.label"
         },
         {
           "type": "color",
           "id": "color_bg",
-          "label": "t:sections.slideshow.blocks.marqee.settings.color_bg.label"
+          "label": "t:sections.slideshow.blocks.marquee.settings.color_bg.label"
         }
       ]
     },
@@ -594,21 +564,36 @@
           "label": "t:sections.slideshow.blocks.slide.settings.text_alignment_mobile.label"
         },
         {
-          "type": "text",
-          "id": "heading_video",
-          "default": "Image slide",
-          "label": "t:sections.slideshow.blocks.slide.settings.heading.label"
+          "type": "select",
+          "id": "text_alignment-video",
+          "options": [
+            {
+              "value": "left",
+              "label": "t:sections.slideshow.blocks.slide.settings.text_alignment.option_1.label"
+            },
+            {
+              "value": "center",
+              "label": "t:sections.slideshow.blocks.slide.settings.text_alignment.option_2.label"
+            },
+            {
+              "value": "right",
+              "label": "t:sections.slideshow.blocks.slide.settings.text_alignment.option_3.label"
+            }
+          ],
+          "default": "center",
+          "label": "t:sections.slideshow.blocks.slide.settings.text_alignment.label"
         },
         {
           "type": "html",
           "id": "subheading_video",
-          "default": "Tell your brand's story through images",
+          "default": "Tell your brand's story through videos",
           "label": "t:sections.slideshow.blocks.slide.settings.subheading.label"
         },
         {
-          "type": "html",
-          "id": "content_video",
-          "label": "t:sections.slideshow.blocks.slide.settings.image_overlay_opacity.label"
+          "type": "text",
+          "id": "heading_video",
+          "default": "Video slide",
+          "label": "t:sections.slideshow.blocks.slide.settings.heading.label"
         },
         {
           "type": "text",

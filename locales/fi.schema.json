@@ -3114,40 +3114,40 @@
             }
           }
         },
-        "marqee": {
+        "marquee": {
           "name": "Marquee",
           "settings": {
-            "image-marqee-1": {
+            "image-marquee-1": {
               "label": "Marquee-kuva 1"
             },
-            "image-marqee-2": {
+            "image-marquee-2": {
               "label": "Marquee-kuva 2"
             },
-            "image-marqee-3": {
+            "image-marquee-3": {
               "label": "Marquee-kuva 3"
             },
-            "image-marqee-4": {
-              "label": "Marquee-kuva 4"
+            "image-marquee": {
+              "label": "Marquee-kuva"
             },
-            "image-marqee-5": {
+            "image-marquee-5": {
               "label": "Marquee-kuva 5"
             },
-            "image-marqee-6": {
+            "image-marquee-6": {
               "label": "Marquee-kuva 6"
             },
-            "heading-marqee": {
+            "heading-marquee": {
               "label": "Otsikko"
             },
-            "subheading-marqee": {
+            "subheading-marquee": {
               "label": "Alaotsikko"
             },
-            "button_label-marqee": {
+            "button_label-marquee": {
               "label": "Painikkeen nimi"
             },
-            "link-marqee": {
+            "link-marquee": {
               "label": "Painikkeen linkki"
             },
-            "content-marqee": {
+            "content-marquee": {
               "label": "Sisältö"
             },
             "color_bg": {

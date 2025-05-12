@@ -3114,40 +3114,40 @@
             }
           }
         },
-        "marqee": {
+        "marquee": {
           "name": "Marquee",
           "settings": {
-            "image-marqee-1": {
+            "image-marquee-1": {
               "label": "Marquee-afbeelding 1"
             },
-            "image-marqee-2": {
+            "image-marquee-2": {
               "label": "Marquee-afbeelding 2"
             },
-            "image-marqee-3": {
+            "image-marquee-3": {
               "label": "Marquee-afbeelding 3"
             },
-            "image-marqee-4": {
-              "label": "Marquee-afbeelding 4"
+            "image-marquee": {
+              "label": "Marquee-afbeelding"
             },
-            "image-marqee-5": {
+            "image-marquee-5": {
               "label": "Marquee-afbeelding 5"
             },
-            "image-marqee-6": {
+            "image-marquee-6": {
               "label": "Marquee-afbeelding 6"
             },
-            "heading-marqee": {
+            "heading-marquee": {
               "label": "Kop"
             },
-            "subheading-marqee": {
+            "subheading-marquee": {
               "label": "Subkop"
             },
-            "button_label-marqee": {
+            "button_label-marquee": {
               "label": "Knoplabel"
             },
-            "link-marqee": {
+            "link-marquee": {
               "label": "Knoplink"
             },
-            "content-marqee": {
+            "content-marquee": {
               "label": "Inhoud"
             },
             "color_bg": {

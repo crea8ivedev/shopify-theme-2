@@ -3114,40 +3114,40 @@
             }
           }
         },
-        "marqee": {
+        "marquee": {
           "name": "Marquee",
           "settings": {
-            "image-marqee-1": {
+            "image-marquee-1": {
               "label": "Marquee-bild 1"
             },
-            "image-marqee-2": {
+            "image-marquee-2": {
               "label": "Marquee-bild 2"
             },
-            "image-marqee-3": {
+            "image-marquee-3": {
               "label": "Marquee-bild 3"
             },
-            "image-marqee-4": {
-              "label": "Marquee-bild 4"
+            "image-marquee": {
+              "label": "Marquee-bild"
             },
-            "image-marqee-5": {
+            "image-marquee-5": {
               "label": "Marquee-bild 5"
             },
-            "image-marqee-6": {
+            "image-marquee-6": {
               "label": "Marquee-bild 6"
             },
-            "heading-marqee": {
+            "heading-marquee": {
               "label": "Rubrik"
             },
-            "subheading-marqee": {
+            "subheading-marquee": {
               "label": "Underrubrik"
             },
-            "button_label-marqee": {
+            "button_label-marquee": {
               "label": "Knapptext"
             },
-            "link-marqee": {
+            "link-marquee": {
               "label": "Knappens länk"
             },
-            "content-marqee": {
+            "content-marquee": {
               "label": "Innehåll"
             },
             "color_bg": {

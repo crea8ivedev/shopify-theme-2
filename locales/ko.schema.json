@@ -3114,40 +3114,40 @@
             }
           }
         },
-        "marqee": {
+        "marquee": {
           "name": "마르키",
           "settings": {
-            "image-marqee-1": {
+            "image-marquee-1": {
               "label": "마르키 이미지 1"
             },
-            "image-marqee-2": {
+            "image-marquee-2": {
               "label": "마르키 이미지 2"
             },
-            "image-marqee-3": {
+            "image-marquee-3": {
               "label": "마르키 이미지 3"
             },
-            "image-marqee-4": {
-              "label": "마르키 이미지 4"
+            "image-marquee": {
+              "label": "마르키 이미지"
             },
-            "image-marqee-5": {
+            "image-marquee-5": {
               "label": "마르키 이미지 5"
             },
-            "image-marqee-6": {
+            "image-marquee-6": {
               "label": "마르키 이미지 6"
             },
-            "heading-marqee": {
+            "heading-marquee": {
               "label": "제목"
             },
-            "subheading-marqee": {
+            "subheading-marquee": {
               "label": "부제목"
             },
-            "button_label-marqee": {
+            "button_label-marquee": {
               "label": "버튼 라벨"
             },
-            "link-marqee": {
+            "link-marquee": {
               "label": "버튼 링크"
             },
-            "content-marqee": {
+            "content-marquee": {
               "label": "콘텐츠"
             },
             "color_bg": {

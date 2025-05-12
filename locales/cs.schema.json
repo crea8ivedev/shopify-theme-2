@@ -3115,40 +3115,40 @@
             }
           }
         },
-        "marqee": {
-          "name": "Marqee",
+        "marquee": {
+          "name": "marquee",
           "settings": {
-            "image-marqee-1": {
-              "label": "Marqee obrázek 1"
+            "image-marquee-1": {
+              "label": "marquee obrázek 1"
             },
-            "image-marqee-2": {
-              "label": "Marqee obrázek 2"
+            "image-marquee-2": {
+              "label": "marquee obrázek 2"
             },
-            "image-marqee-3": {
-              "label": "Marqee obrázek 3"
+            "image-marquee-3": {
+              "label": "marquee obrázek 3"
             },
-            "image-marqee-4": {
-              "label": "Marqee obrázek 4"
+            "image-marquee": {
+              "label": "marquee obrázek"
             },
-            "image-marqee-5": {
-              "label": "Marqee obrázek 5"
+            "image-marquee-5": {
+              "label": "marquee obrázek 5"
             },
-            "image-marqee-6": {
-              "label": "Marqee obrázek 6"
+            "image-marquee-6": {
+              "label": "marquee obrázek 6"
             },
-            "heading-marqee": {
+            "heading-marquee": {
               "label": "Nadpis"
             },
-            "subheading-marqee": {
+            "subheading-marquee": {
               "label": "Podnadpis"
             },
-            "button_label-marqee": {
+            "button_label-marquee": {
               "label": "Popisek tlačítka"
             },
-            "link-marqee": {
+            "link-marquee": {
               "label": "Odkaz na tlačítko"
             },
-            "content-marqee": {
+            "content-marquee": {
               "label": "Obsah"
             },
             "color_bg": {

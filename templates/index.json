@@ -16,11 +16,11 @@
           "type": "marquee",
           "settings": {
             "collection": "",
-            "subheading-marqee": "Skin Friendly",
-            "heading-marqee": "Unveil Your Radiance with Aura Beauty",
-            "content-marqee": "<p>Elevating Your Natural Glow with Every Application. Dive into Luxurious Beauty, Redefined.</p>",
-            "button_label-marqee": "Shop Now",
-            "link-marqee": "shopify://collections",
+            "subheading-marquee": "Skin Friendly",
+            "heading-marquee": "Unveil Your Radiance with Aura Beauty",
+            "content-marquee": "<p>Elevating Your Natural Glow with Every Application. Dive into Luxurious Beauty, Redefined.</p>",
+            "button_label-marquee": "Shop Now",
+            "link-marquee": "",
             "color_bg": ""
           }
         },
@@ -29,12 +29,11 @@
           "settings": {
             "box_align": "middle-center",
             "text_alignment_mobile": "center",
-            "heading": "Image slide",
+            "text_alignment": "center",
             "subheading": "Tell your brand's story through images",
-            "content": "",
+            "heading": "Image slide",
             "button_label": "Button label",
-            "link": "",
-            "text_alignment": "center"
+            "link": ""
           }
         },
         "video_D44Pzx": {
@@ -42,9 +41,9 @@
           "settings": {
             "box_align_video": "middle-center",
             "text_alignment_mobile-video": "center",
-            "heading_video": "Image slide",
+            "text_alignment-video": "center",
             "subheading_video": "Tell your brand's story through images",
-            "content_video": "",
+            "heading_video": "Image slide",
             "button_label_video": "Button label",
             "link_video": ""
           }
@@ -55,10 +54,69 @@
       "settings": {
         "color_scheme": "scheme-1",
         "auto_rotate": false,
-        "change_slides_speed": 5,
-        "slide_height": "medium"
+        "change_slides_speed": 3
+      }
+    },
+    "icon_with_text_i4PbgH": {
+      "type": "icon-with-text",
+      "blocks": {
+        "column_KL8tMQ": {
+          "type": "column",
+          "settings": {
+            "grid_title": "Free shipping",
+            "grid_description": "Standard shipping",
+            "svg_icon": ""
+          }
+        },
+        "column_VkTJCt": {
+          "type": "column",
+          "settings": {
+            "grid_title": "Free shipping",
+            "grid_description": "Standard shipping",
+            "svg_icon": ""
+          }
+        },
+        "column_YYpEx9": {
+          "type": "column",
+          "settings": {
+            "grid_title": "Free shipping",
+            "grid_description": "Standard shipping",
+            "svg_icon": ""
+          }
+        },
+        "column_dD3XQc": {
+          "type": "column",
+          "settings": {
+            "grid_title": "Free shipping",
+            "grid_description": "Standard shipping",
+            "svg_icon": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_KL8tMQ",
+        "column_VkTJCt",
+        "column_YYpEx9",
+        "column_dD3XQc"
+      ],
+      "name": "t:sections.icon_with_text.name",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "desktop_columns": 4,
+        "column_alignment": "left",
+        "icon_alignment": "icon_left",
+        "columns_mobile": "1",
+        "icon_bg": "none",
+        "icon_background_color": "#acacac",
+        "icon_color": "#b47b84",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "show_mobile_slider": false,
+        "show_pagination": false
       }
     }
   },
-  "order": ["slideshow_rFYUmf"]
+  "order": ["slideshow_rFYUmf", "icon_with_text_i4PbgH"]
 }

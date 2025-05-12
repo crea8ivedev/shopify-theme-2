@@ -3114,40 +3114,40 @@
             }
           }
         },
-        "marqee": {
+        "marquee": {
           "name": "Marquee",
           "settings": {
-            "image-marqee-1": {
+            "image-marquee-1": {
               "label": "Image Marquee 1"
             },
-            "image-marqee-2": {
+            "image-marquee-2": {
               "label": "Image Marquee 2"
             },
-            "image-marqee-3": {
+            "image-marquee-3": {
               "label": "Image Marquee 3"
             },
-            "image-marqee-4": {
-              "label": "Image Marquee 4"
+            "image-marquee": {
+              "label": "Image Marquee"
             },
-            "image-marqee-5": {
+            "image-marquee-5": {
               "label": "Image Marquee 5"
             },
-            "image-marqee-6": {
+            "image-marquee-6": {
               "label": "Image Marquee 6"
             },
-            "heading-marqee": {
+            "heading-marquee": {
               "label": "Titre"
             },
-            "subheading-marqee": {
+            "subheading-marquee": {
               "label": "Sous-titre"
             },
-            "button_label-marqee": {
+            "button_label-marquee": {
               "label": "Étiquette du bouton"
             },
-            "link-marqee": {
+            "link-marquee": {
               "label": "Lien du bouton"
             },
-            "content-marqee": {
+            "content-marquee": {
               "label": "Contenu"
             },
             "color_bg": {

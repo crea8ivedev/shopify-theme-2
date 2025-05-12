@@ -1,6 +1,7 @@
 {{ 'placeholder.css' | asset_url | stylesheet_tag }}
 
 {% assign placeholder_images = '' %}
+{% assign placeholder_videos = '' %}
 
 {% if class contains 'product-placeholder' %}
   {% assign placeholder_images = 'product-placeholder.jpg, product-placeholder1.jpg, product-placeholder2.jpg, product-placeholder3.jpg' %}
@@ -14,6 +15,8 @@
   {% assign placeholder_images = 'register-placeholder.jpg' %}
 {% elsif class contains 'slideshow-placeholder' %}
   {% assign placeholder_images = 'slideshow-placeholder.png' %}
+{% elsif class contains 'slideshow-video-placeholder' %}
+  {% assign placeholder_videos = 'slideshow-video-placeholder.mp4' %}
 {% else %}
   {% assign placeholder_images = 'default-placeholder.jpg' %}
 {% endif %}
@@ -34,4 +37,10 @@
     width="600"
     height="600"
   >
+{% endfor %}
+
+{% assign videos_array = placeholder_videos | split: ', ' %}
+
+{% for video in videos_array %}
+  <video src="{{ video | asset_url }}" class="{{ class }}" width="600" height="600"></video>
 {% endfor %}

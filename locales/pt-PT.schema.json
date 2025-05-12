@@ -3114,40 +3114,40 @@
             }
           }
         },
-        "marqee": {
+        "marquee": {
           "name": "Marquee",
           "settings": {
-            "image-marqee-1": {
+            "image-marquee-1": {
               "label": "Imagem Marquee 1"
             },
-            "image-marqee-2": {
+            "image-marquee-2": {
               "label": "Imagem Marquee 2"
             },
-            "image-marqee-3": {
+            "image-marquee-3": {
               "label": "Imagem Marquee 3"
             },
-            "image-marqee-4": {
-              "label": "Imagem Marquee 4"
+            "image-marquee": {
+              "label": "Imagem Marquee"
             },
-            "image-marqee-5": {
+            "image-marquee-5": {
               "label": "Imagem Marquee 5"
             },
-            "image-marqee-6": {
+            "image-marquee-6": {
               "label": "Imagem Marquee 6"
             },
-            "heading-marqee": {
+            "heading-marquee": {
               "label": "Título"
             },
-            "subheading-marqee": {
+            "subheading-marquee": {
               "label": "Subtítulo"
             },
-            "button_label-marqee": {
+            "button_label-marquee": {
               "label": "Rótulo do botão"
             },
-            "link-marqee": {
+            "link-marquee": {
               "label": "Link do botão"
             },
-            "content-marqee": {
+            "content-marquee": {
               "label": "Conteúdo"
             },
             "color_bg": {

@@ -2997,40 +2997,40 @@
             }
           }
         },
-        "marqee": {
+        "marquee": {
           "name": "Marquesina",
           "settings": {
-            "image-marqee-1": {
+            "image-marquee-1": {
               "label": "Imagen Marquesina 1"
             },
-            "image-marqee-2": {
+            "image-marquee-2": {
               "label": "Imagen Marquesina 2"
             },
-            "image-marqee-3": {
+            "image-marquee-3": {
               "label": "Imagen Marquesina 3"
             },
-            "image-marqee-4": {
-              "label": "Imagen Marquesina 4"
+            "image-marquee": {
+              "label": "Imagen Marquesina"
             },
-            "image-marqee-5": {
+            "image-marquee-5": {
               "label": "Imagen Marquesina 5"
             },
-            "image-marqee-6": {
+            "image-marquee-6": {
               "label": "Imagen Marquesina 6"
             },
-            "heading-marqee": {
+            "heading-marquee": {
               "label": "Título"
             },
-            "subheading-marqee": {
+            "subheading-marquee": {
               "label": "Subtítulo"
             },
-            "button_label-marqee": {
+            "button_label-marquee": {
               "label": "Etiqueta del botón"
             },
-            "link-marqee": {
+            "link-marquee": {
               "label": "Enlace del botón"
             },
-            "content-marqee": {
+            "content-marquee": {
               "label": "Contenido"
             },
             "color_bg": {

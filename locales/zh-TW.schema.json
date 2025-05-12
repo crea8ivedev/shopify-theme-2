@@ -3114,40 +3114,40 @@
             }
           }
         },
-        "marqee": {
+        "marquee": {
           "name": "跑馬燈",
           "settings": {
-            "image-marqee-1": {
+            "image-marquee-1": {
               "label": "跑馬燈圖片 1"
             },
-            "image-marqee-2": {
+            "image-marquee-2": {
               "label": "跑馬燈圖片 2"
             },
-            "image-marqee-3": {
+            "image-marquee-3": {
               "label": "跑馬燈圖片 3"
             },
-            "image-marqee-4": {
-              "label": "跑馬燈圖片 4"
+            "image-marquee": {
+              "label": "跑馬燈圖片"
             },
-            "image-marqee-5": {
+            "image-marquee-5": {
               "label": "跑馬燈圖片 5"
             },
-            "image-marqee-6": {
+            "image-marquee-6": {
               "label": "跑馬燈圖片 6"
             },
-            "heading-marqee": {
+            "heading-marquee": {
               "label": "標題"
             },
-            "subheading-marqee": {
+            "subheading-marquee": {
               "label": "副標題"
             },
-            "button_label-marqee": {
+            "button_label-marquee": {
               "label": "按鈕文字"
             },
-            "link-marqee": {
+            "link-marquee": {
               "label": "按鈕連結"
             },
-            "content-marqee": {
+            "content-marquee": {
               "label": "內容"
             },
             "color_bg": {

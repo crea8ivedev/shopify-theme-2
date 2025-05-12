@@ -78,6 +78,9 @@
                       </div>
                     {% endif %}
                   {% endif %}
+                  {% if block.settings.grid_image == blank and block.settings.svg_icon == blank %}
+                    {{ 'icon-with-text.svg' | inline_asset_content }}
+                  {% endif %}
                 </div>
 
                 <div class="grid-box-inner">
@@ -113,19 +116,7 @@
       "type": "color_scheme",
       "id": "color_scheme",
       "label": "t:sections.icon_with_text.settings.color_scheme.label",
-      "default": "background-1"
-    },
-    {
-      "type": "inline_richtext",
-      "label": "t:sections.icon_with_text.settings.heading.label",
-      "id": "heading",
-      "default": "Icon With Text"
-    },
-    {
-      "type": "inline_richtext",
-      "label": "t:sections.icon_with_text.settings.sec_content.label",
-      "id": "sec_content",
-      "default": "Icon With Text"
+      "default": "background-2"
     },
     {
       "type": "select",

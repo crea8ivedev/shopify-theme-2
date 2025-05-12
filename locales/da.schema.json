@@ -3114,40 +3114,40 @@
             }
           }
         },
-        "marqee": {
-          "name": "Marqee",
+        "marquee": {
+          "name": "marquee",
           "settings": {
-            "image-marqee-1": {
-              "label": "Marqee billede 1"
+            "image-marquee-1": {
+              "label": "marquee billede 1"
             },
-            "image-marqee-2": {
-              "label": "Marqee billede 2"
+            "image-marquee-2": {
+              "label": "marquee billede 2"
             },
-            "image-marqee-3": {
-              "label": "Marqee billede 3"
+            "image-marquee-3": {
+              "label": "marquee billede 3"
             },
-            "image-marqee-4": {
-              "label": "Marqee billede 4"
+            "image-marquee": {
+              "label": "marquee billede 4"
             },
-            "image-marqee-5": {
-              "label": "Marqee billede 5"
+            "image-marquee-5": {
+              "label": "marquee billede 5"
             },
-            "image-marqee-6": {
-              "label": "Marqee billede 6"
+            "image-marquee-6": {
+              "label": "marquee billede 6"
             },
-            "heading-marqee": {
+            "heading-marquee": {
               "label": "Overskrift"
             },
-            "subheading-marqee": {
+            "subheading-marquee": {
               "label": "Underoverskrift"
             },
-            "button_label-marqee": {
+            "button_label-marquee": {
               "label": "Knaptekst"
             },
-            "link-marqee": {
+            "link-marquee": {
               "label": "Knap link"
             },
-            "content-marqee": {
+            "content-marquee": {
               "label": "Indhold"
             },
             "color_bg": {
