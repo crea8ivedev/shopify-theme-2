@@ -22,6 +22,15 @@
         "text": {
           "label": "ข้อความ"
         },
+        "subtext": {
+          "label": "ข้อความย่อย"
+        },
+        "active_text": {
+          "label": "ข้อความที่ใช้งาน"
+        },
+        "active_bg": {
+          "label": "พื้นหลังที่ใช้งาน"
+        },
         "button_background": {
           "label": "พื้นหลังปุ่มแบบทึบ"
         },
@@ -2949,6 +2958,9 @@
     "slideshow": {
       "name": "สไลด์โชว์",
       "settings": {
+        "colors": {
+          "label": "สี"
+        },
         "layout": {
           "label": "เลย์เอาต์",
           "options__1": {

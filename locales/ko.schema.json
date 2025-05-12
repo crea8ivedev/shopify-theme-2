@@ -22,6 +22,15 @@
         "text": {
           "label": "텍스트"
         },
+        "subtext": {
+          "label": "서브텍스트"
+        },
+        "active_text": {
+          "label": "활성 텍스트"
+        },
+        "active_bg": {
+          "label": "활성 배경"
+        },
         "button_background": {
           "label": "단색 버튼 배경"
         },
@@ -2949,6 +2958,9 @@
     "slideshow": {
       "name": "슬라이드쇼",
       "settings": {
+        "colors": {
+          "label": "색상"
+        },
         "layout": {
           "label": "레이아웃",
           "options__1": {

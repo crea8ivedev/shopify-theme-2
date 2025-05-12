@@ -6,74 +6,6 @@ function getFocusableElements(container) {
   );
 }
 
-// Login popup functionality
-// Open login popup
-$(".login_popup").on("click", function () {
-  $(".customer-account").removeClass("hidden").addClass("login-left");
-  $(".ctm-login-modal-bg").addClass("active");
-  $(".login_popup.header__icon").addClass("active");
-  $("body").addClass("login-popu-active");
-});
-
-// Close login popup via close button
-$(".popup-close").on("click", function () {
-  $(".customer-account").addClass("hidden").removeClass("login-left");
-  $(".ctm-login-modal-bg").removeClass("active");
-  $(".login_popup.header__icon").removeClass("active");
-  $("body").removeClass("login-popu-active");
-});
-
-// Close login popup by clicking modal background
-$(".ctm-login-modal-bg").on("click", function () {
-  $(this).removeClass("active");
-  $(".customer-account").addClass("hidden").removeClass("login-left");
-  $(".login_popup.header__icon").removeClass("active");
-  $("body").removeClass("login-popu-active");
-});
-
-// Tab functionality
-$(".login-cta a, .register-cta a").click(function () {
-  const tabId = $(this).data("tab");
-  $(".login-cta a").removeClass("current");
-  $(".account-tab.tab-pane").removeClass("current");
-  $(this).addClass("current");
-  $(`#${tabId}`).addClass("current");
-});
-
-document.querySelectorAll(".mega-menu").forEach((menu) => {
-  const summary = menu.querySelector("summary");
-  const content = menu.querySelector(".mega-menu__content");
-
-  if (summary && content) {
-    menu.addEventListener("mouseenter", () => {
-      menu.setAttribute("open", "true");
-      content.style.display = "block";
-      content.style.opacity = "1";
-      content.style.visibility = "visible";
-    });
-
-    menu.addEventListener("mouseleave", () => {
-      menu.removeAttribute("open");
-      content.style.display = "none";
-      content.style.opacity = "0";
-      content.style.visibility = "hidden";
-    });
-
-    // Prevent default click behavior on summary
-    summary.addEventListener("click", (e) => {
-      e.preventDefault();
-    });
-  }
-});
-
-const closeIcon = document.querySelector(".slide-close-icon");
-const announcementBar = document.querySelector(".utility-bar");
-if (closeIcon && announcementBar) {
-  closeIcon.addEventListener("click", function () {
-    announcementBar.classList.add("hidden");
-  });
-}
-
 class SectionId {
   static #separator = "__";
 
@@ -967,8 +899,12 @@ class SliderComponent extends HTMLElement {
     resizeObserver.observe(this.slider);
 
     this.slider.addEventListener("scroll", this.update.bind(this));
-    this.prevButton.addEventListener("click", this.onButtonClick.bind(this));
-    this.nextButton.addEventListener("click", this.onButtonClick.bind(this));
+    if (this.prevButton) {
+      this.prevButton.addEventListener("click", this.onButtonClick.bind(this));
+    }
+    if (this.nextButton) {
+      this.nextButton.addEventListener("click", this.onButtonClick.bind(this));
+    }
   }
 
   initPages() {
@@ -1027,9 +963,13 @@ class SliderComponent extends HTMLElement {
       this.isSlideVisible(this.sliderItemsToShow[0]) &&
       this.slider.scrollLeft === 0
     ) {
-      this.prevButton.setAttribute("disabled", "disabled");
+      if (this.prevButton) {
+        this.prevButton.setAttribute("disabled", "disabled");
+      }
     } else {
-      this.prevButton.removeAttribute("disabled");
+      if (this.prevButton) {
+        this.prevButton.removeAttribute("disabled");
+      }
     }
 
     if (
@@ -1037,9 +977,13 @@ class SliderComponent extends HTMLElement {
         this.sliderItemsToShow[this.sliderItemsToShow.length - 1],
       )
     ) {
-      this.nextButton.setAttribute("disabled", "disabled");
+      if (this.nextButton) {
+        this.nextButton.setAttribute("disabled", "disabled");
+      }
     } else {
-      this.nextButton.removeAttribute("disabled");
+      if (this.nextButton) {
+        this.nextButton.removeAttribute("disabled");
+      }
     }
   }
 
@@ -1112,7 +1056,7 @@ class SlideshowComponent extends SliderComponent {
       });
 
       [this.prevButton, this.nextButton].forEach((button) => {
-        button.addEventListener(
+        button?.addEventListener(
           "click",
           () => {
             this.announcementBarArrowButtonWasClicked = true;
@@ -1188,7 +1132,9 @@ class SlideshowComponent extends SliderComponent {
   update() {
     super.update();
     this.sliderControlButtons = this.querySelectorAll(".slider-counter__link");
-    this.prevButton.removeAttribute("disabled");
+    if (this.prevButton) {
+      this.prevButton.removeAttribute("disabled");
+    }
 
     if (!this.sliderControlButtons.length) {
       return;
@@ -1665,3 +1611,146 @@ class CartPerformance {
     performance.measure(metricName, `${metricName}:start`, `${metricName}:end`);
   }
 }
+
+function authPopup() {
+  const loginPopup = document.querySelector(".login_popup");
+  const customerAccount = document.querySelector(".customer-account");
+  const modalBg = document.querySelector(".ctm-login-modal-bg");
+  const loginIcon = document.querySelector(".login_popup.header__icon");
+  const body = document.body;
+  const closeBtn = document.querySelector(".popup-close");
+  const loginLinks = document.querySelectorAll(".login-cta a, .register-cta a");
+  const tabPanes = document.querySelectorAll(".account-tab.tab-pane");
+  const loginCtas = document.querySelectorAll(".login-cta a");
+
+  if (loginPopup && customerAccount && modalBg && loginIcon) {
+    loginPopup.addEventListener("click", () => {
+      customerAccount.classList.remove("hidden");
+      customerAccount.classList.add("login-left");
+      modalBg.classList.add("active");
+      loginIcon.classList.add("active");
+      body.classList.add("login-popu-active");
+    });
+  }
+
+  if (closeBtn && customerAccount && modalBg && loginIcon) {
+    closeBtn.addEventListener("click", () => {
+      customerAccount.classList.add("hidden");
+      customerAccount.classList.remove("login-left");
+      modalBg.classList.remove("active");
+      loginIcon.classList.remove("active");
+      body.classList.remove("login-popu-active");
+    });
+  }
+
+  if (modalBg && customerAccount && loginIcon) {
+    modalBg.addEventListener("click", () => {
+      modalBg.classList.remove("active");
+      customerAccount.classList.add("hidden");
+      customerAccount.classList.remove("login-left");
+      loginIcon.classList.remove("active");
+      body.classList.remove("login-popu-active");
+    });
+  }
+
+  if (loginLinks.length) {
+    loginLinks.forEach((link) => {
+      link.addEventListener("click", (e) => {
+        const tabId = e.currentTarget.getAttribute("data-tab");
+        loginCtas.forEach((cta) => cta.classList.remove("current"));
+        tabPanes.forEach((pane) => pane.classList.remove("current"));
+        e.currentTarget.classList.add("current");
+        const activeTab = document.getElementById(tabId);
+        if (activeTab) {
+          activeTab.classList.add("current");
+        }
+      });
+    });
+  }
+}
+
+function megaMenu() {
+  const megamenu = document.querySelectorAll(".mega-menu");
+  if (megamenu?.length) {
+    megamenu.forEach((menu) => {
+      const summary = menu.querySelector("summary");
+      const content = menu.querySelector(".mega-menu__content");
+
+      if (!summary || !content) {
+        return;
+      }
+
+      summary.addEventListener("click", (e) => e.preventDefault());
+
+      let isInside = false;
+
+      const openMenu = () => {
+        if (!menu.hasAttribute("open")) {
+          menu.setAttribute("open", "true");
+        }
+        content.style.display = "block";
+        content.style.opacity = "1";
+        content.style.visibility = "visible";
+      };
+
+      const closeMenu = () => {
+        menu.removeAttribute("open");
+        content.style.display = "none";
+        content.style.opacity = "0";
+        content.style.visibility = "hidden";
+      };
+
+      menu.addEventListener("pointerenter", () => {
+        isInside = true;
+        openMenu();
+      });
+
+      menu.addEventListener("pointerleave", () => {
+        isInside = false;
+        setTimeout(() => {
+          if (!isInside) {
+            closeMenu();
+          }
+        }, 100);
+      });
+    });
+  }
+}
+
+function closeAnnouncementBar() {
+  const closeIcon = document.querySelector(".slide-close-icon");
+  const announcementBar = document.querySelector(".utility-bar");
+  if (closeIcon && announcementBar) {
+    closeIcon.addEventListener("click", function () {
+      announcementBar.classList.add("hidden");
+    });
+  }
+}
+
+const handleAccordion = () => {
+  const accordions = document.querySelectorAll(".accordion_main");
+  if (accordions?.length) {
+    accordions[0].classList.add("active");
+    accordions[0].setAttribute("open", true);
+
+    accordions?.forEach((accordion) => {
+      accordion.addEventListener("click", () => {
+        accordions.forEach((el) => {
+          if (el !== accordion) {
+            el.classList.remove("active");
+            el.removeAttribute("open");
+          }
+        });
+
+        accordion.classList.toggle("active");
+      });
+    });
+  }
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+  authPopup();
+  megaMenu();
+  closeAnnouncementBar();
+  handleAccordion();
+});

@@ -1,14 +1,14 @@
 {% assign placeholder_images = '' %}
 
-{% if class == 'product-placeholder' %}
+{% if class contains 'product-placeholder' %}
   {% assign placeholder_images = 'product-placeholder.jpg, product-placeholder1.jpg, product-placeholder2.jpg, product-placeholder3.jpg' %}
-{% elsif class == 'collection-placeholder' %}
+{% elsif class contains 'collection-placeholder' %}
   {% assign placeholder_images = 'collection-placeholder.jpg' %}
-{% elsif class == 'header-placeholder' %}
-  {% assign placeholder_images = 'header-placeholder.png, header-placeholder.png, header-placeholder.png, header-placeholder.png' %}
-{% elsif class == 'login-placeholder' %}
+{% elsif class contains 'header-placeholder' %}
+  {% assign placeholder_images = 'header-placeholder.png, header-placeholder.png, header-placeholder.png, header-placeholder.png, header-placeholder.png' %}
+{% elsif class contains 'login-placeholder' %}
   {% assign placeholder_images = 'login-placeholder.jpg' %}
-{% elsif class == 'register-placeholder' %}
+{% elsif class contains 'register-placeholder' %}
   {% assign placeholder_images = 'register-placeholder.jpg' %}
 {% else %}
   {% assign placeholder_images = 'default-placeholder.jpg' %}
@@ -18,10 +18,16 @@
 
 {% for image in images_array %}
   <img
-    src="{{ image | asset_img_url }}"
+    src="{{ image | asset_img_url: '600x600' }}"
+    srcset="
+      {{ image | asset_img_url: '600x600' }} 1x,
+      {{ image | asset_img_url: '900x900' }} 2x,
+      {{ image | asset_img_url: '1200x1200' }} 3x
+    "
+    sizes="(max-width: 600px) 100vw, 600px"
     alt="Placeholder Image"
     class="{{ class }}"
-    width="330"
-    height="481"
+    width="600"
+    height="600"
   >
 {% endfor %}

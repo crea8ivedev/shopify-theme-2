@@ -22,6 +22,15 @@
         "text": {
           "label": "Text"
         },
+        "subtext": {
+          "label": "Undertext"
+        },
+        "active_text": {
+          "label": "Aktiv text"
+        },
+        "active_bg": {
+          "label": "Aktiv bakgrund"
+        },
         "button_background": {
           "label": "Enfärgad knappbakgrund"
         },
@@ -2949,6 +2958,9 @@
     "slideshow": {
       "name": "Bildspel",
       "settings": {
+        "colors": {
+          "label": "Färger"
+        },
         "layout": {
           "label": "Layout",
           "options__1": {

@@ -22,6 +22,15 @@
         "text": {
           "label": "Metin"
         },
+        "subtext": {
+          "label": "Alt metin"
+        },
+        "active_text": {
+          "label": "Aktif metin"
+        },
+        "active_bg": {
+          "label": "Aktif arka plan"
+        },
         "button_background": {
           "label": "Sabit düğme arka planı"
         },
@@ -2949,6 +2958,9 @@
     "slideshow": {
       "name": "Slayt Gösterisi",
       "settings": {
+        "colors": {
+          "label": "Renkler"
+        },
         "layout": {
           "label": "Düzen",
           "options__1": {

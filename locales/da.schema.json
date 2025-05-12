@@ -22,6 +22,15 @@
         "text": {
           "label": "Tekst"
         },
+        "subtext": {
+          "label": "Undertekst"
+        },
+        "active_text": {
+          "label": "Aktiv tekst"
+        },
+        "active_bg": {
+          "label": "Aktiv baggrund"
+        },
         "button_background": {
           "label": "Udfyldt knapbaggrund"
         },
@@ -2949,6 +2958,9 @@
     "slideshow": {
       "name": "Diasshow",
       "settings": {
+        "colors": {
+          "label": "Farver"
+        },
         "layout": {
           "label": "Layout",
           "options__1": {

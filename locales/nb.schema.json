@@ -22,6 +22,15 @@
         "text": {
           "label": "Tekst"
         },
+        "subtext": {
+          "label": "Undertekst"
+        },
+        "active_text": {
+          "label": "Aktiv tekst"
+        },
+        "active_bg": {
+          "label": "Aktiv bakgrunn"
+        },
         "button_background": {
           "label": "Fylt knappebakgrunn"
         },
@@ -2949,6 +2958,9 @@
     "slideshow": {
       "name": "Lysbildefremvisning",
       "settings": {
+        "colors": {
+          "label": "Farger"
+        },
         "layout": {
           "label": "Oppsett",
           "options__1": {

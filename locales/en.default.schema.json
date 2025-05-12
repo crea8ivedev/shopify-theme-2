@@ -133,6 +133,15 @@
         "text": {
           "label": "Text"
         },
+        "subtext": {
+          "label": "Subtext"
+        },
+        "active_text": {
+          "label": "Active Text"
+        },
+        "active_bg": {
+          "label": "Active Background"
+        },
         "button_background": {
           "label": "Solid button background"
         },
@@ -501,6 +510,9 @@
     "slideshow": {
       "name": "Slideshow",
       "settings": {
+        "colors": {
+          "label": "Colors"
+        },
         "layout": {
           "label": "Layout",
           "options__1": {

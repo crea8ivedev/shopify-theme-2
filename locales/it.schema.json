@@ -22,6 +22,15 @@
         "text": {
           "label": "Testo"
         },
+        "subtext": {
+          "label": "Sottotesto"
+        },
+        "active_text": {
+          "label": "Testo attivo"
+        },
+        "active_bg": {
+          "label": "Sfondo attivo"
+        },
         "button_background": {
           "label": "Sfondo pulsante in tinta unita"
         },
@@ -2949,6 +2958,9 @@
     "slideshow": {
       "name": "Presentazione",
       "settings": {
+        "colors": {
+          "label": "Colori"
+        },
         "layout": {
           "label": "Layout",
           "options__1": {

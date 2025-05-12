@@ -22,6 +22,15 @@
         "text": {
           "label": "Tekst"
         },
+        "subtext": {
+          "label": "Subtekst"
+        },
+        "active_text": {
+          "label": "Actieve tekst"
+        },
+        "active_bg": {
+          "label": "Actieve achtergrond"
+        },
         "button_background": {
           "label": "Effen knopachtergrond"
         },
@@ -2949,6 +2958,9 @@
     "slideshow": {
       "name": "Diavoorstelling",
       "settings": {
+        "colors": {
+          "label": "Kleuren"
+        },
         "layout": {
           "label": "Indeling",
           "options__1": {

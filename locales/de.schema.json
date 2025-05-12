@@ -22,6 +22,15 @@
         "text": {
           "label": "Text"
         },
+        "subtext": {
+          "label": "Untertext"
+        },
+        "active_text": {
+          "label": "Aktiver Text"
+        },
+        "active_bg": {
+          "label": "Aktiver Hintergrund"
+        },
         "button_background": {
           "label": "Hintergrund für durchgehende Schaltfläche"
         },
@@ -2832,6 +2841,9 @@
     "slideshow": {
       "name": "Diashow",
       "settings": {
+        "colors": {
+          "label": "Farben"
+        },
         "layout": {
           "label": "Layout",
           "options__1": {

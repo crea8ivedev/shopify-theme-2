@@ -1,0 +1,69 @@
+.mega-menu__content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+}
+
+.mega-menu:hover .mega-menu__content {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+.accordion_main {
+  padding: 0.5em 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.accordion_question {
+  color: rgb(var(--color-foreground));
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.3s;
+}
+
+.accordion_main .accordion_question::before {
+  content: ">";
+  display: inline-block;
+  margin-right: 5px;
+  transition: transform 0.3s;
+  transform: rotate(90deg);
+}
+
+.accordion_main.active .accordion_question::before {
+  transform: rotate(270deg);
+}
+
+.accordion_main .accordion_answer {
+  height: 100%;
+  transition: 0.3s linear;
+  overflow: hidden;
+  padding: 0.8em;
+}
+
+.popup-close .popup-close-btn-icon svg path,
+.drawer__close .svg-wrapper svg path {
+  fill: rgba(var(--color-active-text));
+}
+
+ul#predictive-search-results-products-list {
+  display: flex;
+}
+
+.announcement-bar {
+  text-transform: uppercase;
+}
+
+.announcement-bar .icon-close {
+  width: 15px;
+  height: 15px;
+}

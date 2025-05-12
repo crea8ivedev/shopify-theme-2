@@ -22,6 +22,15 @@
         "text": {
           "label": "Tekst"
         },
+        "subtext": {
+          "label": "Podtekst"
+        },
+        "active_text": {
+          "label": "Aktywny tekst"
+        },
+        "active_bg": {
+          "label": "Aktywne tło"
+        },
         "button_background": {
           "label": "Tło przycisku w jednolitym kolorze"
         },
@@ -2949,6 +2958,9 @@
     "slideshow": {
       "name": "Pokaz slajdów",
       "settings": {
+        "colors": {
+          "label": "Kolory"
+        },
         "layout": {
           "label": "Układ",
           "options__1": {

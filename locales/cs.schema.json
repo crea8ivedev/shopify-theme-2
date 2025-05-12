@@ -22,6 +22,15 @@
         "text": {
           "label": "Text"
         },
+        "subtext": {
+          "label": "Podtext"
+        },
+        "active_text": {
+          "label": "Aktivní text"
+        },
+        "active_bg": {
+          "label": "Aktivní pozadí"
+        },
         "button_background": {
           "label": "Pozadí tlačítek v jednolité barvě"
         },
@@ -2950,6 +2959,9 @@
     "slideshow": {
       "name": "Prezentace",
       "settings": {
+        "colors": {
+          "label": "Barvy"
+        },
         "layout": {
           "label": "Rozvržení",
           "options__1": {

@@ -1,37 +1,39 @@
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
+{{ 'component-slideshow.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'component-slideshow.js' | asset_url }}" defer="defer"></script>
 
 {%- style -%}
   #Slider-{{ section.id }} .slidshow_main .swiper-wrapper {
-  height:auto !important;
+    height: auto !important;
   }
 {%- endstyle -%}
 
 {%- if section.settings.slide_height == 'adapt_image' and section.blocks.first.settings.image != blank -%}
   {%- style -%}
     #Slider-{{ section.id }} .slidshow_main .swiper-wrapper {
-    height:auto !important;
+      height: auto !important;
     }
     @media screen and (max-width: 749px) {
-    #Slider-{{ section.id }}::before,
-    #Slider-{{ section.id }} .media::before,
-    #Slider-{{ section.id }}:not(.banner--mobile-bottom) .banner__content::before {
-    padding-bottom: {{ 1 | divided_by: section.blocks.first.settings.image.aspect_ratio | times: 100 }}%;
-    content: '';
-    display: block;
-    }
+      #Slider-{{ section.id }}::before,
+      #Slider-{{ section.id }} .media::before,
+      #Slider-{{ section.id }}:not(.banner--mobile-bottom) .banner__content::before {
+        padding-bottom: {{ 1 | divided_by: section.blocks.first.settings.image.aspect_ratio | times: 100 }}%;
+        content: '';
+        display: block;
+      }
     }
     @media screen and (min-width: 750px) {
-    #Slider-{{ section.id }}::before,
-    #Slider-{{ section.id }} .media::before {
-    padding-bottom: {{ 1 | divided_by: section.blocks.first.settings.image.aspect_ratio | times: 100 }}%;
-    content: '';
-    display: block;
-    }
+      #Slider-{{ section.id }}::before,
+      #Slider-{{ section.id }} .media::before {
+        padding-bottom: {{ 1 | divided_by: section.blocks.first.settings.image.aspect_ratio | times: 100 }}%;
+        content: '';
+        display: block;
+      }
     }
   {%- endstyle -%}
 {%- endif -%}
 
-<div class="slideshow-container" id="Slider-{{ section.id }} ">
+<div class="slideshow-container color-{{ section.settings.color_scheme }}" id="Slider-{{ section.id }}">
   <div
     class="swiper slidshow-swiper banner banner--{{ section.settings.slide_height }} {% if section.settings.auto_rotate == true %}auto-slide{% endif %} slidshow_main"
     id="Slider-show"
@@ -44,26 +46,8 @@
         {% case block.type %}
           {% when 'slide' %}
             <style>
-              #Slide- {
-                  {
-                  section.id
-                }
-              }
-
-              - {
-                  {
-                  forloop.index
-                }
-              }
-
-              .banner__media::after {
-                opacity: {
-                    {
-                    block.settings.image_overlay_opacity | divided_by: 100.0
-                  }
-                }
-
-                ;
+              #Slide-{{ section.id }}-{{ forloop.index }} .banner__media::after {
+                opacity: {{ block.settings.image_overlay_opacity | divided_by: 100.0 }};
               }
             </style>
             <div
@@ -123,7 +107,7 @@
                 class="slideshow__text-wrapper banner__content banner__content--{{ block.settings.box_align }} page-width{% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}{% if settings.animations_reveal_on_scroll and forloop.index == 1 %} scroll-trigger animate--slide-in{% endif %}"
               >
                 <div
-                  class="slideshow__text banner__box content-container content-container--full-width-mobile color-{{ block.settings.color_scheme }} gradient slideshow__text--{{ block.settings.text_alignment }} slideshow__text-mobile--{{ block.settings.text_alignment_mobile-video }}"
+                  class="slideshow__text banner__box content-container content-container--full-width-mobile gradient slideshow__text--{{ block.settings.text_alignment }} slideshow__text-mobile--{{ block.settings.text_alignment_mobile-video }}"
                 >
                   {%- if block.settings.subheading != blank -%}
                     <div class="banner__text rte" {{ block.shopify_attributes }}>
@@ -177,7 +161,7 @@
                   class="slideshow__text-wrapper video__content video__content--{{ block.settings.box_align_video }} page-width{% if block.settings.show_text_box == false %} video--desktop-transparent{% endif %}{% if settings.animations_reveal_on_scroll and forloop.index == 1 %} scroll-trigger animate--slide-in{% endif %}"
                 >
                   <div
-                    class="slideshow__text video__box content-container content-container--full-width-mobile color-{{ block.settings.color_scheme }} gradient slideshow__text--{{ block.settings.text_alignment }} slideshow__text-mobile--{{ block.settings.text_alignment_mobile }}"
+                    class="slideshow__text video__box content-container content-container--full-width-mobile gradient slideshow__text--{{ block.settings.text_alignment }} slideshow__text-mobile--{{ block.settings.text_alignment_mobile }}"
                   >
                     {%- if block.settings.subheading_video != blank -%}
                       <div class="video__text rte" {{ block.shopify_attributes }}>
@@ -213,9 +197,12 @@
               </div>
             </div>
           {% when 'marquee' %}
-            <div class="gallery swiper-slide" style="background-color: {{ block.settings.color_bg }};">
+            <div
+              class="gallery swiper-slide marquee-slideshow-gallery"
+              style="background-color: {{ block.settings.color_bg }};"
+            >
               <div class="marqee_images">
-                <div class="block-33 display--inline-top first">
+                <div class="block-33 display--inline-top first slideshow-slide">
                   <div class="gutter relative">
                     <div class="gallery-h">
                       {% if block.settings.collection != blank %}
@@ -241,7 +228,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="block-33 display--inline-top second">
+                <div class="block-33 display--inline-top second slideshow-slide">
                   <div class="gutter relative">
                     <div class="gallery-h gallery-h--tb">
                       {% assign product_index = 0 %}
@@ -270,7 +257,7 @@
                 </div>
               </div>
               <div class="marqee-content">
-                <div class="banner__text rte" {{ block.shopify_attributes }}>
+                <div class="banner__subtext rte" {{ block.shopify_attributes }}>
                   <p>{{ block.settings['subheading-marqee'] }}</p>
                 </div>
                 <h1 class="banner__heading inline-richtext {{ block.settings.heading_size }}">
@@ -302,11 +289,6 @@
   </div>
 </div>
 
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    new Swiper('.slidshow-swiper', {});
-  });
-</script>
 {% schema %}
 {
   "name": "t:sections.slideshow.name",
@@ -316,6 +298,12 @@
     "groups": ["header", "footer"]
   },
   "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.slideshow.settings.colors.label",
+      "default": "scheme-1"
+    },
     {
       "type": "checkbox",
       "id": "auto_rotate",

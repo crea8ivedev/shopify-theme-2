@@ -22,6 +22,15 @@
         "text": {
           "label": "文本"
         },
+        "subtext": {
+          "label": "副文本"
+        },
+        "active_text": {
+          "label": "激活文本"
+        },
+        "active_bg": {
+          "label": "激活背景"
+        },
         "button_background": {
           "label": "实心按钮背景"
         },
@@ -2949,6 +2958,9 @@
     "slideshow": {
       "name": "幻灯片",
       "settings": {
+        "colors": {
+          "label": "颜色"
+        },
         "layout": {
           "label": "布局",
           "options__1": {

@@ -20,7 +20,16 @@
           "info": "背景 (漸層效果) 將取代所有適用的背景。"
         },
         "text": {
-          "label": "文字"
+          "label": "文本"
+        },
+        "subtext": {
+          "label": "副文本"
+        },
+        "active_text": {
+          "label": "啟用文本"
+        },
+        "active_bg": {
+          "label": "啟用背景"
         },
         "button_background": {
           "label": "純色按鈕背景"
@@ -2949,6 +2958,9 @@
     "slideshow": {
       "name": "幻燈片",
       "settings": {
+        "colors": {
+          "label": "顏色"
+        },
         "layout": {
           "label": "版面配置",
           "options__1": {

@@ -22,6 +22,15 @@
         "text": {
           "label": "テキスト"
         },
+        "subtext": {
+          "label": "サブテキスト"
+        },
+        "active_text": {
+          "label": "アクティブテキスト"
+        },
+        "active_bg": {
+          "label": "アクティブ背景"
+        },
         "button_background": {
           "label": "ソリッドカラーのボタンの背景"
         },
@@ -2949,6 +2958,9 @@
     "slideshow": {
       "name": "スライドショー",
       "settings": {
+        "colors": {
+          "label": "色"
+        },
         "layout": {
           "label": "レイアウト",
           "options__1": {

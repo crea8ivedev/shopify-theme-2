@@ -22,6 +22,15 @@
         "text": {
           "label": "Teksti"
         },
+        "subtext": {
+          "label": "Alateksti"
+        },
+        "active_text": {
+          "label": "Aktiivinen teksti"
+        },
+        "active_bg": {
+          "label": "Aktiivinen tausta"
+        },
         "button_background": {
           "label": "Peittävän painikkeen tausta"
         },
@@ -2949,6 +2958,9 @@
     "slideshow": {
       "name": "Diaesitys",
       "settings": {
+        "colors": {
+          "label": "Värit"
+        },
         "layout": {
           "label": "Asettelu",
           "options__1": {

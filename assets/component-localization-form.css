@@ -362,6 +362,7 @@
 .header-localization .localization-form__select.link:after,
 .header-localization .localization-form__select.link:before {
   box-shadow: none;
+  border: none;
 }
 
 .header-localization .localization-form__select.link:focus-visible {
@@ -375,6 +376,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
+  margin-left: 10px;
 }
 
 .desktop-localization-wrapper
@@ -394,7 +396,7 @@
 .js
   .header-localization:not(.menu-drawer__localization)
   .localization-form__select {
-  padding: 0 2.7rem 0 1.2rem;
+  padding: 0 1rem;
   width: max-content;
   height: 3.8rem;
 }
@@ -464,6 +466,6 @@
   margin-top: 1rem;
 }
 
-.language-selector .disclosure__list {
-  min-width: 200px;
+.localization-selector {
+  min-width: auto;
 }

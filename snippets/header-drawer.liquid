@@ -59,14 +59,20 @@
                                   {%- for product in block.settings.product_list
                                     limit: block.settings.products_to_show
                                   -%}
-                                    <li class="swiper-slide">
+                                    <li class="mega-menu-slide">
                                       <a href="{{ product.url }}">
                                         <div class="mega-menu__product-image">
                                           <img
-                                            src="{{ product.featured_image | image_url: width: 100 }}"
+                                            src="{{ product.featured_image | image_url: width: 500 }}"
+                                            srcset="
+                                              {{ product.featured_image | image_url: width: 500 }} 500w,
+                                              {{ product.featured_image | image_url: width: 1000 }} 1000w,
+                                              {{ product.featured_image | image_url: width: 1500 }} 1500w
+                                            "
+                                            sizes="(max-width: 600px) 100vw, 600px"
                                             alt="{{ product.featured_image.alt }}"
-                                            width="100"
-                                            height="100"
+                                            width="500"
+                                            height="500"
                                           >
                                         </div>
                                         <div class="mega-menu__product-title">
@@ -79,14 +85,20 @@
                                   {%- for product in block.settings.collection.products
                                     limit: block.settings.products_to_show
                                   -%}
-                                    <li class="swiper-slide">
+                                    <li class="mega-menu-slide">
                                       <a href="{{ product.url }}">
                                         <div class="mega-menu__product-image">
                                           <img
-                                            src="{{ product.featured_image | image_url: width: 100 }}"
+                                            src="{{ product.featured_image | image_url: width: 500 }}"
+                                            srcset="
+                                              {{ product.featured_image | image_url: width: 500 }} 500w,
+                                              {{ product.featured_image | image_url: width: 1000 }} 1000w,
+                                              {{ product.featured_image | image_url: width: 1500 }} 1500w
+                                            "
+                                            sizes="(max-width: 600px) 100vw, 600px"
                                             alt="{{ product.featured_image.alt }}"
-                                            width="100"
-                                            height="100"
+                                            width="500"
+                                            height="500"
                                           >
                                         </div>
                                         <div class="mega-menu__product-title">
@@ -96,9 +108,9 @@
                                     </li>
                                   {%- endfor -%}
                                 {%- endif -%}
-                              {%- endif -%}
-                              {%- if block.settings.product_list == blank and block.settings.collection == blank -%}
-                                {% render 'placeholder', class: 'header-placeholder' %}
+                                {%- if block.settings.product_list == blank and block.settings.collection == blank -%}
+                                  {% render 'placeholder', class: 'header-placeholder swiper-slide' %}
+                                {%- endif -%}
                               {%- endif -%}
                             {%- endfor -%}
                             {%- for block in section.blocks -%}

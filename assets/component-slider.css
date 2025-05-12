@@ -3,8 +3,8 @@ slider-component {
     5rem,
     calc(
       (
-          100vw - var(--page-width) + 10rem -
-            var(--grid-desktop-horizontal-spacing)
+          100vw - var(--page-width) +
+            10rem -var(--grid-desktop-horizontal-spacing)
         ) /
         2
     )
@@ -56,7 +56,6 @@ slider-component.slider-component-full-width {
     margin-bottom: 1rem;
   }
 
-  /* Fix to show some space at the end of our sliders in all browsers */
   .slider--mobile:after {
     content: "";
     width: 0;
@@ -110,7 +109,6 @@ slider-component.slider-component-full-width {
     margin-bottom: 1rem;
   }
 
-  /* Fix to show some space at the end of our sliders in all browsers */
   .slider--tablet:after {
     content: "";
     width: 0;
@@ -168,7 +166,6 @@ slider-component.slider-component-full-width {
     scroll-padding-left: var(--desktop-margin-left-first-item);
   }
 
-  /* Fix to show some space at the end of our sliders in all browsers */
   .slider--desktop:after {
     content: "";
     width: 0;
@@ -199,7 +196,6 @@ slider-component.slider-component-full-width {
     scroll-margin-left: 1.5rem;
   }
 
-  /* Fix to show some space at the end of our sliders in all browsers */
   .slider-component-full-width .slider--desktop:after {
     padding-left: 1.5rem;
   }
@@ -254,8 +250,6 @@ slider-component.slider-component-full-width {
     scroll-behavior: auto;
   }
 }
-
-/* Scrollbar */
 
 .slider {
   scrollbar-color: rgb(var(--color-foreground))
@@ -400,7 +394,6 @@ slider-component.slider-component-full-width {
   transform: rotate(-180deg) scale(1.1);
 }
 
-/* vertical slider - marqee */
 .gallery {
   top: 0;
   left: 0;
@@ -439,16 +432,10 @@ slider-component.slider-component-full-width {
   }
 }
 
-.gallery-image__img {
-  max-width: 35vh;
-  margin: 0 auto;
-}
-
 .gallery-h {
   overflow: hidden;
 }
 
-/* Default animation - top to bottom */
 @keyframes marqueeTop {
   0% {
     transform: translate3d(0, 0, 0);
@@ -458,7 +445,6 @@ slider-component.slider-component-full-width {
   }
 }
 
-/* Reverse animation - bottom to top */
 @keyframes marqueeBottom {
   0% {
     transform: translate3d(0, -100%, 0);
@@ -468,7 +454,6 @@ slider-component.slider-component-full-width {
   }
 }
 
-/* Mobile view - left to right */
 @media (max-width: 768px) {
   @keyframes marqueeRightToLeft {
     0% {
@@ -500,17 +485,20 @@ slider-component.slider-component-full-width {
     width: 100%;
   }
 }
+
 .marqee-content {
-  width: 60%;
+  width: 50%;
 }
+
 .marqee_images {
-  width: 40%;
+  width: 50%;
   order: 2;
 }
+
 .video-container {
   position: relative;
   width: 100%;
-  max-width: 640px; /* Adjust the width as needed */
+  max-width: 640px;
   margin: auto;
 }
 
@@ -529,7 +517,7 @@ slider-component.slider-component-full-width {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 64px; /* Adjust the size as needed */
+  font-size: 64px;
   color: white;
   background: rgba(0, 0, 0, 0.5);
   border-radius: 50%;
@@ -540,6 +528,54 @@ slider-component.slider-component-full-width {
 .video-element {
   width: 100%;
 }
+
 .swiper-slide {
   height: auto !important;
+}
+
+.marquee-slideshow-gallery {
+  height: calc(100vh - 150px) !important;
+  overflow-y: hidden;
+  gap: 50px;
+}
+
+.marqee-content .banner__subtext,
+.marqee-content .banner__heading {
+  color: rgb(var(--color-subtext));
+}
+
+.marqee-content .banner__text {
+  color: rgb(var(--color-foreground));
+}
+
+.marqee-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px;
+  margin-bottom: 30px;
+  max-width: 35%;
+}
+
+.marqee-content h1 {
+  margin: 0;
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+.marqee-content .banner__buttons {
+  margin-top: 30px;
+}
+
+.marqee_images {
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+}
+
+.gallery-image__img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 30px auto;
 }

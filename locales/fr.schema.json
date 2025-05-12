@@ -22,6 +22,15 @@
         "text": {
           "label": "Texte"
         },
+        "subtext": {
+          "label": "Sous-texte"
+        },
+        "active_text": {
+          "label": "Texte actif"
+        },
+        "active_bg": {
+          "label": "Arrière-plan actif"
+        },
         "button_background": {
           "label": "Arrière-plan plein du bouton"
         },
@@ -2949,6 +2958,9 @@
     "slideshow": {
       "name": "Diaporama",
       "settings": {
+        "colors": {
+          "label": "Couleurs"
+        },
         "layout": {
           "label": "Disposition",
           "options__1": {

@@ -22,6 +22,15 @@
         "text": {
           "label": "Texto"
         },
+        "subtext": {
+          "label": "Subtexto"
+        },
+        "active_text": {
+          "label": "Texto ativo"
+        },
+        "active_bg": {
+          "label": "Fundo ativo"
+        },
         "button_background": {
           "label": "Plano de fundo do botão sólido"
         },
@@ -2949,6 +2958,9 @@
     "slideshow": {
       "name": "Apresentação de Slides",
       "settings": {
+        "colors": {
+          "label": "Cores"
+        },
         "layout": {
           "label": "Layout",
           "options__1": {

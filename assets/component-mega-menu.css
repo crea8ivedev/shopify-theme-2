@@ -2,12 +2,12 @@
   position: static;
 }
 
-.mega-menu__content {
+.mega-menu__content:not(.dropdown-menu) {
+  max-width: 80%;
+  margin: auto;
   background-color: rgb(var(--color-background));
-  border-left: 0;
-  border-radius: 0;
-  border-right: 0;
-  left: 0;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   overflow-y: auto;
   padding-bottom: 3rem;
   padding-top: 3rem;
@@ -41,7 +41,7 @@ ul.mega-menu__list.page-width.mega-menu__list--condensed {
 
 .mega-menu__list {
   display: grid;
-  gap: 1.8rem 4rem;
+  gap: 1.5rem;
   grid-template-columns: repeat(6, minmax(0, 1fr));
   list-style: none;
 }
@@ -89,4 +89,84 @@ ul.mega-menu__list.page-width.mega-menu__list--condensed {
 
 .mega-menu__list--condensed .mega-menu__link {
   font-weight: normal;
+}
+
+.dropdown-menu {
+  width: max-content;
+  padding: 10px;
+  border-radius: 10px;
+  border-top-left-radius: 0;
+  min-width: 100px;
+  left: 20%;
+}
+
+.mega-menu:has(.dropdown-menu) {
+  position: relative;
+}
+
+.dropdown-menu .mega-menu__list {
+  padding: 0 20px 0 0;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.header__inline-menu span {
+  font-size: 16px;
+}
+
+.header-mega-menu-placeholder {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+}
+
+.mega-menu__container {
+  margin-right: 20px;
+  text-transform: none;
+}
+
+.mega-menu__container .mega-menu__link {
+  white-space: nowrap;
+  padding: 10px 35px;
+  font-size: 16px;
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+}
+
+.mega-menu__container .mega-menu__link:hover {
+  background: rgba(var(--color-active-bg), 0.5);
+  color: rgb(var(--color-active-text));
+  border: none;
+  text-decoration: none;
+}
+
+.dropdown-menu .mega-menu__link:hover {
+  color: rgb(var(--color-active-text));
+  border: none;
+  text-decoration: none;
+}
+
+.mega-menu__list {
+  padding: 0;
+  padding-right: 35px;
+}
+
+.mega-menu__list li {
+  width: 100%;
+}
+
+.mega-menu__list li img {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1280px) {
+  .mega-menu__content:not(.dropdown-menu) {
+    max-width: 90%;
+  }
+  .mega-menu__container .mega-menu__link {
+    font-size: 14px;
+  }
 }

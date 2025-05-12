@@ -2428,11 +2428,16 @@ input[type="checkbox"] {
   grid-template-areas: "left-icons heading icons";
   grid-template-columns: 1fr 2fr 1fr;
   align-items: center;
+  text-transform: uppercase;
 }
 
 @media screen and (max-width: 749px) {
   .header--has-app {
     grid-template-columns: auto 1fr auto;
+  }
+  .header {
+    padding: 16px !important;
+    padding-right: 10px !important;
   }
 }
 
@@ -2580,7 +2585,6 @@ input[type="checkbox"] {
   display: flex;
   grid-area: icons;
   justify-self: end;
-  padding-right: 0.8rem;
 }
 
 .header__icons .shopify-app-block {
@@ -2634,7 +2638,7 @@ input[type="checkbox"] {
 
 .header__icon--cart {
   position: relative;
-  margin-right: -1.2rem;
+  margin-right: -2.2rem;
 }
 
 .header__icon--menu[aria-expanded="true"]::before {
@@ -2862,7 +2866,7 @@ details[open] > .header__submenu {
 }
 
 .header__menu-item {
-  padding: 1.2rem;
+  padding: 2rem 3rem;
   text-decoration: none;
   color: rgba(var(--color-foreground), 0.75);
 }
@@ -3739,59 +3743,4 @@ details-disclosure > details {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-.mega-menu__content {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  background: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  z-index: 100;
-  opacity: 0;
-  visibility: hidden;
-  transition:
-    opacity 0.3s ease,
-    visibility 0.3s ease;
-}
-.mega-menu:hover .mega-menu__content {
-  display: block;
-  opacity: 1;
-  visibility: visible;
-}
-.accordion_main {
-  padding: 0.5em 0;
-  border-bottom: 1px solid #ccc;
-}
-.accordion_question {
-  color: #333;
-  cursor: pointer;
-  user-select: none;
-  transition: color 0.3s;
-}
-.accordion_question:hover {
-  color: #000;
-}
-.accordion_main .accordion_question::before {
-  content: ">";
-  display: inline-block;
-  margin-right: 5px;
-  transition: transform 0.3s;
-}
-.accordion_main.active .accordion_question::before {
-  transform: rotate(90deg);
-}
-.accordion_main .accordion_answer {
-  height: 100%;
-  transition: 0.3s linear;
-  overflow: hidden;
-  padding: 0 0.8em;
-}
-.popup-close .popup-close-btn-icon svg path,
-.drawer__close .svg-wrapper svg path {
-  fill: #944e63;
-}
-ul#predictive-search-results-products-list {
-  display: flex;
 }

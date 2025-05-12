@@ -54,8 +54,26 @@
           },
           {
             "type": "color",
+            "id": "subtext",
+            "label": "t:settings_schema.colors.settings.subtext.label",
+            "default": "#121212"
+          },
+          {
+            "type": "color",
             "id": "text",
             "label": "t:settings_schema.colors.settings.text.label",
+            "default": "#121212"
+          },
+          {
+            "type": "color",
+            "id": "active_text",
+            "label": "t:settings_schema.colors.settings.active_text.label",
+            "default": "#121212"
+          },
+          {
+            "type": "color",
+            "id": "active_bg",
+            "label": "t:settings_schema.colors.settings.active_bg.label",
             "default": "#121212"
           },
           {
