@@ -85,16 +85,20 @@
             <span>
               {%- if product.selected_or_first_available_variant == null -%}
                 {{ 'products.product.unavailable' | t }}
+                {{ 'icon-button-arrow.svg' | inline_asset_content }}
               {%- elsif product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
                 {{ 'products.product.sold_out' | t }}
+                {{ 'icon-button-arrow.svg' | inline_asset_content }}
               {%- else -%}
                 {{ 'products.product.add_to_cart' | t }}
+                {{ 'icon-button-arrow.svg' | inline_asset_content }}
               {%- endif -%}
             </span>
             {%- render 'loading-spinner' -%}
           </button>
           {%- if show_dynamic_checkout -%}
             {{ form | payment_button }}
+            {{ 'icon-button-arrow.svg' | inline_asset_content }}
           {%- endif -%}
         </div>
       {%- endform -%}
@@ -109,6 +113,7 @@
           disabled
         >
           {{ 'products.product.sold_out' | t }}
+          {{ 'icon-button-arrow.svg' | inline_asset_content }}
         </button>
       </div>
     </div>

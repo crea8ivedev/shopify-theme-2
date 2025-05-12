@@ -1120,7 +1120,7 @@
           "name": "Text",
           "settings": {
             "text": {
-              "default": "Text block",
+              "default": "The luxury collections",
               "label": "Text"
             },
             "text_style": {

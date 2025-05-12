@@ -38,15 +38,7 @@
         },
         "video_D44Pzx": {
           "type": "video",
-          "settings": {
-            "box_align_video": "middle-center",
-            "text_alignment_mobile-video": "center",
-            "text_alignment-video": "center",
-            "subheading_video": "Tell your brand's story through images",
-            "heading_video": "Image slide",
-            "button_label_video": "Button label",
-            "link_video": ""
-          }
+          "settings": {}
         }
       },
       "block_order": ["marquee_BKRhyx", "slide_6XM6Ph", "video_D44Pzx"],

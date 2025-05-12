@@ -1275,7 +1275,8 @@ button.shopify-payment-button__button--unbranded {
   transition: box-shadow var(--duration-short) ease;
   -webkit-appearance: none;
   appearance: none;
-  background-color: #944e63;
+  background-color: rgba(var(--color-button), var(--alpha-button-background));
+  border-radius: 100px;
 }
 
 .button:before,
@@ -1413,7 +1414,6 @@ shopify-accelerated-checkout-cart {
 
 .button--full-width {
   display: flex;
-  width: 100%;
 }
 
 .button.loading {
