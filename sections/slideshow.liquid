@@ -95,12 +95,7 @@
                   {%- endif -%}
                 {% endif %}
                 {% if block.settings.image == blank and block.settings.mobile_image == blank %}
-                  <img
-                    src="{{ 'banner-placeholder.jpg' | asset_img_url }}"
-                    height="600px"
-                    width="1400px"
-                    alt="mobile image"
-                  >
+                  {% render 'placeholder', class: 'slideshow-placeholder' %}
                 {%- endif -%}
               </div>
               <div

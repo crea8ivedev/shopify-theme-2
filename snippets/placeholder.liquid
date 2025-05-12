@@ -1,3 +1,5 @@
+{{ 'placeholder.css' | asset_url | stylesheet_tag }}
+
 {% assign placeholder_images = '' %}
 
 {% if class contains 'product-placeholder' %}
@@ -10,6 +12,8 @@
   {% assign placeholder_images = 'login-placeholder.jpg' %}
 {% elsif class contains 'register-placeholder' %}
   {% assign placeholder_images = 'register-placeholder.jpg' %}
+{% elsif class contains 'slideshow-placeholder' %}
+  {% assign placeholder_images = 'slideshow-placeholder.jpg' %}
 {% else %}
   {% assign placeholder_images = 'default-placeholder.jpg' %}
 {% endif %}
