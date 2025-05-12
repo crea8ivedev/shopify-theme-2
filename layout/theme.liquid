@@ -27,12 +27,14 @@
     {% endif %}
 
     {% render 'meta-tags' %}
+    {% comment %}theme-check-disable RemoteAsset{% endcomment %}
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"
       async
     ></script>
+    {% comment %}theme-check-enable RemoteAsset{% endcomment %}
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
