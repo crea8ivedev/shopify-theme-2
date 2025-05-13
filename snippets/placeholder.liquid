@@ -15,32 +15,50 @@
   {% assign placeholder_images = 'register-placeholder.jpg' %}
 {% elsif class contains 'slideshow-placeholder' %}
   {% assign placeholder_images = 'slideshow-placeholder.png' %}
-{% elsif class contains 'slideshow-video-placeholder' %}
-  {% assign placeholder_videos = 'slideshow-video-placeholder.mp4' %}
+{% elsif class contains 'zigzag-placeholder' %}
+  {% assign placeholder_images = 'zigzag-placeholder.png' %}
+{% elsif class contains 'before-placeholder' %}
+  {% assign placeholder_images = 'before-placeholder.png' %}
+{% elsif class contains 'after-placeholder' %}
+  {% assign placeholder_images = 'after-placeholder.png' %}
 {% else %}
   {% assign placeholder_images = 'default-placeholder.jpg' %}
 {% endif %}
 
+{% if class contains 'slideshow-video-placeholder' %}
+  {% assign placeholder_videos = 'slideshow-video-placeholder.mp4' %}
+{% endif %}
+
 {% assign images_array = placeholder_images | split: ', ' %}
-
-{% for image in images_array %}
-  <img
-    src="{{ image | asset_img_url: '600x600' }}"
-    srcset="
-      {{ image | asset_img_url: '600x600' }} 1x,
-      {{ image | asset_img_url: '900x900' }} 2x,
-      {{ image | asset_img_url: '1200x1200' }} 3x
-    "
-    sizes="(max-width: 600px) 100vw, 600px"
-    alt="Placeholder Image"
-    class="{{ class }}"
-    width="600"
-    height="600"
-  >
-{% endfor %}
-
 {% assign videos_array = placeholder_videos | split: ', ' %}
 
-{% for video in videos_array %}
-  <video src="{{ video | asset_url }}" class="{{ class }}" width="600" height="600"></video>
-{% endfor %}
+{% if placeholder_videos == blank %}
+  {% for image in images_array %}
+    <img
+      src="{{ image | asset_img_url: '600x600' }}"
+      srcset="
+        {{ image | asset_img_url: '600x600' }} 1x,
+        {{ image | asset_img_url: '900x900' }} 2x,
+        {{ image | asset_img_url: '1200x1200' }} 3x
+      "
+      sizes="(max-width: 600px) 100vw, 600px"
+      alt="Placeholder Image"
+      class="{{ class }}"
+      width="600"
+      height="600"
+    >
+  {% endfor %}
+{% else %}
+  {% for video in videos_array %}
+    <video
+      src="{{ video | asset_url }}"
+      class="{{ class }}"
+      width="600"
+      height="600"
+      autoplay
+      muted
+      playsinline
+      controls
+    ></video>
+  {% endfor %}
+{% endif %}

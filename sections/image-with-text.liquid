@@ -136,7 +136,7 @@
                 {% endif %}
               </div>
             {%- else -%}
-              {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+              {% render 'placeholder' | class: 'zigzag-placeholder' %}
             {%- endif -%}
           </div>
         </div>
@@ -585,6 +585,9 @@
     {
       "name": "t:sections.image-with-text.presets.name",
       "blocks": [
+        {
+          "type": "caption"
+        },
         {
           "type": "heading"
         },

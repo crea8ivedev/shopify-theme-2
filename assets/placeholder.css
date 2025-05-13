@@ -1,3 +1,5 @@
-.slideshow-placeholder {
-  height: calc(100vh - 250px) !important;
+@media (min-width: 768px) {
+  .slideshow-placeholder {
+    height: calc(100vh - 250px) !important;
+  }
 }

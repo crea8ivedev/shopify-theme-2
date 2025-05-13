@@ -1,7 +1,68 @@
 {
   "article": [],
   "blog": [],
-  "collection": [],
+  "collection": [
+    {
+      "key": "collection_banner",
+      "namespace": "custom",
+      "name": "Collection Banner",
+      "description": "",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "collection_title",
+      "namespace": "custom",
+      "name": "Collection Title",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "collection_description_sec",
+      "namespace": "custom",
+      "name": "Collection Description",
+      "description": "",
+      "type": {
+        "name": "multi_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "logo_image",
+      "namespace": "custom",
+      "name": "Logo Image",
+      "description": "",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "megamenu_image",
+      "namespace": "custom",
+      "name": "Megamenu Image",
+      "description": "",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "megamenu_title",
+      "namespace": "custom",
+      "name": "Megamenu Title",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    }
+  ],
   "company": [],
   "company_location": [],
   "location": [],
@@ -10,47 +71,56 @@
   "page": [],
   "product": [
     {
-      "key": "snowboard_length",
-      "namespace": "test_data",
-      "name": "Snowboard length",
-      "description": "The length of the snowboard",
-      "type": {
-        "name": "dimension",
-        "category": "MEASUREMENT"
-      }
-    },
-    {
-      "key": "binding_mount",
-      "namespace": "test_data",
-      "name": "Snowboard binding mount",
-      "description": "The type of binding mount used on the snowboard",
-      "type": {
-        "name": "single_line_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
-      "key": "color-pattern",
-      "namespace": "shopify",
-      "name": "Color",
-      "description": "Defines the primary color or pattern, such as blue or striped",
+      "key": "product_accordions",
+      "namespace": "custom",
+      "name": "Product Accordions",
+      "description": "",
       "type": {
         "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "store_tag",
+      "namespace": "custom",
+      "name": "Store Tag",
+      "description": "",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "complementary_products",
+      "namespace": "globo--filter--product_recommendation",
+      "name": "Complementary products",
+      "description": null,
+      "type": {
+        "name": "list.product_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "related_products",
+      "namespace": "globo--filter--product_recommendation",
+      "name": "Related products",
+      "description": null,
+      "type": {
+        "name": "list.product_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "bought_together_products",
+      "namespace": "globo--filter--product_recommendation",
+      "name": "Bought together products",
+      "description": null,
+      "type": {
+        "name": "list.product_reference",
         "category": "REFERENCE"
       }
     }
   ],
   "variant": [],
-  "shop": [
-    {
-      "key": "alpine_sports",
-      "namespace": "test_data",
-      "name": "Alpine sport types",
-      "description": "The set of alpine sports that this sport shop specializes in",
-      "type": {
-        "name": "list.single_line_text_field",
-        "category": "TEXT"
-      }
-    }
-  ]
+  "shop": []
 }

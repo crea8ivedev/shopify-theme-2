@@ -43,7 +43,7 @@
                   height="500"
                 >
               {% else %}
-                {{ 'image' | placeholder_svg_tag }}
+                {% render 'placeholder' | class: 'before-placeholder' %}
               {% endif %}
             </div>
             <div class="slider-image after">
@@ -56,7 +56,7 @@
                   height="500"
                 >
               {% else %}
-                {{ 'image' | placeholder_svg_tag }}
+                {% render 'placeholder' | class: 'after-placeholder' %}
               {% endif %}
             </div>
             <div class="before-after-slider-handle" style="left: {{ section.settings.drag_initial_position }}%;">
@@ -67,8 +67,6 @@
       {% endfor %}
     </div>
     <div class="swiper-pagination"></div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
   </div>
 </section>
 
