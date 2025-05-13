@@ -78,7 +78,11 @@
       {%- endif -%}
       {%- if card_collection == blank -%}
         <div class="card__media">
-          {{ placeholder_image | placeholder_svg_tag: 'placeholder-svg' }}
+          {%
+            render 'placeholder',
+            images: 'collection-list' | append: forloop.index | append: '.jpg',
+            class: 'collection-placeholder'
+          %}
         </div>
         <div class="collection_list card__content">
           <div class="card__information">

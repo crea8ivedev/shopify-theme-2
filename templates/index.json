@@ -190,6 +190,56 @@
         "padding_bottom": 36
       }
     },
+    "collection_list_dXNbak": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_wngxUE": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_YtEb4i": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_9n9jCE": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_QEqKMb": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_wngxUE",
+        "featured_collection_YtEb4i",
+        "featured_collection_9n9jCE",
+        "featured_collection_QEqKMb"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "title": "Collections",
+        "subheading": "Shop our trendy collection.",
+        "text_alignment": "center",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 2,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "image_with_text_eKpKqY": {
       "type": "image-with-text",
       "blocks": {
@@ -492,6 +542,7 @@
     "icon_with_text_i4PbgH",
     "before_after_slider_XxwF7z",
     "featured_collection_GgRxma",
+    "collection_list_dXNbak",
     "image_with_text_eKpKqY",
     "marquee_hBNX3X",
     "featured_product_RC7Khk",

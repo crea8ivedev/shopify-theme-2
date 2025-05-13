@@ -21,6 +21,8 @@
   {% assign placeholder_images = 'before-placeholder.png' %}
 {% elsif class contains 'after-placeholder' %}
   {% assign placeholder_images = 'after-placeholder.png' %}
+{% elsif class contains 'collection-placeholder' %}
+  {% assign placeholder_images = images %}
 {% else %}
   {% assign placeholder_images = 'default-placeholder.jpg' %}
 {% endif %}
