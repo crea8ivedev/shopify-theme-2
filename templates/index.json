@@ -41,7 +41,11 @@
           "settings": {}
         }
       },
-      "block_order": ["marquee_BKRhyx", "slide_6XM6Ph", "video_D44Pzx"],
+      "block_order": [
+        "marquee_BKRhyx",
+        "slide_6XM6Ph",
+        "video_D44Pzx"
+      ],
       "name": "t:sections.slideshow.presets.name",
       "settings": {
         "color_scheme": "scheme-1",
@@ -535,6 +539,26 @@
         "marquee_breakpoint_tablet": 4,
         "marquee_breakpoint_mobile": 3
       }
+    },
+    "featured_blog_jrqcr6": {
+      "type": "featured-blog",
+      "name": "t:sections.featured-blog.presets.name",
+      "settings": {
+        "blog": "news",
+        "post_limit": 4,
+        "heading": "Latest blog posts",
+        "subheading": "The freshest and most exciting blogs",
+        "heading_size": "h1",
+        "columns_desktop": 3,
+        "show_view_all": true,
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "color_scheme": "",
+        "gradient_bg_color": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -547,6 +571,7 @@
     "marquee_hBNX3X",
     "featured_product_RC7Khk",
     "image_with_text_8K9Dqh",
-    "marquee_jPjj7y"
+    "marquee_jPjj7y",
+    "featured_blog_jrqcr6"
   ]
 }
