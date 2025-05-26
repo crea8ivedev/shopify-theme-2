@@ -91,11 +91,9 @@
                     }}
                   {%- endif -%}
                 {% endif %}
-                <placeholder-image
-      class="hero__image"
-      data-block-id="{{ section.id }}"
-      data-type="general"
-    ></placeholder-image>
+                {% if block.settings.image == blank and block.settings.mobile_image == blank %}
+                  {{ 'hero-apparel-2' | placeholder_svg_tag: 'placeholder-svg' }}
+                {%- endif -%}
               </div>
               <div class="slideshow__text-wrapper banner__content banner__content--{{ block.settings.box_align }} page-width{% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}{% if settings.animations_reveal_on_scroll and forloop.index == 1 %} scroll-trigger animate--slide-in{% endif %}">
                 <div class="slideshow__text banner__box content-container content-container--full-width-mobile color-{{ block.settings.color_scheme }} gradient slideshow__text--{{ block.settings.text_alignment }} slideshow__text-mobile--{{ block.settings.text_alignment_mobile-video }}">
