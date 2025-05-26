@@ -68,7 +68,11 @@
                   | image_tag: sizes: sizes, widths: '165, 360, 535, 750, 1070, 1500'
                 }}
               {%- else -%}
-                {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                 <placeholder-image
+      class="hero__image"
+      data-block-id="{{ section.id }}"
+      data-type="general"
+    ></placeholder-image>
               {%- endif -%}
             </div>
           </div>
