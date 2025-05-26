@@ -1,0 +1,10 @@
+{% for block in section.blocks %}
+  {% render block %}
+{% endfor %}
+{% schema %}
+{
+  "name": "AI-gen",
+  "blocks": [{ "type": "@theme" }],
+  "presets": [{ "name": "AI-gen" }]
+}
+{% endschema %}
