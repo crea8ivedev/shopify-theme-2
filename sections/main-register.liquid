@@ -26,7 +26,7 @@
       alt="Register Image"
     >
   {% else %}
-    {% render 'placeholder' | class: 'login-placeholder' %}
+    {% render 'placeholder', class: 'login-placeholder' %}
   {% endif %}
 </div>
 <div>
@@ -174,3 +174,13 @@
   ]
 }
 {% endschema %}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{% render 'placeholder' | class: 'login-placeholder' %}"
+  to: "{% render 'placeholder', class: 'login-placeholder' %}"
+  position: 781..835
+{% endcomment %}

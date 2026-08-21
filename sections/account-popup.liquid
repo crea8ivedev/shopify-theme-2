@@ -65,7 +65,7 @@
                     alt="login-image"
                   >
                 {% else %}
-                  {% render 'placeholder' | class: 'login-placeholder' %}
+                  {% render 'placeholder', class: 'login-placeholder' %}
                 {% endif %}
                 {% render 'login' %}
               </div>
@@ -86,7 +86,7 @@
                     alt="register-image"
                   >
                 {% else %}
-                  {% render 'placeholder' | class: 'register-placeholder' %}
+                  {% render 'placeholder', class: 'register-placeholder' %}
                 {% endif %}
                 {% render 'register' %}
               </div>
@@ -147,3 +147,16 @@
   ]
 }
 {% endschema %}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{% render 'placeholder' | class: 'login-placeholder' %}"
+  to: "{% render 'placeholder', class: 'login-placeholder' %}"
+  position: 2622..2676
+- from: "{% render 'placeholder' | class: 'register-placeholder' %}"
+  to: "{% render 'placeholder', class: 'register-placeholder' %}"
+  position: 3396..3453
+{% endcomment %}

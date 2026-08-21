@@ -43,7 +43,7 @@
                   height="500"
                 >
               {% else %}
-                {% render 'placeholder' | class: 'before-placeholder' %}
+                {% render 'placeholder', class: 'before-placeholder' %}
               {% endif %}
             </div>
             <div class="slider-image after">
@@ -56,7 +56,7 @@
                   height="500"
                 >
               {% else %}
-                {% render 'placeholder' | class: 'after-placeholder' %}
+                {% render 'placeholder', class: 'after-placeholder' %}
               {% endif %}
             </div>
             <div class="before-after-slider-handle" style="left: {{ section.settings.drag_initial_position }}%;">
@@ -222,3 +222,16 @@
   ]
 }
 {% endschema %}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{% render 'placeholder' | class: 'before-placeholder' %}"
+  to: "{% render 'placeholder', class: 'before-placeholder' %}"
+  position: 1984..2039
+- from: "{% render 'placeholder' | class: 'after-placeholder' %}"
+  to: "{% render 'placeholder', class: 'after-placeholder' %}"
+  position: 2468..2522
+{% endcomment %}

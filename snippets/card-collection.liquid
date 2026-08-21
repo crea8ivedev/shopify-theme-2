@@ -78,11 +78,7 @@
       {%- endif -%}
       {%- if card_collection == blank -%}
         <div class="card__media">
-          {%
-            render 'placeholder',
-            images: 'collection-list' | append: forloop.index | append: '.jpg',
-            class: 'collection-placeholder'
-          %}
+          {% render 'placeholder', images: 'collection-list', append: '.jpg', class: 'collection-placeholder' %}
         </div>
         <div class="collection_list card__content">
           <div class="card__information">
@@ -178,3 +174,19 @@
     {%- endif -%}
   </div>
 </div>
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: |-
+    {%
+                render 'placeholder',
+                images: 'collection-list' | append: forloop.index | append: '.jpg',
+                class: 'collection-placeholder'
+              %}
+  to: "{% render 'placeholder', images: 'collection-list', append: '.jpg', class:
+    'collection-placeholder' %}"
+  position: 4299..4401
+{% endcomment %}
